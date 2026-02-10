@@ -1,0 +1,29 @@
+{:linters
+ {:indentation         true
+  :namespace-forms     true
+  :import-forms        true
+  :require-forms       true
+  :metadata-quoting    true
+  :remove-blank-lines  true
+  :group-clauses       true
+  :align-associative   true
+  :sort-dependencies   true
+  :no-implicit-parens  false}}
+
+:paths ["src" "test" "dev" "resources"]
+
+:exclusions
+ ["target"
+  "node_modules"
+  "resources/public/js/compiled"
+  "out"
+  "build"]
+
+:config
+ {:remove-trailing-whitespace true
+  :insert-missing-whitespace  true
+  :max-line-length            100
+  :newline-at-eof             true
+  :use-tabs                   false
+  :indent-width               2
+  :align-args                 true}}

@@ -1,0 +1,12 @@
+# .puppet-lint.rc
+# Puppet Lint configuration for consistent formatting and style
+
+--fail-on-warnings
+--with-filename
+--no-140chars-check
+--no-autoloader_layout-check
+--no-class_inherits_from_params_class-check
+--no-documentation-check
+--no-variable_scope-check
+--no-quoted_booleans-check
+--no-unquoted_resource_title-check

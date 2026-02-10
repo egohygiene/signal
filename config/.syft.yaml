@@ -1,0 +1,45 @@
+# Syft configuration file for Ego Hygiene base analysis
+
+output:
+  - spdx-json
+  - cyclonedx-json
+
+source:
+  name: "."
+  scheme: "directory"
+
+catalogers:
+  enabled:
+    - apkdb
+    - dpkgdb
+    - rpmdb
+    - python-package
+    - node-package
+    - java
+    - go-module
+    - rust-crate
+
+exclude:
+  - /dev
+  - /proc
+  - /sys
+  - /var/lib
+  - /tmp
+  - node_modules
+  - dist
+  - .git
+
+file-classification:
+  enabled: true
+
+file-metadata:
+  enabled: true
+
+file-contents:
+  enabled: false
+
+platform: ""
+
+quiet: true
+
+check-for-app-update: false

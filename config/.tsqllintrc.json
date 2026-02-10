@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "column-name": "warning",
+    "semicolon-termination": "error",
+    "keyword-case": "error",
+    "object-property-order": "warning",
+    "select-star": "error",
+    "set-notation": "error",
+    "alias-usage": "warning",
+    "data-type": "warning",
+    "table-name": "warning"
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage",
+    ".next",
+    ".git",
+    "migrations",
+    "tmp"
+  ]
+}

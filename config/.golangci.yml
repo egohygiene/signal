@@ -1,0 +1,115 @@
+---
+# yaml-language-server: $schema=https://golangci-lint.run/jsonschema/golangci.jsonschema.json
+version: "2"
+
+run:
+  timeout: 2m
+  tests: true
+  concurrency: 4
+  issues-exit-code: 1
+  relative-path-mode: gitroot
+
+output:
+  formats:
+    text:
+      path: stdout
+      print-linter-name: true
+      print-issued-lines: true
+      colors: true
+  show-stats: true
+  path-mode: relative
+
+formatters:
+  enable:
+    - gofmt
+    - gofumpt
+    - goimports
+
+linters:
+  enable:
+    - errcheck
+    - govet
+    - gosimple
+    - staticcheck
+    - unused
+    - structcheck
+    - deadcode
+    - gocritic
+    - revive
+    - gofmt
+    - goimports
+    - gofumpt
+    - dupl
+    - ineffassign
+    - typecheck
+    - misspell
+    - unparam
+    - nakedret
+    - dogsled
+    - goconst
+    - gocyclo
+    - godot
+    - exportloopref
+    - interfacer
+    - prealloc
+    - scopelint
+    - stylecheck
+    - whitespace
+
+  disable:
+    - maligned # deprecated
+    - depguard # optional, may conflict with some workflows
+
+  settings:
+    gocritic:
+      enabled-checks:
+        - appendAssign
+        - captLocal
+        - docStub
+        - dupImport
+        - ifElseChain
+        - hugeParam
+        - newDeref
+        - regexpSimplify
+        - sloppyLen
+        - sloppyReassign
+        - sloppyTypeAssert
+        - unnecessaryBlock
+        - unlabelStmt
+        - yodaStyleExpr
+      disable-all: false
+      enable-all: false
+
+    revive:
+      enable-all-rules: false
+      severity: warning
+      rules:
+        - name: indent-error-flow
+        - name: error-naming
+        - name: var-naming
+        - name: exported
+        - name: early-return
+        - name: range-val-in-closure
+
+    gocyclo:
+      min-complexity: 15
+
+    godot:
+      scope: declarations
+      period: true
+      capital: true
+
+    misspell:
+      locale: US
+
+    dupl:
+      threshold: 100
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
+  uniq-by-line: true
+  fix: false
+
+severity:
+  default: warning

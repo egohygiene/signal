@@ -1,0 +1,58 @@
+{
+    "$schema": "https://www.schemastore.org/coffeelint.json",
+    "indentation": {
+        "level": "error",
+        "value": 2
+    },
+    "no_tabs": {
+        "level": "error"
+    },
+    "no_trailing_whitespace": {
+        "level": "error"
+    },
+    "max_line_length": {
+        "level": "warn",
+        "value": 100,
+        "limitComments": true
+    },
+    "camel_case_classes": {
+        "level": "warn"
+    },
+    "no_implicit_braces": {
+        "level": "ignore"
+    },
+    "no_implicit_parens": {
+        "level": "ignore"
+    },
+    "spacing_after_comma": {
+        "level": "warn"
+    },
+    "space_operators": {
+        "level": "warn"
+    },
+    "duplicate_key": {
+        "level": "error"
+    },
+    "no_trailing_semicolons": {
+        "level": "error"
+    },
+    "line_endings": {
+        "level": "error",
+        "value": "unix"
+    },
+    "eol_last": {
+        "level": "warn"
+    },
+    "no_debugger": {
+        "level": "error"
+    },
+    "coffeescript_error": {
+        "level": "error"
+    },
+    "arrow_spacing": {
+        "level": "warn"
+    },
+    "empty_constructor_needs_parens": {
+        "level": "warn"
+    }
+}

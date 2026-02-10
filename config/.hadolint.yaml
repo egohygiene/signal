@@ -1,0 +1,50 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/hadolint/hadolint/master/contrib/hadolint.json
+# Disable inline ignore pragmas `# hadolint ignore=`
+disable-ignore-pragma: false
+
+# Allow CI to continue on warnings
+failure-threshold: warning
+
+# Output format
+format: tty
+
+# Strictly adhere to label-schema, don't allow additional labels.
+strict-labels: true
+
+# A label-schema. See https://github.com/hadolint/hadolint#linting-labels for reference.
+label-schema:
+  org.opencontainers.image.version: semver
+  org.opencontainers.image.title: text
+  org.opencontainers.image.description: text
+  org.opencontainers.image.authors: text
+  org.opencontainers.image.url: url
+  org.opencontainers.image.documentation: url
+  org.opencontainers.image.vendor: text
+  org.opencontainers.image.licenses: spdx
+  org.opencontainers.image.sources: url
+
+# Don't colorize output.
+no-color: false
+
+# Set to true if you only want to warn, never fail
+no-fail: false
+
+# Set a warning level instead of hard errors
+override:
+  warning:
+    - DL3006
+    - DL3025
+    - DL3059
+
+# A list of rules to ignore
+ignored: []
+
+# A list of trusted registries to use for image names
+trustedRegistries:
+  - docker.io
+  - gcr.io
+  - ghcr.io
+  - registry.hub.docker.com
+  - quay.io
+  - docker.elastic.co

@@ -1,0 +1,18 @@
+# Tekton Linter Config
+
+rules:
+  - validate-schema
+  - required-fields
+  - no-empty-steps
+  - resource-name-conventions
+  - task-ref-validation
+  - timeout-format
+
+exclude:
+  - node_modules
+  - dist
+  - .git
+  - vendor
+  - tmp
+  - .tektonlintrc.yaml
+  - "*.md"

@@ -1,0 +1,13 @@
+linters: with_defaults(
+  assignment_linter = NULL,
+  object_usage_linter = NULL,
+  line_length_linter = line_length_linter(120),
+  spaces_left_parentheses_linter = NULL,
+  commented_code_linter = NULL
+)
+
+exclude: 
+  - "tests/"
+  - "data/"
+  - "docs/"
+  - "README.Rmd"

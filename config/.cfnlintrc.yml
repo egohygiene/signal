@@ -1,0 +1,35 @@
+---
+regions:
+  - us-east-1
+  - us-west-2
+  - eu-west-1
+
+include-checks:
+  - I # Informational
+  - W # Warnings
+  - E # Errors
+
+ignore-checks:
+  - W2001 # JSON/YAML formatting recommendation
+  - W3005 # Missing property, too aggressive for partial templates
+  - E1029 # Ignore template description (optional)
+
+templates:
+  - "**/*.template"
+  - "**/*.yaml"
+  - "**/*.yml"
+  - "**/*.json"
+
+# Optional: allow AWS::Serverless for SAM support
+transform:
+  - AWS::Serverless-2016-10-31
+
+# Optional: directories where custom rules are defined
+custom-rules:
+  - ./cfn-rules/
+
+# Optional: exclude specific files or folders
+ignore-templates:
+  - node_modules/
+  - .venv/
+  - dist/

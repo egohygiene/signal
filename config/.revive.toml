@@ -1,0 +1,54 @@
+# revive.toml — universal configuration
+
+severity = "warning"
+confidence = 0.8
+ignoreGeneratedHeader = true
+
+[rule.blank-imports]
+[rule.context-as-argument]
+[rule.dot-imports]
+[rule.error-strings]
+[rule.error-naming]
+[rule.exported]
+[rule.var-naming]
+[rule.package-comments]
+[rule.if-return]
+[rule.range]
+[rule.receiver-naming]
+[rule.unused-parameter]
+[rule.unexported-return]
+[rule.file-header]
+[rule.unused-receiver]
+[rule.indent-error-flow]
+[rule.early-return]
+
+# Optional stricter rules (uncomment to activate)
+#[rule.argument-limit]
+#  arguments = [5]
+#[rule.function-length]
+#  arguments = [100]
+#[rule.line-length-limit]
+#  arguments = [120]
+
+[rule.add-constant]
+  arguments = [
+    { maxLitCount = "3", allowInts = "0,1", allowStrs = "", allowFloats = "" }
+  ]
+
+[rule.time-naming]
+  arguments = ["time", "timestamp", "date"]
+
+[rule.file-length-limit]
+  arguments = [1000] # lines
+
+[rule.function-result-limit]
+  arguments = [3]
+
+[rule.cognitive-complexity]
+  arguments = [15]
+
+[rule.modifies-parameter]
+[rule.modifies-value-receiver]
+
+[rule.comment-spacings]
+[rule.comment-formatting]

@@ -1,0 +1,21 @@
+# .clang-format
+
+BasedOnStyle: Google
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+BreakBeforeBraces: Allman
+AllowShortIfStatementsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortLoopsOnASingleLine: false
+ColumnLimit: 100
+SortIncludes: true
+IncludeBlocks: Preserve
+SpaceBeforeParens: ControlStatements
+AlwaysBreakAfterReturnType: None
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignTrailingComments: true
+ReflowComments: true
+Standard: Latest
+Language: Cpp

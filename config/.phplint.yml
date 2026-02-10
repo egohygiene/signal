@@ -1,0 +1,18 @@
+---
+# PHPLint configuration for monorepos and CI environments
+
+path: . # Root directory to lint
+jobs: 5 # Parallel jobs (tune based on CPU cores)
+
+extensions:
+  - php # File extensions to lint
+
+exclude: # Patterns to ignore
+  - vendor/** # Ignore dependencies
+  - node_modules/**
+  - tests/Fixtures/** # Example: ignore test fixtures or snapshots
+
+warning: false # Treat warnings as errors (default: false)
+
+# Optional: strict mode (if supported by your PHPLint version)
+# strict: true

@@ -1,0 +1,5 @@
+[snakefmt]
+line_length = 88
+use_black = true
+skip_magic_handling = false
+compact = false

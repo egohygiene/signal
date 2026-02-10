@@ -1,0 +1,75 @@
+% -----------------------------------------------------------------------------
+% chktexrc - Combined configuration for LaTeX linting
+% -----------------------------------------------------------------------------
+
+% === General Settings ===
+WarnAll
+ShowContext
+QuoteStyle = Logical
+TabSize = 4
+MaxLineLength = 100
+
+% === Suppressed Warnings (quiet noisy or irrelevant ones) ===
+Suppress 1     % Missing space after command
+Suppress 8     % Tab character warnings
+Suppress 13    % Missing ~ before references
+Suppress 24    % Leading whitespace
+Suppress 25    % Braces in math mode
+Suppress 36    % \[...\] vs. $$
+Suppress 46    % Dumb quotes
+Suppress 47    % Dots spacing (often false positives)
+
+% === Specific Warnings to Keep Enabled for Style Enforcement ===
+Warning 2 Yes   % Enforce \textit over {\it}
+Warning 11 Yes  % Enforce correct spacing after punctuation
+Warning 16 Yes  % Math mode misuse
+Warning 30 Yes  % Long lines
+
+% === Command Line Equivalents (for reference / compatibility) ===
+CmdLine {
+  --nowarn=13
+  --nowarn=46
+  --nowarn=8
+  --nowarn=47
+}
+
+% === Custom Linker Commands (references/citations) ===
+Linker {
+  \ref \vref \pageref \eqref \cite
+}
+
+% === Commands whose arguments should be silently skipped ===
+Silent {
+  \emph \textbf \textit \textsf \texttt \url \href \cite \footnote
+}
+
+% === Math Environments ===
+MathEnvir {
+  math displaymath equation align alignat flalign gather multline eqnarray
+}
+
+% === Commands that enforce math mode ===
+MathCmd {
+  \ensuremath
+}
+
+% === Textual Formatting Commands ===
+TextCmd {
+  \text \mbox \intertext
+}
+
+% === Environments where all content should be ignored ===
+VerbEnvir {
+  verbatim minted lstlisting tikzpicture
+}
+
+% === Commands with optional/wiped arguments ===
+WipeArg {
+  \cite:{} \label:{} \ref:{} \url:{} \href:{}{} \include:{} \input:{}
+}
+
+% === Custom Regex Warnings (User-defined lint patterns) ===
+UserWarnRegex {
+  (?!#Use! \toprule,! \midrule,! or! \bottomrule)\\hline
+  (?!#Avoid! vertical! rules! in! tables)\\begin\{(array|tabularx?\*?)\}(\[.*\])?\{.*\|.*\}
+}

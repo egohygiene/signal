@@ -1,0 +1,33 @@
+{
+  "default": true,
+
+  "no-empty-file": "error",
+  "no-empty-scenarios": "error",
+  "no-empty-tags": "error",
+
+  "indentation": ["error", 2],
+  "max-scenarios-per-file": ["warn", 10],
+  "max-outline-examples": ["warn", 5],
+
+  "no-multiple-empty-lines": ["warn", { "max": 1 }],
+  "no-trailing-spaces": "warn",
+
+  "no-unnamed-features": "error",
+  "no-unnamed-scenarios": "error",
+  "no-redundant-tags": "warn",
+  "no-dupe-tags": "warn",
+
+  "no-step-definitions-outside-step-definitions-dir": "off",
+  "no-tags-on-background": "warn",
+  "no-tag-prefix": "off",
+
+  "required-tags": ["warn", { "tags": ["@smoke", "@regression"], "exactly": false }],
+  "required-feature-tags": ["warn", ["@feature"]],
+  "required-scenario-tags": ["warn", ["@test"]],
+
+  "steps-in-scenario": ["error", { "min": 1 }],
+  "new-line-before-examples": "warn",
+  "new-line-before-scenario": "warn",
+
+  "allowed-tags": ["@smoke", "@regression", "@wip", "@feature", "@test"]
+}

@@ -1,0 +1,44 @@
+# .protolintrc.yml
+# Protolint configuration for enforcing consistent .proto file style
+
+rules:
+  add:
+    - FILE_NAME_LOWER_SNAKE_CASE
+    - ENUM_FIELD_NAMES_UPPER_SNAKE_CASE
+    - FIELD_NAMES_LOWER_SNAKE_CASE
+    - MESSAGE_FIELD_NAMES_LOWER_SNAKE_CASE
+    - MESSAGE_NAMES_PASCAL_CASE
+    - ENUM_NAMES_PASCAL_CASE
+    - SERVICE_NAMES_PASCAL_CASE
+    - RPC_NAMES_PASCAL_CASE
+    - NO_WEAK_IMPORT
+    - IMPORTS_SORTED
+    - SYNTAX_PROTO3
+    - PACKAGE_LOWER_SNAKE_CASE
+    - COMMENT_ENUM
+    - COMMENT_MESSAGE
+    - COMMENT_RPC
+    - COMMENT_SERVICE
+
+  remove:
+    # Remove any rules you want to disable here, e.g.:
+    # - FIELD_NAMES_LOWER_SNAKE_CASE
+    # - FILE_NAME_LOWER_SNAKE_CASE
+
+lint:
+  # Optional: skip vendor or generated directories
+  ignore:
+    - "**/vendor/**"
+    - "**/generated/**"
+    - "**/build/**"
+
+formatter:
+  # Optional formatting behavior
+  indent: 2
+  sort_imports: true
+  line_ending: "unix"  # normalize endings
+
+# You can also customize rule severity if supported
+severity:
+  FILE_NAME_LOWER_SNAKE_CASE: "error"
+  SYNTAX_PROTO3: "error"

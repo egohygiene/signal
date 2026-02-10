@@ -1,0 +1,34 @@
+{
+    "retryOn429": true,
+    "retryCount": 5,
+    "timeout": "10000",
+    "aliveStatusCodes": [200, 203],
+    "ignorePatterns": [
+        {
+            "pattern": "^mailto:"
+        },
+        {
+            "pattern": "^tel:"
+        },
+        {
+            "pattern": "^#"
+        },
+        {
+            "pattern": "^http://localhost"
+        },
+        {
+            "pattern": "^https://localhost"
+        },
+        {
+            "pattern": "127\\.0\\.0\\.1"
+        }
+    ],
+    "httpHeaders": [
+        {
+            "urls": ["https://github.com/**"],
+            "headers": {
+                "User-Agent": "Mozilla/5.0"
+            }
+        }
+    ]
+}

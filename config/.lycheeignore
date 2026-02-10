@@ -1,0 +1,26 @@
+# GitHub assets and rate-limited endpoints
+https://github.com/*
+https://raw.githubusercontent.com/*
+https://user-images.githubusercontent.com/*
+
+# Social media links
+https://twitter.com/*
+https://linkedin.com/*
+https://facebook.com/*
+https://instagram.com/*
+
+# Local dev links
+http://localhost
+http://127.0.0.1
+http://0.0.0.0
+
+# Internal anchor or fragment-only links
+#
+
+# Markdown reference-style syntax (edge case false positives)
+[//]: #
+
+# Dummy placeholder links
+https://example.com
+https://yourdomain.com
+https://placeholder.com

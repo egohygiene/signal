@@ -1,0 +1,8 @@
+{
+  "comments": false,
+  "allowTrailingCommas": false,
+  "allowDuplicateKeys": false,
+  "allowSingleQuotedStrings": false,
+  "allowJavascriptStyleComments": false,
+  "allowUnquotedKeys": false
+}

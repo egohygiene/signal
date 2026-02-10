@@ -1,0 +1,38 @@
+{
+    "$schema": "https://www.schemastore.org/stylelintrc.json",
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-recommended",
+        "stylelint-config-prettier"
+    ],
+    "plugins": ["stylelint-order"],
+    "rules": {
+        "color-hex-length": "short",
+        "declaration-no-important": true,
+        "no-empty-source": null,
+        "no-descending-specificity": null,
+        "selector-max-id": 0,
+        "selector-max-type": 2,
+        "max-nesting-depth": 3,
+        "order/order": ["custom-properties", "declarations"],
+        "order/properties-order": [
+            "position",
+            "top",
+            "right",
+            "bottom",
+            "left",
+            "display",
+            "flex",
+            "grid",
+            "align-items",
+            "justify-content",
+            "width",
+            "height",
+            "margin",
+            "padding",
+            "font",
+            "color",
+            "background"
+        ]
+    }
+}
