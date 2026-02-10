@@ -360,6 +360,13 @@ function parseGitHubActionsGroups(logText) {
   const groupStack = [];
   let currentContent = [];
 
+  // Helper to get the current parent container
+  const getCurrentParent = () => {
+    return groupStack.length > 0 
+      ? groupStack[groupStack.length - 1].content 
+      : result;
+  };
+
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     const groupMatch = line.match(/^::group::(.+)$/);
@@ -368,10 +375,7 @@ function parseGitHubActionsGroups(logText) {
     if (groupMatch) {
       // Save any content before this group
       if (currentContent.length > 0) {
-        const parent = groupStack.length > 0 
-          ? groupStack[groupStack.length - 1].content 
-          : result;
-        parent.push({ type: 'text', content: currentContent.join("\n") });
+        getCurrentParent().push({ type: 'text', content: currentContent.join("\n") });
         currentContent = [];
       }
 
@@ -379,12 +383,7 @@ function parseGitHubActionsGroups(logText) {
       const groupTitle = groupMatch[1];
       const group = { type: 'group', title: groupTitle, content: [] };
       
-      if (groupStack.length > 0) {
-        groupStack[groupStack.length - 1].content.push(group);
-      } else {
-        result.push(group);
-      }
-      
+      getCurrentParent().push(group);
       groupStack.push(group);
     } else if (endGroupMatch) {
       // End the current group
@@ -395,7 +394,10 @@ function parseGitHubActionsGroups(logText) {
         });
         currentContent = [];
       }
-      groupStack.pop();
+      // Only pop if there's a group to close
+      if (groupStack.length > 0) {
+        groupStack.pop();
+      }
     } else {
       // Regular content line
       currentContent.push(line);
@@ -404,10 +406,7 @@ function parseGitHubActionsGroups(logText) {
 
   // Add any remaining content
   if (currentContent.length > 0) {
-    const parent = groupStack.length > 0 
-      ? groupStack[groupStack.length - 1].content 
-      : result;
-    parent.push({ type: 'text', content: currentContent.join("\n") });
+    getCurrentParent().push({ type: 'text', content: currentContent.join("\n") });
   }
 
   return renderLogContent(result);
@@ -429,6 +428,9 @@ function renderLogContent(items) {
 }
 
 function escapeHtml(text) {
+  if (!text || typeof text !== 'string') return '';
+  
+  // Use DOM API for safe HTML escaping
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
