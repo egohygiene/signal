@@ -19,8 +19,8 @@ See documentation on https://megalinter.io/8.8.0/descriptors/yaml_yamllint/
     .megalinter.yml
       2:81      error    line too long (164 > 80 characters)  (line-length)
       5:81      error    line too long (85 > 80 characters)  (line-length)
-      142:81    error    line too long (84 > 80 characters)  (line-length)
-      352:81    error    line too long (100 > 80 characters)  (line-length)
+      140:81    error    line too long (84 > 80 characters)  (line-length)
+      350:81    error    line too long (100 > 80 characters)  (line-length)
 
 ❌ [ERROR] .pre-commit-config.yaml
     .pre-commit-config.yaml
@@ -28,6 +28,19 @@ See documentation on https://megalinter.io/8.8.0/descriptors/yaml_yamllint/
       69:81     error    line too long (81 > 80 characters)  (line-length)
 
 ✅ [SUCCESS] .releaserc.yml
+❌ [ERROR] config/.v8rrc.yml
+    config/.v8rrc.yml
+      1:81      error    line too long (85 > 80 characters)  (line-length)
+      4:1       warning  missing document start "---"  (document-start)
+      11:81     error    line too long (81 > 80 characters)  (line-length)
+      41:5      warning  comment not indented like content  (comments-indentation)
+      42:9      warning  comment not indented like content  (comments-indentation)
+      43:11     warning  comment not indented like content  (comments-indentation)
+      45:81     error    line too long (91 > 80 characters)  (line-length)
+      53:81     error    line too long (82 > 80 characters)  (line-length)
+      57:81     error    line too long (86 > 80 characters)  (line-length)
+      58:81     error    line too long (84 > 80 characters)  (line-length)
+
 ✅ [SUCCESS] config/analysis_options.yml
 ✅ [SUCCESS] config/styles/proselint/Airlinese.yml
 ❌ [ERROR] config/styles/proselint/AnimalLabels.yml
