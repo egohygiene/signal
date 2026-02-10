@@ -18,9 +18,16 @@
   IMPORTANT:
   Your site root is https://signal.egohygiene.io/
   Your report lives at /reports/megalinter/
+  
+  Try local path first (for local testing), then production path
 */
 
-const REPORT_PATH = "/reports/megalinter/mega-linter-report.json";
+const REPORT_PATHS = [
+  "mega-linter-report.json",
+  "/reports/megalinter/mega-linter-report.json"
+];
+
+let currentReportPathIndex = 0;
 
 /* -------------------------------------------------
    State
@@ -44,11 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
 ------------------------------------------------- */
 
 function loadReport() {
-  console.log("Attempting to fetch report:", REPORT_PATH);
+  const reportPath = REPORT_PATHS[currentReportPathIndex];
+  console.log("Attempting to fetch report:", reportPath);
 
-  fetch(REPORT_PATH)
+  fetch(reportPath)
     .then((response) => {
       if (!response.ok) {
+        // Try next path if available
+        if (currentReportPathIndex < REPORT_PATHS.length - 1) {
+          currentReportPathIndex++;
+          console.log("Trying alternate path...");
+          loadReport();
+          return null;
+        }
         throw new Error(
           "Failed to load mega-linter-report.json (HTTP " +
             response.status +
@@ -58,6 +73,8 @@ function loadReport() {
       return response.json();
     })
     .then((data) => {
+      if (!data) return; // Skip if trying alternate path
+
       console.group("MegaLinter report loaded");
       console.log("Top-level keys:", Object.keys(data));
       console.log("Raw report object:", data);
