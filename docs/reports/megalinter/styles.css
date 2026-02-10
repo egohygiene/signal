@@ -452,6 +452,55 @@ td[colspan] {
 }
 
 /* -------------------------------------------------
+   ANSI Color Support
+------------------------------------------------- */
+
+/* Bold/Bright */
+.ansi-bold {
+  font-weight: bold;
+}
+
+/* Foreground Colors (30-37) */
+.ansi-fg-0 { color: #2e3436; } /* Black */
+.ansi-fg-1 { color: #cc0000; } /* Red */
+.ansi-fg-2 { color: #4e9a06; } /* Green */
+.ansi-fg-3 { color: #c4a000; } /* Yellow */
+.ansi-fg-4 { color: #3465a4; } /* Blue */
+.ansi-fg-5 { color: #75507b; } /* Magenta */
+.ansi-fg-6 { color: #06989a; } /* Cyan */
+.ansi-fg-7 { color: #d3d7cf; } /* White */
+
+/* Bright Foreground Colors (90-97) */
+.ansi-fg-bright-0 { color: #555753; } /* Bright Black (Gray) */
+.ansi-fg-bright-1 { color: #ef2929; } /* Bright Red */
+.ansi-fg-bright-2 { color: #8ae234; } /* Bright Green */
+.ansi-fg-bright-3 { color: #fce94f; } /* Bright Yellow */
+.ansi-fg-bright-4 { color: #729fcf; } /* Bright Blue */
+.ansi-fg-bright-5 { color: #ad7fa8; } /* Bright Magenta */
+.ansi-fg-bright-6 { color: #34e2e2; } /* Bright Cyan */
+.ansi-fg-bright-7 { color: #eeeeec; } /* Bright White */
+
+/* Background Colors (40-47) */
+.ansi-bg-0 { background-color: #2e3436; } /* Black */
+.ansi-bg-1 { background-color: #cc0000; } /* Red */
+.ansi-bg-2 { background-color: #4e9a06; } /* Green */
+.ansi-bg-3 { background-color: #c4a000; } /* Yellow */
+.ansi-bg-4 { background-color: #3465a4; } /* Blue */
+.ansi-bg-5 { background-color: #75507b; } /* Magenta */
+.ansi-bg-6 { background-color: #06989a; } /* Cyan */
+.ansi-bg-7 { background-color: #d3d7cf; } /* White */
+
+/* Bright Background Colors (100-107) */
+.ansi-bg-bright-0 { background-color: #555753; } /* Bright Black */
+.ansi-bg-bright-1 { background-color: #ef2929; } /* Bright Red */
+.ansi-bg-bright-2 { background-color: #8ae234; } /* Bright Green */
+.ansi-bg-bright-3 { background-color: #fce94f; } /* Bright Yellow */
+.ansi-bg-bright-4 { background-color: #729fcf; } /* Bright Blue */
+.ansi-bg-bright-5 { background-color: #ad7fa8; } /* Bright Magenta */
+.ansi-bg-bright-6 { background-color: #34e2e2; } /* Bright Cyan */
+.ansi-bg-bright-7 { background-color: #eeeeec; } /* Bright White */
+
+/* -------------------------------------------------
    Responsive
 ------------------------------------------------- */
 
