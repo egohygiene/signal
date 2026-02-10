@@ -8,7 +8,7 @@ on:
   pull_request:
 
 permissions:
-  contents: read
+  contents: write
   issues: write
   pull-requests: write
 
@@ -33,6 +33,34 @@ jobs:
           # GitHub token for API access
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
+
+      - name: Copy reports to docs
+        if: always() && github.ref == 'refs/heads/main'
+        run: |
+          echo "Copying MegaLinter reports to docs/reports/megalinter/"
+          mkdir -p docs/reports/megalinter
+          if [ -d "reports/megalinter" ]; then
+            cp -r reports/megalinter/* docs/reports/megalinter/
+            echo "Reports copied successfully"
+            ls -la docs/reports/megalinter/
+          else
+            echo "No reports found to copy"
+          fi
+
+      - name: Commit reports
+        if: always() && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/reports/megalinter/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update MegaLinter HTML reports"
+            git push
+            echo "Reports published to docs/reports/megalinter/"
+            echo "Will be available at: https://signal.egohygiene.io/reports/megalinter/" >> $GITHUB_STEP_SUMMARY
+          fi
 
       - name: Archive MegaLinter reports
         if: always()
