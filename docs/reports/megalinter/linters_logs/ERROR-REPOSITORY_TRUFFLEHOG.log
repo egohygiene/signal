@@ -6,5 +6,5 @@ See documentation on https://megalinter.io/8.8.0/descriptors/repository_truffleh
 Linter raw log:
 🐷🔑🐷  TruffleHog. Unearth your secrets. 🐷🔑🐷
 
-2026-02-10T03:22:47Z	error	trufflehog	unable to open filter file	{"file": "config/.trufflehogignore", "file": "config/.trufflehogignore", "error": "open config/.trufflehogignore: no such file or directory"}
+2026-02-10T08:02:22Z	error	trufflehog	unable to open filter file	{"file": "config/.trufflehogignore", "file": "config/.trufflehogignore", "error": "open config/.trufflehogignore: no such file or directory"}
 
