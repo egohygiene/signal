@@ -367,6 +367,41 @@ td[colspan] {
 }
 
 /* -------------------------------------------------
+   Log Viewer (Terminal Style)
+------------------------------------------------- */
+
+#log-container {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#log-content {
+  margin: 0;
+  padding: 1.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #d4d4d4;
+  background-color: #1e1e1e;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 600px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+#log-content.error {
+  color: #f87171;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* -------------------------------------------------
    Responsive
 ------------------------------------------------- */
 
@@ -386,5 +421,10 @@ td[colspan] {
 
   td:nth-child(4) {
     max-width: none;
+  }
+
+  #log-content {
+    font-size: 0.75rem;
+    max-height: 400px;
   }
 }
