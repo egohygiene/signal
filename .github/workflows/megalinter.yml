@@ -26,7 +26,7 @@ jobs:
         id: ml
         uses: oxsecurity/megalinter@v8
         env:
-          # Apply all fixes and suggestions
+          # Do not apply automatic fixes (informational mode only)
           APPLY_FIXES: none
           # Validate all code, not just changed files
           VALIDATE_ALL_CODEBASE: true
