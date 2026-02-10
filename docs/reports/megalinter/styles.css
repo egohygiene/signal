@@ -1,5 +1,15 @@
+/* =================================================
+   MegaLinter Static Dashboard — Styles
+   =================================================
+   Goals:
+   - Calm, professional, audit-friendly
+   - Prioritize issue readability
+   - Low cognitive load
+   - No animations, no gimmicks
+*/
+
 /* -------------------------------------------------
-   Base / Reset
+   Reset / Base
 ------------------------------------------------- */
 
 *,
@@ -15,9 +25,9 @@ html {
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  color: #1f2933;
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+  color: #1f2937;
   background-color: #f8fafc;
 }
 
@@ -26,7 +36,7 @@ body {
 ------------------------------------------------- */
 
 main {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
 }
@@ -44,25 +54,25 @@ section {
 ------------------------------------------------- */
 
 h1 {
-  font-size: 1.75rem;
+  font-size: 1.9rem;
   margin: 0 0 0.25rem;
 }
 
 h2 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #e2e8f0;
   padding-bottom: 0.25rem;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .subtitle {
-  color: #475569;
   font-size: 0.95rem;
+  color: #475569;
   margin: 0;
 }
 
 /* -------------------------------------------------
-   Summary
+   Summary Cards
 ------------------------------------------------- */
 
 .summary-list {
@@ -70,16 +80,18 @@ h2 {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 0.75rem;
 }
 
 .summary-list li {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
   font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* -------------------------------------------------
@@ -89,7 +101,7 @@ h2 {
 #filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 #filters label {
@@ -100,10 +112,10 @@ h2 {
 }
 
 #filters select {
-  margin-top: 0.25rem;
-  padding: 0.4rem 0.5rem;
+  margin-top: 0.35rem;
+  padding: 0.45rem 0.6rem;
   font-size: 0.9rem;
-  border-radius: 4px;
+  border-radius: 6px;
   border: 1px solid #cbd5e1;
   background-color: #ffffff;
 }
@@ -114,15 +126,16 @@ h2 {
 }
 
 /* -------------------------------------------------
-   Table
+   Issues Table (Core)
 ------------------------------------------------- */
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -133,15 +146,16 @@ thead {
 th,
 td {
   text-align: left;
-  padding: 0.6rem 0.75rem;
+  padding: 0.75rem 0.85rem;
   font-size: 0.85rem;
-  border-bottom: 1px solid #e2e8f0;
   vertical-align: top;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 th {
   font-weight: 600;
   color: #334155;
+  white-space: nowrap;
 }
 
 tbody tr:last-child td {
@@ -149,40 +163,95 @@ tbody tr:last-child td {
 }
 
 /* -------------------------------------------------
-   Severity Styling (Subtle)
+   Table Row Behavior
 ------------------------------------------------- */
 
-td:first-child {
-  font-weight: 600;
-  text-transform: capitalize;
+tbody tr {
+  transition: background-color 0.08s ease-in-out;
 }
 
-td:first-child::before {
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* -------------------------------------------------
+   Severity Column (Highly Readable)
+------------------------------------------------- */
+
+td[data-severity] {
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+td[data-severity]::before {
   content: "●";
   display: inline-block;
-  margin-right: 0.35rem;
+  margin-right: 0.45rem;
   font-size: 0.7rem;
   vertical-align: middle;
 }
 
-td:first-child {
-  color: #334155;
+/* Severity Colors (Subtle but Clear) */
+
+td[data-severity="error"] {
+  color: #991b1b;
 }
 
-td:first-child[data-severity="error"]::before {
+td[data-severity="error"]::before {
   color: #dc2626;
 }
 
-td:first-child[data-severity="warning"]::before {
-  color: #d97706;
+td[data-severity="warning"] {
+  color: #92400e;
 }
 
-td:first-child[data-severity="info"]::before {
+td[data-severity="warning"]::before {
+  color: #f59e0b;
+}
+
+td[data-severity="info"] {
+  color: #1e3a8a;
+}
+
+td[data-severity="info"]::before {
   color: #2563eb;
 }
 
 /* -------------------------------------------------
-   Accessibility Helpers
+   Message Column (Most Important)
+------------------------------------------------- */
+
+td:nth-child(4) {
+  max-width: 600px;
+  line-height: 1.45;
+  color: #111827;
+  word-break: break-word;
+}
+
+/* -------------------------------------------------
+   File Path Column
+------------------------------------------------- */
+
+td:last-child {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.8rem;
+  color: #374151;
+  word-break: break-all;
+}
+
+/* -------------------------------------------------
+   Empty State
+------------------------------------------------- */
+
+td[colspan] {
+  padding: 1.25rem;
+  font-style: italic;
+}
+
+/* -------------------------------------------------
+   Accessibility
 ------------------------------------------------- */
 
 :focus-visible {
@@ -201,12 +270,17 @@ td:first-child[data-severity="info"]::before {
    Responsive
 ------------------------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   main {
     padding: 1.5rem 1rem 3rem;
   }
 
-  table {
+  th,
+  td {
     font-size: 0.8rem;
+  }
+
+  td:nth-child(4) {
+    max-width: none;
   }
 }
