@@ -18,7 +18,13 @@ const REPORT_PATHS = [
   "/reports/megalinter/mega-linter-report.json"
 ];
 
+const LOG_PATHS = [
+  "mega-linter.log",
+  "/reports/megalinter/mega-linter.log"
+];
+
 let currentReportPathIndex = 0;
+let currentLogPathIndex = 0;
 
 /* -------------------------------------------------
    State
@@ -33,6 +39,7 @@ let allIssues = [];
 document.addEventListener("DOMContentLoaded", () => {
   console.log("MegaLinter dashboard booting…");
   loadReport();
+  loadLog();
   setupFilters();
   setupDetailPanel();
 });
@@ -303,4 +310,49 @@ function setupDetailPanel() {
       .getElementById("issue-detail-panel")
       .setAttribute("hidden", "");
   });
+}
+
+/* -------------------------------------------------
+   Log Viewer
+------------------------------------------------- */
+
+function loadLog() {
+  const logPath = LOG_PATHS[currentLogPathIndex];
+  console.log("Attempting to fetch log:", logPath);
+
+  fetch(logPath)
+    .then((response) => {
+      if (!response.ok) {
+        if (currentLogPathIndex < LOG_PATHS.length - 1) {
+          currentLogPathIndex++;
+          return loadLog();
+        }
+        throw new Error("Log file not found");
+      }
+      return response.text();
+    })
+    .then((logText) => {
+      console.log("MegaLinter log loaded");
+      displayLog(logText || "(empty log file)");
+    })
+    .catch((error) => {
+      console.warn("Could not load MegaLinter log:", error.message);
+      displayLogError(`Log file not available: ${error.message}`);
+    });
+}
+
+function displayLog(logText) {
+  const logContent = document.getElementById("log-content");
+  if (!logContent) return;
+
+  logContent.textContent = logText;
+  logContent.classList.remove("error");
+}
+
+function displayLogError(message) {
+  const logContent = document.getElementById("log-content");
+  if (!logContent) return;
+
+  logContent.textContent = message;
+  logContent.classList.add("error");
 }
