@@ -2,41 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>MegaLinter Report Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MegaLinter Report</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="Static insight viewer for MegaLinter v8 reports"
+  />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main>
+    <!-- -------------------------------------------------
+         Header
+    ------------------------------------------------- -->
+
     <header>
       <h1>MegaLinter Report</h1>
-      <p class="subtitle">Static insight viewer for mega-linter-report.json</p>
+      <p class="subtitle">
+        Static insight viewer for <code>mega-linter-report.json</code>
+      </p>
     </header>
 
-    <section id="summary" aria-labelledby="summary-heading">
+    <!-- -------------------------------------------------
+         Summary
+    ------------------------------------------------- -->
+
+    <section
+      id="summary"
+      aria-labelledby="summary-heading"
+    >
       <h2 id="summary-heading">Summary</h2>
+
       <ul class="summary-list">
-        <li><strong>Total issues:</strong> <span id="total-issues">–</span></li>
-        <li><strong>Errors:</strong> <span id="severity-error">–</span></li>
-        <li><strong>Warnings:</strong> <span id="severity-warning">–</span></li>
-        <li><strong>Infos:</strong> <span id="severity-info">–</span></li>
+        <li>
+          <strong>Total issues</strong>
+          <span id="total-issues">–</span>
+        </li>
+        <li>
+          <strong>Errors</strong>
+          <span id="severity-error">–</span>
+        </li>
+        <li>
+          <strong>Warnings</strong>
+          <span id="severity-warning">–</span>
+        </li>
+        <li>
+          <strong>Infos</strong>
+          <span id="severity-info">–</span>
+        </li>
       </ul>
     </section>
 
-    <section id="filters" aria-labelledby="filters-heading">
+    <!-- -------------------------------------------------
+         Filters
+    ------------------------------------------------- -->
+
+    <section
+      id="filters"
+      aria-labelledby="filters-heading"
+    >
       <h2 id="filters-heading">Filters</h2>
 
       <label>
-        Linter:
-        <select id="linter-filter">
+        <span>Linter</span>
+        <select
+          id="linter-filter"
+          aria-label="Filter by linter"
+        >
           <option value="">All</option>
         </select>
       </label>
 
       <label>
-        Severity:
-        <select id="severity-filter">
+        <span>Severity</span>
+        <select
+          id="severity-filter"
+          aria-label="Filter by severity"
+        >
           <option value="">All</option>
           <option value="error">Error</option>
           <option value="warning">Warning</option>
@@ -45,24 +93,63 @@
       </label>
     </section>
 
-    <section id="issues" aria-labelledby="issues-heading">
+    <!-- -------------------------------------------------
+         Issues Table
+    ------------------------------------------------- -->
+
+    <section
+      id="issues"
+      aria-labelledby="issues-heading"
+    >
       <h2 id="issues-heading">Issues</h2>
-      <table>
+
+      <table aria-describedby="issues-heading">
+        <colgroup>
+          <col style="width: 110px" />
+          <col style="width: 160px" />
+          <col style="width: 160px" />
+          <col />
+          <col style="width: 320px" />
+        </colgroup>
+
         <thead>
           <tr>
-            <th>Severity</th>
-            <th>Linter</th>
-            <th>Rule</th>
-            <th>Message</th>
-            <th>File</th>
+            <th scope="col">Severity</th>
+            <th scope="col">Linter</th>
+            <th scope="col">Rule</th>
+            <th scope="col">Message</th>
+            <th scope="col">File</th>
           </tr>
         </thead>
+
         <tbody id="issues-table-body">
-          <!-- populated by JS -->
+          <!-- Rows injected by app.js -->
         </tbody>
       </table>
     </section>
+
+    <!-- -------------------------------------------------
+         Footer / Context
+    ------------------------------------------------- -->
+
+    <footer>
+      <p
+        style="
+          margin-top: 3rem;
+          font-size: 0.8rem;
+          color: #64748b;
+        "
+      >
+        Generated from a MegaLinter v8 report.
+        This dashboard is static, read-only,
+        and performs no data mutation or upload.
+      </p>
+    </footer>
   </main>
+
+  <!-- -------------------------------------------------
+       Scripts
+  ------------------------------------------------- -->
 
   <script src="app.js"></script>
 </body>
