@@ -38,11 +38,11 @@ Platform: CICD
 CWE: 829
 Learn more about this vulnerability: https://docs.kics.io/latest/queries/cicd-queries/555ab8f9-2001-455e-a077-f2d0f41e2fb9
 
-	[1]: .github/workflows/megalinter.yml:29
+	[1]: .github/workflows/megalinter.yml:30
 
-		028:         id: ml
-		029:         uses: oxsecurity/megalinter@v8
-		030:         env:
+		029:         id: ml
+		030:         uses: oxsecurity/megalinter@v8
+		031:         env:
 
 
 

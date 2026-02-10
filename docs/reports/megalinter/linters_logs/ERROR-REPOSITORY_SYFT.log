@@ -1,0 +1,10 @@
+Results of syft linter (version 1.27.1)
+See documentation on https://megalinter.io/8.8.0/descriptors/repository_syft/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+[0000] ERROR invalid application config: decoding failed due to the following error(s):
+
+'catalogers[0]' expected type 'string', got unconvertible type 'map[string]interface {}', value: 'map[enabled:[apkdb dpkgdb rpmdb python-package node-package java go-module rust-crate]]'
+

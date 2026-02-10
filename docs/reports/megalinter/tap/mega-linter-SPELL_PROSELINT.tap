@@ -1,0 +1,4 @@
+TAP version 13
+1..2
+ok 1 - config/styles/proselint/README.md
+not ok 2 - config/styles/write-good/README.md

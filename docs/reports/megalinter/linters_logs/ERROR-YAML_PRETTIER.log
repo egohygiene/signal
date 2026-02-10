@@ -4,112 +4,265 @@ See documentation on https://megalinter.io/8.8.0/descriptors/yaml_prettier/
 
 ❌ [ERROR] .github/workflows/megalinter.yml
     Checking formatting...
-    [warn] .github/workflows/megalinter.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
 ❌ [ERROR] .github/workflows/pages.yml
     Checking formatting...
-    [warn] .github/workflows/pages.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
-✅ [SUCCESS] .megalinter.yml
+❌ [ERROR] .megalinter.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
 ❌ [ERROR] .pre-commit-config.yaml
     Checking formatting...
-    [warn] .pre-commit-config.yaml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
-✅ [SUCCESS] .releaserc.yml
+❌ [ERROR] .releaserc.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.bandit.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.cfnlintrc.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.checkov.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.golangci.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.grype.yaml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.hadolint.yaml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.phplint.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.protolintrc.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.ruby-lint.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.spectral.yaml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.swiftlint.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.syft.yaml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.tektonlintrc.yaml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.trufflehog.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
 ❌ [ERROR] config/.v8rrc.yml
     Checking formatting...
-    [warn] config/.v8rrc.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
-✅ [SUCCESS] config/analysis_options.yml
-✅ [SUCCESS] config/styles/proselint/Airlinese.yml
+❌ [ERROR] config/.yamllint.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/analysis_options.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/Airlinese.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
 ❌ [ERROR] config/styles/proselint/AnimalLabels.yml
     Checking formatting...
-    [warn] config/styles/proselint/AnimalLabels.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
-✅ [SUCCESS] config/styles/proselint/Annotations.yml
-✅ [SUCCESS] config/styles/proselint/Apologizing.yml
-✅ [SUCCESS] config/styles/proselint/Archaisms.yml
-✅ [SUCCESS] config/styles/proselint/But.yml
-✅ [SUCCESS] config/styles/proselint/Cliches.yml
-✅ [SUCCESS] config/styles/proselint/CorporateSpeak.yml
-✅ [SUCCESS] config/styles/proselint/Currency.yml
-✅ [SUCCESS] config/styles/proselint/Cursing.yml
-✅ [SUCCESS] config/styles/proselint/DateCase.yml
-✅ [SUCCESS] config/styles/proselint/DateMidnight.yml
-✅ [SUCCESS] config/styles/proselint/DateRedundancy.yml
-✅ [SUCCESS] config/styles/proselint/DateSpacing.yml
+❌ [ERROR] config/styles/proselint/Annotations.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/Apologizing.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/Archaisms.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/But.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/Cliches.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/CorporateSpeak.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/Currency.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/Cursing.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/DateCase.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/DateMidnight.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/DateRedundancy.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/DateSpacing.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
 ❌ [ERROR] config/styles/proselint/DenizenLabels.yml
     Checking formatting...
-    [warn] config/styles/proselint/DenizenLabels.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
-✅ [SUCCESS] config/styles/proselint/Diacritical.yml
+❌ [ERROR] config/styles/proselint/Diacritical.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
 ❌ [ERROR] config/styles/proselint/GenderBias.yml
     Checking formatting...
-    [warn] config/styles/proselint/GenderBias.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
 ❌ [ERROR] config/styles/proselint/GroupTerms.yml
     Checking formatting...
-    [warn] config/styles/proselint/GroupTerms.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
 ❌ [ERROR] config/styles/proselint/Hedging.yml
     Checking formatting...
-    [warn] config/styles/proselint/Hedging.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
 ❌ [ERROR] config/styles/proselint/Hyperbole.yml
     Checking formatting...
-    [warn] config/styles/proselint/Hyperbole.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
-✅ [SUCCESS] config/styles/proselint/Jargon.yml
-✅ [SUCCESS] config/styles/proselint/LGBTOffensive.yml
+❌ [ERROR] config/styles/proselint/Jargon.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/LGBTOffensive.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
 ❌ [ERROR] config/styles/proselint/LGBTTerms.yml
     Checking formatting...
-    [warn] config/styles/proselint/LGBTTerms.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
-✅ [SUCCESS] config/styles/proselint/Malapropisms.yml
+❌ [ERROR] config/styles/proselint/Malapropisms.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
 ❌ [ERROR] config/styles/proselint/Needless.yml
     Checking formatting...
-    [warn] config/styles/proselint/Needless.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
-✅ [SUCCESS] config/styles/proselint/Nonwords.yml
-✅ [SUCCESS] config/styles/proselint/Oxymorons.yml
-✅ [SUCCESS] config/styles/proselint/P-Value.yml
+❌ [ERROR] config/styles/proselint/Nonwords.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/Oxymorons.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/P-Value.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
 ❌ [ERROR] config/styles/proselint/RASSyndrome.yml
     Checking formatting...
-    [warn] config/styles/proselint/RASSyndrome.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
-✅ [SUCCESS] config/styles/proselint/Skunked.yml
-✅ [SUCCESS] config/styles/proselint/Spelling.yml
+❌ [ERROR] config/styles/proselint/Skunked.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/proselint/Spelling.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
 ❌ [ERROR] config/styles/proselint/Typography.yml
     Checking formatting...
-    [warn] config/styles/proselint/Typography.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
 ❌ [ERROR] config/styles/proselint/Uncomparables.yml
     Checking formatting...
-    [warn] config/styles/proselint/Uncomparables.yml
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
-✅ [SUCCESS] config/styles/proselint/Very.yml
-✅ [SUCCESS] config/styles/write-good/Cliches.yml
-✅ [SUCCESS] config/styles/write-good/E-Prime.yml
-✅ [SUCCESS] config/styles/write-good/Illusions.yml
-✅ [SUCCESS] config/styles/write-good/Passive.yml
-✅ [SUCCESS] config/styles/write-good/So.yml
-✅ [SUCCESS] config/styles/write-good/ThereIs.yml
-✅ [SUCCESS] config/styles/write-good/TooWordy.yml
-✅ [SUCCESS] config/styles/write-good/Weasel.yml
-✅ [SUCCESS] config/trivy-sbom.yaml
-✅ [SUCCESS] config/trivy.yaml
+❌ [ERROR] config/styles/proselint/Very.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/write-good/Cliches.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/write-good/E-Prime.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/write-good/Illusions.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/write-good/Passive.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/write-good/So.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/write-good/ThereIs.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/write-good/TooWordy.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/styles/write-good/Weasel.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/trivy-sbom.yaml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/trivy.yaml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+

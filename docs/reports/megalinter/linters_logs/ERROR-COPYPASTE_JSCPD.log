@@ -1,0 +1,149 @@
+Results of jscpd linter (version 4.0.5)
+See documentation on https://megalinter.io/8.8.0/descriptors/copypaste_jscpd/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [11:3 - 21:5] (10 lines, 116 tokens)
+   config/styles/write-good/Cliches.yml [10:3 - 20:4]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [24:3 - 40:3] (16 lines, 184 tokens)
+   config/styles/write-good/Cliches.yml [21:3 - 37:6]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [51:3 - 72:8] (21 lines, 236 tokens)
+   config/styles/write-good/Cliches.yml [46:3 - 67:7]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [76:3 - 100:9] (24 lines, 264 tokens)
+   config/styles/write-good/Cliches.yml [67:3 - 91:6]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [104:3 - 119:5] (15 lines, 141 tokens)
+   config/styles/write-good/Cliches.yml [93:3 - 108:5]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [155:3 - 168:8] (13 lines, 135 tokens)
+   config/styles/write-good/Cliches.yml [137:3 - 150:10]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [182:3 - 204:8] (22 lines, 236 tokens)
+   config/styles/write-good/Cliches.yml [161:3 - 183:5]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [207:3 - 221:5] (14 lines, 152 tokens)
+   config/styles/write-good/Cliches.yml [184:3 - 198:5]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [238:3 - 251:5] (13 lines, 139 tokens)
+   config/styles/write-good/Cliches.yml [210:3 - 223:4]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [252:3 - 270:5] (18 lines, 199 tokens)
+   config/styles/write-good/Cliches.yml [223:3 - 241:5]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [274:3 - 300:2] (26 lines, 284 tokens)
+   config/styles/write-good/Cliches.yml [243:3 - 269:5]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [356:3 - 398:4] (42 lines, 457 tokens)
+   config/styles/write-good/Cliches.yml [312:3 - 354:7]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [398:3 - 441:2] (43 lines, 465 tokens)
+   config/styles/write-good/Cliches.yml [353:3 - 396:4]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [476:3 - 498:6] (22 lines, 256 tokens)
+   config/styles/write-good/Cliches.yml [424:3 - 446:6]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [510:3 - 560:13] (50 lines, 544 tokens)
+   config/styles/write-good/Cliches.yml [456:3 - 506:7]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [575:3 - 588:8] (13 lines, 127 tokens)
+   config/styles/write-good/Cliches.yml [517:3 - 530:9]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [590:3 - 607:4] (17 lines, 175 tokens)
+   config/styles/write-good/Cliches.yml [530:3 - 547:7]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [618:3 - 627:4] (9 lines, 106 tokens)
+   config/styles/write-good/Cliches.yml [556:3 - 565:8]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [628:3 - 655:10] (27 lines, 296 tokens)
+   config/styles/write-good/Cliches.yml [565:3 - 592:7]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [656:3 - 669:5] (13 lines, 141 tokens)
+   config/styles/write-good/Cliches.yml [592:3 - 605:4]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [694:3 - 732:8] (38 lines, 386 tokens)
+   config/styles/write-good/Cliches.yml [622:3 - 660:7]
+
+Clone found (yaml):
+ - config/styles/proselint/Cliches.yml [745:3 - 756:5] (11 lines, 139 tokens)
+   config/styles/write-good/Cliches.yml [668:3 - 679:6]
+
+Clone found (yaml):
+ - config/.bandit.yml [46:34 - 84:22] (38 lines, 184 tokens)
+   config/.bandit.yml [1:42 - 39:12]
+
+Clone found (yaml):
+ - config/.bandit.yml [102:27 - 140:28] (38 lines, 184 tokens)
+   config/.bandit.yml [1:42 - 39:12]
+
+Clone found (yaml):
+ - config/.bandit.yml [140:28 - 178:32] (38 lines, 184 tokens)
+   config/.bandit.yml [1:42 - 39:12]
+
+Clone found (yaml):
+ - config/.bandit.yml [178:32 - 216:40] (38 lines, 184 tokens)
+   config/.bandit.yml [1:42 - 39:12]
+
+Clone found (yaml):
+ - config/.bandit.yml [216:40 - 254:37] (38 lines, 184 tokens)
+   config/.bandit.yml [1:42 - 39:12]
+
+Clone found (yaml):
+ - config/.bandit.yml [254:37 - 292:20] (38 lines, 184 tokens)
+   config/.bandit.yml [1:42 - 39:12]
+
+┌────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
+│ Format     │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ json       │ 17             │ 537         │ 2982         │ 0            │ 0 (0%)           │ 0 (0%)            │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ yaml       │ 65             │ 4843        │ 33544        │ 28           │ 705 (14.56%)     │ 6282 (18.73%)     │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ markdown   │ 2              │ 37          │ 862          │ 0            │ 0 (0%)           │ 0 (0%)            │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ clojure    │ 1              │ 33          │ 208          │ 0            │ 0 (0%)           │ 0 (0%)            │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ markup     │ 6              │ 211         │ 1678         │ 0            │ 0 (0%)           │ 0 (0%)            │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ ini        │ 3              │ 81          │ 541          │ 0            │ 0 (0%)           │ 0 (0%)            │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ javascript │ 4              │ 312         │ 2073         │ 0            │ 0 (0%)           │ 0 (0%)            │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ powershell │ 3              │ 103         │ 451          │ 0            │ 0 (0%)           │ 0 (0%)            │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ Total:     │ 101            │ 6157        │ 42339        │ 28           │ 705 (11.45%)     │ 6282 (14.84%)     │
+└────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
+Found 28 clones.
+HTML report saved to reports/megalinter/copy-paste/html/
+ERROR: jscpd found too many duplicates (11.45%) over threshold (0%)
+Error: ERROR: jscpd found too many duplicates (11.45%) over threshold (0%)
+    at ThresholdReporter.report (/node-deps/node_modules/@jscpd/finder/dist/index.js:612:13)
+    at /node-deps/node_modules/@jscpd/finder/dist/index.js:110:18
+    at Array.forEach (<anonymous>)
+    at /node-deps/node_modules/@jscpd/finder/dist/index.js:109:22
+    at async /node-deps/node_modules/jscpd/dist/jscpd.js:351:5
+

@@ -1,0 +1,29 @@
+Results of cfn-lint linter (version 1.36.0)
+See documentation on https://megalinter.io/8.8.0/descriptors/cloudformation_cfn_lint/
+-----------------------------------------------
+
+❌ [ERROR] config/.cfnlintrc.yml
+    E1001 'Resources' is a required property
+    config/.cfnlintrc.yml:2:1
+    
+    E1001 Additional properties are not allowed ('regions' was unexpected)
+    config/.cfnlintrc.yml:2:1
+    
+    E1001 Additional properties are not allowed ('include-checks' was unexpected)
+    config/.cfnlintrc.yml:7:1
+    
+    E1001 Additional properties are not allowed ('ignore-checks' was unexpected)
+    config/.cfnlintrc.yml:12:1
+    
+    E1001 Additional properties are not allowed ('templates' was unexpected)
+    config/.cfnlintrc.yml:17:1
+    
+    E1001 Additional properties are not allowed ('transform' was unexpected. Did you mean 'Transform'?)
+    config/.cfnlintrc.yml:24:1
+    
+    E1001 Additional properties are not allowed ('custom-rules' was unexpected)
+    config/.cfnlintrc.yml:28:1
+    
+    E1001 Additional properties are not allowed ('ignore-templates' was unexpected)
+    config/.cfnlintrc.yml:32:1
+

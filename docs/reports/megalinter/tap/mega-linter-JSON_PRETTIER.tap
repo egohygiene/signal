@@ -1,6 +1,20 @@
 TAP version 13
-1..4
-not ok 1 - config/META6.json
-not ok 2 - config/pyrightconfig.json
-not ok 3 - config/styles/proselint/meta.json
-not ok 4 - config/styles/write-good/meta.json
+1..18
+not ok 1 - config/.coffee-lint.json
+not ok 2 - config/.devskim.json
+not ok 3 - config/.eslintrc-json.json
+not ok 4 - config/.flow-scanner.json
+not ok 5 - config/.groovylintrc.json
+not ok 6 - config/.jscpd.json
+not ok 7 - config/.kics.config.json
+not ok 8 - config/.markdown-link-check.json
+not ok 9 - config/.markdownlint.json
+not ok 10 - config/.npmpackagejsonlintrc.json
+not ok 11 - config/.remarkrc.json
+not ok 12 - config/.secretlintrc.json
+not ok 13 - config/.stylelintrc.json
+not ok 14 - config/.tsqllintrc.json
+not ok 15 - config/META6.json
+not ok 16 - config/pyrightconfig.json
+not ok 17 - config/styles/proselint/meta.json
+not ok 18 - config/styles/write-good/meta.json

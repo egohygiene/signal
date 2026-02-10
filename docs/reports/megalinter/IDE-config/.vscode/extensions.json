@@ -1,10 +1,15 @@
 {
     "recommendations": [
-        "AquaSecurityOfficial.trivy-vulnerability-scanner",
-        "esbenp.prettier-vscode",
         "streetsidesoftware.code-spell-checker",
         "HTMLHint.vscode-htmlhint",
+        "borkdude.clj-kondo",
+        "ChrisChinchilla.vale-vscode",
+        "ms-vscode.PowerShell",
+        "AquaSecurityOfficial.trivy-vulnerability-scanner",
+        "esbenp.prettier-vscode",
         "monosans.djlint",
-        "Bridgecrew.checkov"
+        "Bridgecrew.checkov",
+        "PatrykPeszko.vscode-proselint",
+        "kddejong.vscode-cfn-lint"
     ]
 }

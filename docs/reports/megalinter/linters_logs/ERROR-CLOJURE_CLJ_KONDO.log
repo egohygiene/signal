@@ -1,0 +1,11 @@
+Results of clj-kondo linter (version 2025.06.05)
+See documentation on https://megalinter.io/8.8.0/descriptors/clojure_clj_kondo/
+-----------------------------------------------
+
+❌ [ERROR] config/.clj-kondo/config.edn
+    config/.clj-kondo/config.edn:12:3: warning: Unexpected linter name: :keyword-naming
+    config/.clj-kondo/config.edn:13:3: warning: Unexpected linter name: :fn-arity
+    config/.clj-kondo/config.edn:16:3: warning: Unexpected linter name: :wrong-arity
+    config/.clj-kondo/config.edn:17:3: warning: Unexpected linter name: :macroexpand
+    linting took 6ms, errors: 0, warnings: 4
+

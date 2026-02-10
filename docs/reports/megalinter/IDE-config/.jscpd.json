@@ -1,0 +1,18 @@
+{
+    "threshold": 0,
+    "reporters": ["html", "consoleFull", "json", "markdown"],
+    "ignore": [
+        "**/__snapshots__/**",
+        "**/node_modules/**",
+        "**/.history/**",
+        "**/reports/**",
+        "**/logs/**",
+        "**/coverage/**",
+        "**/venv/**",
+        "**/.venv/**",
+        "**/.pnpm-store/**"
+    ],
+    "absolute": true,
+    "gitignore": true,
+    "output": "reports/jscpd"
+}

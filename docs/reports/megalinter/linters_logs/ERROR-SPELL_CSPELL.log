@@ -3,1495 +3,727 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
 -----------------------------------------------
 
 ❌ [ERROR] .dockerignore
-    1/1 .dockerignore 2059.48ms X
-    .dockerignore:46:3      - Unknown word (pycache)    -- __pycache__/
-    	 Suggestions: [mycache, Mycache, myCache, MyCache, panache]
-    .dockerignore:50:2      - Unknown word (pytest)     -- .pytest_cache/
-    	 Suggestions: [pest, pates, prest, pyres, pyxes]
-    .dockerignore:51:2      - Unknown word (venv)       -- .venv/
-    	 Suggestions: [vena, vend, venn, vent, Venn]
-    .dockerignore:52:1      - Unknown word (venv)       -- venv/
-    	 Suggestions: [vena, vend, venn, vent, Venn]
-    .dockerignore:63:1      - Unknown word (htmlcov)    -- htmlcov/
-    	 Suggestions: [hemlock, html, html's]
-    .dockerignore:64:2      - Unknown word (mypy)       -- .mypy_cache/
-    	 Suggestions: [mopy, myopy, macy, many, maps]
-    .dockerignore:66:2      - Unknown word (pytype)     -- .pytype/
-    	 Suggestions: [pyrope, type, astype, pate, pepe]
-    .dockerignore:110:1     - Unknown word (ehthumbs)   -- ehthumbs.db
-    	 Suggestions: [entombs, exhumes, enthuses]
-    .dockerignore:118:2     - Unknown word (actrc)      -- .actrc
-    	 Suggestions: [acer, acre, actg, acth, acts]
-    .dockerignore:119:2     - Unknown word (actrc)      -- .actrc.local
-    	 Suggestions: [acer, acre, actg, acth, acts]
-    CSpell: Files checked: 1, Issues found: 10 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] .editorconfig
-    1/1 .editorconfig 1904.09ms X
-    .editorconfig:45:3      - Unknown word (Makefiles)  -- # Makefiles - must use tabs
-    	 Suggestions: [Makefile, namefiles, Namefiles, pagefiles, Pagefiles]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
-✅ [SUCCESS] .github/linters/.gitkeep
-✅ [SUCCESS] .github/workflows/megalinter.yml
-✅ [SUCCESS] .github/workflows/pages.yml
+❌ [ERROR] .github/linters/.gitkeep
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] .github/workflows/megalinter.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] .github/workflows/pages.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
 ❌ [ERROR] .gitignore
-    1/1 .gitignore 3473.83ms X
-    .gitignore:2:3       - Unknown word (pycache)    -- __pycache__/
-    	 Suggestions: [mycache, Mycache, myCache, MyCache, panache]
-    .gitignore:6:2       - Unknown word (pytest)     -- .pytest_cache/
-    	 Suggestions: [pest, pates, prest, pyres, pyxes]
-    .gitignore:7:2       - Unknown word (venv)       -- .venv/
-    	 Suggestions: [vena, vend, venn, vent, Venn]
-    .gitignore:8:1       - Unknown word (venv)       -- venv/
-    	 Suggestions: [vena, vend, venn, vent, Venn]
-    .gitignore:45:2      - Unknown word (actrc)      -- .actrc.local
-    	 Suggestions: [acer, acre, actg, acth, acts]
-    CSpell: Files checked: 1, Issues found: 5 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] .megalinter.yml
-    1/1 .megalinter.yml 7467.43ms X
-    .megalinter.yml:15:16     - Unknown word (DEVSKIM)    -- - REPOSITORY_DEVSKIM
-    	 Suggestions: [DESK, DEVI, DEVS, DKIM, DEISM]
-    .megalinter.yml:34:6      - Unknown word (nuxt)       -- - .nuxt
-    	 Suggestions: [next, NEXT, nut, Nut, unit]
-    .megalinter.yml:35:6      - Unknown word (vercel)     -- - .vercel
-    	 Suggestions: [tercel, verde, verge, verne, verse]
-    .megalinter.yml:37:5      - Unknown word (venv)       -- - venv
-    	 Suggestions: [vena, vend, venn, vent, Venn]
-    .megalinter.yml:38:6      - Unknown word (venv)       -- - .venv
-    	 Suggestions: [vena, vend, venn, vent, Venn]
-    .megalinter.yml:40:6      - Unknown word (pytest)     -- - .pytest_cache
-    	 Suggestions: [pest, pates, prest, pyres, pyxes]
-    .megalinter.yml:41:6      - Unknown word (mypy)       -- - .mypy_cache
-    	 Suggestions: [mopy, myopy, macy, many, maps]
-    .megalinter.yml:57:12     - Unknown word (KUBECONFORM) -- KUBERNETES_KUBECONFORM_DIRECTORY: "any"
-    	 Suggestions: [KUBECONFIG]
-    .megalinter.yml:58:12     - Unknown word (KUBESCAPE)   -- KUBERNETES_KUBESCAPE_DIRECTORY: "any"
-    	 Suggestions: [UNESCAPE, KUBESPEC, KINESCOPE]
-    .megalinter.yml:100:3     - Unknown word (cljstyle)    -- # cljstyle: https://github.com
-    	 Suggestions: [castle, castile, closable]
-    .megalinter.yml:102:9     - Unknown word (CLJSTYLE)    -- CLOJURE_CLJSTYLE_CONFIG_FILE: config
-    	 Suggestions: [CASTLE, CASTILE, CLOSABLE]
-    .megalinter.yml:102:39    - Unknown word (cljstyle)    -- CONFIG_FILE: config/.cljstyle
-    	 Suggestions: [castle, castile, closable]
-    .megalinter.yml:104:7     - Unknown word (kondo)       -- # clj-kondo: https://github.com
-    	 Suggestions: [kendo, kongo, Kongo, condo, hondo]
-    .megalinter.yml:106:13    - Unknown word (KONDO)       -- CLOJURE_CLJ_KONDO_CONFIG_FILE: config
-    	 Suggestions: [KENDO, KONGO, Kongo, CONDO, HONDO]
-    .megalinter.yml:106:44    - Unknown word (kondo)       -- CONFIG_FILE: config/.clj-kondo/config.edn
-    	 Suggestions: [kendo, kongo, Kongo, condo, hondo]
-    .megalinter.yml:110:46    - Unknown word (cfnlintrc)   -- CONFIG_FILE: config/.cfnlintrc.yaml
-    	 Suggestions: []
-    .megalinter.yml:112:3     - Unknown word (coffeelint)  -- # coffeelint: https://github.com
-    	 Suggestions: [coffering, coffeepot]
-    .megalinter.yml:114:8     - Unknown word (COFFEELINT)  -- COFFEE_COFFEELINT_CONFIG_FILE: config
-    	 Suggestions: [COFFERING, COFFEEPOT]
-    .megalinter.yml:134:6     - Unknown word (DARTANALYZER) -- DART_DARTANALYZER_CONFIG_FILE: config
-    	 Suggestions: []
-    .megalinter.yml:142:56    - Unknown word (ecrc)         -- CONFIG_FILE: config/.ecrc
-    	 Suggestions: [ecru, ecr, icrc, ICRC, crc]
-    .megalinter.yml:146:51    - Unknown word (lintrc)       -- FILE: config/.gherkin-lintrc
-    	 Suggestions: [lint, linac, liner, lints, linty]
-    .megalinter.yml:158:45    - Unknown word (groovylintrc) -- CONFIG_FILE: config/.groovylintrc.json
-    	 Suggestions: []
-    .megalinter.yml:160:3     - Unknown word (htmlhint)     -- # htmlhint:
-    	 Suggestions: [htmlhintrc, hamlin, hemline, htmltidy, humphing]
-    .megalinter.yml:162:6     - Unknown word (HTMLHINT)     -- HTML_HTMLHINT_CONFIG_FILE: config
-    	 Suggestions: [HTMLHINTRC, HAMLIN, HEMLINE, htmltidy, HTMLTIDY]
-    .megalinter.yml:184:3     - Unknown word (jsonlint)     -- # jsonlint: https://github.com
-    	 Suggestions: [jslint, jostling, joint, jsonl, joliet]
-    .megalinter.yml:186:6     - Unknown word (JSONLINT)     -- JSON_JSONLINT_CONFIG_FILE: config
-    	 Suggestions: [JSLINT, JOSTLING, JOINT, JSONL, JOLIET]
-    .megalinter.yml:186:36    - Unknown word (jsonlintrc)   -- CONFIG_FILE: config/.jsonlintrc
-    	 Suggestions: [jshintrc]
-    .megalinter.yml:190:49    - Unknown word (npmpackagejsonlintrc) -- CONFIG_FILE: config/.npmpackagejsonlintrc.json
-    	 Suggestions: []
-    .megalinter.yml:200:3     - Unknown word (chktex)               -- # chktex: https://www.nongnu
-    	 Suggestions: [chute, caltex, chuted, chutes, cortex]
-    .megalinter.yml:202:7     - Unknown word (CHKTEX)               -- LATEX_CHKTEX_CONFIG_FILE: config
-    	 Suggestions: [CHUTE, CALTEX, CHUTED, CHUTES, CORTEX]
-    .megalinter.yml:202:35    - Unknown word (chktexrc)             -- CONFIG_FILE: config/.chktexrc
-    	 Suggestions: []
-    .megalinter.yml:204:3     - Unknown word (luacheck)             -- # luacheck: https://github.com
-    	 Suggestions: [uncheck, laches, lubeck, leached, leacher]
-    .megalinter.yml:206:5     - Unknown word (LUACHECK)             -- LUA_LUACHECK_CONFIG_FILE: config
-    	 Suggestions: [UNCHECK, LACHES, LUBECK, LEACHED, LEACHER]
-    .megalinter.yml:206:35    - Unknown word (luacheckrc)           -- CONFIG_FILE: config/.luacheckrc
-    	 Suggestions: []
-    .megalinter.yml:208:3     - Unknown word (checkmake)            -- # checkmake: https://github.com
-    	 Suggestions: [checkmate, checkmk, checkmated, checkmates, ccmake]
-    .megalinter.yml:210:10    - Unknown word (CHECKMAKE)            -- MAKEFILE_CHECKMAKE_CONFIG_FILE: config
-    	 Suggestions: [CHECKMATE, CHECKMK, CHECKMATED, CHECKMATES, CCMAKE]
-    .megalinter.yml:210:41    - Unknown word (checkmake)            -- CONFIG_FILE: config/.checkmake.ini
-    	 Suggestions: [checkmate, checkmk, checkmated, checkmates, ccmake]
-    .megalinter.yml:222:43    - Unknown word (remarkrc)             -- CONFIG_FILE: config/.remarkrc.json
-    	 Suggestions: [remark, remarks, remarry, remark's, remarked]
-    .megalinter.yml:226:5     - Unknown word (PHPCS)                -- PHP_PHPCS_CONFIG_FILE: config
-    	 Suggestions: [PHPS, PHP'S, PHPs, PHP's, PACS]
-    .megalinter.yml:226:31    - Unknown word (phpcs)                -- CONFIG_FILE: config/phpcs.xml
-    	 Suggestions: [phps, php's, PHPs, PHP's, pacs]
-    .megalinter.yml:228:3     - Unknown word (phplint)              -- # phplint: https://github.com
-    	 Suggestions: [poplin, poplins, pulpit, pulping, pepin]
-    .megalinter.yml:230:5     - Unknown word (PHPLINT)              -- PHP_PHPLINT_CONFIG_FILE: config
-    	 Suggestions: [POPLIN, POPLINS, PULPIT, PULPING, PEPIN]
-    .megalinter.yml:230:34    - Unknown word (phplint)              -- CONFIG_FILE: config/.phplint.yml
-    	 Suggestions: [poplin, poplins, pulpit, pulping, pepin]
-    .megalinter.yml:232:3     - Unknown word (phpstan)              -- # phpstan: https://phpstan.org
-    	 Suggestions: [phps, pasta, pisan, pusan, paisan]
-    .megalinter.yml:234:5     - Unknown word (PHPSTAN)              -- PHP_PHPSTAN_CONFIG_FILE: config
-    	 Suggestions: [PHPS, PASTA, PISAN, PUSAN, PAISAN]
-    .megalinter.yml:234:33    - Unknown word (phpstan)              -- CONFIG_FILE: config/phpstan.neon.dist
-    	 Suggestions: [phps, pasta, pisan, pusan, paisan]
-    .megalinter.yml:240:14    - Unknown word (psscriptanalyzer)     -- # powershell-psscriptanalyzer: https://github.com
-    	 Suggestions: []
-    .megalinter.yml:242:55    - Unknown word (psscriptanalyzer)     -- config/.powershell-psscriptanalyzer.psd1
-    	 Suggestions: []
-    .megalinter.yml:248:3     - Unknown word (protolint)            -- # protolint: https://github.com
-    	 Suggestions: [proselint, protonic, proton, pooling, proline]
-    .megalinter.yml:250:10    - Unknown word (PROTOLINT)            -- PROTOBUF_PROTOLINT_CONFIG_FILE: config
-    	 Suggestions: [PROSELINT, PROTONIC, PROTON, POOLING, PROLINE]
-    .megalinter.yml:250:41    - Unknown word (protolintrc)          -- CONFIG_FILE: config/.protolintrc.yml
-    	 Suggestions: [proselintrc, protolithic]
-    .megalinter.yml:262:27    - Unknown word (pyproject)            -- PYTHON_BLACK_CONFIG_FILE: pyproject.toml
-    	 Suggestions: [project, projects]
-    .megalinter.yml:268:3     - Unknown word (isort)                -- # isort: https://pycqa.github
-    	 Suggestions: [isqrt, iSqrt, Isqrt, ISqrt, sort]
-    .megalinter.yml:270:8     - Unknown word (ISORT)                -- PYTHON_ISORT_CONFIG_FILE: config
-    	 Suggestions: [ISQRT, iSqrt, Isqrt, ISqrt, SORT]
-    .megalinter.yml:270:34    - Unknown word (pyproject)            -- CONFIG_FILE: config/pyproject.toml
-    	 Suggestions: [project, projects]
-    .megalinter.yml:272:3     - Unknown word (mypy)                 -- # mypy: https://mypy.readthedocs
-    	 Suggestions: [mopy, myopy, macy, many, maps]
-    .megalinter.yml:274:8     - Unknown word (MYPY)                 -- PYTHON_MYPY_CONFIG_FILE: config
-    	 Suggestions: [MOPY, MYOPY, MACY, MANY, MAPS]
-    .megalinter.yml:274:34    - Unknown word (mypy)                 -- CONFIG_FILE: config/.mypy.ini
-    	 Suggestions: [mopy, myopy, macy, many, maps]
-    .megalinter.yml:276:3     - Unknown word (pylint)               -- # pylint: https://pylint.pycqa
-    	 Suggestions: [plying, pint, paint, plant, plink]
-    .megalinter.yml:278:8     - Unknown word (PYLINT)               -- PYTHON_PYLINT_CONFIG_FILE: config
-    	 Suggestions: [PLYING, PINT, PAINT, PLANT, PLINK]
-    .megalinter.yml:278:36    - Unknown word (pylintrc)             -- CONFIG_FILE: config/.pylintrc
-    	 Suggestions: [eslintrc, plinth, plinths, politic, pyritic]
-    .megalinter.yml:280:3     - Unknown word (pyright)              -- # pyright: https://pyrightlang
-    	 Suggestions: [myright, Myright, myRight, MyRight, plight]
-    .megalinter.yml:282:8     - Unknown word (PYRIGHT)              -- PYTHON_PYRIGHT_CONFIG_FILE: config
-    	 Suggestions: [MYRIGHT, Myright, myRight, MyRight, PLIGHT]
-    .megalinter.yml:282:36    - Unknown word (pyrightconfig)        -- CONFIG_FILE: config/pyrightconfig.json
-    	 Suggestions: []
-    .megalinter.yml:286:33    - Unknown word (pyproject)            -- CONFIG_FILE: config/pyproject.toml
-    	 Suggestions: [project, projects]
-    .megalinter.yml:288:3     - Unknown word (raku)                 -- # raku: https://raku.org/
-    	 Suggestions: [rake, raki, roku, Roku, baku]
-    .megalinter.yml:290:1     - Unknown word (RAKU)                 -- RAKU_RAKU_CONFIG_FILE: config
-    	 Suggestions: [RAKE, RAKI, ROKU, Roku, BAKU]
-    .megalinter.yml:290:6     - Unknown word (RAKU)                 -- RAKU_RAKU_CONFIG_FILE: config
-    	 Suggestions: [RAKE, RAKI, ROKU, Roku, BAKU]
-    .megalinter.yml:296:3     - Unknown word (devskim)              -- # devskim: https://github.com
-    	 Suggestions: [desk, devi, devs, dkim, deism]
-    .megalinter.yml:298:12    - Unknown word (DEVSKIM)              -- REPOSITORY_DEVSKIM_CONFIG_FILE: config
-    	 Suggestions: [DESK, DEVI, DEVS, DKIM, DEISM]
-    .megalinter.yml:298:41    - Unknown word (devskim)              -- CONFIG_FILE: config/.devskim.json
-    	 Suggestions: [desk, devi, devs, dkim, deism]
-    .megalinter.yml:308:3     - Unknown word (kics)                 -- # kics: https://github.com
-    	 Suggestions: [ki's, kick, kids, kins, kips]
-    .megalinter.yml:310:12    - Unknown word (KICS)                 -- REPOSITORY_KICS_CONFIG_FILE: config
-    	 Suggestions: [KI'S, KICK, KIDS, KINS, KIPS]
-    .megalinter.yml:310:38    - Unknown word (kics)                 -- CONFIG_FILE: config/.kics.config.json
-    	 Suggestions: [ki's, kick, kids, kins, kips]
-    .megalinter.yml:317:3     - Unknown word (syft)                 -- # syft: https://github.com
-    	 Suggestions: [sift, soft, syst, lyft, Lyft]
-    .megalinter.yml:319:12    - Unknown word (SYFT)                 -- REPOSITORY_SYFT_CONFIG_FILE: config
-    	 Suggestions: [SIFT, SOFT, SYST, LYFT, Lyft]
-    .megalinter.yml:319:38    - Unknown word (syft)                 -- CONFIG_FILE: config/.syft.yaml
-    	 Suggestions: [sift, soft, syst, lyft, Lyft]
-    .megalinter.yml:332:59    - Unknown word (trufflehogignore)     -- exclude-paths=config/.trufflehogignore"
-    	 Suggestions: []
-    .megalinter.yml:334:3     - Unknown word (rstcheck)             -- # rstcheck: https://github.com
-    	 Suggestions: [recheck, ratchet, retched, retches, ratchets]
-    .megalinter.yml:336:5     - Unknown word (RSTCHECK)            -- RST_RSTCHECK_CONFIG_FILE: config
-    	 Suggestions: [RECHECK, RATCHET, RETCHED, RETCHES, RATCHETS]
-    .megalinter.yml:336:35    - Unknown word (rstcheck)            -- CONFIG_FILE: config/.rstcheck.cfg
-    	 Suggestions: [recheck, ratchet, retched, retches, ratchets]
-    .megalinter.yml:338:3     - Unknown word (rubocop)             -- # rubocop: https://rubocop.org
-    	 Suggestions: [rubicon, robocopy, Rubicon, rebop, rebook]
-    .megalinter.yml:340:6     - Unknown word (RUBOCOP)             -- RUBY_RUBOCOP_CONFIG_FILE: config
-    	 Suggestions: [RUBICON, ROBOCOPY, Rubicon, REBOP, REBOOK]
-    .megalinter.yml:342:8     - Unknown word (clippy)              -- # rust-clippy: https://github.com
-    	 Suggestions: [chippy, lippy, flippy, slippy, clip]
-    .megalinter.yml:344:6     - Unknown word (CLIPPY)              -- RUST_CLIPPY_CONFIG_FILE: config
-    	 Suggestions: [CHIPPY, LIPPY, FLIPPY, SLIPPY, CLIP]
-    .megalinter.yml:344:34    - Unknown word (clippy)              -- CONFIG_FILE: config/.clippy.toml
-    	 Suggestions: [chippy, lippy, flippy, slippy, clip]
-    .megalinter.yml:346:3     - Unknown word (lintr)               -- # lintr: https://github.com
-    	 Suggestions: [lint, liner, lints, linty, linter]
-    .megalinter.yml:348:3     - Unknown word (LINTR)               -- R_LINTR_CONFIG_FILE: config
-    	 Suggestions: [LINT, LINER, LINTS, LINTY, LINTER]
-    .megalinter.yml:348:30    - Unknown word (lintr)               -- CONFIG_FILE: config/.lintr
-    	 Suggestions: [lint, liner, lints, linty, linter]
-    .megalinter.yml:350:26    - Unknown word (sfdx)                -- lightning-flow-scanner-sfdx: https://github.com
-    	 Suggestions: [sfax, sldx, spdx, Sfax, SPDX]
-    .megalinter.yml:354:3     - Unknown word (sfdx)                -- # sfdx-scanner: https://github
-    	 Suggestions: [sfax, sldx, spdx, Sfax, SPDX]
-    .megalinter.yml:356:12    - Unknown word (SFDX)                -- SALESFORCE_SFDX_SCANNER_APEX_CONFIG
-    	 Suggestions: [SFAX, SLDX, spdx, SPDX, Sfax]
-    .megalinter.yml:358:3     - Unknown word (scalafix)            -- # scalafix: https://github.com
-    	 Suggestions: [scalefix, scaleFix, Scalefix, ScaleFix, scaledfix]
-    .megalinter.yml:360:7     - Unknown word (SCALAFIX)            -- SCALA_SCALAFIX_CONFIG_FILE: config
-    	 Suggestions: [SCALEFIX, scaleFix, Scalefix, ScaleFix, SCALEDFIX]
-    .megalinter.yml:360:37    - Unknown word (scalafix)            -- CONFIG_FILE: config/.scalafix.conf
-    	 Suggestions: [scalefix, scaleFix, Scalefix, ScaleFix, scaledfix]
-    .megalinter.yml:362:3     - Unknown word (snakefmt)            -- # snakefmt: https://github.com
-    	 Suggestions: [snake, snaked, snakes, snake's, shakeout]
-    .megalinter.yml:364:1     - Unknown word (SNAKEMAKE)           -- SNAKEMAKE_SNAKEFMT_CONFIG_FILE
-    	 Suggestions: [SNAKELIKE, SAGEMAKER, SNAKEBITE, STALEMATE]
-    .megalinter.yml:364:11    - Unknown word (SNAKEFMT)            -- SNAKEMAKE_SNAKEFMT_CONFIG_FILE: config
-    	 Suggestions: [SNAKE, SNAKED, SNAKES, SNAKE'S, SHAKEOUT]
-    .megalinter.yml:364:41    - Unknown word (snakefmt)            -- CONFIG_FILE: config/.snakefmt.toml
-    	 Suggestions: [snake, snaked, snakes, snake's, shakeout]
-    .megalinter.yml:373:49    - Unknown word (lycheeignore)        -- exclude-path config/.lycheeignore"
-    	 Suggestions: []
-    .megalinter.yml:383:3     - Unknown word (sqlfluff)            -- # sqlfluff: https://github.com
-    	 Suggestions: [sluff, selloff]
-    .megalinter.yml:385:5     - Unknown word (SQLFLUFF)            -- SQL_SQLFLUFF_CONFIG_FILE: config
-    	 Suggestions: [SLUFF, SELLOFF]
-    .megalinter.yml:385:35    - Unknown word (sqlfluff)            -- CONFIG_FILE: config/.sqlfluff
-    	 Suggestions: [sluff, selloff]
-    .megalinter.yml:387:3     - Unknown word (tsqllint)            -- # tsqllint: https://github.com
-    	 Suggestions: [tslint, stalling, stilling, stylelint, eslint]
-    .megalinter.yml:389:5     - Unknown word (TSQLLINT)            -- SQL_TSQLLINT_CONFIG_FILE: config
-    	 Suggestions: [TSLINT, STALLING, STILLING, STYLELINT, ESLINT]
-    .megalinter.yml:389:35    - Unknown word (tsqllintrc)          -- CONFIG_FILE: config/.tsqllintrc.json
-    	 Suggestions: [stylelintrc, eslintrc]
-    .megalinter.yml:391:3     - Unknown word (swiftlint)           -- # swiftlint: https://github.com
-    	 Suggestions: [swiftlet, sifting, swiftly, shifting, stifling]
-    .megalinter.yml:393:7     - Unknown word (SWIFTLINT)           -- SWIFT_SWIFTLINT_CONFIG_FILE: config
-    	 Suggestions: [SWIFTLET, SIFTING, SWIFTLY, SHIFTING, STIFLING]
-    .megalinter.yml:393:38    - Unknown word (swiftlint)           -- CONFIG_FILE: config/.swiftlint.yml
-    	 Suggestions: [swiftlet, sifting, swiftly, shifting, stifling]
-    .megalinter.yml:395:3     - Unknown word (tekton)              -- # tekton-lint: https://github
-    	 Suggestions: [teton, teston, teuton, Teton, Teuton]
-    .megalinter.yml:397:1     - Unknown word (TEKTON)              -- TEKTON_TEKTON_LINT_CONFIG_FILE
-    	 Suggestions: [TETON, TESTON, TEUTON, Teton, Teuton]
-    .megalinter.yml:397:8     - Unknown word (TEKTON)              -- TEKTON_TEKTON_LINT_CONFIG_FILE: config
-    	 Suggestions: [TETON, TESTON, TEUTON, Teton, Teuton]
-    .megalinter.yml:397:41    - Unknown word (tektonlintrc)        -- CONFIG_FILE: config/.tektonlintrc.yaml
-    	 Suggestions: []
-    .megalinter.yml:399:3     - Unknown word (terragrunt)          -- # terragrunt: https://github.com
-    	 Suggestions: [termagant]
-    .megalinter.yml:401:11    - Unknown word (TERRAGRUNT)          -- TERRAFORM_TERRAGRUNT_CONFIG_FILE: config
-    	 Suggestions: [TERMAGANT]
-    .megalinter.yml:401:42    - Unknown word (terragrunt)          -- CONFIG_FILE: config/terragrunt.hcl
-    	 Suggestions: [termagant]
-    .megalinter.yml:403:3     - Unknown word (terrascan)           -- # terrascan: https://github.com
-    	 Suggestions: [etruscan, trashcan, terran, terras, tarrasa]
-    .megalinter.yml:405:11    - Unknown word (TERRASCAN)           -- TERRAFORM_TERRASCAN_CONFIG_FILE: config
-    	 Suggestions: [ETRUSCAN, TRASHCAN, TERRAN, TERRAS, TARRASA]
-    .megalinter.yml:405:41    - Unknown word (terrascan)           -- CONFIG_FILE: config/terrascan-config.toml
-    	 Suggestions: [etruscan, trashcan, terran, terras, tarrasa]
-    .megalinter.yml:407:3     - Unknown word (tflint)              -- # tflint: https://github.com
-    	 Suggestions: [tslint, flint, Flint, tint, taint]
-    .megalinter.yml:409:11    - Unknown word (TFLINT)              -- TERRAFORM_TFLINT_CONFIG_FILE: config
-    	 Suggestions: [TSLINT, FLINT, Flint, TINT, TAINT]
-    .megalinter.yml:409:39    - Unknown word (tflint)              -- CONFIG_FILE: config/.tflint.hcl
-    	 Suggestions: [tslint, flint, Flint, tint, taint]
-    CSpell: Files checked: 1, Issues found: 122 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] .pre-commit-config.yaml
-    1/1 .pre-commit-config.yaml 1725.32ms X
-    .pre-commit-config.yaml:96:13     - Unknown word (shellcheck) -- - id: shellcheck
-    	 Suggestions: [spellcheck, spellchecks, shellcheckrc, shellack, shellback]
-    .pre-commit-config.yaml:107:26    - Unknown word (pyproject)  -- args: [--config, pyproject.toml]
-    	 Suggestions: [project, projects]
-    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
-✅ [SUCCESS] .prettierignore
+❌ [ERROR] .prettierignore
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
 ❌ [ERROR] .releaserc.yml
-    1/1 .releaserc.yml 1650.67ms X
-    .releaserc.yml:13:16     - Unknown word (conventionalcommits) -- - preset: "conventionalcommits"
-    	 Suggestions: []
-    .releaserc.yml:42:16     - Unknown word (conventionalcommits) -- - preset: "conventionalcommits"
-    	 Suggestions: []
-    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] .secrets.baseline
-    1/1 .secrets.baseline 2201.23ms X
-    .secrets.baseline:21:16     - Unknown word (Cloudant)   -- "name": "CloudantDetector"
-    	 Suggestions: [Courant, Clouding, Cloudlet, Cloudland, Cloudnet]
-    .secrets.baseline:40:22     - Unknown word (Hmac)       -- "name": "IbmCosHmacDetector"
-    	 Suggestions: [mac, Mac, hama, Hama, Hame]
-    .secrets.baseline:53:16     - Unknown word (Mailchimp)  -- "name": "MailchimpDetector"
-    	 Suggestions: []
-    .secrets.baseline:65:16     - Unknown word (Pypi)       -- "name": "PypiTokenDetector"
-    	 Suggestions: [Pypl, PYPL, Ppi, Gypi, PPI]
-    CSpell: Files checked: 1, Issues found: 4 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
-✅ [SUCCESS] LICENSE
+❌ [ERROR] LICENSE
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.ansible-lint
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.arm-ttk.psd1
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.bandit.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.cfnlintrc.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.checkmake.ini
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.checkov.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.chktexrc
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.clang-format
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.clippy.toml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.clj-kondo/config.edn
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.cljstyle
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.coffee-lint.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.commitlint.config.cjs
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.cspell.config.mjs
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.devskim.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.ecrc
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.eslint.config.mjs
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.eslintrc-json.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.flake8
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.flow-scanner.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.gherkin-lintrc
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.gitleaks.toml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.golangci.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.groovylintrc.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.grype.yaml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.hadolint.yaml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.htmlhintrc
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.isort.cfg
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.jscpd.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.jsonlintrc
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.kics.config.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.lintr
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.luacheckrc
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.lycheeignore
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.markdown-link-check.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.markdownlint.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.mypy.ini
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.npmpackagejsonlintrc.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.phplint.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.powershell-formatter.psd1
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.powershell-psscriptanalyzer.psd1
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.prettier.config.mjs
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.proselintrc
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.protolintrc.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.puppet-lint.rc
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.pylintrc
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.remarkrc.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.revive.toml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.rstcheck.cfg
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.ruby-lint.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.ruff.toml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.scalafix.conf
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.secretlintignore
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.secretlintrc.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.snakefmt.toml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.spectral.yaml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.sqlfluff
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.stylelintrc.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.swiftlint.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.syft.yaml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.tektonlintrc.yaml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.tflint.hcl
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.trufflehog.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.trufflehogignore
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.tsqllintrc.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
 ❌ [ERROR] config/.v8rrc.yml
-    1/1 config/.v8rrc.yml 2632.69ms X
-    config/.v8rrc.yml:32:20     - Unknown word (rignore)    -- # - default = [".v8rignore", ".gitignore"]
-    	 Suggestions: [reignore, ignore, rigor, rigors, ringer]
-    config/.v8rrc.yml:45:15     - Unknown word (Minimatch)  -- # A Minimatch glob expression for
-    	 Suggestions: [Mismatch, Minima, Minimal, Minimap, Minimax]
-    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.vale.ini
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/.yamllint.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/META6.json
-    1/1 config/META6.json 2672.94ms X
-    config/META6.json:5:19      - Unknown word (yourusername) -- "auth": "github:yourusername",
-    	 Suggestions: []
-    config/META6.json:12:46     - Unknown word (rakumod)      -- lib/Your/ModuleName.rakumod"
-    	 Suggestions: [raked, ramon, ramos, rumor, rammed]
-    config/META6.json:16:13     - Unknown word (raku)         -- "tags": ["raku", "module", "example
-    	 Suggestions: [rake, raki, roku, Roku, baku]
-    config/META6.json:20:6      - Unknown word (bugtracker)   -- "bugtracker": "https://github.com
-    	 Suggestions: []
-    CSpell: Files checked: 1, Issues found: 4 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
-✅ [SUCCESS] config/analysis_options.yml
+❌ [ERROR] config/analysis_options.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
 ❌ [ERROR] config/apex-pmd-ruleset.xml
-    1/1 config/apex-pmd-ruleset.xml 2541.81ms X
-    config/apex-pmd-ruleset.xml:7:30      - Unknown word (domainbuilder) -- exclude-pattern>.*/apex-domainbuilder/*.*</exclude-pattern
-    	 Suggestions: []
-    config/apex-pmd-ruleset.xml:9:25      - Unknown word (fflib)         -- <exclude-pattern>.*/fflib_*.*</exclude-pattern
-    	 Suggestions: [flab, flip, flir, flit, flub]
-    config/apex-pmd-ruleset.xml:28:30     - Unknown word (bestpractices) -- rule ref="category/apex/bestpractices.xml">
-    	 Suggestions: []
-    CSpell: Files checked: 1, Issues found: 3 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/apt.conf
-    1/1 config/apt.conf 1929.29ms X
-    config/apt.conf:187:13    - Unknown word (pkgcache)   -- Dir::Cache::pkgcache "";
-    	 Suggestions: [precache, pagecache, preCache, Precache, pageCache]
-    config/apt.conf:190:13    - Unknown word (srcpkgcache) -- Dir::Cache::srcpkgcache "";
-    	 Suggestions: []
-    config/apt.conf:192:3     - Unknown word (DPKG)        -- # DPKG options
-    	 Suggestions: [PKG, DAKS, DANG, DARG, DAWG]
-    CSpell: Files checked: 1, Issues found: 3 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/dpkg.cfg
-    1/1 config/dpkg.cfg 2307.36ms X
-    config/dpkg.cfg:1:3       - Unknown word (dpkg)       -- # dpkg configuration file
-    	 Suggestions: [pkg, daks, dang, darg, dawg]
-    config/dpkg.cfg:3:45      - Unknown word (dpkg)       -- default options for dpkg. All command-line
-    	 Suggestions: [pkg, daks, dang, darg, dawg]
-    config/dpkg.cfg:9:14      - Unknown word (dpkg)       -- log /var/log/dpkg.log
-    	 Suggestions: [pkg, daks, dang, darg, dawg]
-    config/dpkg.cfg:12:7      - Unknown word (confdef)    -- force confdef,confold
-    	 Suggestions: [confer, confide, confided, confider, confides]
-    config/dpkg.cfg:12:15     - Unknown word (confold)    -- force confdef,confold
-    	 Suggestions: [conoid, consol, concord, condole, conform]
-    config/dpkg.cfg:17:25     - Unknown word (groff)      -- path-exclude=/usr/share/groff/*
-    	 Suggestions: [goff, gruff, Goff, goof, graf]
-    config/dpkg.cfg:19:25     - Unknown word (lintian)    -- path-exclude=/usr/share/lintian/*
-    	 Suggestions: [linin, lilian, linton, laotian, liftman]
-    config/dpkg.cfg:21:27     - Unknown word (zoneinfo)   -- path-exclude=/usr/share/zoneinfo/*
-    	 Suggestions: [zoning]
-    config/dpkg.cfg:30:17     - Unknown word (debsig)     -- # Do not enable debsig-verify by default; since
-    	 Suggestions: [debs, debag, debit, debug, debbie]
-    config/dpkg.cfg:31:24     - Unknown word (debsig)     -- embedded signatures, debsig-verify would reject
-    	 Suggestions: [debs, debag, debit, debug, debbie]
-    config/dpkg.cfg:32:4      - Unknown word (debsig)     -- no-debsig
-    	 Suggestions: [debs, debag, debit, debug, debbie]
-    config/dpkg.cfg:35:29     - Unknown word (dpkg)       -- setting ensures that dpkg output is not piped
-    	 Suggestions: [pkg, daks, dang, darg, dawg]
-    config/dpkg.cfg:42:69     - Unknown word (dpkg)       -- safety mechanisms in dpkg
-    	 Suggestions: [pkg, daks, dang, darg, dawg]
-    config/dpkg.cfg:54:1      - Unknown word (Dpkg)       -- Dpkg::Use-Pty 0;
-    	 Suggestions: [Pkg, Daks, Dang, Darg, Dawg]
-    config/dpkg.cfg:56:42     - Unknown word (debsig)     -- following line to enable debsig-verify.
-    	 Suggestions: [debs, debag, debit, debug, debbie]
-    config/dpkg.cfg:63:3      - Unknown word (debsig)     -- # debsig-verify
-    	 Suggestions: [debs, debag, debit, debug, debbie]
-    CSpell: Files checked: 1, Issues found: 16 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/java-pmd-ruleset.xml
-    1/1 config/java-pmd-ruleset.xml 1505.23ms X
-    config/java-pmd-ruleset.xml:15:28     - Unknown word (bestpractices) -- rule ref="category/java/bestpractices.xml"/>
-    	 Suggestions: []
-    config/java-pmd-ruleset.xml:18:28     - Unknown word (errorprone)    -- rule ref="category/java/errorprone.xml"/>
-    	 Suggestions: [errorcode, errorCode]
-    config/java-pmd-ruleset.xml:28:28     - Unknown word (errorprone)    -- rule ref="category/java/errorprone.xml/UseEqualsToCompareStrings
-    	 Suggestions: [errorcode, errorCode]
-    config/java-pmd-ruleset.xml:29:28     - Unknown word (errorprone)    -- rule ref="category/java/errorprone.xml/EmptyCatchBlock
-    	 Suggestions: [errorcode, errorCode]
-    config/java-pmd-ruleset.xml:52:23     - Unknown word (maxmethods)    -- <property name="maxmethods" value="20"/>
-    	 Suggestions: [methods]
-    CSpell: Files checked: 1, Issues found: 5 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/lychee.toml
-    1/1 config/lychee.toml 1634.85ms X
-    config/lychee.toml:51:5      - Unknown word (aeiou)      -- "[aeiouAEIOU]"
-    	 Suggestions: [aeiouy, aeon, aero, agio, ainu]
-    config/lychee.toml:51:10     - Unknown word (AEIOU)      -- "[aeiouAEIOU]"
-    	 Suggestions: [AEIOUY, aeon, AEON, AERO, AGIO]
-    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/lynis/custom.prf
-    1/1 config/lynis/custom.prf 1498.20ms X
-    config/lynis/custom.prf:1:10      - Unknown word (Lynis)      -- # Custom Lynis profile for repository
-    	 Suggestions: [Lenis, Lysis, Lins, Loins, Lying]
-    config/lynis/custom.prf:2:58      - Unknown word (lynis)      -- repository under reports/lynis
-    	 Suggestions: [lenis, lysis, lins, loins, lying]
-    config/lynis/custom.prf:3:1       - Unknown word (logfile)    -- logfile=reports/lynis/lynis
-    	 Suggestions: [oldfile, oldFile, loggie, logily, lockfile]
-    config/lynis/custom.prf:3:17      - Unknown word (lynis)      -- logfile=reports/lynis/lynis.log
-    	 Suggestions: [lenis, lysis, lins, loins, lying]
-    config/lynis/custom.prf:3:23      - Unknown word (lynis)      -- logfile=reports/lynis/lynis.log
-    	 Suggestions: [lenis, lysis, lins, loins, lying]
-    config/lynis/custom.prf:4:21      - Unknown word (lynis)      -- report_file=reports/lynis/report.dat
-    	 Suggestions: [lenis, lysis, lins, loins, lying]
-    CSpell: Files checked: 1, Issues found: 6 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/phpcs.xml
-    1/1 config/phpcs.xml 1609.98ms X
-    config/phpcs.xml:14:21     - Unknown word (Squiz)      -- <!-- <rule ref="Squiz" /> -->
-    	 Suggestions: [Squib, Squid, Quiz, suez, Suez]
-    config/phpcs.xml:19:20     - Unknown word (Squiz)      -- <exclude name="Squiz.Functions.MultiLineFunctionDe
-    	 Suggestions: [Squib, Squid, Quiz, suez, Suez]
-    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/phpstan.neon.dist
-    1/1 config/phpstan.neon.dist 1835.70ms X
-    config/phpstan.neon.dist:1:3       - Unknown word (phpstan)    -- # phpstan.neon.dist
-    	 Suggestions: [phps, pasta, pisan, pusan, paisan]
-    config/phpstan.neon.dist:29:12     - Unknown word (analyse)    -- excludes_analyse:
-    	 Suggestions: [analyst, analyze, analyses, analyzes, analos]
-    config/phpstan.neon.dist:36:5      - Unknown word (phpstan)    -- - phpstan-baseline.neon # optional
-    	 Suggestions: [phps, pasta, pisan, pusan, paisan]
-    config/phpstan.neon.dist:37:5      - Unknown word (phpstan)    -- - phpstan-strict-rules/rules.neon
-    	 Suggestions: [phps, pasta, pisan, pusan, paisan]
-    config/phpstan.neon.dist:37:49     - Unknown word (phpstan)    -- rules.neon # if using phpstan-strict-rules package
-    	 Suggestions: [phps, pasta, pisan, pusan, paisan]
-    config/phpstan.neon.dist:44:9      - Unknown word (phpstan)    -- - phpstan.rules.rule
-    	 Suggestions: [phps, pasta, pisan, pusan, paisan]
-    config/phpstan.neon.dist:45:20     - Unknown word (sarif)      -- errorFormatter.sarif:
-    	 Suggestions: [sari, saris, serif, sharif, sadi]
-    config/phpstan.neon.dist:46:25     - Unknown word (Sarif)      -- class: Bartlett\Sarif\Converter\Reporter\PhpStanFor
-    	 Suggestions: [Sari, Saris, Serif, Sharif, Sadi]
-    CSpell: Files checked: 1, Issues found: 8 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
-✅ [SUCCESS] config/psalm.xml
+❌ [ERROR] config/psalm.xml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
 ❌ [ERROR] config/pyrightconfig.json
-    1/1 config/pyrightconfig.json 1315.33ms X
-    config/pyrightconfig.json:6:21      - Unknown word (pycache)    -- "exclude": ["**/__pycache__", ".venv", "venv"
-    	 Suggestions: [mycache, Mycache, myCache, MyCache, panache]
-    config/pyrightconfig.json:6:35      - Unknown word (venv)       -- "**/__pycache__", ".venv", "venv", "dist", "build
-    	 Suggestions: [vena, vend, venn, vent, Venn]
-    config/pyrightconfig.json:6:43      - Unknown word (venv)       -- pycache__", ".venv", "venv", "dist", "build",
-    	 Suggestions: [vena, vend, venn, vent, Venn]
-    config/pyrightconfig.json:28:4      - Unknown word (venv)       -- "venvPath": ".",
-    	 Suggestions: [vena, vend, venn, vent, Venn]
-    config/pyrightconfig.json:29:4      - Unknown word (venv)       -- "venv": ".venv",
-    	 Suggestions: [vena, vend, venn, vent, Venn]
-    config/pyrightconfig.json:29:13     - Unknown word (venv)       -- "venv": ".venv",
-    	 Suggestions: [vena, vend, venn, vent, Venn]
-    CSpell: Files checked: 1, Issues found: 6 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Airlinese.yml
-    1/1 config/styles/proselint/Airlinese.yml 1218.93ms X
-    config/styles/proselint/Airlinese.yml:2:19      - Unknown word (airlinese)  -- message: "'%s' is airlinese."
-    	 Suggestions: [airlines, Airlines, airline, airiness, airliner]
-    config/styles/proselint/Airlinese.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/Airlinese.yml:6:5       - Unknown word (enplan)     -- - enplan(?:e|ed|ing|ement)
-    	 Suggestions: [enplane, elan, endian, emplane, endplay]
-    config/styles/proselint/Airlinese.yml:6:23      - Unknown word (ement)      -- - enplan(?:e|ed|ing|ement)
-    	 Suggestions: [emend, event, ament, cement, dement]
-    config/styles/proselint/Airlinese.yml:7:5       - Unknown word (deplan)     -- - deplan(?:e|ed|ing|ement)
-    	 Suggestions: [deplane, replan, dean, delay, della]
-    config/styles/proselint/Airlinese.yml:7:23      - Unknown word (ement)      -- - deplan(?:e|ed|ing|ement)
-    	 Suggestions: [emend, event, ament, cement, dement]
-    CSpell: Files checked: 1, Issues found: 6 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/AnimalLabels.yml
-    1/1 config/styles/proselint/AnimalLabels.yml 1515.27ms X
-    config/styles/proselint/AnimalLabels.yml:10:29     - Unknown word (pardine)    -- leopard|panther)-like: pardine
-    	 Suggestions: [jardine, Jardine, padrone, praline, paine]
-    config/styles/proselint/AnimalLabels.yml:11:15     - Unknown word (avine)      -- bird-like: avine
-    	 Suggestions: [aline, amine, avive, azine, alvine]
-    config/styles/proselint/AnimalLabels.yml:12:20     - Unknown word (scolopendrine) -- centipede-like: scolopendrine
-    	 Suggestions: [scolopendrid]
-    config/styles/proselint/AnimalLabels.yml:13:15     - Unknown word (cancrine)      -- crab-like: cancrine
-    	 Suggestions: [canine, calcine, caprine, cannie, carnie]
-    config/styles/proselint/AnimalLabels.yml:14:20     - Unknown word (crocodiline)   -- crocodile-like: crocodiline
-    	 Suggestions: [crocodile, crocodilian, crocodilians, crocodiles, crocidolite]
-    config/styles/proselint/AnimalLabels.yml:15:15     - Unknown word (damine)        -- deer-like: damine
-    	 Suggestions: [damien, Damien, diamine, amine, famine]
-    config/styles/proselint/AnimalLabels.yml:17:20     - Unknown word (lumbricine)    -- earthworm-like: lumbricine
-    	 Suggestions: [lubricant, lubricate, lubricity, lumbricoid]
-    config/styles/proselint/AnimalLabels.yml:18:17     - Unknown word (falconine)     -- falcon-like: falconine
-    	 Suggestions: [falcon, falcons, fascine, florine, falcon's]
-    config/styles/proselint/AnimalLabels.yml:22:15     - Unknown word (ranine)        -- frog-like: ranine
-    	 Suggestions: [racine, rapine, ravine, rankine, Racine]
-    config/styles/proselint/AnimalLabels.yml:25:15     - Unknown word (laridine)      -- gull-like: laridine
-    	 Suggestions: [larine, larding, lairing, ladin, larne]
-    config/styles/proselint/AnimalLabels.yml:28:23     - Unknown word (hippopotamine) -- hippopotamus-like: hippopotamine
-    	 Suggestions: [hippopotami, hippopotamus, hippopotamuses]
-    config/styles/proselint/AnimalLabels.yml:29:17     - Unknown word (lacertine)     -- lizard-like: lacertine
-    	 Suggestions: [lamartine, lacerating, lacerative, Lamartine, latrine]
-    config/styles/proselint/AnimalLabels.yml:30:19     - Unknown word (viverrine)     -- mongoose-like: viverrine
-    	 Suggestions: [viperine, vicereine, vitrine, versine, vitelline]
-    config/styles/proselint/AnimalLabels.yml:32:18     - Unknown word (struthionine)  -- ostrich-like: struthionine
-    	 Suggestions: []
-    config/styles/proselint/AnimalLabels.yml:34:20     - Unknown word (hystricine)    -- porcupine-like: hystricine
-    	 Suggestions: [histidine]
-    config/styles/proselint/AnimalLabels.yml:35:22     - Unknown word (crotaline)     -- rattlesnake-like: crotaline
-    	 Suggestions: [creatine, coralline, coaling, cocaine, coalmine]
-    config/styles/proselint/AnimalLabels.yml:41:16     - Unknown word (suilline)      -- swine-like: suilline
-    	 Suggestions: [shilling, skilling, slimline, spillane, spilling]
-    config/styles/proselint/AnimalLabels.yml:42:16     - Unknown word (tigrine)       -- tiger-like: tigrine
-    	 Suggestions: [tigre, trine, tigris, tirane, tiring]
-    config/styles/proselint/AnimalLabels.yml:47:21     - Unknown word (picine)        -- woodpecker-like: picine
-    	 Suggestions: [piscine, picnic, pcie, pice, pine]
-    CSpell: Files checked: 1, Issues found: 19 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Annotations.yml
-    1/1 config/styles/proselint/Annotations.yml 941.10ms X
-    config/styles/proselint/Annotations.yml:3:1       - Unknown word (ignorecase) -- ignorecase: false
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Apologizing.yml
-    1/1 config/styles/proselint/Apologizing.yml 773.95ms X
-    config/styles/proselint/Apologizing.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Archaisms.yml
-    1/1 config/styles/proselint/Archaisms.yml 1054.25ms X
-    config/styles/proselint/Archaisms.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/Archaisms.yml:12:5      - Unknown word (brocage)    -- - brocage
-    	 Suggestions: [bocage, brocade, brokage, borage, broca]
-    config/styles/proselint/Archaisms.yml:14:5      - Unknown word (camarade)   -- - camarade
-    	 Suggestions: [comrade, chamade, cafard, camera, canara]
-    config/styles/proselint/Archaisms.yml:17:5      - Unknown word (Christiana) -- - Christiana
-    	 Suggestions: [christian, Christian, christina, Christina, Christians]
-    config/styles/proselint/Archaisms.yml:21:5      - Unknown word (deflexion)  -- - deflexion
-    	 Suggestions: [defluxion, deletion, deflation, depletion, deflection]
-    config/styles/proselint/Archaisms.yml:29:5      - Unknown word (maugre)     -- - maugre
-    	 Suggestions: [mauger, marge, maiger, manger, mauler]
-    config/styles/proselint/Archaisms.yml:37:5      - Unknown word (sistren)    -- - sistren
-    	 Suggestions: [sister, sisters, sistine, Sister, Sisters]
-    config/styles/proselint/Archaisms.yml:48:5      - Unknown word (inforce)    -- - inforce
-    	 Suggestions: [enforce*, indore, infare, inform, indorse]
-    config/styles/proselint/Archaisms.yml:49:8      - Unknown word (postfacto)  -- - ex postfacto
-    	 Suggestions: [postfaces, postauto, postAuto, Postauto, PostAuto]
-    CSpell: Files checked: 1, Issues found: 9 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
-✅ [SUCCESS] config/styles/proselint/But.yml
+❌ [ERROR] config/styles/proselint/But.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
 ❌ [ERROR] config/styles/proselint/Cliches.yml
-    1/1 config/styles/proselint/Cliches.yml 993.31ms X
-    config/styles/proselint/Cliches.yml:4:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/Cliches.yml:317:9     - Unknown word (paydirt)    -- - hit paydirt
-    	 Suggestions: [pandit, padri, pair, part, payt]
-    config/styles/proselint/Cliches.yml:319:5     - Unknown word (Hobson's)   -- - Hobson's choice
-    	 Suggestions: [robson's, Robson's, Hobo's, hanson's, Hanson's]
-    config/styles/proselint/Cliches.yml:538:11    - Unknown word (pooper)     -- - party pooper
-    	 Suggestions: [pooped, poorer, popper, proper, Popper]
-    config/styles/proselint/Cliches.yml:736:5     - Unknown word (wakeup)     -- - wakeup call
-    	 Suggestions: [makeup, wake, waked, waken, waker]
-    CSpell: Files checked: 1, Issues found: 5 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/CorporateSpeak.yml
-    1/1 config/styles/proselint/CorporateSpeak.yml 829.22ms X
-    config/styles/proselint/CorporateSpeak.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/CorporateSpeak.yml:18:8      - Unknown word (brainer)    -- - no brainer
-    	 Suggestions: [briner, braider, brained, brainier, drainer]
-    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Currency.yml
-    1/1 config/styles/proselint/Currency.yml 760.69ms X
-    config/styles/proselint/Currency.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Cursing.yml
-    1/1 config/styles/proselint/Cursing.yml 771.18ms X
-    config/styles/proselint/Cursing.yml:4:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/DateCase.yml
-    1/1 config/styles/proselint/DateCase.yml 815.59ms X
-    config/styles/proselint/DateCase.yml:3:1       - Unknown word (ignorecase) -- ignorecase: false
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/DateCase.yml:5:1       - Unknown word (nonword)    -- nonword: true
-    	 Suggestions: [nonfood, notwork, onward, nanoid, nonary]
-    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/DateMidnight.yml
-    1/1 config/styles/proselint/DateMidnight.yml 820.55ms X
-    config/styles/proselint/DateMidnight.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/DateMidnight.yml:5:1       - Unknown word (nonword)    -- nonword: true
-    	 Suggestions: [nonfood, notwork, onward, nanoid, nonary]
-    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/DateRedundancy.yml
-    1/1 config/styles/proselint/DateRedundancy.yml 817.57ms X
-    config/styles/proselint/DateRedundancy.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/DateRedundancy.yml:5:1       - Unknown word (nonword)    -- nonword: true
-    	 Suggestions: [nonfood, notwork, onward, nanoid, nonary]
-    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/DateSpacing.yml
-    1/1 config/styles/proselint/DateSpacing.yml 821.75ms X
-    config/styles/proselint/DateSpacing.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/DateSpacing.yml:5:1       - Unknown word (nonword)    -- nonword: true
-    	 Suggestions: [nonfood, notwork, onward, nanoid, nonary]
-    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/DenizenLabels.yml
-    1/1 config/styles/proselint/DenizenLabels.yml 3188.68ms X
-    config/styles/proselint/DenizenLabels.yml:3:1       - Unknown word (ignorecase) -- ignorecase: false
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/DenizenLabels.yml:7:6       - Unknown word (Afrikaaner) -- (?:Afrikaaner|Afrikander):
-    	 Suggestions: [afrikaner, Afrikaner, afrikander, Afrikander, Afrikaners]
-    config/styles/proselint/DenizenLabels.yml:8:11      - Unknown word (Kongite)    -- (?:Hong Kongite|Hong Kongian):
-    	 Suggestions: [Kunzite, Onsite, Kinglet, Cognito, Knit]
-    config/styles/proselint/DenizenLabels.yml:8:24      - Unknown word (Kongian)    -- ?:Hong Kongite|Hong Kongian): Hong Konger
-    	 Suggestions: [kantian, Kantian, ionian, Ionian, Tongan]
-    config/styles/proselint/DenizenLabels.yml:8:47      - Unknown word (Konger)     -- Kongian): Hong Konger
-    	 Suggestions: [Conger, Longer, Monger, Tonger, Knower]
-    config/styles/proselint/DenizenLabels.yml:10:18     - Unknown word (Michiganian) -- (?:Michiganite|Michiganian): Michigander
-    	 Suggestions: [michiganite, Michiganite, michigan, Michigan, Michigan's]
-    config/styles/proselint/DenizenLabels.yml:11:10     - Unknown word (Hampshireite) -- (?:New Hampshireite|New Hampshireman): New
-    	 Suggestions: [Hampshirite, Hampshirites, hampshire, Hampshire, Hampshires]
-    config/styles/proselint/DenizenLabels.yml:12:6      - Unknown word (Newcastlite)  -- (?:Newcastlite|Newcastleite):
-    	 Suggestions: [newcastle, Newcastle, newcastle's, Newcastle's]
-    config/styles/proselint/DenizenLabels.yml:12:18     - Unknown word (Newcastleite) -- (?:Newcastlite|Newcastleite): Novocastrian
-    	 Suggestions: [newcastle, Newcastle, newcastle's, Newcastle's]
-    config/styles/proselint/DenizenLabels.yml:12:42     - Unknown word (Novocastrian) -- Newcastleite): Novocastrian
-    	 Suggestions: []
-    config/styles/proselint/DenizenLabels.yml:13:6      - Unknown word (Providencian) -- (?:Providencian|Providencer):
-    	 Suggestions: [Providential, providence, Providence, Provincial, Providences]
-    config/styles/proselint/DenizenLabels.yml:13:19     - Unknown word (Providencer)  -- (?:Providencian|Providencer): Providentian
-    	 Suggestions: [providence, Providence, providences, Providences, Providence's]
-    config/styles/proselint/DenizenLabels.yml:13:42     - Unknown word (Providentian) -- Providencer): Providentian
-    	 Suggestions: [Providential, Provident, Providently, Presidential, Providentially]
-    config/styles/proselint/DenizenLabels.yml:14:6      - Unknown word (Trentian)     -- (?:Trentian|Trentonian):
-    	 Suggestions: [Tertian, trenton, Trenton, trentonian, Trentonian]
-    config/styles/proselint/DenizenLabels.yml:15:6      - Unknown word (Warsawer)     -- (?:Warsawer|Warsawian):
-    	 Suggestions: [warsaw, Warsaw, Warsaws, Warmaker, Warpower]
-    config/styles/proselint/DenizenLabels.yml:15:15     - Unknown word (Warsawian)    -- (?:Warsawer|Warsawian): Varsovian
-    	 Suggestions: [warsaw, Warsaw, Warsaws, Warfarin, Warsaw's]
-    config/styles/proselint/DenizenLabels.yml:15:42     - Unknown word (Varsovian)    -- Warsawian): Varsovian
-    	 Suggestions: [varian, Varian]
-    config/styles/proselint/DenizenLabels.yml:16:6      - Unknown word (Wolverhamptonite) -- (?:Wolverhamptonite|Wolverhamptonian): Wulfrunian
-    	 Suggestions: [wolverhampton, Wolverhampton]
-    config/styles/proselint/DenizenLabels.yml:16:23     - Unknown word (Wolverhamptonian) -- (?:Wolverhamptonite|Wolverhamptonian): Wulfrunian
-    	 Suggestions: [wolverhampton, Wolverhampton]
-    config/styles/proselint/DenizenLabels.yml:16:42     - Unknown word (Wulfrunian)       -- hamptonite|Wolverhamptonian): Wulfrunian
-    	 Suggestions: []
-    config/styles/proselint/DenizenLabels.yml:18:3      - Unknown word (Albuquerquian)    -- Albuquerquian:
-    	 Suggestions: [albuquerque, Albuquerque, albuquerque's, Albuquerque's]
-    config/styles/proselint/DenizenLabels.yml:18:42     - Unknown word (Albuquerquean)    -- Albuquerquean
-    	 Suggestions: [albuquerque, Albuquerque, albuquerque's, Albuquerque's]
-    config/styles/proselint/DenizenLabels.yml:19:3      - Unknown word (Anchoragite)      -- Anchoragite:
-    	 Suggestions: [anchorage, Anchorage, Anchorite, Anchorages, Anchorites]
-    config/styles/proselint/DenizenLabels.yml:19:42     - Unknown word (Anchorageite)     -- Anchorageite
-    	 Suggestions: [anchorage, Anchorage, Anchorite, Anchorages, Anchorage's]
-    config/styles/proselint/DenizenLabels.yml:21:3      - Unknown word (Arkansawyer)      -- Arkansawyer:
-    	 Suggestions: []
-    config/styles/proselint/DenizenLabels.yml:22:3      - Unknown word (Belarusan)        -- Belarusan:
-    	 Suggestions: [belarusian, Belarusian, belarus, Belarus, Belarus's]
-    config/styles/proselint/DenizenLabels.yml:23:42     - Unknown word (Caymanian)        -- Caymanian
-    	 Suggestions: [cayman, Cayman, Cyanin, catania, Catania]
-    config/styles/proselint/DenizenLabels.yml:25:3      - Unknown word (Connecticuter)    -- Connecticuter:
-    	 Suggestions: [connecticut, Connecticut, connecticut's, Connecticut's]
-    config/styles/proselint/DenizenLabels.yml:25:42     - Unknown word (Nutmegger)        -- Nutmegger
-    	 Suggestions: [Untrigger, unTrigger, Nutmeg, Nutmegs, Nutmeg's]
-    config/styles/proselint/DenizenLabels.yml:26:3      - Unknown word (Fairbanksian)     -- Fairbanksian:
-    	 Suggestions: [fairbanks, Fairbanks, fairbanks's, Fairbanks's]
-    config/styles/proselint/DenizenLabels.yml:26:42     - Unknown word (Fairbanksan)      -- Fairbanksan
-    	 Suggestions: [fairbanks, Fairbanks, fairbanks's, Fairbanks's]
-    config/styles/proselint/DenizenLabels.yml:27:8      - Unknown word (Worther)          -- Fort Worther:
-    	 Suggestions: [Worthed, Worthier, Norther, Brother, Worth]
-    config/styles/proselint/DenizenLabels.yml:27:47     - Unknown word (Worthian)         -- Fort Worthian
-    	 Suggestions: [Worthier, Worthies, Worthily, Worthing, Worth]
-    config/styles/proselint/DenizenLabels.yml:28:42     - Unknown word (Grenadan)         -- Grenadan
-    	 Suggestions: [grenada, Grenada, grenadian, Grenadian, Granada]
-    config/styles/proselint/DenizenLabels.yml:29:3      - Unknown word (Halifaxer)        -- Halifaxer:
-    	 Suggestions: [halifax, Halifax, halifax's, Halifax's]
-    config/styles/proselint/DenizenLabels.yml:29:42     - Unknown word (Haligonian)       -- Haligonian
-    	 Suggestions: []
-    config/styles/proselint/DenizenLabels.yml:30:3      - Unknown word (Hartlepoolian)    -- Hartlepoolian:
-    	 Suggestions: []
-    config/styles/proselint/DenizenLabels.yml:30:42     - Unknown word (Hartlepudlian)    -- Hartlepudlian
-    	 Suggestions: []
-    config/styles/proselint/DenizenLabels.yml:31:3      - Unknown word (Illinoisian)      -- Illinoisian:
-    	 Suggestions: [illinoisan, Illinoisan, illinoian, Illinoian, Illinoisans]
-    config/styles/proselint/DenizenLabels.yml:32:3      - Unknown word (Iowegian)         -- Iowegian:
-    	 Suggestions: [iowan, Iowan, ionian, Ionian, Iberian]
-    config/styles/proselint/DenizenLabels.yml:33:3      - Unknown word (Leedsian)         -- Leedsian:
-    	 Suggestions: [Leadsman, Lesion, lesbian, Lesbian, Leeds]
-    config/styles/proselint/DenizenLabels.yml:33:42     - Unknown word (Leodenisian)      -- Leodenisian
-    	 Suggestions: []
-    config/styles/proselint/DenizenLabels.yml:34:3      - Unknown word (Liverpoolian)     -- Liverpoolian:
-    	 Suggestions: [liverpudlian, Liverpudlian, liverpool, Liverpool, Liverpool's]
-    config/styles/proselint/DenizenLabels.yml:35:7      - Unknown word (Angelean)         -- Los Angelean:
-    	 Suggestions: [angelina, Angelina, angela, Angela, Angeles]
-    config/styles/proselint/DenizenLabels.yml:36:3      - Unknown word (Manchesterian)    -- Manchesterian:
-    	 Suggestions: [manchester, Manchester, manchester's, Manchester's]
-    config/styles/proselint/DenizenLabels.yml:37:3      - Unknown word (Minneapolisian)   -- Minneapolisian:
-    	 Suggestions: [minneapolis, Minneapolis, minneapolis's, Minneapolis's]
-    config/styles/proselint/DenizenLabels.yml:37:42     - Unknown word (Minneapolitan)    -- Minneapolitan
-    	 Suggestions: [minneapolis, Minneapolis, minneapolis's, Minneapolis's]
-    config/styles/proselint/DenizenLabels.yml:38:3      - Unknown word (Missouran)        -- Missouran:
-    	 Suggestions: [missourian, Missourian, missoula, Missoula, Missouri]
-    config/styles/proselint/DenizenLabels.yml:40:3      - Unknown word (Neopolitan)       -- Neopolitan:
-    	 Suggestions: [neapolitan, Neapolitan, Neapolitans, neapolitan's, Neapolitan's]
-    config/styles/proselint/DenizenLabels.yml:41:46     - Unknown word (Jerseyan)         -- New Jerseyan
-    	 Suggestions: [jersey, Jersey, jerseys, Jerseys, Jersey's]
-    config/styles/proselint/DenizenLabels.yml:42:7      - Unknown word (Orleansian)       -- New Orleansian:
-    	 Suggestions: [orleanist, Orleanist, orleanists, Orleanists, Orleans]
-    config/styles/proselint/DenizenLabels.yml:42:46     - Unknown word (Orleanian)        -- New Orleanian
-    	 Suggestions: [oceanian, Oceanian, orleanist, Orleanist, Oceania]
-    config/styles/proselint/DenizenLabels.yml:43:12     - Unknown word (Citian)           -- Oklahoma Citian:
-    	 Suggestions: [titian, Titian, chian, Chian, Cilia]
-    config/styles/proselint/DenizenLabels.yml:43:51     - Unknown word (Cityan)           -- Oklahoma Cityan
-    	 Suggestions: [city, City, Cyan, Cotan, Citral]
-    config/styles/proselint/DenizenLabels.yml:44:3      - Unknown word (Oklahomian)       -- Oklahomian:
-    	 Suggestions: [oklahoman, Oklahoman, oklahoma, Oklahoma, Oklahomans]
-    config/styles/proselint/DenizenLabels.yml:46:3      - Unknown word (Seattlite)        -- Seattlite:
-    	 Suggestions: [seattle, Seattle, Smaltite, Seatmate, Settle]
-    config/styles/proselint/DenizenLabels.yml:46:42     - Unknown word (Seattleite)       -- Seattleite
-    	 Suggestions: [seattle, Seattle, Satellite, seattle's, Seattle's]
-    config/styles/proselint/DenizenLabels.yml:47:3      - Unknown word (Surinamer)        -- Surinamer:
-    	 Suggestions: [suriname, Suriname, Surnamer, Surinam, Surname]
-    config/styles/proselint/DenizenLabels.yml:48:3      - Unknown word (Tallahassean)     -- Tallahassean:
-    	 Suggestions: [tallahassee, Tallahassee, tallahassee's, Tallahassee's]
-    config/styles/proselint/DenizenLabels.yml:48:42     - Unknown word (Tallahasseean)    -- Tallahasseean
-    	 Suggestions: [tallahassee, Tallahassee, tallahassee's, Tallahassee's]
-    config/styles/proselint/DenizenLabels.yml:50:9      - Unknown word (Rivièrester)      -- Trois-Rivièrester:
-    	 Suggestions: []
-    config/styles/proselint/DenizenLabels.yml:50:42     - Unknown word (Trifluvian)       -- Trifluvian
-    	 Suggestions: []
-    config/styles/proselint/DenizenLabels.yml:51:42     - Unknown word (Utahn)            -- Utahn
-    	 Suggestions: [utah, Utah, utahan, Utahan, Tanh]
-    config/styles/proselint/DenizenLabels.yml:52:3      - Unknown word (Valladolidian)    -- Valladolidian:
-    	 Suggestions: [valladolid, Valladolid]
-    config/styles/proselint/DenizenLabels.yml:52:42     - Unknown word (Vallisoletano)    -- Vallisoletano
-    	 Suggestions: []
-    CSpell: Files checked: 1, Issues found: 65 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Diacritical.yml
-    1/1 config/styles/proselint/Diacritical.yml 1838.64ms X
-    config/styles/proselint/Diacritical.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/Diacritical.yml:8:20      - Unknown word (idéal)      -- beau ideal: beau idéal
-    	 Suggestions: [ideal, idea, idean, ideas, ileal]
-    config/styles/proselint/Diacritical.yml:10:3      - Unknown word (bric)       -- bric-a-brac: bric-à-brac
-    	 Suggestions: [bfic, brie, brig, brim, brin]
-    config/styles/proselint/Diacritical.yml:10:10     - Unknown word (brac)       -- bric-a-brac: bric-à-brac
-    	 Suggestions: [rbac, brad, brae, brag, bran]
-    config/styles/proselint/Diacritical.yml:10:16     - Unknown word (bric)       -- bric-a-brac: bric-à-brac
-    	 Suggestions: [bfic, brie, brig, brim, brin]
-    config/styles/proselint/Diacritical.yml:10:23     - Unknown word (brac)       -- bric-a-brac: bric-à-brac
-    	 Suggestions: [rbac, brad, brae, brag, bran]
-    config/styles/proselint/Diacritical.yml:12:24     - Unknown word (célèbre)    -- cause celebre: cause célèbre
-    	 Suggestions: [celebre, celebres, calibre, celeb, celebs]
-    config/styles/proselint/Diacritical.yml:16:26     - Unknown word (grâce)      -- coup de grace: coup de grâce
-    	 Suggestions: [grace, Grace, glace, gracy, grade]
-    config/styles/proselint/Diacritical.yml:18:9      - Unknown word (brulee)     -- creme brulee: crème brûlée
-    	 Suggestions: [burgee, burled, burler, burley, Burley]
-    config/styles/proselint/Diacritical.yml:18:17     - Unknown word (crème)      -- creme brulee: crème brûlée
-    	 Suggestions: [creme, crime, cree, crema, crepe]
-    config/styles/proselint/Diacritical.yml:18:23     - Unknown word (brûlée)     -- creme brulee: crème brûlée
-    	 Suggestions: [bree, boule, bruce, brume, brute]
-    config/styles/proselint/Diacritical.yml:19:20     - Unknown word (crème)      -- creme de menthe: crème de menthe
-    	 Suggestions: [creme, crime, cree, crema, crepe]
-    config/styles/proselint/Diacritical.yml:20:9      - Unknown word (fraice)     -- creme fraice: crème fraîche
-    	 Suggestions: [fraise, france, France, facie, farce]
-    config/styles/proselint/Diacritical.yml:20:17     - Unknown word (crème)      -- creme fraice: crème fraîche
-    	 Suggestions: [creme, crime, cree, crema, crepe]
-    config/styles/proselint/Diacritical.yml:20:23     - Unknown word (fraîche)    -- creme fraice: crème fraîche
-    	 Suggestions: [france, fiche, fraise, France, farce]
-    config/styles/proselint/Diacritical.yml:21:16     - Unknown word (crème)      -- creme fresh: crème fraîche
-    	 Suggestions: [creme, crime, cree, crema, crepe]
-    config/styles/proselint/Diacritical.yml:21:22     - Unknown word (fraîche)    -- creme fresh: crème fraîche
-    	 Suggestions: [france, fiche, fraise, France, farce]
-    config/styles/proselint/Diacritical.yml:22:10     - Unknown word (crêpe)      -- crepe: crêpe
-    	 Suggestions: [crepe, creep, crape, cree, clepe]
-    config/styles/proselint/Diacritical.yml:24:10     - Unknown word (décor)      -- decor: décor
-    	 Suggestions: [decor, deco, decoy, decors, dior]
-    config/styles/proselint/Diacritical.yml:26:15     - Unknown word (dénouement) -- denouement: dénouement
-    	 Suggestions: [denouement, denouements, denouement's, denouncement]
-    config/styles/proselint/Diacritical.yml:27:11     - Unknown word (façade)     -- facade: façade
-    	 Suggestions: [facade, facades, faced, fade, farad]
-    config/styles/proselint/Diacritical.yml:32:10     - Unknown word (lycée)      -- lycee: lycée
-    	 Suggestions: [lycee, lycees, lychee, sycee, lace]
-    config/styles/proselint/Diacritical.yml:33:13     - Unknown word (maître)     -- maitre d: maître d
-    	 Suggestions: [maitre, mitre, maitres, mater, master]
-    config/styles/proselint/Diacritical.yml:34:19     - Unknown word (ménage)     -- menage a trois: ménage à trois
-    	 Suggestions: [menage, manage, menace, metage, menages]
-    config/styles/proselint/Diacritical.yml:35:13     - Unknown word (négligée)   -- negligee: négligée
-    	 Suggestions: [negligee, negligees, negligent, negligee's, negligence]
-    config/styles/proselint/Diacritical.yml:38:10     - Unknown word (purée)      -- puree: purée
-    	 Suggestions: [puree, pure, purge, purse, purer]
-    config/styles/proselint/Diacritical.yml:39:17     - Unknown word (résumé)     -- my resume: my résumé
-    	 Suggestions: [resume, relume, resumed, resumer, resumes]
-    config/styles/proselint/Diacritical.yml:40:21     - Unknown word (résumé)     -- your resume: your résumé
-    	 Suggestions: [resume, relume, resumed, resumer, resumes]
-    config/styles/proselint/Diacritical.yml:41:19     - Unknown word (résumé)     -- his resume: his résumé
-    	 Suggestions: [resume, relume, resumed, resumer, resumes]
-    config/styles/proselint/Diacritical.yml:42:19     - Unknown word (résumé)     -- her resume: her résumé
-    	 Suggestions: [resume, relume, resumed, resumer, resumes]
-    config/styles/proselint/Diacritical.yml:43:15     - Unknown word (résumé)     -- a resume: a résumé
-    	 Suggestions: [resume, relume, resumed, resumer, resumes]
-    config/styles/proselint/Diacritical.yml:51:3      - Unknown word (tete)       -- tete-a-tete: tête-à-tête
-    	 Suggestions: [tate, teth, tets, tote, Tate]
-    config/styles/proselint/Diacritical.yml:51:10     - Unknown word (tete)       -- tete-a-tete: tête-à-tête
-    	 Suggestions: [tate, teth, tets, tote, Tate]
-    config/styles/proselint/Diacritical.yml:51:16     - Unknown word (tête)       -- tete-a-tete: tête-à-tête
-    	 Suggestions: [tate, tote, Tate, teth, tets]
-    config/styles/proselint/Diacritical.yml:51:23     - Unknown word (tête)       -- tete-a-tete: tête-à-tête
-    	 Suggestions: [tate, tote, Tate, teth, tets]
-    config/styles/proselint/Diacritical.yml:58:6      - Unknown word (Nino)       -- El Nino: El Niño
-    	 Suggestions: [Nano, nina, Nina, Nine, Ninon]
-    config/styles/proselint/Diacritical.yml:58:15     - Unknown word (Niño)       -- El Nino: El Niño
-    	 Suggestions: [Nano, nina, Nina, Nine, Ninon]
-    config/styles/proselint/Diacritical.yml:60:15     - Unknown word (Niña)       -- La Nina: La Niña
-    	 Suggestions: [nina, Nina, Nipa, nita, Nita]
-    config/styles/proselint/Diacritical.yml:61:3      - Unknown word (pina)       -- pina colada: piña colada
-    	 Suggestions: [pena, pica, pika, pima, pine]
-    config/styles/proselint/Diacritical.yml:61:8      - Unknown word (colada)     -- pina colada: piña colada
-    	 Suggestions: [cloaca, clad, coda, cola, cold]
-    config/styles/proselint/Diacritical.yml:61:16     - Unknown word (piña)       -- pina colada: piña colada
-    	 Suggestions: [pica, pika, pima, pisa, pita]
-    config/styles/proselint/Diacritical.yml:61:21     - Unknown word (colada)     -- pina colada: piña colada
-    	 Suggestions: [cloaca, clad, coda, cola, cold]
-    config/styles/proselint/Diacritical.yml:62:10     - Unknown word (señor)      -- senor: señor
-    	 Suggestions: [senor, senhor, senior, senora, senors]
-    config/styles/proselint/Diacritical.yml:63:11     - Unknown word (señora)     -- senora: señora
-    	 Suggestions: [senora, senor, senors, sonora, senhora]
-    config/styles/proselint/Diacritical.yml:64:13     - Unknown word (señorita)   -- senorita: señorita
-    	 Suggestions: [senorita, senhorita, senoritas, senora, sensoria]
-    config/styles/proselint/Diacritical.yml:67:3      - Unknown word (acai)       -- acai: açaí
-    	 Suggestions: [aaai, alai, acari, Alai, AAAI]
-    config/styles/proselint/Diacritical.yml:67:9      - Unknown word (açaí)       -- acai: açaí
-    	 Suggestions: [aaai, alai, Alai, acari, AAAI]
-    config/styles/proselint/Diacritical.yml:77:3      - Unknown word (filmjolk)   -- filmjolk: filmjölk
-    	 Suggestions: [filmdom, filmily, filmdoms, filmgoer]
-    config/styles/proselint/Diacritical.yml:77:13     - Unknown word (filmjölk)   -- filmjolk: filmjölk
-    	 Suggestions: [filmily]
-    config/styles/proselint/Diacritical.yml:81:3      - Unknown word (Beyonce)    -- Beyonce: Beyoncé
-    	 Suggestions: [Bonce, Begone, beyond, Beyond, Bayonne]
-    config/styles/proselint/Diacritical.yml:81:12     - Unknown word (Beyoncé)    -- Beyonce: Beyoncé
-    	 Suggestions: [beyond, Beyond, Beyonds, Bonce, Begone]
-    config/styles/proselint/Diacritical.yml:82:11     - Unknown word (Brontë)     -- Bronte: Brontë
-    	 Suggestions: [bronte, Bronte, Bronze, Borne, Borate]
-    config/styles/proselint/Diacritical.yml:83:10     - Unknown word (Elysees)    -- Champs-Elysees: Champs-Élysées
-    	 Suggestions: [elysee, Elysee, elysee's, Elysee's, Lessees]
-    config/styles/proselint/Diacritical.yml:83:26     - Unknown word (Élysées)    -- Champs-Elysees: Champs-Élysées
-    	 Suggestions: [elysée, Elysée, elysée's, Elysée's, Elses]
-    config/styles/proselint/Diacritical.yml:86:14     - Unknown word (Löwenbräu)  -- Lowenbrau: Löwenbräu
-    	 Suggestions: [lowenbrau, Lowenbrau, lowenbrau's, Lowenbrau's]
-    config/styles/proselint/Diacritical.yml:87:15     - Unknown word (Monégasque) -- Monegasque: Monégasque
-    	 Suggestions: [monegasque, Monegasque, monegasques, Monegasques, Monegasque's]
-    config/styles/proselint/Diacritical.yml:88:10     - Unknown word (Crue)       -- Motley Crue: Mötley Crüe
-    	 Suggestions: [Cure, Clue, cree, Cree, Crud]
-    config/styles/proselint/Diacritical.yml:88:16     - Unknown word (Mötley)     -- Motley Crue: Mötley Crüe
-    	 Suggestions: [Motley, Motey, morley, Morley, Mosley]
-    config/styles/proselint/Diacritical.yml:88:23     - Unknown word (Crüe)       -- Motley Crue: Mötley Crüe
-    	 Suggestions: [cree, Cree, Clue, Crud, Crus]
-    config/styles/proselint/Diacritical.yml:89:12     - Unknown word (Nescafé)    -- Nescafe: Nescafé
-    	 Suggestions: [nescafe, Nescafe, netscape, Netscape, Nescafe's]
-    config/styles/proselint/Diacritical.yml:90:3      - Unknown word (Queensryche) -- Queensryche: Queensrÿche
-    	 Suggestions: []
-    config/styles/proselint/Diacritical.yml:90:16     - Unknown word (Queensrÿche) -- Queensryche: Queensrÿche
-    	 Suggestions: []
-    config/styles/proselint/Diacritical.yml:91:11     - Unknown word (Québec)      -- Quebec: Québec
-    	 Suggestions: [quebec, Quebec, queen, Queen, Queer]
-    config/styles/proselint/Diacritical.yml:92:14     - Unknown word (Québécois)   -- Quebecois: Québécois
-    	 Suggestions: [québecois, Québecois, quebecois, Quebecois, Québecois's]
-    config/styles/proselint/Diacritical.yml:95:10     - Unknown word (Škoda)       -- Skoda: Škoda
-    	 Suggestions: [skoda, Skoda, Soda, shoa, Shoa]
-    CSpell: Files checked: 1, Issues found: 65 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/GenderBias.yml
-    1/1 config/styles/proselint/GenderBias.yml 847.89ms X
-    config/styles/proselint/GenderBias.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/GenderBias.yml:33:3      - Unknown word (ombuds)     -- ombuds(?:man|woman):
-    	 Suggestions: [omb's, ombres, OMB's, muds, embus]
-    config/styles/proselint/GenderBias.yml:33:32     - Unknown word (ombuds)     -- man|woman): ombuds
-    	 Suggestions: [omb's, ombres, OMB's, muds, embus]
-    config/styles/proselint/GenderBias.yml:34:3      - Unknown word (oneupmanship) -- oneupmanship: upstaging
-    	 Suggestions: []
-    CSpell: Files checked: 1, Issues found: 4 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/GroupTerms.yml
-    1/1 config/styles/proselint/GroupTerms.yml 867.53ms X
-    config/styles/proselint/GroupTerms.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/GroupTerms.yml:18:46     - Unknown word (cete)       -- herd) of badgers:      cete of badgers
-    	 Suggestions: [cate, cede, cere, ceto, cite]
-    config/styles/proselint/GroupTerms.yml:23:46     - Unknown word (clowder)    -- herd) of cats:         clowder of cats
-    	 Suggestions: [chowder, crowder, colder, coder, cower]
-    config/styles/proselint/GroupTerms.yml:31:46     - Unknown word (fluther)    -- herd) of jellyfish:    fluther of jellyfish
-    	 Suggestions: [fluter, flusher, flutier, flutter, luther]
-    config/styles/proselint/GroupTerms.yml:32:32     - Unknown word (kangeroos)  -- group|pack|herd) of kangeroos: mob of kangeroos
-    	 Suggestions: [kangaroos, kangaroo, kangaroo's]
-    config/styles/proselint/GroupTerms.yml:32:53     - Unknown word (kangeroos)  -- kangeroos: mob of kangeroos
-    	 Suggestions: [kangaroos, kangaroo, kangaroo's]
-    CSpell: Files checked: 1, Issues found: 6 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Hedging.yml
-    1/1 config/styles/proselint/Hedging.yml 777.23ms X
-    config/styles/proselint/Hedging.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Hyperbole.yml
-    1/1 config/styles/proselint/Hyperbole.yml 788.01ms X
-    config/styles/proselint/Hyperbole.yml:4:1       - Unknown word (nonword)    -- nonword: true
-    	 Suggestions: [nonfood, notwork, onward, nanoid, nonary]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Jargon.yml
-    1/1 config/styles/proselint/Jargon.yml 841.19ms X
-    config/styles/proselint/Jargon.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/Jargon.yml:8:5       - Unknown word (agendize)   -- - agendize
-    	 Suggestions: [agonize, agentive, aedile, agenda, adenine]
-    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/LGBTOffensive.yml
-    1/1 config/styles/proselint/LGBTOffensive.yml 815.44ms X
-    config/styles/proselint/LGBTOffensive.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/LGBTTerms.yml
-    1/1 config/styles/proselint/LGBTTerms.yml 809.18ms X
-    config/styles/proselint/LGBTTerms.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Malapropisms.yml
-    1/1 config/styles/proselint/Malapropisms.yml 758.55ms X
-    config/styles/proselint/Malapropisms.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Needless.yml
-    1/1 config/styles/proselint/Needless.yml 3726.26ms X
-    config/styles/proselint/Needless.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/Needless.yml:9:15      - Unknown word (pygmaen)    -- '(?:pygmean|pygmaen)': pygmy
-    	 Suggestions: [pygmean, pygmies, Pygmies, putamen, yamen]
-    config/styles/proselint/Needless.yml:10:7      - Unknown word (retributional) -- '(?:retributional|retributionary)': retributive
-    	 Suggestions: [retribution, retributions, retribution's, retributing]
-    config/styles/proselint/Needless.yml:10:21     - Unknown word (retributionary) -- '(?:retributional|retributionary)': retributive
-    	 Suggestions: [retribution, retributory, retributions, retribution's]
-    config/styles/proselint/Needless.yml:11:17     - Unknown word (revokeable)     -- '(?:revokable|revokeable)': revocable
-    	 Suggestions: [revokable, revocable, revolvable, removable, reuseable]
-    config/styles/proselint/Needless.yml:13:3      - Unknown word (accessary)      -- accessary: accessory
-    	 Suggestions: [accessory, accessor, accessors, ancestry, access]
-    config/styles/proselint/Needless.yml:14:3      - Unknown word (accreditate)    -- accreditate: accredit
-    	 Suggestions: [accreditee, accredit, accredits, accredited, accrediting]
-    config/styles/proselint/Needless.yml:16:3      - Unknown word (accusee)        -- accusee: accused
-    	 Suggestions: [accuse, accused, accuser, accuses, accurse]
-    config/styles/proselint/Needless.yml:18:3      - Unknown word (acquitment)     -- acquitment: acquittal
-    	 Suggestions: [acquirement, abutment, acquitted, acquitter, acquitting]
-    config/styles/proselint/Needless.yml:25:3      - Unknown word (aggrievance)    -- aggrievance: grievance
-    	 Suggestions: [aggrieve, aggrieving]
-    config/styles/proselint/Needless.yml:27:3      - Unknown word (allusory)       -- allusory: allusive
-    	 Suggestions: [allegory, alloy, allure, allison, allurer]
-    config/styles/proselint/Needless.yml:32:3      - Unknown word (anilinctus)     -- anilinctus: anilingus
-    	 Suggestions: [anilingus, anilins, anilines, aniline's]
-    config/styles/proselint/Needless.yml:43:3      - Unknown word (ascendency)     -- ascendency: ascendancy
-    	 Suggestions: [ascendancy, ascendence, ascendent, ascended, ascender]
-    config/styles/proselint/Needless.yml:49:3      - Unknown word (bestowment)     -- bestowment: bestowal
-    	 Suggestions: [bestowed, bestowing]
-    config/styles/proselint/Needless.yml:53:3      - Unknown word (camarade)       -- camarade: comrade
-    	 Suggestions: [comrade, chamade, cafard, camera, canara]
-    config/styles/proselint/Needless.yml:54:3      - Unknown word (carta)          -- carta blanca: carte blanche
-    	 Suggestions: [carat, cara, cart, caria, carla]
-    config/styles/proselint/Needless.yml:55:3      - Unknown word (casualities)    -- casualities: casualties
-    	 Suggestions: [causalities, casualties, carnalities, causality's, calamities]
-    config/styles/proselint/Needless.yml:56:3      - Unknown word (casuality)      -- casuality: casualty
-    	 Suggestions: [causality, casualty, actuality, casually, carnality]
-    config/styles/proselint/Needless.yml:63:3      - Unknown word (chrysalids)     -- chrysalids: chrysalises
-    	 Suggestions: [chrysalid, chrysalis, chrysalides, chrysalis's, chrysalises]
-    config/styles/proselint/Needless.yml:65:3      - Unknown word (coemployee)     -- coemployee: coworker
-    	 Suggestions: []
-    config/styles/proselint/Needless.yml:68:3      - Unknown word (cohabitor)      -- cohabitor: cohabitant
-    	 Suggestions: [cohabiter, cohabit, cohabits, cohabitator, chapiter]
-    config/styles/proselint/Needless.yml:70:3      - Unknown word (collusory)      -- collusory: collusive
-    	 Suggestions: [collator, colliery, colluder, collators, colluders]
-    config/styles/proselint/Needless.yml:71:3      - Unknown word (commemoratory)  -- commemoratory: commemorative
-    	 Suggestions: [commemorator, commemorators, commemorator's, commemorate, commemorated]
-    config/styles/proselint/Needless.yml:72:3      - Unknown word (commonty)       -- commonty: commonage
-    	 Suggestions: [commonly, common, comment, commons, compony]
-    config/styles/proselint/Needless.yml:76:3      - Unknown word (complicitous)   -- complicitous: complicit
-    	 Suggestions: [complicities, complicity's, compunctious, complications, complicit]
-    config/styles/proselint/Needless.yml:77:3      - Unknown word (computate)      -- computate: compute
-    	 Suggestions: [commutate, compute, copulate, commutated, commutates]
-    config/styles/proselint/Needless.yml:79:3      - Unknown word (concomitancy)   -- concomitancy: concomitance
-    	 Suggestions: [concomitance, concomitant, concomitants, concomitances, concomitantly]
-    config/styles/proselint/Needless.yml:80:3      - Unknown word (condonance)     -- condonance: condonation
-    	 Suggestions: [consonance, condolence, condonable, convenance, consonances]
-    config/styles/proselint/Needless.yml:81:3      - Unknown word (confirmative)   -- confirmative: confirmatory
-    	 Suggestions: [confirmation, confirmable, confutative, conciliative, confirmatory]
-    config/styles/proselint/Needless.yml:83:3      - Unknown word (connotate)      -- connotate: connote
-    	 Suggestions: [connate, connote, corotate, connotative, conflate]
-    config/styles/proselint/Needless.yml:84:3      - Unknown word (consanguineal)  -- consanguineal: consanguine
-    	 Suggestions: [consanguine, consanguinity, consanguineous]
-    config/styles/proselint/Needless.yml:86:3      - Unknown word (conspiratorialist) -- conspiratorialist: conspirator
-    	 Suggestions: [conspiratorial, conspiratorially]
-    config/styles/proselint/Needless.yml:87:3      - Unknown word (constitutionist)   -- constitutionist: constitutionalist
-    	 Suggestions: [constitutions, constitution's, constitution, constitutional, constitutionals]
-    config/styles/proselint/Needless.yml:87:20     - Unknown word (constitutionalist) -- constitutionist: constitutionalist
-    	 Suggestions: [constitutionalism, constitutionalists, constitutionals, constitutional's, constitutionality]
-    config/styles/proselint/Needless.yml:89:3      - Unknown word (contributary)      -- contributary: contributory
-    	 Suggestions: [contributory, contributor, contribute, contributed, contributes]
-    config/styles/proselint/Needless.yml:90:3      - Unknown word (contumacity)       -- contumacity: contumacy
-    	 Suggestions: [contumacy, conjugality, contumacy's, contumacious]
-    config/styles/proselint/Needless.yml:91:3      - Unknown word (conversible)       -- conversible: convertible
-    	 Suggestions: [convertible*, conversable, condensible, convertibles, converse]
-    config/styles/proselint/Needless.yml:92:3      - Unknown word (conveyal)          -- conveyal: conveyance
-    	 Suggestions: [convey, conceal, congeal, conveys, conveyed]
-    config/styles/proselint/Needless.yml:96:3      - Unknown word (cotemporaneous)    -- cotemporaneous: contemporaneous
-    	 Suggestions: [contemporaneous, contemporaneously]
-    config/styles/proselint/Needless.yml:99:3      - Unknown word (culpatory)         -- culpatory: inculpatory
-    	 Suggestions: [curator, collator, culpably, curators, collators]
-    config/styles/proselint/Needless.yml:102:3     - Unknown word (curatory)          -- curatory: curative
-    	 Suggestions: [curator, curators, cursory, curator's, curry]
-    config/styles/proselint/Needless.yml:104:3     - Unknown word (deceptious)        -- deceptious: deceptive
-    	 Suggestions: [deceptions, deception, deception's, deceptive, deletions]
-    config/styles/proselint/Needless.yml:105:3     - Unknown word (defamative)        -- defamative: defamatory
-    	 Suggestions: [defamation, deformative, delative, defective, decorative]
-    config/styles/proselint/Needless.yml:106:3     - Unknown word (defraudulent)      -- defraudulent: fraudulent
-    	 Suggestions: []
-    config/styles/proselint/Needless.yml:107:3     - Unknown word (degeneratory)      -- degeneratory: degenerative
-    	 Suggestions: [degenerately, degeneracy, degenerate, decelerator, degenerated]
-    config/styles/proselint/Needless.yml:111:3     - Unknown word (depositee)         -- depositee: depositary
-    	 Suggestions: [deposited, deposit, deportee, deposits, deposit's]
-    config/styles/proselint/Needless.yml:117:3     - Unknown word (detractory)        -- detractory: detractive
-    	 Suggestions: [detractor, detractors, detractor's, dedicatory, defecatory]
-    config/styles/proselint/Needless.yml:125:3     - Unknown word (disciplinatory)    -- disciplinatory: disciplinary
-    	 Suggestions: [disciplinary, discriminatory]
-    config/styles/proselint/Needless.yml:128:3     - Unknown word (disintegratory)    -- disintegratory: disintegrative
-    	 Suggestions: [disintegrator, disintegrators, disintegrate, disintegrated, disintegrates]
-    config/styles/proselint/Needless.yml:129:3     - Unknown word (dismission)        -- dismission: dismissal
-    	 Suggestions: [discussion, dismissing, dismissive, dispassion, division]
-    config/styles/proselint/Needless.yml:132:3     - Unknown word (disquieten)        -- disquieten: disquiet
-    	 Suggestions: [disquieted, disquiet, disquiets, disquiet's, disquieting]
-    config/styles/proselint/Needless.yml:136:3     - Unknown word (doctrinary)        -- doctrinary: doctrinaire
-    	 Suggestions: [doctrinal, doctrinaire, doctrinally, doctrine, doctrines]
-    config/styles/proselint/Needless.yml:138:3     - Unknown word (domesticize)       -- domesticize: domesticate
-    	 Suggestions: [domesticate, domesticity, domestic, domestics, domestic's]
-    config/styles/proselint/Needless.yml:139:3     - Unknown word (duplicatory)       -- duplicatory: duplicative
-    	 Suggestions: [duplicator, duplicators, duplicature, duplicator's, depilatory]
-    config/styles/proselint/Needless.yml:139:16    - Unknown word (duplicative)       -- duplicatory: duplicative
-    	 Suggestions: [duplicate, duplicating, duplication, duplicature, duplicated]
-    config/styles/proselint/Needless.yml:143:3     - Unknown word (enigmatas)         -- enigmatas: enigmas
-    	 Suggestions: [enigmata, enigmas, enigma's, enigmatic, enigma]
-    config/styles/proselint/Needless.yml:144:3     - Unknown word (enlargen)          -- enlargen: enlarge
-    	 Suggestions: [enlarge, enlarged, enlarger, enlarges, enlargers]
-    config/styles/proselint/Needless.yml:148:3     - Unknown word (ethician)          -- ethician: ethicist
-    	 Suggestions: [ethicians, ethical, ethicist, ethicize, ethiopian]
-    config/styles/proselint/Needless.yml:149:6     - Unknown word (officiis)          -- ex officiis: ex officio
-    	 Suggestions: [officio, offices, office's, officers, official]
-    config/styles/proselint/Needless.yml:150:3     - Unknown word (exculpative)       -- exculpative: exculpatory
-    	 Suggestions: [exculpate, exculpating, exculpation, emulative, exceptive]
-    config/styles/proselint/Needless.yml:151:3     - Unknown word (exigeant)          -- exigeant: exigent
-    	 Suggestions: [exigent, emigrant, elegant, erigena, Erigena]
-    config/styles/proselint/Needless.yml:161:3     - Unknown word (fraudful)          -- fraudful: fraudulent
-    	 Suggestions: [fraud, frauds, factful, fateful, fearful]
-    config/styles/proselint/Needless.yml:162:3     - Unknown word (funebrial)         -- funebrial: funereal
-    	 Suggestions: [funeral, funereal, ferial, funerals]
-    config/styles/proselint/Needless.yml:166:3     - Unknown word (goatherder)        -- goatherder: goatherd
-    	 Suggestions: [gatherer, goatherd, goatherds, goatherd's, gathered]
-    config/styles/proselint/Needless.yml:174:3     - Unknown word (honorand)          -- honorand: honoree
-    	 Suggestions: [honorands, honored, honorary, honoring, honan]
-    config/styles/proselint/Needless.yml:179:3     - Unknown word (imperviable)       -- imperviable: impervious
-    	 Suggestions: [impermeable, impregnable, imperceivable, imperial, imperials]
-    config/styles/proselint/Needless.yml:182:3     - Unknown word (imprimatura)       -- imprimatura: imprimatur
-    	 Suggestions: [imprimatur, imprimaturs, imprimatur's]
-    config/styles/proselint/Needless.yml:183:3     - Unknown word (improprietous)     -- improprietous: improper
-    	 Suggestions: [improprieties, impropriety's, impropriety]
-    config/styles/proselint/Needless.yml:187:3     - Unknown word (inconsistence)     -- inconsistence: inconsistency
-    	 Suggestions: [inconsistency*, inconsistences, inconsistent, inconsistencies, incontinence]
-    config/styles/proselint/Needless.yml:189:3     - Unknown word (incurment)         -- incurment: incurrence
-    	 Suggestions: [incurrent, inclement, increment, incumbent, insurgent]
-    config/styles/proselint/Needless.yml:193:3     - Unknown word (innavigable)       -- innavigable: unnavigable
-    	 Suggestions: [inviable, inevitable, inadvisable, insatiable, invariable]
-    config/styles/proselint/Needless.yml:196:3     - Unknown word (insistment)        -- insistment: insistence
-    	 Suggestions: [insistent, indictment, investment, Investment, insisted]
-    config/styles/proselint/Needless.yml:200:3     - Unknown word (insuror)           -- insuror: insurer
-    	 Suggestions: [insurer, insure, injurer, insular, insures]
-    config/styles/proselint/Needless.yml:202:3     - Unknown word (interpretate)      -- interpretate: interpret
-    	 Suggestions: [interrelate, interpretive, interpretable, interpretative, intemperate]
-    config/styles/proselint/Needless.yml:203:3     - Unknown word (intervenience)     -- intervenience: intervention
-    	 Suggestions: [intervenient, intervening, interference]
-    config/styles/proselint/Needless.yml:208:3     - Unknown word (laudative)         -- laudative: laudatory
-    	 Suggestions: [laxative, laudation, laudable, laudator, laccadive]
-    config/styles/proselint/Needless.yml:209:3     - Unknown word (legitimatization)  -- legitimatization: legitimation
-    	 Suggestions: [legitimization, legitimizations]
-    config/styles/proselint/Needless.yml:212:3     - Unknown word (lengthways)        -- lengthways: lengthwise
-    	 Suggestions: [lengths, lengthy, length's, longways, lengthens]
-    config/styles/proselint/Needless.yml:222:3     - Unknown word (minimalize)        -- minimalize: minimize
-    	 Suggestions: [minimize, mineralize, minimalism, minimalist, minimality]
-    config/styles/proselint/Needless.yml:226:3     - Unknown word (monetarize)        -- monetarize: monetize
-    	 Suggestions: [monetize, monetarily, monetarism, monetarist, monetary]
-    config/styles/proselint/Needless.yml:228:3     - Unknown word (narcism)           -- narcism: narcissism
-    	 Suggestions: [racism, narcs, naris, narc's, narcos]
-    config/styles/proselint/Needless.yml:229:3     - Unknown word (neglective)        -- neglective: neglectful
-    	 Suggestions: [neglecting, neglection, neglect, negative, neglects]
-    config/styles/proselint/Needless.yml:230:3     - Unknown word (negligency)        -- negligency: negligence
-    	 Suggestions: [negligence, negligent, negligently, negligee, negligees]
-    config/styles/proselint/Needless.yml:231:3     - Unknown word (neologizer)        -- neologizer: neologist
-    	 Suggestions: [neologize, neologies, enologies, neologic, neologism]
-    config/styles/proselint/Needless.yml:237:3     - Unknown word (numbedness)        -- numbedness: numbness
-    	 Suggestions: [numbness, numberless, nudeness, numberers, nimbleness]
-    config/styles/proselint/Needless.yml:238:3     - Unknown word (omittable)         -- omittable: omissible
-    	 Suggestions: [omittance, omissible]
-    config/styles/proselint/Needless.yml:240:3     - Unknown word (opinioned)         -- opinioned: opined
-    	 Suggestions: [opinion, opinions, optioned, opinion's, opinionated]
-    config/styles/proselint/Needless.yml:245:3     - Unknown word (overthrowal)       -- overthrowal: overthrow
-    	 Suggestions: [overthrow, overthrown, overthrows, overthrow's, overthrower]
-    config/styles/proselint/Needless.yml:246:3     - Unknown word (pacificist)        -- pacificist: pacifist
-    	 Suggestions: [pacificism, pacifist, pacific's, Pacific's, pacifists]
-    config/styles/proselint/Needless.yml:247:3     - Unknown word (paederast)         -- paederast: pederast
-    	 Suggestions: [pederast, pederasts, pederasty, panders, pander's]
-    config/styles/proselint/Needless.yml:252:3     - Unknown word (pediatrist)        -- pediatrist: pediatrician
-    	 Suggestions: [podiatrist, pediatric, pediatrics, pedicurist, podiatrists]
-    config/styles/proselint/Needless.yml:253:3     - Unknown word (penumbrous)        -- penumbrous: penumbral
-    	 Suggestions: [penumbras, penumbra's, penumbra, penumbrae, penumbral]
-    config/styles/proselint/Needless.yml:254:3     - Unknown word (perjorative)       -- perjorative: pejorative
-    	 Suggestions: [pejorative*, pejoratives, personative, performative, preparative]
-    config/styles/proselint/Needless.yml:255:3     - Unknown word (permissory)        -- permissory: permissive
-    	 Suggestions: [prehistory, percussor, permission, permissive, permissibly]
-    config/styles/proselint/Needless.yml:261:3     - Unknown word (policyowner)      -- policyowner: policyholder
-    	 Suggestions: [policymaker, policyholder]
-    config/styles/proselint/Needless.yml:262:3     - Unknown word (politicalize)     -- politicalize: politicize
-    	 Suggestions: [politicize, political, politically, politicized, politicizes]
-    config/styles/proselint/Needless.yml:264:3     - Unknown word (preceptoral)      -- preceptoral: preceptorial
-    	 Suggestions: [preceptorial, preceptor, preceptors, preceptory, preceptor's]
-    config/styles/proselint/Needless.yml:267:3     - Unknown word (preclusory)       -- preclusory: preclusive
-    	 Suggestions: [precursory, precatory, precursor, preceptory, preclusion]
-    config/styles/proselint/Needless.yml:268:3     - Unknown word (precolumbian)     -- precolumbian: pre-Columbian
-    	 Suggestions: [precloudbin, precloudBin, preCloudbin, Precloudbin, preCloudBin]
-    config/styles/proselint/Needless.yml:270:3     - Unknown word (preponderately)   -- preponderately: preponderantly
-    	 Suggestions: [preponderate, preponderated, preponderates, preponderantly, preponderating]
-    config/styles/proselint/Needless.yml:271:3     - Unknown word (preserval)        -- preserval: preservation
-    	 Suggestions: [preserve, preserved, preserver, preserves, preverbal]
-    config/styles/proselint/Needless.yml:276:3     - Unknown word (propelment)       -- propelment: propulsion
-    	 Suggestions: [propellent, propellant, propmen, profluent, propelled]
-    config/styles/proselint/Needless.yml:277:3     - Unknown word (propulsory)       -- propulsory: propulsive
-    	 Suggestions: [propellor, propellors, propulsion, propulsive]
-    config/styles/proselint/Needless.yml:279:3     - Unknown word (protectory)       -- protectory: protective
-    	 Suggestions: [protector, protectors, Protector, projector, prosector]
-    config/styles/proselint/Needless.yml:280:3     - Unknown word (provocatory)      -- provocatory: provocative
-    	 Suggestions: [prolocutor, promontory, profanatory, prosecutory, provocateur]
-    config/styles/proselint/Needless.yml:281:3     - Unknown word (pruriency)        -- pruriency: prurience
-    	 Suggestions: [prurience, prurient, pruriently, purulency, pudency]
-    config/styles/proselint/Needless.yml:282:3     - Unknown word (psychal)          -- psychal: psychical
-    	 Suggestions: [psychol, psych, psyche, psycho, psychs]
-    config/styles/proselint/Needless.yml:283:3     - Unknown word (punitory)         -- punitory: punitive
-    	 Suggestions: [punditry, printery, punty, pantry, priory]
-    config/styles/proselint/Needless.yml:284:3     - Unknown word (quantitate)       -- quantitate: quantify
-    	 Suggestions: [quantitative, quantile, quantity, quantize, quintette]
-    config/styles/proselint/Needless.yml:291:3     - Unknown word (recruital)        -- recruital: recruitment
-    	 Suggestions: [recital, recruit, recruits, requital, recountal]
-    config/styles/proselint/Needless.yml:292:3     - Unknown word (recurrency)       -- recurrency: recurrence
-    	 Suggestions: [recurrence, recurrent, recumbency, recurrences, recurrently]
-    config/styles/proselint/Needless.yml:294:3     - Unknown word (recusation)       -- recusation: recusal
-    	 Suggestions: [recusator, recitation, recreation, refutation, regulation]
-    config/styles/proselint/Needless.yml:295:3     - Unknown word (recusement)       -- recusement: recusal
-    	 Suggestions: [recrement, recusant, recumbent, recurrent]
-    config/styles/proselint/Needless.yml:297:3     - Unknown word (referrable)       -- referrable: referable
-    	 Suggestions: [referable, referral, referrals, reformable, reservable]
-    config/styles/proselint/Needless.yml:298:3     - Unknown word (referrible)       -- referrible: referable
-    	 Suggestions: [referable, reversible, revertible, referral, referrals]
-    config/styles/proselint/Needless.yml:300:3     - Unknown word (remitment)        -- remitment: remittance
-    	 Suggestions: [remittent, regiment, renitent, revetment, reticent]
-    config/styles/proselint/Needless.yml:303:3     - Unknown word (renunciable)      -- renunciable: renounceable
-    	 Suggestions: [renounceable, reducible, refundable, renunciant, reconcilable]
-    config/styles/proselint/Needless.yml:305:3     - Unknown word (repudiative)      -- repudiative: repudiatory
-    	 Suggestions: [repudiate, repudiating, repudiation, refutative, regulative]
-    config/styles/proselint/Needless.yml:305:16    - Unknown word (repudiatory)      -- repudiative: repudiatory
-    	 Suggestions: [repudiator, repudiators, repudiator's, repudiate, refutatory]
-    config/styles/proselint/Needless.yml:306:3     - Unknown word (requitement)      -- requitement: requital
-    	 Suggestions: [requirement, requirements, refinement, retirement, revilement]
-    config/styles/proselint/Needless.yml:308:3     - Unknown word (restoral)         -- restoral: restoration
-    	 Suggestions: [restorals, retral, restore, rostral, restored]
-    config/styles/proselint/Needless.yml:309:3     - Unknown word (reticency)        -- reticency: reticence
-    	 Suggestions: [reticence, recency, reticent, residency, reticently]
-    config/styles/proselint/Needless.yml:312:3     - Unknown word (revisional)       -- revisional: revisionary
-    	 Suggestions: [revision, revisions, revision's, revisionary, revisal]
-    config/styles/proselint/Needless.yml:315:3     - Unknown word (salutiferous)     -- salutiferous: salutary
-    	 Suggestions: [saliferous]
-    config/styles/proselint/Needless.yml:316:3     - Unknown word (sensatory)        -- sensatory: sensory
-    	 Suggestions: [senator, sensory, sanatory, senators, senary]
-    config/styles/proselint/Needless.yml:317:3     - Unknown word (sessionary)       -- sessionary: sessional
-    	 Suggestions: [sessional, session, seminary, sessions, session's]
-    config/styles/proselint/Needless.yml:320:3     - Unknown word (signator)         -- signator: signatory
-    	 Suggestions: [signatory, signor, senator, signaler, signatary]
-    config/styles/proselint/Needless.yml:321:3     - Unknown word (slanderize)       -- slanderize: slander
-    	 Suggestions: [slenderize, slandering, slenderized, slenderizes, slander]
-    config/styles/proselint/Needless.yml:322:3     - Unknown word (societary)        -- societary: societal
-    	 Suggestions: [society, societal, solitary, secretary, Society]
-    config/styles/proselint/Needless.yml:323:3     - Unknown word (sodomist)         -- sodomist: sodomite
-    	 Suggestions: [sodoms, sodom's, soloist, sodalist, sodomies]
-    config/styles/proselint/Needless.yml:324:3     - Unknown word (solicitate)       -- solicitate: solicit
-    	 Suggestions: [solicitude, solicit, silicate, solicits, solicited]
-    config/styles/proselint/Needless.yml:325:3     - Unknown word (speculatory)      -- speculatory: speculative
-    	 Suggestions: [speculator, speculators, speculator's, specular, spectator]
-    config/styles/proselint/Needless.yml:326:3     - Unknown word (spiritous)        -- spiritous: spirituous
-    	 Suggestions: [spiritus, spirituous, spirits, spirit's, spurious]
-    config/styles/proselint/Needless.yml:327:3     - Unknown word (statutorial)      -- statutorial: statutory
-    	 Suggestions: [statutorily, statutory]
-    config/styles/proselint/Needless.yml:328:3     - Unknown word (submergeable)     -- submergeable: submersible
-    	 Suggestions: [submergible, unmergeable, submergence, submersible]
-    config/styles/proselint/Needless.yml:332:3     - Unknown word (sufficience)      -- sufficience: sufficiency
-    	 Suggestions: [sufficiency, sufficient, sufficiencies, sufficing, sufficiently]
-    config/styles/proselint/Needless.yml:334:3     - Unknown word (surmisal)         -- surmisal: surmise
-    	 Suggestions: [surmise, summital, surgical, surmised, surmiser]
-    config/styles/proselint/Needless.yml:335:3     - Unknown word (suspendible)      -- suspendible: suspendable
-    	 Suggestions: [suspending, suspensive, susceptible, suspectable]
-    config/styles/proselint/Needless.yml:335:16    - Unknown word (suspendable)      -- suspendible: suspendable
-    	 Suggestions: [suspectable, superable]
-    config/styles/proselint/Needless.yml:336:3     - Unknown word (synthetize)       -- synthetize: synthesize
-    	 Suggestions: [synthesize, synthetic, syncretize, synthetics, synthesized]
-    config/styles/proselint/Needless.yml:339:3     - Unknown word (tangental)        -- tangental: tangential
-    	 Suggestions: [tangential, tangent, tangents, tangent's, tangence]
-    config/styles/proselint/Needless.yml:345:3     - Unknown word (unfrequent)       -- unfrequent: infrequent
-    	 Suggestions: [unfrequented]
-    config/styles/proselint/Needless.yml:346:3     - Unknown word (unreasonability)  -- unreasonability: unreasonableness
-    	 Suggestions: [unreasonably, unreadability]
-    config/styles/proselint/Needless.yml:347:3     - Unknown word (unrevokable)      -- unrevokable: irrevocable
-    	 Suggestions: [unremovable, unreadable, unreliable, unrentable, unbreakable]
-    config/styles/proselint/Needless.yml:349:3     - Unknown word (usurpature)       -- usurpature: usurpation
-    	 Suggestions: [usurpative, usurpatory, usurpation]
-    config/styles/proselint/Needless.yml:350:3     - Unknown word (variative)        -- variative: variational
-    	 Suggestions: [variate, valuative, variating, variation, variable]
-    config/styles/proselint/Needless.yml:353:3     - Unknown word (vituperous)       -- vituperous: vituperative
-    	 Suggestions: [viperous, vitreous, vitaceous, viniferous, vituperate]
-    config/styles/proselint/Needless.yml:356:3     - Unknown word (wolverene)        -- wolverene: wolverine
-    	 Suggestions: [wolverine, wolverines, wolver, wolvers, wolverine's]
-    config/styles/proselint/Needless.yml:357:3     - Unknown word (wolvish)          -- wolvish: wolfish
-    	 Suggestions: [wolfish, owlish, wolves, wildish, wormish]
-    config/styles/proselint/Needless.yml:358:3     - Unknown word (Zoroastrism)      -- Zoroastrism: Zoroastrianism
-    	 Suggestions: [zoroastrian, Zoroastrian, zoroaster's, Zoroaster's, Zoroastrians]
-    CSpell: Files checked: 1, Issues found: 150 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Nonwords.yml
-    1/1 config/styles/proselint/Nonwords.yml 1329.61ms X
-    config/styles/proselint/Nonwords.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/Nonwords.yml:8:3       - Unknown word (affrontery) -- affrontery: effrontery
-    	 Suggestions: [affronted, affront, affronts, affront's, affronting]
-    config/styles/proselint/Nonwords.yml:9:3       - Unknown word (analyzation) -- analyzation: analysis
-    	 Suggestions: []
-    config/styles/proselint/Nonwords.yml:10:3      - Unknown word (annoyment)   -- annoyment: annoyance
-    	 Suggestions: [annulment, atonement, Atonement, agnomen, annoyed]
-    config/styles/proselint/Nonwords.yml:11:3      - Unknown word (confirmant)  -- confirmant: confirmand
-    	 Suggestions: [confirmand, conformant, confidant, conferment, confirming]
-    config/styles/proselint/Nonwords.yml:12:3      - Unknown word (confirmants) -- confirmants: confirmands
-    	 Suggestions: [confidants, confirmand, conformant, conferments, confirms]
-    config/styles/proselint/Nonwords.yml:12:16     - Unknown word (confirmands) -- confirmants: confirmands
-    	 Suggestions: [confirmand, confirms, confirmed, confidants, configmaps]
-    config/styles/proselint/Nonwords.yml:13:3      - Unknown word (conversate)  -- conversate: converse
-    	 Suggestions: [converse, condensate, conversant, convertite, conversable]
-    config/styles/proselint/Nonwords.yml:14:3      - Unknown word (crained)     -- crained: craned
-    	 Suggestions: [craned, chained, crannied, caine, caned]
-    config/styles/proselint/Nonwords.yml:15:3      - Unknown word (discomforture) -- discomforture: discomfort|discomfiture
-    	 Suggestions: [discomfiture, discomfort, discomforts, discomfort's, discomforted]
-    config/styles/proselint/Nonwords.yml:18:3      - Unknown word (forebearance)  -- forebearance: forbearance
-    	 Suggestions: [forbearance, forebearing, forbearance's]
-    config/styles/proselint/Nonwords.yml:19:3      - Unknown word (improprietous) -- improprietous: improper
-    	 Suggestions: [improprieties, impropriety's, impropriety]
-    config/styles/proselint/Nonwords.yml:20:3      - Unknown word (inclimate)     -- inclimate: inclement
-    	 Suggestions: [intimate, inanimate, nictitate, incite, inmate]
-    config/styles/proselint/Nonwords.yml:21:3      - Unknown word (inimicable)    -- inimicable: inimical
-    	 Suggestions: [inimitable, inimical, inimically, insociable, imitable]
-    config/styles/proselint/Nonwords.yml:23:3      - Unknown word (minimalize)    -- minimalize: minimize
-    	 Suggestions: [minimize, mineralize, minimalism, minimalist, minimality]
-    config/styles/proselint/Nonwords.yml:24:3      - Unknown word (minimalized)   -- minimalized: minimized
-    	 Suggestions: [minimized, mineralized, minimize, minimizer, mineralize]
-    config/styles/proselint/Nonwords.yml:25:3      - Unknown word (minimalizes)   -- minimalizes: minimizes
-    	 Suggestions: [minimizes, mineralizes, minimalists, minimals, minimize]
-    config/styles/proselint/Nonwords.yml:26:3      - Unknown word (minimalizing)  -- minimalizing: minimizing
-    	 Suggestions: [minimizing, mineralizing, militarizing]
-    config/styles/proselint/Nonwords.yml:27:3      - Unknown word (optimalize)    -- optimalize: optimize
-    	 Suggestions: [optimize, optimality, optimal, optimally, optimized]
-    config/styles/proselint/Nonwords.yml:30:3      - Unknown word (proprietous)   -- proprietous: proper
-    	 Suggestions: [proprietors, proprietor, proprieties, propriety's, proprietor's]
-    config/styles/proselint/Nonwords.yml:31:12     - Unknown word (inexpense)     -- relative inexpense: relatively low price
-    	 Suggestions: [inexpensive*, inexpert]
-    config/styles/proselint/Nonwords.yml:34:3      - Unknown word (uncategorically) -- uncategorically: categorically
-    	 Suggestions: []
-    config/styles/proselint/Nonwords.yml:35:3      - Unknown word (undoubtably)     -- undoubtably: undoubtedly|indubitably
-    	 Suggestions: [undoubtedly, unsuitably, uncountable, undebatably, unmountable]
-    config/styles/proselint/Nonwords.yml:36:3      - Unknown word (unequivocable)   -- unequivocable: unequivocal
-    	 Suggestions: [unequivocal, unequivocally]
-    config/styles/proselint/Nonwords.yml:37:3      - Unknown word (unmercilessly)   -- unmercilessly: mercilessly
-    	 Suggestions: []
-    config/styles/proselint/Nonwords.yml:38:3      - Unknown word (unrelentlessly)  -- unrelentlessly: unrelentingly|relentlessly
-    	 Suggestions: []
-    CSpell: Files checked: 1, Issues found: 26 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Oxymorons.yml
-    1/1 config/styles/proselint/Oxymorons.yml 805.61ms X
-    config/styles/proselint/Oxymorons.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/P-Value.yml
-    1/1 config/styles/proselint/P-Value.yml 825.26ms X
-    config/styles/proselint/P-Value.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
-✅ [SUCCESS] config/styles/proselint/RASSyndrome.yml
+❌ [ERROR] config/styles/proselint/RASSyndrome.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
 ❌ [ERROR] config/styles/proselint/README.md
-    1/1 config/styles/proselint/README.md 895.50ms X
-    config/styles/proselint/README.md:1:31      - Unknown word (Suchow)     -- © 2014–2015, Jordan Suchow, Michael Pacer, and
-    	 Suggestions: [Schw, Scow, Show, Such, Succor]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Skunked.yml
-    1/1 config/styles/proselint/Skunked.yml 804.96ms X
-    config/styles/proselint/Skunked.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Spelling.yml
-    1/1 config/styles/proselint/Spelling.yml 992.57ms X
-    config/styles/proselint/Spelling.yml:4:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/Spelling.yml:8:3       - Unknown word (colour)     -- colour: color
-    	 Suggestions: [color, cooler, colo, calor, cloud]
-    config/styles/proselint/Spelling.yml:9:3       - Unknown word (emphasise)  -- emphasise: emphasize
-    	 Suggestions: [emphasis, emphasize, emphases, emphasizes, emphasis's]
-    config/styles/proselint/Spelling.yml:10:3      - Unknown word (finalise)   -- finalise: finalize
-    	 Suggestions: [finalis, finalism, finalist, finalize, finales]
-    config/styles/proselint/Spelling.yml:14:3      - Unknown word (organise)   -- organise: organize
-    	 Suggestions: [organism, organist, organize, organdies, organizes]
-    config/styles/proselint/Spelling.yml:15:3      - Unknown word (organised)  -- organised: organized
-    	 Suggestions: [organized, organism, organist, organize, organisms]
-    config/styles/proselint/Spelling.yml:16:3      - Unknown word (organising) -- organising: organizing
-    	 Suggestions: [organizing, ordaining, romanizing, organism, organist]
-    config/styles/proselint/Spelling.yml:17:3      - Unknown word (recognise)  -- recognise: recognize
-    	 Suggestions: [recognize, recognizes, recognized, recognizee, recognizer]
-    CSpell: Files checked: 1, Issues found: 8 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Typography.yml
-    1/1 config/styles/proselint/Typography.yml 773.42ms X
-    config/styles/proselint/Typography.yml:4:1       - Unknown word (nonword)    -- nonword: true
-    	 Suggestions: [nonfood, notwork, onward, nanoid, nonary]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Uncomparables.yml
-    1/1 config/styles/proselint/Uncomparables.yml 805.95ms X
-    config/styles/proselint/Uncomparables.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/proselint/Uncomparables.yml:12:92     - Unknown word (mildy)      -- increasingly|kind of|mildy|hardly|greatly|sort
-    	 Suggestions: [mild, middy, milky, mindy, moldy]
-    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/Very.yml
-    1/1 config/styles/proselint/Very.yml 759.33ms X
-    config/styles/proselint/Very.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/proselint/meta.json
-    1/1 config/styles/proselint/meta.json 868.36ms X
-    config/styles/proselint/meta.json:2:14      - Unknown word (jdkato)     -- "author": "jdkato",
-    	 Suggestions: [jato, dato, jatos, junto, jurat]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/write-good/Cliches.yml
-    1/1 config/styles/write-good/Cliches.yml 890.07ms X
-    config/styles/write-good/Cliches.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    config/styles/write-good/Cliches.yml:282:9     - Unknown word (paydirt)    -- - hit paydirt
-    	 Suggestions: [pandit, padri, pair, part, payt]
-    config/styles/write-good/Cliches.yml:484:11    - Unknown word (pooper)     -- - party pooper
-    	 Suggestions: [pooped, poorer, popper, proper, Popper]
-    config/styles/write-good/Cliches.yml:662:5     - Unknown word (wakeup)     -- - wakeup call
-    	 Suggestions: [makeup, wake, waked, waken, waker]
-    CSpell: Files checked: 1, Issues found: 4 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/write-good/E-Prime.yml
-    1/1 config/styles/write-good/E-Prime.yml 757.16ms X
-    config/styles/write-good/E-Prime.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
-✅ [SUCCESS] config/styles/write-good/Illusions.yml
+❌ [ERROR] config/styles/write-good/Illusions.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
 ❌ [ERROR] config/styles/write-good/Passive.yml
-    1/1 config/styles/write-good/Passive.yml 763.96ms X
-    config/styles/write-good/Passive.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
-✅ [SUCCESS] config/styles/write-good/README.md
-✅ [SUCCESS] config/styles/write-good/So.yml
+❌ [ERROR] config/styles/write-good/README.md
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/styles/write-good/So.yml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
 ❌ [ERROR] config/styles/write-good/ThereIs.yml
-    1/1 config/styles/write-good/ThereIs.yml 773.75ms X
-    config/styles/write-good/ThereIs.yml:3:1       - Unknown word (ignorecase) -- ignorecase: false
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/write-good/TooWordy.yml
-    1/1 config/styles/write-good/TooWordy.yml 767.61ms X
-    config/styles/write-good/TooWordy.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/styles/write-good/Weasel.yml
-    1/1 config/styles/write-good/Weasel.yml 775.57ms X
-    config/styles/write-good/Weasel.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
-    	 Suggestions: [ignores, ignorers, increase]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
-✅ [SUCCESS] config/styles/write-good/meta.json
-✅ [SUCCESS] config/sun_checks.xml
+❌ [ERROR] config/styles/write-good/meta.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] config/sun_checks.xml
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
 ❌ [ERROR] config/terragrunt.hcl
-    1/1 config/terragrunt.hcl 788.52ms X
-    config/terragrunt.hcl:1:3       - Unknown word (terragrunt) -- # terragrunt.hcl — Base config for
-    	 Suggestions: [termagant]
-    config/terragrunt.hcl:15:33     - Unknown word (egohygiene) -- git::git@github.com:egohygiene/terraform-modules.git
-    	 Suggestions: []
-    config/terragrunt.hcl:24:26     - Unknown word (terragrunt) -- exists = "overwrite_terragrunt"
-    	 Suggestions: [termagant]
-    CSpell: Files checked: 1, Issues found: 3 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/terrascan-config.toml
-    1/1 config/terrascan-config.toml 773.19ms X
-    config/terrascan-config.toml:17:46     - Unknown word (sarif)      -- yaml, xml, junit-xml, sarif, human
-    	 Suggestions: [sari, saris, serif, sharif, sadi]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/trivy-sbom.yaml
-    1/1 config/trivy-sbom.yaml 751.07ms X
-    config/trivy-sbom.yaml:25:10     - Unknown word (pkgs)       -- list-all-pkgs: false
-    	 Suggestions: [pegs, pigs, pugs, Pigs, pkg]
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] config/trivy.yaml
-    1/1 config/trivy.yaml 782.41ms X
-    config/trivy.yaml:39:16     - Unknown word (trivycache) -- dir: .cache/.trivycache
-    	 Suggestions: []
-    config/trivy.yaml:43:10     - Unknown word (pkgs)       -- list-all-pkgs: false
-    	 Suggestions: [pegs, pigs, pugs, Pigs, pkg]
-    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] docs/CNAME
-    1/1 docs/CNAME 794.48ms X
-    docs/CNAME:1:8       - Unknown word (egohygiene) -- signal.egohygiene.io
-    	 Suggestions: []
-    CSpell: Files checked: 1, Issues found: 1 in 1 file.
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
-✅ [SUCCESS] docs/index.html
+❌ [ERROR] docs/index.html
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+

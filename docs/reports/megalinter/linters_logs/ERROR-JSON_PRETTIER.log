@@ -2,23 +2,75 @@ Results of prettier linter (version 3.5.3)
 See documentation on https://megalinter.io/8.8.0/descriptors/json_prettier/
 -----------------------------------------------
 
+❌ [ERROR] config/.coffee-lint.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.devskim.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.eslintrc-json.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.flow-scanner.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.groovylintrc.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.jscpd.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.kics.config.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.markdown-link-check.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.markdownlint.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.npmpackagejsonlintrc.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.remarkrc.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.secretlintrc.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.stylelintrc.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
+❌ [ERROR] config/.tsqllintrc.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
 ❌ [ERROR] config/META6.json
     Checking formatting...
-    [warn] config/META6.json
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
 ❌ [ERROR] config/pyrightconfig.json
     Checking formatting...
-    [warn] config/pyrightconfig.json
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
 ❌ [ERROR] config/styles/proselint/meta.json
     Checking formatting...
-    [warn] config/styles/proselint/meta.json
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
 ❌ [ERROR] config/styles/write-good/meta.json
     Checking formatting...
-    [warn] config/styles/write-good/meta.json
-    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 

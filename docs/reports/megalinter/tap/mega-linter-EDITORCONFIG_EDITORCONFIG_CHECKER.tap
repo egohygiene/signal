@@ -1,80 +1,147 @@
 TAP version 13
-1..78
-ok 1 - .dockerignore
-ok 2 - .editorconfig
-ok 3 - .github/linters/.gitkeep
-ok 4 - .github/workflows/megalinter.yml
-ok 5 - .github/workflows/pages.yml
-ok 6 - .gitignore
-ok 7 - .megalinter.yml
-ok 8 - .pre-commit-config.yaml
-ok 9 - .prettierignore
-ok 10 - .releaserc.yml
+1..145
+not ok 1 - .dockerignore
+not ok 2 - .editorconfig
+not ok 3 - .github/linters/.gitkeep
+not ok 4 - .github/workflows/megalinter.yml
+not ok 5 - .github/workflows/pages.yml
+not ok 6 - .gitignore
+not ok 7 - .megalinter.yml
+not ok 8 - .pre-commit-config.yaml
+not ok 9 - .prettierignore
+not ok 10 - .releaserc.yml
 not ok 11 - .secrets.baseline
-ok 12 - LICENSE
-ok 13 - config/.v8rrc.yml
-not ok 14 - config/META6.json
-ok 15 - config/analysis_options.yml
-not ok 16 - config/apex-pmd-ruleset.xml
-ok 17 - config/apt.conf
-ok 18 - config/dpkg.cfg
-not ok 19 - config/java-pmd-ruleset.xml
-ok 20 - config/lychee.toml
-ok 21 - config/lynis/custom.prf
-ok 22 - config/phpcs.xml
-ok 23 - config/phpstan.neon.dist
-not ok 24 - config/psalm.xml
-not ok 25 - config/pyrightconfig.json
-ok 26 - config/styles/proselint/Airlinese.yml
-ok 27 - config/styles/proselint/AnimalLabels.yml
-ok 28 - config/styles/proselint/Annotations.yml
-ok 29 - config/styles/proselint/Apologizing.yml
-ok 30 - config/styles/proselint/Archaisms.yml
-ok 31 - config/styles/proselint/But.yml
-ok 32 - config/styles/proselint/Cliches.yml
-ok 33 - config/styles/proselint/CorporateSpeak.yml
-ok 34 - config/styles/proselint/Currency.yml
-ok 35 - config/styles/proselint/Cursing.yml
-ok 36 - config/styles/proselint/DateCase.yml
-ok 37 - config/styles/proselint/DateMidnight.yml
-ok 38 - config/styles/proselint/DateRedundancy.yml
-ok 39 - config/styles/proselint/DateSpacing.yml
-ok 40 - config/styles/proselint/DenizenLabels.yml
-ok 41 - config/styles/proselint/Diacritical.yml
-ok 42 - config/styles/proselint/GenderBias.yml
-ok 43 - config/styles/proselint/GroupTerms.yml
-ok 44 - config/styles/proselint/Hedging.yml
-ok 45 - config/styles/proselint/Hyperbole.yml
-ok 46 - config/styles/proselint/Jargon.yml
-ok 47 - config/styles/proselint/LGBTOffensive.yml
-ok 48 - config/styles/proselint/LGBTTerms.yml
-ok 49 - config/styles/proselint/Malapropisms.yml
-ok 50 - config/styles/proselint/Needless.yml
-ok 51 - config/styles/proselint/Nonwords.yml
-ok 52 - config/styles/proselint/Oxymorons.yml
-ok 53 - config/styles/proselint/P-Value.yml
-not ok 54 - config/styles/proselint/RASSyndrome.yml
-ok 55 - config/styles/proselint/README.md
-ok 56 - config/styles/proselint/Skunked.yml
-ok 57 - config/styles/proselint/Spelling.yml
-ok 58 - config/styles/proselint/Typography.yml
-not ok 59 - config/styles/proselint/Uncomparables.yml
-ok 60 - config/styles/proselint/Very.yml
-not ok 61 - config/styles/proselint/meta.json
-ok 62 - config/styles/write-good/Cliches.yml
-ok 63 - config/styles/write-good/E-Prime.yml
-ok 64 - config/styles/write-good/Illusions.yml
-ok 65 - config/styles/write-good/Passive.yml
-ok 66 - config/styles/write-good/README.md
-ok 67 - config/styles/write-good/So.yml
-ok 68 - config/styles/write-good/ThereIs.yml
-ok 69 - config/styles/write-good/TooWordy.yml
-ok 70 - config/styles/write-good/Weasel.yml
-not ok 71 - config/styles/write-good/meta.json
-ok 72 - config/sun_checks.xml
-ok 73 - config/terragrunt.hcl
-ok 74 - config/terrascan-config.toml
-ok 75 - config/trivy-sbom.yaml
-ok 76 - config/trivy.yaml
-ok 77 - docs/CNAME
-ok 78 - docs/index.html
+not ok 12 - LICENSE
+not ok 13 - config/.ansible-lint
+not ok 14 - config/.arm-ttk.psd1
+not ok 15 - config/.bandit.yml
+not ok 16 - config/.cfnlintrc.yml
+not ok 17 - config/.checkmake.ini
+not ok 18 - config/.checkov.yml
+not ok 19 - config/.chktexrc
+not ok 20 - config/.clang-format
+not ok 21 - config/.clippy.toml
+not ok 22 - config/.clj-kondo/config.edn
+not ok 23 - config/.cljstyle
+not ok 24 - config/.coffee-lint.json
+not ok 25 - config/.commitlint.config.cjs
+not ok 26 - config/.cspell.config.mjs
+not ok 27 - config/.devskim.json
+not ok 28 - config/.ecrc
+not ok 29 - config/.eslint.config.mjs
+not ok 30 - config/.eslintrc-json.json
+not ok 31 - config/.flake8
+not ok 32 - config/.flow-scanner.json
+not ok 33 - config/.gherkin-lintrc
+not ok 34 - config/.gitleaks.toml
+not ok 35 - config/.golangci.yml
+not ok 36 - config/.groovylintrc.json
+not ok 37 - config/.grype.yaml
+not ok 38 - config/.hadolint.yaml
+not ok 39 - config/.htmlhintrc
+not ok 40 - config/.isort.cfg
+not ok 41 - config/.jscpd.json
+not ok 42 - config/.jsonlintrc
+not ok 43 - config/.kics.config.json
+not ok 44 - config/.lintr
+not ok 45 - config/.luacheckrc
+not ok 46 - config/.lycheeignore
+not ok 47 - config/.markdown-link-check.json
+not ok 48 - config/.markdownlint.json
+not ok 49 - config/.mypy.ini
+not ok 50 - config/.npmpackagejsonlintrc.json
+not ok 51 - config/.phplint.yml
+not ok 52 - config/.powershell-formatter.psd1
+not ok 53 - config/.powershell-psscriptanalyzer.psd1
+not ok 54 - config/.prettier.config.mjs
+not ok 55 - config/.proselintrc
+not ok 56 - config/.protolintrc.yml
+not ok 57 - config/.puppet-lint.rc
+not ok 58 - config/.pylintrc
+not ok 59 - config/.remarkrc.json
+not ok 60 - config/.revive.toml
+not ok 61 - config/.rstcheck.cfg
+not ok 62 - config/.ruby-lint.yml
+not ok 63 - config/.ruff.toml
+not ok 64 - config/.scalafix.conf
+not ok 65 - config/.secretlintignore
+not ok 66 - config/.secretlintrc.json
+not ok 67 - config/.snakefmt.toml
+not ok 68 - config/.spectral.yaml
+not ok 69 - config/.sqlfluff
+not ok 70 - config/.stylelintrc.json
+not ok 71 - config/.swiftlint.yml
+not ok 72 - config/.syft.yaml
+not ok 73 - config/.tektonlintrc.yaml
+not ok 74 - config/.tflint.hcl
+not ok 75 - config/.trufflehog.yml
+not ok 76 - config/.trufflehogignore
+not ok 77 - config/.tsqllintrc.json
+not ok 78 - config/.v8rrc.yml
+not ok 79 - config/.vale.ini
+not ok 80 - config/.yamllint.yml
+not ok 81 - config/META6.json
+not ok 82 - config/analysis_options.yml
+not ok 83 - config/apex-pmd-ruleset.xml
+not ok 84 - config/apt.conf
+not ok 85 - config/dpkg.cfg
+not ok 86 - config/java-pmd-ruleset.xml
+not ok 87 - config/lychee.toml
+not ok 88 - config/lynis/custom.prf
+not ok 89 - config/phpcs.xml
+not ok 90 - config/phpstan.neon.dist
+not ok 91 - config/psalm.xml
+not ok 92 - config/pyrightconfig.json
+not ok 93 - config/styles/proselint/Airlinese.yml
+not ok 94 - config/styles/proselint/AnimalLabels.yml
+not ok 95 - config/styles/proselint/Annotations.yml
+not ok 96 - config/styles/proselint/Apologizing.yml
+not ok 97 - config/styles/proselint/Archaisms.yml
+not ok 98 - config/styles/proselint/But.yml
+not ok 99 - config/styles/proselint/Cliches.yml
+not ok 100 - config/styles/proselint/CorporateSpeak.yml
+not ok 101 - config/styles/proselint/Currency.yml
+not ok 102 - config/styles/proselint/Cursing.yml
+not ok 103 - config/styles/proselint/DateCase.yml
+not ok 104 - config/styles/proselint/DateMidnight.yml
+not ok 105 - config/styles/proselint/DateRedundancy.yml
+not ok 106 - config/styles/proselint/DateSpacing.yml
+not ok 107 - config/styles/proselint/DenizenLabels.yml
+not ok 108 - config/styles/proselint/Diacritical.yml
+not ok 109 - config/styles/proselint/GenderBias.yml
+not ok 110 - config/styles/proselint/GroupTerms.yml
+not ok 111 - config/styles/proselint/Hedging.yml
+not ok 112 - config/styles/proselint/Hyperbole.yml
+not ok 113 - config/styles/proselint/Jargon.yml
+not ok 114 - config/styles/proselint/LGBTOffensive.yml
+not ok 115 - config/styles/proselint/LGBTTerms.yml
+not ok 116 - config/styles/proselint/Malapropisms.yml
+not ok 117 - config/styles/proselint/Needless.yml
+not ok 118 - config/styles/proselint/Nonwords.yml
+not ok 119 - config/styles/proselint/Oxymorons.yml
+not ok 120 - config/styles/proselint/P-Value.yml
+not ok 121 - config/styles/proselint/RASSyndrome.yml
+not ok 122 - config/styles/proselint/README.md
+not ok 123 - config/styles/proselint/Skunked.yml
+not ok 124 - config/styles/proselint/Spelling.yml
+not ok 125 - config/styles/proselint/Typography.yml
+not ok 126 - config/styles/proselint/Uncomparables.yml
+not ok 127 - config/styles/proselint/Very.yml
+not ok 128 - config/styles/proselint/meta.json
+not ok 129 - config/styles/write-good/Cliches.yml
+not ok 130 - config/styles/write-good/E-Prime.yml
+not ok 131 - config/styles/write-good/Illusions.yml
+not ok 132 - config/styles/write-good/Passive.yml
+not ok 133 - config/styles/write-good/README.md
+not ok 134 - config/styles/write-good/So.yml
+not ok 135 - config/styles/write-good/ThereIs.yml
+not ok 136 - config/styles/write-good/TooWordy.yml
+not ok 137 - config/styles/write-good/Weasel.yml
+not ok 138 - config/styles/write-good/meta.json
+not ok 139 - config/sun_checks.xml
+not ok 140 - config/terragrunt.hcl
+not ok 141 - config/terrascan-config.toml
+not ok 142 - config/trivy-sbom.yaml
+not ok 143 - config/trivy.yaml
+not ok 144 - docs/CNAME
+not ok 145 - docs/index.html

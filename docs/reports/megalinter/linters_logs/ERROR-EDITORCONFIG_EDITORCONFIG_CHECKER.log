@@ -2,145 +2,583 @@ Results of editorconfig-checker linter (version 3.3.0)
 See documentation on https://megalinter.io/8.8.0/descriptors/editorconfig_editorconfig_checker/
 -----------------------------------------------
 
-✅ [SUCCESS] .dockerignore
-✅ [SUCCESS] .editorconfig
-✅ [SUCCESS] .github/linters/.gitkeep
-✅ [SUCCESS] .github/workflows/megalinter.yml
-✅ [SUCCESS] .github/workflows/pages.yml
-✅ [SUCCESS] .gitignore
-✅ [SUCCESS] .megalinter.yml
-✅ [SUCCESS] .pre-commit-config.yaml
-✅ [SUCCESS] .prettierignore
-✅ [SUCCESS] .releaserc.yml
+❌ [ERROR] .dockerignore
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .editorconfig
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .github/linters/.gitkeep
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .github/workflows/megalinter.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .github/workflows/pages.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .gitignore
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .megalinter.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .pre-commit-config.yaml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .prettierignore
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .releaserc.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
 ❌ [ERROR] .secrets.baseline
-    .secrets.baseline:
-    	Wrong line endings or no final newline
-    
-    1 errors found
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
-✅ [SUCCESS] LICENSE
-✅ [SUCCESS] config/.v8rrc.yml
+❌ [ERROR] LICENSE
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.ansible-lint
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.arm-ttk.psd1
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.bandit.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.cfnlintrc.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.checkmake.ini
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.checkov.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.chktexrc
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.clang-format
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.clippy.toml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.clj-kondo/config.edn
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.cljstyle
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.coffee-lint.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.commitlint.config.cjs
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.cspell.config.mjs
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.devskim.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.ecrc
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.eslint.config.mjs
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.eslintrc-json.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.flake8
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.flow-scanner.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.gherkin-lintrc
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.gitleaks.toml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.golangci.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.groovylintrc.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.grype.yaml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.hadolint.yaml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.htmlhintrc
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.isort.cfg
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.jscpd.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.jsonlintrc
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.kics.config.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.lintr
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.luacheckrc
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.lycheeignore
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.markdown-link-check.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.markdownlint.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.mypy.ini
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.npmpackagejsonlintrc.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.phplint.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.powershell-formatter.psd1
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.powershell-psscriptanalyzer.psd1
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.prettier.config.mjs
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.proselintrc
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.protolintrc.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.puppet-lint.rc
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.pylintrc
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.remarkrc.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.revive.toml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.rstcheck.cfg
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.ruby-lint.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.ruff.toml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.scalafix.conf
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.secretlintignore
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.secretlintrc.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.snakefmt.toml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.spectral.yaml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.sqlfluff
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.stylelintrc.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.swiftlint.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.syft.yaml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.tektonlintrc.yaml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.tflint.hcl
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.trufflehog.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.trufflehogignore
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.tsqllintrc.json
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.v8rrc.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.vale.ini
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/.yamllint.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
 ❌ [ERROR] config/META6.json
-    config/META6.json:
-    	2-8: Wrong amount of left-padding spaces(want multiple of 4)
-    	10-11: Wrong amount of left-padding spaces(want multiple of 4)
-    	13: Wrong amount of left-padding spaces(want multiple of 4)
-    	15-17: Wrong amount of left-padding spaces(want multiple of 4)
-    	21-24: Wrong amount of left-padding spaces(want multiple of 4)
-    
-    5 errors found
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
-✅ [SUCCESS] config/analysis_options.yml
+❌ [ERROR] config/analysis_options.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
 ❌ [ERROR] config/apex-pmd-ruleset.xml
-    config/apex-pmd-ruleset.xml:
-    	Wrong line endings or no final newline
-    
-    1 errors found
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
-✅ [SUCCESS] config/apt.conf
-✅ [SUCCESS] config/dpkg.cfg
+❌ [ERROR] config/apt.conf
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/dpkg.cfg
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
 ❌ [ERROR] config/java-pmd-ruleset.xml
-    config/java-pmd-ruleset.xml:
-    	3-7: Wrong amount of left-padding spaces(want multiple of 2)
-    
-    1 errors found
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
-✅ [SUCCESS] config/lychee.toml
-✅ [SUCCESS] config/lynis/custom.prf
-✅ [SUCCESS] config/phpcs.xml
-✅ [SUCCESS] config/phpstan.neon.dist
+❌ [ERROR] config/lychee.toml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/lynis/custom.prf
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/phpcs.xml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/phpstan.neon.dist
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
 ❌ [ERROR] config/psalm.xml
-    config/psalm.xml:
-    	4-7: Wrong amount of left-padding spaces(want multiple of 2)
-    
-    1 errors found
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
 ❌ [ERROR] config/pyrightconfig.json
-    config/pyrightconfig.json:
-    	2-3: Wrong amount of left-padding spaces(want multiple of 4)
-    	5-6: Wrong amount of left-padding spaces(want multiple of 4)
-    	8-13: Wrong amount of left-padding spaces(want multiple of 4)
-    	15: Wrong amount of left-padding spaces(want multiple of 4)
-    	17: Wrong amount of left-padding spaces(want multiple of 4)
-    	19-20: Wrong amount of left-padding spaces(want multiple of 4)
-    	23-24: Wrong amount of left-padding spaces(want multiple of 4)
-    	26: Wrong amount of left-padding spaces(want multiple of 4)
-    	28-29: Wrong amount of left-padding spaces(want multiple of 4)
-    	31: Wrong amount of left-padding spaces(want multiple of 4)
-    
-    10 errors found
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
-✅ [SUCCESS] config/styles/proselint/Airlinese.yml
-✅ [SUCCESS] config/styles/proselint/AnimalLabels.yml
-✅ [SUCCESS] config/styles/proselint/Annotations.yml
-✅ [SUCCESS] config/styles/proselint/Apologizing.yml
-✅ [SUCCESS] config/styles/proselint/Archaisms.yml
-✅ [SUCCESS] config/styles/proselint/But.yml
-✅ [SUCCESS] config/styles/proselint/Cliches.yml
-✅ [SUCCESS] config/styles/proselint/CorporateSpeak.yml
-✅ [SUCCESS] config/styles/proselint/Currency.yml
-✅ [SUCCESS] config/styles/proselint/Cursing.yml
-✅ [SUCCESS] config/styles/proselint/DateCase.yml
-✅ [SUCCESS] config/styles/proselint/DateMidnight.yml
-✅ [SUCCESS] config/styles/proselint/DateRedundancy.yml
-✅ [SUCCESS] config/styles/proselint/DateSpacing.yml
-✅ [SUCCESS] config/styles/proselint/DenizenLabels.yml
-✅ [SUCCESS] config/styles/proselint/Diacritical.yml
-✅ [SUCCESS] config/styles/proselint/GenderBias.yml
-✅ [SUCCESS] config/styles/proselint/GroupTerms.yml
-✅ [SUCCESS] config/styles/proselint/Hedging.yml
-✅ [SUCCESS] config/styles/proselint/Hyperbole.yml
-✅ [SUCCESS] config/styles/proselint/Jargon.yml
-✅ [SUCCESS] config/styles/proselint/LGBTOffensive.yml
-✅ [SUCCESS] config/styles/proselint/LGBTTerms.yml
-✅ [SUCCESS] config/styles/proselint/Malapropisms.yml
-✅ [SUCCESS] config/styles/proselint/Needless.yml
-✅ [SUCCESS] config/styles/proselint/Nonwords.yml
-✅ [SUCCESS] config/styles/proselint/Oxymorons.yml
-✅ [SUCCESS] config/styles/proselint/P-Value.yml
+❌ [ERROR] config/styles/proselint/Airlinese.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/AnimalLabels.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Annotations.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Apologizing.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Archaisms.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/But.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Cliches.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/CorporateSpeak.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Currency.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Cursing.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/DateCase.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/DateMidnight.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/DateRedundancy.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/DateSpacing.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/DenizenLabels.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Diacritical.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/GenderBias.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/GroupTerms.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Hedging.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Hyperbole.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Jargon.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/LGBTOffensive.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/LGBTTerms.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Malapropisms.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Needless.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Nonwords.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Oxymorons.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/P-Value.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
 ❌ [ERROR] config/styles/proselint/RASSyndrome.yml
-    config/styles/proselint/RASSyndrome.yml:
-    	7-9: Wrong amount of left-padding spaces(want multiple of 2)
-    
-    1 errors found
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
-✅ [SUCCESS] config/styles/proselint/README.md
-✅ [SUCCESS] config/styles/proselint/Skunked.yml
-✅ [SUCCESS] config/styles/proselint/Spelling.yml
-✅ [SUCCESS] config/styles/proselint/Typography.yml
+❌ [ERROR] config/styles/proselint/README.md
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Skunked.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Spelling.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/proselint/Typography.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
 ❌ [ERROR] config/styles/proselint/Uncomparables.yml
-    config/styles/proselint/Uncomparables.yml:
-    	8-10: Wrong amount of left-padding spaces(want multiple of 2)
-    
-    1 errors found
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
-✅ [SUCCESS] config/styles/proselint/Very.yml
+❌ [ERROR] config/styles/proselint/Very.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
 ❌ [ERROR] config/styles/proselint/meta.json
-    config/styles/proselint/meta.json:
-    	2-11: Wrong amount of left-padding spaces(want multiple of 4)
-    	13-16: Wrong amount of left-padding spaces(want multiple of 4)
-    
-    2 errors found
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
-✅ [SUCCESS] config/styles/write-good/Cliches.yml
-✅ [SUCCESS] config/styles/write-good/E-Prime.yml
-✅ [SUCCESS] config/styles/write-good/Illusions.yml
-✅ [SUCCESS] config/styles/write-good/Passive.yml
-✅ [SUCCESS] config/styles/write-good/README.md
-✅ [SUCCESS] config/styles/write-good/So.yml
-✅ [SUCCESS] config/styles/write-good/ThereIs.yml
-✅ [SUCCESS] config/styles/write-good/TooWordy.yml
-✅ [SUCCESS] config/styles/write-good/Weasel.yml
+❌ [ERROR] config/styles/write-good/Cliches.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/write-good/E-Prime.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/write-good/Illusions.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/write-good/Passive.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/write-good/README.md
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/write-good/So.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/write-good/ThereIs.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/write-good/TooWordy.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/styles/write-good/Weasel.yml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
 ❌ [ERROR] config/styles/write-good/meta.json
-    config/styles/write-good/meta.json:
-    	2-3: Wrong amount of left-padding spaces(want multiple of 4)
-    
-    1 errors found
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
-✅ [SUCCESS] config/sun_checks.xml
-✅ [SUCCESS] config/terragrunt.hcl
-✅ [SUCCESS] config/terrascan-config.toml
-✅ [SUCCESS] config/trivy-sbom.yaml
-✅ [SUCCESS] config/trivy.yaml
-✅ [SUCCESS] docs/CNAME
-✅ [SUCCESS] docs/index.html
+❌ [ERROR] config/sun_checks.xml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/terragrunt.hcl
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/terrascan-config.toml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/trivy-sbom.yaml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] config/trivy.yaml
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] docs/CNAME
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] docs/index.html
+    The default configuration file name `.ecrc` is deprecated. Use `.editorconfig-checker.json` instead. You can simply rename it
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
