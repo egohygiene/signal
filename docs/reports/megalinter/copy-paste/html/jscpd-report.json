@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-02-10T12:30:45.724Z",
+    "detectionDate": "2026-02-10T12:44:36.412Z",
     "formats": {
       "json": {
         "sources": {
@@ -993,8 +993,8 @@
             "newClones": 0
           },
           "/github/workspace/.megalinter.yml": {
-            "lines": 474,
-            "tokens": 1468,
+            "lines": 481,
+            "tokens": 1604,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1006,14 +1006,14 @@
           }
         },
         "total": {
-          "lines": 4843,
-          "tokens": 33544,
+          "lines": 4850,
+          "tokens": 33680,
           "sources": 65,
           "clones": 28,
           "duplicatedLines": 705,
           "duplicatedTokens": 6282,
-          "percentage": 14.56,
-          "percentageTokens": 18.73,
+          "percentage": 14.54,
+          "percentageTokens": 18.65,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -1344,14 +1344,14 @@
       }
     },
     "total": {
-      "lines": 6157,
-      "tokens": 42339,
+      "lines": 6164,
+      "tokens": 42475,
       "sources": 101,
       "clones": 28,
       "duplicatedLines": 705,
       "duplicatedTokens": 6282,
-      "percentage": 11.45,
-      "percentageTokens": 14.84,
+      "percentage": 11.44,
+      "percentageTokens": 14.79,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
