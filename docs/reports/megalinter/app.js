@@ -414,16 +414,100 @@ function parseGitHubActionsGroups(logText) {
 function renderLogContent(items) {
   return items.map(item => {
     if (item.type === 'text') {
-      return escapeHtml(item.content);
+      return ansiToHtml(item.content);
     } else if (item.type === 'group') {
       const innerContent = renderLogContent(item.content);
       return `<details class="log-group">
-  <summary class="log-group-title">${escapeHtml(item.title)}</summary>
+  <summary class="log-group-title">${ansiToHtml(item.title)}</summary>
   <div class="log-group-content">${innerContent}</div>
 </details>`;
     }
     return '';
   }).join('');
+}
+
+/* -------------------------------------------------
+   ANSI to HTML Converter
+------------------------------------------------- */
+
+function ansiToHtml(text) {
+  if (!text || typeof text !== 'string') return '';
+  
+  // First, escape HTML to prevent XSS
+  const escaped = escapeHtml(text);
+  
+  // ANSI color code mapping
+  // Format: \x1b[<code>m or \033[<code>m
+  // Common codes:
+  // 0 = reset
+  // 1 = bold
+  // 30-37 = foreground colors
+  // 40-47 = background colors
+  // 90-97 = bright foreground colors
+  
+  const ansiRegex = /\x1b\[([0-9;]+)m/g;
+  
+  let result = '';
+  let lastIndex = 0;
+  let currentClasses = [];
+  
+  escaped.replace(ansiRegex, (match, codes, offset) => {
+    // Add text before this ANSI code
+    if (offset > lastIndex) {
+      const textBefore = escaped.substring(lastIndex, offset);
+      if (currentClasses.length > 0) {
+        result += `<span class="${currentClasses.join(' ')}">${textBefore}</span>`;
+      } else {
+        result += textBefore;
+      }
+    }
+    
+    // Process ANSI codes
+    const codeList = codes.split(';').map(c => parseInt(c, 10));
+    
+    for (const code of codeList) {
+      if (code === 0) {
+        // Reset all styles
+        currentClasses = [];
+      } else if (code === 1) {
+        // Bold
+        if (!currentClasses.includes('ansi-bold')) {
+          currentClasses.push('ansi-bold');
+        }
+      } else if (code >= 30 && code <= 37) {
+        // Foreground color
+        currentClasses = currentClasses.filter(c => !c.startsWith('ansi-fg-'));
+        currentClasses.push(`ansi-fg-${code - 30}`);
+      } else if (code >= 40 && code <= 47) {
+        // Background color
+        currentClasses = currentClasses.filter(c => !c.startsWith('ansi-bg-'));
+        currentClasses.push(`ansi-bg-${code - 40}`);
+      } else if (code >= 90 && code <= 97) {
+        // Bright foreground color
+        currentClasses = currentClasses.filter(c => !c.startsWith('ansi-fg-'));
+        currentClasses.push(`ansi-fg-bright-${code - 90}`);
+      } else if (code >= 100 && code <= 107) {
+        // Bright background color
+        currentClasses = currentClasses.filter(c => !c.startsWith('ansi-bg-'));
+        currentClasses.push(`ansi-bg-bright-${code - 100}`);
+      }
+    }
+    
+    lastIndex = offset + match.length;
+    return '';
+  });
+  
+  // Add remaining text
+  if (lastIndex < escaped.length) {
+    const textAfter = escaped.substring(lastIndex);
+    if (currentClasses.length > 0) {
+      result += `<span class="${currentClasses.join(' ')}">${textAfter}</span>`;
+    } else {
+      result += textAfter;
+    }
+  }
+  
+  return result || escaped;
 }
 
 function escapeHtml(text) {
