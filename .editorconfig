@@ -1,0 +1,59 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# Universal defaults
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Python files
+[*.py]
+indent_size = 4
+
+# Markdown files - preserve trailing whitespace for line breaks
+[*.md]
+trim_trailing_whitespace = false
+
+# CHANGELOG.md - explicit override to prevent unintended autoformatting
+# while maintaining consistent line endings and whitespace handling
+[CHANGELOG.md]
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# JSON files
+[*.json]
+indent_size = 4
+
+# JSONC files (JSON with comments)
+[*.jsonc]
+indent_size = 4
+
+# YAML files
+[*.{yml,yaml}]
+indent_size = 2
+
+# TOML files
+[*.toml]
+indent_size = 2
+
+# Makefiles - must use tabs
+[{Makefile,*.mk}]
+indent_style = tab
+
+# Shell scripts
+[*.sh]
+indent_size = 2
+
+# Dockerfile
+[Dockerfile]
+indent_size = 2
+
+# Git files
+[.gitignore]
+indent_size = 2

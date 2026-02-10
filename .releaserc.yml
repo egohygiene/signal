@@ -1,0 +1,107 @@
+---
+# semantic-release configuration
+# https://semantic-release.gitbook.io/semantic-release/usage/configuration
+
+branches:
+  - main
+  - master
+
+# Plugins executed in order
+plugins:
+  # 1. Analyze commits to determine version bump
+  - - "@semantic-release/commit-analyzer"
+    - preset: "conventionalcommits"
+      releaseRules:
+        - type: "feat"
+          release: "minor"
+        - type: "fix"
+          release: "patch"
+        - type: "perf"
+          release: "patch"
+        - type: "revert"
+          release: "patch"
+        - type: "docs"
+          release: false
+        - type: "style"
+          release: false
+        - type: "chore"
+          release: false
+        - type: "refactor"
+          release: "patch"
+        - type: "test"
+          release: false
+        - type: "build"
+          release: "patch"
+        - type: "ci"
+          release: false
+        - breaking: true
+          release: "major"
+
+  # 2. Generate release notes
+  - - "@semantic-release/release-notes-generator"
+    - preset: "conventionalcommits"
+      presetConfig:
+        types:
+          - type: "feat"
+            section: "Features"
+            hidden: false
+          - type: "fix"
+            section: "Bug Fixes"
+            hidden: false
+          - type: "perf"
+            section: "Performance Improvements"
+            hidden: false
+          - type: "revert"
+            section: "Reverts"
+            hidden: false
+          - type: "docs"
+            section: "Documentation"
+            hidden: false
+          - type: "style"
+            section: "Styles"
+            hidden: true
+          - type: "chore"
+            section: "Miscellaneous Chores"
+            hidden: true
+          - type: "refactor"
+            section: "Code Refactoring"
+            hidden: false
+          - type: "test"
+            section: "Tests"
+            hidden: true
+          - type: "build"
+            section: "Build System"
+            hidden: false
+          - type: "ci"
+            section: "Continuous Integration"
+            hidden: true
+
+  # 3. Update CHANGELOG.md
+  - - "@semantic-release/changelog"
+    - changelogFile: "CHANGELOG.md"
+      changelogTitle: "# Changelog"
+
+  # 4. Update VERSION file and package.json
+  - - "@semantic-release/exec"
+    - prepareCmd: "echo ${nextRelease.version} > VERSION"
+      publishCmd: ""
+
+  # 5. Commit the release
+  - - "@semantic-release/git"
+    - assets:
+        - "CHANGELOG.md"
+        - "VERSION"
+        - "package.json"
+      message: "chore(release): ${nextRelease.version} [skip ci]"
+
+  # 6. Create GitHub release
+  - "@semantic-release/github"
+
+# Tag format
+tagFormat: "${version}"
+
+# CI detection (run on GitHub Actions)
+ci: true
+
+# Dry-run mode (set to true for testing)
+dryRun: false

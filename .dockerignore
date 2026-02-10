@@ -1,0 +1,138 @@
+######################################################################
+# .dockerignore - Reduce Docker Build Context & Improve Performance
+#
+# This file excludes unnecessary files from the Docker build context,
+# resulting in faster builds, reduced memory usage, and smaller contexts.
+######################################################################
+
+######################################################################
+# Version Control
+######################################################################
+.git
+.gitignore
+.gitattributes
+
+######################################################################
+# GitHub
+######################################################################
+.github
+
+######################################################################
+# Audit & Reports
+######################################################################
+audit/
+repo_audit/
+megalinter-reports/
+reports/
+
+######################################################################
+# IDE & Editor Files
+######################################################################
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+*.swp
+*.swo
+*~
+
+######################################################################
+# Python
+######################################################################
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+
+######################################################################
+# Node.js / JavaScript
+######################################################################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn
+# Note: package-lock.json and yarn.lock are kept for reproducible builds
+# Uncomment if not using Node.js:
+# package-lock.json
+# yarn.lock
+
+######################################################################
+# Cache Directories
+######################################################################
+cache/
+.cache/
+cached/
+tmp/
+.tmp/
+temp/
+.temp/
+
+######################################################################
+# Development Output
+######################################################################
+dev-output/
+# Note: This project commits workflow logs - be specific about exclusions
+# Exclude log directories but not individual log files
+logs/*
+!logs/**/*.log
+
+######################################################################
+# OS Files
+######################################################################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+######################################################################
+# GitHub Actions Local Runner (act)
+######################################################################
+.secrets
+.actrc
+.actrc.local
+
+######################################################################
+# Pre-commit
+######################################################################
+.pre-commit-config.yaml.bak
+
+######################################################################
+# Documentation (if not needed for build)
+# Uncomment if these are not required in the Docker image
+######################################################################
+# CHANGELOG.md
+# README.md
+# LICENSE
+
+######################################################################
+# Container Development
+# Keep .devcontainer in context as it contains the Dockerfile
+######################################################################
+# .devcontainer/
