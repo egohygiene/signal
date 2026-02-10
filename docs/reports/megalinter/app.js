@@ -355,7 +355,7 @@ function displayLog(logText) {
 ------------------------------------------------- */
 
 function parseGitHubActionsGroups(logText) {
-  const lines = logText.split("\n");
+  const lines = logText.split(/\r?\n/);
   const result = [];
   const groupStack = [];
   let currentContent = [];
@@ -386,16 +386,15 @@ function parseGitHubActionsGroups(logText) {
       getCurrentParent().push(group);
       groupStack.push(group);
     } else if (endGroupMatch) {
-      // End the current group
-      if (currentContent.length > 0 && groupStack.length > 0) {
-        groupStack[groupStack.length - 1].content.push({ 
-          type: 'text', 
-          content: currentContent.join("\n") 
-        });
-        currentContent = [];
-      }
-      // Only pop if there's a group to close
+      // End the current group - only process if we have an open group
       if (groupStack.length > 0) {
+        if (currentContent.length > 0) {
+          groupStack[groupStack.length - 1].content.push({ 
+            type: 'text', 
+            content: currentContent.join("\n") 
+          });
+          currentContent = [];
+        }
         groupStack.pop();
       }
     } else {
