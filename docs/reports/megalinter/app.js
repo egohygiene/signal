@@ -20,7 +20,15 @@
   Your report lives at /reports/megalinter/
 */
 
-const REPORT_PATH = "/reports/megalinter/mega-linter-report.json";
+// Report paths to try in order:
+// 1. Local relative path (for local development/testing)
+// 2. Production absolute path (for deployed site)
+const REPORT_PATHS = [
+  "mega-linter-report.json",
+  "/reports/megalinter/mega-linter-report.json"
+];
+
+let currentReportPathIndex = 0;
 
 /* -------------------------------------------------
    State
@@ -36,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("MegaLinter dashboard booting…");
   loadReport();
   setupFilters();
+  setupDetailPanel();
 });
 
 /* -------------------------------------------------
@@ -43,11 +52,19 @@ document.addEventListener("DOMContentLoaded", () => {
 ------------------------------------------------- */
 
 function loadReport() {
-  console.log("Attempting to fetch report:", REPORT_PATH);
+  const reportPath = REPORT_PATHS[currentReportPathIndex];
+  console.log("Attempting to fetch report:", reportPath);
 
-  fetch(REPORT_PATH)
+  fetch(reportPath)
     .then((response) => {
       if (!response.ok) {
+        // Try next path if available
+        if (currentReportPathIndex < REPORT_PATHS.length - 1) {
+          currentReportPathIndex++;
+          console.log("Trying alternate path...");
+          // Recursively try next path - return to chain properly
+          return loadReport();
+        }
         throw new Error(
           "Failed to load mega-linter-report.json (HTTP " +
             response.status +
@@ -57,6 +74,8 @@ function loadReport() {
       return response.json();
     })
     .then((data) => {
+      if (!data) return; // Skip if recursing to alternate path
+
       console.group("MegaLinter report loaded");
       console.log("Top-level keys:", Object.keys(data));
       console.log("Raw report object:", data);
@@ -271,8 +290,11 @@ function renderTable(issues) {
     return;
   }
 
-  issues.forEach((issue) => {
+  issues.forEach((issue, index) => {
     const row = document.createElement("tr");
+    row.setAttribute("role", "button");
+    row.setAttribute("tabindex", "0");
+    row.setAttribute("data-issue-index", index);
 
     const severityCell = document.createElement("td");
     severityCell.textContent = issue.severity;
@@ -299,6 +321,94 @@ function renderTable(issues) {
     row.appendChild(messageCell);
     row.appendChild(fileCell);
 
+    // Add click handler to show detail panel
+    row.addEventListener("click", () => {
+      showIssueDetail(issue, row);
+    });
+
+    // Add keyboard handler for accessibility
+    row.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        showIssueDetail(issue, row);
+      }
+    });
+
     tbody.appendChild(row);
+  });
+}
+
+/* -------------------------------------------------
+   Detail Panel
+------------------------------------------------- */
+
+function showIssueDetail(issue, row) {
+  const panel = document.getElementById("issue-detail-panel");
+
+  // Update panel content
+  const severityEl = document.getElementById("detail-severity");
+  severityEl.textContent = issue.severity;
+  severityEl.setAttribute("data-severity", issue.severity);
+
+  document.getElementById("detail-linter").textContent =
+    issue.linter;
+
+  document.getElementById("detail-rule").textContent =
+    issue.rule || "—";
+
+  document.getElementById("detail-message").textContent =
+    issue.message || "No message provided";
+
+  document.getElementById("detail-file").textContent =
+    issue.file || "—";
+
+  // Show panel
+  panel.removeAttribute("hidden");
+
+  // Update row selection
+  const allRows = document.querySelectorAll(
+    "#issues-table-body tr"
+  );
+  allRows.forEach((r) => r.classList.remove("selected"));
+  row.classList.add("selected");
+
+  // Scroll panel into view on smaller screens
+  if (window.innerWidth <= 1200) {
+    panel.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+function hideIssueDetail() {
+  const panel = document.getElementById("issue-detail-panel");
+  panel.setAttribute("hidden", "");
+
+  // Remove selection from all rows
+  const allRows = document.querySelectorAll(
+    "#issues-table-body tr"
+  );
+  allRows.forEach((r) => r.classList.remove("selected"));
+}
+
+/* -------------------------------------------------
+   Setup Detail Panel Controls
+------------------------------------------------- */
+
+function setupDetailPanel() {
+  const closeBtn = document.getElementById("close-detail");
+
+  closeBtn.addEventListener("click", () => {
+    hideIssueDetail();
+  });
+
+  // Close on Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      const panel = document.getElementById(
+        "issue-detail-panel"
+      );
+      if (!panel.hasAttribute("hidden")) {
+        hideIssueDetail();
+      }
+    }
   });
 }
