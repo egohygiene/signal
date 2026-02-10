@@ -1,88 +1,190 @@
 "use strict";
 
 /*
-  Static MegaLinter Report Dashboard
-  ---------------------------------
-  - Reads mega-linter-report.json locally
-  - Does not modify data
-  - Does not send data anywhere
-  - Safe to open in a browser
+  MegaLinter Static Report Dashboard
+  =================================
+  - Single source of truth: mega-linter-report.json
+  - No mutation
+  - No network calls beyond local fetch
+  - MegaLinter v8–aware
+  - Defensive + inspectable
 */
 
-const REPORT_PATH = "./mega-linter-report.json";
+/* -------------------------------------------------
+   Configuration
+------------------------------------------------- */
+
+/*
+  IMPORTANT:
+  Your site root is https://signal.egohygiene.io/
+  Your report lives at /reports/megalinter/
+*/
+
+const REPORT_PATH = "/reports/megalinter/mega-linter-report.json";
+
+/* -------------------------------------------------
+   State
+------------------------------------------------- */
 
 let allIssues = [];
 
+/* -------------------------------------------------
+   Boot
+------------------------------------------------- */
+
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("MegaLinter dashboard booting…");
   loadReport();
   setupFilters();
 });
 
 /* -------------------------------------------------
-   Data Loading
+   Load + Inspect JSON
 ------------------------------------------------- */
 
 function loadReport() {
+  console.log("Attempting to fetch report:", REPORT_PATH);
+
   fetch(REPORT_PATH)
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Failed to load mega-linter-report.json");
+        throw new Error(
+          "Failed to load mega-linter-report.json (HTTP " +
+            response.status +
+            ")"
+        );
       }
       return response.json();
     })
     .then((data) => {
-      allIssues = extractIssues(data);
+      console.group("MegaLinter report loaded");
+      console.log("Top-level keys:", Object.keys(data));
+      console.log("Raw report object:", data);
+      console.groupEnd();
+
+      allIssues = extractIssuesFromMegaLinterV8(data);
+
+      console.group("MegaLinter extraction result");
+      console.log("Extracted issues:", allIssues);
+      console.log("Total issues:", allIssues.length);
+      console.groupEnd();
+
       renderSummary(allIssues);
       populateLinterFilter(allIssues);
       renderTable(allIssues);
     })
     .catch((error) => {
-      console.error(error);
-      alert("Could not load MegaLinter report. See console for details.");
+      console.error("MegaLinter load failure:", error);
+      alert(
+        "MegaLinter report could not be loaded.\n" +
+          "Open DevTools → Console for details."
+      );
     });
 }
 
 /* -------------------------------------------------
-   Normalization
+   MegaLinter v8 Extraction
 ------------------------------------------------- */
 
-function extractIssues(reportJson) {
-  /*
-    MegaLinter v8 typically exposes issues under:
-    - reportJson.results
+function extractIssuesFromMegaLinterV8(report) {
+  const issues = [];
 
-    This function acts as a normalization layer so
-    future schema changes are isolated here.
+  /*
+    Expected MegaLinter v8 structure (simplified):
+
+    {
+      linters: {
+        ESLINT: {
+          issues: [ { severity, rule, message, file, ... } ]
+        },
+        YAML_LINT: {
+          issues: [ ... ]
+        }
+      }
+    }
   */
 
-  const rawIssues = Array.isArray(reportJson.results)
-    ? reportJson.results
-    : [];
+  if (!report || typeof report !== "object") {
+    console.warn("Report is not an object");
+    return issues;
+  }
 
-  return rawIssues.map((issue) => ({
-    severity: issue.severity || "unknown",
-    linter: issue.linter || "unknown",
-    rule: issue.rule || "",
-    message: issue.message || "",
-    file: issue.file || ""
-  }));
+  if (!report.linters || typeof report.linters !== "object") {
+    console.warn("No report.linters object found");
+    return issues;
+  }
+
+  Object.entries(report.linters).forEach(
+    ([linterName, linterData]) => {
+      if (
+        !linterData ||
+        !Array.isArray(linterData.issues)
+      ) {
+        return;
+      }
+
+      linterData.issues.forEach((issue) => {
+        issues.push({
+          severity: normalizeSeverity(issue.severity),
+          linter: linterName,
+          rule:
+            issue.rule ||
+            issue.code ||
+            issue.id ||
+            "",
+          message:
+            issue.message ||
+            issue.description ||
+            "",
+          file:
+            issue.file ||
+            issue.path ||
+            ""
+        });
+      });
+    }
+  );
+
+  return issues;
 }
 
 /* -------------------------------------------------
-   Summary Rendering
+   Helpers
+------------------------------------------------- */
+
+function normalizeSeverity(rawSeverity) {
+  if (!rawSeverity) {
+    return "info";
+  }
+
+  const value = rawSeverity.toString().toLowerCase();
+
+  if (value.includes("error")) {
+    return "error";
+  }
+  if (value.includes("warn")) {
+    return "warning";
+  }
+
+  return "info";
+}
+
+/* -------------------------------------------------
+   Summary
 ------------------------------------------------- */
 
 function renderSummary(issues) {
-  document.getElementById("total-issues").textContent = issues.length;
+  document.getElementById("total-issues").textContent =
+    issues.length;
 
   document.getElementById("severity-error").textContent =
-    issues.filter((issue) => issue.severity === "error").length;
+    issues.filter((i) => i.severity === "error").length;
 
   document.getElementById("severity-warning").textContent =
-    issues.filter((issue) => issue.severity === "warning").length;
+    issues.filter((i) => i.severity === "warning").length;
 
   document.getElementById("severity-info").textContent =
-    issues.filter((issue) => issue.severity === "info").length;
+    issues.filter((i) => i.severity === "info").length;
 }
 
 /* -------------------------------------------------
@@ -91,8 +193,11 @@ function renderSummary(issues) {
 
 function populateLinterFilter(issues) {
   const select = document.getElementById("linter-filter");
+
+  select.innerHTML = '<option value="">All</option>';
+
   const linters = Array.from(
-    new Set(issues.map((issue) => issue.linter))
+    new Set(issues.map((i) => i.linter))
   ).sort();
 
   linters.forEach((linter) => {
@@ -121,12 +226,20 @@ function applyFilters() {
     document.getElementById("severity-filter").value;
 
   const filteredIssues = allIssues.filter((issue) => {
-    if (selectedLinter && issue.linter !== selectedLinter) {
+    if (
+      selectedLinter &&
+      issue.linter !== selectedLinter
+    ) {
       return false;
     }
-    if (selectedSeverity && issue.severity !== selectedSeverity) {
+
+    if (
+      selectedSeverity &&
+      issue.severity !== selectedSeverity
+    ) {
       return false;
     }
+
     return true;
   });
 
@@ -138,16 +251,35 @@ function applyFilters() {
 ------------------------------------------------- */
 
 function renderTable(issues) {
-  const tbody = document.getElementById("issues-table-body");
+  const tbody = document.getElementById(
+    "issues-table-body"
+  );
+
   tbody.innerHTML = "";
+
+  if (issues.length === 0) {
+    const row = document.createElement("tr");
+    const cell = document.createElement("td");
+
+    cell.colSpan = 5;
+    cell.textContent = "No issues to display";
+    cell.style.textAlign = "center";
+    cell.style.color = "#64748b";
+
+    row.appendChild(cell);
+    tbody.appendChild(row);
+    return;
+  }
 
   issues.forEach((issue) => {
     const row = document.createElement("tr");
 
-    // Severity cell (semantic + stylable)
     const severityCell = document.createElement("td");
     severityCell.textContent = issue.severity;
-    severityCell.setAttribute("data-severity", issue.severity);
+    severityCell.setAttribute(
+      "data-severity",
+      issue.severity
+    );
 
     const linterCell = document.createElement("td");
     linterCell.textContent = issue.linter;
