@@ -332,16 +332,12 @@ function loadLog() {
       return response.text();
     })
     .then((logText) => {
-      if (!logText) {
-        throw new Error("Log file is empty");
-      }
-
       console.log("MegaLinter log loaded");
-      displayLog(logText);
+      displayLog(logText || "(empty log file)");
     })
     .catch((error) => {
       console.warn("Could not load MegaLinter log:", error.message);
-      displayLogError("Log file not available. The log may not have been generated or uploaded.");
+      displayLogError(`Log file not available: ${error.message}`);
     });
 }
 
