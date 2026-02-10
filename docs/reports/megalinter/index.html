@@ -103,29 +103,80 @@
     >
       <h2 id="issues-heading">Issues</h2>
 
-      <table aria-describedby="issues-heading">
-        <colgroup>
-          <col style="width: 110px" />
-          <col style="width: 160px" />
-          <col style="width: 160px" />
-          <col />
-          <col style="width: 320px" />
-        </colgroup>
+      <div class="issues-container">
+        <div class="issues-table-wrapper">
+          <table aria-describedby="issues-heading">
+            <colgroup>
+              <col style="width: 110px" />
+              <col style="width: 160px" />
+              <col style="width: 160px" />
+              <col />
+              <col style="width: 320px" />
+            </colgroup>
 
-        <thead>
-          <tr>
-            <th scope="col">Severity</th>
-            <th scope="col">Linter</th>
-            <th scope="col">Rule</th>
-            <th scope="col">Message</th>
-            <th scope="col">File</th>
-          </tr>
-        </thead>
+            <thead>
+              <tr>
+                <th scope="col">Severity</th>
+                <th scope="col">Linter</th>
+                <th scope="col">Rule</th>
+                <th scope="col">Message</th>
+                <th scope="col">File</th>
+              </tr>
+            </thead>
 
-        <tbody id="issues-table-body">
-          <!-- Rows injected by app.js -->
-        </tbody>
-      </table>
+            <tbody id="issues-table-body">
+              <!-- Rows injected by app.js -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Detail Panel -->
+        <aside
+          id="issue-detail-panel"
+          class="issue-detail-panel"
+          aria-labelledby="detail-heading"
+          role="complementary"
+          hidden
+        >
+          <div class="detail-header">
+            <h3 id="detail-heading">Issue Details</h3>
+            <button
+              id="close-detail"
+              class="close-detail-btn"
+              aria-label="Close detail panel"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div class="detail-content">
+            <div class="detail-field">
+              <span class="detail-label">Severity</span>
+              <span id="detail-severity" class="detail-value"></span>
+            </div>
+
+            <div class="detail-field">
+              <span class="detail-label">Linter</span>
+              <span id="detail-linter" class="detail-value"></span>
+            </div>
+
+            <div class="detail-field">
+              <span class="detail-label">Rule</span>
+              <span id="detail-rule" class="detail-value"></span>
+            </div>
+
+            <div class="detail-field">
+              <span class="detail-label">Message</span>
+              <div id="detail-message" class="detail-value detail-message"></div>
+            </div>
+
+            <div class="detail-field">
+              <span class="detail-label">File</span>
+              <code id="detail-file" class="detail-value detail-file"></code>
+            </div>
+          </div>
+        </aside>
+      </div>
     </section>
 
     <!-- -------------------------------------------------
