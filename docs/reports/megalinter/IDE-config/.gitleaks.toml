@@ -1,0 +1,67 @@
+###############################################################################
+# .gitleaks.toml — Secret scanning config for Ego Hygiene base repos
+# https://github.com/gitleaks/gitleaks
+###############################################################################
+
+# ─────────── Allowlist ───────────
+[allowlist]
+description = "Allowed patterns or filenames"
+files = [
+  # Add false positives here, e.g.:
+  # "examples/config.example.json",
+  # "src/constants/api_keys.ts"
+]
+regexes = [
+  # Allow common test secrets or known non-sensitive values
+  # "1234567890abcdef1234567890abcdef"
+]
+
+# ─────────── Rules ───────────
+
+# 🔑 Generic API Key
+[[rules]]
+id = "generic-api-key"
+description = "Generic API keys or secrets"
+regex = '''(?i)(api[-_]?key|secret[-_]?key|access[-_]?token|password)["']?\s*[:=]\s*["']?([a-z0-9\-_=]{32,})["']?'''
+secretGroup = 2
+tags = ["key", "generic", "api"]
+
+# 🪪 JWTs (Base64-encoded JSON Web Tokens)
+[[rules]]
+id = "jwt"
+description = "JSON Web Tokens (JWT)"
+regex = '''eyJ[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+'''
+tags = ["token", "jwt"]
+
+# 🧠 Slack Token
+[[rules]]
+id = "slack-token"
+description = "Slack tokens"
+regex = '''xox[baprs]-([0-9a-zA-Z]{10,48})'''
+tags = ["slack", "token", "key"]
+
+# 🏦 Stripe Secret Key
+[[rules]]
+id = "stripe-secret-key"
+description = "Stripe secret key"
+regex = '''sk_live_[0-9a-zA-Z]{24}'''
+tags = ["stripe", "token", "key"]
+
+# 🔐 GitHub Personal Access Token
+[[rules]]
+id = "github-pat"
+description = "GitHub Personal Access Token"
+regex = '''ghp_[0-9a-zA-Z]{36}'''
+tags = ["github", "token", "key"]
+
+# 🧪 Optional: Private Key Blocks
+[[rules]]
+id = "private-key"
+description = "Generic private RSA or SSH keys"
+regex = '''-----BEGIN (RSA|DSA|EC|OPENSSH|PGP|PRIVATE) KEY-----'''
+tags = ["rsa", "ssh", "private-key"]
+
+###############################################################################
+# 🚨 To disable a rule per file or pattern, use `[allowlist]`.
+# 🚀 ego hygiene base gitleaks v1
+###############################################################################

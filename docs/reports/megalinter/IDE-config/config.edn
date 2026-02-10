@@ -1,0 +1,34 @@
+;; .clj-kondo/config.edn
+
+{:linters
+ {:unused-namespace       {:level :warning}
+  :unused-referred-var    {:level :warning}
+  :unused-binding         {:level :warning}
+  :unused-import          {:level :warning}
+  :redundant-let          {:level :warning}
+  :unresolved-symbol      {:level :warning}
+  :missing-docstring      {:level :off}
+  :refer-all              {:level :info}
+  :keyword-naming         {:level :warning}
+  :fn-arity               {:level :warning}
+  :deprecated-var         {:level :warning}
+  :invalid-arity          {:level :error}
+  :wrong-arity            {:level :error}
+  :macroexpand            {:level :off}} ; avoid false positives in macros
+
+ :config-paths
+ ["clj-kondo.exports/metosin/malli"
+  "clj-kondo.exports/lilactown/helix"
+  "clj-kondo.exports/reagent-project/reagent"
+  "clj-kondo.exports/re-frame/re-frame"] ; enable if you use these libs
+
+ :lint-as
+ {re-frame.core/reg-event-db       clojure.core/defn
+  re-frame.core/reg-sub            clojure.core/def
+  reagent.core/with-let            clojure.core/let
+  hiccup.core/html                 clojure.core/defn
+  helix.core/defnc                 clojure.core/defn}
+
+ :skip-comments true
+
+ :output {:format :text}}

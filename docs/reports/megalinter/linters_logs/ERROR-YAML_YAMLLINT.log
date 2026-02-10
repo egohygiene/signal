@@ -2,45 +2,45 @@ Results of yamllint linter (version 1.37.1)
 See documentation on https://megalinter.io/8.8.0/descriptors/yaml_yamllint/
 -----------------------------------------------
 
-❌ [ERROR] .github/workflows/megalinter.yml
-    .github/workflows/megalinter.yml
-      4:1       warning  truthy value should be one of [false, true]  (truthy)
-      66:81     error    line too long (113 > 80 characters)  (line-length)
-      85:81     error    line too long (125 > 80 characters)  (line-length)
-      87:81     error    line too long (137 > 80 characters)  (line-length)
-
-❌ [ERROR] .github/workflows/pages.yml
-    .github/workflows/pages.yml
-      4:1       warning  truthy value should be one of [false, true]  (truthy)
-      48:81     error    line too long (91 > 80 characters)  (line-length)
-      50:81     error    line too long (133 > 80 characters)  (line-length)
-
-❌ [ERROR] .megalinter.yml
-    .megalinter.yml
-      2:81      error    line too long (164 > 80 characters)  (line-length)
-      5:81      error    line too long (85 > 80 characters)  (line-length)
-      140:81    error    line too long (84 > 80 characters)  (line-length)
-      350:81    error    line too long (100 > 80 characters)  (line-length)
-
-❌ [ERROR] .pre-commit-config.yaml
-    .pre-commit-config.yaml
-      27:81     error    line too long (94 > 80 characters)  (line-length)
-      69:81     error    line too long (81 > 80 characters)  (line-length)
-
+✅ [SUCCESS] .github/workflows/megalinter.yml
+✅ [SUCCESS] .github/workflows/pages.yml
+✅ [SUCCESS] .megalinter.yml
+✅ [SUCCESS] .pre-commit-config.yaml
 ✅ [SUCCESS] .releaserc.yml
-❌ [ERROR] config/.v8rrc.yml
-    config/.v8rrc.yml
-      1:81      error    line too long (85 > 80 characters)  (line-length)
-      4:1       warning  missing document start "---"  (document-start)
-      11:81     error    line too long (81 > 80 characters)  (line-length)
-      41:5      warning  comment not indented like content  (comments-indentation)
-      42:9      warning  comment not indented like content  (comments-indentation)
-      43:11     warning  comment not indented like content  (comments-indentation)
-      45:81     error    line too long (91 > 80 characters)  (line-length)
-      53:81     error    line too long (82 > 80 characters)  (line-length)
-      57:81     error    line too long (86 > 80 characters)  (line-length)
-      58:81     error    line too long (84 > 80 characters)  (line-length)
+❌ [ERROR] config/.bandit.yml
+    config/.bandit.yml
+      1:1       warning  missing document start "---"  (document-start)
+      302:33    error    no new line character at the end of file  (new-line-at-end-of-file)
 
+✅ [SUCCESS] config/.cfnlintrc.yml
+✅ [SUCCESS] config/.checkov.yml
+✅ [SUCCESS] config/.golangci.yml
+❌ [ERROR] config/.grype.yaml
+    config/.grype.yaml
+      16:1      warning  missing document start "---"  (document-start)
+      54:3      warning  comment not indented like content  (comments-indentation)
+      76:3      warning  comment not indented like content  (comments-indentation)
+      93:3      warning  comment not indented like content  (comments-indentation)
+      102:5     warning  comment not indented like content  (comments-indentation)
+      103:7     warning  comment not indented like content  (comments-indentation)
+      112:5     warning  comment not indented like content  (comments-indentation)
+      115:3     warning  comment not indented like content  (comments-indentation)
+      129:3     warning  comment not indented like content  (comments-indentation)
+      129:60    warning  trailing spaces  (trailing-spaces)
+      131:46    warning  trailing spaces  (trailing-spaces)
+      151:34    error    no new line character at the end of file  (new-line-at-end-of-file)
+
+✅ [SUCCESS] config/.hadolint.yaml
+✅ [SUCCESS] config/.phplint.yml
+✅ [SUCCESS] config/.protolintrc.yml
+✅ [SUCCESS] config/.ruby-lint.yml
+✅ [SUCCESS] config/.spectral.yaml
+✅ [SUCCESS] config/.swiftlint.yml
+✅ [SUCCESS] config/.syft.yaml
+✅ [SUCCESS] config/.tektonlintrc.yaml
+✅ [SUCCESS] config/.trufflehog.yml
+✅ [SUCCESS] config/.v8rrc.yml
+✅ [SUCCESS] config/.yamllint.yml
 ✅ [SUCCESS] config/analysis_options.yml
 ✅ [SUCCESS] config/styles/proselint/Airlinese.yml
 ❌ [ERROR] config/styles/proselint/AnimalLabels.yml
@@ -256,7 +256,6 @@ See documentation on https://megalinter.io/8.8.0/descriptors/yaml_yamllint/
     config/styles/proselint/Uncomparables.yml
       1:1       warning  missing document start "---"  (document-start)
       8:4       error    wrong indentation: expected 4 but found 3  (indentation)
-      12:81     error    line too long (125 > 80 characters)  (line-length)
 
 ✅ [SUCCESS] config/styles/proselint/Very.yml
 ✅ [SUCCESS] config/styles/write-good/Cliches.yml

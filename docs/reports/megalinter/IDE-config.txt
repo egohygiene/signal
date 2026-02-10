@@ -8,6 +8,29 @@ INSTRUCTIONS
 
 IDE EXTENSIONS APPLICABLE TO YOUR PROJECT
 
+cljstyle (CLOJURE)
+  - emacs:
+    - cljstyle-mode: https://github.com/greglook/cljstyle/blob/main/doc/integrations.md#emacs
+
+clj-kondo (CLOJURE)
+  - atom:
+    - linter-kondo: https://atom.io/packages/linter-kondo
+  - emacs:
+    - flycheck-clj-kondo: https://github.com/borkdude/flycheck-clj-kondo
+  - vscode:
+    - clj-kondo: https://marketplace.visualstudio.com/items?itemName=borkdude.clj-kondo
+    - Clojure lint: https://github.com/marcomorain/clojure-lint
+
+cfn-lint (CLOUDFORMATION)
+  - atom:
+    - atom-cfn-lint: https://atom.io/packages/atom-cfn-lint
+  - idea:
+    - cfn-lint: https://plugins.jetbrains.com/plugin/10973-cfn-lint
+  - sublime:
+    - SublimeLinter CloudFormation: https://packagecontrol.io/packages/SublimeLinter-contrib-cloudformation
+  - vscode:
+    - vscode-cfn-lint: https://marketplace.visualstudio.com/items?itemName=kddejong.vscode-cfn-lint
+
 djlint (HTML)
   - sublime:
     - SublimeLinter-contrib-djlint: https://packagecontrol.io/packages/SublimeLinter-contrib-djlint
@@ -68,6 +91,14 @@ markdown-table-formatter (MARKDOWN)
   - vscode:
     - Markdown Table Prettify Extension: https://github.com/darkriszty/MarkdownTablePrettify-VSCodeExt
 
+powershell (POWERSHELL)
+  - vscode:
+    - VSCode PowerShell extension: https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell
+
+powershell_formatter (POWERSHELL)
+  - vscode:
+    - VSCode PowerShell extension: https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell
+
 checkov (REPOSITORY)
   - vscode:
     - Checkov: https://marketplace.visualstudio.com/items?itemName=Bridgecrew.checkov
@@ -83,6 +114,28 @@ trivy-sbom (REPOSITORY)
 cspell (SPELL)
   - vscode:
     - Code Spell Checker: https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
+
+proselint (SPELL)
+  - atom:
+    - linter-proselint: https://atom.io/packages/linter-proselint
+  - idea:
+    - Proselint: https://plugins.jetbrains.com/plugin/9854-proselint
+  - sublime:
+    - SublimeLinter-contrib-proselint: https://github.com/amperser/proselint/tree/main/plugins/sublime/SublimeLinter-contrib-proselint
+  - vscode:
+    - VSCode Proselint: https://marketplace.visualstudio.com/items?itemName=PatrykPeszko.vscode-proselint
+
+vale (SPELL)
+  - emacs:
+    - flymake-vale: https://github.com/tpeacock19/flymake-vale
+  - jetbrains:
+    - Vale: https://vale.sh/docs/integrations/jetbrains/
+  - sublime:
+    - SublimeLinter-contrib-vale: https://packagecontrol.io/packages/SublimeLinter-contrib-vale
+  - vim:
+    - dense-analysis/vale: https://github.com/dense-analysis/ale
+  - vscode:
+    - Vale: https://marketplace.visualstudio.com/items?itemName=ChrisChinchilla.vale-vscode
 
 prettier (YAML)
   - atom:

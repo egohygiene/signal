@@ -1,0 +1,32 @@
+---
+# yamllint configuration for the project
+# --------------------------------------
+# Apply consistent YAML formatting and style
+# Based on the default rules with some overrides
+
+extends: default
+
+rules:
+  braces:
+    max-spaces-inside: 1
+    level: warning
+
+  new-lines:
+    level: warning
+    type: unix # Ensures LF line endings
+
+  line-length:
+    max: 500
+    level: warning
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-mappings: true
+
+  comments:
+    min-spaces-from-content: 1 # For consistency with Prettier's formatting
+
+  trailing-spaces:
+    level: warning
+
+  indentation:
+    spaces: 2
+    indent-sequences: consistent

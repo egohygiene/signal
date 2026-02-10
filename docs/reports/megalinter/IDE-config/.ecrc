@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "disable": false,
+  "exclude": [
+    "node_modules/**",
+    "dist/**",
+    "build/**",
+    "out/**",
+    ".git/**",
+    ".venv/**",
+    "coverage/**",
+    "*.min.*",
+    "*.lock",
+    "package-lock.json",
+    "pnpm-lock.yaml"
+  ],
+  "extensions": [
+    ".js",
+    ".ts",
+    ".tsx",
+    ".json",
+    ".yaml",
+    ".yml",
+    ".md",
+    ".html",
+    ".css",
+    ".scss",
+    ".py",
+    ".sh",
+    ".cpp",
+    ".java",
+    ".go",
+    ".rs"
+  ],
+  "max_old_space_size": 2048,
+  "config_files": [
+    ".editorconfig"
+  ],
+  "output": "stdout",
+  "verbose": false
+}

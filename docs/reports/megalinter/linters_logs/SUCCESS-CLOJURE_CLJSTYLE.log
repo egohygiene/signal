@@ -1,0 +1,5 @@
+Results of cljstyle linter (version 0.17.642)
+See documentation on https://megalinter.io/8.8.0/descriptors/clojure_cljstyle/
+-----------------------------------------------
+
+✅ [SUCCESS] config/.clj-kondo/config.edn

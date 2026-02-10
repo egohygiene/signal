@@ -1,0 +1,39 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible-lint-config.json
+# .ansible-lint
+
+quiet: false
+verbosity: 1
+
+exclude_paths:
+    - pnpm-lock.yaml
+    - package-lock.json
+    - yarn.lock
+    - .cache/
+    - .next/
+    - .nuxt/
+    - .vercel/
+    - tasks/
+    - config/
+    - reports/
+    - .venv/
+    - venv/
+    - .git/
+    - .idea/
+    - .history/
+    - .pytest_cache/
+    - .mypy_cache/
+    - .ruff_cache/
+    - .next/
+    - .nuxt/
+    - .vercel/
+    - .output/
+    - build/
+    - logs/
+    - coverage/
+    - node_modules/
+    - "**/Taskfile.yml"
+    - "**/taskfile.yml"
+    - "**/Taskfile.yaml"
+    - "**/taskfile.yaml"
+    - "**/.megalinter.yml"

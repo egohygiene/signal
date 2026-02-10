@@ -2,6 +2,20 @@ Results of jsonlint linter (version 16.0.0)
 See documentation on https://megalinter.io/8.8.0/descriptors/json_jsonlint/
 -----------------------------------------------
 
+✅ [SUCCESS] config/.coffee-lint.json
+✅ [SUCCESS] config/.devskim.json
+✅ [SUCCESS] config/.eslintrc-json.json
+✅ [SUCCESS] config/.flow-scanner.json
+✅ [SUCCESS] config/.groovylintrc.json
+✅ [SUCCESS] config/.jscpd.json
+✅ [SUCCESS] config/.kics.config.json
+✅ [SUCCESS] config/.markdown-link-check.json
+✅ [SUCCESS] config/.markdownlint.json
+✅ [SUCCESS] config/.npmpackagejsonlintrc.json
+✅ [SUCCESS] config/.remarkrc.json
+✅ [SUCCESS] config/.secretlintrc.json
+✅ [SUCCESS] config/.stylelintrc.json
+✅ [SUCCESS] config/.tsqllintrc.json
 ✅ [SUCCESS] config/META6.json
 ✅ [SUCCESS] config/pyrightconfig.json
 ✅ [SUCCESS] config/styles/proselint/meta.json

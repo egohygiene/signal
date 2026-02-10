@@ -1,0 +1,73 @@
+{
+    "$schema": "https://www.schemastore.org/npmpackagejsonlintrc.json",
+    "extends": "npm-package-json-lint-config-default",
+    "rules": {
+        "require-name": "error",
+        "require-version": "error",
+        "require-license": "error",
+        "require-description": "warning",
+        "require-author": "warning",
+        "require-private": "off",
+        "require-repository": "warning",
+        "require-scripts": "warning",
+
+        "name-type": "error",
+        "version-type": "error",
+        "license-type": "error",
+        "scripts-type": "error",
+
+        "name-format": ["error", "lower-case"],
+        "version-format": ["error", "semver"],
+        "description-format": [
+            "warning",
+            {
+                "requireCapitalFirstLetter": true,
+                "requireEndingPeriod": false
+            }
+        ],
+
+        "prefer-caret-version-dependencies": "error",
+        "prefer-alphabetical-dependencies": "error",
+        "prefer-alphabetical-devDependencies": "error",
+        "prefer-alphabetical-peerDependencies": "error",
+        "no-absolute-version-dependencies": "error",
+        "no-absolute-version-devDependencies": "error",
+
+        "valid-values-license": ["error", ["MIT", "Apache-2.0", "UNLICENSED"]],
+        "valid-values-private": ["error", ["true", "false"]],
+
+        "prefer-property-order": [
+            "error",
+            [
+                "name",
+                "version",
+                "private",
+                "description",
+                "keywords",
+                "license",
+                "author",
+                "repository",
+                "bugs",
+                "homepage",
+                "main",
+                "module",
+                "types",
+                "exports",
+                "bin",
+                "scripts",
+                "engines",
+                "files",
+                "dependencies",
+                "devDependencies",
+                "peerDependencies",
+                "optionalDependencies",
+                "resolutions",
+                "eslintConfig",
+                "prettier",
+                "husky",
+                "lint-staged",
+                "config"
+            ]
+        ]
+    }
+}
