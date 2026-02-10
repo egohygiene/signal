@@ -18,10 +18,11 @@
   IMPORTANT:
   Your site root is https://signal.egohygiene.io/
   Your report lives at /reports/megalinter/
-  
-  Try local path first (for local testing), then production path
 */
 
+// Report paths to try in order:
+// 1. Local relative path (for local development/testing)
+// 2. Production absolute path (for deployed site)
 const REPORT_PATHS = [
   "mega-linter-report.json",
   "/reports/megalinter/mega-linter-report.json"
@@ -61,8 +62,8 @@ function loadReport() {
         if (currentReportPathIndex < REPORT_PATHS.length - 1) {
           currentReportPathIndex++;
           console.log("Trying alternate path...");
-          loadReport();
-          return null;
+          // Recursively try next path - return to chain properly
+          return loadReport();
         }
         throw new Error(
           "Failed to load mega-linter-report.json (HTTP " +
@@ -73,7 +74,7 @@ function loadReport() {
       return response.json();
     })
     .then((data) => {
-      if (!data) return; // Skip if trying alternate path
+      if (!data) return; // Skip if recursing to alternate path
 
       console.group("MegaLinter report loaded");
       console.log("Top-level keys:", Object.keys(data));
