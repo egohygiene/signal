@@ -345,8 +345,93 @@ function displayLog(logText) {
   const logContent = document.getElementById("log-content");
   if (!logContent) return;
 
-  logContent.textContent = logText;
+  const parsedContent = parseGitHubActionsGroups(logText);
+  logContent.innerHTML = parsedContent;
   logContent.classList.remove("error");
+}
+
+/* -------------------------------------------------
+   GitHub Actions Log Group Parser
+------------------------------------------------- */
+
+function parseGitHubActionsGroups(logText) {
+  const lines = logText.split("\n");
+  const result = [];
+  const groupStack = [];
+  let currentContent = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const groupMatch = line.match(/^::group::(.+)$/);
+    const endGroupMatch = line.match(/^::endgroup::$/);
+
+    if (groupMatch) {
+      // Save any content before this group
+      if (currentContent.length > 0) {
+        const parent = groupStack.length > 0 
+          ? groupStack[groupStack.length - 1].content 
+          : result;
+        parent.push({ type: 'text', content: currentContent.join("\n") });
+        currentContent = [];
+      }
+
+      // Start a new group
+      const groupTitle = groupMatch[1];
+      const group = { type: 'group', title: groupTitle, content: [] };
+      
+      if (groupStack.length > 0) {
+        groupStack[groupStack.length - 1].content.push(group);
+      } else {
+        result.push(group);
+      }
+      
+      groupStack.push(group);
+    } else if (endGroupMatch) {
+      // End the current group
+      if (currentContent.length > 0 && groupStack.length > 0) {
+        groupStack[groupStack.length - 1].content.push({ 
+          type: 'text', 
+          content: currentContent.join("\n") 
+        });
+        currentContent = [];
+      }
+      groupStack.pop();
+    } else {
+      // Regular content line
+      currentContent.push(line);
+    }
+  }
+
+  // Add any remaining content
+  if (currentContent.length > 0) {
+    const parent = groupStack.length > 0 
+      ? groupStack[groupStack.length - 1].content 
+      : result;
+    parent.push({ type: 'text', content: currentContent.join("\n") });
+  }
+
+  return renderLogContent(result);
+}
+
+function renderLogContent(items) {
+  return items.map(item => {
+    if (item.type === 'text') {
+      return escapeHtml(item.content);
+    } else if (item.type === 'group') {
+      const innerContent = renderLogContent(item.content);
+      return `<details class="log-group">
+  <summary class="log-group-title">${escapeHtml(item.title)}</summary>
+  <div class="log-group-content">${innerContent}</div>
+</details>`;
+    }
+    return '';
+  }).join('');
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
 }
 
 function displayLogError(message) {
