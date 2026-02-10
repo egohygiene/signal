@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'docs/**'
   pull_request:
 
 permissions:
@@ -40,7 +42,9 @@ jobs:
           echo "Copying MegaLinter reports to docs/reports/megalinter/"
           mkdir -p docs/reports/megalinter
           if [ -d "reports/megalinter" ]; then
-            cp -r reports/megalinter/* docs/reports/megalinter/
+            # Use dot notation to copy all files including hidden ones
+            # The || true ensures we don't fail if directory is empty
+            cp -r reports/megalinter/. docs/reports/megalinter/ || true
             echo "Reports copied successfully"
             ls -la docs/reports/megalinter/
           else
