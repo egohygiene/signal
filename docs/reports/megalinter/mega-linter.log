@@ -1,0 +1,17 @@
+----------------------------------------------------------------------------------------------------
+------------------------------------ MegaLinter, by OX Security ------------------------------------
+----------------------------------------------------------------------------------------------------
+ - Image Creation Date: 2025-06-15T16:22:42Z
+ - Image Revision: e08c2b05e3dbc40af4c23f41172ef1e068a7d651
+ - Image Version: v8.8.0
+----------------------------------------------------------------------------------------------------
+The MegaLinter documentation can be found at:
+ - https://megalinter.io/8.8.0
+----------------------------------------------------------------------------------------------------
+::group::MegaLinter initialization (expand for details)
+MegaLinter will analyze workspace [/github/workspace]
+GITHUB_REPOSITORY: egohygiene/signal
+GITHUB_REF: refs/heads/main
+GITHUB_RUN_ID: 21849736839
+
+
