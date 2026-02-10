@@ -3,7 +3,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
 -----------------------------------------------
 
 ❌ [ERROR] .dockerignore
-    1/1 .dockerignore 2202.43ms X
+    1/1 .dockerignore 2059.48ms X
     .dockerignore:46:3      - Unknown word (pycache)    -- __pycache__/
     	 Suggestions: [mycache, Mycache, myCache, MyCache, panache]
     .dockerignore:50:2      - Unknown word (pytest)     -- .pytest_cache/
@@ -27,7 +27,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 10 in 1 file.
 
 ❌ [ERROR] .editorconfig
-    1/1 .editorconfig 1863.61ms X
+    1/1 .editorconfig 1904.09ms X
     .editorconfig:45:3      - Unknown word (Makefiles)  -- # Makefiles - must use tabs
     	 Suggestions: [Makefile, namefiles, Namefiles, pagefiles, Pagefiles]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
@@ -36,9 +36,9 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
 ✅ [SUCCESS] .github/workflows/megalinter.yml
 ✅ [SUCCESS] .github/workflows/pages.yml
 ❌ [ERROR] .gitignore
-    1/1 .gitignore 3387.18ms X
+    1/1 .gitignore 3473.83ms X
     .gitignore:2:3       - Unknown word (pycache)    -- __pycache__/
-    	 Suggestions: [panache, pace, pacha, peace, peach]
+    	 Suggestions: [mycache, Mycache, myCache, MyCache, panache]
     .gitignore:6:2       - Unknown word (pytest)     -- .pytest_cache/
     	 Suggestions: [pest, pates, prest, pyres, pyxes]
     .gitignore:7:2       - Unknown word (venv)       -- .venv/
@@ -50,7 +50,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 5 in 1 file.
 
 ❌ [ERROR] .megalinter.yml
-    1/1 .megalinter.yml 8241.81ms X
+    1/1 .megalinter.yml 7467.43ms X
     .megalinter.yml:15:16     - Unknown word (DEVSKIM)    -- - REPOSITORY_DEVSKIM
     	 Suggestions: [DESK, DEVI, DEVS, DKIM, DEISM]
     .megalinter.yml:34:6      - Unknown word (nuxt)       -- - .nuxt
@@ -65,240 +65,240 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     	 Suggestions: [pest, pates, prest, pyres, pyxes]
     .megalinter.yml:41:6      - Unknown word (mypy)       -- - .mypy_cache
     	 Suggestions: [mopy, myopy, macy, many, maps]
-    .megalinter.yml:59:12     - Unknown word (KUBECONFORM) -- KUBERNETES_KUBECONFORM_DIRECTORY: "any"
+    .megalinter.yml:57:12     - Unknown word (KUBECONFORM) -- KUBERNETES_KUBECONFORM_DIRECTORY: "any"
     	 Suggestions: [KUBECONFIG]
-    .megalinter.yml:60:12     - Unknown word (KUBESCAPE)   -- KUBERNETES_KUBESCAPE_DIRECTORY: "any"
+    .megalinter.yml:58:12     - Unknown word (KUBESCAPE)   -- KUBERNETES_KUBESCAPE_DIRECTORY: "any"
     	 Suggestions: [UNESCAPE, KUBESPEC, KINESCOPE]
-    .megalinter.yml:102:3     - Unknown word (cljstyle)    -- # cljstyle: https://github.com
+    .megalinter.yml:100:3     - Unknown word (cljstyle)    -- # cljstyle: https://github.com
     	 Suggestions: [castle, castile, closable]
-    .megalinter.yml:104:9     - Unknown word (CLJSTYLE)    -- CLOJURE_CLJSTYLE_CONFIG_FILE: config
+    .megalinter.yml:102:9     - Unknown word (CLJSTYLE)    -- CLOJURE_CLJSTYLE_CONFIG_FILE: config
     	 Suggestions: [CASTLE, CASTILE, CLOSABLE]
-    .megalinter.yml:104:39    - Unknown word (cljstyle)    -- CONFIG_FILE: config/.cljstyle
+    .megalinter.yml:102:39    - Unknown word (cljstyle)    -- CONFIG_FILE: config/.cljstyle
     	 Suggestions: [castle, castile, closable]
-    .megalinter.yml:106:7     - Unknown word (kondo)       -- # clj-kondo: https://github.com
+    .megalinter.yml:104:7     - Unknown word (kondo)       -- # clj-kondo: https://github.com
     	 Suggestions: [kendo, kongo, Kongo, condo, hondo]
-    .megalinter.yml:108:13    - Unknown word (KONDO)       -- CLOJURE_CLJ_KONDO_CONFIG_FILE: config
+    .megalinter.yml:106:13    - Unknown word (KONDO)       -- CLOJURE_CLJ_KONDO_CONFIG_FILE: config
     	 Suggestions: [KENDO, KONGO, Kongo, CONDO, HONDO]
-    .megalinter.yml:108:44    - Unknown word (kondo)       -- CONFIG_FILE: config/.clj-kondo/config.edn
+    .megalinter.yml:106:44    - Unknown word (kondo)       -- CONFIG_FILE: config/.clj-kondo/config.edn
     	 Suggestions: [kendo, kongo, Kongo, condo, hondo]
-    .megalinter.yml:112:46    - Unknown word (cfnlintrc)   -- CONFIG_FILE: config/.cfnlintrc.yaml
+    .megalinter.yml:110:46    - Unknown word (cfnlintrc)   -- CONFIG_FILE: config/.cfnlintrc.yaml
     	 Suggestions: []
-    .megalinter.yml:114:3     - Unknown word (coffeelint)  -- # coffeelint: https://github.com
+    .megalinter.yml:112:3     - Unknown word (coffeelint)  -- # coffeelint: https://github.com
     	 Suggestions: [coffering, coffeepot]
-    .megalinter.yml:116:8     - Unknown word (COFFEELINT)  -- COFFEE_COFFEELINT_CONFIG_FILE: config
+    .megalinter.yml:114:8     - Unknown word (COFFEELINT)  -- COFFEE_COFFEELINT_CONFIG_FILE: config
     	 Suggestions: [COFFERING, COFFEEPOT]
-    .megalinter.yml:136:6     - Unknown word (DARTANALYZER) -- DART_DARTANALYZER_CONFIG_FILE: config
+    .megalinter.yml:134:6     - Unknown word (DARTANALYZER) -- DART_DARTANALYZER_CONFIG_FILE: config
     	 Suggestions: []
-    .megalinter.yml:144:56    - Unknown word (ecrc)         -- CONFIG_FILE: config/.ecrc
+    .megalinter.yml:142:56    - Unknown word (ecrc)         -- CONFIG_FILE: config/.ecrc
     	 Suggestions: [ecru, ecr, icrc, ICRC, crc]
-    .megalinter.yml:148:51    - Unknown word (lintrc)       -- FILE: config/.gherkin-lintrc
+    .megalinter.yml:146:51    - Unknown word (lintrc)       -- FILE: config/.gherkin-lintrc
     	 Suggestions: [lint, linac, liner, lints, linty]
-    .megalinter.yml:160:45    - Unknown word (groovylintrc) -- CONFIG_FILE: config/.groovylintrc.json
+    .megalinter.yml:158:45    - Unknown word (groovylintrc) -- CONFIG_FILE: config/.groovylintrc.json
     	 Suggestions: []
-    .megalinter.yml:162:3     - Unknown word (htmlhint)     -- # htmlhint:
+    .megalinter.yml:160:3     - Unknown word (htmlhint)     -- # htmlhint:
     	 Suggestions: [htmlhintrc, hamlin, hemline, htmltidy, humphing]
-    .megalinter.yml:164:6     - Unknown word (HTMLHINT)     -- HTML_HTMLHINT_CONFIG_FILE: config
+    .megalinter.yml:162:6     - Unknown word (HTMLHINT)     -- HTML_HTMLHINT_CONFIG_FILE: config
     	 Suggestions: [HTMLHINTRC, HAMLIN, HEMLINE, htmltidy, HTMLTIDY]
-    .megalinter.yml:186:3     - Unknown word (jsonlint)     -- # jsonlint: https://github.com
+    .megalinter.yml:184:3     - Unknown word (jsonlint)     -- # jsonlint: https://github.com
     	 Suggestions: [jslint, jostling, joint, jsonl, joliet]
-    .megalinter.yml:188:6     - Unknown word (JSONLINT)     -- JSON_JSONLINT_CONFIG_FILE: config
+    .megalinter.yml:186:6     - Unknown word (JSONLINT)     -- JSON_JSONLINT_CONFIG_FILE: config
     	 Suggestions: [JSLINT, JOSTLING, JOINT, JSONL, JOLIET]
-    .megalinter.yml:188:36    - Unknown word (jsonlintrc)   -- CONFIG_FILE: config/.jsonlintrc
+    .megalinter.yml:186:36    - Unknown word (jsonlintrc)   -- CONFIG_FILE: config/.jsonlintrc
     	 Suggestions: [jshintrc]
-    .megalinter.yml:192:49    - Unknown word (npmpackagejsonlintrc) -- CONFIG_FILE: config/.npmpackagejsonlintrc.json
+    .megalinter.yml:190:49    - Unknown word (npmpackagejsonlintrc) -- CONFIG_FILE: config/.npmpackagejsonlintrc.json
     	 Suggestions: []
-    .megalinter.yml:202:3     - Unknown word (chktex)               -- # chktex: https://www.nongnu
+    .megalinter.yml:200:3     - Unknown word (chktex)               -- # chktex: https://www.nongnu
     	 Suggestions: [chute, caltex, chuted, chutes, cortex]
-    .megalinter.yml:204:7     - Unknown word (CHKTEX)               -- LATEX_CHKTEX_CONFIG_FILE: config
+    .megalinter.yml:202:7     - Unknown word (CHKTEX)               -- LATEX_CHKTEX_CONFIG_FILE: config
     	 Suggestions: [CHUTE, CALTEX, CHUTED, CHUTES, CORTEX]
-    .megalinter.yml:204:35    - Unknown word (chktexrc)             -- CONFIG_FILE: config/.chktexrc
+    .megalinter.yml:202:35    - Unknown word (chktexrc)             -- CONFIG_FILE: config/.chktexrc
     	 Suggestions: []
-    .megalinter.yml:206:3     - Unknown word (luacheck)             -- # luacheck: https://github.com
+    .megalinter.yml:204:3     - Unknown word (luacheck)             -- # luacheck: https://github.com
     	 Suggestions: [uncheck, laches, lubeck, leached, leacher]
-    .megalinter.yml:208:5     - Unknown word (LUACHECK)             -- LUA_LUACHECK_CONFIG_FILE: config
+    .megalinter.yml:206:5     - Unknown word (LUACHECK)             -- LUA_LUACHECK_CONFIG_FILE: config
     	 Suggestions: [UNCHECK, LACHES, LUBECK, LEACHED, LEACHER]
-    .megalinter.yml:208:35    - Unknown word (luacheckrc)           -- CONFIG_FILE: config/.luacheckrc
+    .megalinter.yml:206:35    - Unknown word (luacheckrc)           -- CONFIG_FILE: config/.luacheckrc
     	 Suggestions: []
-    .megalinter.yml:210:3     - Unknown word (checkmake)            -- # checkmake: https://github.com
+    .megalinter.yml:208:3     - Unknown word (checkmake)            -- # checkmake: https://github.com
     	 Suggestions: [checkmate, checkmk, checkmated, checkmates, ccmake]
-    .megalinter.yml:212:10    - Unknown word (CHECKMAKE)            -- MAKEFILE_CHECKMAKE_CONFIG_FILE: config
+    .megalinter.yml:210:10    - Unknown word (CHECKMAKE)            -- MAKEFILE_CHECKMAKE_CONFIG_FILE: config
     	 Suggestions: [CHECKMATE, CHECKMK, CHECKMATED, CHECKMATES, CCMAKE]
-    .megalinter.yml:212:41    - Unknown word (checkmake)            -- CONFIG_FILE: config/.checkmake.ini
+    .megalinter.yml:210:41    - Unknown word (checkmake)            -- CONFIG_FILE: config/.checkmake.ini
     	 Suggestions: [checkmate, checkmk, checkmated, checkmates, ccmake]
-    .megalinter.yml:224:43    - Unknown word (remarkrc)             -- CONFIG_FILE: config/.remarkrc.json
+    .megalinter.yml:222:43    - Unknown word (remarkrc)             -- CONFIG_FILE: config/.remarkrc.json
     	 Suggestions: [remark, remarks, remarry, remark's, remarked]
-    .megalinter.yml:228:5     - Unknown word (PHPCS)                -- PHP_PHPCS_CONFIG_FILE: config
+    .megalinter.yml:226:5     - Unknown word (PHPCS)                -- PHP_PHPCS_CONFIG_FILE: config
     	 Suggestions: [PHPS, PHP'S, PHPs, PHP's, PACS]
-    .megalinter.yml:228:31    - Unknown word (phpcs)                -- CONFIG_FILE: config/phpcs.xml
+    .megalinter.yml:226:31    - Unknown word (phpcs)                -- CONFIG_FILE: config/phpcs.xml
     	 Suggestions: [phps, php's, PHPs, PHP's, pacs]
-    .megalinter.yml:230:3     - Unknown word (phplint)              -- # phplint: https://github.com
+    .megalinter.yml:228:3     - Unknown word (phplint)              -- # phplint: https://github.com
     	 Suggestions: [poplin, poplins, pulpit, pulping, pepin]
-    .megalinter.yml:232:5     - Unknown word (PHPLINT)              -- PHP_PHPLINT_CONFIG_FILE: config
+    .megalinter.yml:230:5     - Unknown word (PHPLINT)              -- PHP_PHPLINT_CONFIG_FILE: config
     	 Suggestions: [POPLIN, POPLINS, PULPIT, PULPING, PEPIN]
-    .megalinter.yml:232:34    - Unknown word (phplint)              -- CONFIG_FILE: config/.phplint.yml
+    .megalinter.yml:230:34    - Unknown word (phplint)              -- CONFIG_FILE: config/.phplint.yml
     	 Suggestions: [poplin, poplins, pulpit, pulping, pepin]
-    .megalinter.yml:234:3     - Unknown word (phpstan)              -- # phpstan: https://phpstan.org
+    .megalinter.yml:232:3     - Unknown word (phpstan)              -- # phpstan: https://phpstan.org
     	 Suggestions: [phps, pasta, pisan, pusan, paisan]
-    .megalinter.yml:236:5     - Unknown word (PHPSTAN)              -- PHP_PHPSTAN_CONFIG_FILE: config
+    .megalinter.yml:234:5     - Unknown word (PHPSTAN)              -- PHP_PHPSTAN_CONFIG_FILE: config
     	 Suggestions: [PHPS, PASTA, PISAN, PUSAN, PAISAN]
-    .megalinter.yml:236:33    - Unknown word (phpstan)              -- CONFIG_FILE: config/phpstan.neon.dist
+    .megalinter.yml:234:33    - Unknown word (phpstan)              -- CONFIG_FILE: config/phpstan.neon.dist
     	 Suggestions: [phps, pasta, pisan, pusan, paisan]
-    .megalinter.yml:242:14    - Unknown word (psscriptanalyzer)     -- # powershell-psscriptanalyzer: https://github.com
+    .megalinter.yml:240:14    - Unknown word (psscriptanalyzer)     -- # powershell-psscriptanalyzer: https://github.com
     	 Suggestions: []
-    .megalinter.yml:244:55    - Unknown word (psscriptanalyzer)     -- config/.powershell-psscriptanalyzer.psd1
+    .megalinter.yml:242:55    - Unknown word (psscriptanalyzer)     -- config/.powershell-psscriptanalyzer.psd1
     	 Suggestions: []
-    .megalinter.yml:250:3     - Unknown word (protolint)            -- # protolint: https://github.com
+    .megalinter.yml:248:3     - Unknown word (protolint)            -- # protolint: https://github.com
     	 Suggestions: [proselint, protonic, proton, pooling, proline]
-    .megalinter.yml:252:10    - Unknown word (PROTOLINT)            -- PROTOBUF_PROTOLINT_CONFIG_FILE: config
+    .megalinter.yml:250:10    - Unknown word (PROTOLINT)            -- PROTOBUF_PROTOLINT_CONFIG_FILE: config
     	 Suggestions: [PROSELINT, PROTONIC, PROTON, POOLING, PROLINE]
-    .megalinter.yml:252:41    - Unknown word (protolintrc)          -- CONFIG_FILE: config/.protolintrc.yml
+    .megalinter.yml:250:41    - Unknown word (protolintrc)          -- CONFIG_FILE: config/.protolintrc.yml
     	 Suggestions: [proselintrc, protolithic]
-    .megalinter.yml:264:27    - Unknown word (pyproject)            -- PYTHON_BLACK_CONFIG_FILE: pyproject.toml
+    .megalinter.yml:262:27    - Unknown word (pyproject)            -- PYTHON_BLACK_CONFIG_FILE: pyproject.toml
     	 Suggestions: [project, projects]
-    .megalinter.yml:270:3     - Unknown word (isort)                -- # isort: https://pycqa.github
+    .megalinter.yml:268:3     - Unknown word (isort)                -- # isort: https://pycqa.github
     	 Suggestions: [isqrt, iSqrt, Isqrt, ISqrt, sort]
-    .megalinter.yml:272:8     - Unknown word (ISORT)                -- PYTHON_ISORT_CONFIG_FILE: config
+    .megalinter.yml:270:8     - Unknown word (ISORT)                -- PYTHON_ISORT_CONFIG_FILE: config
     	 Suggestions: [ISQRT, iSqrt, Isqrt, ISqrt, SORT]
-    .megalinter.yml:272:34    - Unknown word (pyproject)            -- CONFIG_FILE: config/pyproject.toml
+    .megalinter.yml:270:34    - Unknown word (pyproject)            -- CONFIG_FILE: config/pyproject.toml
     	 Suggestions: [project, projects]
-    .megalinter.yml:274:3     - Unknown word (mypy)                 -- # mypy: https://mypy.readthedocs
+    .megalinter.yml:272:3     - Unknown word (mypy)                 -- # mypy: https://mypy.readthedocs
     	 Suggestions: [mopy, myopy, macy, many, maps]
-    .megalinter.yml:276:8     - Unknown word (MYPY)                 -- PYTHON_MYPY_CONFIG_FILE: config
+    .megalinter.yml:274:8     - Unknown word (MYPY)                 -- PYTHON_MYPY_CONFIG_FILE: config
     	 Suggestions: [MOPY, MYOPY, MACY, MANY, MAPS]
-    .megalinter.yml:276:34    - Unknown word (mypy)                 -- CONFIG_FILE: config/.mypy.ini
+    .megalinter.yml:274:34    - Unknown word (mypy)                 -- CONFIG_FILE: config/.mypy.ini
     	 Suggestions: [mopy, myopy, macy, many, maps]
-    .megalinter.yml:278:3     - Unknown word (pylint)               -- # pylint: https://pylint.pycqa
+    .megalinter.yml:276:3     - Unknown word (pylint)               -- # pylint: https://pylint.pycqa
     	 Suggestions: [plying, pint, paint, plant, plink]
-    .megalinter.yml:280:8     - Unknown word (PYLINT)               -- PYTHON_PYLINT_CONFIG_FILE: config
+    .megalinter.yml:278:8     - Unknown word (PYLINT)               -- PYTHON_PYLINT_CONFIG_FILE: config
     	 Suggestions: [PLYING, PINT, PAINT, PLANT, PLINK]
-    .megalinter.yml:280:36    - Unknown word (pylintrc)             -- CONFIG_FILE: config/.pylintrc
+    .megalinter.yml:278:36    - Unknown word (pylintrc)             -- CONFIG_FILE: config/.pylintrc
     	 Suggestions: [eslintrc, plinth, plinths, politic, pyritic]
-    .megalinter.yml:282:3     - Unknown word (pyright)              -- # pyright: https://pyrightlang
+    .megalinter.yml:280:3     - Unknown word (pyright)              -- # pyright: https://pyrightlang
     	 Suggestions: [myright, Myright, myRight, MyRight, plight]
-    .megalinter.yml:284:8     - Unknown word (PYRIGHT)              -- PYTHON_PYRIGHT_CONFIG_FILE: config
+    .megalinter.yml:282:8     - Unknown word (PYRIGHT)              -- PYTHON_PYRIGHT_CONFIG_FILE: config
     	 Suggestions: [MYRIGHT, Myright, myRight, MyRight, PLIGHT]
-    .megalinter.yml:284:36    - Unknown word (pyrightconfig)        -- CONFIG_FILE: config/pyrightconfig.json
+    .megalinter.yml:282:36    - Unknown word (pyrightconfig)        -- CONFIG_FILE: config/pyrightconfig.json
     	 Suggestions: []
-    .megalinter.yml:288:33    - Unknown word (pyproject)            -- CONFIG_FILE: config/pyproject.toml
+    .megalinter.yml:286:33    - Unknown word (pyproject)            -- CONFIG_FILE: config/pyproject.toml
     	 Suggestions: [project, projects]
-    .megalinter.yml:290:3     - Unknown word (raku)                 -- # raku: https://raku.org/
+    .megalinter.yml:288:3     - Unknown word (raku)                 -- # raku: https://raku.org/
     	 Suggestions: [rake, raki, roku, Roku, baku]
-    .megalinter.yml:292:1     - Unknown word (RAKU)                 -- RAKU_RAKU_CONFIG_FILE: config
+    .megalinter.yml:290:1     - Unknown word (RAKU)                 -- RAKU_RAKU_CONFIG_FILE: config
     	 Suggestions: [RAKE, RAKI, ROKU, Roku, BAKU]
-    .megalinter.yml:292:6     - Unknown word (RAKU)                 -- RAKU_RAKU_CONFIG_FILE: config
+    .megalinter.yml:290:6     - Unknown word (RAKU)                 -- RAKU_RAKU_CONFIG_FILE: config
     	 Suggestions: [RAKE, RAKI, ROKU, Roku, BAKU]
-    .megalinter.yml:298:3     - Unknown word (devskim)              -- # devskim: https://github.com
+    .megalinter.yml:296:3     - Unknown word (devskim)              -- # devskim: https://github.com
     	 Suggestions: [desk, devi, devs, dkim, deism]
-    .megalinter.yml:300:12    - Unknown word (DEVSKIM)              -- REPOSITORY_DEVSKIM_CONFIG_FILE: config
+    .megalinter.yml:298:12    - Unknown word (DEVSKIM)              -- REPOSITORY_DEVSKIM_CONFIG_FILE: config
     	 Suggestions: [DESK, DEVI, DEVS, DKIM, DEISM]
-    .megalinter.yml:300:41    - Unknown word (devskim)              -- CONFIG_FILE: config/.devskim.json
+    .megalinter.yml:298:41    - Unknown word (devskim)              -- CONFIG_FILE: config/.devskim.json
     	 Suggestions: [desk, devi, devs, dkim, deism]
-    .megalinter.yml:310:3     - Unknown word (kics)                 -- # kics: https://github.com
+    .megalinter.yml:308:3     - Unknown word (kics)                 -- # kics: https://github.com
     	 Suggestions: [ki's, kick, kids, kins, kips]
-    .megalinter.yml:312:12    - Unknown word (KICS)                 -- REPOSITORY_KICS_CONFIG_FILE: config
+    .megalinter.yml:310:12    - Unknown word (KICS)                 -- REPOSITORY_KICS_CONFIG_FILE: config
     	 Suggestions: [KI'S, KICK, KIDS, KINS, KIPS]
-    .megalinter.yml:312:38    - Unknown word (kics)                 -- CONFIG_FILE: config/.kics.config.json
+    .megalinter.yml:310:38    - Unknown word (kics)                 -- CONFIG_FILE: config/.kics.config.json
     	 Suggestions: [ki's, kick, kids, kins, kips]
-    .megalinter.yml:319:3     - Unknown word (syft)                 -- # syft: https://github.com
+    .megalinter.yml:317:3     - Unknown word (syft)                 -- # syft: https://github.com
     	 Suggestions: [sift, soft, syst, lyft, Lyft]
-    .megalinter.yml:321:12    - Unknown word (SYFT)                 -- REPOSITORY_SYFT_CONFIG_FILE: config
+    .megalinter.yml:319:12    - Unknown word (SYFT)                 -- REPOSITORY_SYFT_CONFIG_FILE: config
     	 Suggestions: [SIFT, SOFT, SYST, LYFT, Lyft]
-    .megalinter.yml:321:38    - Unknown word (syft)                 -- CONFIG_FILE: config/.syft.yaml
+    .megalinter.yml:319:38    - Unknown word (syft)                 -- CONFIG_FILE: config/.syft.yaml
     	 Suggestions: [sift, soft, syst, lyft, Lyft]
-    .megalinter.yml:334:59    - Unknown word (trufflehogignore)     -- exclude-paths=config/.trufflehogignore"
+    .megalinter.yml:332:59    - Unknown word (trufflehogignore)     -- exclude-paths=config/.trufflehogignore"
     	 Suggestions: []
-    .megalinter.yml:336:3     - Unknown word (rstcheck)             -- # rstcheck: https://github.com
+    .megalinter.yml:334:3     - Unknown word (rstcheck)             -- # rstcheck: https://github.com
     	 Suggestions: [recheck, ratchet, retched, retches, ratchets]
-    .megalinter.yml:338:5     - Unknown word (RSTCHECK)            -- RST_RSTCHECK_CONFIG_FILE: config
+    .megalinter.yml:336:5     - Unknown word (RSTCHECK)            -- RST_RSTCHECK_CONFIG_FILE: config
     	 Suggestions: [RECHECK, RATCHET, RETCHED, RETCHES, RATCHETS]
-    .megalinter.yml:338:35    - Unknown word (rstcheck)            -- CONFIG_FILE: config/.rstcheck.cfg
+    .megalinter.yml:336:35    - Unknown word (rstcheck)            -- CONFIG_FILE: config/.rstcheck.cfg
     	 Suggestions: [recheck, ratchet, retched, retches, ratchets]
-    .megalinter.yml:340:3     - Unknown word (rubocop)             -- # rubocop: https://rubocop.org
+    .megalinter.yml:338:3     - Unknown word (rubocop)             -- # rubocop: https://rubocop.org
     	 Suggestions: [rubicon, robocopy, Rubicon, rebop, rebook]
-    .megalinter.yml:342:6     - Unknown word (RUBOCOP)             -- RUBY_RUBOCOP_CONFIG_FILE: config
+    .megalinter.yml:340:6     - Unknown word (RUBOCOP)             -- RUBY_RUBOCOP_CONFIG_FILE: config
     	 Suggestions: [RUBICON, ROBOCOPY, Rubicon, REBOP, REBOOK]
-    .megalinter.yml:344:8     - Unknown word (clippy)              -- # rust-clippy: https://github.com
+    .megalinter.yml:342:8     - Unknown word (clippy)              -- # rust-clippy: https://github.com
     	 Suggestions: [chippy, lippy, flippy, slippy, clip]
-    .megalinter.yml:346:6     - Unknown word (CLIPPY)              -- RUST_CLIPPY_CONFIG_FILE: config
+    .megalinter.yml:344:6     - Unknown word (CLIPPY)              -- RUST_CLIPPY_CONFIG_FILE: config
     	 Suggestions: [CHIPPY, LIPPY, FLIPPY, SLIPPY, CLIP]
-    .megalinter.yml:346:34    - Unknown word (clippy)              -- CONFIG_FILE: config/.clippy.toml
+    .megalinter.yml:344:34    - Unknown word (clippy)              -- CONFIG_FILE: config/.clippy.toml
     	 Suggestions: [chippy, lippy, flippy, slippy, clip]
-    .megalinter.yml:348:3     - Unknown word (lintr)               -- # lintr: https://github.com
+    .megalinter.yml:346:3     - Unknown word (lintr)               -- # lintr: https://github.com
     	 Suggestions: [lint, liner, lints, linty, linter]
-    .megalinter.yml:350:3     - Unknown word (LINTR)               -- R_LINTR_CONFIG_FILE: config
+    .megalinter.yml:348:3     - Unknown word (LINTR)               -- R_LINTR_CONFIG_FILE: config
     	 Suggestions: [LINT, LINER, LINTS, LINTY, LINTER]
-    .megalinter.yml:350:30    - Unknown word (lintr)               -- CONFIG_FILE: config/.lintr
+    .megalinter.yml:348:30    - Unknown word (lintr)               -- CONFIG_FILE: config/.lintr
     	 Suggestions: [lint, liner, lints, linty, linter]
-    .megalinter.yml:352:26    - Unknown word (sfdx)                -- lightning-flow-scanner-sfdx: https://github.com
+    .megalinter.yml:350:26    - Unknown word (sfdx)                -- lightning-flow-scanner-sfdx: https://github.com
     	 Suggestions: [sfax, sldx, spdx, Sfax, SPDX]
-    .megalinter.yml:356:3     - Unknown word (sfdx)                -- # sfdx-scanner: https://github
+    .megalinter.yml:354:3     - Unknown word (sfdx)                -- # sfdx-scanner: https://github
     	 Suggestions: [sfax, sldx, spdx, Sfax, SPDX]
-    .megalinter.yml:358:12    - Unknown word (SFDX)                -- SALESFORCE_SFDX_SCANNER_APEX_CONFIG
+    .megalinter.yml:356:12    - Unknown word (SFDX)                -- SALESFORCE_SFDX_SCANNER_APEX_CONFIG
     	 Suggestions: [SFAX, SLDX, spdx, SPDX, Sfax]
-    .megalinter.yml:360:3     - Unknown word (scalafix)            -- # scalafix: https://github.com
+    .megalinter.yml:358:3     - Unknown word (scalafix)            -- # scalafix: https://github.com
     	 Suggestions: [scalefix, scaleFix, Scalefix, ScaleFix, scaledfix]
-    .megalinter.yml:362:7     - Unknown word (SCALAFIX)            -- SCALA_SCALAFIX_CONFIG_FILE: config
+    .megalinter.yml:360:7     - Unknown word (SCALAFIX)            -- SCALA_SCALAFIX_CONFIG_FILE: config
     	 Suggestions: [SCALEFIX, scaleFix, Scalefix, ScaleFix, SCALEDFIX]
-    .megalinter.yml:362:37    - Unknown word (scalafix)            -- CONFIG_FILE: config/.scalafix.conf
+    .megalinter.yml:360:37    - Unknown word (scalafix)            -- CONFIG_FILE: config/.scalafix.conf
     	 Suggestions: [scalefix, scaleFix, Scalefix, ScaleFix, scaledfix]
-    .megalinter.yml:364:3     - Unknown word (snakefmt)            -- # snakefmt: https://github.com
+    .megalinter.yml:362:3     - Unknown word (snakefmt)            -- # snakefmt: https://github.com
     	 Suggestions: [snake, snaked, snakes, snake's, shakeout]
-    .megalinter.yml:366:1     - Unknown word (SNAKEMAKE)           -- SNAKEMAKE_SNAKEFMT_CONFIG_FILE
+    .megalinter.yml:364:1     - Unknown word (SNAKEMAKE)           -- SNAKEMAKE_SNAKEFMT_CONFIG_FILE
     	 Suggestions: [SNAKELIKE, SAGEMAKER, SNAKEBITE, STALEMATE]
-    .megalinter.yml:366:11    - Unknown word (SNAKEFMT)            -- SNAKEMAKE_SNAKEFMT_CONFIG_FILE: config
+    .megalinter.yml:364:11    - Unknown word (SNAKEFMT)            -- SNAKEMAKE_SNAKEFMT_CONFIG_FILE: config
     	 Suggestions: [SNAKE, SNAKED, SNAKES, SNAKE'S, SHAKEOUT]
-    .megalinter.yml:366:41    - Unknown word (snakefmt)            -- CONFIG_FILE: config/.snakefmt.toml
+    .megalinter.yml:364:41    - Unknown word (snakefmt)            -- CONFIG_FILE: config/.snakefmt.toml
     	 Suggestions: [snake, snaked, snakes, snake's, shakeout]
-    .megalinter.yml:375:49    - Unknown word (lycheeignore)        -- exclude-path config/.lycheeignore"
+    .megalinter.yml:373:49    - Unknown word (lycheeignore)        -- exclude-path config/.lycheeignore"
     	 Suggestions: []
-    .megalinter.yml:385:3     - Unknown word (sqlfluff)            -- # sqlfluff: https://github.com
+    .megalinter.yml:383:3     - Unknown word (sqlfluff)            -- # sqlfluff: https://github.com
     	 Suggestions: [sluff, selloff]
-    .megalinter.yml:387:5     - Unknown word (SQLFLUFF)            -- SQL_SQLFLUFF_CONFIG_FILE: config
+    .megalinter.yml:385:5     - Unknown word (SQLFLUFF)            -- SQL_SQLFLUFF_CONFIG_FILE: config
     	 Suggestions: [SLUFF, SELLOFF]
-    .megalinter.yml:387:35    - Unknown word (sqlfluff)            -- CONFIG_FILE: config/.sqlfluff
+    .megalinter.yml:385:35    - Unknown word (sqlfluff)            -- CONFIG_FILE: config/.sqlfluff
     	 Suggestions: [sluff, selloff]
-    .megalinter.yml:389:3     - Unknown word (tsqllint)            -- # tsqllint: https://github.com
+    .megalinter.yml:387:3     - Unknown word (tsqllint)            -- # tsqllint: https://github.com
     	 Suggestions: [tslint, stalling, stilling, stylelint, eslint]
-    .megalinter.yml:391:5     - Unknown word (TSQLLINT)            -- SQL_TSQLLINT_CONFIG_FILE: config
+    .megalinter.yml:389:5     - Unknown word (TSQLLINT)            -- SQL_TSQLLINT_CONFIG_FILE: config
     	 Suggestions: [TSLINT, STALLING, STILLING, STYLELINT, ESLINT]
-    .megalinter.yml:391:35    - Unknown word (tsqllintrc)          -- CONFIG_FILE: config/.tsqllintrc.json
+    .megalinter.yml:389:35    - Unknown word (tsqllintrc)          -- CONFIG_FILE: config/.tsqllintrc.json
     	 Suggestions: [stylelintrc, eslintrc]
-    .megalinter.yml:393:3     - Unknown word (swiftlint)           -- # swiftlint: https://github.com
+    .megalinter.yml:391:3     - Unknown word (swiftlint)           -- # swiftlint: https://github.com
     	 Suggestions: [swiftlet, sifting, swiftly, shifting, stifling]
-    .megalinter.yml:395:7     - Unknown word (SWIFTLINT)           -- SWIFT_SWIFTLINT_CONFIG_FILE: config
+    .megalinter.yml:393:7     - Unknown word (SWIFTLINT)           -- SWIFT_SWIFTLINT_CONFIG_FILE: config
     	 Suggestions: [SWIFTLET, SIFTING, SWIFTLY, SHIFTING, STIFLING]
-    .megalinter.yml:395:38    - Unknown word (swiftlint)           -- CONFIG_FILE: config/.swiftlint.yml
+    .megalinter.yml:393:38    - Unknown word (swiftlint)           -- CONFIG_FILE: config/.swiftlint.yml
     	 Suggestions: [swiftlet, sifting, swiftly, shifting, stifling]
-    .megalinter.yml:397:3     - Unknown word (tekton)              -- # tekton-lint: https://github
+    .megalinter.yml:395:3     - Unknown word (tekton)              -- # tekton-lint: https://github
     	 Suggestions: [teton, teston, teuton, Teton, Teuton]
-    .megalinter.yml:399:1     - Unknown word (TEKTON)              -- TEKTON_TEKTON_LINT_CONFIG_FILE
+    .megalinter.yml:397:1     - Unknown word (TEKTON)              -- TEKTON_TEKTON_LINT_CONFIG_FILE
     	 Suggestions: [TETON, TESTON, TEUTON, Teton, Teuton]
-    .megalinter.yml:399:8     - Unknown word (TEKTON)              -- TEKTON_TEKTON_LINT_CONFIG_FILE: config
+    .megalinter.yml:397:8     - Unknown word (TEKTON)              -- TEKTON_TEKTON_LINT_CONFIG_FILE: config
     	 Suggestions: [TETON, TESTON, TEUTON, Teton, Teuton]
-    .megalinter.yml:399:41    - Unknown word (tektonlintrc)        -- CONFIG_FILE: config/.tektonlintrc.yaml
+    .megalinter.yml:397:41    - Unknown word (tektonlintrc)        -- CONFIG_FILE: config/.tektonlintrc.yaml
     	 Suggestions: []
-    .megalinter.yml:401:3     - Unknown word (terragrunt)          -- # terragrunt: https://github.com
+    .megalinter.yml:399:3     - Unknown word (terragrunt)          -- # terragrunt: https://github.com
     	 Suggestions: [termagant]
-    .megalinter.yml:403:11    - Unknown word (TERRAGRUNT)          -- TERRAFORM_TERRAGRUNT_CONFIG_FILE: config
+    .megalinter.yml:401:11    - Unknown word (TERRAGRUNT)          -- TERRAFORM_TERRAGRUNT_CONFIG_FILE: config
     	 Suggestions: [TERMAGANT]
-    .megalinter.yml:403:42    - Unknown word (terragrunt)          -- CONFIG_FILE: config/terragrunt.hcl
+    .megalinter.yml:401:42    - Unknown word (terragrunt)          -- CONFIG_FILE: config/terragrunt.hcl
     	 Suggestions: [termagant]
-    .megalinter.yml:405:3     - Unknown word (terrascan)           -- # terrascan: https://github.com
+    .megalinter.yml:403:3     - Unknown word (terrascan)           -- # terrascan: https://github.com
     	 Suggestions: [etruscan, trashcan, terran, terras, tarrasa]
-    .megalinter.yml:407:11    - Unknown word (TERRASCAN)           -- TERRAFORM_TERRASCAN_CONFIG_FILE: config
+    .megalinter.yml:405:11    - Unknown word (TERRASCAN)           -- TERRAFORM_TERRASCAN_CONFIG_FILE: config
     	 Suggestions: [ETRUSCAN, TRASHCAN, TERRAN, TERRAS, TARRASA]
-    .megalinter.yml:407:41    - Unknown word (terrascan)           -- CONFIG_FILE: config/terrascan-config.toml
+    .megalinter.yml:405:41    - Unknown word (terrascan)           -- CONFIG_FILE: config/terrascan-config.toml
     	 Suggestions: [etruscan, trashcan, terran, terras, tarrasa]
-    .megalinter.yml:409:3     - Unknown word (tflint)              -- # tflint: https://github.com
+    .megalinter.yml:407:3     - Unknown word (tflint)              -- # tflint: https://github.com
     	 Suggestions: [tslint, flint, Flint, tint, taint]
-    .megalinter.yml:411:11    - Unknown word (TFLINT)              -- TERRAFORM_TFLINT_CONFIG_FILE: config
+    .megalinter.yml:409:11    - Unknown word (TFLINT)              -- TERRAFORM_TFLINT_CONFIG_FILE: config
     	 Suggestions: [TSLINT, FLINT, Flint, TINT, TAINT]
-    .megalinter.yml:411:39    - Unknown word (tflint)              -- CONFIG_FILE: config/.tflint.hcl
+    .megalinter.yml:409:39    - Unknown word (tflint)              -- CONFIG_FILE: config/.tflint.hcl
     	 Suggestions: [tslint, flint, Flint, tint, taint]
     CSpell: Files checked: 1, Issues found: 122 in 1 file.
 
 ❌ [ERROR] .pre-commit-config.yaml
-    1/1 .pre-commit-config.yaml 1714.08ms X
+    1/1 .pre-commit-config.yaml 1725.32ms X
     .pre-commit-config.yaml:96:13     - Unknown word (shellcheck) -- - id: shellcheck
     	 Suggestions: [spellcheck, spellchecks, shellcheckrc, shellack, shellback]
     .pre-commit-config.yaml:107:26    - Unknown word (pyproject)  -- args: [--config, pyproject.toml]
@@ -307,7 +307,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
 
 ✅ [SUCCESS] .prettierignore
 ❌ [ERROR] .releaserc.yml
-    1/1 .releaserc.yml 1745.82ms X
+    1/1 .releaserc.yml 1650.67ms X
     .releaserc.yml:13:16     - Unknown word (conventionalcommits) -- - preset: "conventionalcommits"
     	 Suggestions: []
     .releaserc.yml:42:16     - Unknown word (conventionalcommits) -- - preset: "conventionalcommits"
@@ -315,7 +315,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 2 in 1 file.
 
 ❌ [ERROR] .secrets.baseline
-    1/1 .secrets.baseline 1690.13ms X
+    1/1 .secrets.baseline 2201.23ms X
     .secrets.baseline:21:16     - Unknown word (Cloudant)   -- "name": "CloudantDetector"
     	 Suggestions: [Courant, Clouding, Cloudlet, Cloudland, Cloudnet]
     .secrets.baseline:40:22     - Unknown word (Hmac)       -- "name": "IbmCosHmacDetector"
@@ -327,8 +327,16 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 4 in 1 file.
 
 ✅ [SUCCESS] LICENSE
+❌ [ERROR] config/.v8rrc.yml
+    1/1 config/.v8rrc.yml 2632.69ms X
+    config/.v8rrc.yml:32:20     - Unknown word (rignore)    -- # - default = [".v8rignore", ".gitignore"]
+    	 Suggestions: [reignore, ignore, rigor, rigors, ringer]
+    config/.v8rrc.yml:45:15     - Unknown word (Minimatch)  -- # A Minimatch glob expression for
+    	 Suggestions: [Mismatch, Minima, Minimal, Minimap, Minimax]
+    CSpell: Files checked: 1, Issues found: 2 in 1 file.
+
 ❌ [ERROR] config/META6.json
-    1/1 config/META6.json 3606.95ms X
+    1/1 config/META6.json 2672.94ms X
     config/META6.json:5:19      - Unknown word (yourusername) -- "auth": "github:yourusername",
     	 Suggestions: []
     config/META6.json:12:46     - Unknown word (rakumod)      -- lib/Your/ModuleName.rakumod"
@@ -341,7 +349,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
 
 ✅ [SUCCESS] config/analysis_options.yml
 ❌ [ERROR] config/apex-pmd-ruleset.xml
-    1/1 config/apex-pmd-ruleset.xml 2300.15ms X
+    1/1 config/apex-pmd-ruleset.xml 2541.81ms X
     config/apex-pmd-ruleset.xml:7:30      - Unknown word (domainbuilder) -- exclude-pattern>.*/apex-domainbuilder/*.*</exclude-pattern
     	 Suggestions: []
     config/apex-pmd-ruleset.xml:9:25      - Unknown word (fflib)         -- <exclude-pattern>.*/fflib_*.*</exclude-pattern
@@ -351,7 +359,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 3 in 1 file.
 
 ❌ [ERROR] config/apt.conf
-    1/1 config/apt.conf 2241.92ms X
+    1/1 config/apt.conf 1929.29ms X
     config/apt.conf:187:13    - Unknown word (pkgcache)   -- Dir::Cache::pkgcache "";
     	 Suggestions: [precache, pagecache, preCache, Precache, pageCache]
     config/apt.conf:190:13    - Unknown word (srcpkgcache) -- Dir::Cache::srcpkgcache "";
@@ -361,7 +369,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 3 in 1 file.
 
 ❌ [ERROR] config/dpkg.cfg
-    1/1 config/dpkg.cfg 2660.92ms X
+    1/1 config/dpkg.cfg 2307.36ms X
     config/dpkg.cfg:1:3       - Unknown word (dpkg)       -- # dpkg configuration file
     	 Suggestions: [pkg, daks, dang, darg, dawg]
     config/dpkg.cfg:3:45      - Unknown word (dpkg)       -- default options for dpkg. All command-line
@@ -397,7 +405,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 16 in 1 file.
 
 ❌ [ERROR] config/java-pmd-ruleset.xml
-    1/1 config/java-pmd-ruleset.xml 1551.84ms X
+    1/1 config/java-pmd-ruleset.xml 1505.23ms X
     config/java-pmd-ruleset.xml:15:28     - Unknown word (bestpractices) -- rule ref="category/java/bestpractices.xml"/>
     	 Suggestions: []
     config/java-pmd-ruleset.xml:18:28     - Unknown word (errorprone)    -- rule ref="category/java/errorprone.xml"/>
@@ -411,7 +419,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 5 in 1 file.
 
 ❌ [ERROR] config/lychee.toml
-    1/1 config/lychee.toml 1532.78ms X
+    1/1 config/lychee.toml 1634.85ms X
     config/lychee.toml:51:5      - Unknown word (aeiou)      -- "[aeiouAEIOU]"
     	 Suggestions: [aeiouy, aeon, aero, agio, ainu]
     config/lychee.toml:51:10     - Unknown word (AEIOU)      -- "[aeiouAEIOU]"
@@ -419,7 +427,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 2 in 1 file.
 
 ❌ [ERROR] config/lynis/custom.prf
-    1/1 config/lynis/custom.prf 1315.31ms X
+    1/1 config/lynis/custom.prf 1498.20ms X
     config/lynis/custom.prf:1:10      - Unknown word (Lynis)      -- # Custom Lynis profile for repository
     	 Suggestions: [Lenis, Lysis, Lins, Loins, Lying]
     config/lynis/custom.prf:2:58      - Unknown word (lynis)      -- repository under reports/lynis
@@ -435,7 +443,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 6 in 1 file.
 
 ❌ [ERROR] config/phpcs.xml
-    1/1 config/phpcs.xml 1332.55ms X
+    1/1 config/phpcs.xml 1609.98ms X
     config/phpcs.xml:14:21     - Unknown word (Squiz)      -- <!-- <rule ref="Squiz" /> -->
     	 Suggestions: [Squib, Squid, Quiz, suez, Suez]
     config/phpcs.xml:19:20     - Unknown word (Squiz)      -- <exclude name="Squiz.Functions.MultiLineFunctionDe
@@ -443,7 +451,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 2 in 1 file.
 
 ❌ [ERROR] config/phpstan.neon.dist
-    1/1 config/phpstan.neon.dist 1830.13ms X
+    1/1 config/phpstan.neon.dist 1835.70ms X
     config/phpstan.neon.dist:1:3       - Unknown word (phpstan)    -- # phpstan.neon.dist
     	 Suggestions: [phps, pasta, pisan, pusan, paisan]
     config/phpstan.neon.dist:29:12     - Unknown word (analyse)    -- excludes_analyse:
@@ -464,7 +472,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
 
 ✅ [SUCCESS] config/psalm.xml
 ❌ [ERROR] config/pyrightconfig.json
-    1/1 config/pyrightconfig.json 1555.47ms X
+    1/1 config/pyrightconfig.json 1315.33ms X
     config/pyrightconfig.json:6:21      - Unknown word (pycache)    -- "exclude": ["**/__pycache__", ".venv", "venv"
     	 Suggestions: [mycache, Mycache, myCache, MyCache, panache]
     config/pyrightconfig.json:6:35      - Unknown word (venv)       -- "**/__pycache__", ".venv", "venv", "dist", "build
@@ -480,7 +488,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 6 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Airlinese.yml
-    1/1 config/styles/proselint/Airlinese.yml 1918.49ms X
+    1/1 config/styles/proselint/Airlinese.yml 1218.93ms X
     config/styles/proselint/Airlinese.yml:2:19      - Unknown word (airlinese)  -- message: "'%s' is airlinese."
     	 Suggestions: [airlines, Airlines, airline, airiness, airliner]
     config/styles/proselint/Airlinese.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
@@ -496,7 +504,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 6 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/AnimalLabels.yml
-    1/1 config/styles/proselint/AnimalLabels.yml 1926.55ms X
+    1/1 config/styles/proselint/AnimalLabels.yml 1515.27ms X
     config/styles/proselint/AnimalLabels.yml:10:29     - Unknown word (pardine)    -- leopard|panther)-like: pardine
     	 Suggestions: [jardine, Jardine, padrone, praline, paine]
     config/styles/proselint/AnimalLabels.yml:11:15     - Unknown word (avine)      -- bird-like: avine
@@ -538,19 +546,19 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 19 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Annotations.yml
-    1/1 config/styles/proselint/Annotations.yml 1236.96ms X
+    1/1 config/styles/proselint/Annotations.yml 941.10ms X
     config/styles/proselint/Annotations.yml:3:1       - Unknown word (ignorecase) -- ignorecase: false
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Apologizing.yml
-    1/1 config/styles/proselint/Apologizing.yml 982.16ms X
+    1/1 config/styles/proselint/Apologizing.yml 773.95ms X
     config/styles/proselint/Apologizing.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Archaisms.yml
-    1/1 config/styles/proselint/Archaisms.yml 1194.44ms X
+    1/1 config/styles/proselint/Archaisms.yml 1054.25ms X
     config/styles/proselint/Archaisms.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/Archaisms.yml:12:5      - Unknown word (brocage)    -- - brocage
@@ -573,7 +581,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
 
 ✅ [SUCCESS] config/styles/proselint/But.yml
 ❌ [ERROR] config/styles/proselint/Cliches.yml
-    1/1 config/styles/proselint/Cliches.yml 925.31ms X
+    1/1 config/styles/proselint/Cliches.yml 993.31ms X
     config/styles/proselint/Cliches.yml:4:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/Cliches.yml:317:9     - Unknown word (paydirt)    -- - hit paydirt
@@ -587,7 +595,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 5 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/CorporateSpeak.yml
-    1/1 config/styles/proselint/CorporateSpeak.yml 815.09ms X
+    1/1 config/styles/proselint/CorporateSpeak.yml 829.22ms X
     config/styles/proselint/CorporateSpeak.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/CorporateSpeak.yml:18:8      - Unknown word (brainer)    -- - no brainer
@@ -595,19 +603,19 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 2 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Currency.yml
-    1/1 config/styles/proselint/Currency.yml 783.72ms X
+    1/1 config/styles/proselint/Currency.yml 760.69ms X
     config/styles/proselint/Currency.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Cursing.yml
-    1/1 config/styles/proselint/Cursing.yml 769.46ms X
+    1/1 config/styles/proselint/Cursing.yml 771.18ms X
     config/styles/proselint/Cursing.yml:4:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/DateCase.yml
-    1/1 config/styles/proselint/DateCase.yml 850.48ms X
+    1/1 config/styles/proselint/DateCase.yml 815.59ms X
     config/styles/proselint/DateCase.yml:3:1       - Unknown word (ignorecase) -- ignorecase: false
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/DateCase.yml:5:1       - Unknown word (nonword)    -- nonword: true
@@ -615,7 +623,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 2 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/DateMidnight.yml
-    1/1 config/styles/proselint/DateMidnight.yml 846.09ms X
+    1/1 config/styles/proselint/DateMidnight.yml 820.55ms X
     config/styles/proselint/DateMidnight.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/DateMidnight.yml:5:1       - Unknown word (nonword)    -- nonword: true
@@ -623,7 +631,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 2 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/DateRedundancy.yml
-    1/1 config/styles/proselint/DateRedundancy.yml 819.20ms X
+    1/1 config/styles/proselint/DateRedundancy.yml 817.57ms X
     config/styles/proselint/DateRedundancy.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/DateRedundancy.yml:5:1       - Unknown word (nonword)    -- nonword: true
@@ -631,7 +639,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 2 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/DateSpacing.yml
-    1/1 config/styles/proselint/DateSpacing.yml 866.79ms X
+    1/1 config/styles/proselint/DateSpacing.yml 821.75ms X
     config/styles/proselint/DateSpacing.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/DateSpacing.yml:5:1       - Unknown word (nonword)    -- nonword: true
@@ -639,7 +647,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 2 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/DenizenLabels.yml
-    1/1 config/styles/proselint/DenizenLabels.yml 3296.90ms X
+    1/1 config/styles/proselint/DenizenLabels.yml 3188.68ms X
     config/styles/proselint/DenizenLabels.yml:3:1       - Unknown word (ignorecase) -- ignorecase: false
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/DenizenLabels.yml:7:6       - Unknown word (Afrikaaner) -- (?:Afrikaaner|Afrikander):
@@ -773,7 +781,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 65 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Diacritical.yml
-    1/1 config/styles/proselint/Diacritical.yml 1889.00ms X
+    1/1 config/styles/proselint/Diacritical.yml 1838.64ms X
     config/styles/proselint/Diacritical.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/Diacritical.yml:8:20      - Unknown word (idéal)      -- beau ideal: beau idéal
@@ -907,7 +915,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 65 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/GenderBias.yml
-    1/1 config/styles/proselint/GenderBias.yml 830.82ms X
+    1/1 config/styles/proselint/GenderBias.yml 847.89ms X
     config/styles/proselint/GenderBias.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/GenderBias.yml:33:3      - Unknown word (ombuds)     -- ombuds(?:man|woman):
@@ -919,7 +927,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 4 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/GroupTerms.yml
-    1/1 config/styles/proselint/GroupTerms.yml 898.93ms X
+    1/1 config/styles/proselint/GroupTerms.yml 867.53ms X
     config/styles/proselint/GroupTerms.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/GroupTerms.yml:18:46     - Unknown word (cete)       -- herd) of badgers:      cete of badgers
@@ -935,19 +943,19 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 6 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Hedging.yml
-    1/1 config/styles/proselint/Hedging.yml 770.00ms X
+    1/1 config/styles/proselint/Hedging.yml 777.23ms X
     config/styles/proselint/Hedging.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Hyperbole.yml
-    1/1 config/styles/proselint/Hyperbole.yml 801.74ms X
+    1/1 config/styles/proselint/Hyperbole.yml 788.01ms X
     config/styles/proselint/Hyperbole.yml:4:1       - Unknown word (nonword)    -- nonword: true
     	 Suggestions: [nonfood, notwork, onward, nanoid, nonary]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Jargon.yml
-    1/1 config/styles/proselint/Jargon.yml 871.82ms X
+    1/1 config/styles/proselint/Jargon.yml 841.19ms X
     config/styles/proselint/Jargon.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/Jargon.yml:8:5       - Unknown word (agendize)   -- - agendize
@@ -955,25 +963,25 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 2 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/LGBTOffensive.yml
-    1/1 config/styles/proselint/LGBTOffensive.yml 815.55ms X
+    1/1 config/styles/proselint/LGBTOffensive.yml 815.44ms X
     config/styles/proselint/LGBTOffensive.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/LGBTTerms.yml
-    1/1 config/styles/proselint/LGBTTerms.yml 840.12ms X
+    1/1 config/styles/proselint/LGBTTerms.yml 809.18ms X
     config/styles/proselint/LGBTTerms.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Malapropisms.yml
-    1/1 config/styles/proselint/Malapropisms.yml 786.39ms X
+    1/1 config/styles/proselint/Malapropisms.yml 758.55ms X
     config/styles/proselint/Malapropisms.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Needless.yml
-    1/1 config/styles/proselint/Needless.yml 3904.04ms X
+    1/1 config/styles/proselint/Needless.yml 3726.26ms X
     config/styles/proselint/Needless.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/Needless.yml:9:15      - Unknown word (pygmaen)    -- '(?:pygmean|pygmaen)': pygmy
@@ -1277,7 +1285,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 150 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Nonwords.yml
-    1/1 config/styles/proselint/Nonwords.yml 1386.41ms X
+    1/1 config/styles/proselint/Nonwords.yml 1329.61ms X
     config/styles/proselint/Nonwords.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/Nonwords.yml:8:3       - Unknown word (affrontery) -- affrontery: effrontery
@@ -1333,32 +1341,32 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 26 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Oxymorons.yml
-    1/1 config/styles/proselint/Oxymorons.yml 780.80ms X
+    1/1 config/styles/proselint/Oxymorons.yml 805.61ms X
     config/styles/proselint/Oxymorons.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/P-Value.yml
-    1/1 config/styles/proselint/P-Value.yml 825.89ms X
+    1/1 config/styles/proselint/P-Value.yml 825.26ms X
     config/styles/proselint/P-Value.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ✅ [SUCCESS] config/styles/proselint/RASSyndrome.yml
 ❌ [ERROR] config/styles/proselint/README.md
-    1/1 config/styles/proselint/README.md 934.09ms X
+    1/1 config/styles/proselint/README.md 895.50ms X
     config/styles/proselint/README.md:1:31      - Unknown word (Suchow)     -- © 2014–2015, Jordan Suchow, Michael Pacer, and
     	 Suggestions: [Schw, Scow, Show, Such, Succor]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Skunked.yml
-    1/1 config/styles/proselint/Skunked.yml 792.75ms X
+    1/1 config/styles/proselint/Skunked.yml 804.96ms X
     config/styles/proselint/Skunked.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Spelling.yml
-    1/1 config/styles/proselint/Spelling.yml 964.62ms X
+    1/1 config/styles/proselint/Spelling.yml 992.57ms X
     config/styles/proselint/Spelling.yml:4:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/Spelling.yml:8:3       - Unknown word (colour)     -- colour: color
@@ -1378,13 +1386,13 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 8 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Typography.yml
-    1/1 config/styles/proselint/Typography.yml 839.22ms X
+    1/1 config/styles/proselint/Typography.yml 773.42ms X
     config/styles/proselint/Typography.yml:4:1       - Unknown word (nonword)    -- nonword: true
     	 Suggestions: [nonfood, notwork, onward, nanoid, nonary]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Uncomparables.yml
-    1/1 config/styles/proselint/Uncomparables.yml 912.96ms X
+    1/1 config/styles/proselint/Uncomparables.yml 805.95ms X
     config/styles/proselint/Uncomparables.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/proselint/Uncomparables.yml:12:92     - Unknown word (mildy)      -- increasingly|kind of|mildy|hardly|greatly|sort
@@ -1392,19 +1400,19 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 2 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/Very.yml
-    1/1 config/styles/proselint/Very.yml 819.52ms X
+    1/1 config/styles/proselint/Very.yml 759.33ms X
     config/styles/proselint/Very.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/proselint/meta.json
-    1/1 config/styles/proselint/meta.json 937.81ms X
+    1/1 config/styles/proselint/meta.json 868.36ms X
     config/styles/proselint/meta.json:2:14      - Unknown word (jdkato)     -- "author": "jdkato",
     	 Suggestions: [jato, dato, jatos, junto, jurat]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/write-good/Cliches.yml
-    1/1 config/styles/write-good/Cliches.yml 987.25ms X
+    1/1 config/styles/write-good/Cliches.yml 890.07ms X
     config/styles/write-good/Cliches.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     config/styles/write-good/Cliches.yml:282:9     - Unknown word (paydirt)    -- - hit paydirt
@@ -1416,14 +1424,14 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 4 in 1 file.
 
 ❌ [ERROR] config/styles/write-good/E-Prime.yml
-    1/1 config/styles/write-good/E-Prime.yml 828.54ms X
+    1/1 config/styles/write-good/E-Prime.yml 757.16ms X
     config/styles/write-good/E-Prime.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ✅ [SUCCESS] config/styles/write-good/Illusions.yml
 ❌ [ERROR] config/styles/write-good/Passive.yml
-    1/1 config/styles/write-good/Passive.yml 830.69ms X
+    1/1 config/styles/write-good/Passive.yml 763.96ms X
     config/styles/write-good/Passive.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
@@ -1431,19 +1439,19 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
 ✅ [SUCCESS] config/styles/write-good/README.md
 ✅ [SUCCESS] config/styles/write-good/So.yml
 ❌ [ERROR] config/styles/write-good/ThereIs.yml
-    1/1 config/styles/write-good/ThereIs.yml 767.10ms X
+    1/1 config/styles/write-good/ThereIs.yml 773.75ms X
     config/styles/write-good/ThereIs.yml:3:1       - Unknown word (ignorecase) -- ignorecase: false
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/write-good/TooWordy.yml
-    1/1 config/styles/write-good/TooWordy.yml 839.98ms X
+    1/1 config/styles/write-good/TooWordy.yml 767.61ms X
     config/styles/write-good/TooWordy.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/styles/write-good/Weasel.yml
-    1/1 config/styles/write-good/Weasel.yml 767.23ms X
+    1/1 config/styles/write-good/Weasel.yml 775.57ms X
     config/styles/write-good/Weasel.yml:3:1       - Unknown word (ignorecase) -- ignorecase: true
     	 Suggestions: [ignores, ignorers, increase]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
@@ -1451,7 +1459,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
 ✅ [SUCCESS] config/styles/write-good/meta.json
 ✅ [SUCCESS] config/sun_checks.xml
 ❌ [ERROR] config/terragrunt.hcl
-    1/1 config/terragrunt.hcl 832.29ms X
+    1/1 config/terragrunt.hcl 788.52ms X
     config/terragrunt.hcl:1:3       - Unknown word (terragrunt) -- # terragrunt.hcl — Base config for
     	 Suggestions: [termagant]
     config/terragrunt.hcl:15:33     - Unknown word (egohygiene) -- git::git@github.com:egohygiene/terraform-modules.git
@@ -1461,19 +1469,19 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 3 in 1 file.
 
 ❌ [ERROR] config/terrascan-config.toml
-    1/1 config/terrascan-config.toml 764.03ms X
+    1/1 config/terrascan-config.toml 773.19ms X
     config/terrascan-config.toml:17:46     - Unknown word (sarif)      -- yaml, xml, junit-xml, sarif, human
     	 Suggestions: [sari, saris, serif, sharif, sadi]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/trivy-sbom.yaml
-    1/1 config/trivy-sbom.yaml 769.58ms X
+    1/1 config/trivy-sbom.yaml 751.07ms X
     config/trivy-sbom.yaml:25:10     - Unknown word (pkgs)       -- list-all-pkgs: false
     	 Suggestions: [pegs, pigs, pugs, Pigs, pkg]
     CSpell: Files checked: 1, Issues found: 1 in 1 file.
 
 ❌ [ERROR] config/trivy.yaml
-    1/1 config/trivy.yaml 796.54ms X
+    1/1 config/trivy.yaml 782.41ms X
     config/trivy.yaml:39:16     - Unknown word (trivycache) -- dir: .cache/.trivycache
     	 Suggestions: []
     config/trivy.yaml:43:10     - Unknown word (pkgs)       -- list-all-pkgs: false
@@ -1481,7 +1489,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 1, Issues found: 2 in 1 file.
 
 ❌ [ERROR] docs/CNAME
-    1/1 docs/CNAME 776.11ms X
+    1/1 docs/CNAME 794.48ms X
     docs/CNAME:1:8       - Unknown word (egohygiene) -- signal.egohygiene.io
     	 Suggestions: []
     CSpell: Files checked: 1, Issues found: 1 in 1 file.

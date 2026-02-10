@@ -19,6 +19,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/editorconfig_editor
     1 errors found
 
 ✅ [SUCCESS] LICENSE
+✅ [SUCCESS] config/.v8rrc.yml
 ❌ [ERROR] config/META6.json
     config/META6.json:
     	2-8: Wrong amount of left-padding spaces(want multiple of 4)

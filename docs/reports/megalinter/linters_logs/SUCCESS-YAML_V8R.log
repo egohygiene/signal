@@ -1,0 +1,55 @@
+Results of v8r linter (version 5.0.0)
+See documentation on https://megalinter.io/8.8.0/descriptors/yaml_v8r/
+-----------------------------------------------
+
+✅ [SUCCESS] .github/workflows/megalinter.yml
+✅ [SUCCESS] .github/workflows/pages.yml
+✅ [SUCCESS] .megalinter.yml
+✅ [SUCCESS] .pre-commit-config.yaml
+✅ [SUCCESS] .releaserc.yml
+✅ [SUCCESS] config/.v8rrc.yml
+✅ [SUCCESS] config/analysis_options.yml
+✅ [SUCCESS] config/styles/proselint/Airlinese.yml
+✅ [SUCCESS] config/styles/proselint/AnimalLabels.yml
+✅ [SUCCESS] config/styles/proselint/Annotations.yml
+✅ [SUCCESS] config/styles/proselint/Apologizing.yml
+✅ [SUCCESS] config/styles/proselint/Archaisms.yml
+✅ [SUCCESS] config/styles/proselint/But.yml
+✅ [SUCCESS] config/styles/proselint/Cliches.yml
+✅ [SUCCESS] config/styles/proselint/CorporateSpeak.yml
+✅ [SUCCESS] config/styles/proselint/Currency.yml
+✅ [SUCCESS] config/styles/proselint/Cursing.yml
+✅ [SUCCESS] config/styles/proselint/DateCase.yml
+✅ [SUCCESS] config/styles/proselint/DateMidnight.yml
+✅ [SUCCESS] config/styles/proselint/DateRedundancy.yml
+✅ [SUCCESS] config/styles/proselint/DateSpacing.yml
+✅ [SUCCESS] config/styles/proselint/DenizenLabels.yml
+✅ [SUCCESS] config/styles/proselint/Diacritical.yml
+✅ [SUCCESS] config/styles/proselint/GenderBias.yml
+✅ [SUCCESS] config/styles/proselint/GroupTerms.yml
+✅ [SUCCESS] config/styles/proselint/Hedging.yml
+✅ [SUCCESS] config/styles/proselint/Hyperbole.yml
+✅ [SUCCESS] config/styles/proselint/Jargon.yml
+✅ [SUCCESS] config/styles/proselint/LGBTOffensive.yml
+✅ [SUCCESS] config/styles/proselint/LGBTTerms.yml
+✅ [SUCCESS] config/styles/proselint/Malapropisms.yml
+✅ [SUCCESS] config/styles/proselint/Needless.yml
+✅ [SUCCESS] config/styles/proselint/Nonwords.yml
+✅ [SUCCESS] config/styles/proselint/Oxymorons.yml
+✅ [SUCCESS] config/styles/proselint/P-Value.yml
+✅ [SUCCESS] config/styles/proselint/RASSyndrome.yml
+✅ [SUCCESS] config/styles/proselint/Skunked.yml
+✅ [SUCCESS] config/styles/proselint/Spelling.yml
+✅ [SUCCESS] config/styles/proselint/Typography.yml
+✅ [SUCCESS] config/styles/proselint/Uncomparables.yml
+✅ [SUCCESS] config/styles/proselint/Very.yml
+✅ [SUCCESS] config/styles/write-good/Cliches.yml
+✅ [SUCCESS] config/styles/write-good/E-Prime.yml
+✅ [SUCCESS] config/styles/write-good/Illusions.yml
+✅ [SUCCESS] config/styles/write-good/Passive.yml
+✅ [SUCCESS] config/styles/write-good/So.yml
+✅ [SUCCESS] config/styles/write-good/ThereIs.yml
+✅ [SUCCESS] config/styles/write-good/TooWordy.yml
+✅ [SUCCESS] config/styles/write-good/Weasel.yml
+✅ [SUCCESS] config/trivy-sbom.yaml
+✅ [SUCCESS] config/trivy.yaml

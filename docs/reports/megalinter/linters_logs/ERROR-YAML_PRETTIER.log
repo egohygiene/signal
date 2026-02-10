@@ -19,6 +19,11 @@ See documentation on https://megalinter.io/8.8.0/descriptors/yaml_prettier/
     [warn] Code style issues found in the above file. Run Prettier with --write to fix.
 
 ✅ [SUCCESS] .releaserc.yml
+❌ [ERROR] config/.v8rrc.yml
+    Checking formatting...
+    [warn] config/.v8rrc.yml
+    [warn] Code style issues found in the above file. Run Prettier with --write to fix.
+
 ✅ [SUCCESS] config/analysis_options.yml
 ✅ [SUCCESS] config/styles/proselint/Airlinese.yml
 ❌ [ERROR] config/styles/proselint/AnimalLabels.yml
