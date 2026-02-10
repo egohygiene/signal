@@ -402,6 +402,56 @@ td[colspan] {
 }
 
 /* -------------------------------------------------
+   Log Group Collapsible Sections
+------------------------------------------------- */
+
+.log-group {
+  margin: 0.5rem 0;
+  border-left: 2px solid #4a5568;
+  background-color: #252525;
+}
+
+.log-group-title {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  background-color: #2d2d2d;
+  color: #9ca3af;
+  font-weight: 500;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.log-group-title:hover {
+  background-color: #333333;
+  color: #d1d5db;
+}
+
+.log-group-title::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+  font-size: 0.7rem;
+}
+
+.log-group[open] > .log-group-title::before {
+  transform: rotate(90deg);
+}
+
+.log-group-title::-webkit-details-marker {
+  display: none;
+}
+
+.log-group-content {
+  padding: 0.5rem 0.75rem 0.5rem 1.5rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* -------------------------------------------------
    Responsive
 ------------------------------------------------- */
 
