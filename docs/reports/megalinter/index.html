@@ -1,38 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>MegaLinter Report — signal</title>
-    <style>
-      body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-        margin: 2rem;
-      }
-      ul {
-        line-height: 1.6;
-      }
-      code {
-        background: #f4f4f4;
-        padding: 2px 6px;
-        border-radius: 4px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>MegaLinter Reports</h1>
-    <p>Repository: <code>egohygiene/signal</code></p>
+<head>
+  <meta charset="UTF-8" />
+  <title>MegaLinter Report Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <ul>
-      <li><a href="./SUMMARY.md">Summary (Markdown)</a></li>
-      <li><a href="./README.md">Report README</a></li>
-      <li><a href="./mega-linter.log">Raw MegaLinter Log</a></li>
-      <li><a href="./mega-linter-report.json">Machine-readable JSON</a></li>
-      <li><a href="./linters_logs/">Per-linter logs</a></li>
-      <li><a href="./sbom/">SBOM</a></li>
-    </ul>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>MegaLinter Report</h1>
+      <p class="subtitle">Static insight viewer for mega-linter-report.json</p>
+    </header>
 
-    <p>
-      Generated automatically by GitHub Actions.
-    </p>
-  </body>
+    <section id="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <ul class="summary-list">
+        <li><strong>Total issues:</strong> <span id="total-issues">–</span></li>
+        <li><strong>Errors:</strong> <span id="severity-error">–</span></li>
+        <li><strong>Warnings:</strong> <span id="severity-warning">–</span></li>
+        <li><strong>Infos:</strong> <span id="severity-info">–</span></li>
+      </ul>
+    </section>
+
+    <section id="filters" aria-labelledby="filters-heading">
+      <h2 id="filters-heading">Filters</h2>
+
+      <label>
+        Linter:
+        <select id="linter-filter">
+          <option value="">All</option>
+        </select>
+      </label>
+
+      <label>
+        Severity:
+        <select id="severity-filter">
+          <option value="">All</option>
+          <option value="error">Error</option>
+          <option value="warning">Warning</option>
+          <option value="info">Info</option>
+        </select>
+      </label>
+    </section>
+
+    <section id="issues" aria-labelledby="issues-heading">
+      <h2 id="issues-heading">Issues</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Severity</th>
+            <th>Linter</th>
+            <th>Rule</th>
+            <th>Message</th>
+            <th>File</th>
+          </tr>
+        </thead>
+        <tbody id="issues-table-body">
+          <!-- populated by JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
 </html>
