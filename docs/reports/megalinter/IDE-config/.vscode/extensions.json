@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "HTMLHint.vscode-htmlhint",
+        "AquaSecurityOfficial.trivy-vulnerability-scanner",
+        "monosans.djlint",
+        "esbenp.prettier-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "Bridgecrew.checkov"
+    ]
+}

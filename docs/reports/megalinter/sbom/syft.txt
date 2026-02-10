@@ -1,0 +1,8 @@
+[0000]  WARN no explicit name and version provided for directory source, deriving artifact ID from the given path (which is not ideal)
+NAME                           VERSION  TYPE                          
+actions/checkout               v4       github-action  (+1 duplicate)  
+actions/configure-pages        v4       github-action                  
+actions/deploy-pages           v4       github-action                  
+actions/upload-artifact        v4       github-action                  
+actions/upload-pages-artifact  v3       github-action                  
+oxsecurity/megalinter          v8       github-action

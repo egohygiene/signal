@@ -1,0 +1,145 @@
+Results of editorconfig-checker linter (version 3.3.0)
+See documentation on https://megalinter.io/8.8.0/descriptors/editorconfig_editorconfig_checker/
+-----------------------------------------------
+
+✅ [SUCCESS] .dockerignore
+✅ [SUCCESS] .editorconfig
+✅ [SUCCESS] .github/linters/.gitkeep
+✅ [SUCCESS] .github/workflows/megalinter.yml
+✅ [SUCCESS] .github/workflows/pages.yml
+✅ [SUCCESS] .gitignore
+✅ [SUCCESS] .megalinter.yml
+✅ [SUCCESS] .pre-commit-config.yaml
+✅ [SUCCESS] .prettierignore
+✅ [SUCCESS] .releaserc.yml
+❌ [ERROR] .secrets.baseline
+    .secrets.baseline:
+    	Wrong line endings or no final newline
+    
+    1 errors found
+
+✅ [SUCCESS] LICENSE
+❌ [ERROR] config/META6.json
+    config/META6.json:
+    	2-8: Wrong amount of left-padding spaces(want multiple of 4)
+    	10-11: Wrong amount of left-padding spaces(want multiple of 4)
+    	13: Wrong amount of left-padding spaces(want multiple of 4)
+    	15-17: Wrong amount of left-padding spaces(want multiple of 4)
+    	21-24: Wrong amount of left-padding spaces(want multiple of 4)
+    
+    5 errors found
+
+✅ [SUCCESS] config/analysis_options.yml
+❌ [ERROR] config/apex-pmd-ruleset.xml
+    config/apex-pmd-ruleset.xml:
+    	Wrong line endings or no final newline
+    
+    1 errors found
+
+✅ [SUCCESS] config/apt.conf
+✅ [SUCCESS] config/dpkg.cfg
+❌ [ERROR] config/java-pmd-ruleset.xml
+    config/java-pmd-ruleset.xml:
+    	3-7: Wrong amount of left-padding spaces(want multiple of 2)
+    
+    1 errors found
+
+✅ [SUCCESS] config/lychee.toml
+✅ [SUCCESS] config/lynis/custom.prf
+✅ [SUCCESS] config/phpcs.xml
+✅ [SUCCESS] config/phpstan.neon.dist
+❌ [ERROR] config/psalm.xml
+    config/psalm.xml:
+    	4-7: Wrong amount of left-padding spaces(want multiple of 2)
+    
+    1 errors found
+
+❌ [ERROR] config/pyrightconfig.json
+    config/pyrightconfig.json:
+    	2-3: Wrong amount of left-padding spaces(want multiple of 4)
+    	5-6: Wrong amount of left-padding spaces(want multiple of 4)
+    	8-13: Wrong amount of left-padding spaces(want multiple of 4)
+    	15: Wrong amount of left-padding spaces(want multiple of 4)
+    	17: Wrong amount of left-padding spaces(want multiple of 4)
+    	19-20: Wrong amount of left-padding spaces(want multiple of 4)
+    	23-24: Wrong amount of left-padding spaces(want multiple of 4)
+    	26: Wrong amount of left-padding spaces(want multiple of 4)
+    	28-29: Wrong amount of left-padding spaces(want multiple of 4)
+    	31: Wrong amount of left-padding spaces(want multiple of 4)
+    
+    10 errors found
+
+✅ [SUCCESS] config/styles/proselint/Airlinese.yml
+✅ [SUCCESS] config/styles/proselint/AnimalLabels.yml
+✅ [SUCCESS] config/styles/proselint/Annotations.yml
+✅ [SUCCESS] config/styles/proselint/Apologizing.yml
+✅ [SUCCESS] config/styles/proselint/Archaisms.yml
+✅ [SUCCESS] config/styles/proselint/But.yml
+✅ [SUCCESS] config/styles/proselint/Cliches.yml
+✅ [SUCCESS] config/styles/proselint/CorporateSpeak.yml
+✅ [SUCCESS] config/styles/proselint/Currency.yml
+✅ [SUCCESS] config/styles/proselint/Cursing.yml
+✅ [SUCCESS] config/styles/proselint/DateCase.yml
+✅ [SUCCESS] config/styles/proselint/DateMidnight.yml
+✅ [SUCCESS] config/styles/proselint/DateRedundancy.yml
+✅ [SUCCESS] config/styles/proselint/DateSpacing.yml
+✅ [SUCCESS] config/styles/proselint/DenizenLabels.yml
+✅ [SUCCESS] config/styles/proselint/Diacritical.yml
+✅ [SUCCESS] config/styles/proselint/GenderBias.yml
+✅ [SUCCESS] config/styles/proselint/GroupTerms.yml
+✅ [SUCCESS] config/styles/proselint/Hedging.yml
+✅ [SUCCESS] config/styles/proselint/Hyperbole.yml
+✅ [SUCCESS] config/styles/proselint/Jargon.yml
+✅ [SUCCESS] config/styles/proselint/LGBTOffensive.yml
+✅ [SUCCESS] config/styles/proselint/LGBTTerms.yml
+✅ [SUCCESS] config/styles/proselint/Malapropisms.yml
+✅ [SUCCESS] config/styles/proselint/Needless.yml
+✅ [SUCCESS] config/styles/proselint/Nonwords.yml
+✅ [SUCCESS] config/styles/proselint/Oxymorons.yml
+✅ [SUCCESS] config/styles/proselint/P-Value.yml
+❌ [ERROR] config/styles/proselint/RASSyndrome.yml
+    config/styles/proselint/RASSyndrome.yml:
+    	7-9: Wrong amount of left-padding spaces(want multiple of 2)
+    
+    1 errors found
+
+✅ [SUCCESS] config/styles/proselint/README.md
+✅ [SUCCESS] config/styles/proselint/Skunked.yml
+✅ [SUCCESS] config/styles/proselint/Spelling.yml
+✅ [SUCCESS] config/styles/proselint/Typography.yml
+❌ [ERROR] config/styles/proselint/Uncomparables.yml
+    config/styles/proselint/Uncomparables.yml:
+    	8-10: Wrong amount of left-padding spaces(want multiple of 2)
+    
+    1 errors found
+
+✅ [SUCCESS] config/styles/proselint/Very.yml
+❌ [ERROR] config/styles/proselint/meta.json
+    config/styles/proselint/meta.json:
+    	2-11: Wrong amount of left-padding spaces(want multiple of 4)
+    	13-16: Wrong amount of left-padding spaces(want multiple of 4)
+    
+    2 errors found
+
+✅ [SUCCESS] config/styles/write-good/Cliches.yml
+✅ [SUCCESS] config/styles/write-good/E-Prime.yml
+✅ [SUCCESS] config/styles/write-good/Illusions.yml
+✅ [SUCCESS] config/styles/write-good/Passive.yml
+✅ [SUCCESS] config/styles/write-good/README.md
+✅ [SUCCESS] config/styles/write-good/So.yml
+✅ [SUCCESS] config/styles/write-good/ThereIs.yml
+✅ [SUCCESS] config/styles/write-good/TooWordy.yml
+✅ [SUCCESS] config/styles/write-good/Weasel.yml
+❌ [ERROR] config/styles/write-good/meta.json
+    config/styles/write-good/meta.json:
+    	2-3: Wrong amount of left-padding spaces(want multiple of 4)
+    
+    1 errors found
+
+✅ [SUCCESS] config/sun_checks.xml
+✅ [SUCCESS] config/terragrunt.hcl
+✅ [SUCCESS] config/terrascan-config.toml
+✅ [SUCCESS] config/trivy-sbom.yaml
+✅ [SUCCESS] config/trivy.yaml
+✅ [SUCCESS] docs/CNAME
+✅ [SUCCESS] docs/index.html

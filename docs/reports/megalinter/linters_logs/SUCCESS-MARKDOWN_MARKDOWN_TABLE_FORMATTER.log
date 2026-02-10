@@ -1,0 +1,6 @@
+Results of markdown-table-formatter linter (version 1.6.1)
+See documentation on https://megalinter.io/8.8.0/descriptors/markdown_markdown_table_formatter/
+-----------------------------------------------
+
+✅ [SUCCESS] config/styles/proselint/README.md
+✅ [SUCCESS] config/styles/write-good/README.md

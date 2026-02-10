@@ -1,0 +1,113 @@
+Results of gitleaks linter (version 8.27.2)
+See documentation on https://megalinter.io/8.8.0/descriptors/repository_gitleaks/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+Finding:     "hashed_secret": "REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.509341
+File:        .secrets.baseline
+Line:        141
+Commit:      HIDDEN_BY_MEGALINTERAuthor:      Alan Szmyt
+Email:       szmyty@gmail.com
+Date:        2026-02-10T00:57:46Z
+Fingerprint: f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5:.secrets.baseline:generic-api-key:141
+Link:        https://github.com/egohygiene/signal/blob/f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5/.secrets.baseline#L141
+
+Finding:     "hashed_secret": "REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.677567
+File:        .secrets.baseline
+Line:        148
+Commit:      HIDDEN_BY_MEGALINTERAuthor:      Alan Szmyt
+Email:       szmyty@gmail.com
+Date:        2026-02-10T00:57:46Z
+Fingerprint: f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5:.secrets.baseline:generic-api-key:148
+Link:        https://github.com/egohygiene/signal/blob/f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5/.secrets.baseline#L148
+
+Finding:     "hashed_secret": "REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.614911
+File:        .secrets.baseline
+Line:        155
+Commit:      HIDDEN_BY_MEGALINTERAuthor:      Alan Szmyt
+Email:       szmyty@gmail.com
+Date:        2026-02-10T00:57:46Z
+Fingerprint: f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5:.secrets.baseline:generic-api-key:155
+Link:        https://github.com/egohygiene/signal/blob/f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5/.secrets.baseline#L155
+
+Finding:     "hashed_secret": "REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.634830
+File:        .secrets.baseline
+Line:        162
+Commit:      HIDDEN_BY_MEGALINTERAuthor:      Alan Szmyt
+Email:       szmyty@gmail.com
+Date:        2026-02-10T00:57:46Z
+Fingerprint: f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5:.secrets.baseline:generic-api-key:162
+Link:        https://github.com/egohygiene/signal/blob/f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5/.secrets.baseline#L162
+
+Finding:     "hashed_secret": "REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.799582
+File:        .secrets.baseline
+Line:        169
+Commit:      HIDDEN_BY_MEGALINTERAuthor:      Alan Szmyt
+Email:       szmyty@gmail.com
+Date:        2026-02-10T00:57:46Z
+Fingerprint: f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5:.secrets.baseline:generic-api-key:169
+Link:        https://github.com/egohygiene/signal/blob/f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5/.secrets.baseline#L169
+
+Finding:     "hashed_secret": "REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.689823
+File:        .secrets.baseline
+Line:        178
+Commit:      HIDDEN_BY_MEGALINTERAuthor:      Alan Szmyt
+Email:       szmyty@gmail.com
+Date:        2026-02-10T00:57:46Z
+Fingerprint: f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5:.secrets.baseline:generic-api-key:178
+Link:        https://github.com/egohygiene/signal/blob/f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5/.secrets.baseline#L178
+
+Finding:     "hashed_secret": "REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.753702
+File:        .secrets.baseline
+Line:        187
+Commit:      HIDDEN_BY_MEGALINTERAuthor:      Alan Szmyt
+Email:       szmyty@gmail.com
+Date:        2026-02-10T00:57:46Z
+Fingerprint: f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5:.secrets.baseline:generic-api-key:187
+Link:        https://github.com/egohygiene/signal/blob/f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5/.secrets.baseline#L187
+
+Finding:     "hashed_secret": "REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     3.584830
+File:        .secrets.baseline
+Line:        196
+Commit:      HIDDEN_BY_MEGALINTERAuthor:      Alan Szmyt
+Email:       szmyty@gmail.com
+Date:        2026-02-10T00:57:46Z
+Fingerprint: f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5:.secrets.baseline:generic-api-key:196
+Link:        https://github.com/egohygiene/signal/blob/f9b142f08aaa62b8cfd4ca90094e3ee8d476bdf5/.secrets.baseline#L196
+
+3:22AM INF 12 commits scanned.
+3:22AM INF scanned ~135986 bytes (135.99 KB) in 199ms
+3:22AM WRN leaks found: 8
+

@@ -1,0 +1,6 @@
+TAP version 13
+1..4
+not ok 1 - config/META6.json
+not ok 2 - config/pyrightconfig.json
+not ok 3 - config/styles/proselint/meta.json
+not ok 4 - config/styles/write-good/meta.json

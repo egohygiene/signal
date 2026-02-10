@@ -1,0 +1,7 @@
+TAP version 13
+1..5
+ok 1 - config/apex-pmd-ruleset.xml
+ok 2 - config/java-pmd-ruleset.xml
+ok 3 - config/phpcs.xml
+ok 4 - config/psalm.xml
+ok 5 - config/sun_checks.xml

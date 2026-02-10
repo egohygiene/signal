@@ -1,0 +1,9 @@
+Results of xmllint linter (version 21304)
+See documentation on https://megalinter.io/8.8.0/descriptors/xml_xmllint/
+-----------------------------------------------
+
+✅ [SUCCESS] config/apex-pmd-ruleset.xml
+✅ [SUCCESS] config/java-pmd-ruleset.xml
+✅ [SUCCESS] config/phpcs.xml
+✅ [SUCCESS] config/psalm.xml
+✅ [SUCCESS] config/sun_checks.xml

@@ -1,0 +1,8 @@
+Results of terragrunt linter (version 0.81.6)
+See documentation on https://megalinter.io/8.8.0/descriptors/terraform_terragrunt/
+-----------------------------------------------
+
+❌ [ERROR] config/terragrunt.hcl
+    03:22:58.619 WARN   The `hclfmt` command is deprecated and will be removed in a future version of Terragrunt. Use `terragrunt hcl format` instead.
+    03:22:58.620 ERROR  flag `--terragrunt-config` is not a valid flag for `format`. Did you mean to use `console --config`?
+
