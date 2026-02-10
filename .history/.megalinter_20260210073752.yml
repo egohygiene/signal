@@ -14,7 +14,6 @@ DISABLE: []
 DISABLE_LINTERS:
   - REPOSITORY_DEVSKIM
   - JSON_ESLINT_PLUGIN_JSONC
-  - MAKEFILE_CHECKMAKE
 DISABLE_ERRORS_LINTERS: []
 ENABLE_ERRORS_LINTERS: []
 ERROR_ON_MISSING_EXEC_BIT: true
@@ -68,7 +67,7 @@ POST_COMMANDS: []
 PRE_COMMANDS:
   - command: echo "Calling pre-commands from ${pwd}"
     cwd: "root"
-  - command: npm install @secretlint/secretlint-rule-basicauth @secretlint/secretlint-rule-aws @secretlint/secretlint-rule-pattern @secretlint/privatekey @secretlint/secretlint-rule-openai @secretlint/secretlint-rule-secp256k1-privatekey @secretlint/secretlint-rule-database-connection-string @secretlint/secretlint-rule-gcp @secretlint/secretlint-rule-github @secretlint/secretlint-rule-no-dotenv @secretlint/secretlint-rule-npm @secretlint/secretlint-rule-git @secretlint/secretlint-rule-no-homedir
+  - command: npm install @secretlint/secretlint-rule-basicauth @secretlint/secretlint-rule-aws @secretlint/secretlint-rule-pattern @secretlint/privatekey
     cwd: "workspace"
   # - command: pip install flake8-cognitive-complexity
   #   venv: flake8 # Will be run within flake8 python virtualenv. There is one virtualenv per python-based linter, with the same name
