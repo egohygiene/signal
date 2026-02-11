@@ -92,7 +92,7 @@ PRE_COMMANDS:
       @secretlint/secretlint-rule-no-dotenv \
       @secretlint/secretlint-rule-npm \
       @secretlint/secretlint-rule-no-homedir
-    cwd: "root"
+    cwd: "workspace"
 
 # Directory configurations
 KUBERNETES_DIRECTORY: any
