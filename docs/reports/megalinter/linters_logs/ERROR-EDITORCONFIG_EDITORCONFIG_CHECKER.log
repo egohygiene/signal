@@ -35,6 +35,36 @@ See documentation on https://megalinter.io/8.8.0/descriptors/editorconfig_editor
 ❌ [ERROR] .secrets.baseline
     json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
+❌ [ERROR] .vscode/dictionaries/backend-terms.dictionary
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .vscode/dictionaries/devops-cloud-terms.dictionary
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .vscode/dictionaries/frontend-terms.dictionary
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .vscode/dictionaries/programming-terms.dictionary
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .vscode/dictionaries/project-words.dictionary
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .vscode/dictionaries/software-terms.dictionary
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .vscode/extensions.json
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .vscode/launch.json
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .vscode/settings.json
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] .vscode/tasks.json
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
 ❌ [ERROR] LICENSE
     json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
@@ -447,5 +477,8 @@ See documentation on https://megalinter.io/8.8.0/descriptors/editorconfig_editor
     json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
 ❌ [ERROR] package.json
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] signal.code-workspace
     json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 

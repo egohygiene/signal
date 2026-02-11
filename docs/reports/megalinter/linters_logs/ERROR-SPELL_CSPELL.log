@@ -57,6 +57,56 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     -------------------------------------------
     CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
+❌ [ERROR] .vscode/dictionaries/backend-terms.dictionary
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] .vscode/dictionaries/devops-cloud-terms.dictionary
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] .vscode/dictionaries/frontend-terms.dictionary
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] .vscode/dictionaries/programming-terms.dictionary
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] .vscode/dictionaries/project-words.dictionary
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] .vscode/dictionaries/software-terms.dictionary
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] .vscode/extensions.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] .vscode/launch.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] .vscode/settings.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] .vscode/tasks.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
 ❌ [ERROR] LICENSE
     Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
     -------------------------------------------
@@ -743,6 +793,11 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
 ❌ [ERROR] package.json
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
+❌ [ERROR] signal.code-workspace
     Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
     -------------------------------------------
     CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.

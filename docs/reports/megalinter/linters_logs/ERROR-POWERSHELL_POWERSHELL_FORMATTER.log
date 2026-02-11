@@ -3,11 +3,11 @@ See documentation on https://megalinter.io/8.8.0/descriptors/powershell_powershe
 -----------------------------------------------
 
 ❌ [ERROR] config/.arm-ttk.psd1
-    Invoke-Formatter: pipelineindentation is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
+    Invoke-Formatter: alignpropertyassignment is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
 
 ❌ [ERROR] config/.powershell-formatter.psd1
-    Invoke-Formatter: usesettingsfile is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
+    Invoke-Formatter: trimwhitespace is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
 
 ❌ [ERROR] config/.powershell-psscriptanalyzer.psd1
-    Invoke-Formatter: convertdoublequotestosingle is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
+    Invoke-Formatter: placeclosebraceonnewline is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
 
