@@ -146,7 +146,7 @@ DOCKERFILE_HADOLINT_CONFIG_FILE: config/.hadolint.yaml
 
 # editorconfig-checker: https://github.com/editorconfig-checker/editorconfig-checker
 # https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/
-EDITORCONFIG_EDITORCONFIG_CHECKER_CONFIG_FILE: config/.editorconfig-checker.json
+EDITORCONFIG_EDITORCONFIG_CHECKER_CONFIG_FILE: config/.ecrc
 
 # gherkin-lint: https://github.com/gherkin-lint/gherkin-lint
 # https://megalinter.io/latest/descriptors/gherkin_gherkin_lint/
