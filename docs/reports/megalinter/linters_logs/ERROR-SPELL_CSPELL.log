@@ -792,16 +792,6 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     -------------------------------------------
     CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
-❌ [ERROR] package-lock.json
-    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
-    -------------------------------------------
-    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
-
-❌ [ERROR] package.json
-    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
-    -------------------------------------------
-    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
-
 ❌ [ERROR] signal.code-workspace
     Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
     -------------------------------------------

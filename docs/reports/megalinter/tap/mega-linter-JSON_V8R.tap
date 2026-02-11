@@ -1,5 +1,5 @@
 TAP version 13
-1..25
+1..23
 ok 1 - .vscode/extensions.json
 ok 2 - .vscode/launch.json
 ok 3 - .vscode/settings.json
@@ -23,5 +23,3 @@ ok 20 - config/META6.json
 ok 21 - config/pyrightconfig.json
 ok 22 - config/styles/proselint/meta.json
 ok 23 - config/styles/write-good/meta.json
-ok 24 - package-lock.json
-ok 25 - package.json
