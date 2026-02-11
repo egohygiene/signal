@@ -94,6 +94,7 @@ PRE_COMMANDS:
       @secretlint/secretlint-rule-no-homedir
     cwd: "workspace"
 
+
 # Directory configurations
 KUBERNETES_DIRECTORY: any
 KUBERNETES_HELM_DIRECTORY: any

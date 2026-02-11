@@ -13,7 +13,6 @@ callback
 CLI
 codegen
 commitizen
-secp256k1
 config
 dartfrog
 data

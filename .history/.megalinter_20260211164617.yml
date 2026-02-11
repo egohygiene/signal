@@ -54,6 +54,10 @@ GITLAB_CERTIFICATE_PATH: ""
 IGNORE_GENERATED_FILES: true
 IGNORE_GITIGNORED_FILES: true
 JAVASCRIPT_DEFAULT_STYLE: prettier
+KUBERNETES_DIRECTORY: "any"
+KUBERNETES_HELM_DIRECTORY: "any"
+KUBERNETES_KUBECONFORM_DIRECTORY: "any"
+KUBERNETES_KUBESCAPE_DIRECTORY: "any"
 LINTER_RULES_PATH: .github/linters
 LOG_FILE: mega-linter.log
 LOG_LEVEL: INFO
@@ -62,19 +66,6 @@ PARALLEL: true
 PARALLEL_PROCESS_NUMBER: 4
 PLUGINS: []
 POST_COMMANDS: []
-PRINT_ALPACA: true
-PRINT_ALL_FILES: true
-PYTHON_DEFAULT_STYLE: ruff
-REPORTERS_MARKDOWN_TYPE: advanced
-REPORT_OUTPUT_FOLDER: reports/megalinter
-SECURED_ENV_VARIABLES: []
-SHOW_ELAPSED_TIME: true
-SHOW_SKIPPED_LINTERS: false
-SKIP_CLI_LINT_MODES: []
-TYPESCRIPT_DEFAULT_STYLE: prettier
-VALIDATE_ALL_CODEBASE: true
-
-# Pre-commands to run before linters execution
 PRE_COMMANDS:
   - command: echo "Calling pre-commands from $(pwd)"
     cwd: "root"
@@ -93,13 +84,19 @@ PRE_COMMANDS:
       @secretlint/secretlint-rule-npm \
       @secretlint/secretlint-rule-no-homedir
     cwd: "workspace"
-
-# Directory configurations
-KUBERNETES_DIRECTORY: any
-KUBERNETES_HELM_DIRECTORY: any
-KUBERNETES_KUBECONFORM_DIRECTORY: any
-KUBERNETES_KUBESCAPE_DIRECTORY: any
-SALESFORCE_DIRECTORY: any
+  # - command: pip install flake8-cognitive-complexity
+  #   venv: flake8 # Will be run within flake8 python virtualenv. There is one virtualenv per python-based linter, with the same name
+PRINT_ALPACA: true
+PRINT_ALL_FILES: true
+PYTHON_DEFAULT_STYLE: ruff
+REPORTERS_MARKDOWN_TYPE: advanced
+REPORT_OUTPUT_FOLDER: reports/megalinter
+SECURED_ENV_VARIABLES: []
+SHOW_ELAPSED_TIME: true
+SHOW_SKIPPED_LINTERS: false
+SKIP_CLI_LINT_MODES: []
+TYPESCRIPT_DEFAULT_STYLE: prettier
+VALIDATE_ALL_CODEBASE: true
 
 # Linter configuration: https://megalinter.io/latest/supported-linters/
 # https://megalinter.io/latest/json-schemas/configuration.html
