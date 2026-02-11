@@ -1,5 +1,5 @@
 TAP version 13
-1..95
+1..93
 not ok 1 - .github/workflows/megalinter.yml
 not ok 2 - .github/workflows/pages.yml
 not ok 3 - .megalinter.yml
@@ -93,5 +93,3 @@ not ok 90 - config/styles/write-good/meta.json
 not ok 91 - config/trivy-sbom.yaml
 not ok 92 - config/trivy.yaml
 not ok 93 - docs/index.html
-not ok 94 - package-lock.json
-not ok 95 - package.json

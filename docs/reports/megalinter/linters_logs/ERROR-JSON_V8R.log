@@ -85,5 +85,3 @@ See documentation on https://megalinter.io/8.8.0/descriptors/json_v8r/
 ✅ [SUCCESS] config/pyrightconfig.json
 ✅ [SUCCESS] config/styles/proselint/meta.json
 ✅ [SUCCESS] config/styles/write-good/meta.json
-✅ [SUCCESS] package-lock.json
-✅ [SUCCESS] package.json

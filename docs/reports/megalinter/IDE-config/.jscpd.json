@@ -11,7 +11,11 @@
         "**/venv/**",
         "**/.venv/**",
         "**/.pnpm-store/**",
-        "**/config/styles/**"
+        "**/config/styles/**",
+        "**/config/.bandit.yml",
+        "package-lock.json",
+        "**/package-lock.json",
+        "**/*.lock"
     ],
     "absolute": true,
     "gitignore": true,
