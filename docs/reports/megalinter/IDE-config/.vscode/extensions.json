@@ -1,15 +1,15 @@
 {
     "recommendations": [
-        "borkdude.clj-kondo",
-        "ms-vscode.PowerShell",
-        "kddejong.vscode-cfn-lint",
-        "esbenp.prettier-vscode",
-        "AquaSecurityOfficial.trivy-vulnerability-scanner",
-        "streetsidesoftware.code-spell-checker",
-        "Bridgecrew.checkov",
         "monosans.djlint",
+        "esbenp.prettier-vscode",
+        "borkdude.clj-kondo",
+        "HTMLHint.vscode-htmlhint",
+        "kddejong.vscode-cfn-lint",
+        "ms-vscode.PowerShell",
         "PatrykPeszko.vscode-proselint",
+        "streetsidesoftware.code-spell-checker",
+        "AquaSecurityOfficial.trivy-vulnerability-scanner",
         "ChrisChinchilla.vale-vscode",
-        "HTMLHint.vscode-htmlhint"
+        "Bridgecrew.checkov"
     ]
 }

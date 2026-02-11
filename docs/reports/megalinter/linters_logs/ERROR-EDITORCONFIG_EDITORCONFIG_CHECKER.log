@@ -437,6 +437,9 @@ See documentation on https://megalinter.io/8.8.0/descriptors/editorconfig_editor
 ❌ [ERROR] docs/CNAME
     json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
+❌ [ERROR] docs/favicon.ico
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
 ❌ [ERROR] docs/index.html
     json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 

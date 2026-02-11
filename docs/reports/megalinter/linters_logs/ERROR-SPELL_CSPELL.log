@@ -727,6 +727,11 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
     -------------------------------------------
     CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 
+❌ [ERROR] docs/favicon.ico
+    Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
+    -------------------------------------------
+    CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
+
 ❌ [ERROR] docs/index.html
     Configuration Error: Failed to read config file: "config/.cspell.config.mjs"
     -------------------------------------------
