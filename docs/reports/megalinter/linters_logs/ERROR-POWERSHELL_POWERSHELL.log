@@ -9,5 +9,5 @@ See documentation on https://megalinter.io/8.8.0/descriptors/powershell_powershe
     Invoke-ScriptAnalyzer: powershellversion is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
 
 ❌ [ERROR] config/.powershell-psscriptanalyzer.psd1
-    Invoke-ScriptAnalyzer: powershellversion is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
+    Invoke-ScriptAnalyzer: rootmodule is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
 

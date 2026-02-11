@@ -7,5 +7,5 @@ See documentation on https://megalinter.io/8.8.0/descriptors/clojure_clj_kondo/
     config/.clj-kondo/config.edn:13:3: warning: Unexpected linter name: :fn-arity
     config/.clj-kondo/config.edn:16:3: warning: Unexpected linter name: :wrong-arity
     config/.clj-kondo/config.edn:17:3: warning: Unexpected linter name: :macroexpand
-    linting took 7ms, errors: 0, warnings: 4
+    linting took 4ms, errors: 0, warnings: 4
 

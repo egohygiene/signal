@@ -1,0 +1,12 @@
+Results of npm-package-json-lint linter (version 8.0.0)
+See documentation on https://megalinter.io/8.8.0/descriptors/json_npm_package_json_lint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+cli:
+	Configuration for rule "name-format" is invalid:
+	- severity must be a string.
+	- severity must be either "off", "warning", or "error".
+
+

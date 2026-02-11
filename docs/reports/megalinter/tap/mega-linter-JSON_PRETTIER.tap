@@ -1,5 +1,5 @@
 TAP version 13
-1..19
+1..21
 not ok 1 - config/.coffee-lint.json
 not ok 2 - config/.devskim.json
 not ok 3 - config/.editorconfig-checker.json
@@ -19,3 +19,5 @@ not ok 16 - config/META6.json
 not ok 17 - config/pyrightconfig.json
 not ok 18 - config/styles/proselint/meta.json
 not ok 19 - config/styles/write-good/meta.json
+not ok 20 - package-lock.json
+not ok 21 - package.json

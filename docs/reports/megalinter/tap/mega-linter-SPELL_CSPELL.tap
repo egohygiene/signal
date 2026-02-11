@@ -1,5 +1,5 @@
 TAP version 13
-1..147
+1..149
 not ok 1 - .dockerignore
 not ok 2 - .editorconfig
 not ok 3 - .github/linters/.gitkeep
@@ -147,3 +147,5 @@ not ok 144 - config/trivy.yaml
 not ok 145 - docs/CNAME
 not ok 146 - docs/favicon.ico
 not ok 147 - docs/index.html
+not ok 148 - package-lock.json
+not ok 149 - package.json

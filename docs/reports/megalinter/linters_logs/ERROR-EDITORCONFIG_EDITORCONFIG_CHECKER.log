@@ -443,3 +443,9 @@ See documentation on https://megalinter.io/8.8.0/descriptors/editorconfig_editor
 ❌ [ERROR] docs/index.html
     json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
+❌ [ERROR] package-lock.json
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
+❌ [ERROR] package.json
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+

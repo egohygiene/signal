@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-02-11T06:57:55.355Z",
+    "detectionDate": "2026-02-11T07:13:32.525Z",
     "formats": {
       "json": {
         "sources": {
@@ -219,17 +219,41 @@
             "percentageTokens": 0,
             "newDuplicatedLines": 0,
             "newClones": 0
+          },
+          "/github/workspace/package.json": {
+            "lines": 15,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 15,
+            "duplicatedTokens": 95,
+            "percentage": 100,
+            "percentageTokens": 101.06,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/package-lock.json": {
+            "lines": 741,
+            "tokens": 4385,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 15,
+            "duplicatedTokens": 95,
+            "percentage": 2.02,
+            "percentageTokens": 2.17,
+            "newDuplicatedLines": 0,
+            "newClones": 0
           }
         },
         "total": {
-          "lines": 577,
-          "tokens": 3157,
-          "sources": 18,
-          "clones": 0,
-          "duplicatedLines": 0,
-          "duplicatedTokens": 0,
-          "percentage": 0,
-          "percentageTokens": 0,
+          "lines": 1333,
+          "tokens": 7636,
+          "sources": 20,
+          "clones": 1,
+          "duplicatedLines": 15,
+          "duplicatedTokens": 95,
+          "percentage": 1.13,
+          "percentageTokens": 1.24,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -1005,8 +1029,8 @@
             "newClones": 0
           },
           "/github/workspace/.megalinter.yml": {
-            "lines": 481,
-            "tokens": 1606,
+            "lines": 494,
+            "tokens": 1517,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1018,14 +1042,14 @@
           }
         },
         "total": {
-          "lines": 4850,
-          "tokens": 33682,
+          "lines": 4863,
+          "tokens": 33593,
           "sources": 65,
           "clones": 28,
           "duplicatedLines": 705,
           "duplicatedTokens": 6282,
-          "percentage": 14.54,
-          "percentageTokens": 18.65,
+          "percentage": 14.5,
+          "percentageTokens": 18.7,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -1356,14 +1380,14 @@
       }
     },
     "total": {
-      "lines": 6204,
-      "tokens": 42652,
-      "sources": 102,
-      "clones": 28,
-      "duplicatedLines": 705,
-      "duplicatedTokens": 6282,
-      "percentage": 11.36,
-      "percentageTokens": 14.73,
+      "lines": 6973,
+      "tokens": 47042,
+      "sources": 104,
+      "clones": 29,
+      "duplicatedLines": 720,
+      "duplicatedTokens": 6377,
+      "percentage": 10.33,
+      "percentageTokens": 13.56,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
@@ -2374,6 +2398,42 @@
           "line": 39,
           "column": 12,
           "position": 185
+        }
+      }
+    },
+    {
+      "format": "json",
+      "lines": 16,
+      "fragment": "{\n      \"dependencies\": {\n        \"@secretlint/secretlint-rule-aws\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-basicauth\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-database-connection-string\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-gcp\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-github\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-no-dotenv\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-no-homedir\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-npm\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-openai\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-pattern\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-privatekey\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-secp256k1-privatekey\": \"^11.3.1\"\n      }\n    }",
+      "tokens": 0,
+      "firstFile": {
+        "name": "/github/workspace/package-lock.json",
+        "start": 6,
+        "end": 21,
+        "startLoc": {
+          "line": 6,
+          "column": 2,
+          "position": 33
+        },
+        "endLoc": {
+          "line": 21,
+          "column": 2,
+          "position": 128
+        }
+      },
+      "secondFile": {
+        "name": "/github/workspace/package.json",
+        "start": 1,
+        "end": 16,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 16,
+          "column": 2,
+          "position": 94
         }
       }
     }
