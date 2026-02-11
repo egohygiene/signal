@@ -111,6 +111,28 @@ trivy-sbom (REPOSITORY)
   - vscode:
     - VSCode Trivy: https://marketplace.visualstudio.com/items?itemName=AquaSecurityOfficial.trivy-vulnerability-scanner
 
+lightning-flow-scanner (SALESFORCE)
+  - vscode:
+    - Lightning Flow Scanner: https://marketplace.visualstudio.com/items?itemName=ForceConfigControl.lightningflowscanner
+
+sfdx-scanner-apex (SALESFORCE)
+  - eclipse:
+    - pmd-eclipse-plugin: https://github.com/pmd/pmd-eclipse-plugin
+  - emacs:
+    - pmd-emacs: https://github.com/pmd/pmd-emacs/
+  - idea:
+    - PMD IntelliJ: https://plugins.jetbrains.com/plugin/1137-pmdplugin
+  - vscode:
+    - Salesforce Extension Pack: https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode
+
+sfdx-scanner-aura (SALESFORCE)
+  - vscode:
+    - Salesforce Extension Pack: https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode
+
+sfdx-scanner-lwc (SALESFORCE)
+  - vscode:
+    - Salesforce Extension Pack: https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode
+
 cspell (SPELL)
   - vscode:
     - Code Spell Checker: https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker

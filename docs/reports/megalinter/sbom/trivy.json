@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:6ec50fa0-f979-4f1c-86f5-8059bbf4056d",
+    "serialNumber": "urn:uuid:b00afe0f-1057-46d0-836c-56d846d989c3",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-02-11T21:41:52+00:00",
+        "timestamp": "2026-02-11T21:56:35+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "f3261788-558f-43d6-923d-bbaaedd92ee4",
+            "bom-ref": "d145524a-f14e-4205-b038-d209cfcced9a",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,7 +30,7 @@
     },
     "components": [
         {
-            "bom-ref": "85bec89f-3032-486d-9b21-24fd8d7a494c",
+            "bom-ref": "29a2fc7b-b5fe-4515-99c1-8447cbefd464",
             "type": "application",
             "name": "package-lock.json",
             "properties": [
@@ -1654,7 +1654,7 @@
     ],
     "dependencies": [
         {
-            "ref": "85bec89f-3032-486d-9b21-24fd8d7a494c",
+            "ref": "29a2fc7b-b5fe-4515-99c1-8447cbefd464",
             "dependsOn": [
                 "pkg:npm/%40secretlint/secretlint-rule-aws@11.3.1",
                 "pkg:npm/%40secretlint/secretlint-rule-basicauth@11.3.1",
@@ -1671,9 +1671,9 @@
             ]
         },
         {
-            "ref": "f3261788-558f-43d6-923d-bbaaedd92ee4",
+            "ref": "d145524a-f14e-4205-b038-d209cfcced9a",
             "dependsOn": [
-                "85bec89f-3032-486d-9b21-24fd8d7a494c"
+                "29a2fc7b-b5fe-4515-99c1-8447cbefd464"
             ]
         },
         {

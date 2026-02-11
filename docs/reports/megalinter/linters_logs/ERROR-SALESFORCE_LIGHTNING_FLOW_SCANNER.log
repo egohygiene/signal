@@ -1,0 +1,10 @@
+Results of lightning-flow-scanner linter (version ERROR)
+See documentation on https://megalinter.io/8.8.0/descriptors/salesforce_lightning_flow_scanner/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+ ›   Warning: @salesforce/cli update available from 2.92.7 to 2.122.6.
+ ›   Warning: flow scan is not a sf command.
+ ›   Error: Run sf help flow for a list of available commands.
+
