@@ -13,6 +13,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/yaml_v8r/
 ✅ [SUCCESS] config/.golangci.yml
 ✅ [SUCCESS] config/.grype.yaml
 ✅ [SUCCESS] config/.hadolint.yaml
+✅ [SUCCESS] config/.ls-lint.yml
 ✅ [SUCCESS] config/.phplint.yml
 ✅ [SUCCESS] config/.protolintrc.yml
 ✅ [SUCCESS] config/.ruby-lint.yml

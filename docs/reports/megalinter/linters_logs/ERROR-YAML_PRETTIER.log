@@ -46,6 +46,10 @@ See documentation on https://megalinter.io/8.8.0/descriptors/yaml_prettier/
     Checking formatting...
     [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
+❌ [ERROR] config/.ls-lint.yml
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
 ❌ [ERROR] config/.phplint.yml
     Checking formatting...
     [error] Cannot find package 'prettier-plugin-sh' imported from noop.js

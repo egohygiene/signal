@@ -1,0 +1,73 @@
+Results of sfdx-scanner-apex linter (version 4.12.0)
+See documentation on https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_apex/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+You acknowledge and agree that the CLI tool may collect usage information, user environment, and crash reports for the purposes of providing services or functions that are relevant to use of the CLI tool and product improvements.
+
+@salesforce/cli: Installing plugin @salesforce/sfdx-scanner@4.12.0... installed v4.12.0
+(node:4913) ExperimentalWarning: CommonJS module /node-deps/node_modules/@salesforce/cli/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /node-deps/node_modules/@salesforce/cli/node_modules/npm/node_modules/supports-color/index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/pmd7/lib/apex-ls_2.13-5.7.0.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/pmd7/lib/apex-parser-4.4.0.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/pmd7/lib/apex-types_2.13-1.3.0.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/sfge/lib/asm-9.2.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/pmd7/lib/asm-9.7.1.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/pmd7/lib/better-files_2.13-3.9.2.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/pmd7/lib/checker-compat-qual-2.5.3.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/sfge/lib/checker-qual-3.42.0.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/pmd7/lib/checker-qual-3.49.0.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/sfge/lib/cli-messaging-1.0.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/sfge/lib/commons-beanutils-1.9.4.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/sfge/lib/commons-cli-1.4.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/pmd7/lib/commons-codec-1.15.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/sfge/lib/commons-collections-3.2.2.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/sfge/lib/commons-collections4-4.4.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/sfge/lib/commons-configuration2-2.9.0.jar'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_modules/zod/lib/locales/en.d.ts'
+added 579 packages in 22s
+ ›   ModuleLoadError: [MODULE_NOT_FOUND] require failed to load 
+ ›   /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/lib/com
+ ›   mands/scanner/run.js: Cannot find module './builder'
+ ›   Require stack:
+ ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
+ ›   modules/xml2js/lib/xml2js.js
+ ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
+ ›   modules/jsforce/lib/http-api.js
+ ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
+ ›   modules/jsforce/lib/connection.js
+ ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
+ ›   modules/jsforce/lib/jsforce.js
+ ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
+ ›   modules/jsforce/lib/index.js
+ ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
+ ›   modules/jsforce/index.js
+ ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
+ ›   modules/@salesforce/sf-plugins-core/node_modules/@salesforce/core/lib/org/
+ ›   authInfo.js
+ ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
+ ›   modules/@salesforce/sf-plugins-core/node_modules/@salesforce/core/lib/devi
+ ›   ceOauthService.js
+ ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
+ ›   modules/@salesforce/sf-plugins-core/node_modules/@salesforce/core/lib/inde
+ ›   x.js
+ ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
+ ›   modules/@salesforce/sf-plugins-core/lib/util.js
+ ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
+ ›   modules/@salesforce/sf-plugins-core/lib/exported.js
+ ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/lib/c
+ ›   ommands/scanner/run.js
+ ›   - /node-deps/node_modules/@salesforce/cli/node_modules/@oclif/core/lib/mod
+ ›   ule-loader.js
+ ›   - /node-deps/node_modules/@salesforce/cli/node_modules/@oclif/core/lib/hel
+ ›   p/index.js
+ ›   - /node-deps/node_modules/@salesforce/cli/node_modules/@oclif/core/lib/err
+ ›   ors/handle.js
+ ›   - /node-deps/node_modules/@salesforce/cli/node_modules/@oclif/core/lib/err
+ ›   ors/index.js
+ ›   - /node-deps/node_modules/@salesforce/cli/node_modules/@oclif/core/lib/exe
+ ›   cute.js
+ ›   Code: MODULE_NOT_FOUND
+

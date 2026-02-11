@@ -167,6 +167,9 @@ See documentation on https://megalinter.io/8.8.0/descriptors/editorconfig_editor
 ❌ [ERROR] config/.lintr
     json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 
+❌ [ERROR] config/.ls-lint.yml
+    json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
+
 ❌ [ERROR] config/.luacheckrc
     json: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks
 

@@ -1,4 +1,232 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Copy/Paste Detector Report</title><link href="styles/tailwind.css" rel="stylesheet"><link href="styles/prism.css" rel="stylesheet"></head><body class="bg-gray-100"><header class="bg-white shadow py-4"><div class="container mx-auto px-4"><h1 class="text-3xl font-semibold text-gray-800">jscpd - copy/paste report</h1></div></header><main class="container mx-auto my-8 p-4 bg-white shadow rounded"><section class="mb-8" id="dashboard"><h2 class="text-2xl font-semibold text-gray-700 mb-4">Dashboard</h2><div class="grid grid-cols-4 gap-4"><div class="bg-blue-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-blue-800 mb-2">Total Files</h3><span class="text-4xl font-bold text-blue-800">107</span></div><div class="bg-green-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-green-800 mb-2">Total Lines of Code</h3><span class="text-4xl font-bold text-green-800">7153</span></div><div class="bg-yellow-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-yellow-800 mb-2">Number of Clones</h3><span class="text-4xl font-bold text-yellow-800">29</span></div><div class="bg-red-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-red-800 mb-2">Duplicated Lines</h3><span class="text-4xl font-bold text-red-800">720 (10.07%)</span></div></div></section><section class="mb-8" id="formats"><h2 class="text-2xl font-semibold text-gray-700 mb-4">Formats with Duplications</h2><table class="w-full table-auto"><thead><tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"><th class="py-3 px-6 text-left">Format</th><th class="py-3 px-6 text-left">Files</th><th class="py-3 px-6 text-left">Lines</th><th class="py-3 px-6 text-left">Clones</th><th class="py-3 px-6 text-left">Duplicated Lines</th><th class="py-3 px-6 text-left">Duplicated Tokens</th></tr></thead><tbody><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#json-clones">json</a></td><td class="py-3 px-6">23</td><td class="py-3 px-6">1507</td><td class="py-3 px-6">1</td><td class="py-3 px-6">15</td><td class="py-3 px-6">95</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#yaml-clones">yaml</a></td><td class="py-3 px-6">65</td><td class="py-3 px-6">4869</td><td class="py-3 px-6">28</td><td class="py-3 px-6">705</td><td class="py-3 px-6">6282</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#markdown-clones">markdown</a></td><td class="py-3 px-6">2</td><td class="py-3 px-6">37</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#clojure-clones">clojure</a></td><td class="py-3 px-6">1</td><td class="py-3 px-6">33</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#markup-clones">markup</a></td><td class="py-3 px-6">6</td><td class="py-3 px-6">211</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#ini-clones">ini</a></td><td class="py-3 px-6">3</td><td class="py-3 px-6">81</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#javascript-clones">javascript</a></td><td class="py-3 px-6">4</td><td class="py-3 px-6">312</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#powershell-clones">powershell</a></td><td class="py-3 px-6">3</td><td class="py-3 px-6">103</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr></tbody></table></section><section class="mb-8" id="txt-clones"><a name="json-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">json</h2><div class="divide-y divide-gray-200 border-b-2"><div class="py-4"><p class="text-gray-600">/github/workspace/package-lock.json (Line 6:2 - Line 21:2), /github/workspace/package.json (Line 1:1 - Line 16:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn28" onclick="toggleCodeBlock('cloneGroup28', 'expandBtn28', 'collapseBtn28')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn28" onclick="toggleCodeBlock('cloneGroup28', 'expandBtn28', 'collapseBtn28')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup28"><code class="language-json text-sm text-gray-800">{
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Copy/Paste Detector Report</title><link href="styles/tailwind.css" rel="stylesheet"><link href="styles/prism.css" rel="stylesheet"></head><body class="bg-gray-100"><header class="bg-white shadow py-4"><div class="container mx-auto px-4"><h1 class="text-3xl font-semibold text-gray-800">jscpd - copy/paste report</h1></div></header><main class="container mx-auto my-8 p-4 bg-white shadow rounded"><section class="mb-8" id="dashboard"><h2 class="text-2xl font-semibold text-gray-700 mb-4">Dashboard</h2><div class="grid grid-cols-4 gap-4"><div class="bg-blue-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-blue-800 mb-2">Total Files</h3><span class="text-4xl font-bold text-blue-800">62</span></div><div class="bg-green-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-green-800 mb-2">Total Lines of Code</h3><span class="text-4xl font-bold text-green-800">4169</span></div><div class="bg-yellow-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-yellow-800 mb-2">Number of Clones</h3><span class="text-4xl font-bold text-yellow-800">7</span></div><div class="bg-red-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-red-800 mb-2">Duplicated Lines</h3><span class="text-4xl font-bold text-red-800">243 (5.83%)</span></div></div></section><section class="mb-8" id="formats"><h2 class="text-2xl font-semibold text-gray-700 mb-4">Formats with Duplications</h2><table class="w-full table-auto"><thead><tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"><th class="py-3 px-6 text-left">Format</th><th class="py-3 px-6 text-left">Files</th><th class="py-3 px-6 text-left">Lines</th><th class="py-3 px-6 text-left">Clones</th><th class="py-3 px-6 text-left">Duplicated Lines</th><th class="py-3 px-6 text-left">Duplicated Tokens</th></tr></thead><tbody><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#clojure-clones">clojure</a></td><td class="py-3 px-6">1</td><td class="py-3 px-6">33</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#yaml-clones">yaml</a></td><td class="py-3 px-6">24</td><td class="py-3 px-6">1940</td><td class="py-3 px-6">6</td><td class="py-3 px-6">228</td><td class="py-3 px-6">1104</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#markup-clones">markup</a></td><td class="py-3 px-6">6</td><td class="py-3 px-6">211</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#json-clones">json</a></td><td class="py-3 px-6">21</td><td class="py-3 px-6">1489</td><td class="py-3 px-6">1</td><td class="py-3 px-6">15</td><td class="py-3 px-6">95</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#ini-clones">ini</a></td><td class="py-3 px-6">3</td><td class="py-3 px-6">81</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#javascript-clones">javascript</a></td><td class="py-3 px-6">4</td><td class="py-3 px-6">312</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#powershell-clones">powershell</a></td><td class="py-3 px-6">3</td><td class="py-3 px-6">103</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr></tbody></table></section><section class="mb-8" id="txt-clones"><a name="clojure-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">clojure</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="yaml-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">yaml</h2><div class="divide-y divide-gray-200 border-b-2"><div class="py-4"><p class="text-gray-600">/github/workspace/config/.bandit.yml (Line 46:34 - Line 84:22), /github/workspace/config/.bandit.yml (Line 1:42 - Line 39:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn0" onclick="toggleCodeBlock('cloneGroup0', 'expandBtn0', 'collapseBtn0')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn0" onclick="toggleCodeBlock('cloneGroup0', 'expandBtn0', 'collapseBtn0')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup0"><code class="language-yaml text-sm text-gray-800">:
+  no_shell:
+    - os.execl
+    - os.execle
+    - os.execlp
+    - os.execlpe
+    - os.execv
+    - os.execve
+    - os.execvp
+    - os.execvpe
+    - os.spawnl
+    - os.spawnle
+    - os.spawnlp
+    - os.spawnlpe
+    - os.spawnv
+    - os.spawnve
+    - os.spawnvp
+    - os.spawnvpe
+    - os.startfile
+  shell:
+    - os.system
+    - os.popen
+    - os.popen2
+    - os.popen3
+    - os.popen4
+    - popen2.popen2
+    - popen2.popen3
+    - popen2.popen4
+    - popen2.Popen3
+    - popen2.Popen4
+    - commands.getoutput
+    - commands.getstatusoutput
+  subprocess:
+    - subprocess.Popen
+    - subprocess.call
+    - subprocess.check_call
+    - subprocess.check_output
+    - subprocess.run
+ssl_with_bad_defaults</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/.bandit.yml (Line 102:27 - Line 140:28), /github/workspace/config/.bandit.yml (Line 1:42 - Line 39:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn1" onclick="toggleCodeBlock('cloneGroup1', 'expandBtn1', 'collapseBtn1')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn1" onclick="toggleCodeBlock('cloneGroup1', 'expandBtn1', 'collapseBtn1')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup1"><code class="language-yaml text-sm text-gray-800">:
+  no_shell:
+    - os.execl
+    - os.execle
+    - os.execlp
+    - os.execlpe
+    - os.execv
+    - os.execve
+    - os.execvp
+    - os.execvpe
+    - os.spawnl
+    - os.spawnle
+    - os.spawnlp
+    - os.spawnlpe
+    - os.spawnv
+    - os.spawnve
+    - os.spawnvp
+    - os.spawnvpe
+    - os.startfile
+  shell:
+    - os.system
+    - os.popen
+    - os.popen2
+    - os.popen3
+    - os.popen4
+    - popen2.popen2
+    - popen2.popen3
+    - popen2.popen4
+    - popen2.Popen3
+    - popen2.Popen4
+    - commands.getoutput
+    - commands.getstatusoutput
+  subprocess:
+    - subprocess.Popen
+    - subprocess.call
+    - subprocess.check_call
+    - subprocess.check_output
+    - subprocess.run
+start_process_with_no_shell</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/.bandit.yml (Line 140:28 - Line 178:32), /github/workspace/config/.bandit.yml (Line 1:42 - Line 39:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn2" onclick="toggleCodeBlock('cloneGroup2', 'expandBtn2', 'collapseBtn2')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn2" onclick="toggleCodeBlock('cloneGroup2', 'expandBtn2', 'collapseBtn2')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup2"><code class="language-yaml text-sm text-gray-800">:
+  no_shell:
+    - os.execl
+    - os.execle
+    - os.execlp
+    - os.execlpe
+    - os.execv
+    - os.execve
+    - os.execvp
+    - os.execvpe
+    - os.spawnl
+    - os.spawnle
+    - os.spawnlp
+    - os.spawnlpe
+    - os.spawnv
+    - os.spawnve
+    - os.spawnvp
+    - os.spawnvpe
+    - os.startfile
+  shell:
+    - os.system
+    - os.popen
+    - os.popen2
+    - os.popen3
+    - os.popen4
+    - popen2.popen2
+    - popen2.popen3
+    - popen2.popen4
+    - popen2.Popen3
+    - popen2.Popen4
+    - commands.getoutput
+    - commands.getstatusoutput
+  subprocess:
+    - subprocess.Popen
+    - subprocess.call
+    - subprocess.check_call
+    - subprocess.check_output
+    - subprocess.run
+start_process_with_partial_path</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/.bandit.yml (Line 178:32 - Line 216:40), /github/workspace/config/.bandit.yml (Line 1:42 - Line 39:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn3" onclick="toggleCodeBlock('cloneGroup3', 'expandBtn3', 'collapseBtn3')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn3" onclick="toggleCodeBlock('cloneGroup3', 'expandBtn3', 'collapseBtn3')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup3"><code class="language-yaml text-sm text-gray-800">:
+  no_shell:
+    - os.execl
+    - os.execle
+    - os.execlp
+    - os.execlpe
+    - os.execv
+    - os.execve
+    - os.execvp
+    - os.execvpe
+    - os.spawnl
+    - os.spawnle
+    - os.spawnlp
+    - os.spawnlpe
+    - os.spawnv
+    - os.spawnve
+    - os.spawnvp
+    - os.spawnvpe
+    - os.startfile
+  shell:
+    - os.system
+    - os.popen
+    - os.popen2
+    - os.popen3
+    - os.popen4
+    - popen2.popen2
+    - popen2.popen3
+    - popen2.popen4
+    - popen2.Popen3
+    - popen2.Popen4
+    - commands.getoutput
+    - commands.getstatusoutput
+  subprocess:
+    - subprocess.Popen
+    - subprocess.call
+    - subprocess.check_call
+    - subprocess.check_output
+    - subprocess.run
+subprocess_popen_with_shell_equals_true</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/.bandit.yml (Line 216:40 - Line 254:37), /github/workspace/config/.bandit.yml (Line 1:42 - Line 39:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn4" onclick="toggleCodeBlock('cloneGroup4', 'expandBtn4', 'collapseBtn4')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn4" onclick="toggleCodeBlock('cloneGroup4', 'expandBtn4', 'collapseBtn4')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup4"><code class="language-yaml text-sm text-gray-800">:
+  no_shell:
+    - os.execl
+    - os.execle
+    - os.execlp
+    - os.execlpe
+    - os.execv
+    - os.execve
+    - os.execvp
+    - os.execvpe
+    - os.spawnl
+    - os.spawnle
+    - os.spawnlp
+    - os.spawnlpe
+    - os.spawnv
+    - os.spawnve
+    - os.spawnvp
+    - os.spawnvpe
+    - os.startfile
+  shell:
+    - os.system
+    - os.popen
+    - os.popen2
+    - os.popen3
+    - os.popen4
+    - popen2.popen2
+    - popen2.popen3
+    - popen2.popen4
+    - popen2.Popen3
+    - popen2.Popen4
+    - commands.getoutput
+    - commands.getstatusoutput
+  subprocess:
+    - subprocess.Popen
+    - subprocess.call
+    - subprocess.check_call
+    - subprocess.check_output
+    - subprocess.run
+subprocess_without_shell_equals_true</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/.bandit.yml (Line 254:37 - Line 292:20), /github/workspace/config/.bandit.yml (Line 1:42 - Line 39:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn5" onclick="toggleCodeBlock('cloneGroup5', 'expandBtn5', 'collapseBtn5')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn5" onclick="toggleCodeBlock('cloneGroup5', 'expandBtn5', 'collapseBtn5')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup5"><code class="language-yaml text-sm text-gray-800">:
+  no_shell:
+    - os.execl
+    - os.execle
+    - os.execlp
+    - os.execlpe
+    - os.execv
+    - os.execve
+    - os.execvp
+    - os.execvpe
+    - os.spawnl
+    - os.spawnle
+    - os.spawnlp
+    - os.spawnlpe
+    - os.spawnv
+    - os.spawnve
+    - os.spawnvp
+    - os.spawnvpe
+    - os.startfile
+  shell:
+    - os.system
+    - os.popen
+    - os.popen2
+    - os.popen3
+    - os.popen4
+    - popen2.popen2
+    - popen2.popen3
+    - popen2.popen4
+    - popen2.Popen3
+    - popen2.Popen4
+    - commands.getoutput
+    - commands.getstatusoutput
+  subprocess:
+    - subprocess.Popen
+    - subprocess.call
+    - subprocess.check_call
+    - subprocess.check_output
+    - subprocess.run
+try_except_continue</code></pre></div><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="markup-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">markup</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="json-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">json</h2><div class="divide-y divide-gray-200 border-b-2"><div class="py-4"><p class="text-gray-600">/github/workspace/package-lock.json (Line 6:2 - Line 21:2), /github/workspace/package.json (Line 1:1 - Line 16:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn6" onclick="toggleCodeBlock('cloneGroup6', 'expandBtn6', 'collapseBtn6')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn6" onclick="toggleCodeBlock('cloneGroup6', 'expandBtn6', 'collapseBtn6')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup6"><code class="language-json text-sm text-gray-800">{
       &quot;dependencies&quot;: {
         &quot;@secretlint/secretlint-rule-aws&quot;: &quot;^11.3.1&quot;,
         &quot;@secretlint/secretlint-rule-basicauth&quot;: &quot;^11.3.1&quot;,
@@ -13,712 +241,7 @@
         &quot;@secretlint/secretlint-rule-privatekey&quot;: &quot;^11.3.1&quot;,
         &quot;@secretlint/secretlint-rule-secp256k1-privatekey&quot;: &quot;^11.3.1&quot;
       }
-    }</code></pre></div><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="yaml-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">yaml</h2><div class="divide-y divide-gray-200 border-b-2"><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 11:3 - Line 21:5), /github/workspace/config/styles/write-good/Cliches.yml (Line 10:3 - Line 20:4)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn0" onclick="toggleCodeBlock('cloneGroup0', 'expandBtn0', 'collapseBtn0')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn0" onclick="toggleCodeBlock('cloneGroup0', 'expandBtn0', 'collapseBtn0')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup0"><code class="language-yaml text-sm text-gray-800">- a fine kettle of fish
-  - a loose cannon
-  - a penny saved is a penny earned
-  - a tough row to hoe
-  - a word to the wise
-  - ace in the hole
-  - acid test
-  - add insult to injury
-  - against all odds
-  - air your dirty laundry
-  - alas</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 24:3 - Line 40:3), /github/workspace/config/styles/write-good/Cliches.yml (Line 21:3 - Line 37:6)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn1" onclick="toggleCodeBlock('cloneGroup1', 'expandBtn1', 'collapseBtn1')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn1" onclick="toggleCodeBlock('cloneGroup1', 'expandBtn1', 'collapseBtn1')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup1"><code class="language-yaml text-sm text-gray-800">- all in a day's work
-  - all talk, no action
-  - all thumbs
-  - all your eggs in one basket
-  - all's fair in love and war
-  - all's well that ends well
-  - almighty dollar
-  - American as apple pie
-  - an axe to grind
-  - another day, another dollar
-  - armed to the teeth
-  - as luck would have it
-  - as old as time
-  - as the crow flies
-  - at loose ends
-  - at my wits end
-  - at</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 51:3 - Line 72:8), /github/workspace/config/styles/write-good/Cliches.yml (Line 46:3 - Line 67:7)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn2" onclick="toggleCodeBlock('cloneGroup2', 'expandBtn2', 'collapseBtn2')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn2" onclick="toggleCodeBlock('cloneGroup2', 'expandBtn2', 'collapseBtn2')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup2"><code class="language-yaml text-sm text-gray-800">- ballpark figure
-  - banging your head against a brick wall
-  - baptism by fire
-  - barking up the wrong tree
-  - bat out of hell
-  - be all and end all
-  - beat a dead horse
-  - beat around the bush
-  - been there, done that
-  - beggars can't be choosers
-  - behind the eight ball
-  - bend over backwards
-  - benefit of the doubt
-  - bent out of shape
-  - best thing since sliced bread
-  - bet your bottom dollar
-  - better half
-  - better late than never
-  - better mousetrap
-  - better safe than sorry
-  - between a rock and a hard place
-  - between</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 76:3 - Line 100:9), /github/workspace/config/styles/write-good/Cliches.yml (Line 67:3 - Line 91:6)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn3" onclick="toggleCodeBlock('cloneGroup3', 'expandBtn3', 'collapseBtn3')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn3" onclick="toggleCodeBlock('cloneGroup3', 'expandBtn3', 'collapseBtn3')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup3"><code class="language-yaml text-sm text-gray-800">- beyond the pale
-  - bide your time
-  - big as life
-  - big cheese
-  - big fish in a small pond
-  - big man on campus
-  - bigger they are the harder they fall
-  - bird in the hand
-  - bird's eye view
-  - birds and the bees
-  - birds of a feather flock together
-  - bit the hand that feeds you
-  - bite the bullet
-  - bite the dust
-  - bitten off more than he can chew
-  - black as coal
-  - black as pitch
-  - black as the ace of spades
-  - blast from the past
-  - bleeding heart
-  - blessing in disguise
-  - blind ambition
-  - blind as a bat
-  - blind leading the blind
-  - blissful</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 104:3 - Line 119:5), /github/workspace/config/styles/write-good/Cliches.yml (Line 93:3 - Line 108:5)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn4" onclick="toggleCodeBlock('cloneGroup4', 'expandBtn4', 'collapseBtn4')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn4" onclick="toggleCodeBlock('cloneGroup4', 'expandBtn4', 'collapseBtn4')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup4"><code class="language-yaml text-sm text-gray-800">- blow off steam
-  - blow your own horn
-  - blushing bride
-  - boils down to
-  - bolt from the blue
-  - bone to pick
-  - bored stiff
-  - bored to tears
-  - bottomless pit
-  - boys will be boys
-  - bright and early
-  - brings home the bacon
-  - broad across the beam
-  - broken record
-  - brought back to reality
-  - bulk</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 155:3 - Line 168:8), /github/workspace/config/styles/write-good/Cliches.yml (Line 137:3 - Line 150:10)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn5" onclick="toggleCodeBlock('cloneGroup5', 'expandBtn5', 'collapseBtn5')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn5" onclick="toggleCodeBlock('cloneGroup5', 'expandBtn5', 'collapseBtn5')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup5"><code class="language-yaml text-sm text-gray-800">- cool as a cucumber
-  - cool, calm, and collected
-  - cost a king's ransom
-  - count your blessings
-  - crack of dawn
-  - crash course
-  - creature comforts
-  - cross that bridge when you come to it
-  - crushing blow
-  - cry like a baby
-  - cry me a river
-  - cry over spilt milk
-  - crystal clear
-  - crystal</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 182:3 - Line 204:8), /github/workspace/config/styles/write-good/Cliches.yml (Line 161:3 - Line 183:5)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn6" onclick="toggleCodeBlock('cloneGroup6', 'expandBtn6', 'collapseBtn6')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn6" onclick="toggleCodeBlock('cloneGroup6', 'expandBtn6', 'collapseBtn6')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup6"><code class="language-yaml text-sm text-gray-800">- devil is in the details
-  - dime a dozen
-  - divide and conquer
-  - dog and pony show
-  - dog days
-  - dog eat dog
-  - dog tired
-  - don't burn your bridges
-  - don't count your chickens
-  - don't look a gift horse in the mouth
-  - don't rock the boat
-  - don't step on anyone's toes
-  - don't take any wooden nickels
-  - down and out
-  - down at the heels
-  - down in the dumps
-  - down the hatch
-  - down to earth
-  - draw the line
-  - dressed to kill
-  - dressed to the nines
-  - drives me up the wall
-  - dubious</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 207:3 - Line 221:5), /github/workspace/config/styles/write-good/Cliches.yml (Line 184:3 - Line 198:5)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn7" onclick="toggleCodeBlock('cloneGroup7', 'expandBtn7', 'collapseBtn7')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn7" onclick="toggleCodeBlock('cloneGroup7', 'expandBtn7', 'collapseBtn7')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup7"><code class="language-yaml text-sm text-gray-800">- dyed in the wool
-  - eagle eye
-  - ear to the ground
-  - early bird catches the worm
-  - easier said than done
-  - easy as pie
-  - eat your heart out
-  - eat your words
-  - eleventh hour
-  - even the playing field
-  - every dog has its day
-  - every fiber of my being
-  - everything but the kitchen sink
-  - eye for an eye
-  - eyes</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 238:3 - Line 251:5), /github/workspace/config/styles/write-good/Cliches.yml (Line 210:3 - Line 223:4)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn8" onclick="toggleCodeBlock('cloneGroup8', 'expandBtn8', 'collapseBtn8')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn8" onclick="toggleCodeBlock('cloneGroup8', 'expandBtn8', 'collapseBtn8')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup8"><code class="language-yaml text-sm text-gray-800">- fish out of water
-  - fishing for a compliment
-  - fit as a fiddle
-  - fit the bill
-  - fit to be tied
-  - flash in the pan
-  - flat as a pancake
-  - flip your lid
-  - flog a dead horse
-  - fly by night
-  - fly the coop
-  - follow your heart
-  - for all intents and purposes
-  - for free</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 252:3 - Line 270:5), /github/workspace/config/styles/write-good/Cliches.yml (Line 223:3 - Line 241:5)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn9" onclick="toggleCodeBlock('cloneGroup9', 'expandBtn9', 'collapseBtn9')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn9" onclick="toggleCodeBlock('cloneGroup9', 'expandBtn9', 'collapseBtn9')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup9"><code class="language-yaml text-sm text-gray-800">- for the birds
-  - for what it's worth
-  - force of nature
-  - force to be reckoned with
-  - forgive and forget
-  - fox in the henhouse
-  - free and easy
-  - free as a bird
-  - fresh as a daisy
-  - full steam ahead
-  - fun in the sun
-  - garbage in, garbage out
-  - gentle as a lamb
-  - get a kick out of
-  - get a leg up
-  - get down and dirty
-  - get the lead out
-  - get to the bottom of
-  - get with</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 274:3 - Line 300:2), /github/workspace/config/styles/write-good/Cliches.yml (Line 243:3 - Line 269:5)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn10" onclick="toggleCodeBlock('cloneGroup10', 'expandBtn10', 'collapseBtn10')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn10" onclick="toggleCodeBlock('cloneGroup10', 'expandBtn10', 'collapseBtn10')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup10"><code class="language-yaml text-sm text-gray-800">- gilding the lily
-  - give and take
-  - go against the grain
-  - go at it tooth and nail
-  - go for broke
-  - go him one better
-  - go the extra mile
-  - go with the flow
-  - goes without saying
-  - good as gold
-  - good deed for the day
-  - good things come to those who wait
-  - good time was had by all
-  - good times were had by all
-  - greased lightning
-  - greek to me
-  - green thumb
-  - green-eyed monster
-  - grist for the mill
-  - growing like a weed
-  - hair of the dog
-  - hand to mouth
-  - happy as a clam
-  - happy as a lark
-  - hasn't a clue
-  - have a nice day
-  - have a</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 356:3 - Line 398:4), /github/workspace/config/styles/write-good/Cliches.yml (Line 312:3 - Line 354:7)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn11" onclick="toggleCodeBlock('cloneGroup11', 'expandBtn11', 'collapseBtn11')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn11" onclick="toggleCodeBlock('cloneGroup11', 'expandBtn11', 'collapseBtn11')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup11"><code class="language-yaml text-sm text-gray-800">- it's only a matter of time
-  - ivory tower
-  - Jack of all trades
-  - jockey for position
-  - jog your memory
-  - joined at the hip
-  - judge a book by its cover
-  - jump down your throat
-  - jump in with both feet
-  - jump on the bandwagon
-  - jump the gun
-  - jump to conclusions
-  - just a hop, skip, and a jump
-  - just the ticket
-  - justice is blind
-  - keep a stiff upper lip
-  - keep an eye on
-  - keep it simple, stupid
-  - keep the home fires burning
-  - keep up with the Joneses
-  - keep your chin up
-  - keep your fingers crossed
-  - kick the bucket
-  - kick up your heels
-  - kick your feet up
-  - kid in a candy store
-  - kill two birds with one stone
-  - kiss of death
-  - knock it out of the park
-  - knock on wood
-  - knock your socks off
-  - know him from Adam
-  - know the ropes
-  - know the score
-  - knuckle down
-  - knuckle sandwich
-  - knuckle under
-  - labor of love
-  - ladder of success
-  - land on your feet
-  - lap of luxury
-  - last but not least
-  - last but</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 398:3 - Line 441:2), /github/workspace/config/styles/write-good/Cliches.yml (Line 353:3 - Line 396:4)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn12" onclick="toggleCodeBlock('cloneGroup12', 'expandBtn12', 'collapseBtn12')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn12" onclick="toggleCodeBlock('cloneGroup12', 'expandBtn12', 'collapseBtn12')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup12"><code class="language-yaml text-sm text-gray-800">- last but not least
-  - last hurrah
-  - last-ditch effort
-  - law of the jungle
-  - law of the land
-  - lay down the law
-  - leaps and bounds
-  - let sleeping dogs lie
-  - let the cat out of the bag
-  - let the good times roll
-  - let your hair down
-  - let's talk turkey
-  - letter perfect
-  - lick your wounds
-  - lies like a rug
-  - life's a bitch
-  - life's a grind
-  - light at the end of the tunnel
-  - lighter than a feather
-  - lighter than air
-  - like clockwork
-  - like father like son
-  - like taking candy from a baby
-  - like there's no tomorrow
-  - lion's share
-  - live and learn
-  - live and let live
-  - long and short of it
-  - long lost love
-  - look before you leap
-  - look down your nose
-  - look what the cat dragged in
-  - looking a gift horse in the mouth
-  - looks like death warmed over
-  - loose cannon
-  - lose your head
-  - lose your temper
-  - loud as a horn
-  - lounge lizard
-  - loved and lost
-  - low man on the totem pole
-  - luck of the draw
-  - luck of the Irish
-  - make a</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 476:3 - Line 498:6), /github/workspace/config/styles/write-good/Cliches.yml (Line 424:3 - Line 446:6)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn13" onclick="toggleCodeBlock('cloneGroup13', 'expandBtn13', 'collapseBtn13')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn13" onclick="toggleCodeBlock('cloneGroup13', 'expandBtn13', 'collapseBtn13')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup13"><code class="language-yaml text-sm text-gray-800">- nip it in the bud
-  - no guts, no glory
-  - no love lost
-  - no pain, no gain
-  - no skin off my back
-  - no stone unturned
-  - no time like the present
-  - no use crying over spilled milk
-  - nose to the grindstone
-  - not a hope in hell
-  - not a minute's peace
-  - not in my backyard
-  - not playing with a full deck
-  - not the end of the world
-  - not written in stone
-  - nothing to sneeze at
-  - nothing ventured nothing gained
-  - now we're cooking
-  - off the top of my head
-  - off the wagon
-  - off the wall
-  - old hat
-  - olden</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 510:3 - Line 560:13), /github/workspace/config/styles/write-good/Cliches.yml (Line 456:3 - Line 506:7)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn14" onclick="toggleCodeBlock('cloneGroup14', 'expandBtn14', 'collapseBtn14')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn14" onclick="toggleCodeBlock('cloneGroup14', 'expandBtn14', 'collapseBtn14')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup14"><code class="language-yaml text-sm text-gray-800">- on the spot
-  - on the tip of my tongue
-  - on the wagon
-  - on thin ice
-  - once bitten, twice shy
-  - one bad apple doesn't spoil the bushel
-  - one born every minute
-  - one brick short
-  - one foot in the grave
-  - one in a million
-  - one red cent
-  - only game in town
-  - open a can of worms
-  - open and shut case
-  - open the flood gates
-  - opportunity doesn't knock twice
-  - out of pocket
-  - out of sight, out of mind
-  - out of the frying pan into the fire
-  - out of the woods
-  - out on a limb
-  - over a barrel
-  - over the hump
-  - pain and suffering
-  - pain in the
-  - panic button
-  - par for the course
-  - part and parcel
-  - party pooper
-  - pass the buck
-  - patience is a virtue
-  - pay through the nose
-  - penny pincher
-  - perfect storm
-  - pig in a poke
-  - pile it on
-  - pillar of the community
-  - pin your hopes on
-  - pitter patter of little feet
-  - plain as day
-  - plain as the nose on your face
-  - play by the rules
-  - play your cards right
-  - playing the field
-  - playing with fire
-  - pleased as punch
-  - plenty of fish in the sea
-  - point with pride
-  - poor as a church mouse
-  - pot calling the kettle black
-  - presidential</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 575:3 - Line 588:8), /github/workspace/config/styles/write-good/Cliches.yml (Line 517:3 - Line 530:9)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn15" onclick="toggleCodeBlock('cloneGroup15', 'expandBtn15', 'collapseBtn15')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn15" onclick="toggleCodeBlock('cloneGroup15', 'expandBtn15', 'collapseBtn15')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup15"><code class="language-yaml text-sm text-gray-800">- quick as a bunny
-  - quick as a lick
-  - quick as a wink
-  - quick as lightning
-  - quiet as a dormouse
-  - rags to riches
-  - raining buckets
-  - raining cats and dogs
-  - rank and file
-  - rat race
-  - reap what you sow
-  - red as a beet
-  - red herring
-  - redound</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 590:3 - Line 607:4), /github/workspace/config/styles/write-good/Cliches.yml (Line 530:3 - Line 547:7)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn16" onclick="toggleCodeBlock('cloneGroup16', 'expandBtn16', 'collapseBtn16')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn16" onclick="toggleCodeBlock('cloneGroup16', 'expandBtn16', 'collapseBtn16')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup16"><code class="language-yaml text-sm text-gray-800">- reinvent the wheel
-  - rich and famous
-  - rings a bell
-  - ripe old age
-  - ripped me off
-  - rise and shine
-  - road to hell is paved with good intentions
-  - rob Peter to pay Paul
-  - roll over in the grave
-  - rub the wrong way
-  - ruled the roost
-  - running in circles
-  - sad but true
-  - sadder but wiser
-  - salt of the earth
-  - scared stiff
-  - scared to death
-  - sea</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 618:3 - Line 627:4), /github/workspace/config/styles/write-good/Cliches.yml (Line 556:3 - Line 565:8)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn17" onclick="toggleCodeBlock('cloneGroup17', 'expandBtn17', 'collapseBtn17')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn17" onclick="toggleCodeBlock('cloneGroup17', 'expandBtn17', 'collapseBtn17')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup17"><code class="language-yaml text-sm text-gray-800">- shoot for the moon
-  - shoot the breeze
-  - shot in the dark
-  - shoulder to the wheel
-  - sick as a dog
-  - sigh of relief
-  - signed, sealed, and delivered
-  - sink or swim
-  - six of one, half a dozen of another
-  - six</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 628:3 - Line 655:10), /github/workspace/config/styles/write-good/Cliches.yml (Line 565:3 - Line 592:7)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn18" onclick="toggleCodeBlock('cloneGroup18', 'expandBtn18', 'collapseBtn18')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn18" onclick="toggleCodeBlock('cloneGroup18', 'expandBtn18', 'collapseBtn18')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup18"><code class="language-yaml text-sm text-gray-800">- skating on thin ice
-  - slept like a log
-  - slinging mud
-  - slippery as an eel
-  - slow as molasses
-  - smart as a whip
-  - smooth as a baby's bottom
-  - sneaking suspicion
-  - snug as a bug in a rug
-  - sow wild oats
-  - spare the rod, spoil the child
-  - speak of the devil
-  - spilled the beans
-  - spinning your wheels
-  - spitting image of
-  - spoke with relish
-  - spread like wildfire
-  - spring to life
-  - squeaky wheel gets the grease
-  - stands out like a sore thumb
-  - start from scratch
-  - stick in the mud
-  - still waters run deep
-  - stitch in time
-  - stop and smell the roses
-  - straight as an arrow
-  - straw that broke the camel's back
-  - stretched</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 656:3 - Line 669:5), /github/workspace/config/styles/write-good/Cliches.yml (Line 592:3 - Line 605:4)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn19" onclick="toggleCodeBlock('cloneGroup19', 'expandBtn19', 'collapseBtn19')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn19" onclick="toggleCodeBlock('cloneGroup19', 'expandBtn19', 'collapseBtn19')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup19"><code class="language-yaml text-sm text-gray-800">- strong as an ox
-  - stubborn as a mule
-  - stuff that dreams are made of
-  - stuffed shirt
-  - sweating blood
-  - sweating bullets
-  - take a load off
-  - take one for the team
-  - take the bait
-  - take the bull by the horns
-  - take the plunge
-  - takes one to know one
-  - takes two to tango
-  - than</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 694:3 - Line 732:8), /github/workspace/config/styles/write-good/Cliches.yml (Line 622:3 - Line 660:7)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn20" onclick="toggleCodeBlock('cloneGroup20', 'expandBtn20', 'collapseBtn20')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn20" onclick="toggleCodeBlock('cloneGroup20', 'expandBtn20', 'collapseBtn20')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup20"><code class="language-yaml text-sm text-gray-800">- tie one on
-  - tighter than a drum
-  - time and time again
-  - time is of the essence
-  - tip of the iceberg
-  - tired but happy
-  - to coin a phrase
-  - to each his own
-  - to make a long story short
-  - to the best of my knowledge
-  - toe the line
-  - tongue in cheek
-  - too good to be true
-  - too hot to handle
-  - too numerous to mention
-  - touch with a ten foot pole
-  - tough as nails
-  - trial and error
-  - trials and tribulations
-  - tried and true
-  - trip down memory lane
-  - twist of fate
-  - two cents worth
-  - two peas in a pod
-  - ugly as sin
-  - under the counter
-  - under the gun
-  - under the same roof
-  - under the weather
-  - until the cows come home
-  - unvarnished truth
-  - up the creek
-  - uphill battle
-  - upper crust
-  - upset the applecart
-  - vain attempt
-  - vain effort
-  - vanquish the enemy
-  - various</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/styles/proselint/Cliches.yml (Line 745:3 - Line 756:5), /github/workspace/config/styles/write-good/Cliches.yml (Line 668:3 - Line 679:6)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn21" onclick="toggleCodeBlock('cloneGroup21', 'expandBtn21', 'collapseBtn21')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn21" onclick="toggleCodeBlock('cloneGroup21', 'expandBtn21', 'collapseBtn21')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup21"><code class="language-yaml text-sm text-gray-800">- weather the storm
-  - weed them out
-  - week of Sundays
-  - went belly up
-  - wet behind the ears
-  - what goes around comes around
-  - what you see is what you get
-  - when it rains, it pours
-  - when push comes to shove
-  - when the cat's away
-  - when the going gets tough, the tough get going
-  - whet</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/.bandit.yml (Line 46:34 - Line 84:22), /github/workspace/config/.bandit.yml (Line 1:42 - Line 39:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn22" onclick="toggleCodeBlock('cloneGroup22', 'expandBtn22', 'collapseBtn22')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn22" onclick="toggleCodeBlock('cloneGroup22', 'expandBtn22', 'collapseBtn22')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup22"><code class="language-yaml text-sm text-gray-800">:
-  no_shell:
-    - os.execl
-    - os.execle
-    - os.execlp
-    - os.execlpe
-    - os.execv
-    - os.execve
-    - os.execvp
-    - os.execvpe
-    - os.spawnl
-    - os.spawnle
-    - os.spawnlp
-    - os.spawnlpe
-    - os.spawnv
-    - os.spawnve
-    - os.spawnvp
-    - os.spawnvpe
-    - os.startfile
-  shell:
-    - os.system
-    - os.popen
-    - os.popen2
-    - os.popen3
-    - os.popen4
-    - popen2.popen2
-    - popen2.popen3
-    - popen2.popen4
-    - popen2.Popen3
-    - popen2.Popen4
-    - commands.getoutput
-    - commands.getstatusoutput
-  subprocess:
-    - subprocess.Popen
-    - subprocess.call
-    - subprocess.check_call
-    - subprocess.check_output
-    - subprocess.run
-ssl_with_bad_defaults</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/.bandit.yml (Line 102:27 - Line 140:28), /github/workspace/config/.bandit.yml (Line 1:42 - Line 39:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn23" onclick="toggleCodeBlock('cloneGroup23', 'expandBtn23', 'collapseBtn23')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn23" onclick="toggleCodeBlock('cloneGroup23', 'expandBtn23', 'collapseBtn23')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup23"><code class="language-yaml text-sm text-gray-800">:
-  no_shell:
-    - os.execl
-    - os.execle
-    - os.execlp
-    - os.execlpe
-    - os.execv
-    - os.execve
-    - os.execvp
-    - os.execvpe
-    - os.spawnl
-    - os.spawnle
-    - os.spawnlp
-    - os.spawnlpe
-    - os.spawnv
-    - os.spawnve
-    - os.spawnvp
-    - os.spawnvpe
-    - os.startfile
-  shell:
-    - os.system
-    - os.popen
-    - os.popen2
-    - os.popen3
-    - os.popen4
-    - popen2.popen2
-    - popen2.popen3
-    - popen2.popen4
-    - popen2.Popen3
-    - popen2.Popen4
-    - commands.getoutput
-    - commands.getstatusoutput
-  subprocess:
-    - subprocess.Popen
-    - subprocess.call
-    - subprocess.check_call
-    - subprocess.check_output
-    - subprocess.run
-start_process_with_no_shell</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/.bandit.yml (Line 140:28 - Line 178:32), /github/workspace/config/.bandit.yml (Line 1:42 - Line 39:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn24" onclick="toggleCodeBlock('cloneGroup24', 'expandBtn24', 'collapseBtn24')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn24" onclick="toggleCodeBlock('cloneGroup24', 'expandBtn24', 'collapseBtn24')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup24"><code class="language-yaml text-sm text-gray-800">:
-  no_shell:
-    - os.execl
-    - os.execle
-    - os.execlp
-    - os.execlpe
-    - os.execv
-    - os.execve
-    - os.execvp
-    - os.execvpe
-    - os.spawnl
-    - os.spawnle
-    - os.spawnlp
-    - os.spawnlpe
-    - os.spawnv
-    - os.spawnve
-    - os.spawnvp
-    - os.spawnvpe
-    - os.startfile
-  shell:
-    - os.system
-    - os.popen
-    - os.popen2
-    - os.popen3
-    - os.popen4
-    - popen2.popen2
-    - popen2.popen3
-    - popen2.popen4
-    - popen2.Popen3
-    - popen2.Popen4
-    - commands.getoutput
-    - commands.getstatusoutput
-  subprocess:
-    - subprocess.Popen
-    - subprocess.call
-    - subprocess.check_call
-    - subprocess.check_output
-    - subprocess.run
-start_process_with_partial_path</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/.bandit.yml (Line 178:32 - Line 216:40), /github/workspace/config/.bandit.yml (Line 1:42 - Line 39:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn25" onclick="toggleCodeBlock('cloneGroup25', 'expandBtn25', 'collapseBtn25')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn25" onclick="toggleCodeBlock('cloneGroup25', 'expandBtn25', 'collapseBtn25')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup25"><code class="language-yaml text-sm text-gray-800">:
-  no_shell:
-    - os.execl
-    - os.execle
-    - os.execlp
-    - os.execlpe
-    - os.execv
-    - os.execve
-    - os.execvp
-    - os.execvpe
-    - os.spawnl
-    - os.spawnle
-    - os.spawnlp
-    - os.spawnlpe
-    - os.spawnv
-    - os.spawnve
-    - os.spawnvp
-    - os.spawnvpe
-    - os.startfile
-  shell:
-    - os.system
-    - os.popen
-    - os.popen2
-    - os.popen3
-    - os.popen4
-    - popen2.popen2
-    - popen2.popen3
-    - popen2.popen4
-    - popen2.Popen3
-    - popen2.Popen4
-    - commands.getoutput
-    - commands.getstatusoutput
-  subprocess:
-    - subprocess.Popen
-    - subprocess.call
-    - subprocess.check_call
-    - subprocess.check_output
-    - subprocess.run
-subprocess_popen_with_shell_equals_true</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/.bandit.yml (Line 216:40 - Line 254:37), /github/workspace/config/.bandit.yml (Line 1:42 - Line 39:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn26" onclick="toggleCodeBlock('cloneGroup26', 'expandBtn26', 'collapseBtn26')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn26" onclick="toggleCodeBlock('cloneGroup26', 'expandBtn26', 'collapseBtn26')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup26"><code class="language-yaml text-sm text-gray-800">:
-  no_shell:
-    - os.execl
-    - os.execle
-    - os.execlp
-    - os.execlpe
-    - os.execv
-    - os.execve
-    - os.execvp
-    - os.execvpe
-    - os.spawnl
-    - os.spawnle
-    - os.spawnlp
-    - os.spawnlpe
-    - os.spawnv
-    - os.spawnve
-    - os.spawnvp
-    - os.spawnvpe
-    - os.startfile
-  shell:
-    - os.system
-    - os.popen
-    - os.popen2
-    - os.popen3
-    - os.popen4
-    - popen2.popen2
-    - popen2.popen3
-    - popen2.popen4
-    - popen2.Popen3
-    - popen2.Popen4
-    - commands.getoutput
-    - commands.getstatusoutput
-  subprocess:
-    - subprocess.Popen
-    - subprocess.call
-    - subprocess.check_call
-    - subprocess.check_output
-    - subprocess.run
-subprocess_without_shell_equals_true</code></pre></div><div class="py-4"><p class="text-gray-600">/github/workspace/config/.bandit.yml (Line 254:37 - Line 292:20), /github/workspace/config/.bandit.yml (Line 1:42 - Line 39:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn27" onclick="toggleCodeBlock('cloneGroup27', 'expandBtn27', 'collapseBtn27')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn27" onclick="toggleCodeBlock('cloneGroup27', 'expandBtn27', 'collapseBtn27')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup27"><code class="language-yaml text-sm text-gray-800">:
-  no_shell:
-    - os.execl
-    - os.execle
-    - os.execlp
-    - os.execlpe
-    - os.execv
-    - os.execve
-    - os.execvp
-    - os.execvpe
-    - os.spawnl
-    - os.spawnle
-    - os.spawnlp
-    - os.spawnlpe
-    - os.spawnv
-    - os.spawnve
-    - os.spawnvp
-    - os.spawnvpe
-    - os.startfile
-  shell:
-    - os.system
-    - os.popen
-    - os.popen2
-    - os.popen3
-    - os.popen4
-    - popen2.popen2
-    - popen2.popen3
-    - popen2.popen4
-    - popen2.Popen3
-    - popen2.Popen4
-    - commands.getoutput
-    - commands.getstatusoutput
-  subprocess:
-    - subprocess.Popen
-    - subprocess.call
-    - subprocess.check_call
-    - subprocess.check_output
-    - subprocess.run
-try_except_continue</code></pre></div><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="markdown-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">markdown</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="clojure-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">clojure</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="markup-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">markup</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="ini-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">ini</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="javascript-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">javascript</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="powershell-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">powershell</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div></section><!-- Add more sections for other formats and clone groups as needed--></main><footer class="bg-white shadow mt-8 py-4"><div class="container mx-auto px-4 text-center"><p class="text-sm text-gray-600">This report is generated by jscpd, an open-source copy/paste detector.</p><p class="text-sm text-gray-600">jscpd is licensed under the MIT License.</p><a class="text-blue-500 text-sm" href="https://github.com/kucherenko/jscpd" target="_blank" rel="noopener noreferrer">View jscpd on GitHub</a></div></footer><script src="js/prism.js"></script><script>function toggleCodeBlock(codeBlockId, expandBtnId, collapseBtnId) {
+    }</code></pre></div><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="ini-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">ini</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="javascript-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">javascript</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="powershell-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">powershell</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div></section><!-- Add more sections for other formats and clone groups as needed--></main><footer class="bg-white shadow mt-8 py-4"><div class="container mx-auto px-4 text-center"><p class="text-sm text-gray-600">This report is generated by jscpd, an open-source copy/paste detector.</p><p class="text-sm text-gray-600">jscpd is licensed under the MIT License.</p><a class="text-blue-500 text-sm" href="https://github.com/kucherenko/jscpd" target="_blank" rel="noopener noreferrer">View jscpd on GitHub</a></div></footer><script src="js/prism.js"></script><script>function toggleCodeBlock(codeBlockId, expandBtnId, collapseBtnId) {
   const codeBlock = document.getElementById(codeBlockId);
   const expandBtn = document.getElementById(expandBtnId);
   const collapseBtn = document.getElementById(collapseBtnId);

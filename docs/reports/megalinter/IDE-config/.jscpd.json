@@ -10,7 +10,8 @@
         "**/coverage/**",
         "**/venv/**",
         "**/.venv/**",
-        "**/.pnpm-store/**"
+        "**/.pnpm-store/**",
+        "**/config/styles/**"
     ],
     "absolute": true,
     "gitignore": true,

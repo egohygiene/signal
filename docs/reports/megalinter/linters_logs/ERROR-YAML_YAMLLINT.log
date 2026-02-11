@@ -31,6 +31,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/yaml_yamllint/
       151:34    error    no new line character at the end of file  (new-line-at-end-of-file)
 
 ✅ [SUCCESS] config/.hadolint.yaml
+✅ [SUCCESS] config/.ls-lint.yml
 ✅ [SUCCESS] config/.phplint.yml
 ✅ [SUCCESS] config/.protolintrc.yml
 ✅ [SUCCESS] config/.ruby-lint.yml

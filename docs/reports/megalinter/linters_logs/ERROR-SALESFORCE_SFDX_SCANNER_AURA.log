@@ -1,0 +1,22 @@
+Results of sfdx-scanner-aura linter (version 4.12.0)
+See documentation on https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_aura/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+ ›   Warning: @salesforce/cli update available from 2.92.7 to 2.122.6.
+(node:4854) Warning: Closing file descriptor 25 on garbage collection
+(Use `node --trace-warnings ...` to show where the warning was created)
+@salesforce/cli: Installing plugin @salesforce/sfdx-scanner@4.12.0... failed
+(node:4957) ExperimentalWarning: CommonJS module /node-deps/node_modules/@salesforce/cli/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /node-deps/node_modules/@salesforce/cli/node_modules/npm/node_modules/supports-color/index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+npm error code ENOTEMPTY
+npm error syscall rmdir
+npm error path /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_modules/zod/lib/benchmarks
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rmdir '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_modules/zod/lib/benchmarks'
+npm error A complete log of this run can be found in: /github/home/.npm/_logs/2026-02-11T22_56_27_946Z-debug-0.log
+    JitPluginInstallError: Could not install @salesforce/sfdx-scanner
+    Code: JitPluginInstallError
+

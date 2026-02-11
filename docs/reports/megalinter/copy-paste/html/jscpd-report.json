@@ -1,805 +1,37 @@
 {
   "statistics": {
-    "detectionDate": "2026-02-11T22:05:58.010Z",
+    "detectionDate": "2026-02-11T22:54:14.078Z",
     "formats": {
-      "json": {
+      "clojure": {
         "sources": {
-          "/github/workspace/config/styles/write-good/meta.json": {
-            "lines": 3,
-            "tokens": 15,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/meta.json": {
-            "lines": 16,
-            "tokens": 98,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/pyrightconfig.json": {
-            "lines": 31,
-            "tokens": 192,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/META6.json": {
-            "lines": 24,
-            "tokens": 155,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.tsqllintrc.json": {
-            "lines": 21,
-            "tokens": 110,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.stylelintrc.json": {
-            "lines": 37,
-            "tokens": 185,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.secretlintrc.json": {
-            "lines": 72,
-            "tokens": 347,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.remarkrc.json": {
-            "lines": 17,
-            "tokens": 104,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.npmpackagejsonlintrc.json": {
-            "lines": 72,
-            "tokens": 380,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.markdownlint.json": {
-            "lines": 24,
-            "tokens": 210,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.markdown-link-check.json": {
+          "/github/workspace/config/.clj-kondo/config.edn": {
             "lines": 33,
-            "tokens": 161,
+            "tokens": 208,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
             "duplicatedTokens": 0,
             "percentage": 0,
             "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.kics.config.json": {
-            "lines": 7,
-            "tokens": 48,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.jscpd.json": {
-            "lines": 17,
-            "tokens": 92,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.groovylintrc.json": {
-            "lines": 36,
-            "tokens": 204,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.flow-scanner.json": {
-            "lines": 40,
-            "tokens": 209,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.eslintrc-json.json": {
-            "lines": 27,
-            "tokens": 151,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.editorconfig-checker.json": {
-            "lines": 40,
-            "tokens": 175,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.coffee-lint.json": {
-            "lines": 57,
-            "tokens": 308,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/.vscode/tasks.json": {
-            "lines": 3,
-            "tokens": 15,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/.vscode/settings.json": {
-            "lines": 135,
-            "tokens": 810,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/.vscode/extensions.json": {
-            "lines": 39,
-            "tokens": 154,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/package.json": {
-            "lines": 15,
-            "tokens": 94,
-            "sources": 1,
-            "clones": 1,
-            "duplicatedLines": 15,
-            "duplicatedTokens": 95,
-            "percentage": 100,
-            "percentageTokens": 101.06,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/package-lock.json": {
-            "lines": 741,
-            "tokens": 4385,
-            "sources": 1,
-            "clones": 1,
-            "duplicatedLines": 15,
-            "duplicatedTokens": 95,
-            "percentage": 2.02,
-            "percentageTokens": 2.17,
             "newDuplicatedLines": 0,
             "newClones": 0
           }
         },
         "total": {
-          "lines": 1507,
-          "tokens": 8602,
-          "sources": 23,
-          "clones": 1,
-          "duplicatedLines": 15,
-          "duplicatedTokens": 95,
-          "percentage": 1,
-          "percentageTokens": 1.1,
+          "lines": 33,
+          "tokens": 208,
+          "sources": 1,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
       },
       "yaml": {
         "sources": {
-          "/github/workspace/config/styles/write-good/Weasel.yml": {
-            "lines": 28,
-            "tokens": 145,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/write-good/TooWordy.yml": {
-            "lines": 220,
-            "tokens": 1511,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/write-good/ThereIs.yml": {
-            "lines": 5,
-            "tokens": 26,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/write-good/So.yml": {
-            "lines": 4,
-            "tokens": 21,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/write-good/Passive.yml": {
-            "lines": 182,
-            "tokens": 923,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/write-good/Illusions.yml": {
-            "lines": 10,
-            "tokens": 49,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/write-good/E-Prime.yml": {
-            "lines": 31,
-            "tokens": 156,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/write-good/Cliches.yml": {
-            "lines": 701,
-            "tokens": 7495,
-            "sources": 1,
-            "clones": 22,
-            "duplicatedLines": 477,
-            "duplicatedTokens": 5178,
-            "percentage": 68.05,
-            "percentageTokens": 69.09,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Very.yml": {
-            "lines": 5,
-            "tokens": 26,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Uncomparables.yml": {
-            "lines": 49,
-            "tokens": 277,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Typography.yml": {
-            "lines": 10,
-            "tokens": 96,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Spelling.yml": {
-            "lines": 16,
-            "tokens": 93,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Skunked.yml": {
-            "lines": 12,
-            "tokens": 63,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/RASSyndrome.yml": {
-            "lines": 29,
-            "tokens": 188,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/P-Value.yml": {
-            "lines": 5,
-            "tokens": 26,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Oxymorons.yml": {
-            "lines": 21,
-            "tokens": 144,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Nonwords.yml": {
-            "lines": 37,
-            "tokens": 234,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Needless.yml": {
-            "lines": 357,
-            "tokens": 2198,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Malapropisms.yml": {
-            "lines": 7,
-            "tokens": 48,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/LGBTTerms.yml": {
-            "lines": 14,
-            "tokens": 118,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/LGBTOffensive.yml": {
-            "lines": 12,
-            "tokens": 69,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Jargon.yml": {
-            "lines": 10,
-            "tokens": 67,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Hyperbole.yml": {
-            "lines": 5,
-            "tokens": 26,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Hedging.yml": {
-            "lines": 7,
-            "tokens": 48,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/GroupTerms.yml": {
-            "lines": 38,
-            "tokens": 804,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/GenderBias.yml": {
-            "lines": 44,
-            "tokens": 587,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Diacritical.yml": {
-            "lines": 94,
-            "tokens": 650,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/DenizenLabels.yml": {
-            "lines": 51,
-            "tokens": 352,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/DateSpacing.yml": {
-            "lines": 6,
-            "tokens": 31,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/DateRedundancy.yml": {
-            "lines": 9,
-            "tokens": 46,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/DateMidnight.yml": {
-            "lines": 6,
-            "tokens": 31,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/DateCase.yml": {
-            "lines": 6,
-            "tokens": 44,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Cursing.yml": {
-            "lines": 14,
-            "tokens": 71,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Currency.yml": {
-            "lines": 4,
-            "tokens": 37,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/CorporateSpeak.yml": {
-            "lines": 29,
-            "tokens": 270,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Cliches.yml": {
-            "lines": 781,
-            "tokens": 8341,
-            "sources": 1,
-            "clones": 22,
-            "duplicatedLines": 477,
-            "duplicatedTokens": 5178,
-            "percentage": 61.08,
-            "percentageTokens": 62.08,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/But.yml": {
-            "lines": 7,
-            "tokens": 35,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Archaisms.yml": {
-            "lines": 51,
-            "tokens": 282,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Apologizing.yml": {
-            "lines": 7,
-            "tokens": 41,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Annotations.yml": {
-            "lines": 8,
-            "tokens": 41,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/AnimalLabels.yml": {
-            "lines": 47,
-            "tokens": 281,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/Airlinese.yml": {
-            "lines": 7,
-            "tokens": 58,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
           "/github/workspace/.github/workflows/pages.yml": {
             "lines": 49,
             "tokens": 239,
@@ -968,6 +200,18 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
+          "/github/workspace/config/.ls-lint.yml": {
+            "lines": 53,
+            "tokens": 334,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "/github/workspace/config/.hadolint.yaml": {
             "lines": 49,
             "tokens": 179,
@@ -1065,8 +309,8 @@
             "newClones": 0
           },
           "/github/workspace/.megalinter.yml": {
-            "lines": 498,
-            "tokens": 1527,
+            "lines": 502,
+            "tokens": 1539,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1078,82 +322,14 @@
           }
         },
         "total": {
-          "lines": 4869,
-          "tokens": 33585,
-          "sources": 65,
-          "clones": 28,
-          "duplicatedLines": 705,
-          "duplicatedTokens": 6282,
-          "percentage": 14.48,
-          "percentageTokens": 18.7,
-          "newDuplicatedLines": 0,
-          "newClones": 0
-        }
-      },
-      "markdown": {
-        "sources": {
-          "/github/workspace/config/styles/write-good/README.md": {
-            "lines": 26,
-            "tokens": 399,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/styles/proselint/README.md": {
-            "lines": 11,
-            "tokens": 463,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          }
-        },
-        "total": {
-          "lines": 37,
-          "tokens": 862,
-          "sources": 2,
-          "clones": 0,
-          "duplicatedLines": 0,
-          "duplicatedTokens": 0,
-          "percentage": 0,
-          "percentageTokens": 0,
-          "newDuplicatedLines": 0,
-          "newClones": 0
-        }
-      },
-      "clojure": {
-        "sources": {
-          "/github/workspace/config/.clj-kondo/config.edn": {
-            "lines": 33,
-            "tokens": 208,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          }
-        },
-        "total": {
-          "lines": 33,
-          "tokens": 208,
-          "sources": 1,
-          "clones": 0,
-          "duplicatedLines": 0,
-          "duplicatedTokens": 0,
-          "percentage": 0,
-          "percentageTokens": 0,
+          "lines": 1940,
+          "tokens": 7882,
+          "sources": 24,
+          "clones": 6,
+          "duplicatedLines": 228,
+          "duplicatedTokens": 1104,
+          "percentage": 11.75,
+          "percentageTokens": 14.01,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -1242,6 +418,274 @@
           "duplicatedTokens": 0,
           "percentage": 0,
           "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "json": {
+        "sources": {
+          "/github/workspace/config/pyrightconfig.json": {
+            "lines": 31,
+            "tokens": 192,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/META6.json": {
+            "lines": 24,
+            "tokens": 155,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.tsqllintrc.json": {
+            "lines": 21,
+            "tokens": 110,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.stylelintrc.json": {
+            "lines": 37,
+            "tokens": 185,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.secretlintrc.json": {
+            "lines": 72,
+            "tokens": 347,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.remarkrc.json": {
+            "lines": 17,
+            "tokens": 104,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.npmpackagejsonlintrc.json": {
+            "lines": 72,
+            "tokens": 380,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.markdownlint.json": {
+            "lines": 24,
+            "tokens": 210,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.markdown-link-check.json": {
+            "lines": 33,
+            "tokens": 161,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.kics.config.json": {
+            "lines": 7,
+            "tokens": 48,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.jscpd.json": {
+            "lines": 18,
+            "tokens": 96,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.groovylintrc.json": {
+            "lines": 36,
+            "tokens": 204,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.flow-scanner.json": {
+            "lines": 40,
+            "tokens": 209,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.eslintrc-json.json": {
+            "lines": 27,
+            "tokens": 151,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.editorconfig-checker.json": {
+            "lines": 40,
+            "tokens": 175,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.coffee-lint.json": {
+            "lines": 57,
+            "tokens": 308,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/.vscode/tasks.json": {
+            "lines": 3,
+            "tokens": 15,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/.vscode/settings.json": {
+            "lines": 135,
+            "tokens": 810,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/.vscode/extensions.json": {
+            "lines": 39,
+            "tokens": 154,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/package.json": {
+            "lines": 15,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 15,
+            "duplicatedTokens": 95,
+            "percentage": 100,
+            "percentageTokens": 101.06,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/package-lock.json": {
+            "lines": 741,
+            "tokens": 4385,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 15,
+            "duplicatedTokens": 95,
+            "percentage": 2.02,
+            "percentageTokens": 2.17,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 1489,
+          "tokens": 8493,
+          "sources": 21,
+          "clones": 1,
+          "duplicatedLines": 15,
+          "duplicatedTokens": 95,
+          "percentage": 1.01,
+          "percentageTokens": 1.12,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -1416,811 +860,19 @@
       }
     },
     "total": {
-      "lines": 7153,
-      "tokens": 48000,
-      "sources": 107,
-      "clones": 29,
-      "duplicatedLines": 720,
-      "duplicatedTokens": 6377,
-      "percentage": 10.07,
-      "percentageTokens": 13.29,
+      "lines": 4169,
+      "tokens": 21326,
+      "sources": 62,
+      "clones": 7,
+      "duplicatedLines": 243,
+      "duplicatedTokens": 1199,
+      "percentage": 5.83,
+      "percentageTokens": 5.62,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
   },
   "duplicates": [
-    {
-      "format": "yaml",
-      "lines": 11,
-      "fragment": "- a fine kettle of fish\n  - a loose cannon\n  - a penny saved is a penny earned\n  - a tough row to hoe\n  - a word to the wise\n  - ace in the hole\n  - acid test\n  - add insult to injury\n  - against all odds\n  - air your dirty laundry\n  - alas",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 11,
-        "end": 21,
-        "startLoc": {
-          "line": 11,
-          "column": 3,
-          "position": 83
-        },
-        "endLoc": {
-          "line": 21,
-          "column": 5,
-          "position": 199
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 10,
-        "end": 20,
-        "startLoc": {
-          "line": 10,
-          "column": 3,
-          "position": 70
-        },
-        "endLoc": {
-          "line": 20,
-          "column": 4,
-          "position": 186
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 17,
-      "fragment": "- all in a day's work\n  - all talk, no action\n  - all thumbs\n  - all your eggs in one basket\n  - all's fair in love and war\n  - all's well that ends well\n  - almighty dollar\n  - American as apple pie\n  - an axe to grind\n  - another day, another dollar\n  - armed to the teeth\n  - as luck would have it\n  - as old as time\n  - as the crow flies\n  - at loose ends\n  - at my wits end\n  - at",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 24,
-        "end": 40,
-        "startLoc": {
-          "line": 24,
-          "column": 3,
-          "position": 228
-        },
-        "endLoc": {
-          "line": 40,
-          "column": 3,
-          "position": 412
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 21,
-        "end": 37,
-        "startLoc": {
-          "line": 21,
-          "column": 3,
-          "position": 195
-        },
-        "endLoc": {
-          "line": 37,
-          "column": 6,
-          "position": 379
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 22,
-      "fragment": "- ballpark figure\n  - banging your head against a brick wall\n  - baptism by fire\n  - barking up the wrong tree\n  - bat out of hell\n  - be all and end all\n  - beat a dead horse\n  - beat around the bush\n  - been there, done that\n  - beggars can't be choosers\n  - behind the eight ball\n  - bend over backwards\n  - benefit of the doubt\n  - bent out of shape\n  - best thing since sliced bread\n  - bet your bottom dollar\n  - better half\n  - better late than never\n  - better mousetrap\n  - better safe than sorry\n  - between a rock and a hard place\n  - between",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 51,
-        "end": 72,
-        "startLoc": {
-          "line": 51,
-          "column": 3,
-          "position": 531
-        },
-        "endLoc": {
-          "line": 72,
-          "column": 8,
-          "position": 767
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 46,
-        "end": 67,
-        "startLoc": {
-          "line": 46,
-          "column": 3,
-          "position": 474
-        },
-        "endLoc": {
-          "line": 67,
-          "column": 7,
-          "position": 710
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 25,
-      "fragment": "- beyond the pale\n  - bide your time\n  - big as life\n  - big cheese\n  - big fish in a small pond\n  - big man on campus\n  - bigger they are the harder they fall\n  - bird in the hand\n  - bird's eye view\n  - birds and the bees\n  - birds of a feather flock together\n  - bit the hand that feeds you\n  - bite the bullet\n  - bite the dust\n  - bitten off more than he can chew\n  - black as coal\n  - black as pitch\n  - black as the ace of spades\n  - blast from the past\n  - bleeding heart\n  - blessing in disguise\n  - blind ambition\n  - blind as a bat\n  - blind leading the blind\n  - blissful",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 76,
-        "end": 100,
-        "startLoc": {
-          "line": 76,
-          "column": 3,
-          "position": 821
-        },
-        "endLoc": {
-          "line": 100,
-          "column": 9,
-          "position": 1085
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 67,
-        "end": 91,
-        "startLoc": {
-          "line": 67,
-          "column": 3,
-          "position": 708
-        },
-        "endLoc": {
-          "line": 91,
-          "column": 6,
-          "position": 972
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 16,
-      "fragment": "- blow off steam\n  - blow your own horn\n  - blushing bride\n  - boils down to\n  - bolt from the blue\n  - bone to pick\n  - bored stiff\n  - bored to tears\n  - bottomless pit\n  - boys will be boys\n  - bright and early\n  - brings home the bacon\n  - broad across the beam\n  - broken record\n  - brought back to reality\n  - bulk",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 104,
-        "end": 119,
-        "startLoc": {
-          "line": 104,
-          "column": 3,
-          "position": 1123
-        },
-        "endLoc": {
-          "line": 119,
-          "column": 5,
-          "position": 1264
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 93,
-        "end": 108,
-        "startLoc": {
-          "line": 93,
-          "column": 3,
-          "position": 994
-        },
-        "endLoc": {
-          "line": 108,
-          "column": 5,
-          "position": 1135
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 14,
-      "fragment": "- cool as a cucumber\n  - cool, calm, and collected\n  - cost a king's ransom\n  - count your blessings\n  - crack of dawn\n  - crash course\n  - creature comforts\n  - cross that bridge when you come to it\n  - crushing blow\n  - cry like a baby\n  - cry me a river\n  - cry over spilt milk\n  - crystal clear\n  - crystal",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 155,
-        "end": 168,
-        "startLoc": {
-          "line": 155,
-          "column": 3,
-          "position": 1634
-        },
-        "endLoc": {
-          "line": 168,
-          "column": 8,
-          "position": 1769
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 137,
-        "end": 150,
-        "startLoc": {
-          "line": 137,
-          "column": 3,
-          "position": 1442
-        },
-        "endLoc": {
-          "line": 150,
-          "column": 10,
-          "position": 1577
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 23,
-      "fragment": "- devil is in the details\n  - dime a dozen\n  - divide and conquer\n  - dog and pony show\n  - dog days\n  - dog eat dog\n  - dog tired\n  - don't burn your bridges\n  - don't count your chickens\n  - don't look a gift horse in the mouth\n  - don't rock the boat\n  - don't step on anyone's toes\n  - don't take any wooden nickels\n  - down and out\n  - down at the heels\n  - down in the dumps\n  - down the hatch\n  - down to earth\n  - draw the line\n  - dressed to kill\n  - dressed to the nines\n  - drives me up the wall\n  - dubious",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 182,
-        "end": 204,
-        "startLoc": {
-          "line": 182,
-          "column": 3,
-          "position": 1914
-        },
-        "endLoc": {
-          "line": 204,
-          "column": 8,
-          "position": 2150
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 161,
-        "end": 183,
-        "startLoc": {
-          "line": 161,
-          "column": 3,
-          "position": 1699
-        },
-        "endLoc": {
-          "line": 183,
-          "column": 5,
-          "position": 1935
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 15,
-      "fragment": "- dyed in the wool\n  - eagle eye\n  - ear to the ground\n  - early bird catches the worm\n  - easier said than done\n  - easy as pie\n  - eat your heart out\n  - eat your words\n  - eleventh hour\n  - even the playing field\n  - every dog has its day\n  - every fiber of my being\n  - everything but the kitchen sink\n  - eye for an eye\n  - eyes",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 207,
-        "end": 221,
-        "startLoc": {
-          "line": 207,
-          "column": 3,
-          "position": 2171
-        },
-        "endLoc": {
-          "line": 221,
-          "column": 5,
-          "position": 2323
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 184,
-        "end": 198,
-        "startLoc": {
-          "line": 184,
-          "column": 3,
-          "position": 1942
-        },
-        "endLoc": {
-          "line": 198,
-          "column": 5,
-          "position": 2094
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 14,
-      "fragment": "- fish out of water\n  - fishing for a compliment\n  - fit as a fiddle\n  - fit the bill\n  - fit to be tied\n  - flash in the pan\n  - flat as a pancake\n  - flip your lid\n  - flog a dead horse\n  - fly by night\n  - fly the coop\n  - follow your heart\n  - for all intents and purposes\n  - for free",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 238,
-        "end": 251,
-        "startLoc": {
-          "line": 238,
-          "column": 3,
-          "position": 2480
-        },
-        "endLoc": {
-          "line": 251,
-          "column": 5,
-          "position": 2619
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 210,
-        "end": 223,
-        "startLoc": {
-          "line": 210,
-          "column": 3,
-          "position": 2204
-        },
-        "endLoc": {
-          "line": 223,
-          "column": 4,
-          "position": 2343
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 19,
-      "fragment": "- for the birds\n  - for what it's worth\n  - force of nature\n  - force to be reckoned with\n  - forgive and forget\n  - fox in the henhouse\n  - free and easy\n  - free as a bird\n  - fresh as a daisy\n  - full steam ahead\n  - fun in the sun\n  - garbage in, garbage out\n  - gentle as a lamb\n  - get a kick out of\n  - get a leg up\n  - get down and dirty\n  - get the lead out\n  - get to the bottom of\n  - get with",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 252,
-        "end": 270,
-        "startLoc": {
-          "line": 252,
-          "column": 3,
-          "position": 2622
-        },
-        "endLoc": {
-          "line": 270,
-          "column": 5,
-          "position": 2821
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 223,
-        "end": 241,
-        "startLoc": {
-          "line": 223,
-          "column": 3,
-          "position": 2339
-        },
-        "endLoc": {
-          "line": 241,
-          "column": 5,
-          "position": 2538
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 27,
-      "fragment": "- gilding the lily\n  - give and take\n  - go against the grain\n  - go at it tooth and nail\n  - go for broke\n  - go him one better\n  - go the extra mile\n  - go with the flow\n  - goes without saying\n  - good as gold\n  - good deed for the day\n  - good things come to those who wait\n  - good time was had by all\n  - good times were had by all\n  - greased lightning\n  - greek to me\n  - green thumb\n  - green-eyed monster\n  - grist for the mill\n  - growing like a weed\n  - hair of the dog\n  - hand to mouth\n  - happy as a clam\n  - happy as a lark\n  - hasn't a clue\n  - have a nice day\n  - have a",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 274,
-        "end": 300,
-        "startLoc": {
-          "line": 274,
-          "column": 3,
-          "position": 2857
-        },
-        "endLoc": {
-          "line": 300,
-          "column": 2,
-          "position": 3141
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 243,
-        "end": 269,
-        "startLoc": {
-          "line": 243,
-          "column": 3,
-          "position": 2554
-        },
-        "endLoc": {
-          "line": 269,
-          "column": 5,
-          "position": 2838
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 43,
-      "fragment": "- it's only a matter of time\n  - ivory tower\n  - Jack of all trades\n  - jockey for position\n  - jog your memory\n  - joined at the hip\n  - judge a book by its cover\n  - jump down your throat\n  - jump in with both feet\n  - jump on the bandwagon\n  - jump the gun\n  - jump to conclusions\n  - just a hop, skip, and a jump\n  - just the ticket\n  - justice is blind\n  - keep a stiff upper lip\n  - keep an eye on\n  - keep it simple, stupid\n  - keep the home fires burning\n  - keep up with the Joneses\n  - keep your chin up\n  - keep your fingers crossed\n  - kick the bucket\n  - kick up your heels\n  - kick your feet up\n  - kid in a candy store\n  - kill two birds with one stone\n  - kiss of death\n  - knock it out of the park\n  - knock on wood\n  - knock your socks off\n  - know him from Adam\n  - know the ropes\n  - know the score\n  - knuckle down\n  - knuckle sandwich\n  - knuckle under\n  - labor of love\n  - ladder of success\n  - land on your feet\n  - lap of luxury\n  - last but not least\n  - last but",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 356,
-        "end": 398,
-        "startLoc": {
-          "line": 356,
-          "column": 3,
-          "position": 3750
-        },
-        "endLoc": {
-          "line": 398,
-          "column": 4,
-          "position": 4207
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 312,
-        "end": 354,
-        "startLoc": {
-          "line": 312,
-          "column": 3,
-          "position": 3297
-        },
-        "endLoc": {
-          "line": 354,
-          "column": 7,
-          "position": 3754
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 44,
-      "fragment": "- last but not least\n  - last hurrah\n  - last-ditch effort\n  - law of the jungle\n  - law of the land\n  - lay down the law\n  - leaps and bounds\n  - let sleeping dogs lie\n  - let the cat out of the bag\n  - let the good times roll\n  - let your hair down\n  - let's talk turkey\n  - letter perfect\n  - lick your wounds\n  - lies like a rug\n  - life's a bitch\n  - life's a grind\n  - light at the end of the tunnel\n  - lighter than a feather\n  - lighter than air\n  - like clockwork\n  - like father like son\n  - like taking candy from a baby\n  - like there's no tomorrow\n  - lion's share\n  - live and learn\n  - live and let live\n  - long and short of it\n  - long lost love\n  - look before you leap\n  - look down your nose\n  - look what the cat dragged in\n  - looking a gift horse in the mouth\n  - looks like death warmed over\n  - loose cannon\n  - lose your head\n  - lose your temper\n  - loud as a horn\n  - lounge lizard\n  - loved and lost\n  - low man on the totem pole\n  - luck of the draw\n  - luck of the Irish\n  - make a",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 398,
-        "end": 441,
-        "startLoc": {
-          "line": 398,
-          "column": 3,
-          "position": 4203
-        },
-        "endLoc": {
-          "line": 441,
-          "column": 2,
-          "position": 4668
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 353,
-        "end": 396,
-        "startLoc": {
-          "line": 353,
-          "column": 3,
-          "position": 3739
-        },
-        "endLoc": {
-          "line": 396,
-          "column": 4,
-          "position": 4204
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 23,
-      "fragment": "- nip it in the bud\n  - no guts, no glory\n  - no love lost\n  - no pain, no gain\n  - no skin off my back\n  - no stone unturned\n  - no time like the present\n  - no use crying over spilled milk\n  - nose to the grindstone\n  - not a hope in hell\n  - not a minute's peace\n  - not in my backyard\n  - not playing with a full deck\n  - not the end of the world\n  - not written in stone\n  - nothing to sneeze at\n  - nothing ventured nothing gained\n  - now we're cooking\n  - off the top of my head\n  - off the wagon\n  - off the wall\n  - old hat\n  - olden",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 476,
-        "end": 498,
-        "startLoc": {
-          "line": 476,
-          "column": 3,
-          "position": 5039
-        },
-        "endLoc": {
-          "line": 498,
-          "column": 6,
-          "position": 5295
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 424,
-        "end": 446,
-        "startLoc": {
-          "line": 424,
-          "column": 3,
-          "position": 4500
-        },
-        "endLoc": {
-          "line": 446,
-          "column": 6,
-          "position": 4756
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 51,
-      "fragment": "- on the spot\n  - on the tip of my tongue\n  - on the wagon\n  - on thin ice\n  - once bitten, twice shy\n  - one bad apple doesn't spoil the bushel\n  - one born every minute\n  - one brick short\n  - one foot in the grave\n  - one in a million\n  - one red cent\n  - only game in town\n  - open a can of worms\n  - open and shut case\n  - open the flood gates\n  - opportunity doesn't knock twice\n  - out of pocket\n  - out of sight, out of mind\n  - out of the frying pan into the fire\n  - out of the woods\n  - out on a limb\n  - over a barrel\n  - over the hump\n  - pain and suffering\n  - pain in the\n  - panic button\n  - par for the course\n  - part and parcel\n  - party pooper\n  - pass the buck\n  - patience is a virtue\n  - pay through the nose\n  - penny pincher\n  - perfect storm\n  - pig in a poke\n  - pile it on\n  - pillar of the community\n  - pin your hopes on\n  - pitter patter of little feet\n  - plain as day\n  - plain as the nose on your face\n  - play by the rules\n  - play your cards right\n  - playing the field\n  - playing with fire\n  - pleased as punch\n  - plenty of fish in the sea\n  - point with pride\n  - poor as a church mouse\n  - pot calling the kettle black\n  - presidential",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 510,
-        "end": 560,
-        "startLoc": {
-          "line": 510,
-          "column": 3,
-          "position": 5403
-        },
-        "endLoc": {
-          "line": 560,
-          "column": 13,
-          "position": 5947
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 456,
-        "end": 506,
-        "startLoc": {
-          "line": 456,
-          "column": 3,
-          "position": 4846
-        },
-        "endLoc": {
-          "line": 506,
-          "column": 7,
-          "position": 5390
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 14,
-      "fragment": "- quick as a bunny\n  - quick as a lick\n  - quick as a wink\n  - quick as lightning\n  - quiet as a dormouse\n  - rags to riches\n  - raining buckets\n  - raining cats and dogs\n  - rank and file\n  - rat race\n  - reap what you sow\n  - red as a beet\n  - red herring\n  - redound",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 575,
-        "end": 588,
-        "startLoc": {
-          "line": 575,
-          "column": 3,
-          "position": 6108
-        },
-        "endLoc": {
-          "line": 588,
-          "column": 8,
-          "position": 6235
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 517,
-        "end": 530,
-        "startLoc": {
-          "line": 517,
-          "column": 3,
-          "position": 5521
-        },
-        "endLoc": {
-          "line": 530,
-          "column": 9,
-          "position": 5648
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 18,
-      "fragment": "- reinvent the wheel\n  - rich and famous\n  - rings a bell\n  - ripe old age\n  - ripped me off\n  - rise and shine\n  - road to hell is paved with good intentions\n  - rob Peter to pay Paul\n  - roll over in the grave\n  - rub the wrong way\n  - ruled the roost\n  - running in circles\n  - sad but true\n  - sadder but wiser\n  - salt of the earth\n  - scared stiff\n  - scared to death\n  - sea",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 590,
-        "end": 607,
-        "startLoc": {
-          "line": 590,
-          "column": 3,
-          "position": 6257
-        },
-        "endLoc": {
-          "line": 607,
-          "column": 4,
-          "position": 6432
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 530,
-        "end": 547,
-        "startLoc": {
-          "line": 530,
-          "column": 3,
-          "position": 5646
-        },
-        "endLoc": {
-          "line": 547,
-          "column": 7,
-          "position": 5821
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 10,
-      "fragment": "- shoot for the moon\n  - shoot the breeze\n  - shot in the dark\n  - shoulder to the wheel\n  - sick as a dog\n  - sigh of relief\n  - signed, sealed, and delivered\n  - sink or swim\n  - six of one, half a dozen of another\n  - six",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 618,
-        "end": 627,
-        "startLoc": {
-          "line": 618,
-          "column": 3,
-          "position": 6543
-        },
-        "endLoc": {
-          "line": 627,
-          "column": 4,
-          "position": 6649
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 556,
-        "end": 565,
-        "startLoc": {
-          "line": 556,
-          "column": 3,
-          "position": 5916
-        },
-        "endLoc": {
-          "line": 565,
-          "column": 8,
-          "position": 6022
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 28,
-      "fragment": "- skating on thin ice\n  - slept like a log\n  - slinging mud\n  - slippery as an eel\n  - slow as molasses\n  - smart as a whip\n  - smooth as a baby's bottom\n  - sneaking suspicion\n  - snug as a bug in a rug\n  - sow wild oats\n  - spare the rod, spoil the child\n  - speak of the devil\n  - spilled the beans\n  - spinning your wheels\n  - spitting image of\n  - spoke with relish\n  - spread like wildfire\n  - spring to life\n  - squeaky wheel gets the grease\n  - stands out like a sore thumb\n  - start from scratch\n  - stick in the mud\n  - still waters run deep\n  - stitch in time\n  - stop and smell the roses\n  - straight as an arrow\n  - straw that broke the camel's back\n  - stretched",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 628,
-        "end": 655,
-        "startLoc": {
-          "line": 628,
-          "column": 3,
-          "position": 6669
-        },
-        "endLoc": {
-          "line": 655,
-          "column": 10,
-          "position": 6965
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 565,
-        "end": 592,
-        "startLoc": {
-          "line": 565,
-          "column": 3,
-          "position": 6020
-        },
-        "endLoc": {
-          "line": 592,
-          "column": 7,
-          "position": 6316
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 14,
-      "fragment": "- strong as an ox\n  - stubborn as a mule\n  - stuff that dreams are made of\n  - stuffed shirt\n  - sweating blood\n  - sweating bullets\n  - take a load off\n  - take one for the team\n  - take the bait\n  - take the bull by the horns\n  - take the plunge\n  - takes one to know one\n  - takes two to tango\n  - than",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 656,
-        "end": 669,
-        "startLoc": {
-          "line": 656,
-          "column": 3,
-          "position": 6976
-        },
-        "endLoc": {
-          "line": 669,
-          "column": 5,
-          "position": 7117
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 592,
-        "end": 605,
-        "startLoc": {
-          "line": 592,
-          "column": 3,
-          "position": 6314
-        },
-        "endLoc": {
-          "line": 605,
-          "column": 4,
-          "position": 6455
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 39,
-      "fragment": "- tie one on\n  - tighter than a drum\n  - time and time again\n  - time is of the essence\n  - tip of the iceberg\n  - tired but happy\n  - to coin a phrase\n  - to each his own\n  - to make a long story short\n  - to the best of my knowledge\n  - toe the line\n  - tongue in cheek\n  - too good to be true\n  - too hot to handle\n  - too numerous to mention\n  - touch with a ten foot pole\n  - tough as nails\n  - trial and error\n  - trials and tribulations\n  - tried and true\n  - trip down memory lane\n  - twist of fate\n  - two cents worth\n  - two peas in a pod\n  - ugly as sin\n  - under the counter\n  - under the gun\n  - under the same roof\n  - under the weather\n  - until the cows come home\n  - unvarnished truth\n  - up the creek\n  - uphill battle\n  - upper crust\n  - upset the applecart\n  - vain attempt\n  - vain effort\n  - vanquish the enemy\n  - various",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 694,
-        "end": 732,
-        "startLoc": {
-          "line": 694,
-          "column": 3,
-          "position": 7419
-        },
-        "endLoc": {
-          "line": 732,
-          "column": 8,
-          "position": 7805
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 622,
-        "end": 660,
-        "startLoc": {
-          "line": 622,
-          "column": 3,
-          "position": 6650
-        },
-        "endLoc": {
-          "line": 660,
-          "column": 7,
-          "position": 7036
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 12,
-      "fragment": "- weather the storm\n  - weed them out\n  - week of Sundays\n  - went belly up\n  - wet behind the ears\n  - what goes around comes around\n  - what you see is what you get\n  - when it rains, it pours\n  - when push comes to shove\n  - when the cat's away\n  - when the going gets tough, the tough get going\n  - whet",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/styles/proselint/Cliches.yml",
-        "start": 745,
-        "end": 756,
-        "startLoc": {
-          "line": 745,
-          "column": 3,
-          "position": 7926
-        },
-        "endLoc": {
-          "line": 756,
-          "column": 5,
-          "position": 8065
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/styles/write-good/Cliches.yml",
-        "start": 668,
-        "end": 679,
-        "startLoc": {
-          "line": 668,
-          "column": 3,
-          "position": 7114
-        },
-        "endLoc": {
-          "line": 679,
-          "column": 6,
-          "position": 7253
-        }
-      }
-    },
     {
       "format": "yaml",
       "lines": 39,
