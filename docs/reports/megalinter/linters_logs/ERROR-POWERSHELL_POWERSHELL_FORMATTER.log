@@ -6,8 +6,8 @@ See documentation on https://megalinter.io/8.8.0/descriptors/powershell_powershe
     Invoke-Formatter: newlineafteropenbrace is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
 
 ❌ [ERROR] config/.powershell-formatter.psd1
-    Invoke-Formatter: converttoconsistentcommentstyle is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
+    Invoke-Formatter: trimwhitespace is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
 
 ❌ [ERROR] config/.powershell-psscriptanalyzer.psd1
-    Invoke-Formatter: preserveindentationinherestrings is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
+    Invoke-Formatter: converttousingimplicitreturn is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
 

@@ -1,5 +1,5 @@
 TAP version 13
-1..159
+1..160
 not ok 1 - .dockerignore
 not ok 2 - .editorconfig
 not ok 3 - .github/linters/.gitkeep
@@ -158,4 +158,5 @@ not ok 155 - config/trivy.yaml
 not ok 156 - docs/CNAME
 not ok 157 - docs/favicon.ico
 not ok 158 - docs/index.html
-not ok 159 - signal.code-workspace
+not ok 159 - package.json
+not ok 160 - signal.code-workspace

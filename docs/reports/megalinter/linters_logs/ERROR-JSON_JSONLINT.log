@@ -31,3 +31,4 @@ See documentation on https://megalinter.io/8.8.0/descriptors/json_jsonlint/
 ✅ [SUCCESS] config/pyrightconfig.json
 ✅ [SUCCESS] config/styles/proselint/meta.json
 ✅ [SUCCESS] config/styles/write-good/meta.json
+✅ [SUCCESS] package.json

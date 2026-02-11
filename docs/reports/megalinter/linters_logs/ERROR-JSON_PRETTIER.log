@@ -94,3 +94,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/json_prettier/
     Checking formatting...
     [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
 
+❌ [ERROR] package.json
+    Checking formatting...
+    [error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+
