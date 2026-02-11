@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:b00afe0f-1057-46d0-836c-56d846d989c3",
+    "serialNumber": "urn:uuid:0e38658f-830e-4c80-834c-e154b167e3ae",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-02-11T21:56:35+00:00",
+        "timestamp": "2026-02-11T22:07:33+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "d145524a-f14e-4205-b038-d209cfcced9a",
+            "bom-ref": "1c6c65e2-220f-4e1f-9dcc-5a4125cdceb3",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,7 +30,7 @@
     },
     "components": [
         {
-            "bom-ref": "29a2fc7b-b5fe-4515-99c1-8447cbefd464",
+            "bom-ref": "f1df6d1a-ace4-4573-bcb7-9b8bb6afe24c",
             "type": "application",
             "name": "package-lock.json",
             "properties": [
@@ -1654,7 +1654,13 @@
     ],
     "dependencies": [
         {
-            "ref": "29a2fc7b-b5fe-4515-99c1-8447cbefd464",
+            "ref": "1c6c65e2-220f-4e1f-9dcc-5a4125cdceb3",
+            "dependsOn": [
+                "f1df6d1a-ace4-4573-bcb7-9b8bb6afe24c"
+            ]
+        },
+        {
+            "ref": "f1df6d1a-ace4-4573-bcb7-9b8bb6afe24c",
             "dependsOn": [
                 "pkg:npm/%40secretlint/secretlint-rule-aws@11.3.1",
                 "pkg:npm/%40secretlint/secretlint-rule-basicauth@11.3.1",
@@ -1668,12 +1674,6 @@
                 "pkg:npm/%40secretlint/secretlint-rule-pattern@11.3.1",
                 "pkg:npm/%40secretlint/secretlint-rule-privatekey@11.3.1",
                 "pkg:npm/%40secretlint/secretlint-rule-secp256k1-privatekey@11.3.1"
-            ]
-        },
-        {
-            "ref": "d145524a-f14e-4205-b038-d209cfcced9a",
-            "dependsOn": [
-                "29a2fc7b-b5fe-4515-99c1-8447cbefd464"
             ]
         },
         {

@@ -12,7 +12,7 @@ The MegaLinter documentation can be found at:
 MegaLinter will analyze workspace [/github/workspace]
 GITHUB_REPOSITORY: egohygiene/signal
 GITHUB_REF: refs/heads/main
-GITHUB_RUN_ID: 21924470052
+GITHUB_RUN_ID: 21924797455
 
 
 [Pre] run: [echo "Calling pre-commands from $(pwd)"] in cwd [/github/workspace]
@@ -144,23 +144,13 @@ Kept [160] files on [160] found files
 +----------------+--------------------------+------------------------------------------------------------------------+----------------+------------+
 ::endgroup::
 Processing linters on [4] parallel cores… (according to variable PARALLEL_PROCESS_NUMBER
-::group::[31m❌ Linted [REPOSITORY] files with [secretlint]: Found 1 error(s) and 0 warning(s) - (1.55s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [secretlint]: Found 1 error(s) and 0 warning(s) - (1.5s)[0m (expand for details)
 - Using [secretlint v10.1.0] https://megalinter.io/8.8.0/descriptors/repository_secretlint
 - MegaLinter key: [REPOSITORY_SECRETLINT]
 - Rules config: [/github/workspace/config/.secretlintrc.json]
 - Command: [secretlint --secretlintignore config/.secretlintignore --secretlintrc /github/workspace/config/.secretlintrc.json **/*]
 --Error detail:
 AggregationError: secretlint loading errors
-
-----
-
-Failed to load rule module: @secretlint/secretlint-rule-git
-
-Error: Failed to load secretlint's rule module: "@secretlint/secretlint-rule-git" is not found.
-
-cwd: /github/workspace
-baseDir: 
-
 
 ----
 
@@ -244,9 +234,9 @@ baseDir:
 
 ----
 
-Failed to load rule module: @secretlint/privatekey
+Failed to load rule module: @secretlint/secretlint-rule-privatekey
 
-Error: Failed to load secretlint's rule module: "@secretlint/privatekey" is not found.
+Error: Failed to load secretlint's rule module: "@secretlint/secretlint-rule-privatekey" is not found.
 
 cwd: /github/workspace
 baseDir: 
@@ -289,31 +279,6 @@ baseDir:
     at async runSecretLint (file:///node-deps/node_modules/secretlint/module/index.js:31:28)
     at async file:///node-deps/node_modules/secretlint/bin/secretlint.js:15:44 {
   errors: [
-    Error: Failed to load rule module: @secretlint/secretlint-rule-git
-    
-    Error: Failed to load secretlint's rule module: "@secretlint/secretlint-rule-git" is not found.
-    
-    cwd: /github/workspace
-    baseDir: 
-    
-        at loadPackagesFromConfigDescriptor (file:///node-deps/node_modules/@secretlint/config-loader/module/index.js:89:19)
-        at async loadConfig (file:///node-deps/node_modules/@secretlint/config-loader/module/index.js:138:30)
-        ... 4 lines matching cause stack trace ...
-        at async file:///node-deps/node_modules/secretlint/bin/secretlint.js:15:44 {
-      [cause]: ReferenceError: Failed to load secretlint's rule module: "@secretlint/secretlint-rule-git" is not found.
-      
-      cwd: /github/workspace
-      baseDir: 
-      
-          at SecretLintModuleResolver.resolveRulePackageName (file:///node-deps/node_modules/@secretlint/config-loader/module/SecretLintModuleResolver.js:53:19)
-          at loadPackagesFromConfigDescriptor (file:///node-deps/node_modules/@secretlint/config-loader/module/index.js:52:79)
-          at async loadConfig (file:///node-deps/node_modules/@secretlint/config-loader/module/index.js:138:30)
-          at async file:///node-deps/node_modules/@secretlint/node/module/index.js:109:34
-          at async createEngine (file:///node-deps/node_modules/@secretlint/node/module/index.js:102:26)
-          at async lintFileOrText (file:///node-deps/node_modules/secretlint/module/index.js:5:20)
-          at async runSecretLint (file:///node-deps/node_modules/secretlint/module/index.js:31:28)
-          at async file:///node-deps/node_modules/secretlint/bin/secretlint.js:15:44
-    },
     Error: Failed to load rule module: @secretlint/secretlint-rule-npm
     
     Error: Failed to load secretlint's rule module: "@secretlint/secretlint-rule-npm" is not found.
@@ -514,9 +479,9 @@ baseDir:
           at async runSecretLint (file:///node-deps/node_modules/secretlint/module/index.js:31:28)
           at async file:///node-deps/node_modules/secretlint/bin/secretlint.js:15:44
     },
-    Error: Failed to load rule module: @secretlint/privatekey
+    Error: Failed to load rule module: @secretlint/secretlint-rule-privatekey
     
-    Error: Failed to load secretlint's rule module: "@secretlint/privatekey" is not found.
+    Error: Failed to load secretlint's rule module: "@secretlint/secretlint-rule-privatekey" is not found.
     
     cwd: /github/workspace
     baseDir: 
@@ -525,7 +490,7 @@ baseDir:
         at async loadConfig (file:///node-deps/node_modules/@secretlint/config-loader/module/index.js:138:30)
         ... 4 lines matching cause stack trace ...
         at async file:///node-deps/node_modules/secretlint/bin/secretlint.js:15:44 {
-      [cause]: ReferenceError: Failed to load secretlint's rule module: "@secretlint/privatekey" is not found.
+      [cause]: ReferenceError: Failed to load secretlint's rule module: "@secretlint/secretlint-rule-privatekey" is not found.
       
       cwd: /github/workspace
       baseDir: 
@@ -618,7 +583,7 @@ baseDir:
 }
 
 ::endgroup::
-::group::[32m✅ Linted [MARKDOWN] files with [markdown-link-check] successfully - (1.79s)[0m (expand for details)
+::group::[32m✅ Linted [MARKDOWN] files with [markdown-link-check] successfully - (1.9s)[0m (expand for details)
 - Using [markdown-link-check v3.12.2] https://megalinter.io/8.8.0/descriptors/markdown_markdown_link_check
 - MegaLinter key: [MARKDOWN_MARKDOWN_LINK_CHECK]
 - Rules config: [/github/workspace/config/.markdown-link-check.json]
@@ -629,7 +594,7 @@ baseDir:
 [markdown-link-check] config/styles/write-good/README.md - SUCCESS - 0 error(s) and 0 warning(s)
 ::endgroup::
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-MARKDOWN_MARKDOWN_LINK_CHECK.tap
-::group::[31m❌ Linted [COPYPASTE] files with [jscpd]: Found 29 error(s) and 0 warning(s) - (2.02s)[0m (expand for details)
+::group::[31m❌ Linted [COPYPASTE] files with [jscpd]: Found 29 error(s) and 0 warning(s) - (2.12s)[0m (expand for details)
 - Using [jscpd v4.0.5] https://megalinter.io/8.8.0/descriptors/copypaste_jscpd
 - MegaLinter key: [COPYPASTE_JSCPD]
 - Rules config: [/github/workspace/config/.jscpd.json]
@@ -754,7 +719,7 @@ Clone found (json):
 ┌────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
 │ Format     │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json       │ 23             │ 1510        │ 8615         │ 1            │ 15 (0.99%)       │ 95 (1.1%)         │
+│ json       │ 23             │ 1507        │ 8602         │ 1            │ 15 (1%)          │ 95 (1.1%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ yaml       │ 65             │ 4869        │ 33585        │ 28           │ 705 (14.48%)     │ 6282 (18.7%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -770,12 +735,12 @@ Clone found (json):
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ powershell │ 3              │ 103         │ 451          │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 107            │ 7156        │ 48013        │ 29           │ 720 (10.06%)     │ 6377 (13.28%)     │
+│ Total:     │ 107            │ 7153        │ 48000        │ 29           │ 720 (10.07%)     │ 6377 (13.29%)     │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
 Found 29 clones.
 HTML report saved to reports/megalinter/copy-paste/html/
-ERROR: jscpd found too many duplicates (10.06%) over threshold (0%)
-Error: ERROR: jscpd found too many duplicates (10.06%) over threshold (0%)
+ERROR: jscpd found too many duplicates (10.07%) over threshold (0%)
+Error: ERROR: jscpd found too many duplicates (10.07%) over threshold (0%)
     at ThresholdReporter.report (/node-deps/node_modules/@jscpd/finder/dist/index.js:612:13)
     at /node-deps/node_modules/@jscpd/finder/dist/index.js:110:18
     at Array.forEach (<anonymous>)
@@ -783,7 +748,7 @@ Error: ERROR: jscpd found too many duplicates (10.06%) over threshold (0%)
     at async /node-deps/node_modules/jscpd/dist/jscpd.js:351:5
 
 ::endgroup::
-::group::[32m✅ Linted [SPELL] files with [vale] successfully - (0.69s)[0m (expand for details)
+::group::[32m✅ Linted [SPELL] files with [vale] successfully - (0.71s)[0m (expand for details)
 - Using [vale v3.11.2] https://megalinter.io/8.8.0/descriptors/spell_vale
 - MegaLinter key: [SPELL_VALE]
 - Rules config: [/github/workspace/config/.vale.ini]
@@ -825,14 +790,7 @@ Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[32m✅ Linted [REPOSITORY] files with [checkov] successfully - (42.19s)[0m (expand for details)
-- Using [checkov v3.2.413] https://megalinter.io/8.8.0/descriptors/repository_checkov
-- MegaLinter key: [REPOSITORY_CHECKOV]
-- Rules config: [/github/workspace/config/.checkov.yml]
-- Command: [checkov --directory . --config-file /github/workspace/config/.checkov.yml]
-::endgroup::
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[31m❌ Linted [JSON] files with [v8r]: Found 1 error(s) and 0 warning(s) - (51.19s)[0m (expand for details)
+::group::[31m❌ Linted [JSON] files with [v8r]: Found 1 error(s) and 0 warning(s) - (48.8s)[0m (expand for details)
 - Using [v8r v5.0.0] https://megalinter.io/8.8.0/descriptors/json_v8r
 - MegaLinter key: [JSON_V8R]
 - Rules config: identified by [v8r]
@@ -950,9 +908,14 @@ config/.groovylintrc.json#/rules must NOT have additional properties, found addi
 [v8r] package-lock.json - SUCCESS - 0 error(s) and 0 warning(s)
 [v8r] package.json - SUCCESS - 0 error(s) and 0 warning(s)
 ::endgroup::
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-JSON_V8R.tap
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+::group::[32m✅ Linted [REPOSITORY] files with [checkov] successfully - (43.77s)[0m (expand for details)
+- Using [checkov v3.2.413] https://megalinter.io/8.8.0/descriptors/repository_checkov
+- MegaLinter key: [REPOSITORY_CHECKOV]
+- Rules config: [/github/workspace/config/.checkov.yml]
+- Command: [checkov --directory . --config-file /github/workspace/config/.checkov.yml]
+::endgroup::
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
@@ -968,7 +931,10 @@ Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[31m❌ Linted [REPOSITORY] files with [kics]: Found 1 error(s) and 0 warning(s) - (30.95s)[0m (expand for details)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+::group::[31m❌ Linted [REPOSITORY] files with [kics]: Found 1 error(s) and 0 warning(s) - (32.73s)[0m (expand for details)
 - Using [kics v2.1.10] https://megalinter.io/8.8.0/descriptors/repository_kics
 - MegaLinter key: [REPOSITORY_KICS]
 - Rules config: [/github/workspace/config/.kics.config.json]
@@ -1034,14 +1000,17 @@ Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[32m✅ Linted [REPOSITORY] files with [trivy] successfully - (10.71s)[0m (expand for details)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+::group::[32m✅ Linted [REPOSITORY] files with [trivy] successfully - (11.48s)[0m (expand for details)
 - Using [trivy v0.63.0] https://megalinter.io/8.8.0/descriptors/repository_trivy
 - MegaLinter key: [REPOSITORY_TRIVY]
 - Rules config: [/github/workspace/config/trivy.yaml]
 - Command: [trivy fs --scanners vuln,misconfig --exit-code 1 --config /github/workspace/config/trivy.yaml .]
 ::endgroup::
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[32m✅ Linted [REPOSITORY] files with [trivy-sbom] successfully - (1.58s)[0m (expand for details)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+::group::[32m✅ Linted [REPOSITORY] files with [trivy-sbom] successfully - (1.73s)[0m (expand for details)
 - Using [trivy-sbom v0.63.0] https://megalinter.io/8.8.0/descriptors/repository_trivy_sbom
 - MegaLinter key: [REPOSITORY_TRIVY_SBOM]
 - Rules config: [/github/workspace/config/trivy-sbom.yaml]
@@ -1051,27 +1020,26 @@ Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[31m❌ Linted [REPOSITORY] files with [trufflehog]: Found 1 error(s) and 0 warning(s) - (3.99s)[0m (expand for details)
-- Using [trufflehog v3.89.1] https://megalinter.io/8.8.0/descriptors/repository_trufflehog
-- MegaLinter key: [REPOSITORY_TRUFFLEHOG]
-- Rules config: [/github/workspace/config/.trufflehog.yml]
-- Command: [trufflehog filesystem . --fail --only-verified --no-update --exclude-paths=config/.trufflehogignore --config /github/workspace/config/.trufflehog.yml]
---Error detail:
-2026-02-11T21:56:41Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"branch\""}
-
-::endgroup::
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[32m✅ Linted [REPOSITORY] files with [grype] successfully - (54.68s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [grype] successfully - (53.58s)[0m (expand for details)
 - Using [grype v0.94.0] https://megalinter.io/8.8.0/descriptors/repository_grype
 - MegaLinter key: [REPOSITORY_GRYPE]
 - Rules config: [/github/workspace/config/.grype.yaml]
 - Command: [grype --config /github/workspace/config/.grype.yaml dir:.]
 ::endgroup::
+::group::[31m❌ Linted [REPOSITORY] files with [trufflehog]: Found 1 error(s) and 0 warning(s) - (3.96s)[0m (expand for details)
+- Using [trufflehog v3.89.1] https://megalinter.io/8.8.0/descriptors/repository_trufflehog
+- MegaLinter key: [REPOSITORY_TRUFFLEHOG]
+- Rules config: [/github/workspace/config/.trufflehog.yml]
+- Command: [trufflehog filesystem . --fail --only-verified --no-update --exclude-paths=config/.trufflehogignore --config /github/workspace/config/.trufflehog.yml]
+--Error detail:
+2026-02-11T22:07:39Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"branch\""}
+
+::endgroup::
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-::group::[31m❌ Linted [SPELL] files with [proselint]: Found 1 error(s) and 0 warning(s) - (2.92s)[0m (expand for details)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+::group::[31m❌ Linted [SPELL] files with [proselint]: Found 1 error(s) and 0 warning(s) - (2.98s)[0m (expand for details)
 - Using [proselint v0.14.0] https://megalinter.io/8.8.0/descriptors/spell_proselint
 - MegaLinter key: [SPELL_PROSELINT]
 - Rules config: [/github/workspace/config/.proselintrc]
@@ -1085,7 +1053,8 @@ config/styles/write-good/README.md:8:12: typography.symbols.copyright (c) is a g
 [0m
 ::endgroup::
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-SPELL_PROSELINT.tap
-::group::[31m❌ Linted [ACTION] files with [actionlint]: Found 13 error(s) and 0 warning(s) - (0.13s)[0m (expand for details)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+::group::[31m❌ Linted [ACTION] files with [actionlint]: Found 13 error(s) and 0 warning(s) - (0.18s)[0m (expand for details)
 - Using [actionlint v1.7.7] https://megalinter.io/8.8.0/descriptors/action_actionlint
 - MegaLinter key: [ACTION_ACTIONLINT]
 - Rules config: identified by [actionlint]
@@ -1153,125 +1122,11 @@ config/styles/write-good/README.md:8:12: typography.symbols.copyright (c) is a g
 ::endgroup::
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-ACTION_ACTIONLINT.tap
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[32m✅ Linted [ANSIBLE] files with [ansible-lint] successfully - (8.83s)[0m (expand for details)
-- Using [ansible-lint v25.5.0] https://megalinter.io/8.8.0/descriptors/ansible_ansible_lint
-- MegaLinter key: [ANSIBLE_ANSIBLE_LINT]
-- Rules config: [/github/workspace/config/.ansible-lint]
-- Command: [ansible-lint -c /github/workspace/config/.ansible-lint -v]
-::endgroup::
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-::group::[31m❌ Linted [CLOJURE] files with [clj-kondo]: Found 1 error(s) and 0 warning(s) - (0.03s)[0m (expand for details)
-- Using [clj-kondo v2025.06.05] https://megalinter.io/8.8.0/descriptors/clojure_clj_kondo
-- MegaLinter key: [CLOJURE_CLJ_KONDO]
-- Rules config: [/github/workspace/config/.clj-kondo/config.edn]
-- Command: [clj-kondo --config /github/workspace/config/.clj-kondo/config.edn --lint config/.clj-kondo/config.edn]
-[31m[clj-kondo] config/.clj-kondo/config.edn - ERROR - 1 error(s) and 0 warning(s)[0m
-[31m--Error detail:
-config/.clj-kondo/config.edn:12:3: warning: Unexpected linter name: :keyword-naming
-config/.clj-kondo/config.edn:13:3: warning: Unexpected linter name: :fn-arity
-config/.clj-kondo/config.edn:16:3: warning: Unexpected linter name: :wrong-arity
-config/.clj-kondo/config.edn:17:3: warning: Unexpected linter name: :macroexpand
-linting took 7ms, errors: 0, warnings: 4
-[0m
-::endgroup::
-[Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-CLOJURE_CLJ_KONDO.tap
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-::group::[32m✅ Linted [CLOJURE] files with [cljstyle] successfully - (0.02s)[0m (expand for details)
-- Using [cljstyle v0.17.642] https://megalinter.io/8.8.0/descriptors/clojure_cljstyle
-- MegaLinter key: [CLOJURE_CLJSTYLE]
-- Rules config: [/github/workspace/config/.cljstyle]
-- Command: [cljstyle check config/.clj-kondo/config.edn]
-[cljstyle] config/.clj-kondo/config.edn - SUCCESS - 0 error(s) and 0 warning(s)
-::endgroup::
-[Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-CLOJURE_CLJSTYLE.tap
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-::group::[32m✅ Linted [YAML] files with [v8r] successfully - (112.04s)[0m (expand for details)
+::group::[32m✅ Linted [YAML] files with [v8r] successfully - (105.11s)[0m (expand for details)
 - Using [v8r v5.0.0] https://megalinter.io/8.8.0/descriptors/yaml_v8r
 - MegaLinter key: [YAML_V8R]
 - Rules config: [/github/workspace/config/.v8rrc.yml]
@@ -1412,6 +1267,34 @@ Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-YAML_V8R.tap
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+::group::[31m❌ Linted [CLOJURE] files with [clj-kondo]: Found 1 error(s) and 0 warning(s) - (0.04s)[0m (expand for details)
+- Using [clj-kondo v2025.06.05] https://megalinter.io/8.8.0/descriptors/clojure_clj_kondo
+- MegaLinter key: [CLOJURE_CLJ_KONDO]
+- Rules config: [/github/workspace/config/.clj-kondo/config.edn]
+- Command: [clj-kondo --config /github/workspace/config/.clj-kondo/config.edn --lint config/.clj-kondo/config.edn]
+[31m[clj-kondo] config/.clj-kondo/config.edn - ERROR - 1 error(s) and 0 warning(s)[0m
+[31m--Error detail:
+config/.clj-kondo/config.edn:12:3: warning: Unexpected linter name: :keyword-naming
+config/.clj-kondo/config.edn:13:3: warning: Unexpected linter name: :fn-arity
+config/.clj-kondo/config.edn:16:3: warning: Unexpected linter name: :wrong-arity
+config/.clj-kondo/config.edn:17:3: warning: Unexpected linter name: :macroexpand
+linting took 9ms, errors: 0, warnings: 4
+[0m
+::endgroup::
+[Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-CLOJURE_CLJ_KONDO.tap
+::group::[32m✅ Linted [CLOJURE] files with [cljstyle] successfully - (0.01s)[0m (expand for details)
+- Using [cljstyle v0.17.642] https://megalinter.io/8.8.0/descriptors/clojure_cljstyle
+- MegaLinter key: [CLOJURE_CLJSTYLE]
+- Rules config: [/github/workspace/config/.cljstyle]
+- Command: [cljstyle check config/.clj-kondo/config.edn]
+[cljstyle] config/.clj-kondo/config.edn - SUCCESS - 0 error(s) and 0 warning(s)
+::endgroup::
+[Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-CLOJURE_CLJSTYLE.tap
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
@@ -1419,7 +1302,95 @@ Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-::group::[31m❌ Linted [EDITORCONFIG] files with [editorconfig-checker]: Found 160 error(s) and 0 warning(s) - (0.94s)[0m (expand for details)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+Unable to get number of errors with regex_number and Errors\.+([0-9]+)
+::group::[32m✅ Linted [ANSIBLE] files with [ansible-lint] successfully - (9.8s)[0m (expand for details)
+- Using [ansible-lint v25.5.0] https://megalinter.io/8.8.0/descriptors/ansible_ansible_lint
+- MegaLinter key: [ANSIBLE_ANSIBLE_LINT]
+- Rules config: [/github/workspace/config/.ansible-lint]
+- Command: [ansible-lint -c /github/workspace/config/.ansible-lint -v]
+::endgroup::
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+::group::[31m❌ Linted [EDITORCONFIG] files with [editorconfig-checker]: Found 160 error(s) and 0 warning(s) - (0.99s)[0m (expand for details)
 - Using [editorconfig-checker v3.3.0] https://megalinter.io/8.8.0/descriptors/editorconfig_editorconfig_checker
 - MegaLinter key: [EDITORCONFIG_EDITORCONFIG_CHECKER]
 - Rules config: [/github/workspace/config/.editorconfig-checker.json]
@@ -1689,7 +1660,6 @@ Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 [31;1mjson: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks[33;0m
 [0m
 [31m[editorconfig-checker] config/.checkmake.ini - ERROR - 1 error(s) and 0 warning(s)[0m
-Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 [31m--Error detail:
 [31;1mjson: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks[33;0m
 [0m
@@ -2227,32 +2197,9 @@ Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 [0m
 ::endgroup::
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-EDITORCONFIG_EDITORCONFIG_CHECKER.tap
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[31m❌ Linted [HTML] files with [djlint]: Found 3 error(s) and 0 warning(s) - (0.91s)[0m (expand for details)
-- Using [djlint v1.36.4] https://megalinter.io/8.8.0/descriptors/html_djlint
-- MegaLinter key: [HTML_DJLINT]
-- Rules config: identified by [djlint]
-- Command: [djlint docs/index.html]
-[31m[djlint] docs/index.html - ERROR - 3 error(s) and 0 warning(s)[0m
-[31m--Error detail:
-
-Linting 0/1 files ┈┈┈┈┈┈┈┈┈┈ 00:00                                          Linting 1/1 files ━━━━━━━━━━ 00:00    Linting 1/1 files ━━━━━━━━━━ 00:00    
-
-
-docs/index.html
-───────────────────────────────────────────────────────────────────────────────
-H005 2:0 Html tag should have lang attribute. <html> <head> 
-H030 2:0 Consider adding a meta description. <html> <head> 
-H031 2:0 Consider adding meta keywords. <html> <head> 
-
-Linted 1 file, found 3 errors.
-
-[0m
-::endgroup::
-[Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-HTML_DJLINT.tap
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-::group::[31m❌ Linted [SPELL] files with [lychee]: Found 94 error(s) and 0 warning(s) - (14.1s)[0m (expand for details)
+::group::[31m❌ Linted [SPELL] files with [lychee]: Found 94 error(s) and 0 warning(s) - (14.97s)[0m (expand for details)
 - Using [lychee v0.18.0] https://megalinter.io/8.8.0/descriptors/spell_lychee
 - MegaLinter key: [SPELL_LYCHEE]
 - Rules config: [/github/workspace/config/lychee.toml]
@@ -2368,175 +2315,175 @@ Caused by:
 [0m
 [31m[lychee] .megalinter.yml - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[200] https://megalinter.io/latest/descriptors/makefile_checkmake/
-[200] https://megalinter.io/latest/descriptors/clojure_clj_kondo/
-[200] https://megalinter.io/latest/descriptors/spell_lychee/
-[200] https://megalinter.io/latest/descriptors/markdown_remark_lint/
-[200] https://megalinter.io/latest/descriptors/go_revive/
-[200] https://megalinter.io/latest/descriptors/salesforce_lightning_flow_scanner/
-[200] https://megalinter.io/latest/descriptors/typescript_eslint/
-[200] https://megalinter.io/latest/descriptors/java_pmd/
-[200] https://megalinter.io/latest/descriptors/python_flake8/
-[200] https://megalinter.io/latest/descriptors/ansible_ansible_lint/
-[EXCLUDED] mailto:szmyty@gmail.com
-[200] https://phpstan.org/
-[200] https://psalm.dev/
-[200] https://megalinter.io/latest/descriptors/python_mypy/
-[200] https://megalinter.io/latest/descriptors/graphql_graphql_schema_linter/
+[200] https://eslint.org/
+[200] https://megalinter.io/latest/descriptors/terraform_terrascan/
+[200] https://megalinter.io/latest/descriptors/python_black/
 [200] https://megalinter.io/latest/descriptors/spell_cspell/
-[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/
-[200] https://megalinter.io/latest/descriptors/markdown_markdownlint/
-[200] https://megalinter.io/latest/descriptors/lua_luacheck/
+[200] https://megalinter.io/latest/descriptors/rst_rstcheck/
+[200] https://megalinter.io/latest/descriptors/makefile_checkmake/
+[200] https://megalinter.io/latest/descriptors/c_clang_format/
+[404] https://megalinter.io/latest/descriptors/markdown_markdown_link_check/ | Network error: Not Found
+[200] https://megalinter.io/latest/descriptors/repository_trivy/
+[200] https://megalinter.io/latest/descriptors/puppet_puppet_lint/
+[200] https://megalinter.io/latest/descriptors/html_htmlhint/
+[200] https://megalinter.io/latest/descriptors/json_jsonlint/
+[200] https://megalinter.io/latest/descriptors/graphql_graphql_schema_linter/
+[200] https://megalinter.io/latest/descriptors/clojure_clj_kondo/
+[200] https://megalinter.io/latest/descriptors/repository_trufflehog/
+[200] https://yamllint.readthedocs.io/en/stable/
+[200] https://megalinter.io/latest/descriptors/repository_gitleaks/
+[200] https://megalinter.io/latest/descriptors/yaml_yamllint/
+[200] https://megalinter.io/latest/descriptors/php_phplint/
+[200] https://megalinter.io/latest/descriptors/javascript_eslint/
+[200] https://megalinter.io/latest/descriptors/spell_lychee/
+[200] https://prettier.io/
+[200] https://megalinter.io/latest/descriptors/repository_kics/
+[200] https://megalinter.io/latest/descriptors/typescript_eslint/
+[200] https://mypy.readthedocs.io/en/stable/
+[200] https://megalinter.io/latest/descriptors/repository_secretlint/
+[200] https://megalinter.io/latest/descriptors/dockerfile_hadolint/
+[200] https://megalinter.io/latest/descriptors/json_npm_package_json_lint/
+[200] https://black.readthedocs.io/en/stable/
+[200] https://megalinter.io/latest/descriptors/python_isort/
+[200] https://github.com/anchore/grype
+[200] https://megalinter.io/latest/descriptors/terraform_terragrunt/
+[200] https://megalinter.io/latest/descriptors/yaml_v8r/
+[200] https://megalinter.io/latest/json-schemas/configuration.html
+[200] https://megalinter.io/latest/descriptors/css_stylelint/
+[200] https://megalinter.io/latest/descriptors/rust_clippy/
+[200] https://github.com/mpeterv/luacheck
+[200] https://megalinter.io/latest/descriptors/api_spectral/
+[200] https://pmd.github.io/
+[200] https://github.com/yoheimuta/protolint
+[200] https://github.com/overtrue/phplint
+[200] https://github.com/trufflesecurity/trufflehog
+[200] https://megalinter.io/latest/descriptors/r_lintr/
+[200] https://github.com/hadolint/hadolint
+[200] https://dart.dev/tools/dart-analyze
+[EXCLUDED] mailto:szmyty@gmail.com
+[200] https://github.com/coffeelint/coffeelint
+[200] https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/
+[200] https://github.com/gherkin-lint/gherkin-lint
+[200] https://megalinter.io/latest/descriptors/cpp_clang_format/
+[200] https://megalinter.io/latest/descriptors/php_psalm/
+[200] https://github.com/microsoft/DevSkim
+[200] https://github.com/greglook/cljstyle
+[200] https://github.com/forcedotcom/code-analyzer
+[200] https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
 [200] https://pycqa.github.io/isort/
 [200] https://megalinter.io/latest/descriptors/sql_sqlfluff/
-[404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ | Network error: Not Found
-[200] https://megalinter.io/latest/descriptors/json_prettier/
-[200] https://rubocop.org/
-[200] https://flake8.pycqa.org/en/latest/
-[200] https://clang.llvm.org/docs/ClangFormat.html
-[200] https://megalinter.io/latest/descriptors/powershell_powershell/
-[200] https://github.com/yoheimuta/protolint
-[200] https://megalinter.io/latest/descriptors/json_eslint_plugin_jsonc/
-[200] https://github.com/Azure/arm-ttk
-[200] https://github.com/microsoft/DevSkim
-[200] https://megalinter.io/latest/descriptors/php_phpstan/
-[200] https://github.com/puppetlabs/puppet-lint
-[200] https://github.com/gruntwork-io/terragrunt
-[200] https://megalinter.io/latest/descriptors/dart_dartanalyzer/
-[200] https://megalinter.io/latest/descriptors/php_psalm/
-[200] https://megalinter.io/latest/descriptors/c_clang_format/
-[200] https://github.com/DavidAnson/markdownlint
-[200] https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
-[200] https://megalinter.io/latest/descriptors/salesforce_sfdx_scanner_apex/
-[200] https://github.com/trufflesecurity/trufflehog
-[200] https://megalinter.io/latest/descriptors/terraform_terrascan/
-[200] https://megalinter.io/latest/descriptors/css_stylelint/
-[200] https://checkstyle.org/
-[200] https://github.com/lycheeverse/lychee
-[200] https://raku.org/
-[200] https://megalinter.io/latest/descriptors/repository_devskim/
-[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/
-[200] https://megalinter.io/latest/descriptors/typescript_prettier/
-[200] https://megalinter.io/latest/supported-linters/
-[200] https://megalinter.io/latest/descriptors/repository_checkov/
-[200] https://megalinter.io/latest/descriptors/terraform_tflint/
-[200] https://github.com/amperser/proselint
-[200] https://megalinter.io/latest/descriptors/clojure_cljstyle/
-[200] https://github.com/tclindner/npm-package-json-lint
-[200] https://github.com/realm/SwiftLint
-[200] https://megalinter.io/latest/descriptors/repository_secretlint/
-[200] https://github.com/PHPCSStandards/PHP_CodeSniffer/
-[200] https://megalinter.io/latest/config-variables/
-[200] https://megalinter.io/latest/descriptors/gherkin_gherkin_lint/
-[200] https://megalinter.io/latest/descriptors/java_checkstyle/
-[200] https://github.com/sqlfluff/sqlfluff
-[200] https://megalinter.io/latest/descriptors/python_isort/
-[200] https://github.com/tsqllint/tsqllint
-[200] https://github.com/errata-ai/vale
+[200] https://megalinter.io/latest/descriptors/ansible_ansible_lint/
+[200] https://megalinter.io/latest/descriptors/markdown_markdownlint/
 [200] https://megalinter.io/latest/descriptors/latex_chktex/
-[200] https://github.com/ota-meshi/eslint-plugin-jsonc
-[200] https://github.com/aquasecurity/trivy
-[200] https://megalinter.io/latest/descriptors/puppet_puppet_lint/
-[200] https://megalinter.io/latest/descriptors/cloudformation_cfn_lint/
-[200] https://github.com/cjoudrey/graphql-schema-linter
-[200] https://github.com/PowerShell/PSScriptAnalyzer
-[200] https://github.com/chris48s/v8r
-[200] https://github.com/checkmake/checkmake
-[200] https://github.com/
-[200] https://github.com/forcedotcom/code-analyzer
-[200] https://megalinter.io/latest/descriptors/repository_grype/
-[200] https://github.com/terraform-linters/tflint
-[200] https://ruff.rs/
-[200] https://stoplight.io/open-source/spectral
-[200] https://megalinter.io/latest/descriptors/spell_proselint/
-[200] https://dart.dev/tools/dart-analyze
-[200] https://megalinter.io/latest/descriptors/raku_raku/
-[200] https://github.com/rhysd/actionlint
-[200] https://megalinter.io/latest/descriptors/yaml_yamllint/
-[200] https://pylint.pycqa.org/en/latest/
-[200] https://eslint.org/
-[404] https://megalinter.io/latest/descriptors/markdown_markdown_link_check/ | Network error: Not Found
-[200] https://megalinter.io/latest/descriptors/api_spectral/
-[200] https://megalinter.io/latest/descriptors/ruby_rubocop/
-[200] https://megalinter.io/latest/descriptors/python_black/
-[200] https://megalinter.io/latest/descriptors/php_phpcs/
-[ERROR] https://pyrightlang.org/ | Network error: error sending request for url (https://pyrightlang.org/) Maybe a certificate error?
-[200] https://megalinter.io/latest/descriptors/r_lintr/
-[200] https://megalinter.io/latest/descriptors/dockerfile_hadolint/
-[200] https://megalinter.io/latest/descriptors/snakemake_snakefmt/
-[200] https://github.com/remarkjs/remark-lint
-[200] https://megalinter.io/latest/descriptors/swift_swiftlint/
-[200] https://megalinter.io/latest/descriptors/yaml_v8r/
-[200] https://ansible.readthedocs.io/projects/lint/
-[200] https://megalinter.io/latest/descriptors/json_npm_package_json_lint/
-[200] https://github.com/nvuillam/npm-groovy-lint
-[200] https://yamllint.readthedocs.io/en/stable/
-[200] https://megalinter.io/latest/descriptors/groovy_npm_groovy_lint/
-[200] https://github.com/rust-lang/rust-clippy
-[200] https://megalinter.io/latest/descriptors/repository_gitleaks/
-[200] https://megalinter.io/latest/descriptors/copypaste_jscpd/
-[200] https://github.com/scalacenter/scalafix
-[200] https://prettier.io/
-[200] https://megalinter.io/latest/descriptors/php_phplint/
-[200] https://github.com/gherkin-lint/gherkin-lint
-[200] https://megalinter.io/latest/descriptors/action_actionlint/
+[200] https://megalinter.io/latest/config-variables/
+[200] https://megalinter.io/latest/descriptors/lua_luacheck/
 [200] https://megalinter.io/latest/descriptors/jsx_eslint/
-[200] https://megalinter.io/latest/descriptors/python_bandit/
-[200] https://www.checkov.io/
-[200] https://megalinter.io/latest/json-schemas/configuration.html
-[200] https://megalinter.io/latest/descriptors/javascript_prettier/
-[200] https://megalinter.io/latest/descriptors/repository_trufflehog/
-[200] https://megalinter.io/latest/descriptors/repository_trivy/
-[200] https://www.nongnu.org/chktex/
+[200] https://megalinter.io/latest/descriptors/markdown_remark_lint/
+[200] https://megalinter.io/latest/descriptors/powershell_powershell/
+[200] https://github.com/checkmake/checkmake
+[200] https://github.com/aquasecurity/trivy
+[200] https://megalinter.io/latest/descriptors/php_phpstan/
+[200] https://megalinter.io/latest/descriptors/ruby_rubocop/
+[200] https://megalinter.io/latest/descriptors/salesforce_lightning_flow_scanner/
+[200] https://github.com/r-lib/lintr
+[200] https://ruff.rs/
+[200] https://megalinter.io/latest/descriptors/clojure_cljstyle/
+[200] https://checkstyle.org/
+[200] https://github.com/tclindner/npm-package-json-lint
+[200] https://github.com/terraform-linters/tflint
+[200] https://flake8.pycqa.org/en/latest/
+[200] https://megalinter.io/latest/descriptors/json_eslint_plugin_jsonc/
+[200] https://megalinter.io/latest/descriptors/swift_swiftlint/
 [200] https://github.com/tenable/terrascan
-[200] https://github.com/zaach/jsonlint
-[200] https://megalinter.io/latest/descriptors/cpp_clang_format/
-[200] https://megalinter.io/latest/descriptors/repository_kics/
+[200] https://megalinter.io/latest/descriptors/python_mypy/
+[200] https://megalinter.io/latest/descriptors/java_pmd/
 [200] https://megalinter.io/latest/descriptors/yaml_prettier/
-[200] https://megalinter.io/latest/descriptors/python_pyright/
-[200] https://github.com/rstcheck/rstcheck
-[200] https://megalinter.io/latest/descriptors/terraform_terragrunt/
-[200] https://pmd.github.io/
-[200] https://megalinter.io/latest/descriptors/rst_rstcheck/
-[200] https://github.com/coffeelint/coffeelint
-[200] https://github.com/greglook/cljstyle
-[200] https://github.com/overtrue/phplint
-[200] https://megalinter.io/latest/descriptors/powershell_powershell_formatter/
-[200] https://github.com/mpeterv/luacheck
-[200] https://megalinter.io/latest/descriptors/spell_vale/
-[200] https://github.com/mgechev/revive
-[200] https://github.com/clj-kondo/clj-kondo
-[200] https://github.com/Lightning-Flow-Scanner/lightning-flow-scanner-sfdx
-[200] https://megalinter.io/latest/descriptors/sql_tsqllint/
-[200] https://github.com/checkmarx/kics
-[200] https://api.github.com/
-[200] https://megalinter.io/latest/descriptors/arm_arm_ttk/
+[200] https://megalinter.io/latest/descriptors/raku_raku/
 [200] https://bandit.readthedocs.io/en/latest/
-[200] https://megalinter.io/latest/descriptors/javascript_eslint/
-[200] https://megalinter.io/latest/descriptors/html_htmlhint/
-[200] https://mypy.readthedocs.io/en/stable/
-[200] https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/
-[200] https://github.com/anchore/grype
-[200] https://megalinter.io/latest/descriptors/json_jsonlint/
-[200] https://megalinter.io/latest/descriptors/protobuf_protolint/
-[200] https://megalinter.io/latest/descriptors/repository_syft/
-[200] https://black.readthedocs.io/en/stable/
-[200] https://stylelint.io/
-[200] https://github.com/snakemake/snakefmt
-[200] https://megalinter.io/latest/descriptors/rust_clippy/
+[200] https://github.com/rust-lang/rust-clippy
+[200] https://megalinter.io/latest/descriptors/terraform_tflint/
+[200] https://github.com/PHPCSStandards/PHP_CodeSniffer/
+[200] https://megalinter.io/latest/descriptors/snakemake_snakefmt/
+[200] https://megalinter.io/latest/descriptors/arm_arm_ttk/
+[200] https://github.com/zaach/jsonlint
+[200] https://megalinter.io/latest/descriptors/spell_vale/
+[200] https://megalinter.io/latest/descriptors/salesforce_sfdx_scanner_apex/
+[200] https://github.com/rhysd/actionlint
+[200] https://megalinter.io/latest/descriptors/copypaste_jscpd/
+[200] https://megalinter.io/latest/descriptors/repository_devskim/
+[200] https://megalinter.io/latest/descriptors/python_flake8/
+[200] https://api.github.com/
 [200] https://megalinter.io/latest/descriptors/scala_scalafix/
+[200] https://github.com/ota-meshi/eslint-plugin-jsonc
+[200] https://megalinter.io/latest/descriptors/repository_checkov/
+[200] https://megalinter.io/latest/descriptors/typescript_prettier/
+[200] https://github.com/
+[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/
+[200] https://github.com/errata-ai/vale
+[200] https://github.com/checkmarx/kics
+[200] https://megalinter.io/latest/descriptors/java_checkstyle/
+[ERROR] https://pyrightlang.org/ | Network error: error sending request for url (https://pyrightlang.org/) Maybe a certificate error?
+[200] https://megalinter.io/latest/descriptors/groovy_npm_groovy_lint/
 [200] https://megalinter.io/latest/descriptors/python_pylint/
-[200] https://megalinter.io/latest/descriptors/python_ruff/
-[200] https://github.com/tcort/markdown-link-check
-[200] https://github.com/kucherenko/jscpd
 [200] https://github.com/gitleaks/gitleaks
-[200] https://github.com/hadolint/hadolint
+[200] https://phpstan.org/
+[200] https://github.com/mgechev/revive
+[200] https://stylelint.io/
+[200] https://megalinter.io/latest/descriptors/json_prettier/
+[200] https://github.com/cjoudrey/graphql-schema-linter
+[200] https://megalinter.io/latest/descriptors/python_ruff/
+[200] https://github.com/scalacenter/scalafix
+[200] https://www.checkov.io/
+[200] https://megalinter.io/latest/descriptors/spell_proselint/
+[200] https://megalinter.io/latest/descriptors/php_phpcs/
+[200] https://clang.llvm.org/docs/ClangFormat.html
+[200] https://psalm.dev/
+[200] https://megalinter.io/latest/descriptors/dart_dartanalyzer/
+[200] https://github.com/tcort/markdown-link-check
+[200] https://megalinter.io/latest/descriptors/repository_syft/
+[200] https://megalinter.io/latest/descriptors/cloudformation_cfn_lint/
+[200] https://github.com/chris48s/v8r
+[200] https://pylint.pycqa.org/en/latest/
+[200] https://megalinter.io/latest/descriptors/powershell_powershell_formatter/
+[200] https://github.com/gruntwork-io/terragrunt
+[404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ | Network error: Not Found
+[200] https://megalinter.io/latest/descriptors/javascript_prettier/
+[200] https://ansible.readthedocs.io/projects/lint/
+[200] https://github.com/puppetlabs/puppet-lint
+[200] https://megalinter.io/latest/descriptors/gherkin_gherkin_lint/
+[200] https://megalinter.io/latest/supported-linters/
+[200] https://github.com/PowerShell/PSScriptAnalyzer
+[200] https://github.com/Lightning-Flow-Scanner/lightning-flow-scanner-sfdx
+[200] https://megalinter.io/latest/descriptors/repository_grype/
+[200] https://megalinter.io/latest/descriptors/python_bandit/
+[200] https://megalinter.io/latest/descriptors/protobuf_protolint/
+[200] https://github.com/tsqllint/tsqllint
+[200] https://megalinter.io/latest/descriptors/sql_tsqllint/
+[200] https://github.com/Azure/arm-ttk
+[200] https://rubocop.org/
+[200] https://github.com/sqlfluff/sqlfluff
+[200] https://stoplight.io/open-source/spectral
+[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/
+[200] https://github.com/editorconfig-checker/editorconfig-checker
+[200] https://github.com/amperser/proselint
+[200] https://megalinter.io/latest/descriptors/python_pyright/
+[200] https://megalinter.io/latest/descriptors/go_revive/
+[200] https://megalinter.io/latest/descriptors/action_actionlint/
 [200] https://github.com/anchore/syft
+[200] https://github.com/nvuillam/npm-groovy-lint
+[200] https://github.com/kucherenko/jscpd
 [200] https://github.com/IBM/tekton-lint
+[200] https://github.com/realm/SwiftLint
+[200] https://raku.org/
+[200] https://github.com/clj-kondo/clj-kondo
+[200] https://www.nongnu.org/chktex/
+[200] https://github.com/DavidAnson/markdownlint
+[200] https://github.com/rstcheck/rstcheck
+[200] https://github.com/snakemake/snakefmt
+[200] https://github.com/remarkjs/remark-lint
+[200] https://github.com/lycheeverse/lychee
 [200] https://github.com/aws-cloudformation/cfn-lint
 [200] https://github.com/streetsidesoftware/cspell
-[200] https://github.com/editorconfig-checker/editorconfig-checker
-[200] https://github.com/r-lib/lintr
 Error: Cannot write status output to file
 
 Caused by:
@@ -2544,16 +2491,16 @@ Caused by:
 [0m
 [31m[lychee] .pre-commit-config.yaml - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[200] https://github.com/hadolint/hadolint
-[200] https://pre-commit.com/
 [200] https://pre-commit.com/hooks.html
+[200] https://pre-commit.com/
+[200] https://github.com/adrienverge/yamllint
+[200] https://github.com/shellcheck-py/shellcheck-py
 [200] https://github.com/igorshubovych/markdownlint-cli
 [200] https://github.com/astral-sh/ruff-pre-commit
 [200] https://github.com/pre-commit/pre-commit-hooks
-[200] https://github.com/adrienverge/yamllint
-[200] https://github.com/shellcheck-py/shellcheck-py
-[200] https://github.com/Yelp/detect-secrets
+[200] https://github.com/hadolint/hadolint
 [200] https://github.com/psf/black
+[200] https://github.com/Yelp/detect-secrets
 Error: Cannot write status output to file
 
 Caused by:
@@ -2583,14 +2530,14 @@ Caused by:
 [0m
 [31m[lychee] .vscode/settings.json - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[200] https://www.schemastore.org/yamllint.json
 [200] https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/pyproject.json
 [200] https://www.schemastore.org/markdown-link-check.json
+[200] https://www.schemastore.org/yamllint.json
 [200] https://json.schemastore.org/prettierrc.json
-[200] https://json.schemastore.org/web-manifest-combined.json
 [404] https://json.schemastore.org/luacheckrc.json | Network error: Not Found
-[404] https://json.schemastore.org/npm-package-json-lint.json | Network error: Not Found
 [200] https://json.schemastore.org/htmlhint.json
+[404] https://json.schemastore.org/npm-package-json-lint.json | Network error: Not Found
+[200] https://json.schemastore.org/web-manifest-combined.json
 Error: Cannot write status output to file
 
 Caused by:
@@ -2679,8 +2626,8 @@ Caused by:
 [0m
 [31m[lychee] config/.grype.yaml - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[403] https://nvd.nist.gov/vuln/detail/CVE-2018-20225 | 403 Forbidden: Forbidden
 [200] https://toolbox-data.anchore.io/grype/databases/listing.json
+[403] https://nvd.nist.gov/vuln/detail/CVE-2018-20225 | 403 Forbidden: Forbidden
 [400] https://search.maven.org/solrsearch/select | Network error: Bad Request
 [200] https://github.com/sirupsen/logrus#level-logging
 Error: Cannot write status output to file
@@ -2690,8 +2637,8 @@ Caused by:
 [0m
 [31m[lychee] config/.hadolint.yaml - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[200] https://github.com/hadolint/hadolint#linting-labels
 [200] https://raw.githubusercontent.com/hadolint/hadolint/master/contrib/hadolint.json
+[200] https://github.com/hadolint/hadolint#linting-labels
 Error: Cannot write status output to file
 
 Caused by:
@@ -3112,10 +3059,10 @@ Caused by:
 [31m[lychee] config/styles/proselint/meta.json - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
 [EXCLUDED] mailto:support@errata.ai
+[200] https://github.com/amperser/proselint
 [200] https://github.com/errata-ai/proselint/releases.atom
 [200] https://github.com/errata-ai/proselint/issues/new
 [200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip
-[200] https://github.com/amperser/proselint
 Error: Cannot write status output to file
 
 Caused by:
@@ -3218,76 +3165,76 @@ Caused by:
 [31m[lychee] package-lock.json - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
 [EXCLUDED] https://registry.npmjs.org/node-gyp-build/-/node-gyp-build-4.8.4.tgz
+[200] https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz
+[200] https://registry.npmjs.org/textextensions/-/textextensions-6.11.0.tgz
+[200] https://registry.npmjs.org/lodash.sortby/-/lodash.sortby-4.7.0.tgz
 [200] https://registry.npmjs.org/fill-range/-/fill-range-7.1.1.tgz
 [200] https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz
+[200] https://registry.npmjs.org/structured-source/-/structured-source-4.0.0.tgz
+[200] https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz
+[200] https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-5.0.0.tgz
+[200] https://registry.npmjs.org/braces/-/braces-3.0.3.tgz
+[200] https://registry.npmjs.org/@secretlint/types/-/types-11.3.1.tgz
+[200] https://registry.npmjs.org/@types/node/-/node-25.2.3.tgz
+[200] https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz
+[200] https://registry.npmjs.org/@types/secp256k1/-/secp256k1-4.0.7.tgz
+[200] https://registry.npmjs.org/@secretlint/core/-/core-11.3.1.tgz
+[200] https://registry.npmjs.org/editions/-/editions-6.22.0.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-pattern/-/secretlint-rule-pattern-11.3.1.tgz
+[200] https://registry.npmjs.org/brorand/-/brorand-1.1.0.tgz
+[200] https://registry.npmjs.org/hash.js/-/hash.js-1.1.7.tgz
+[200] https://registry.npmjs.org/ms/-/ms-2.1.3.tgz
+[200] https://registry.npmjs.org/undici-types/-/undici-types-7.16.0.tgz
+[200] https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz
+[200] https://registry.npmjs.org/node-addon-api/-/node-addon-api-5.1.0.tgz
+[200] https://registry.npmjs.org/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-gcp/-/secretlint-rule-gcp-11.3.1.tgz
+[200] https://registry.npmjs.org/@secretlint/source-creator/-/source-creator-11.3.1.tgz
+[200] https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-no-homedir/-/secretlint-rule-no-homedir-11.3.1.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-github/-/secretlint-rule-github-11.3.1.tgz
+[200] https://registry.npmjs.org/rc-config-loader/-/rc-config-loader-4.1.3.tgz
+[200] https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz
+[200] https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz
+[200] https://registry.npmjs.org/istextorbinary/-/istextorbinary-9.5.0.tgz
+[200] https://registry.npmjs.org/@secretlint/resolver/-/resolver-11.3.1.tgz
+[200] https://registry.npmjs.org/micromatch/-/micromatch-4.0.8.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-privatekey/-/secretlint-rule-privatekey-11.3.1.tgz
+[200] https://registry.npmjs.org/@secretlint/profiler/-/profiler-11.3.1.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-npm/-/secretlint-rule-npm-11.3.1.tgz
+[200] https://registry.npmjs.org/binaryextensions/-/binaryextensions-6.11.0.tgz
+[200] https://registry.npmjs.org/node-forge/-/node-forge-1.3.3.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-database-connection-string/-/secretlint-rule-database-connection-string-11.3.1.tgz
+[200] https://registry.npmjs.org/json5/-/json5-2.2.3.tgz
+[200] https://registry.npmjs.org/@secretlint/tester/-/tester-11.3.1.tgz
+[200] https://registry.npmjs.org/secp256k1/-/secp256k1-5.0.1.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-aws/-/secretlint-rule-aws-11.3.1.tgz
+[200] https://registry.npmjs.org/lodash.uniqwith/-/lodash.uniqwith-4.5.0.tgz
+[200] https://registry.npmjs.org/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz
 [200] https://registry.npmjs.org/bn.js/-/bn.js-4.12.2.tgz
+[200] https://registry.npmjs.org/debug/-/debug-4.4.3.tgz
+[200] https://registry.npmjs.org/@secretlint/config-loader/-/config-loader-11.3.1.tgz
+[200] https://registry.npmjs.org/elliptic/-/elliptic-6.6.1.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-no-dotenv/-/secretlint-rule-no-dotenv-11.3.1.tgz
+[200] https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz
+[200] https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz
+[200] https://registry.npmjs.org/@types/bn.js/-/bn.js-5.2.0.tgz
+[200] https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz
+[200] https://registry.npmjs.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz
+[200] https://registry.npmjs.org/boundary/-/boundary-2.0.0.tgz
+[200] https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz
+[200] https://registry.npmjs.org/version-range/-/version-range-4.15.0.tgz
+[200] https://registry.npmjs.org/@textlint/regexp-string-matcher/-/regexp-string-matcher-2.0.2.tgz
 [200] https://registry.npmjs.org/bn.js/-/bn.js-5.2.2.tgz
 [200] https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.0.tgz
-[200] https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz
-[200] https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz
-[200] https://registry.npmjs.org/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz
-[200] https://registry.npmjs.org/binaryextensions/-/binaryextensions-6.11.0.tgz
-[200] https://registry.npmjs.org/braces/-/braces-3.0.3.tgz
-[200] https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz
-[200] https://registry.npmjs.org/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz
-[200] https://registry.npmjs.org/@secretlint/source-creator/-/source-creator-11.3.1.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-no-dotenv/-/secretlint-rule-no-dotenv-11.3.1.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-gcp/-/secretlint-rule-gcp-11.3.1.tgz
-[200] https://registry.npmjs.org/lodash.uniqwith/-/lodash.uniqwith-4.5.0.tgz
-[200] https://registry.npmjs.org/@secretlint/types/-/types-11.3.1.tgz
-[200] https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz
-[200] https://registry.npmjs.org/@types/bn.js/-/bn.js-5.2.0.tgz
-[200] https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz
-[200] https://registry.npmjs.org/hash.js/-/hash.js-1.1.7.tgz
-[200] https://registry.npmjs.org/@secretlint/profiler/-/profiler-11.3.1.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-github/-/secretlint-rule-github-11.3.1.tgz
-[200] https://registry.npmjs.org/brorand/-/brorand-1.1.0.tgz
-[200] https://registry.npmjs.org/@secretlint/core/-/core-11.3.1.tgz
-[200] https://registry.npmjs.org/structured-source/-/structured-source-4.0.0.tgz
-[200] https://registry.npmjs.org/json5/-/json5-2.2.3.tgz
-[200] https://registry.npmjs.org/node-forge/-/node-forge-1.3.3.tgz
 [200] https://registry.npmjs.org/@secretlint/secretlint-rule-basicauth/-/secretlint-rule-basicauth-11.3.1.tgz
-[200] https://registry.npmjs.org/node-addon-api/-/node-addon-api-5.1.0.tgz
-[200] https://registry.npmjs.org/istextorbinary/-/istextorbinary-9.5.0.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-aws/-/secretlint-rule-aws-11.3.1.tgz
-[200] https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz
 [200] https://registry.npmjs.org/@secretlint/secretlint-rule-secp256k1-privatekey/-/secretlint-rule-secp256k1-privatekey-11.3.1.tgz
-[200] https://registry.npmjs.org/debug/-/debug-4.4.3.tgz
-[200] https://registry.npmjs.org/@secretlint/tester/-/tester-11.3.1.tgz
-[200] https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz
-[200] https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz
-[200] https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz
-[200] https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-no-homedir/-/secretlint-rule-no-homedir-11.3.1.tgz
-[200] https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-pattern/-/secretlint-rule-pattern-11.3.1.tgz
-[200] https://registry.npmjs.org/textextensions/-/textextensions-6.11.0.tgz
-[200] https://registry.npmjs.org/editions/-/editions-6.22.0.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-database-connection-string/-/secretlint-rule-database-connection-string-11.3.1.tgz
-[200] https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-5.0.0.tgz
-[200] https://registry.npmjs.org/micromatch/-/micromatch-4.0.8.tgz
-[200] https://registry.npmjs.org/boundary/-/boundary-2.0.0.tgz
-[200] https://registry.npmjs.org/version-range/-/version-range-4.15.0.tgz
-[200] https://registry.npmjs.org/rc-config-loader/-/rc-config-loader-4.1.3.tgz
-[200] https://github.com/sponsors/epoberezkin
-[200] https://registry.npmjs.org/ms/-/ms-2.1.3.tgz
-[200] https://registry.npmjs.org/elliptic/-/elliptic-6.6.1.tgz
-[200] https://registry.npmjs.org/@textlint/regexp-string-matcher/-/regexp-string-matcher-2.0.2.tgz
-[200] https://registry.npmjs.org/secp256k1/-/secp256k1-5.0.1.tgz
-[200] https://registry.npmjs.org/@types/node/-/node-25.2.3.tgz
-[200] https://registry.npmjs.org/lodash.sortby/-/lodash.sortby-4.7.0.tgz
-[200] https://registry.npmjs.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz
-[200] https://github.com/sponsors/sindresorhus
-[200] https://github.com/sponsors/fastify
-[200] https://registry.npmjs.org/@secretlint/resolver/-/resolver-11.3.1.tgz
-[200] https://registry.npmjs.org/@types/secp256k1/-/secp256k1-4.0.7.tgz
-[200] https://opencollective.com/fastify
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-npm/-/secretlint-rule-npm-11.3.1.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-privatekey/-/secretlint-rule-privatekey-11.3.1.tgz
 [200] https://registry.npmjs.org/@secretlint/secretlint-rule-openai/-/secretlint-rule-openai-11.3.1.tgz
-[200] https://registry.npmjs.org/@secretlint/config-loader/-/config-loader-11.3.1.tgz
-[200] https://registry.npmjs.org/undici-types/-/undici-types-7.16.0.tgz
+[200] https://github.com/sponsors/sindresorhus
 [200] https://github.com/sponsors/jonschlinkert
+[200] https://github.com/sponsors/epoberezkin
+[200] https://github.com/sponsors/fastify
+[200] https://opencollective.com/fastify
 [200] https://bevry.me/fund
 Error: Cannot write status output to file
 
@@ -3303,8 +3250,42 @@ Caused by:
 [0m
 ::endgroup::
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-SPELL_LYCHEE.tap
+::group::[31m❌ Linted [CLOUDFORMATION] files with [cfn-lint]: Found 1 error(s) and 0 warning(s) - (8.91s)[0m (expand for details)
+- Using [cfn-lint v1.36.0] https://megalinter.io/8.8.0/descriptors/cloudformation_cfn_lint
+- MegaLinter key: [CLOUDFORMATION_CFN_LINT]
+- Rules config: identified by [cfn-lint]
+- Command: [cfn-lint config/.cfnlintrc.yml]
+[31m[cfn-lint] config/.cfnlintrc.yml - ERROR - 1 error(s) and 0 warning(s)[0m
+[31m--Error detail:
+E1001 'Resources' is a required property
+config/.cfnlintrc.yml:2:1
+
+E1001 Additional properties are not allowed ('regions' was unexpected)
+config/.cfnlintrc.yml:2:1
+
+E1001 Additional properties are not allowed ('include-checks' was unexpected)
+config/.cfnlintrc.yml:7:1
+
+E1001 Additional properties are not allowed ('ignore-checks' was unexpected)
+config/.cfnlintrc.yml:12:1
+
+E1001 Additional properties are not allowed ('templates' was unexpected)
+config/.cfnlintrc.yml:17:1
+
+E1001 Additional properties are not allowed ('transform' was unexpected. Did you mean 'Transform'?)
+config/.cfnlintrc.yml:24:1
+
+E1001 Additional properties are not allowed ('custom-rules' was unexpected)
+config/.cfnlintrc.yml:28:1
+
+E1001 Additional properties are not allowed ('ignore-templates' was unexpected)
+config/.cfnlintrc.yml:32:1
+
+[0m
+::endgroup::
+[Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-CLOUDFORMATION_CFN_LINT.tap
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[32m✅ Linted [HTML] files with [htmlhint] successfully - (0.27s)[0m (expand for details)
+::group::[32m✅ Linted [HTML] files with [htmlhint] successfully - (0.3s)[0m (expand for details)
 - Using [htmlhint v1.5.1] https://megalinter.io/8.8.0/descriptors/html_htmlhint
 - MegaLinter key: [HTML_HTMLHINT]
 - Rules config: [/github/workspace/config/.htmlhintrc]
@@ -3312,10 +3293,78 @@ Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .
 [htmlhint] docs/index.html - SUCCESS - 0 error(s) and 0 warning(s)
 ::endgroup::
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-HTML_HTMLHINT.tap
+::group::[31m❌ Linted [HTML] files with [djlint]: Found 3 error(s) and 0 warning(s) - (1.49s)[0m (expand for details)
+- Using [djlint v1.36.4] https://megalinter.io/8.8.0/descriptors/html_djlint
+- MegaLinter key: [HTML_DJLINT]
+- Rules config: identified by [djlint]
+- Command: [djlint docs/index.html]
+[31m[djlint] docs/index.html - ERROR - 3 error(s) and 0 warning(s)[0m
+[31m--Error detail:
+
+Linting 0/1 files ┈┈┈┈┈┈┈┈┈┈ 00:00    Linting 1/1 files ━━━━━━━━━━ 00:00                                          Linting 1/1 files ━━━━━━━━━━ 00:00    Linting 1/1 files ━━━━━━━━━━ 00:00    
+
+
+docs/index.html
+───────────────────────────────────────────────────────────────────────────────
+H005 2:0 Html tag should have lang attribute. <html> <head> 
+H030 2:0 Consider adding a meta description. <html> <head> 
+H031 2:0 Consider adding meta keywords. <html> <head> 
+
+Linted 1 file, found 3 errors.
+
+[0m
+::endgroup::
+[Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-HTML_DJLINT.tap
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+::group::[31m❌ Linted [JSON] files with [npm-package-json-lint]: Found 1 error(s) and 0 warning(s) - (0.52s)[0m (expand for details)
+- Using [npm-package-json-lint v8.0.0] https://megalinter.io/8.8.0/descriptors/json_npm_package_json_lint
+- MegaLinter key: [JSON_NPM_PACKAGE_JSON_LINT]
+- Rules config: [/github/workspace/config/.npmpackagejsonlintrc.json]
+- Command: [npmPkgJsonLint --quiet --configFile /github/workspace/config/.npmpackagejsonlintrc.json .]
+--Error detail:
+cli:
+	Configuration for rule "name-format" is invalid:
+	- severity must be a string.
+	- severity must be either "off", "warning", or "error".
+
+
+::endgroup::
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+::group::[31m❌ Linted [MARKDOWN] files with [markdownlint]: Found 7 error(s) and 0 warning(s) - (1.03s)[0m (expand for details)
+- Using [markdownlint v0.45.0] https://megalinter.io/8.8.0/descriptors/markdown_markdownlint
+- MegaLinter key: [MARKDOWN_MARKDOWNLINT]
+- Rules config: [/github/workspace/config/.markdownlint.json]
+- Commands:
+  [markdownlint -c /github/workspace/config/.markdownlint.json config/styles/proselint/README.md]
+  [markdownlint -c /github/workspace/config/.markdownlint.json config/styles/write-good/README.md]
+[31m[markdownlint] config/styles/proselint/README.md - ERROR - 5 error(s) and 0 warning(s)[0m
+[31m--Error detail:
+config/styles/proselint/README.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "Copyright © 2014–2015, Jordan ..."]
+config/styles/proselint/README.md:4:121 MD013/line-length Line length [Expected: 120; Actual: 142]
+config/styles/proselint/README.md:8:121 MD013/line-length Line length [Expected: 120; Actual: 205]
+config/styles/proselint/README.md:10:121 MD013/line-length Line length [Expected: 120; Actual: 190]
+config/styles/proselint/README.md:12:121 MD013/line-length Line length [Expected: 120; Actual: 755]
+[0m
+[31m[markdownlint] config/styles/write-good/README.md - ERROR - 2 error(s) and 0 warning(s)[0m
+[31m--Error detail:
+config/styles/write-good/README.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "Based on [write-good](https://..."]
+config/styles/write-good/README.md:5 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+[0m
+::endgroup::
+[Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-MARKDOWN_MARKDOWNLINT.tap
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[31m❌ Linted [JSON] files with [jsonlint]: Found 1 error(s) and 0 warning(s) - (4.79s)[0m (expand for details)
+::group::[32m✅ Linted [MARKDOWN] files with [markdown-table-formatter] successfully - (0.5s)[0m (expand for details)
+- Using [markdown-table-formatter v1.6.1] https://megalinter.io/8.8.0/descriptors/markdown_markdown_table_formatter
+- MegaLinter key: [MARKDOWN_MARKDOWN_TABLE_FORMATTER]
+- Rules config: identified by [markdown-table-formatter]
+- Commands:
+  [markdown-table-formatter --check config/styles/proselint/README.md]
+  [markdown-table-formatter --check config/styles/write-good/README.md]
+[markdown-table-formatter] config/styles/proselint/README.md - SUCCESS - 0 error(s) and 0 warning(s)
+[markdown-table-formatter] config/styles/write-good/README.md - SUCCESS - 0 error(s) and 0 warning(s)
+::endgroup::
+[Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-MARKDOWN_MARKDOWN_TABLE_FORMATTER.tap
+::group::[31m❌ Linted [JSON] files with [jsonlint]: Found 1 error(s) and 0 warning(s) - (4.89s)[0m (expand for details)
 - Using [jsonlint v16.0.0] https://megalinter.io/8.8.0/descriptors/json_jsonlint
 - MegaLinter key: [JSON_JSONLINT]
 - Rules config: [/github/workspace/config/.jsonlintrc]
@@ -3380,21 +3429,11 @@ Trailing comma in object
 ::endgroup::
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-JSON_JSONLINT.tap
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[31m❌ Linted [JSON] files with [npm-package-json-lint]: Found 1 error(s) and 0 warning(s) - (0.48s)[0m (expand for details)
-- Using [npm-package-json-lint v8.0.0] https://megalinter.io/8.8.0/descriptors/json_npm_package_json_lint
-- MegaLinter key: [JSON_NPM_PACKAGE_JSON_LINT]
-- Rules config: [/github/workspace/config/.npmpackagejsonlintrc.json]
-- Command: [npmPkgJsonLint --quiet --configFile /github/workspace/config/.npmpackagejsonlintrc.json .]
---Error detail:
-cli:
-	Configuration for rule "name-format" is invalid:
-	- severity must be a string.
-	- severity must be either "off", "warning", or "error".
-
-
-::endgroup::
+Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning|Error|ParseError)\s
+Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning|Error|ParseError)\s
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[31m❌ Linted [JSON] files with [prettier]: Found 25 error(s) and 0 warning(s) - (6.69s)[0m (expand for details)
+Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning|Error|ParseError)\s
+::group::[31m❌ Linted [JSON] files with [prettier]: Found 25 error(s) and 0 warning(s) - (7.19s)[0m (expand for details)
 - Using [prettier v3.5.3] https://megalinter.io/8.8.0/descriptors/json_prettier
 - MegaLinter key: [JSON_PRETTIER]
 - Rules config: [/github/workspace/config/.prettier.config.mjs]
@@ -3551,85 +3590,14 @@ Checking formatting...
 [0m
 ::endgroup::
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-JSON_PRETTIER.tap
-::group::[31m❌ Linted [MARKDOWN] files with [markdownlint]: Found 7 error(s) and 0 warning(s) - (1.03s)[0m (expand for details)
-- Using [markdownlint v0.45.0] https://megalinter.io/8.8.0/descriptors/markdown_markdownlint
-- MegaLinter key: [MARKDOWN_MARKDOWNLINT]
-- Rules config: [/github/workspace/config/.markdownlint.json]
-- Commands:
-  [markdownlint -c /github/workspace/config/.markdownlint.json config/styles/proselint/README.md]
-  [markdownlint -c /github/workspace/config/.markdownlint.json config/styles/write-good/README.md]
-[31m[markdownlint] config/styles/proselint/README.md - ERROR - 5 error(s) and 0 warning(s)[0m
-[31m--Error detail:
-config/styles/proselint/README.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "Copyright © 2014–2015, Jordan ..."]
-config/styles/proselint/README.md:4:121 MD013/line-length Line length [Expected: 120; Actual: 142]
-config/styles/proselint/README.md:8:121 MD013/line-length Line length [Expected: 120; Actual: 205]
-config/styles/proselint/README.md:10:121 MD013/line-length Line length [Expected: 120; Actual: 190]
-config/styles/proselint/README.md:12:121 MD013/line-length Line length [Expected: 120; Actual: 755]
-[0m
-[31m[markdownlint] config/styles/write-good/README.md - ERROR - 2 error(s) and 0 warning(s)[0m
-[31m--Error detail:
-config/styles/write-good/README.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "Based on [write-good](https://..."]
-config/styles/write-good/README.md:5 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-[0m
-::endgroup::
-[Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-MARKDOWN_MARKDOWNLINT.tap
-::group::[32m✅ Linted [MARKDOWN] files with [markdown-table-formatter] successfully - (0.53s)[0m (expand for details)
-- Using [markdown-table-formatter v1.6.1] https://megalinter.io/8.8.0/descriptors/markdown_markdown_table_formatter
-- MegaLinter key: [MARKDOWN_MARKDOWN_TABLE_FORMATTER]
-- Rules config: identified by [markdown-table-formatter]
-- Commands:
-  [markdown-table-formatter --check config/styles/proselint/README.md]
-  [markdown-table-formatter --check config/styles/write-good/README.md]
-[markdown-table-formatter] config/styles/proselint/README.md - SUCCESS - 0 error(s) and 0 warning(s)
-[markdown-table-formatter] config/styles/write-good/README.md - SUCCESS - 0 error(s) and 0 warning(s)
-::endgroup::
-[Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-MARKDOWN_MARKDOWN_TABLE_FORMATTER.tap
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning|Error|ParseError)\s
-Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning|Error|ParseError)\s
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[31m❌ Linted [CLOUDFORMATION] files with [cfn-lint]: Found 1 error(s) and 0 warning(s) - (11.04s)[0m (expand for details)
-- Using [cfn-lint v1.36.0] https://megalinter.io/8.8.0/descriptors/cloudformation_cfn_lint
-- MegaLinter key: [CLOUDFORMATION_CFN_LINT]
-- Rules config: identified by [cfn-lint]
-- Command: [cfn-lint config/.cfnlintrc.yml]
-[31m[cfn-lint] config/.cfnlintrc.yml - ERROR - 1 error(s) and 0 warning(s)[0m
-[31m--Error detail:
-E1001 'Resources' is a required property
-config/.cfnlintrc.yml:2:1
-
-E1001 Additional properties are not allowed ('regions' was unexpected)
-config/.cfnlintrc.yml:2:1
-
-E1001 Additional properties are not allowed ('include-checks' was unexpected)
-config/.cfnlintrc.yml:7:1
-
-E1001 Additional properties are not allowed ('ignore-checks' was unexpected)
-config/.cfnlintrc.yml:12:1
-
-E1001 Additional properties are not allowed ('templates' was unexpected)
-config/.cfnlintrc.yml:17:1
-
-E1001 Additional properties are not allowed ('transform' was unexpected. Did you mean 'Transform'?)
-config/.cfnlintrc.yml:24:1
-
-E1001 Additional properties are not allowed ('custom-rules' was unexpected)
-config/.cfnlintrc.yml:28:1
-
-E1001 Additional properties are not allowed ('ignore-templates' was unexpected)
-config/.cfnlintrc.yml:32:1
-
-[0m
-::endgroup::
-[Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-CLOUDFORMATION_CFN_LINT.tap
-::group::[32m✅ Linted [REPOSITORY] files with [dustilock] successfully - (0.03s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [dustilock] successfully - (0.06s)[0m (expand for details)
 - Using [dustilock v1.2.0] https://megalinter.io/8.8.0/descriptors/repository_dustilock
 - MegaLinter key: [REPOSITORY_DUSTILOCK]
 - Rules config: identified by [dustilock]
 - Command: [dustilock --recursive]
 ::endgroup::
 Unable to get number of errors with regex_sum and leaks found: ([0-9]+)
-::group::[31m❌ Linted [REPOSITORY] files with [gitleaks]: Found 1 error(s) and 0 warning(s) - (0.02s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [gitleaks]: Found 1 error(s) and 0 warning(s) - (0.1s)[0m (expand for details)
 - Using [gitleaks v8.27.2] https://megalinter.io/8.8.0/descriptors/repository_gitleaks
 - MegaLinter key: [REPOSITORY_GITLEAKS]
 - Rules config: [/github/workspace/config/.gitleaks.toml]
@@ -3642,10 +3610,10 @@ Unable to get number of errors with regex_sum and leaks found: ([0-9]+)
     ○ ░
     ░    gitleaks
 
-[90m9:57PM[0m [31mFTL[0m [1mFailed to load config[0m [36merror=[0m[31m[1m"[[allowlists]] must contain at least one check for: commits, paths, regexes, or stopwords"[0m[0m
+[90m10:08PM[0m [31mFTL[0m [1mFailed to load config[0m [36merror=[0m[31m[1m"[[allowlists]] must contain at least one check for: commits, paths, regexes, or stopwords"[0m[0m
 
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [syft]: Found 1 error(s) and 0 warning(s) - (0.06s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [syft]: Found 1 error(s) and 0 warning(s) - (0.05s)[0m (expand for details)
 - Using [syft v1.27.1] https://megalinter.io/8.8.0/descriptors/repository_syft
 - MegaLinter key: [REPOSITORY_SYFT]
 - Rules config: [/github/workspace/config/.syft.yaml]
@@ -3656,9 +3624,8 @@ Unable to get number of errors with regex_sum and leaks found: ([0-9]+)
 'catalogers[0]' expected type 'string', got unconvertible type 'map[string]interface {}', value: 'map[enabled:[apkdb dpkgdb rpmdb python-package node-package java go-module rust-crate]]'[0m
 
 ::endgroup::
-Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning|Error|ParseError)\s
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[31m❌ Linted [POWERSHELL] files with [powershell]: Found 3 error(s) and 0 warning(s) - (2.94s)[0m (expand for details)
+::group::[31m❌ Linted [POWERSHELL] files with [powershell]: Found 3 error(s) and 0 warning(s) - (3.08s)[0m (expand for details)
 - Using [powershell v7.5.1] https://megalinter.io/8.8.0/descriptors/powershell_powershell
 - MegaLinter key: [POWERSHELL_POWERSHELL]
 - Rules config: [/github/workspace/config/.powershell-psscriptanalyzer.psd1]
@@ -3676,11 +3643,11 @@ Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .
 [0m
 [31m[powershell] config/.powershell-psscriptanalyzer.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-ScriptAnalyzer: [31;1mValue System.Collections.Generic.Dictionary`2[System.String,System.Object] for key severity has the wrong data type.[0m
+[31;1mInvoke-ScriptAnalyzer: [31;1mpowershellversion is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 ::endgroup::
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-POWERSHELL_POWERSHELL.tap
-::group::[31m❌ Linted [POWERSHELL] files with [powershell_formatter]: Found 3 error(s) and 0 warning(s) - (2.73s)[0m (expand for details)
+::group::[31m❌ Linted [POWERSHELL] files with [powershell_formatter]: Found 3 error(s) and 0 warning(s) - (2.75s)[0m (expand for details)
 - Using [powershell_formatter v7.5.1] https://megalinter.io/8.8.0/descriptors/powershell_powershell_formatter
 - MegaLinter key: [POWERSHELL_POWERSHELL_FORMATTER]
 - Rules config: [/github/workspace/config/.powershell-formatter.psd1]
@@ -3690,15 +3657,15 @@ Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .
   [pwsh -NoProfile -NoLogo -Command Invoke-Formatter -Settings /github/workspace/config/.powershell-formatter.psd1 -ScriptDefinition (Get-Content -Path 'config/.powershell-psscriptanalyzer.psd1' -Raw)]
 [31m[powershell_formatter] config/.arm-ttk.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-Formatter: [31;1mconverttousingimplicitreturn is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-Formatter: [31;1mpipelineindentation is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 [31m[powershell_formatter] config/.powershell-formatter.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-Formatter: [31;1mmaxlinelength is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-Formatter: [31;1mpreserveindentationinherestrings is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 [31m[powershell_formatter] config/.powershell-psscriptanalyzer.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-Formatter: [31;1mindentationtype is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-Formatter: [31;1mopenbraceonsameline is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 ::endgroup::
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-POWERSHELL_POWERSHELL_FORMATTER.tap
@@ -3726,31 +3693,32 @@ Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-aura] successfully - (39.59s)[0m (expand for details)
+::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-aura] successfully - (39.23s)[0m (expand for details)
 - Using [sfdx-scanner-aura v4.12.0] https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_aura
 - MegaLinter key: [SALESFORCE_SFDX_SCANNER_AURA]
 - Rules config: identified by [sfdx-scanner-aura]
 - Command: [sf scanner:run --engine eslint --target **/aura/**/*.js --severity-threshold 2 --outfile reports/megalinter/sfdx-scanner-report-aura.csv --format csv]
 ::endgroup::
-::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-lwc] successfully - (39.26s)[0m (expand for details)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-lwc] successfully - (40.05s)[0m (expand for details)
 - Using [sfdx-scanner-lwc v4.12.0] https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_lwc
 - MegaLinter key: [SALESFORCE_SFDX_SCANNER_LWC]
 - Rules config: identified by [sfdx-scanner-lwc]
 - Command: [sf scanner:run --engine eslint-lwc --target **/lwc/**/*.js --severity-threshold 2 --outfile reports/megalinter/sfdx-scanner-report-lwc.csv --format csv]
 ::endgroup::
-::group::[31m❌ Linted [TERRAFORM] files with [terragrunt]: Found 1 error(s) and 0 warning(s) - (0.26s)[0m (expand for details)
+::group::[31m❌ Linted [TERRAFORM] files with [terragrunt]: Found 1 error(s) and 0 warning(s) - (0.48s)[0m (expand for details)
 - Using [terragrunt v0.81.6] https://megalinter.io/8.8.0/descriptors/terraform_terragrunt
 - MegaLinter key: [TERRAFORM_TERRAGRUNT]
 - Rules config: [/github/workspace/config/terragrunt.hcl]
 - Command: [terragrunt hclfmt --terragrunt-check --terragrunt-config /github/workspace/config/terragrunt.hcl --terragrunt-hclfmt-file config/terragrunt.hcl]
 [31m[terragrunt] config/terragrunt.hcl - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[0;90m21:57:54.996[0m [0;33mWARN  [0m The `hclfmt` command is deprecated and will be removed in a future version of Terragrunt. Use `terragrunt hcl format` instead.
-[0;90m21:57:54.998[0m [0;31mERROR [0m flag `--terragrunt-config` is not a valid flag for `format`. Did you mean to use `console --config`?
+[0;90m22:08:50.636[0m [0;33mWARN  [0m The `hclfmt` command is deprecated and will be removed in a future version of Terragrunt. Use `terragrunt hcl format` instead.
+[0;90m22:08:50.643[0m [0;31mERROR [0m flag `--terragrunt-config` is not a valid flag for `format`. Did you mean to use `console --config`?
 [0m
 ::endgroup::
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-TERRAFORM_TERRAGRUNT.tap
-::group::[32m✅ Linted [XML] files with [xmllint] successfully - (0.7s)[0m (expand for details)
+::group::[32m✅ Linted [XML] files with [xmllint] successfully - (0.59s)[0m (expand for details)
 - Using [xmllint v21304] https://megalinter.io/8.8.0/descriptors/xml_xmllint
 - MegaLinter key: [XML_XMLLINT]
 - Rules config: identified by [xmllint]
@@ -3769,12 +3737,13 @@ Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .
 [Tap Reporter] Generated TAP report: reports/megalinter/tap/mega-linter-XML_XMLLINT.tap
 Unable to get number of errors with regex_number and - error: ([0-9]+)
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-apex] successfully - (44.52s)[0m (expand for details)
+::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-apex] successfully - (44.34s)[0m (expand for details)
 - Using [sfdx-scanner-apex v4.12.0] https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_apex
 - MegaLinter key: [SALESFORCE_SFDX_SCANNER_APEX]
 - Rules config: [/github/workspace/config/apex-pmd-ruleset.xml]
 - Command: [sf scanner:run --engine pmd --target "./**/*" --severity-threshold 2 --outfile reports/megalinter/sfdx-scanner-report-apex.csv --format csv --pmdconfig /github/workspace/config/apex-pmd-ruleset.xml]
 ::endgroup::
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to extract version with regex re.compile('(?<=lightning-flow-scanner )\\d+(\\.\\d+)+') from  ›   Warning: @salesforce/cli update available from 2.92.7 to 2.122.6.
 @salesforce/sfdx-scanner 4.12.0 (4.12.0)
@@ -3789,7 +3758,7 @@ flow 1.0.2
 signups 2.6.28
 @salesforce/sfdx-plugin-lwc-test 1.2.1
 
-::group::[31m❌ Linted [SALESFORCE] files with [lightning-flow-scanner]: Found 1 error(s) and 0 warning(s) - (2.38s)[0m (expand for details)
+::group::[31m❌ Linted [SALESFORCE] files with [lightning-flow-scanner]: Found 1 error(s) and 0 warning(s) - (2.63s)[0m (expand for details)
 - Using [lightning-flow-scanner vERROR] https://megalinter.io/8.8.0/descriptors/salesforce_lightning_flow_scanner
 - MegaLinter key: [SALESFORCE_LIGHTNING_FLOW_SCANNER]
 - Rules config: [/github/workspace/config/.flow-scanner.json]
@@ -3800,7 +3769,7 @@ signups 2.6.28
  ›   Error: Run sf help flow for a list of available commands.
 
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [git_diff] successfully - (0.13s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [git_diff] successfully - (0.05s)[0m (expand for details)
 - Using [git_diff v2.47.2] https://megalinter.io/8.8.0/descriptors/repository_git_diff
 - MegaLinter key: [REPOSITORY_GIT_DIFF]
 - Rules config: identified by [git_diff]
@@ -3814,9 +3783,7 @@ Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[31m❌ Linted [YAML] files with [yamllint]: Found 182 error(s) and 0 warning(s) - (11.57s)[0m (expand for details)
+::group::[31m❌ Linted [YAML] files with [yamllint]: Found 182 error(s) and 0 warning(s) - (11.89s)[0m (expand for details)
 - Using [yamllint v1.37.1] https://megalinter.io/8.8.0/descriptors/yaml_yamllint
 - MegaLinter key: [YAML_YAMLLINT]
 - Rules config: [/github/workspace/config/.yamllint.yml]
@@ -4177,7 +4144,8 @@ Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[31m❌ Linted [YAML] files with [prettier]: Found 66 error(s) and 0 warning(s) - (16.89s)[0m (expand for details)
+Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
+::group::[31m❌ Linted [YAML] files with [prettier]: Found 66 error(s) and 0 warning(s) - (17.0s)[0m (expand for details)
 - Using [prettier v3.5.3] https://megalinter.io/8.8.0/descriptors/yaml_prettier
 - MegaLinter key: [YAML_PRETTIER]
 - Rules config: [/github/workspace/config/.prettier.config.mjs]
@@ -4613,10 +4581,7 @@ Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
 Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-Unable to get number of errors with regex_number and Issues found: ([0-9]+) in .* file
-::group::[31m❌ Linted [SPELL] files with [cspell]: Found 160 error(s) and 0 warning(s) - (218.36s)[0m (expand for details)
+::group::[31m❌ Linted [SPELL] files with [cspell]: Found 160 error(s) and 0 warning(s) - (214.95s)[0m (expand for details)
 - Using [cspell v9.1.1] https://megalinter.io/8.8.0/descriptors/spell_cspell
 - MegaLinter key: [SPELL_CSPELL]
 - Rules config: [/github/workspace/config/.cspell.config.mjs]
@@ -5750,48 +5715,48 @@ CSpell: Files checked: 0, Issues found: 0 in 0 files with 1 error.
 +----SUMMARY--------+--------------------------+---------+-------+-------+--------+----------+--------------+
 | Descriptor        | Linter                   | Mode    | Files | Fixed | Errors | Warnings | Elapsed time |
 +-------------------+--------------------------+---------+-------+-------+--------+----------+--------------+
-| ❌ ACTION         | actionlint               | file    |     2 |       |     13 |        0 | 0.13s        |
-| ✅ ANSIBLE        | ansible-lint             | project |   n/a |       |      0 |        0 | 8.83s        |
-| ✅ CLOJURE        | cljstyle                 | file    |     1 |       |      0 |        0 | 0.02s        |
-| ❌ CLOJURE        | clj-kondo                | file    |     1 |       |      1 |        0 | 0.03s        |
-| ❌ CLOUDFORMATION | cfn-lint                 | file    |     1 |       |      1 |        0 | 11.04s       |
-| ❌ COPYPASTE      | jscpd                    | project |   n/a |       |     29 |        0 | 2.02s        |
-| ❌ EDITORCONFIG   | editorconfig-checker     | file    |   160 |       |    160 |        0 | 0.94s        |
-| ❌ HTML           | djlint                   | file    |     1 |       |      3 |        0 | 0.91s        |
-| ✅ HTML           | htmlhint                 | file    |     1 |       |      0 |        0 | 0.27s        |
-| ❌ JSON           | jsonlint                 | file    |    25 |       |      1 |        0 | 4.79s        |
-| ❌ JSON           | npm-package-json-lint    | project |   n/a |       |      1 |        0 | 0.48s        |
-| ❌ JSON           | prettier                 | file    |    25 |       |     25 |        0 | 6.69s        |
-| ❌ JSON           | v8r                      | file    |    25 |       |      1 |        0 | 51.19s       |
+| ❌ ACTION         | actionlint               | file    |     2 |       |     13 |        0 | 0.18s        |
+| ✅ ANSIBLE        | ansible-lint             | project |   n/a |       |      0 |        0 | 9.8s         |
+| ✅ CLOJURE        | cljstyle                 | file    |     1 |       |      0 |        0 | 0.01s        |
+| ❌ CLOJURE        | clj-kondo                | file    |     1 |       |      1 |        0 | 0.04s        |
+| ❌ CLOUDFORMATION | cfn-lint                 | file    |     1 |       |      1 |        0 | 8.91s        |
+| ❌ COPYPASTE      | jscpd                    | project |   n/a |       |     29 |        0 | 2.12s        |
+| ❌ EDITORCONFIG   | editorconfig-checker     | file    |   160 |       |    160 |        0 | 0.99s        |
+| ❌ HTML           | djlint                   | file    |     1 |       |      3 |        0 | 1.49s        |
+| ✅ HTML           | htmlhint                 | file    |     1 |       |      0 |        0 | 0.3s         |
+| ❌ JSON           | jsonlint                 | file    |    25 |       |      1 |        0 | 4.89s        |
+| ❌ JSON           | npm-package-json-lint    | project |   n/a |       |      1 |        0 | 0.52s        |
+| ❌ JSON           | prettier                 | file    |    25 |       |     25 |        0 | 7.19s        |
+| ❌ JSON           | v8r                      | file    |    25 |       |      1 |        0 | 48.8s        |
 | ❌ MARKDOWN       | markdownlint             | file    |     2 |       |      7 |        0 | 1.03s        |
-| ✅ MARKDOWN       | markdown-link-check      | file    |     2 |       |      0 |        0 | 1.79s        |
-| ✅ MARKDOWN       | markdown-table-formatter | file    |     2 |       |      0 |        0 | 0.53s        |
-| ❌ POWERSHELL     | powershell               | file    |     3 |       |      3 |        0 | 2.94s        |
-| ❌ POWERSHELL     | powershell_formatter     | file    |     3 |       |      3 |        0 | 2.73s        |
-| ✅ REPOSITORY     | checkov                  | project |   n/a |       |      0 |        0 | 42.19s       |
-| ✅ REPOSITORY     | dustilock                | project |   n/a |       |      0 |        0 | 0.03s        |
-| ❌ REPOSITORY     | gitleaks                 | project |   n/a |       |      1 |        0 | 0.02s        |
-| ✅ REPOSITORY     | git_diff                 | project |   n/a |       |      0 |        0 | 0.13s        |
-| ✅ REPOSITORY     | grype                    | project |   n/a |       |      0 |        0 | 54.68s       |
-| ❌ REPOSITORY     | kics                     | project |   n/a |       |      1 |        0 | 30.95s       |
-| ❌ REPOSITORY     | secretlint               | project |   n/a |       |      1 |        0 | 1.55s        |
-| ❌ REPOSITORY     | syft                     | project |   n/a |       |      1 |        0 | 0.06s        |
-| ✅ REPOSITORY     | trivy                    | project |   n/a |       |      0 |        0 | 10.71s       |
-| ✅ REPOSITORY     | trivy-sbom               | project |   n/a |       |      0 |        0 | 1.58s        |
-| ❌ REPOSITORY     | trufflehog               | project |   n/a |       |      1 |        0 | 3.99s        |
-| ❌ SALESFORCE     | lightning-flow-scanner   | project |   n/a |       |      1 |        0 | 2.38s        |
-| ✅ SALESFORCE     | sfdx-scanner-apex        | project |   n/a |       |      0 |        0 | 44.52s       |
-| ✅ SALESFORCE     | sfdx-scanner-aura        | project |   n/a |       |      0 |        0 | 39.59s       |
-| ✅ SALESFORCE     | sfdx-scanner-lwc         | project |   n/a |       |      0 |        0 | 39.26s       |
-| ❌ SPELL          | cspell                   | file    |   160 |       |    160 |        0 | 218.36s      |
-| ❌ SPELL          | lychee                   | file    |    94 |       |     94 |        0 | 14.1s        |
-| ❌ SPELL          | proselint                | file    |     2 |       |      1 |        0 | 2.92s        |
-| ✅ SPELL          | vale                     | file    |     2 |       |      0 |        9 | 0.69s        |
-| ❌ TERRAFORM      | terragrunt               | file    |     1 |       |      1 |        0 | 0.26s        |
-| ✅ XML            | xmllint                  | file    |     5 |       |      0 |        0 | 0.7s         |
-| ❌ YAML           | prettier                 | file    |    66 |       |     66 |        0 | 16.89s       |
-| ✅ YAML           | v8r                      | file    |    66 |       |      0 |        0 | 112.04s      |
-| ❌ YAML           | yamllint                 | file    |    66 |       |    182 |        0 | 11.57s       |
+| ✅ MARKDOWN       | markdown-link-check      | file    |     2 |       |      0 |        0 | 1.9s         |
+| ✅ MARKDOWN       | markdown-table-formatter | file    |     2 |       |      0 |        0 | 0.5s         |
+| ❌ POWERSHELL     | powershell               | file    |     3 |       |      3 |        0 | 3.08s        |
+| ❌ POWERSHELL     | powershell_formatter     | file    |     3 |       |      3 |        0 | 2.75s        |
+| ✅ REPOSITORY     | checkov                  | project |   n/a |       |      0 |        0 | 43.77s       |
+| ✅ REPOSITORY     | dustilock                | project |   n/a |       |      0 |        0 | 0.06s        |
+| ❌ REPOSITORY     | gitleaks                 | project |   n/a |       |      1 |        0 | 0.1s         |
+| ✅ REPOSITORY     | git_diff                 | project |   n/a |       |      0 |        0 | 0.05s        |
+| ✅ REPOSITORY     | grype                    | project |   n/a |       |      0 |        0 | 53.58s       |
+| ❌ REPOSITORY     | kics                     | project |   n/a |       |      1 |        0 | 32.73s       |
+| ❌ REPOSITORY     | secretlint               | project |   n/a |       |      1 |        0 | 1.5s         |
+| ❌ REPOSITORY     | syft                     | project |   n/a |       |      1 |        0 | 0.05s        |
+| ✅ REPOSITORY     | trivy                    | project |   n/a |       |      0 |        0 | 11.48s       |
+| ✅ REPOSITORY     | trivy-sbom               | project |   n/a |       |      0 |        0 | 1.73s        |
+| ❌ REPOSITORY     | trufflehog               | project |   n/a |       |      1 |        0 | 3.96s        |
+| ❌ SALESFORCE     | lightning-flow-scanner   | project |   n/a |       |      1 |        0 | 2.63s        |
+| ✅ SALESFORCE     | sfdx-scanner-apex        | project |   n/a |       |      0 |        0 | 44.34s       |
+| ✅ SALESFORCE     | sfdx-scanner-aura        | project |   n/a |       |      0 |        0 | 39.23s       |
+| ✅ SALESFORCE     | sfdx-scanner-lwc         | project |   n/a |       |      0 |        0 | 40.05s       |
+| ❌ SPELL          | cspell                   | file    |   160 |       |    160 |        0 | 214.95s      |
+| ❌ SPELL          | lychee                   | file    |    94 |       |     94 |        0 | 14.97s       |
+| ❌ SPELL          | proselint                | file    |     2 |       |      1 |        0 | 2.98s        |
+| ✅ SPELL          | vale                     | file    |     2 |       |      0 |        9 | 0.71s        |
+| ❌ TERRAFORM      | terragrunt               | file    |     1 |       |      1 |        0 | 0.48s        |
+| ✅ XML            | xmllint                  | file    |     5 |       |      0 |        0 | 0.59s        |
+| ❌ YAML           | prettier                 | file    |    66 |       |     66 |        0 | 17.0s        |
+| ✅ YAML           | v8r                      | file    |    66 |       |      0 |        0 | 105.11s      |
+| ❌ YAML           | yamllint                 | file    |    66 |       |    182 |        0 | 11.89s       |
 +-------------------+--------------------------+---------+-------+-------+--------+----------+--------------+
 
 [31m❌ Error(s) have been found during linting[0m

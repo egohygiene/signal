@@ -123,7 +123,7 @@ Clone found (json):
 ┌────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
 │ Format     │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json       │ 23             │ 1510        │ 8615         │ 1            │ 15 (0.99%)       │ 95 (1.1%)         │
+│ json       │ 23             │ 1507        │ 8602         │ 1            │ 15 (1%)          │ 95 (1.1%)         │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ yaml       │ 65             │ 4869        │ 33585        │ 28           │ 705 (14.48%)     │ 6282 (18.7%)      │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -139,12 +139,12 @@ Clone found (json):
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ powershell │ 3              │ 103         │ 451          │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 107            │ 7156        │ 48013        │ 29           │ 720 (10.06%)     │ 6377 (13.28%)     │
+│ Total:     │ 107            │ 7153        │ 48000        │ 29           │ 720 (10.07%)     │ 6377 (13.29%)     │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
 Found 29 clones.
 HTML report saved to reports/megalinter/copy-paste/html/
-ERROR: jscpd found too many duplicates (10.06%) over threshold (0%)
-Error: ERROR: jscpd found too many duplicates (10.06%) over threshold (0%)
+ERROR: jscpd found too many duplicates (10.07%) over threshold (0%)
+Error: ERROR: jscpd found too many duplicates (10.07%) over threshold (0%)
     at ThresholdReporter.report (/node-deps/node_modules/@jscpd/finder/dist/index.js:612:13)
     at /node-deps/node_modules/@jscpd/finder/dist/index.js:110:18
     at Array.forEach (<anonymous>)

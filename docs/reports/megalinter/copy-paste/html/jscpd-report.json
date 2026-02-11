@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-02-11T21:55:01.450Z",
+    "detectionDate": "2026-02-11T22:05:58.010Z",
     "formats": {
       "json": {
         "sources": {
@@ -77,8 +77,8 @@
             "newClones": 0
           },
           "/github/workspace/config/.secretlintrc.json": {
-            "lines": 75,
-            "tokens": 360,
+            "lines": 72,
+            "tokens": 347,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -282,13 +282,13 @@
           }
         },
         "total": {
-          "lines": 1510,
-          "tokens": 8615,
+          "lines": 1507,
+          "tokens": 8602,
           "sources": 23,
           "clones": 1,
           "duplicatedLines": 15,
           "duplicatedTokens": 95,
-          "percentage": 0.99,
+          "percentage": 1,
           "percentageTokens": 1.1,
           "newDuplicatedLines": 0,
           "newClones": 0
@@ -1416,14 +1416,14 @@
       }
     },
     "total": {
-      "lines": 7156,
-      "tokens": 48013,
+      "lines": 7153,
+      "tokens": 48000,
       "sources": 107,
       "clones": 29,
       "duplicatedLines": 720,
       "duplicatedTokens": 6377,
-      "percentage": 10.06,
-      "percentageTokens": 13.28,
+      "percentage": 10.07,
+      "percentageTokens": 13.29,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
