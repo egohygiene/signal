@@ -4,6 +4,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/json_v8r/
 
 ✅ [SUCCESS] config/.coffee-lint.json
 ✅ [SUCCESS] config/.devskim.json
+✅ [SUCCESS] config/.editorconfig-checker.json
 ✅ [SUCCESS] config/.eslintrc-json.json
 ✅ [SUCCESS] config/.flow-scanner.json
 ❌ [ERROR] config/.groovylintrc.json

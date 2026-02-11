@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-02-10T12:44:36.412Z",
+    "detectionDate": "2026-02-11T06:11:04.035Z",
     "formats": {
       "json": {
         "sources": {
@@ -196,6 +196,18 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
+          "/github/workspace/config/.editorconfig-checker.json": {
+            "lines": 40,
+            "tokens": 175,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "/github/workspace/config/.coffee-lint.json": {
             "lines": 57,
             "tokens": 308,
@@ -210,9 +222,9 @@
           }
         },
         "total": {
-          "lines": 537,
-          "tokens": 2982,
-          "sources": 17,
+          "lines": 577,
+          "tokens": 3157,
+          "sources": 18,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -994,7 +1006,7 @@
           },
           "/github/workspace/.megalinter.yml": {
             "lines": 481,
-            "tokens": 1604,
+            "tokens": 1606,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1007,7 +1019,7 @@
         },
         "total": {
           "lines": 4850,
-          "tokens": 33680,
+          "tokens": 33682,
           "sources": 65,
           "clones": 28,
           "duplicatedLines": 705,
@@ -1344,14 +1356,14 @@
       }
     },
     "total": {
-      "lines": 6164,
-      "tokens": 42475,
-      "sources": 101,
+      "lines": 6204,
+      "tokens": 42652,
+      "sources": 102,
       "clones": 28,
       "duplicatedLines": 705,
       "duplicatedTokens": 6282,
-      "percentage": 11.44,
-      "percentageTokens": 14.79,
+      "percentage": 11.36,
+      "percentageTokens": 14.73,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
