@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-02-11T07:13:32.525Z",
+    "detectionDate": "2026-02-11T21:40:17.742Z",
     "formats": {
       "json": {
         "sources": {
@@ -220,6 +220,42 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
+          "/github/workspace/.vscode/tasks.json": {
+            "lines": 3,
+            "tokens": 15,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/.vscode/settings.json": {
+            "lines": 135,
+            "tokens": 810,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/.vscode/extensions.json": {
+            "lines": 39,
+            "tokens": 154,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "/github/workspace/package.json": {
             "lines": 15,
             "tokens": 94,
@@ -246,14 +282,14 @@
           }
         },
         "total": {
-          "lines": 1333,
-          "tokens": 7636,
-          "sources": 20,
+          "lines": 1510,
+          "tokens": 8615,
+          "sources": 23,
           "clones": 1,
           "duplicatedLines": 15,
           "duplicatedTokens": 95,
-          "percentage": 1.13,
-          "percentageTokens": 1.24,
+          "percentage": 0.99,
+          "percentageTokens": 1.1,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -777,8 +813,8 @@
             "newClones": 0
           },
           "/github/workspace/.github/workflows/megalinter.yml": {
-            "lines": 87,
-            "tokens": 324,
+            "lines": 89,
+            "tokens": 306,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1042,14 +1078,14 @@
           }
         },
         "total": {
-          "lines": 4863,
-          "tokens": 33593,
+          "lines": 4865,
+          "tokens": 33575,
           "sources": 65,
           "clones": 28,
           "duplicatedLines": 705,
           "duplicatedTokens": 6282,
-          "percentage": 14.5,
-          "percentageTokens": 18.7,
+          "percentage": 14.49,
+          "percentageTokens": 18.71,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -1380,14 +1416,14 @@
       }
     },
     "total": {
-      "lines": 6973,
-      "tokens": 47042,
-      "sources": 104,
+      "lines": 7152,
+      "tokens": 48003,
+      "sources": 107,
       "clones": 29,
       "duplicatedLines": 720,
       "duplicatedTokens": 6377,
-      "percentage": 10.33,
-      "percentageTokens": 13.56,
+      "percentage": 10.07,
+      "percentageTokens": 13.28,
       "newDuplicatedLines": 0,
       "newClones": 0
     }

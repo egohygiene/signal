@@ -2,6 +2,10 @@ Results of v8r linter (version 5.0.0)
 See documentation on https://megalinter.io/8.8.0/descriptors/json_v8r/
 -----------------------------------------------
 
+✅ [SUCCESS] .vscode/extensions.json
+✅ [SUCCESS] .vscode/launch.json
+✅ [SUCCESS] .vscode/settings.json
+✅ [SUCCESS] .vscode/tasks.json
 ✅ [SUCCESS] config/.coffee-lint.json
 ✅ [SUCCESS] config/.devskim.json
 ✅ [SUCCESS] config/.editorconfig-checker.json

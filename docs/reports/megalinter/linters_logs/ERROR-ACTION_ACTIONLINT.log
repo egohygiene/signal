@@ -3,33 +3,33 @@ See documentation on https://megalinter.io/8.8.0/descriptors/action_actionlint/
 -----------------------------------------------
 
 ❌ [ERROR] .github/workflows/megalinter.yml
-    .github/workflows/megalinter.yml:57:9: shellcheck reported issue in this script: SC2086:info:10:84: Double quote to prevent globbing and word splitting [shellcheck]
+    .github/workflows/megalinter.yml:59:9: shellcheck reported issue in this script: SC2086:info:10:84: Double quote to prevent globbing and word splitting [shellcheck]
        |
-    57 |         run: |
+    59 |         run: |
        |         ^~~~
-    .github/workflows/megalinter.yml:83:9: shellcheck reported issue in this script: SC2129:style:1:1: Consider using { cmd1; cmd2; } >> file instead of individual redirects [shellcheck]
+    .github/workflows/megalinter.yml:85:9: shellcheck reported issue in this script: SC2129:style:1:1: Consider using { cmd1; cmd2; } >> file instead of individual redirects [shellcheck]
        |
-    83 |         run: |
+    85 |         run: |
        |         ^~~~
-    .github/workflows/megalinter.yml:83:9: shellcheck reported issue in this script: SC2086:info:1:40: Double quote to prevent globbing and word splitting [shellcheck]
+    .github/workflows/megalinter.yml:85:9: shellcheck reported issue in this script: SC2086:info:1:40: Double quote to prevent globbing and word splitting [shellcheck]
        |
-    83 |         run: |
+    85 |         run: |
        |         ^~~~
-    .github/workflows/megalinter.yml:83:9: shellcheck reported issue in this script: SC2086:info:2:12: Double quote to prevent globbing and word splitting [shellcheck]
+    .github/workflows/megalinter.yml:85:9: shellcheck reported issue in this script: SC2086:info:2:12: Double quote to prevent globbing and word splitting [shellcheck]
        |
-    83 |         run: |
+    85 |         run: |
        |         ^~~~
-    .github/workflows/megalinter.yml:83:9: shellcheck reported issue in this script: SC2086:info:3:96: Double quote to prevent globbing and word splitting [shellcheck]
+    .github/workflows/megalinter.yml:85:9: shellcheck reported issue in this script: SC2086:info:3:96: Double quote to prevent globbing and word splitting [shellcheck]
        |
-    83 |         run: |
+    85 |         run: |
        |         ^~~~
-    .github/workflows/megalinter.yml:83:9: shellcheck reported issue in this script: SC2086:info:4:12: Double quote to prevent globbing and word splitting [shellcheck]
+    .github/workflows/megalinter.yml:85:9: shellcheck reported issue in this script: SC2086:info:4:12: Double quote to prevent globbing and word splitting [shellcheck]
        |
-    83 |         run: |
+    85 |         run: |
        |         ^~~~
-    .github/workflows/megalinter.yml:83:9: shellcheck reported issue in this script: SC2086:info:5:108: Double quote to prevent globbing and word splitting [shellcheck]
+    .github/workflows/megalinter.yml:85:9: shellcheck reported issue in this script: SC2086:info:5:108: Double quote to prevent globbing and word splitting [shellcheck]
        |
-    83 |         run: |
+    85 |         run: |
        |         ^~~~
 
 ❌ [ERROR] .github/workflows/pages.yml
