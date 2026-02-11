@@ -25,16 +25,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Debug environment (temporary)
+        run: |
+          echo "=== Debug Context ==="
+          echo "PWD: $(pwd)"
+          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          echo ""
+          echo "=== Selected Environment Variables ==="
+          printenv | sort | grep -E '^(GITHUB_|RUNNER_|CI|APPLY_|VALIDATE_)'
+
       - name: Run MegaLinter
         id: ml
-        uses: oxsecurity/megalinter@v8
-        env:
-          # Do not apply automatic fixes (informational mode only)
-          APPLY_FIXES: none
-          # Validate all code, not just changed files
-          VALIDATE_ALL_CODEBASE: true
-          # GitHub token for API access
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: oxsecurity/megalinter@v8.8.0
         continue-on-error: true
 
       - name: Copy reports to docs
