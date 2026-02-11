@@ -1,0 +1,63 @@
+# .ls-lint.yml - filename / directory rules for MegaLinter (ls-lint)
+# Enforce kebab-case for most files and directories, allow common exceptions.
+
+ignore:
+  - node_modules
+  - .git
+  - dist
+  - build
+  - vendor
+  - .venv
+  - .pytest_cache
+  - coverage
+
+rules:
+  - files: "**/*"
+    type: "dir"
+    pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    description: "Directories must be kebab-case"
+    ignore:
+      - ".git"
+      - "node_modules"
+      - "vendor"
+
+  - files: "**/*"
+    type: "file"
+    # Allow kebab-case with optional dots for extensions (e.g. my-file.test.js, config.yaml)
+    pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*(?:\\.[a-z0-9]+)*$"
+    description: "Files must be kebab-case (extensions allowed)"
+    ignore:
+      # docs, licenses and common dotfiles allowed
+      - "**/*.md"
+      - "**/README"
+      - "**/LICENSE"
+      - "**/.gitignore"
+      - "**/.gitattributes"
+      - "**/*.png"
+      - "**/*.jpg"
+      - "**/*.jpeg"
+      - "**/*.gif"
+      - "**/*.svg"
+
+  - files: "src/**/*"
+    type: "file"
+    pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*\\.(js|ts|jsx|tsx|py|go|rb|sh|java|kt|swift|c|cpp|h|hpp|yaml|yml|json|md)$"
+    description: "Source files must be kebab-case with a valid extension"
+
+  - files: "**/index.*"
+    type: "file"
+    pattern: "^index\\.[a-z0-9]+$"
+    description: "Allow index.* filenames"
+
+  - files: "**/*_test.*"
+    type: "file"
+    pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*_test\\.[a-z0-9]+$"
+    description: "Test files follow kebab-case_test.ext"
+
+  - files: "**/*Test.*"
+    type: "file"
+    pattern: "^[A-Za-z0-9_\\-\\.]+$"
+    description: "Allow language-native Test/Spec naming for some frameworks"
+
+# Fallback: be permissive for dotfiles and hidden config files
+# (ls-lint will skip entries matched in ignore above and these patterns)

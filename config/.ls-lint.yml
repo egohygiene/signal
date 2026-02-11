@@ -1,0 +1,54 @@
+ls:
+  # Default rule for most files
+  "**":
+    dir: kebab-case
+    .js: kebab-case
+    .ts: kebab-case
+    .tsx: kebab-case
+    .jsx: kebab-case
+    .py: kebab-case
+    .go: kebab-case
+    .rb: kebab-case
+    .sh: kebab-case
+    .java: kebab-case
+    .kt: kebab-case
+    .swift: kebab-case
+    .c: kebab-case
+    .cpp: kebab-case
+    .h: kebab-case
+    .hpp: kebab-case
+    .yaml: kebab-case
+    .yml: kebab-case
+    .json: kebab-case
+    .md: ignore
+    .png: ignore
+    .jpg: ignore
+    .jpeg: ignore
+    .gif: ignore
+    .svg: ignore
+
+  # Allow index files explicitly
+  "**/index.*":
+    .*: kebab-case
+
+  # Allow *_test files
+  "**/*_test.*":
+    .*: regex:^[a-z0-9]+(?:-[a-z0-9]+)*_test$
+
+  # Allow PascalCase Test files (framework-specific)
+  "**/*Test.*":
+    .*: regex:^[A-Za-z0-9_\-]+$
+
+  # Allow dotfiles
+  "**/.*":
+    .*: ignore
+
+ignore:
+  - node_modules
+  - .git
+  - dist
+  - build
+  - vendor
+  - .venv
+  - .pytest_cache
+  - coverage

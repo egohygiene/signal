@@ -456,7 +456,7 @@ YAML_V8R_CONFIG_FILE: config/.v8rrc.yml
 # https://megalinter.io/latest/descriptors/yaml_yamllint/
 YAML_YAMLLINT_CONFIG_FILE: config/.yamllint.yml
 
-# ls-lint: https://github.com/loeffel-io/ls-lint
+# ls-lint:
 # https://megalinter.io/8/descriptors/repository_ls_lint/
 REPOSITORY_LS_LINT_CONFIG_FILE: config/.ls-lint.yml
 

@@ -11,7 +11,7 @@
         "**/venv/**",
         "**/.venv/**",
         "**/.pnpm-store/**",
-        "**/config/styles/**"
+        "config/styles/**"
     ],
     "absolute": true,
     "gitignore": true,
