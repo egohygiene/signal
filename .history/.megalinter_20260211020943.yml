@@ -81,6 +81,7 @@ PRE_COMMANDS:
       @secretlint/secretlint-rule-github \
       @secretlint/secretlint-rule-no-dotenv \
       @secretlint/secretlint-rule-npm \
+      @secretlint/secretlint-rule-git \
       @secretlint/secretlint-rule-no-homedir
     cwd: "workspace"
   # - command: pip install flake8-cognitive-complexity

@@ -81,8 +81,9 @@ PRE_COMMANDS:
       @secretlint/secretlint-rule-github \
       @secretlint/secretlint-rule-no-dotenv \
       @secretlint/secretlint-rule-npm \
+      @secretlint/secretlint-rule-git \
       @secretlint/secretlint-rule-no-homedir
-    cwd: "workspace"
+       cwd: "workspace"
   # - command: pip install flake8-cognitive-complexity
   #   venv: flake8 # Will be run within flake8 python virtualenv. There is one virtualenv per python-based linter, with the same name
 PRINT_ALPACA: true
