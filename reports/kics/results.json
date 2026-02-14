@@ -1,0 +1,58 @@
+{
+	"kics_version": "v2.1.10",
+	"files_scanned": 11,
+	"lines_scanned": 552,
+	"files_parsed": 4,
+	"lines_parsed": 173,
+	"lines_ignored": 2,
+	"files_failed_to_scan": 0,
+	"queries_total": 289,
+	"queries_failed_to_execute": 0,
+	"queries_failed_to_compute_similarity_id": 0,
+	"scan_id": "console",
+	"severity_counters": {
+		"CRITICAL": 0,
+		"HIGH": 0,
+		"INFO": 0,
+		"LOW": 1,
+		"MEDIUM": 0,
+		"TRACE": 0
+	},
+	"total_counter": 1,
+	"total_bom_resources": 0,
+	"start": "2026-02-14T04:45:27.281806551Z",
+	"end": "2026-02-14T04:45:40.727079376Z",
+	"paths": [
+		"/usr/bin/assets/libraries",
+		".",
+		"/usr/bin/assets/queries"
+	],
+	"queries": [
+		{
+			"query_name": "Unpinned Actions Full Length Commit SHA",
+			"query_id": "555ab8f9-2001-455e-a077-f2d0f41e2fb9",
+			"query_url": "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions",
+			"severity": "LOW",
+			"platform": "CICD",
+			"cwe": "829",
+			"cloud_provider": "COMMON",
+			"category": "Supply-Chain",
+			"experimental": false,
+			"description": "Pinning an action to a full length commit SHA is currently the only way to use an action as an immutable release. Pinning to a particular SHA helps mitigate the risk of a bad actor adding a backdoor to the action's repository, as they would need to generate a SHA-1 collision for a valid Git object payload. When selecting a SHA, you should verify it is from the action's repository and not a repository fork.",
+			"description_id": "9cb8402d",
+			"files": [
+				{
+					"file_name": ".github/workflows/megalinter.yml",
+					"similarity_id": "a1842fdbecf9d48d1371f77e535eff59428e15c1336a13acf501808afbbdb480",
+					"line": 39,
+					"issue_type": "IncorrectValue",
+					"search_key": "uses={{oxsecurity/megalinter@v8.8.0}}",
+					"search_line": 39,
+					"search_value": "",
+					"expected_value": "Action pinned to a full length commit SHA.",
+					"actual_value": "Action is not pinned to a full length commit SHA."
+				}
+			]
+		}
+	]
+}
