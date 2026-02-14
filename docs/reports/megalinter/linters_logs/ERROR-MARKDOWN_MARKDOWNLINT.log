@@ -2,14 +2,13 @@ Results of markdownlint linter (version 0.45.0)
 See documentation on https://megalinter.io/8.8.0/descriptors/markdown_markdownlint/
 -----------------------------------------------
 
-❌ [ERROR] config/styles/proselint/README.md
-    config/styles/proselint/README.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "Copyright © 2014–2015, Jordan ..."]
-    config/styles/proselint/README.md:4:121 MD013/line-length Line length [Expected: 120; Actual: 142]
-    config/styles/proselint/README.md:8:121 MD013/line-length Line length [Expected: 120; Actual: 205]
-    config/styles/proselint/README.md:10:121 MD013/line-length Line length [Expected: 120; Actual: 190]
-    config/styles/proselint/README.md:12:121 MD013/line-length Line length [Expected: 120; Actual: 755]
-
-❌ [ERROR] config/styles/write-good/README.md
-    config/styles/write-good/README.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "Based on [write-good](https://..."]
-    config/styles/write-good/README.md:5 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+config/styles/proselint/README.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "Copyright © 2014–2015, Jordan ..."]
+config/styles/proselint/README.md:4:121 MD013/line-length Line length [Expected: 120; Actual: 142]
+config/styles/proselint/README.md:8:121 MD013/line-length Line length [Expected: 120; Actual: 205]
+config/styles/proselint/README.md:10:121 MD013/line-length Line length [Expected: 120; Actual: 190]
+config/styles/proselint/README.md:12:121 MD013/line-length Line length [Expected: 120; Actual: 755]
+config/styles/write-good/README.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "Based on [write-good](https://..."]
+config/styles/write-good/README.md:5 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
 

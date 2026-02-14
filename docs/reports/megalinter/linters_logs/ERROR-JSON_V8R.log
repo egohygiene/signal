@@ -2,87 +2,156 @@ Results of v8r linter (version 5.0.0)
 See documentation on https://megalinter.io/8.8.0/descriptors/json_v8r/
 -----------------------------------------------
 
-✅ [SUCCESS] .vscode/extensions.json
-✅ [SUCCESS] .vscode/launch.json
-✅ [SUCCESS] .vscode/settings.json
-✅ [SUCCESS] .vscode/tasks.json
-✅ [SUCCESS] config/.coffee-lint.json
-✅ [SUCCESS] config/.devskim.json
-✅ [SUCCESS] config/.editorconfig-checker.json
-✅ [SUCCESS] config/.eslintrc-json.json
-✅ [SUCCESS] config/.flow-scanner.json
-❌ [ERROR] config/.groovylintrc.json
-    ℹ No config file found
-    ℹ Processing config/.groovylintrc.json
-    ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
-    ℹ Validating config/.groovylintrc.json against schema from https://raw.githubusercontent.com/nvuillam/npm-groovy-lint/refs/heads/main/docs/groovy-lint.jsonschema.json ...
-    ✖ config/.groovylintrc.json is invalid
-    
-    config/.groovylintrc.json# must NOT have additional properties, found additional property 'excludePaths'
-    config/.groovylintrc.json# must NOT have additional properties, found additional property 'ignoreFilesRegex'
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must be equal to one of the allowed values
-    config/.groovylintrc.json#/rules property name must be valid
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'indentation'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'lineLength'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'unusedImports'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'unusedPrivateField'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'unusedPrivateMethod'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'unusedVariable'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'classJavadoc'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'methodJavadoc'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'parameterName'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'methodName'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'className'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'noDef'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'bracesForIfElse'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'spaceAfterIf'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'spaceAfterWhile'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'spaceAfterFor'
-    config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'noTabCharacter'
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+ℹ No config file found
+ℹ Processing .vscode/extensions.json
+✖ Could not find a schema to validate .vscode/extensions.json
 
-✅ [SUCCESS] config/.jscpd.json
-✅ [SUCCESS] config/.kics.config.json
-✅ [SUCCESS] config/.markdown-link-check.json
-✅ [SUCCESS] config/.markdownlint.json
-✅ [SUCCESS] config/.npmpackagejsonlintrc.json
-✅ [SUCCESS] config/.remarkrc.json
-✅ [SUCCESS] config/.secretlintrc.json
-✅ [SUCCESS] config/.stylelintrc.json
-✅ [SUCCESS] config/.tsqllintrc.json
-✅ [SUCCESS] config/META6.json
-✅ [SUCCESS] config/pyrightconfig.json
-✅ [SUCCESS] config/styles/proselint/meta.json
-✅ [SUCCESS] config/styles/write-good/meta.json
-✅ [SUCCESS] package.json
+ℹ Processing .vscode/launch.json
+✖ Could not find a schema to validate .vscode/launch.json
+
+ℹ Processing .vscode/settings.json
+✖ Could not find a schema to validate .vscode/settings.json
+
+ℹ Processing .vscode/tasks.json
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating .vscode/tasks.json against schema from https://www.schemastore.org/task.json ...
+✔ .vscode/tasks.json is valid
+
+ℹ Processing config/.coffee-lint.json
+✖ Could not find a schema to validate config/.coffee-lint.json
+
+ℹ Processing config/.devskim.json
+✖ Could not find a schema to validate config/.devskim.json
+
+ℹ Processing config/.editorconfig-checker.json
+✖ Could not find a schema to validate config/.editorconfig-checker.json
+
+ℹ Processing config/.eslintrc-json.json
+✖ Could not find a schema to validate config/.eslintrc-json.json
+
+ℹ Processing config/.flow-scanner.json
+✖ Could not find a schema to validate config/.flow-scanner.json
+
+ℹ Processing config/.groovylintrc.json
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating config/.groovylintrc.json against schema from https://raw.githubusercontent.com/nvuillam/npm-groovy-lint/refs/heads/main/docs/groovy-lint.jsonschema.json ...
+✖ config/.groovylintrc.json is invalid
+
+config/.groovylintrc.json# must NOT have additional properties, found additional property 'excludePaths'
+config/.groovylintrc.json# must NOT have additional properties, found additional property 'ignoreFilesRegex'
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must be equal to one of the allowed values
+config/.groovylintrc.json#/rules property name must be valid
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'indentation'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'lineLength'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'unusedImports'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'unusedPrivateField'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'unusedPrivateMethod'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'unusedVariable'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'classJavadoc'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'methodJavadoc'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'parameterName'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'methodName'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'className'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'noDef'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'bracesForIfElse'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'spaceAfterIf'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'spaceAfterWhile'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'spaceAfterFor'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'noTabCharacter'
+
+ℹ Processing config/.jscpd.json
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating config/.jscpd.json against schema from https://www.schemastore.org/jscpd.json ...
+✔ config/.jscpd.json is valid
+
+ℹ Processing config/.kics.config.json
+✖ Could not find a schema to validate config/.kics.config.json
+
+ℹ Processing config/.markdown-link-check.json
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating config/.markdown-link-check.json against schema from https://www.schemastore.org/markdown-link-check.json ...
+✔ config/.markdown-link-check.json is valid
+
+ℹ Processing config/.markdownlint.json
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating config/.markdownlint.json against schema from https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json ...
+✔ config/.markdownlint.json is valid
+
+ℹ Processing config/.npmpackagejsonlintrc.json
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating config/.npmpackagejsonlintrc.json against schema from https://www.schemastore.org/npmpackagejsonlintrc.json ...
+✔ config/.npmpackagejsonlintrc.json is valid
+
+ℹ Processing config/.remarkrc.json
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating config/.remarkrc.json against schema from https://www.schemastore.org/remarkrc.json ...
+✔ config/.remarkrc.json is valid
+
+ℹ Processing config/.secretlintrc.json
+✖ Could not find a schema to validate config/.secretlintrc.json
+
+ℹ Processing config/.stylelintrc.json
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating config/.stylelintrc.json against schema from https://www.schemastore.org/stylelintrc.json ...
+✔ config/.stylelintrc.json is valid
+
+ℹ Processing config/.tsqllintrc.json
+✖ Could not find a schema to validate config/.tsqllintrc.json
+
+ℹ Processing config/META6.json
+✖ Could not find a schema to validate config/META6.json
+
+ℹ Processing config/pyrightconfig.json
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating config/pyrightconfig.json against schema from https://raw.githubusercontent.com/microsoft/pyright/main/packages/vscode-pyright/schemas/pyrightconfig.schema.json ...
+✔ config/pyrightconfig.json is valid
+
+ℹ Processing config/styles/proselint/meta.json
+✖ Could not find a schema to validate config/styles/proselint/meta.json
+
+ℹ Processing config/styles/write-good/meta.json
+✖ Could not find a schema to validate config/styles/write-good/meta.json
+
+ℹ Processing package-lock.json
+✖ Could not find a schema to validate package-lock.json
+
+ℹ Processing package.json
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating package.json against schema from https://www.schemastore.org/package.json ...
+✔ package.json is valid
+
+

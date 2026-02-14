@@ -2,270 +2,348 @@ Results of yamllint linter (version 1.37.1)
 See documentation on https://megalinter.io/8.8.0/descriptors/yaml_yamllint/
 -----------------------------------------------
 
-✅ [SUCCESS] .github/workflows/megalinter.yml
-✅ [SUCCESS] .github/workflows/pages.yml
-✅ [SUCCESS] .megalinter.yml
-✅ [SUCCESS] .pre-commit-config.yaml
-✅ [SUCCESS] .releaserc.yml
-❌ [ERROR] config/.bandit.yml
-    config/.bandit.yml
-      1:1       warning  missing document start "---"  (document-start)
-      302:33    error    no new line character at the end of file  (new-line-at-end-of-file)
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+.github/workflows/megalinter.yml
+  4:1       warning  truthy value should be one of [false, true]  (truthy)
 
-✅ [SUCCESS] config/.cfnlintrc.yml
-✅ [SUCCESS] config/.checkov.yml
-✅ [SUCCESS] config/.golangci.yml
-❌ [ERROR] config/.grype.yaml
-    config/.grype.yaml
-      16:1      warning  missing document start "---"  (document-start)
-      54:3      warning  comment not indented like content  (comments-indentation)
-      76:3      warning  comment not indented like content  (comments-indentation)
-      93:3      warning  comment not indented like content  (comments-indentation)
-      102:5     warning  comment not indented like content  (comments-indentation)
-      103:7     warning  comment not indented like content  (comments-indentation)
-      112:5     warning  comment not indented like content  (comments-indentation)
-      115:3     warning  comment not indented like content  (comments-indentation)
-      129:3     warning  comment not indented like content  (comments-indentation)
-      129:60    warning  trailing spaces  (trailing-spaces)
-      131:46    warning  trailing spaces  (trailing-spaces)
-      151:34    error    no new line character at the end of file  (new-line-at-end-of-file)
+.github/workflows/pages.yml
+  4:1       warning  truthy value should be one of [false, true]  (truthy)
 
-✅ [SUCCESS] config/.hadolint.yaml
-✅ [SUCCESS] config/.ls-lint.yml
-✅ [SUCCESS] config/.phplint.yml
-✅ [SUCCESS] config/.protolintrc.yml
-✅ [SUCCESS] config/.ruby-lint.yml
-✅ [SUCCESS] config/.spectral.yaml
-✅ [SUCCESS] config/.swiftlint.yml
-✅ [SUCCESS] config/.syft.yaml
-✅ [SUCCESS] config/.tektonlintrc.yaml
-✅ [SUCCESS] config/.trufflehog.yml
-✅ [SUCCESS] config/.v8rrc.yml
-✅ [SUCCESS] config/.yamllint.yml
-✅ [SUCCESS] config/analysis_options.yml
-✅ [SUCCESS] config/styles/proselint/Airlinese.yml
-❌ [ERROR] config/styles/proselint/AnimalLabels.yml
-    config/styles/proselint/AnimalLabels.yml
-      1:1       warning  missing document start "---"  (document-start)
-      7:21      error    too many spaces after colon  (colons)
-      11:14     error    too many spaces after colon  (colons)
-      12:19     error    too many spaces after colon  (colons)
-      13:14     error    too many spaces after colon  (colons)
-      14:19     error    too many spaces after colon  (colons)
-      15:14     error    too many spaces after colon  (colons)
-      16:15     error    too many spaces after colon  (colons)
-      17:19     error    too many spaces after colon  (colons)
-      18:16     error    too many spaces after colon  (colons)
-      19:11     error    too many spaces after colon  (colons)
-      20:14     error    too many spaces after colon  (colons)
-      21:13     error    too many spaces after colon  (colons)
-      22:14     error    too many spaces after colon  (colons)
-      23:14     error    too many spaces after colon  (colons)
-      24:15     error    too many spaces after colon  (colons)
-      25:14     error    too many spaces after colon  (colons)
-      26:14     error    too many spaces after colon  (colons)
-      27:14     error    too many spaces after colon  (colons)
-      28:22     error    too many spaces after colon  (colons)
-      29:16     error    too many spaces after colon  (colons)
-      30:18     error    too many spaces after colon  (colons)
-      31:15     error    too many spaces after colon  (colons)
-      32:17     error    too many spaces after colon  (colons)
-      33:17     error    too many spaces after colon  (colons)
-      34:19     error    too many spaces after colon  (colons)
-      35:21     error    too many spaces after colon  (colons)
-      36:15     error    too many spaces after colon  (colons)
-      37:15     error    too many spaces after colon  (colons)
-      38:15     error    too many spaces after colon  (colons)
-      39:17     error    too many spaces after colon  (colons)
-      40:17     error    too many spaces after colon  (colons)
-      41:15     error    too many spaces after colon  (colons)
-      42:15     error    too many spaces after colon  (colons)
-      43:15     error    too many spaces after colon  (colons)
-      44:17     error    too many spaces after colon  (colons)
-      45:14     error    too many spaces after colon  (colons)
-      46:14     error    too many spaces after colon  (colons)
-      47:20     error    too many spaces after colon  (colons)
-      48:15     error    too many spaces after colon  (colons)
+config/.bandit.yml
+  1:1       warning  missing document start "---"  (document-start)
+  302:33    error    no new line character at the end of file  (new-line-at-end-of-file)
 
-✅ [SUCCESS] config/styles/proselint/Annotations.yml
-✅ [SUCCESS] config/styles/proselint/Apologizing.yml
-✅ [SUCCESS] config/styles/proselint/Archaisms.yml
-✅ [SUCCESS] config/styles/proselint/But.yml
-✅ [SUCCESS] config/styles/proselint/Cliches.yml
-✅ [SUCCESS] config/styles/proselint/CorporateSpeak.yml
-✅ [SUCCESS] config/styles/proselint/Currency.yml
-✅ [SUCCESS] config/styles/proselint/Cursing.yml
-✅ [SUCCESS] config/styles/proselint/DateCase.yml
-✅ [SUCCESS] config/styles/proselint/DateMidnight.yml
-✅ [SUCCESS] config/styles/proselint/DateRedundancy.yml
-✅ [SUCCESS] config/styles/proselint/DateSpacing.yml
-❌ [ERROR] config/styles/proselint/DenizenLabels.yml
-    config/styles/proselint/DenizenLabels.yml
-      1:1       warning  missing document start "---"  (document-start)
-      7:41      error    too many spaces after colon  (colons)
-      8:41      error    too many spaces after colon  (colons)
-      9:41      error    too many spaces after colon  (colons)
-      10:41     error    too many spaces after colon  (colons)
-      12:41     error    too many spaces after colon  (colons)
-      13:41     error    too many spaces after colon  (colons)
-      14:41     error    too many spaces after colon  (colons)
-      15:41     error    too many spaces after colon  (colons)
-      17:41     error    too many spaces after colon  (colons)
-      18:41     error    too many spaces after colon  (colons)
-      19:41     error    too many spaces after colon  (colons)
-      20:41     error    too many spaces after colon  (colons)
-      21:41     error    too many spaces after colon  (colons)
-      22:41     error    too many spaces after colon  (colons)
-      23:41     error    too many spaces after colon  (colons)
-      24:41     error    too many spaces after colon  (colons)
-      25:41     error    too many spaces after colon  (colons)
-      26:41     error    too many spaces after colon  (colons)
-      27:41     error    too many spaces after colon  (colons)
-      28:41     error    too many spaces after colon  (colons)
-      29:41     error    too many spaces after colon  (colons)
-      30:41     error    too many spaces after colon  (colons)
-      31:41     error    too many spaces after colon  (colons)
-      32:41     error    too many spaces after colon  (colons)
-      33:41     error    too many spaces after colon  (colons)
-      34:41     error    too many spaces after colon  (colons)
-      35:41     error    too many spaces after colon  (colons)
-      36:41     error    too many spaces after colon  (colons)
-      37:41     error    too many spaces after colon  (colons)
-      38:41     error    too many spaces after colon  (colons)
-      39:41     error    too many spaces after colon  (colons)
-      40:41     error    too many spaces after colon  (colons)
-      41:41     error    too many spaces after colon  (colons)
-      42:41     error    too many spaces after colon  (colons)
-      43:41     error    too many spaces after colon  (colons)
-      44:41     error    too many spaces after colon  (colons)
-      45:41     error    too many spaces after colon  (colons)
-      46:41     error    too many spaces after colon  (colons)
-      47:41     error    too many spaces after colon  (colons)
-      48:41     error    too many spaces after colon  (colons)
-      49:41     error    too many spaces after colon  (colons)
-      50:41     error    too many spaces after colon  (colons)
-      51:41     error    too many spaces after colon  (colons)
-      52:41     error    too many spaces after colon  (colons)
+config/.checkov.yml
+  2:1       warning  missing document start "---"  (document-start)
 
-✅ [SUCCESS] config/styles/proselint/Diacritical.yml
-❌ [ERROR] config/styles/proselint/GenderBias.yml
-    config/styles/proselint/GenderBias.yml
-      1:1       warning  missing document start "---"  (document-start)
-      8:31      error    too many spaces after colon  (colons)
-      9:31      error    too many spaces after colon  (colons)
-      10:31     error    too many spaces after colon  (colons)
-      11:31     error    too many spaces after colon  (colons)
-      12:31     error    too many spaces after colon  (colons)
-      13:31     error    too many spaces after colon  (colons)
-      14:31     error    too many spaces after colon  (colons)
-      16:31     error    too many spaces after colon  (colons)
-      17:31     error    too many spaces after colon  (colons)
-      18:31     error    too many spaces after colon  (colons)
-      19:31     error    too many spaces after colon  (colons)
-      20:31     error    too many spaces after colon  (colons)
-      21:31     error    too many spaces after colon  (colons)
-      22:31     error    too many spaces after colon  (colons)
-      23:31     error    too many spaces after colon  (colons)
-      24:31     error    too many spaces after colon  (colons)
-      25:31     error    too many spaces after colon  (colons)
-      26:31     error    too many spaces after colon  (colons)
-      27:31     error    too many spaces after colon  (colons)
-      28:31     error    too many spaces after colon  (colons)
-      29:31     error    too many spaces after colon  (colons)
-      30:31     error    too many spaces after colon  (colons)
-      31:31     error    too many spaces after colon  (colons)
-      32:31     error    too many spaces after colon  (colons)
-      33:31     error    too many spaces after colon  (colons)
-      34:31     error    too many spaces after colon  (colons)
-      35:31     error    too many spaces after colon  (colons)
-      36:31     error    too many spaces after colon  (colons)
-      37:31     error    too many spaces after colon  (colons)
-      38:31     error    too many spaces after colon  (colons)
-      39:31     error    too many spaces after colon  (colons)
-      40:31     error    too many spaces after colon  (colons)
-      41:31     error    too many spaces after colon  (colons)
-      42:31     error    too many spaces after colon  (colons)
-      43:31     error    too many spaces after colon  (colons)
-      44:31     error    too many spaces after colon  (colons)
-      45:31     error    too many spaces after colon  (colons)
+config/.grype.yaml
+  16:1      warning  missing document start "---"  (document-start)
+  54:3      warning  comment not indented like content  (comments-indentation)
+  76:3      warning  comment not indented like content  (comments-indentation)
+  93:3      warning  comment not indented like content  (comments-indentation)
+  102:5     warning  comment not indented like content  (comments-indentation)
+  103:7     warning  comment not indented like content  (comments-indentation)
+  112:5     warning  comment not indented like content  (comments-indentation)
+  115:3     warning  comment not indented like content  (comments-indentation)
+  129:3     warning  comment not indented like content  (comments-indentation)
+  129:60    warning  trailing spaces  (trailing-spaces)
+  131:46    warning  trailing spaces  (trailing-spaces)
+  151:34    error    no new line character at the end of file  (new-line-at-end-of-file)
 
-❌ [ERROR] config/styles/proselint/GroupTerms.yml
-    config/styles/proselint/GroupTerms.yml
-      1:1       warning  missing document start "---"  (document-start)
-      7:45      error    too many spaces after colon  (colons)
-      8:45      error    too many spaces after colon  (colons)
-      9:45      error    too many spaces after colon  (colons)
-      10:45     error    too many spaces after colon  (colons)
-      11:45     error    too many spaces after colon  (colons)
-      12:45     error    too many spaces after colon  (colons)
-      13:45     error    too many spaces after colon  (colons)
-      14:45     error    too many spaces after colon  (colons)
-      16:45     error    too many spaces after colon  (colons)
-      17:45     error    too many spaces after colon  (colons)
-      18:45     error    too many spaces after colon  (colons)
-      19:45     error    too many spaces after colon  (colons)
-      20:45     error    too many spaces after colon  (colons)
-      21:45     error    too many spaces after colon  (colons)
-      23:45     error    too many spaces after colon  (colons)
-      24:45     error    too many spaces after colon  (colons)
-      25:45     error    too many spaces after colon  (colons)
-      26:45     error    too many spaces after colon  (colons)
-      27:45     error    too many spaces after colon  (colons)
-      28:45     error    too many spaces after colon  (colons)
-      29:45     error    too many spaces after colon  (colons)
-      30:45     error    too many spaces after colon  (colons)
-      31:45     error    too many spaces after colon  (colons)
-      32:45     error    too many spaces after colon  (colons)
-      33:45     error    too many spaces after colon  (colons)
-      34:45     error    too many spaces after colon  (colons)
-      35:45     error    too many spaces after colon  (colons)
-      36:45     error    too many spaces after colon  (colons)
-      37:45     error    too many spaces after colon  (colons)
-      38:45     error    too many spaces after colon  (colons)
-      39:45     error    too many spaces after colon  (colons)
+config/.ls-lint.yml
+  1:1       warning  missing document start "---"  (document-start)
 
-✅ [SUCCESS] config/styles/proselint/Hedging.yml
-✅ [SUCCESS] config/styles/proselint/Hyperbole.yml
-✅ [SUCCESS] config/styles/proselint/Jargon.yml
-✅ [SUCCESS] config/styles/proselint/LGBTOffensive.yml
-❌ [ERROR] config/styles/proselint/LGBTTerms.yml
-    config/styles/proselint/LGBTTerms.yml
-      1:1       warning  missing document start "---"  (document-start)
-      7:45      error    too many spaces after colon  (colons)
-      8:45      error    too many spaces after colon  (colons)
-      9:45      error    too many spaces after colon  (colons)
-      10:45     error    too many spaces after colon  (colons)
-      11:45     error    too many spaces after colon  (colons)
-      12:45     error    too many spaces after colon  (colons)
-      13:45     error    too many spaces after colon  (colons)
-      15:45     error    too many spaces after colon  (colons)
+config/.protolintrc.yml
+  4:1       warning  missing document start "---"  (document-start)
+  24:5      warning  comment not indented like content  (comments-indentation)
 
-✅ [SUCCESS] config/styles/proselint/Malapropisms.yml
-✅ [SUCCESS] config/styles/proselint/Needless.yml
-✅ [SUCCESS] config/styles/proselint/Nonwords.yml
-✅ [SUCCESS] config/styles/proselint/Oxymorons.yml
-✅ [SUCCESS] config/styles/proselint/P-Value.yml
-❌ [ERROR] config/styles/proselint/RASSyndrome.yml
-    config/styles/proselint/RASSyndrome.yml
-      1:1       warning  missing document start "---"  (document-start)
-      7:4       error    wrong indentation: expected 4 but found 3  (indentation)
+config/.syft.yaml
+  3:1       warning  missing document start "---"  (document-start)
 
-✅ [SUCCESS] config/styles/proselint/Skunked.yml
-✅ [SUCCESS] config/styles/proselint/Spelling.yml
-✅ [SUCCESS] config/styles/proselint/Typography.yml
-❌ [ERROR] config/styles/proselint/Uncomparables.yml
-    config/styles/proselint/Uncomparables.yml
-      1:1       warning  missing document start "---"  (document-start)
-      8:4       error    wrong indentation: expected 4 but found 3  (indentation)
+config/.tektonlintrc.yaml
+  3:1       warning  missing document start "---"  (document-start)
 
-✅ [SUCCESS] config/styles/proselint/Very.yml
-✅ [SUCCESS] config/styles/write-good/Cliches.yml
-✅ [SUCCESS] config/styles/write-good/E-Prime.yml
-✅ [SUCCESS] config/styles/write-good/Illusions.yml
-✅ [SUCCESS] config/styles/write-good/Passive.yml
-✅ [SUCCESS] config/styles/write-good/So.yml
-✅ [SUCCESS] config/styles/write-good/ThereIs.yml
-✅ [SUCCESS] config/styles/write-good/TooWordy.yml
-✅ [SUCCESS] config/styles/write-good/Weasel.yml
-✅ [SUCCESS] config/trivy-sbom.yaml
-✅ [SUCCESS] config/trivy.yaml
+config/.trufflehog.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/.v8rrc.yml
+  2:1       warning  missing document start "---"  (document-start)
+
+config/analysis_options.yml
+  3:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Airlinese.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/AnimalLabels.yml
+  1:1       warning  missing document start "---"  (document-start)
+  7:21      error    too many spaces after colon  (colons)
+  11:14     error    too many spaces after colon  (colons)
+  12:19     error    too many spaces after colon  (colons)
+  13:14     error    too many spaces after colon  (colons)
+  14:19     error    too many spaces after colon  (colons)
+  15:14     error    too many spaces after colon  (colons)
+  16:15     error    too many spaces after colon  (colons)
+  17:19     error    too many spaces after colon  (colons)
+  18:16     error    too many spaces after colon  (colons)
+  19:11     error    too many spaces after colon  (colons)
+  20:14     error    too many spaces after colon  (colons)
+  21:13     error    too many spaces after colon  (colons)
+  22:14     error    too many spaces after colon  (colons)
+  23:14     error    too many spaces after colon  (colons)
+  24:15     error    too many spaces after colon  (colons)
+  25:14     error    too many spaces after colon  (colons)
+  26:14     error    too many spaces after colon  (colons)
+  27:14     error    too many spaces after colon  (colons)
+  28:22     error    too many spaces after colon  (colons)
+  29:16     error    too many spaces after colon  (colons)
+  30:18     error    too many spaces after colon  (colons)
+  31:15     error    too many spaces after colon  (colons)
+  32:17     error    too many spaces after colon  (colons)
+  33:17     error    too many spaces after colon  (colons)
+  34:19     error    too many spaces after colon  (colons)
+  35:21     error    too many spaces after colon  (colons)
+  36:15     error    too many spaces after colon  (colons)
+  37:15     error    too many spaces after colon  (colons)
+  38:15     error    too many spaces after colon  (colons)
+  39:17     error    too many spaces after colon  (colons)
+  40:17     error    too many spaces after colon  (colons)
+  41:15     error    too many spaces after colon  (colons)
+  42:15     error    too many spaces after colon  (colons)
+  43:15     error    too many spaces after colon  (colons)
+  44:17     error    too many spaces after colon  (colons)
+  45:14     error    too many spaces after colon  (colons)
+  46:14     error    too many spaces after colon  (colons)
+  47:20     error    too many spaces after colon  (colons)
+  48:15     error    too many spaces after colon  (colons)
+
+config/styles/proselint/Annotations.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Apologizing.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Archaisms.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/But.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Cliches.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/CorporateSpeak.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Currency.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Cursing.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/DateCase.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/DateMidnight.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/DateRedundancy.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/DateSpacing.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/DenizenLabels.yml
+  1:1       warning  missing document start "---"  (document-start)
+  7:41      error    too many spaces after colon  (colons)
+  8:41      error    too many spaces after colon  (colons)
+  9:41      error    too many spaces after colon  (colons)
+  10:41     error    too many spaces after colon  (colons)
+  12:41     error    too many spaces after colon  (colons)
+  13:41     error    too many spaces after colon  (colons)
+  14:41     error    too many spaces after colon  (colons)
+  15:41     error    too many spaces after colon  (colons)
+  17:41     error    too many spaces after colon  (colons)
+  18:41     error    too many spaces after colon  (colons)
+  19:41     error    too many spaces after colon  (colons)
+  20:41     error    too many spaces after colon  (colons)
+  21:41     error    too many spaces after colon  (colons)
+  22:41     error    too many spaces after colon  (colons)
+  23:41     error    too many spaces after colon  (colons)
+  24:41     error    too many spaces after colon  (colons)
+  25:41     error    too many spaces after colon  (colons)
+  26:41     error    too many spaces after colon  (colons)
+  27:41     error    too many spaces after colon  (colons)
+  28:41     error    too many spaces after colon  (colons)
+  29:41     error    too many spaces after colon  (colons)
+  30:41     error    too many spaces after colon  (colons)
+  31:41     error    too many spaces after colon  (colons)
+  32:41     error    too many spaces after colon  (colons)
+  33:41     error    too many spaces after colon  (colons)
+  34:41     error    too many spaces after colon  (colons)
+  35:41     error    too many spaces after colon  (colons)
+  36:41     error    too many spaces after colon  (colons)
+  37:41     error    too many spaces after colon  (colons)
+  38:41     error    too many spaces after colon  (colons)
+  39:41     error    too many spaces after colon  (colons)
+  40:41     error    too many spaces after colon  (colons)
+  41:41     error    too many spaces after colon  (colons)
+  42:41     error    too many spaces after colon  (colons)
+  43:41     error    too many spaces after colon  (colons)
+  44:41     error    too many spaces after colon  (colons)
+  45:41     error    too many spaces after colon  (colons)
+  46:41     error    too many spaces after colon  (colons)
+  47:41     error    too many spaces after colon  (colons)
+  48:41     error    too many spaces after colon  (colons)
+  49:41     error    too many spaces after colon  (colons)
+  50:41     error    too many spaces after colon  (colons)
+  51:41     error    too many spaces after colon  (colons)
+  52:41     error    too many spaces after colon  (colons)
+
+config/styles/proselint/Diacritical.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/GenderBias.yml
+  1:1       warning  missing document start "---"  (document-start)
+  8:31      error    too many spaces after colon  (colons)
+  9:31      error    too many spaces after colon  (colons)
+  10:31     error    too many spaces after colon  (colons)
+  11:31     error    too many spaces after colon  (colons)
+  12:31     error    too many spaces after colon  (colons)
+  13:31     error    too many spaces after colon  (colons)
+  14:31     error    too many spaces after colon  (colons)
+  16:31     error    too many spaces after colon  (colons)
+  17:31     error    too many spaces after colon  (colons)
+  18:31     error    too many spaces after colon  (colons)
+  19:31     error    too many spaces after colon  (colons)
+  20:31     error    too many spaces after colon  (colons)
+  21:31     error    too many spaces after colon  (colons)
+  22:31     error    too many spaces after colon  (colons)
+  23:31     error    too many spaces after colon  (colons)
+  24:31     error    too many spaces after colon  (colons)
+  25:31     error    too many spaces after colon  (colons)
+  26:31     error    too many spaces after colon  (colons)
+  27:31     error    too many spaces after colon  (colons)
+  28:31     error    too many spaces after colon  (colons)
+  29:31     error    too many spaces after colon  (colons)
+  30:31     error    too many spaces after colon  (colons)
+  31:31     error    too many spaces after colon  (colons)
+  32:31     error    too many spaces after colon  (colons)
+  33:31     error    too many spaces after colon  (colons)
+  34:31     error    too many spaces after colon  (colons)
+  35:31     error    too many spaces after colon  (colons)
+  36:31     error    too many spaces after colon  (colons)
+  37:31     error    too many spaces after colon  (colons)
+  38:31     error    too many spaces after colon  (colons)
+  39:31     error    too many spaces after colon  (colons)
+  40:31     error    too many spaces after colon  (colons)
+  41:31     error    too many spaces after colon  (colons)
+  42:31     error    too many spaces after colon  (colons)
+  43:31     error    too many spaces after colon  (colons)
+  44:31     error    too many spaces after colon  (colons)
+  45:31     error    too many spaces after colon  (colons)
+
+config/styles/proselint/GroupTerms.yml
+  1:1       warning  missing document start "---"  (document-start)
+  7:45      error    too many spaces after colon  (colons)
+  8:45      error    too many spaces after colon  (colons)
+  9:45      error    too many spaces after colon  (colons)
+  10:45     error    too many spaces after colon  (colons)
+  11:45     error    too many spaces after colon  (colons)
+  12:45     error    too many spaces after colon  (colons)
+  13:45     error    too many spaces after colon  (colons)
+  14:45     error    too many spaces after colon  (colons)
+  16:45     error    too many spaces after colon  (colons)
+  17:45     error    too many spaces after colon  (colons)
+  18:45     error    too many spaces after colon  (colons)
+  19:45     error    too many spaces after colon  (colons)
+  20:45     error    too many spaces after colon  (colons)
+  21:45     error    too many spaces after colon  (colons)
+  23:45     error    too many spaces after colon  (colons)
+  24:45     error    too many spaces after colon  (colons)
+  25:45     error    too many spaces after colon  (colons)
+  26:45     error    too many spaces after colon  (colons)
+  27:45     error    too many spaces after colon  (colons)
+  28:45     error    too many spaces after colon  (colons)
+  29:45     error    too many spaces after colon  (colons)
+  30:45     error    too many spaces after colon  (colons)
+  31:45     error    too many spaces after colon  (colons)
+  32:45     error    too many spaces after colon  (colons)
+  33:45     error    too many spaces after colon  (colons)
+  34:45     error    too many spaces after colon  (colons)
+  35:45     error    too many spaces after colon  (colons)
+  36:45     error    too many spaces after colon  (colons)
+  37:45     error    too many spaces after colon  (colons)
+  38:45     error    too many spaces after colon  (colons)
+  39:45     error    too many spaces after colon  (colons)
+
+config/styles/proselint/Hedging.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Hyperbole.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Jargon.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/LGBTOffensive.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/LGBTTerms.yml
+  1:1       warning  missing document start "---"  (document-start)
+  7:45      error    too many spaces after colon  (colons)
+  8:45      error    too many spaces after colon  (colons)
+  9:45      error    too many spaces after colon  (colons)
+  10:45     error    too many spaces after colon  (colons)
+  11:45     error    too many spaces after colon  (colons)
+  12:45     error    too many spaces after colon  (colons)
+  13:45     error    too many spaces after colon  (colons)
+  15:45     error    too many spaces after colon  (colons)
+
+config/styles/proselint/Malapropisms.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Needless.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Nonwords.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Oxymorons.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/P-Value.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/RASSyndrome.yml
+  1:1       warning  missing document start "---"  (document-start)
+  7:4       error    wrong indentation: expected 4 but found 3  (indentation)
+
+config/styles/proselint/Skunked.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Spelling.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Typography.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/proselint/Uncomparables.yml
+  1:1       warning  missing document start "---"  (document-start)
+  8:4       error    wrong indentation: expected 4 but found 3  (indentation)
+
+config/styles/proselint/Very.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/write-good/Cliches.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/write-good/E-Prime.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/write-good/Illusions.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/write-good/Passive.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/write-good/So.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/write-good/ThereIs.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/write-good/TooWordy.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/styles/write-good/Weasel.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+config/trivy-sbom.yaml
+  3:1       warning  missing document start "---"  (document-start)
+
+config/trivy.yaml
+  3:1       warning  missing document start "---"  (document-start)
+
+
