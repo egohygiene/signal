@@ -1,12 +1,12 @@
 {
-	"kics_version": "v2.1.10",
+	"kics_version": "v2.1.18",
 	"files_scanned": 11,
-	"lines_scanned": 552,
+	"lines_scanned": 555,
 	"files_parsed": 4,
 	"lines_parsed": 173,
 	"lines_ignored": 2,
 	"files_failed_to_scan": 0,
-	"queries_total": 289,
+	"queries_total": 291,
 	"queries_failed_to_execute": 0,
 	"queries_failed_to_compute_similarity_id": 0,
 	"scan_id": "console",
@@ -20,12 +20,12 @@
 	},
 	"total_counter": 1,
 	"total_bom_resources": 0,
-	"start": "2026-02-14T04:45:27.281806551Z",
-	"end": "2026-02-14T04:45:40.727079376Z",
+	"start": "2026-02-14T19:40:45.064419055Z",
+	"end": "2026-02-14T19:41:12.395180762Z",
 	"paths": [
-		"/usr/bin/assets/libraries",
 		".",
-		"/usr/bin/assets/queries"
+		"/usr/bin/assets/queries",
+		"/usr/bin/assets/libraries"
 	],
 	"queries": [
 		{
@@ -35,6 +35,7 @@
 			"severity": "LOW",
 			"platform": "CICD",
 			"cwe": "829",
+			"risk_score": "4.1",
 			"cloud_provider": "COMMON",
 			"category": "Supply-Chain",
 			"experimental": false,

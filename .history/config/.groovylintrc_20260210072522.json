@@ -1,0 +1,37 @@
+{
+    "extends": "recommended",
+    "rules": {
+        "indentation": {
+            "spaces": 4
+        },
+        "lineLength": {
+            "length": 120
+        },
+        "unusedImports": true,
+        "unusedPrivateField": true,
+        "unusedPrivateMethod": true,
+        "unusedVariable": true,
+        "classJavadoc": false,
+        "methodJavadoc": false,
+        "parameterName": false,
+        "methodName": {
+            "regex": "^[a-z][a-zA-Z0-9]*$"
+        },
+        "className": {
+            "regex": "^[A-Z][a-zA-Z0-9]*$"
+        },
+        "noDef": false,
+        "bracesForIfElse": true,
+        "spaceAfterIf": true,
+        "spaceAfterWhile": true,
+        "spaceAfterFor": true,
+        "noTabCharacter": true
+    },
+    "excludePaths": [
+        "build/**",
+        "target/**",
+        "node_modules/**",
+        "**/*.min.groovy"
+    ],
+    "ignoreFilesRegex": ".*\\.generated\\.groovy"
+}

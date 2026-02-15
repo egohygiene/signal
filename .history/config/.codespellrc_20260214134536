@@ -1,0 +1,55 @@
+# ---------------------------------------------
+# codespell configuration
+# ---------------------------------------------
+
+[settings]
+
+# Ignore common project noise
+skip =
+    .git,
+    node_modules,
+    dist,
+    build,
+    coverage,
+    .next,
+    .vercel,
+    .turbo,
+    .cache,
+    reports,
+    vendor,
+    *.lock,
+    *.min.js,
+    *.map
+
+# File types to check
+check-filenames = true
+check-hidden = false
+
+# Ignore short words / acronyms
+ignore-words-list =
+    devops,
+    CI,
+    CD,
+    OpenAI,
+    Kubernetes,
+    Terraform,
+    Docker,
+    GitHub,
+    cspell,
+    codespell
+
+# Minimum word length
+min-word-length = 4
+
+# Do not autofix
+write-changes = false
+
+# Quiet but still useful
+quiet-level = 2
+
+# Allow capitalization differences
+ignore-uppercase = true
+
+# Ignore words in backticks (code blocks)
+ignore-regex =
+    `[^`]+`

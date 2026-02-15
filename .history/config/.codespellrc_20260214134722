@@ -1,0 +1,71 @@
+###############################################################################
+# Codespell Configuration — Signal Spell Hygiene
+# https://github.com/codespell-project/codespell
+###############################################################################
+
+[codespell]
+
+# ─────────────────────────────────────────────
+# Dictionaries
+# ─────────────────────────────────────────────
+
+# clear  → obvious typos
+# rare   → less common typos
+# code   → code-related typos
+# names  → common name misspellings
+# en-GB_to_en-US → normalize dialect
+builtin = clear,rare,code,names,en-GB_to_en-US
+
+# ─────────────────────────────────────────────
+# Behavior
+# ─────────────────────────────────────────────
+
+interactive = 0
+quiet-level = 2
+count = 1
+summary = 1
+
+# Detect encoding issues
+hard-encoding-detection = 1
+
+# Check filenames too
+check-filenames = 1
+
+# Ignore uppercase tokens (acronyms)
+ignore-uppercase = 1
+
+# Minimum word length (avoid noise)
+min-word-length = 4
+
+# ─────────────────────────────────────────────
+# Ignore Paths (mirrors CSpell)
+# ─────────────────────────────────────────────
+
+skip =
+    .git,
+    node_modules,
+    dist,
+    build,
+    coverage,
+    .next,
+    .vercel,
+    .turbo,
+    .cache,
+    reports,
+    vendor,
+    *.lock,
+    *.min.js,
+    *.map,
+    *.venv,
+    *.idea
+
+# ─────────────────────────────────────────────
+# Project Word Allowlist
+# ─────────────────────────────────────────────
+
+# Dedicated ignore file
+ignore-words = .spelling
+
+###############################################################################
+# End of configuration
+###############################################################################
