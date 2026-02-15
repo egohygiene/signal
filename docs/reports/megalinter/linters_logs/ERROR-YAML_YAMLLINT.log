@@ -346,4 +346,7 @@ config/trivy-sbom.yaml
 config/trivy.yaml
   3:1       warning  missing document start "---"  (document-start)
 
+pnpm-lock.yaml
+  1:1       warning  missing document start "---"  (document-start)
+
 

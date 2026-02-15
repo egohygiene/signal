@@ -2,5 +2,4 @@ Results of vale linter (version 3.11.2)
 See documentation on https://megalinter.io/8.8.0/descriptors/spell_vale/
 -----------------------------------------------
 
-✅ [SUCCESS] config/styles/proselint/README.md
-✅ [SUCCESS] config/styles/write-good/README.md
+✅ [SUCCESS] for workspace /github/workspace

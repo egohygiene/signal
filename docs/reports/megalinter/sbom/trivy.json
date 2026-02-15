@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:d8e09f7a-d67d-4b7e-9687-9e96455f9f2d",
+    "serialNumber": "urn:uuid:d2fd0bb1-4b79-4cda-96d6-6a90174089aa",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-02-14T05:17:33+00:00",
+        "timestamp": "2026-02-15T01:14:56+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "c7bca0e5-d3b1-4e85-8c8d-4f15a914100b",
+            "bom-ref": "0a0e6a81-61ff-4388-b74d-7a4bd2f47e9d",
             "type": "application",
             "name": ".",
             "properties": [
@@ -28,10 +28,100 @@
             ]
         }
     },
-    "components": [],
+    "components": [
+        {
+            "bom-ref": "821b46c8-3246-4d6e-91db-6e9b06f3f17a",
+            "type": "library",
+            "group": "@secretlint",
+            "name": "secretlint-rule-preset-recommend",
+            "version": "11.3.1",
+            "purl": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@secretlint/secretlint-rule-preset-recommend@11.3.1"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "8f901202-971b-4f11-a8cb-fb0d33317670",
+            "type": "application",
+            "name": "package-lock.json",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
+                },
+                {
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "d58c3a4b-a2f2-4de0-8bcd-b37ace9daeed",
+            "type": "application",
+            "name": "pnpm-lock.yaml",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
+                },
+                {
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "dd2ff6ff-10c0-461c-979b-8e139700ba20",
+            "type": "library",
+            "group": "@secretlint",
+            "name": "secretlint-rule-preset-recommend",
+            "version": "11.3.1",
+            "purl": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@secretlint/secretlint-rule-preset-recommend@11.3.1"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        }
+    ],
     "dependencies": [
         {
-            "ref": "c7bca0e5-d3b1-4e85-8c8d-4f15a914100b",
+            "ref": "0a0e6a81-61ff-4388-b74d-7a4bd2f47e9d",
+            "dependsOn": [
+                "8f901202-971b-4f11-a8cb-fb0d33317670",
+                "d58c3a4b-a2f2-4de0-8bcd-b37ace9daeed"
+            ]
+        },
+        {
+            "ref": "821b46c8-3246-4d6e-91db-6e9b06f3f17a",
+            "dependsOn": []
+        },
+        {
+            "ref": "8f901202-971b-4f11-a8cb-fb0d33317670",
+            "dependsOn": [
+                "821b46c8-3246-4d6e-91db-6e9b06f3f17a"
+            ]
+        },
+        {
+            "ref": "d58c3a4b-a2f2-4de0-8bcd-b37ace9daeed",
+            "dependsOn": [
+                "dd2ff6ff-10c0-461c-979b-8e139700ba20"
+            ]
+        },
+        {
+            "ref": "dd2ff6ff-10c0-461c-979b-8e139700ba20",
             "dependsOn": []
         }
     ],

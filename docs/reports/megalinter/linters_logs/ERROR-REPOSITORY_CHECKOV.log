@@ -1,0 +1,74 @@
+Results of checkov linter (version 3.2.413)
+See documentation on https://megalinter.io/8.8.0/descriptors/repository_checkov/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+2026-02-15 01:13:40,509 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
+2026-02-15 01:13:40,546 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.16.3
+2026-02-15 01:13:40,546 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
+2026-02-15 01:13:40,547 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
+2026-02-15 01:13:40,548 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
+2026-02-15 01:13:41,176 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
+2026-02-15 01:13:41,176 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
+2026-02-15 01:13:41,176 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
+2026-02-15 01:13:41,176 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
+2026-02-15 01:13:41,184 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
+2026-02-15 01:13:41,184 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
+2026-02-15 01:13:41,187 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-02-15 01:13:41,200 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-02-15 01:13:41,201 [MainThread  ] [INFO ]  Successfully created Serverless graph
+2026-02-15 01:13:41,230 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-02-15 01:13:41,230 [MainThread  ] [INFO ]  Creating vertices
+2026-02-15 01:13:41,230 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 2 vertices
+2026-02-15 01:13:41,230 [MainThread  ] [INFO ]  Creating edges
+2026-02-15 01:13:41,230 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-02-15 01:13:41,230 [MainThread  ] [INFO ]  Rendering variables, graph has 2 vertices and 0 edges
+2026-02-15 01:13:41,239 [MainThread  ] [INFO ]  Building cross variable edges
+2026-02-15 01:13:41,239 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-02-15 01:13:41,239 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-02-15 01:13:41,239 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-02-15 01:13:41,245 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-02-15 01:13:41,246 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-02-15 01:13:41,248 [MainThread  ] [INFO ]  Creating ARM graph
+2026-02-15 01:13:41,249 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-02-15 01:13:41,257 [MainThread  ] [INFO ]  Custom detector found at /venvs/checkov/lib/python3.13/site-packages/checkov/secrets/plugins/custom_regex_detector.py. Loading...
+2026-02-15 01:13:41,309 [MainThread  ] [INFO ]  Secrets scanning will scan 61 files
+2026-02-15 01:13:41,330 [MainThread  ] [INFO ]  Creating vertices
+2026-02-15 01:13:41,330 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-02-15 01:13:41,330 [MainThread  ] [INFO ]  Creating edges
+2026-02-15 01:13:41,330 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-02-15 01:13:43,054 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-02-15 01:13:43,055 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-02-15 01:13:43,150 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-02-15 01:13:43,159 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-02-15 01:13:43,291 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-02-15 01:13:43,292 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 vertices
+2026-02-15 01:13:43,292 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-02-15 01:13:43,292 [MainThread  ] [INFO ]  Rendering variables, graph has 0 vertices and 0 edges
+2026-02-15 01:13:43,293 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-02-15 01:13:43,425 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 1150 has a length of 19462, which is higher than the max 10000
+2026-02-15 01:13:46,873 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-02-15 01:13:46,874 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-02-15 01:13:49,181 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 26666 has a length of 23967, which is higher than the max 10000
+2026-02-15 01:13:50,940 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 35520 has a length of 18999, which is higher than the max 10000
+2026-02-15 01:13:52,277 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 42242 has a length of 10516, which is higher than the max 10000
+2026-02-15 01:13:52,500 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 43385 has a length of 16796, which is higher than the max 10000
+2026-02-15 01:13:52,517 [MainThread  ] [INFO ]  Secret scanning for ./docs/reports/megalinter/mega-linter-report.json took 0:00:10.197890 seconds
+2026-02-15 01:13:52,783 [MainThread  ] [INFO ]  Cleanup the whole temp directory: /tmp/tmpi9fy7pjd
+secrets scan results:
+
+Passed checks: 0, Failed checks: 1, Skipped checks: 0
+
+Check: CKV_SECRET_6: "Base64 High Entropy String"
+	FAILED for resource: HIDDEN_BY_MEGALINTER	File: /package.json:44-45
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/secrets-policies/secrets-policy-index/git-secrets-6
+
+		44 |     "lint:secretlint": "npm run lint:base -- --env ENABLE_LINTERS=REPOS**********",
+
+github_actions scan results:
+
+Passed checks: 64, Failed checks: 0, Skipped checks: 0
+
+
+

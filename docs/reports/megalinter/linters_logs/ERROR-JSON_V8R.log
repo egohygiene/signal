@@ -39,8 +39,6 @@ Linter raw log:
 ℹ Validating config/.groovylintrc.json against schema from https://raw.githubusercontent.com/nvuillam/npm-groovy-lint/refs/heads/main/docs/groovy-lint.jsonschema.json ...
 ✖ config/.groovylintrc.json is invalid
 
-config/.groovylintrc.json# must NOT have additional properties, found additional property 'excludePaths'
-config/.groovylintrc.json# must NOT have additional properties, found additional property 'ignoreFilesRegex'
 config/.groovylintrc.json#/rules must be equal to one of the allowed values
 config/.groovylintrc.json#/rules property name must be valid
 config/.groovylintrc.json#/rules must be equal to one of the allowed values
@@ -61,37 +59,16 @@ config/.groovylintrc.json#/rules must be equal to one of the allowed values
 config/.groovylintrc.json#/rules property name must be valid
 config/.groovylintrc.json#/rules must be equal to one of the allowed values
 config/.groovylintrc.json#/rules property name must be valid
-config/.groovylintrc.json#/rules must be equal to one of the allowed values
-config/.groovylintrc.json#/rules property name must be valid
-config/.groovylintrc.json#/rules must be equal to one of the allowed values
-config/.groovylintrc.json#/rules property name must be valid
-config/.groovylintrc.json#/rules must be equal to one of the allowed values
-config/.groovylintrc.json#/rules property name must be valid
-config/.groovylintrc.json#/rules must be equal to one of the allowed values
-config/.groovylintrc.json#/rules property name must be valid
-config/.groovylintrc.json#/rules must be equal to one of the allowed values
-config/.groovylintrc.json#/rules property name must be valid
-config/.groovylintrc.json#/rules must be equal to one of the allowed values
-config/.groovylintrc.json#/rules property name must be valid
-config/.groovylintrc.json#/rules must be equal to one of the allowed values
-config/.groovylintrc.json#/rules property name must be valid
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'indentation'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'lineLength'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'unusedImports'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'unusedPrivateField'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'unusedPrivateMethod'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'unusedVariable'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'classJavadoc'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'methodJavadoc'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'parameterName'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'methodName'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'className'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'noDef'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'bracesForIfElse'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'spaceAfterIf'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'spaceAfterWhile'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'spaceAfterFor'
-config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'noTabCharacter'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'convention.Indentation'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'size.LineLength'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'unused.UnusedImport'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'convention.BracesForIfElse'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'convention.SpaceAfterIf'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'convention.SpaceAfterWhile'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'convention.SpaceAfterFor'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'formatting.NoTabCharacter'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'documentation.ClassJavadoc'
+config/.groovylintrc.json#/rules must NOT have additional properties, found additional property 'documentation.MethodJavadoc'
 
 ℹ Processing config/.jscpd.json
 ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...

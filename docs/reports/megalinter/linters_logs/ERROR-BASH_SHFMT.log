@@ -7,9 +7,25 @@ Linter raw log:
 diff scripts/megalinter.sh.orig scripts/megalinter.sh
 --- scripts/megalinter.sh.orig
 +++ scripts/megalinter.sh
-@@ -13,4 +13,3 @@
-   --env GITHUB_RUN_ID="local-run" \
-   --env PYTHONWARNINGS="ignore:Possible nested set:FutureWarning,ignore:pkg_resources is deprecated:UserWarning" \
-   oxsecurity/megalinter:v8.8.0
--
+@@ -8,7 +8,7 @@
+ RAW_INPUT="${1:-}"
+ 
+ # Allow comma-separated input
+-IFS=',' read -ra INPUT_ARRAY <<< "${RAW_INPUT}"
++IFS=',' read -ra INPUT_ARRAY <<<"${RAW_INPUT}"
+ 
+ # ================================
+ # Linter Mapping
+@@ -153,7 +153,10 @@
+     KEY="$(echo "$ITEM" | tr '[:upper:]' '[:lower:]')"
+     RESOLVED+=("${LINTER_MAP[$KEY]:-$ITEM}")
+   done
+-  ENABLE_LINTERS="$(IFS=','; echo "${RESOLVED[*]}")"
++  ENABLE_LINTERS="$(
++    IFS=','
++    echo "${RESOLVED[*]}"
++  )"
+ fi
+ 
+ echo "ENABLE_LINTERS=${ENABLE_LINTERS:-ALL}"
 

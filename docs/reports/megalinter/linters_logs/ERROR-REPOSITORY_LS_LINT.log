@@ -4,5 +4,5 @@ See documentation on https://megalinter.io/8.8.0/descriptors/repository_ls_lint/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-2026/02/14 05:18:01 rule ignore not exists
+2026/02/15 01:14:38 rule ignore not exists
 
