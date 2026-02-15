@@ -4,56 +4,11 @@ See documentation on https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_sca
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
- ›   Warning: @salesforce/cli update available from 2.92.7 to 2.122.6.
 @salesforce/cli: Installing plugin @salesforce/sfdx-scanner@4.12.0... installed v4.12.0
-(node:4968) ExperimentalWarning: CommonJS module /node-deps/node_modules/@salesforce/cli/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /node-deps/node_modules/@salesforce/cli/node_modules/npm/node_modules/supports-color/index.js using require().
+(node:1293) ExperimentalWarning: CommonJS module /node-deps/node_modules/@salesforce/cli/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /node-deps/node_modules/@salesforce/cli/node_modules/npm/node_modules/supports-color/index.js using require().
 Support for loading ES Module in require() is an experimental feature and might change at any time
 (Use `node --trace-warnings ...` to show where the warning was created)
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/pmd7/lib/antlr4-runtime-4.9.3.jar'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/dist/sfge/lib/apex-jorje-lsp-sfge.jar'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_modules/which-builtin-type/test/index.js'
-npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_modules/zod/lib/locales/en.d.ts'
-added 579 packages in 21s
- ›   ModuleLoadError: [MODULE_NOT_FOUND] require failed to load 
- ›   /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/lib/com
- ›   mands/scanner/run.js: Cannot find module './builder'
- ›   Require stack:
- ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
- ›   modules/xml2js/lib/xml2js.js
- ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
- ›   modules/jsforce/lib/http-api.js
- ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
- ›   modules/jsforce/lib/connection.js
- ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
- ›   modules/jsforce/lib/jsforce.js
- ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
- ›   modules/jsforce/lib/index.js
- ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
- ›   modules/jsforce/index.js
- ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
- ›   modules/@salesforce/sf-plugins-core/node_modules/@salesforce/core/lib/org/
- ›   authInfo.js
- ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
- ›   modules/@salesforce/sf-plugins-core/node_modules/@salesforce/core/lib/devi
- ›   ceOauthService.js
- ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
- ›   modules/@salesforce/sf-plugins-core/node_modules/@salesforce/core/lib/inde
- ›   x.js
- ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
- ›   modules/@salesforce/sf-plugins-core/lib/util.js
- ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/node_
- ›   modules/@salesforce/sf-plugins-core/lib/exported.js
- ›   - /github/home/.local/share/sf/node_modules/@salesforce/sfdx-scanner/lib/c
- ›   ommands/scanner/run.js
- ›   - /node-deps/node_modules/@salesforce/cli/node_modules/@oclif/core/lib/mod
- ›   ule-loader.js
- ›   - /node-deps/node_modules/@salesforce/cli/node_modules/@oclif/core/lib/hel
- ›   p/index.js
- ›   - /node-deps/node_modules/@salesforce/cli/node_modules/@oclif/core/lib/err
- ›   ors/handle.js
- ›   - /node-deps/node_modules/@salesforce/cli/node_modules/@oclif/core/lib/err
- ›   ors/index.js
- ›   - /node-deps/node_modules/@salesforce/cli/node_modules/@oclif/core/lib/exe
- ›   cute.js
- ›   Code: MODULE_NOT_FOUND
+added 579 packages in 20s
+Warning: Starting May 1, 2025, we no longer support v4.x of Code Analyzer. You should use v5.x of Code Analyzer instead. See https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/code-analyzer.html. For information about migrating from v4.x to v5.x, see https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/migrate.html.
+Error (1): Unterminated string in JSON at position 524284 (line 17319 column 9)
 

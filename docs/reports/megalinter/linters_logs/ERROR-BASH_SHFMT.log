@@ -1,0 +1,15 @@
+Results of shfmt linter (version 3.11.0)
+See documentation on https://megalinter.io/8.8.0/descriptors/bash_shfmt/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+diff scripts/megalinter.sh.orig scripts/megalinter.sh
+--- scripts/megalinter.sh.orig
++++ scripts/megalinter.sh
+@@ -13,4 +13,3 @@
+   --env GITHUB_RUN_ID="local-run" \
+   --env PYTHONWARNINGS="ignore:Possible nested set:FutureWarning,ignore:pkg_resources is deprecated:UserWarning" \
+   oxsecurity/megalinter:v8.8.0
+-
+
