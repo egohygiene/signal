@@ -8,6 +8,7 @@ dependencies = [
     "uvicorn[standard]>=0.34.0",
     "pydantic-settings>=2.7.1",
     "python-dotenv>=1.0.1",
+    "plaid-python>=25.0.0",
 ]
 
 [build-system]
