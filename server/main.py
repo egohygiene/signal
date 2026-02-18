@@ -3,6 +3,7 @@
 import logging
 import sys
 from contextlib import asynccontextmanager
+from datetime import datetime
 from typing import List, Optional
 
 from fastapi import FastAPI, HTTPException
@@ -151,6 +152,10 @@ async def get_transactions(
     This is a passthrough endpoint that fetches transactions for a given access
     token and returns normalized transaction data.
 
+    Security Note: This endpoint uses query parameters for simplicity and
+    frontend consumption. For production use, prefer the POST /api/plaid/transactions
+    endpoint which accepts sensitive data in the request body.
+
     Args:
         access_token: Plaid access token (required query parameter)
         start_date: Optional start date in YYYY-MM-DD format
@@ -163,6 +168,24 @@ async def get_transactions(
     Raises:
         HTTPException: If Plaid is not configured or API call fails
     """
+    # Validate date format if provided (before checking Plaid adapter)
+    if start_date:
+        try:
+            datetime.strptime(start_date, "%Y-%m-%d")
+        except ValueError:
+            raise HTTPException(
+                status_code=400,
+                detail="Invalid start_date format. Expected YYYY-MM-DD.",
+            )
+    if end_date:
+        try:
+            datetime.strptime(end_date, "%Y-%m-%d")
+        except ValueError:
+            raise HTTPException(
+                status_code=400,
+                detail="Invalid end_date format. Expected YYYY-MM-DD.",
+            )
+
     if not plaid_adapter:
         logger.error("Plaid adapter not configured")
         raise HTTPException(
@@ -178,11 +201,16 @@ async def get_transactions(
             account_ids_list = [aid.strip() for aid in account_ids.split(",")]
 
         # Log request details (excluding sensitive data)
+        account_ids_masked = (
+            f"{len(account_ids_list)} account(s)"
+            if account_ids_list
+            else "all accounts"
+        )
         logger.info(
             f"Fetching transactions - "
-            f"start_date: {start_date}, "
-            f"end_date: {end_date}, "
-            f"account_ids: {account_ids_list}"
+            f"start_date: {start_date or 'default'}, "
+            f"end_date: {end_date or 'default'}, "
+            f"accounts: {account_ids_masked}"
         )
 
         # Fetch transactions from Plaid
