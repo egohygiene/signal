@@ -188,6 +188,13 @@ async def get_transactions(
     Raises:
         HTTPException: If Plaid is not configured or API call fails
     """
+    # Validate access token is not empty
+    if not x_access_token or not x_access_token.strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Access token cannot be empty.",
+        )
+
     # Validate date format if provided (before checking Plaid adapter)
     if start_date:
         validate_date_format(start_date, "start_date")
