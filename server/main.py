@@ -159,7 +159,7 @@ def validate_date_format(date_string: str, param_name: str) -> None:
         )
 
 
-@app.get("/transactions", response_model=TransactionsResponse)
+@app.get("/api/transactions", response_model=TransactionsResponse)
 async def get_transactions(
     start_date: Optional[str] = None,
     end_date: Optional[str] = None,
@@ -172,9 +172,9 @@ async def get_transactions(
     This is a passthrough endpoint that fetches transactions for a given access
     token and returns normalized transaction data.
 
-    Security Note: The access token is passed via X-Access-Token header to avoid
-    exposure in URL query parameters. For production use with additional features,
-    consider using the POST /api/plaid/transactions endpoint.
+    Security Note: The access token is required via X-Access-Token header to avoid
+    exposure in URL query parameters. This provides secure authentication while
+    maintaining the simplicity of a GET request for frontend consumption.
 
     Args:
         start_date: Optional start date in YYYY-MM-DD format (query parameter)
@@ -206,7 +206,13 @@ async def get_transactions(
         # Parse account_ids from comma-separated string if provided
         account_ids_list = None
         if account_ids:
-            account_ids_list = [aid.strip() for aid in account_ids.split(",")]
+            # Filter out empty strings after splitting and stripping
+            account_ids_list = [
+                aid.strip() for aid in account_ids.split(",") if aid.strip()
+            ]
+            # If all values were empty, treat as None
+            if not account_ids_list:
+                account_ids_list = None
 
         # Log request details (excluding sensitive data)
         account_ids_masked = (
