@@ -138,6 +138,85 @@ class TransactionsResponse(BaseModel):
     request_id: Optional[str] = None
 
 
+@app.get("/transactions", response_model=TransactionsResponse)
+async def get_transactions(
+    access_token: str,
+    start_date: Optional[str] = None,
+    end_date: Optional[str] = None,
+    account_ids: Optional[str] = None,
+):
+    """
+    Fetch and normalize transactions from Plaid API (GET endpoint).
+
+    This is a passthrough endpoint that fetches transactions for a given access
+    token and returns normalized transaction data.
+
+    Args:
+        access_token: Plaid access token (required query parameter)
+        start_date: Optional start date in YYYY-MM-DD format
+        end_date: Optional end date in YYYY-MM-DD format
+        account_ids: Optional comma-separated list of account IDs
+
+    Returns:
+        Normalized transactions with metadata
+
+    Raises:
+        HTTPException: If Plaid is not configured or API call fails
+    """
+    if not plaid_adapter:
+        logger.error("Plaid adapter not configured")
+        raise HTTPException(
+            status_code=503,
+            detail="Plaid integration is not configured. "
+            "Please set PLAID_CLIENT_ID and PLAID_SECRET environment variables.",
+        )
+
+    try:
+        # Parse account_ids from comma-separated string if provided
+        account_ids_list = None
+        if account_ids:
+            account_ids_list = [aid.strip() for aid in account_ids.split(",")]
+
+        # Log request details (excluding sensitive data)
+        logger.info(
+            f"Fetching transactions - "
+            f"start_date: {start_date}, "
+            f"end_date: {end_date}, "
+            f"account_ids: {account_ids_list}"
+        )
+
+        # Fetch transactions from Plaid
+        result = plaid_adapter.get_transactions(
+            access_token=access_token,
+            start_date=start_date,
+            end_date=end_date,
+            account_ids=account_ids_list,
+        )
+
+        # Normalize transactions
+        normalized_transactions = plaid_adapter.normalize_transactions(
+            result.get("transactions", [])
+        )
+
+        logger.info(f"Successfully fetched {len(normalized_transactions)} transactions")
+
+        return TransactionsResponse(
+            transactions=normalized_transactions,
+            total_count=len(normalized_transactions),
+            accounts_count=len(result.get("accounts", [])),
+            request_id=result.get("request_id"),
+        )
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error fetching transactions: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to fetch transactions: {str(e)}",
+        )
+
+
 @app.post("/api/plaid/transactions", response_model=TransactionsResponse)
 async def get_plaid_transactions(request: TransactionsRequest):
     """
@@ -203,9 +282,7 @@ async def get_plaid_transactions(request: TransactionsRequest):
             logger.info(f"  ID: {tx.transaction_id}")
             logger.info(f"  Date: {tx.date}")
             logger.info(f"  Name: {tx.name}")
-            logger.info(
-                f"  Amount: ${tx.amount:.2f} {tx.iso_currency_code or 'USD'}"
-            )
+            logger.info(f"  Amount: ${tx.amount:.2f} {tx.iso_currency_code or 'USD'}")
             logger.info(
                 f"  Category: "
                 f"{', '.join(tx.category) if tx.category else 'Uncategorized'}"
@@ -214,8 +291,7 @@ async def get_plaid_transactions(request: TransactionsRequest):
 
         if len(normalized_transactions) > 10:
             logger.info(
-                f"... and {len(normalized_transactions) - 10} "
-                f"more transactions"
+                f"... and {len(normalized_transactions) - 10} more transactions"
             )
 
         logger.info("=" * 80)
