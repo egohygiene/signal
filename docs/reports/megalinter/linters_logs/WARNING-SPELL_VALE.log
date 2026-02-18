@@ -37,14 +37,61 @@ Linter raw log:
 
 
  schema/README.md
+ 24:4   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
  24:4   warning     'be defined' may be passive     write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
- 24:4   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
+ 24:38  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  24:38  warning     'are identified' may be         write-good.Passive 
                     passive voice. Use active                          
                     voice if you can.                                  
- 24:38  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
+
+
+ server/IMPLEMENTATION_SUMMARY.md
+ 57:7     warning     'Additional' is too wordy.      write-good.TooWordy 
+ 161:19   suggestion  Try to avoid using 'are'.       write-good.E-Prime  
+ 161:19   warning     'are fetched' may be passive    write-good.Passive  
+                      voice. Use active voice if you                      
+                      can.                                                
+ 161:53   suggestion  Try to avoid using 'is'.        write-good.E-Prime  
+ 161:53   warning     'is logged' may be passive      write-good.Passive  
+                      voice. Use active voice if you                      
+                      can.                                                
+ 221:6    warning     'Obtain' is too wordy.          write-good.TooWordy 
+ 244:15   warning     'additional' is too wordy.      write-good.TooWordy 
+ 260:34   suggestion  Try to avoid using 'is'.        write-good.E-Prime  
+ 260:131  suggestion  Try to avoid using 'been'.      write-good.E-Prime  
+ 260:131  warning     'been met' may be passive       write-good.Passive  
+                      voice. Use active voice if you                      
+                      can.                                                
+ 273:175  suggestion  Try to avoid using 'is'.        write-good.E-Prime  
+
+
+ server/PLAID_README.md
+ 68:16   warning     'is configured' may be passive  write-good.Passive  
+                     voice. Use active voice if you                      
+                     can.                                                
+ 68:16   suggestion  Try to avoid using 'is'.        write-good.E-Prime  
+ 127:19  suggestion  Try to avoid using 'are'.       write-good.E-Prime  
+ 127:19  warning     'are fetched' may be passive    write-good.Passive  
+                     voice. Use active voice if you                      
+                     can.                                                
+ 127:53  suggestion  Try to avoid using 'is'.        write-good.E-Prime  
+ 127:53  warning     'is logged' may be passive      write-good.Passive  
+                     voice. Use active voice if you                      
+                     can.                                                
+ 150:21  warning     'various' is a weasel word!     write-good.Weasel   
+ 157:12  suggestion  Try to avoid using 'are'.       write-good.E-Prime  
+ 157:12  warning     'are logged' may be passive     write-good.Passive  
+                     voice. Use active voice if you                      
+                     can.                                                
+ 171:17  suggestion  Try to avoid using 'is'.        write-good.E-Prime  
+ 179:24  suggestion  Try to avoid using 'be'.        write-good.E-Prime  
+ 179:24  warning     'be stored' may be passive      write-good.Passive  
+                     voice. Use active voice if you                      
+                     can.                                                
+ 186:3   warning     'Implement' is too wordy.       write-good.TooWordy 
+ 187:19  warning     'additional' is too wordy.      write-good.TooWordy 
 
 
  server/README.md
@@ -56,5 +103,5 @@ Linter raw log:
  12:20  suggestion  Try to avoid using 'is'.   write-good.E-Prime 
  16:8   suggestion  Try to avoid using 'are'.  write-good.E-Prime 
 
-✖ 0 errors, 8 warnings and 15 suggestions in 7 files.
+✖ 0 errors, 22 warnings and 26 suggestions in 9 files.
 

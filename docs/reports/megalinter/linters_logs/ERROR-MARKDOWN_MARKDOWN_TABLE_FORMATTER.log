@@ -1,0 +1,9 @@
+Results of markdown-table-formatter linter (version 1.6.1)
+See documentation on https://megalinter.io/8.8.0/descriptors/markdown_markdown_table_formatter/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+1 files contain markdown tables to format:
+- server/IMPLEMENTATION_SUMMARY.md
+

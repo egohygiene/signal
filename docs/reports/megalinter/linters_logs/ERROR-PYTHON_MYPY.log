@@ -4,9 +4,30 @@ See documentation on https://megalinter.io/8.8.0/descriptors/python_mypy/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
+server/plaid_adapter.py:7:1: error: Cannot find implementation or library stub
+for module named "plaid"  [import-not-found]
+    import plaid
+    ^
+server/plaid_adapter.py:8:1: error: Cannot find implementation or library stub
+for module named "plaid.api"  [import-not-found]
+    from plaid.api import plaid_api
+    ^
+server/plaid_adapter.py:9:1: error: Cannot find implementation or library stub
+for module named "plaid.model.transactions_get_request"  [import-not-found]
+    from plaid.model.transactions_get_request import TransactionsGetReques...
+    ^
+server/plaid_adapter.py:10:1: error: Cannot find implementation or library stub
+for module named "plaid.model.transactions_get_request_options" 
+[import-not-found]
+    from plaid.model.transactions_get_request_options import TransactionsG...
+    ^
+server/plaid_adapter.py:11:1: error: Cannot find implementation or library stub
+for module named "pydantic"  [import-not-found]
+    from pydantic import BaseModel
+    ^
 server/main.py:8:1: error: Cannot find implementation or library stub for
 module named "fastapi"  [import-not-found]
-    from fastapi import FastAPI
+    from fastapi import FastAPI, HTTPException
     ^
 server/main.py:9:1: error: Cannot find implementation or library stub for
 module named "fastapi.middleware.cors"  [import-not-found]
@@ -14,20 +35,32 @@ module named "fastapi.middleware.cors"  [import-not-found]
     ^
 server/main.py:9:1: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
 server/main.py:10:1: error: Cannot find implementation or library stub for
+module named "pydantic"  [import-not-found]
+    from pydantic import BaseModel
+    ^
+server/main.py:11:1: error: Cannot find implementation or library stub for
 module named "pydantic_settings"  [import-not-found]
     from pydantic_settings import BaseSettings, SettingsConfigDict
     ^
-server/main.py:48:1: error: Function is missing a return type annotation 
+server/main.py:75:1: error: Function is missing a return type annotation 
 [no-untyped-def]
     async def lifespan(app: FastAPI):
     ^
-server/main.py:79:1: error: Function is missing a return type annotation 
+server/main.py:106:1: error: Function is missing a return type annotation 
 [no-untyped-def]
     async def root():
     ^
-server/main.py:86:1: error: Function is missing a return type annotation 
+server/main.py:113:1: error: Function is missing a return type annotation 
 [no-untyped-def]
     async def health_check():
     ^
-Found 6 errors in 1 file (checked 1 source file)
+server/main.py:141:2: error: Untyped decorator makes function
+"get_plaid_transactions" untyped  [misc]
+    @app.post("/api/plaid/transactions", response_model=TransactionsRespon...
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+server/main.py:142:1: error: Function is missing a return type annotation 
+[no-untyped-def]
+    async def get_plaid_transactions(request: TransactionsRequest):
+    ^
+Found 14 errors in 2 files (checked 2 source files)
 

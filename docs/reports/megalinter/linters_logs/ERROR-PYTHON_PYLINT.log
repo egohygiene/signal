@@ -7,5 +7,12 @@ Linter raw log:
 ************* Module main
 server/main.py:8:0: E0401: Unable to import 'fastapi' (import-error)
 server/main.py:9:0: E0401: Unable to import 'fastapi.middleware.cors' (import-error)
-server/main.py:10:0: E0401: Unable to import 'pydantic_settings' (import-error)
+server/main.py:10:0: E0401: Unable to import 'pydantic' (import-error)
+server/main.py:11:0: E0401: Unable to import 'pydantic_settings' (import-error)
+************* Module plaid_adapter
+server/plaid_adapter.py:7:0: E0401: Unable to import 'plaid' (import-error)
+server/plaid_adapter.py:8:0: E0401: Unable to import 'plaid.api' (import-error)
+server/plaid_adapter.py:9:0: E0401: Unable to import 'plaid.model.transactions_get_request' (import-error)
+server/plaid_adapter.py:10:0: E0401: Unable to import 'plaid.model.transactions_get_request_options' (import-error)
+server/plaid_adapter.py:11:0: E0401: Unable to import 'pydantic' (import-error)
 

@@ -8,19 +8,142 @@ venv .venv subdirectory not found in venv path config.
 server/main.py
   server/main.py:8:6 - error: Import "fastapi" could not be resolved (reportMissingImports)
   server/main.py:8:21 - error: Type of "FastAPI" is unknown (reportUnknownVariableType)
+  server/main.py:8:30 - error: Type of "HTTPException" is unknown (reportUnknownVariableType)
   server/main.py:9:6 - error: Import "fastapi.middleware.cors" could not be resolved (reportMissingImports)
   server/main.py:9:37 - error: Type of "CORSMiddleware" is unknown (reportUnknownVariableType)
-  server/main.py:10:6 - error: Import "pydantic_settings" could not be resolved (reportMissingImports)
-  server/main.py:10:31 - error: Type of "BaseSettings" is unknown (reportUnknownVariableType)
-  server/main.py:10:45 - error: Type of "SettingsConfigDict" is unknown (reportUnknownVariableType)
-  server/main.py:13:16 - error: Base class type is unknown, obscuring type of derived class (reportUntypedBaseClass)
-  server/main.py:23:5 - error: Type of "model_config" is unknown (reportUnknownVariableType)
-  server/main.py:48:20 - error: Type of parameter "app" is unknown (reportUnknownParameterType)
-  server/main.py:60:1 - error: Type of "app" is unknown (reportUnknownVariableType)
-  server/main.py:69:1 - error: Type of "add_middleware" is unknown (reportUnknownMemberType)
-  server/main.py:78:2 - error: Type of "get" is unknown (reportUnknownMemberType)
-  server/main.py:78:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
-  server/main.py:85:2 - error: Type of "get" is unknown (reportUnknownMemberType)
-  server/main.py:85:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
-16 errors, 0 warnings, 0 informations 
+  server/main.py:10:6 - error: Import "pydantic" could not be resolved (reportMissingImports)
+  server/main.py:10:22 - error: Type of "BaseModel" is unknown (reportUnknownVariableType)
+  server/main.py:11:6 - error: Import "pydantic_settings" could not be resolved (reportMissingImports)
+  server/main.py:11:31 - error: Type of "BaseSettings" is unknown (reportUnknownVariableType)
+  server/main.py:11:45 - error: Type of "SettingsConfigDict" is unknown (reportUnknownVariableType)
+  server/main.py:13:6 - error: Import "plaid_adapter" could not be resolved (reportMissingImports)
+  server/main.py:13:27 - error: Type of "PlaidAdapter" is unknown (reportUnknownVariableType)
+  server/main.py:13:41 - error: Type of "NormalizedTransaction" is unknown (reportUnknownVariableType)
+  server/main.py:16:16 - error: Base class type is unknown, obscuring type of derived class (reportUntypedBaseClass)
+  server/main.py:32:5 - error: Type of "model_config" is unknown (reportUnknownVariableType)
+  server/main.py:59:9 - error: Type of "plaid_adapter" is unknown (reportUnknownVariableType)
+  server/main.py:75:20 - error: Type of parameter "app" is unknown (reportUnknownParameterType)
+  server/main.py:87:1 - error: Type of "app" is unknown (reportUnknownVariableType)
+  server/main.py:96:1 - error: Type of "add_middleware" is unknown (reportUnknownMemberType)
+  server/main.py:105:2 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/main.py:105:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
+  server/main.py:112:2 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/main.py:112:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
+  server/main.py:123:27 - error: Base class type is unknown, obscuring type of derived class (reportUntypedBaseClass)
+  server/main.py:132:28 - error: Base class type is unknown, obscuring type of derived class (reportUntypedBaseClass)
+  server/main.py:141:2 - error: Type of "post" is unknown (reportUnknownMemberType)
+  server/main.py:141:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
+  server/main.py:176:9 - error: Type of "result" is unknown (reportUnknownVariableType)
+  server/main.py:176:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  server/main.py:184:9 - error: Type of "normalized_transactions" is unknown (reportUnknownVariableType)
+  server/main.py:184:35 - error: Type of "normalize_transactions" is unknown (reportUnknownMemberType)
+  server/main.py:185:13 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/main.py:192:56 - error: Argument type is unknown
+    Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
+  server/main.py:193:47 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/main.py:193:47 - error: Argument type is unknown
+    Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
+  server/main.py:201:16 - error: Type of "tx" is unknown (reportUnknownVariableType)
+  server/main.py:201:32 - error: Argument type is unknown
+    Argument corresponds to parameter "iterable" in function "__new__" (reportUnknownArgumentType)
+  server/main.py:203:34 - error: Type of "transaction_id" is unknown (reportUnknownMemberType)
+  server/main.py:204:36 - error: Type of "date" is unknown (reportUnknownMemberType)
+  server/main.py:205:36 - error: Type of "name" is unknown (reportUnknownMemberType)
+  server/main.py:207:31 - error: Type of "amount" is unknown (reportUnknownMemberType)
+  server/main.py:207:47 - error: Type of "iso_currency_code" is unknown (reportUnknownMemberType)
+  server/main.py:211:30 - error: Type of "category" is unknown (reportUnknownMemberType)
+  server/main.py:211:30 - error: Argument type is unknown
+    Argument corresponds to parameter "iterable" in function "join" (reportUnknownArgumentType)
+  server/main.py:211:46 - error: Type of "category" is unknown (reportUnknownMemberType)
+  server/main.py:213:39 - error: Type of "pending" is unknown (reportUnknownMemberType)
+  server/main.py:215:16 - error: Argument type is unknown
+    Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
+  server/main.py:217:32 - error: Argument type is unknown
+    Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
+  server/main.py:225:29 - error: Argument type is unknown
+    Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
+  server/main.py:226:32 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/main.py:226:32 - error: Argument type is unknown
+    Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
+  server/main.py:227:24 - error: Type of "get" is unknown (reportUnknownMemberType)
+server/plaid_adapter.py
+  server/plaid_adapter.py:7:8 - error: Import "plaid" could not be resolved (reportMissingImports)
+  server/plaid_adapter.py:8:6 - error: Import "plaid.api" could not be resolved (reportMissingImports)
+  server/plaid_adapter.py:8:23 - error: Type of "plaid_api" is unknown (reportUnknownVariableType)
+  server/plaid_adapter.py:9:6 - error: Import "plaid.model.transactions_get_request" could not be resolved (reportMissingImports)
+  server/plaid_adapter.py:9:50 - error: Type of "TransactionsGetRequest" is unknown (reportUnknownVariableType)
+  server/plaid_adapter.py:10:6 - error: Import "plaid.model.transactions_get_request_options" could not be resolved (reportMissingImports)
+  server/plaid_adapter.py:10:58 - error: Type of "TransactionsGetRequestOptions" is unknown (reportUnknownVariableType)
+  server/plaid_adapter.py:11:6 - error: Import "pydantic" could not be resolved (reportMissingImports)
+  server/plaid_adapter.py:11:22 - error: Type of "BaseModel" is unknown (reportUnknownVariableType)
+  server/plaid_adapter.py:16:29 - error: Base class type is unknown, obscuring type of derived class (reportUntypedBaseClass)
+  server/plaid_adapter.py:53:9 - error: Type of "env_map" is partially unknown
+    Type of "env_map" is "dict[str, Unknown]" (reportUnknownVariableType)
+  server/plaid_adapter.py:54:24 - error: Type of "Environment" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:54:24 - error: Type of "Sandbox" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:55:27 - error: Type of "Environment" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:55:27 - error: Type of "Production" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:61:46 - error: Argument type is partially unknown
+    Argument corresponds to parameter "iterable" in function "join"
+    Argument type is "dict_keys[str, Unknown]" (reportUnknownArgumentType)
+  server/plaid_adapter.py:65:9 - error: Type of "configuration" is unknown (reportUnknownVariableType)
+  server/plaid_adapter.py:65:25 - error: Type of "Configuration" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:74:9 - error: Type of "api_client" is unknown (reportUnknownVariableType)
+  server/plaid_adapter.py:74:22 - error: Type of "ApiClient" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:75:9 - error: Type of "client" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:75:23 - error: Type of "PlaidApi" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:116:17 - error: Type of "options" is unknown (reportUnknownVariableType)
+  server/plaid_adapter.py:119:13 - error: Type of "request" is unknown (reportUnknownVariableType)
+  server/plaid_adapter.py:127:13 - error: Type of "response" is unknown (reportUnknownVariableType)
+  server/plaid_adapter.py:127:24 - error: Type of "client" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:127:24 - error: Type of "transactions_get" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:130:13 - error: Type of "response_dict" is unknown (reportUnknownVariableType)
+  server/plaid_adapter.py:130:29 - error: Type of "to_dict" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:134:24 - error: Argument type is unknown
+    Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
+  server/plaid_adapter.py:139:29 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:140:33 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:141:39 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:144:31 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:147:16 - error: Type of "ApiException" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:147:38 - error: Type of "e" is unknown (reportUnknownVariableType)
+  server/plaid_adapter.py:149:13 - error: Type of "error_response" is partially unknown
+    Type of "error_response" is "Unknown | str" (reportUnknownVariableType)
+  server/plaid_adapter.py:149:30 - error: Type of "body" is unknown (reportUnknownMemberType)
+  server/plaid_adapter.py:149:48 - error: Argument type is unknown
+    Argument corresponds to parameter "obj" in function "hasattr" (reportUnknownArgumentType)
+  server/plaid_adapter.py:149:68 - error: Argument type is unknown
+    Argument corresponds to parameter "object" in function "__new__" (reportUnknownArgumentType)
+  server/plaid_adapter.py:168:13 - error: Type of "tx" is partially unknown
+    Type of "tx" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
+  server/plaid_adapter.py:177:28 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
+  server/plaid_adapter.py:178:24 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
+  server/plaid_adapter.py:179:26 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
+  server/plaid_adapter.py:179:26 - error: Argument type is partially unknown
+    Argument corresponds to parameter "x" in function "__new__"
+    Argument type is "Unknown | Any" (reportUnknownArgumentType)
+  server/plaid_adapter.py:180:18 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
+  server/plaid_adapter.py:181:18 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
+  server/plaid_adapter.py:182:27 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
+  server/plaid_adapter.py:183:22 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
+  server/plaid_adapter.py:184:21 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
+  server/plaid_adapter.py:185:29 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
+  server/plaid_adapter.py:186:31 - error: Type of "get" is partially unknown
+    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
+  server/plaid_adapter.py:204:17 - error: Type of "append" is partially unknown
+    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
+  server/plaid_adapter.py:209:52 - error: Argument type is partially unknown
+    Argument corresponds to parameter "obj" in function "len"
+    Argument type is "list[Unknown]" (reportUnknownArgumentType)
+  server/plaid_adapter.py:210:16 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+107 errors, 0 warnings, 0 informations 
 

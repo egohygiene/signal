@@ -1,0 +1,22 @@
+Results of isort linter (version 6.0.1)
+See documentation on https://megalinter.io/8.8.0/descriptors/python_isort/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+ERROR: server/main.py Imports are incorrectly sorted and/or formatted.
+--- server/main.py:before	2026-02-18 06:54:36.495470
++++ server/main.py:after	2026-02-18 06:54:47.230700
+@@ -7,10 +7,9 @@
+ 
+ from fastapi import FastAPI, HTTPException
+ from fastapi.middleware.cors import CORSMiddleware
++from plaid_adapter import NormalizedTransaction, PlaidAdapter
+ from pydantic import BaseModel
+ from pydantic_settings import BaseSettings, SettingsConfigDict
+-
+-from plaid_adapter import PlaidAdapter, NormalizedTransaction
+ 
+ 
+ class Settings(BaseSettings):
+
