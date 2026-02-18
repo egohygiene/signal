@@ -6,15 +6,21 @@ See documentation on https://megalinter.io/8.8.0/descriptors/python_pyright/
 Linter raw log:
 venv .venv subdirectory not found in venv path config.
 server/main.py
-  server/main.py:3:6 - error: Import "fastapi" could not be resolved (reportMissingImports)
-  server/main.py:3:21 - error: Type of "FastAPI" is unknown (reportUnknownVariableType)
-  server/main.py:4:6 - error: Import "fastapi.middleware.cors" could not be resolved (reportMissingImports)
-  server/main.py:4:37 - error: Type of "CORSMiddleware" is unknown (reportUnknownVariableType)
-  server/main.py:6:1 - error: Type of "app" is unknown (reportUnknownVariableType)
-  server/main.py:13:1 - error: Type of "add_middleware" is unknown (reportUnknownMemberType)
-  server/main.py:22:2 - error: Type of "get" is unknown (reportUnknownMemberType)
-  server/main.py:22:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
-  server/main.py:28:2 - error: Type of "get" is unknown (reportUnknownMemberType)
-  server/main.py:28:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
-10 errors, 0 warnings, 0 informations 
+  server/main.py:8:6 - error: Import "fastapi" could not be resolved (reportMissingImports)
+  server/main.py:8:21 - error: Type of "FastAPI" is unknown (reportUnknownVariableType)
+  server/main.py:9:6 - error: Import "fastapi.middleware.cors" could not be resolved (reportMissingImports)
+  server/main.py:9:37 - error: Type of "CORSMiddleware" is unknown (reportUnknownVariableType)
+  server/main.py:10:6 - error: Import "pydantic_settings" could not be resolved (reportMissingImports)
+  server/main.py:10:31 - error: Type of "BaseSettings" is unknown (reportUnknownVariableType)
+  server/main.py:10:45 - error: Type of "SettingsConfigDict" is unknown (reportUnknownVariableType)
+  server/main.py:13:16 - error: Base class type is unknown, obscuring type of derived class (reportUntypedBaseClass)
+  server/main.py:23:5 - error: Type of "model_config" is unknown (reportUnknownVariableType)
+  server/main.py:48:20 - error: Type of parameter "app" is unknown (reportUnknownParameterType)
+  server/main.py:60:1 - error: Type of "app" is unknown (reportUnknownVariableType)
+  server/main.py:69:1 - error: Type of "add_middleware" is unknown (reportUnknownMemberType)
+  server/main.py:78:2 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/main.py:78:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
+  server/main.py:85:2 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/main.py:85:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
+16 errors, 0 warnings, 0 informations 
 

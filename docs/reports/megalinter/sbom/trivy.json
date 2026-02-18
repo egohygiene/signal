@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:76480783-f01f-48e9-a7fd-cd75b0fd2644",
+    "serialNumber": "urn:uuid:2ceb5fb6-f157-43b5-99a7-31eae7fd78c1",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-02-18T04:20:25+00:00",
+        "timestamp": "2026-02-18T05:58:52+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "764925af-1aaf-48c9-8577-d9b48f8b52c1",
+            "bom-ref": "b235c144-6be8-40fe-b7e9-0ea139759b7b",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,7 +30,7 @@
     },
     "components": [
         {
-            "bom-ref": "00b4153a-7f1c-478d-8d72-7607d5d17d68",
+            "bom-ref": "0bc5f71d-95fd-4736-ad2b-f611276a3760",
             "type": "application",
             "name": "package-lock.json",
             "properties": [
@@ -45,7 +45,22 @@
             ]
         },
         {
-            "bom-ref": "5a63bbe1-91eb-4a07-815e-4ee7efd15074",
+            "bom-ref": "205eebdc-a4d5-4c1a-af6e-af18397697d3",
+            "type": "application",
+            "name": "pnpm-lock.yaml",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
+                },
+                {
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "4d255273-daa5-4978-ad02-91f44066da12",
             "type": "library",
             "group": "@secretlint",
             "name": "secretlint-rule-preset-recommend",
@@ -63,22 +78,7 @@
             ]
         },
         {
-            "bom-ref": "6623a633-6fba-4071-9345-8c35dc5ce8e4",
-            "type": "application",
-            "name": "server/requirements.txt",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:Class",
-                    "value": "lang-pkgs"
-                },
-                {
-                    "name": "aquasecurity:trivy:Type",
-                    "value": "pip"
-                }
-            ]
-        },
-        {
-            "bom-ref": "78ae538d-246a-4ad5-a403-f53350459790",
+            "bom-ref": "5ff2c53a-acbf-4009-8f6f-c63eb5fa7e4d",
             "type": "application",
             "name": "ui/package-lock.json",
             "properties": [
@@ -93,7 +93,22 @@
             ]
         },
         {
-            "bom-ref": "dc316728-cb6a-42e9-8869-24dc5460d708",
+            "bom-ref": "c117b8ad-98a0-493f-96e2-b55a67aa39f8",
+            "type": "application",
+            "name": "server/requirements.txt",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
+                },
+                {
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "pip"
+                }
+            ]
+        },
+        {
+            "bom-ref": "fd8b9006-59fd-4298-860c-89ccf3cbf220",
             "type": "library",
             "group": "@secretlint",
             "name": "secretlint-rule-preset-recommend",
@@ -107,21 +122,6 @@
                 {
                     "name": "aquasecurity:trivy:PkgType",
                     "value": "npm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "e41eed3b-94d9-4d32-b238-e287044d1578",
-            "type": "application",
-            "name": "pnpm-lock.yaml",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:Class",
-                    "value": "lang-pkgs"
-                },
-                {
-                    "name": "aquasecurity:trivy:Type",
-                    "value": "pnpm"
                 }
             ]
         },
@@ -190,6 +190,32 @@
             ]
         },
         {
+            "bom-ref": "pkg:pypi/pydantic-settings@2.7.1",
+            "type": "library",
+            "name": "pydantic-settings",
+            "version": "2.7.1",
+            "purl": "pkg:pypi/pydantic-settings@2.7.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pip"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:pypi/python-dotenv@1.0.1",
+            "type": "library",
+            "name": "python-dotenv",
+            "version": "1.0.1",
+            "purl": "pkg:pypi/python-dotenv@1.0.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pip"
+                }
+            ]
+        },
+        {
             "bom-ref": "pkg:pypi/uvicorn@0.34.0",
             "type": "library",
             "name": "uvicorn",
@@ -205,47 +231,49 @@
     ],
     "dependencies": [
         {
-            "ref": "00b4153a-7f1c-478d-8d72-7607d5d17d68",
+            "ref": "0bc5f71d-95fd-4736-ad2b-f611276a3760",
             "dependsOn": [
-                "dc316728-cb6a-42e9-8869-24dc5460d708"
+                "fd8b9006-59fd-4298-860c-89ccf3cbf220"
             ]
         },
         {
-            "ref": "5a63bbe1-91eb-4a07-815e-4ee7efd15074",
+            "ref": "205eebdc-a4d5-4c1a-af6e-af18397697d3",
+            "dependsOn": [
+                "4d255273-daa5-4978-ad02-91f44066da12"
+            ]
+        },
+        {
+            "ref": "4d255273-daa5-4978-ad02-91f44066da12",
             "dependsOn": []
         },
         {
-            "ref": "6623a633-6fba-4071-9345-8c35dc5ce8e4",
-            "dependsOn": [
-                "pkg:pypi/fastapi@0.115.6",
-                "pkg:pypi/uvicorn@0.34.0"
-            ]
-        },
-        {
-            "ref": "764925af-1aaf-48c9-8577-d9b48f8b52c1",
-            "dependsOn": [
-                "00b4153a-7f1c-478d-8d72-7607d5d17d68",
-                "6623a633-6fba-4071-9345-8c35dc5ce8e4",
-                "78ae538d-246a-4ad5-a403-f53350459790",
-                "e41eed3b-94d9-4d32-b238-e287044d1578"
-            ]
-        },
-        {
-            "ref": "78ae538d-246a-4ad5-a403-f53350459790",
+            "ref": "5ff2c53a-acbf-4009-8f6f-c63eb5fa7e4d",
             "dependsOn": [
                 "pkg:npm/react-dom@19.2.4",
                 "pkg:npm/react@19.2.4"
             ]
         },
         {
-            "ref": "dc316728-cb6a-42e9-8869-24dc5460d708",
-            "dependsOn": []
+            "ref": "b235c144-6be8-40fe-b7e9-0ea139759b7b",
+            "dependsOn": [
+                "0bc5f71d-95fd-4736-ad2b-f611276a3760",
+                "205eebdc-a4d5-4c1a-af6e-af18397697d3",
+                "5ff2c53a-acbf-4009-8f6f-c63eb5fa7e4d",
+                "c117b8ad-98a0-493f-96e2-b55a67aa39f8"
+            ]
         },
         {
-            "ref": "e41eed3b-94d9-4d32-b238-e287044d1578",
+            "ref": "c117b8ad-98a0-493f-96e2-b55a67aa39f8",
             "dependsOn": [
-                "5a63bbe1-91eb-4a07-815e-4ee7efd15074"
+                "pkg:pypi/fastapi@0.115.6",
+                "pkg:pypi/pydantic-settings@2.7.1",
+                "pkg:pypi/python-dotenv@1.0.1",
+                "pkg:pypi/uvicorn@0.34.0"
             ]
+        },
+        {
+            "ref": "fd8b9006-59fd-4298-860c-89ccf3cbf220",
+            "dependsOn": []
         },
         {
             "ref": "pkg:npm/react-dom@19.2.4",
@@ -264,6 +292,14 @@
         },
         {
             "ref": "pkg:pypi/fastapi@0.115.6",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:pypi/pydantic-settings@2.7.1",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:pypi/python-dotenv@1.0.1",
             "dependsOn": []
         },
         {

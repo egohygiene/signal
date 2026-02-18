@@ -19,32 +19,32 @@ Linter raw log:
                      voice. Use active voice if you                     
                      can.                                               
  128:10  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
- 129:18  suggestion  Try to avoid using 'is'.        write-good.E-Prime 
  129:18  warning     'is updated' may be passive     write-good.Passive 
                      voice. Use active voice if you                     
                      can.                                               
+ 129:18  suggestion  Try to avoid using 'is'.        write-good.E-Prime 
 
 
  core/README.md
- 24:4   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
  24:4   warning     'be defined' may be passive     write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
- 24:33  suggestion  Try to avoid using 'is'.        write-good.E-Prime 
+ 24:4   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
  24:33  warning     'is developed' may be passive   write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
+ 24:33  suggestion  Try to avoid using 'is'.        write-good.E-Prime 
 
 
  schema/README.md
- 24:4   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
  24:4   warning     'be defined' may be passive     write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
- 24:38  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
+ 24:4   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
  24:38  warning     'are identified' may be         write-good.Passive 
                     passive voice. Use active                          
                     voice if you can.                                  
+ 24:38  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
 
 
  server/README.md
