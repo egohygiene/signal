@@ -20,7 +20,8 @@ class Settings(BaseSettings):
     app_version: str = "0.1.0"
     debug: bool = False
     log_level: str = "INFO"
-    # For multiple origins, use JSON array format: ["http://localhost:5173", "http://localhost:3000"]
+    # For multiple origins, use JSON array format:
+    # ["http://localhost:5173", "http://localhost:3000"]
     cors_origins: List[str] = ["http://localhost:5173"]
 
     # Plaid API settings
@@ -163,7 +164,10 @@ async def get_plaid_transactions(request: TransactionsRequest):
         )
 
     try:
-        logger.info(f"Fetching Plaid transactions with request: {request.model_dump(exclude={'access_token'})}")
+        logger.info(
+            f"Fetching Plaid transactions with request: "
+            f"{request.model_dump(exclude={'access_token'})}"
+        )
 
         # Fetch transactions from Plaid
         result = plaid_adapter.get_transactions(
@@ -184,7 +188,10 @@ async def get_plaid_transactions(request: TransactionsRequest):
         logger.info("=" * 80)
         logger.info(f"Total transactions fetched: {len(normalized_transactions)}")
         logger.info(f"Accounts involved: {len(result.get('accounts', []))}")
-        logger.info(f"Date range: {request.start_date or 'last 30 days'} to {request.end_date or 'today'}")
+        logger.info(
+            f"Date range: {request.start_date or 'last 30 days'} to "
+            f"{request.end_date or 'today'}"
+        )
         logger.info("-" * 80)
 
         # Log individual transactions
@@ -193,12 +200,20 @@ async def get_plaid_transactions(request: TransactionsRequest):
             logger.info(f"  ID: {tx.transaction_id}")
             logger.info(f"  Date: {tx.date}")
             logger.info(f"  Name: {tx.name}")
-            logger.info(f"  Amount: ${tx.amount:.2f} {tx.iso_currency_code or 'USD'}")
-            logger.info(f"  Category: {', '.join(tx.category) if tx.category else 'Uncategorized'}")
+            logger.info(
+                f"  Amount: ${tx.amount:.2f} {tx.iso_currency_code or 'USD'}"
+            )
+            logger.info(
+                f"  Category: "
+                f"{', '.join(tx.category) if tx.category else 'Uncategorized'}"
+            )
             logger.info(f"  Pending: {tx.pending}")
 
         if len(normalized_transactions) > 10:
-            logger.info(f"... and {len(normalized_transactions) - 10} more transactions")
+            logger.info(
+                f"... and {len(normalized_transactions) - 10} "
+                f"more transactions"
+            )
 
         logger.info("=" * 80)
 

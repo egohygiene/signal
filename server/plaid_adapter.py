@@ -43,7 +43,7 @@ class PlaidAdapter:
         Args:
             client_id: Plaid client ID
             secret: Plaid secret key
-            environment: Plaid environment (sandbox, development, production)
+            environment: Plaid environment (sandbox, production)
         """
         self.client_id = client_id
         self.secret = secret
@@ -52,7 +52,6 @@ class PlaidAdapter:
         # Map environment string to Plaid environment enum
         env_map = {
             "sandbox": plaid.Environment.Sandbox,
-            "development": plaid.Environment.Development,
             "production": plaid.Environment.Production,
         }
 
@@ -128,7 +127,9 @@ class PlaidAdapter:
             response = self.client.transactions_get(request)
 
             logger.info(
-                f"Successfully fetched {len(response['transactions'])} transactions"
+                f"Successfully fetched "
+                f"{len(response['transactions'])} "
+                f"transactions"
             )
 
             return {
@@ -161,7 +162,11 @@ class PlaidAdapter:
         if isinstance(transaction, dict):
             tx = transaction
         else:
-            tx = transaction.to_dict() if hasattr(transaction, "to_dict") else transaction
+            tx = (
+                transaction.to_dict()
+                if hasattr(transaction, "to_dict")
+                else transaction
+            )
 
         return NormalizedTransaction(
             transaction_id=tx.get("transaction_id", ""),

@@ -5,7 +5,7 @@ A Python adapter for integrating with the Plaid API to fetch and normalize finan
 ## Features
 
 - Initialize Plaid client using environment variables
-- Support for sandbox, development, and production environments
+- Support for sandbox and production environments
 - Fetch transactions for connected accounts
 - Normalize transaction data to a consistent structure
 - Comprehensive error handling and logging
