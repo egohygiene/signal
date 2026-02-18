@@ -34,6 +34,9 @@ dev-output/
 # Node.js / Dashboard App
 node_modules/
 
+# Frontend build output
+ui/dist/
+
 # MegaLinter - don't commit the full reports directory (uploaded as artifacts)
 megalinter-reports/
 reports/megalinter/
