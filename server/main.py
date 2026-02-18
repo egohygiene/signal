@@ -2,6 +2,7 @@
 
 import logging
 import sys
+from contextlib import asynccontextmanager
 from typing import List
 
 from fastapi import FastAPI
@@ -16,6 +17,7 @@ class Settings(BaseSettings):
     app_version: str = "0.1.0"
     debug: bool = False
     log_level: str = "INFO"
+    # For multiple origins, use JSON array format: ["http://localhost:5173", "http://localhost:3000"]
     cors_origins: List[str] = ["http://localhost:5173"]
 
     model_config = SettingsConfigDict(
@@ -41,12 +43,26 @@ settings = Settings()
 setup_logging(settings.log_level)
 logger = logging.getLogger(__name__)
 
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Manage application lifespan events."""
+    # Startup
+    logger.info(f"Starting {settings.app_name} v{settings.app_version}")
+    logger.info(f"Debug mode: {settings.debug}")
+    logger.info(f"CORS origins: {settings.cors_origins}")
+    yield
+    # Shutdown
+    logger.info("Shutting down application")
+
+
 # Create FastAPI app
 app = FastAPI(
     title=settings.app_name,
     description="Backend API for Signal application",
     version=settings.app_version,
     debug=settings.debug,
+    lifespan=lifespan,
 )
 
 # Configure CORS
@@ -57,14 +73,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
-@app.on_event("startup")
-async def startup_event():
-    """Log startup information."""
-    logger.info(f"Starting {settings.app_name} v{settings.app_version}")
-    logger.info(f"Debug mode: {settings.debug}")
-    logger.info(f"CORS origins: {settings.cors_origins}")
 
 
 @app.get("/")
