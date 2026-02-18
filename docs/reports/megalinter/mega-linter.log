@@ -12,7 +12,7 @@ The MegaLinter documentation can be found at:
 MegaLinter will analyze workspace [/github/workspace]
 GITHUB_REPOSITORY: egohygiene/signal
 GITHUB_REF: refs/heads/main
-GITHUB_RUN_ID: 22027326309
+GITHUB_RUN_ID: 22126297061
 
 
 [Pre] run: [echo "Calling pre-commands from $(pwd)"] in cwd [/github/workspace]
@@ -91,11 +91,19 @@ Listing all files in directory [/github/workspace], then filter with:
 )
 
 - Excluding .gitignored files [1]: reports/megalinter/mega-linter.log
-Kept [166] files on [166] found files
+Kept [189] files on [189] found files
 
 +----MATCHING LINTERS-----------------------+------------------------------------------------------------------------+----------------+------------+
 | Descriptor     | Linter                   | Criteria                                                               | Matching files | Format/Fix |
 +----------------+--------------------------+------------------------------------------------------------------------+----------------+------------+
+| PYTHON         | pylint                   | .py                                                                    | 1              | no         |
+| PYTHON         | flake8                   | .py                                                                    | 1              | no         |
+| PYTHON         | isort                    | .py                                                                    | 1              | no         |
+| PYTHON         | bandit                   | .py                                                                    | 1              | no         |
+| PYTHON         | mypy                     | .py                                                                    | 1              | no         |
+| PYTHON         | pyright                  | .py                                                                    | 1              | no         |
+| PYTHON         | ruff                     | .py                                                                    | 1              | no         |
+| PYTHON         | ruff-format              | .py                                                                    | 1              | no         |
 | ACTION         | actionlint               | .yml|.yaml                                                             | 2              | no         |
 | ANSIBLE        | ansible-lint             | .yml|.yaml                                                             | project        | no         |
 | BASH           | bash-exec                | |.sh|.bash|.dash|.ksh                                                  | 1              | no         |
@@ -105,16 +113,19 @@ Kept [166] files on [166] found files
 | CLOJURE        | cljstyle                 | .clj|.cljs|.cljc|.edn                                                  | 1              | no         |
 | CLOUDFORMATION | cfn-lint                 | .yml|.yaml|.json                                                       | 1              | no         |
 | COPYPASTE      | jscpd                    |                                                                        | project        | no         |
-| EDITORCONFIG   | editorconfig-checker     | *                                                                      | 166            | no         |
-| HTML           | djlint                   | .html|.htm                                                             | 1              | no         |
-| HTML           | htmlhint                 | .html|.htm                                                             | 1              | no         |
-| JSON           | jsonlint                 | .json                                                                  | 25             | no         |
-| JSON           | v8r                      | .json                                                                  | 25             | no         |
-| JSON           | prettier                 | .json                                                                  | 25             | no         |
+| CSS            | stylelint                | .css|.scss|.saas                                                       | 2              | no         |
+| EDITORCONFIG   | editorconfig-checker     | *                                                                      | 189            | no         |
+| HTML           | djlint                   | .html|.htm                                                             | 2              | no         |
+| HTML           | htmlhint                 | .html|.htm                                                             | 2              | no         |
+| JAVASCRIPT     | eslint                   | .js|.vue                                                               | 1              | no         |
+| JAVASCRIPT     | prettier                 | .js                                                                    | 1              | no         |
+| JSON           | jsonlint                 | .json                                                                  | 30             | no         |
+| JSON           | v8r                      | .json                                                                  | 30             | no         |
+| JSON           | prettier                 | .json                                                                  | 30             | no         |
 | JSON           | npm-package-json-lint    | .json|package\.json                                                    | project        | no         |
-| MARKDOWN       | markdownlint             | .md                                                                    | 2              | no         |
-| MARKDOWN       | markdown-link-check      | .md                                                                    | 2              | no         |
-| MARKDOWN       | markdown-table-formatter | .md                                                                    | 2              | no         |
+| MARKDOWN       | markdownlint             | .md                                                                    | 7              | no         |
+| MARKDOWN       | markdown-link-check      | .md                                                                    | 7              | no         |
+| MARKDOWN       | markdown-table-formatter | .md                                                                    | 7              | no         |
 | POWERSHELL     | powershell               | .ps1|.psm1|.psd1|.ps1xml|.pssc|.psrc|.cdxml                            | 3              | no         |
 | POWERSHELL     | powershell_formatter     | .ps1|.psm1|.psd1|.ps1xml|.pssc|.psrc|.cdxml                            | 3              | no         |
 | REPOSITORY     | checkov                  |                                                                        | project        | no         |
@@ -133,16 +144,116 @@ Kept [166] files on [166] found files
 | SALESFORCE     | sfdx-scanner-aura        |                                                                        | project        | no         |
 | SALESFORCE     | sfdx-scanner-lwc         |                                                                        | project        | no         |
 | SALESFORCE     | lightning-flow-scanner   |                                                                        | project        | no         |
-| SPELL          | cspell                   |                                                                        | 166            | no         |
-| SPELL          | proselint                | .md|.txt                                                               | 2              | no         |
-| SPELL          | vale                     | .md|.rst                                                               | 2              | no         |
-| SPELL          | lychee                   | .md|.mdx|.markdown|.html|.htm|.rst|.txt|.json|.jsonc|.json5|.yaml|.yml | 96             | no         |
+| SPELL          | cspell                   |                                                                        | 189            | no         |
+| SPELL          | proselint                | .md|.txt                                                               | 8              | no         |
+| SPELL          | vale                     | .md|.rst                                                               | 7              | no         |
+| SPELL          | lychee                   | .md|.mdx|.markdown|.html|.htm|.rst|.txt|.json|.jsonc|.json5|.yaml|.yml | 108            | no         |
 | TERRAFORM      | terragrunt               | .hcl                                                                   | 1              | no         |
+| TSX            | eslint                   | .tsx                                                                   | 2              | no         |
+| TYPESCRIPT     | eslint                   | .ts                                                                    | 1              | no         |
+| TYPESCRIPT     | ts-standard              | .ts                                                                    | 1              | no         |
+| TYPESCRIPT     | prettier                 | .ts                                                                    | 1              | no         |
 | XML            | xmllint                  | .xml|.xsd                                                              | 5              | no         |
 | YAML           | prettier                 | .yml|.yaml                                                             | 68             | no         |
 | YAML           | yamllint                 | .yml|.yaml                                                             | 68             | no         |
 | YAML           | v8r                      | .yml|.yaml                                                             | 68             | no         |
 +----------------+--------------------------+------------------------------------------------------------------------+----------------+------------+
+::endgroup::
+::group::[31m❌ Linted [PYTHON] files with [pylint]: Found 2 error(s) and 0 warning(s) - (1.21s)[0m (expand for details)
+- Using [pylint v3.3.7] https://megalinter.io/8.8.0/descriptors/python_pylint
+- MegaLinter key: [PYTHON_PYLINT]
+- Rules config: [/github/workspace/config/.pylintrc]
+- Number of files analyzed: [1]
+- Command: [pylint --rcfile /github/workspace/config/.pylintrc server/main.py]
+--Error detail:
+************* Module main
+server/main.py:3:0: E0401: Unable to import 'fastapi' (import-error)
+server/main.py:4:0: E0401: Unable to import 'fastapi.middleware.cors' (import-error)
+
+::endgroup::
+::group::[32m✅ Linted [PYTHON] files with [flake8] successfully - (0.31s)[0m (expand for details)
+- Using [flake8 v7.2.0] https://megalinter.io/8.8.0/descriptors/python_flake8
+- MegaLinter key: [PYTHON_FLAKE8]
+- Rules config: [/github/workspace/config/.flake8]
+- Number of files analyzed: [1]
+- Command: [flake8 --config /github/workspace/config/.flake8 server/main.py]
+::endgroup::
+::group::[32m✅ Linted [PYTHON] files with [isort] successfully - (0.14s)[0m (expand for details)
+- Using [isort v6.0.1] https://megalinter.io/8.8.0/descriptors/python_isort
+- MegaLinter key: [PYTHON_ISORT]
+- Rules config: identified by [isort]
+- Number of files analyzed: [1]
+- Command: [isort --diff --check --profile black server/main.py]
+::endgroup::
+::group::[32m✅ Linted [PYTHON] files with [bandit] successfully - (0.66s)[0m (expand for details)
+- Using [bandit v1.8.3] https://megalinter.io/8.8.0/descriptors/python_bandit
+- MegaLinter key: [PYTHON_BANDIT]
+- Rules config: [/github/workspace/config/.bandit.yml]
+- Number of files analyzed: [1]
+- Command: [bandit --quiet -c /github/workspace/config/.bandit.yml server/main.py]
+::endgroup::
+::group::[31m❌ Linted [PYTHON] files with [mypy]: Found 4 error(s) and 0 warning(s) - (1.63s)[0m (expand for details)
+- Using [mypy v1.16.0] https://megalinter.io/8.8.0/descriptors/python_mypy
+- MegaLinter key: [PYTHON_MYPY]
+- Rules config: [/github/workspace/config/.mypy.ini]
+- Number of files analyzed: [1]
+- Command: [mypy --install-types --non-interactive --config-file /github/workspace/config/.mypy.ini server/main.py]
+--Error detail:
+server/main.py:3:1: error: Cannot find implementation or library stub for
+module named "fastapi"  [import-not-found]
+    from fastapi import FastAPI
+    ^
+server/main.py:4:1: error: Cannot find implementation or library stub for
+module named "fastapi.middleware.cors"  [import-not-found]
+    from fastapi.middleware.cors import CORSMiddleware
+    ^
+server/main.py:4:1: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+server/main.py:23:1: error: Function is missing a return type annotation 
+[no-untyped-def]
+    async def root():
+    ^
+server/main.py:29:1: error: Function is missing a return type annotation 
+[no-untyped-def]
+    async def health_check():
+    ^
+Found 4 errors in 1 file (checked 1 source file)
+
+::endgroup::
+::group::[31m❌ Linted [PYTHON] files with [pyright]: Found 10 error(s) and 0 warning(s) - (0.71s)[0m (expand for details)
+- Using [pyright v1.1.402] https://megalinter.io/8.8.0/descriptors/python_pyright
+- MegaLinter key: [PYTHON_PYRIGHT]
+- Rules config: [/github/workspace/config/pyrightconfig.json]
+- Number of files analyzed: [1]
+- Command: [pyright -p /github/workspace/config/pyrightconfig.json server/main.py]
+--Error detail:
+venv .venv subdirectory not found in venv path /github/workspace/config.
+/github/workspace/server/main.py
+  /github/workspace/server/main.py:3:6 - error: Import "fastapi" could not be resolved (reportMissingImports)
+  /github/workspace/server/main.py:3:21 - error: Type of "FastAPI" is unknown (reportUnknownVariableType)
+  /github/workspace/server/main.py:4:6 - error: Import "fastapi.middleware.cors" could not be resolved (reportMissingImports)
+  /github/workspace/server/main.py:4:37 - error: Type of "CORSMiddleware" is unknown (reportUnknownVariableType)
+  /github/workspace/server/main.py:6:1 - error: Type of "app" is unknown (reportUnknownVariableType)
+  /github/workspace/server/main.py:13:1 - error: Type of "add_middleware" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:22:2 - error: Type of "get" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:22:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
+  /github/workspace/server/main.py:28:2 - error: Type of "get" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:28:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
+10 errors, 0 warnings, 0 informations 
+
+::endgroup::
+::group::[32m✅ Linted [PYTHON] files with [ruff] successfully - (0.01s)[0m (expand for details)
+- Using [ruff v0.11.13] https://megalinter.io/8.8.0/descriptors/python_ruff
+- MegaLinter key: [PYTHON_RUFF]
+- Rules config: identified by [ruff]
+- Number of files analyzed: [1]
+- Command: [ruff check server/main.py]
+::endgroup::
+::group::[32m✅ Linted [PYTHON] files with [ruff-format] successfully - (0.01s)[0m (expand for details)
+- Using [ruff-format v0.11.13] https://megalinter.io/8.8.0/descriptors/python_ruff_format
+- MegaLinter key: [PYTHON_RUFF_FORMAT]
+- Rules config: [.ruff.toml]
+- Number of files analyzed: [1]
+- Command: [ruff format --check --config /action/lib/.automation/.ruff.toml server/main.py]
 ::endgroup::
 ::group::[31m❌ Linted [ACTION] files with [actionlint]: Found 13 error(s) and 0 warning(s) - (0.06s)[0m (expand for details)
 - Using [actionlint v1.7.7] https://megalinter.io/8.8.0/descriptors/action_actionlint
@@ -205,7 +316,7 @@ Kept [166] files on [166] found files
    |         ^~~~
 
 ::endgroup::
-::group::[32m✅ Linted [ANSIBLE] files with [ansible-lint] successfully - (6.84s)[0m (expand for details)
+::group::[32m✅ Linted [ANSIBLE] files with [ansible-lint] successfully - (5.58s)[0m (expand for details)
 - Using [ansible-lint v25.5.0] https://megalinter.io/8.8.0/descriptors/ansible_ansible_lint
 - MegaLinter key: [ANSIBLE_ANSIBLE_LINT]
 - Rules config: [/github/workspace/config/.ansible-lint]
@@ -218,7 +329,7 @@ Kept [166] files on [166] found files
 - Number of files analyzed: [1]
 - Command: [bash-exec scripts/megalinter.sh]
 ::endgroup::
-::group::[32m✅ Linted [BASH] files with [shellcheck] successfully - (0.06s)[0m (expand for details)
+::group::[32m✅ Linted [BASH] files with [shellcheck] successfully - (0.05s)[0m (expand for details)
 - Using [shellcheck v0.10.0] https://megalinter.io/8.8.0/descriptors/bash_shellcheck
 - MegaLinter key: [BASH_SHELLCHECK]
 - Rules config: identified by [shellcheck]
@@ -270,7 +381,7 @@ config/.clj-kondo/config.edn:12:3: warning: Unexpected linter name: :keyword-nam
 config/.clj-kondo/config.edn:13:3: warning: Unexpected linter name: :fn-arity
 config/.clj-kondo/config.edn:16:3: warning: Unexpected linter name: :wrong-arity
 config/.clj-kondo/config.edn:17:3: warning: Unexpected linter name: :macroexpand
-linting took 4ms, errors: 0, warnings: 4
+linting took 3ms, errors: 0, warnings: 4
 [0m
 ::endgroup::
 ::group::[32m✅ Linted [CLOJURE] files with [cljstyle] successfully - (0.01s)[0m (expand for details)
@@ -280,7 +391,7 @@ linting took 4ms, errors: 0, warnings: 4
 - Number of files analyzed: [1]
 - Command: [cljstyle check config/.clj-kondo/config.edn]
 ::endgroup::
-::group::[31m❌ Linted [CLOUDFORMATION] files with [cfn-lint]: Found 1 error(s) and 0 warning(s) - (5.67s)[0m (expand for details)
+::group::[31m❌ Linted [CLOUDFORMATION] files with [cfn-lint]: Found 1 error(s) and 0 warning(s) - (5.21s)[0m (expand for details)
 - Using [cfn-lint v1.36.0] https://megalinter.io/8.8.0/descriptors/cloudformation_cfn_lint
 - MegaLinter key: [CLOUDFORMATION_CFN_LINT]
 - Rules config: identified by [cfn-lint]
@@ -313,31 +424,52 @@ config/.cfnlintrc.yml:32:1
 
 
 ::endgroup::
-::group::[32m✅ Linted [COPYPASTE] files with [jscpd] successfully - (1.04s)[0m (expand for details)
+::group::[32m✅ Linted [COPYPASTE] files with [jscpd] successfully - (0.96s)[0m (expand for details)
 - Using [jscpd v4.0.5] https://megalinter.io/8.8.0/descriptors/copypaste_jscpd
 - MegaLinter key: [COPYPASTE_JSCPD]
 - Rules config: [/github/workspace/config/.jscpd.json]
 - Command: [jscpd --gitignore --reporters console,html --output reports/megalinter/copy-paste/ -c /github/workspace/config/.jscpd.json .]
 ::endgroup::
-::group::[31m❌ Linted [EDITORCONFIG] files with [editorconfig-checker]: Found 1 error(s) and 0 warning(s) - (0.01s)[0m (expand for details)
+Unable to get number of errors with regex_number and ([0-9]+) errors
+::group::[31m❌ Linted [CSS] files with [stylelint]: Found 1 error(s) and 0 warning(s) - (0.44s)[0m (expand for details)
+- Using [stylelint v16.20.0] https://megalinter.io/8.8.0/descriptors/css_stylelint
+- MegaLinter key: [CSS_STYLELINT]
+- Rules config: [/github/workspace/config/.stylelintrc.json]
+- Number of files analyzed: [2]
+- Command: [stylelint --config /github/workspace/config/.stylelintrc.json ui/src/App.css ui/src/index.css]
+--Error detail:
+ConfigurationError: Could not find "stylelint-config-prettier". Do you need to install the package or use the "configBasedir" option?
+    at getModulePath (file:///node-deps/node_modules/stylelint/lib/utils/getModulePath.mjs:29:9)
+    at loadExtendedConfig (file:///node-deps/node_modules/stylelint/lib/augmentConfig.mjs:225:21)
+    at extendConfig (file:///node-deps/node_modules/stylelint/lib/augmentConfig.mjs:193:25)
+    at async augmentConfigBasic (file:///node-deps/node_modules/stylelint/lib/augmentConfig.mjs:58:20)
+    at async augmentConfigFull (file:///node-deps/node_modules/stylelint/lib/augmentConfig.mjs:112:24)
+    at async load (/node-deps/node_modules/cosmiconfig/dist/Explorer.js:20:20)
+    at async Explorer.load (/node-deps/node_modules/cosmiconfig/dist/Explorer.js:23:20)
+    at async getConfigForFile (file:///node-deps/node_modules/stylelint/lib/getConfigForFile.mjs:58:5)
+    at async isPathIgnored (file:///node-deps/node_modules/stylelint/lib/isPathIgnored.mjs:23:17)
+    at async lintSource (file:///node-deps/node_modules/stylelint/lib/lintSource.mjs:43:20)
+
+::endgroup::
+::group::[31m❌ Linted [EDITORCONFIG] files with [editorconfig-checker]: Found 1 error(s) and 0 warning(s) - (0.0s)[0m (expand for details)
 - Using [editorconfig-checker v3.3.0] https://megalinter.io/8.8.0/descriptors/editorconfig_editorconfig_checker
 - MegaLinter key: [EDITORCONFIG_EDITORCONFIG_CHECKER]
 - Rules config: [/github/workspace/config/.editorconfig-checker.json]
-- Number of files analyzed: [166]
+- Number of files analyzed: [189]
 - Command: [editorconfig-checker -config /github/workspace/config/.editorconfig-checker.json .ansible/.lock .codespellrc .dockerignore .editorconfig .github/linters/.gitkeep .github/workflows/megalinter.yml .github/workflows/pages.yml .gitignore .megalinter.yml ...(truncated)]
 --Error detail:
 [31;1mjson: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks[33;0m
 
 ::endgroup::
-::group::[31m❌ Linted [HTML] files with [djlint]: Found 3 error(s) and 0 warning(s) - (0.59s)[0m (expand for details)
+::group::[31m❌ Linted [HTML] files with [djlint]: Found 5 error(s) and 0 warning(s) - (0.53s)[0m (expand for details)
 - Using [djlint v1.36.4] https://megalinter.io/8.8.0/descriptors/html_djlint
 - MegaLinter key: [HTML_DJLINT]
 - Rules config: identified by [djlint]
-- Number of files analyzed: [1]
-- Command: [djlint docs/index.html]
+- Number of files analyzed: [2]
+- Command: [djlint docs/index.html ui/index.html]
 --Error detail:
 
-Linting 0/1 files ┈┈┈┈┈┈┈┈┈┈ 00:00                                          Linting 1/1 files ━━━━━━━━━━ 00:00    Linting 1/1 files ━━━━━━━━━━ 00:00    
+Linting 0/2 files ┈┈┈┈┈┈┈┈┈┈ 00:00                                          Linting 2/2 files ━━━━━━━━━━ 00:00    Linting 2/2 files ━━━━━━━━━━ 00:00    
 
 
 docs/index.html
@@ -346,22 +478,73 @@ H005 2:0 Html tag should have lang attribute. <html> <head>
 H030 2:0 Consider adding a meta description. <html> <head> 
 H031 2:0 Consider adding meta keywords. <html> <head> 
 
-Linted 1 file, found 3 errors.
+ui/index.html
+───────────────────────────────────────────────────────────────────────────────
+H030 2:0 Consider adding a meta description. <html lang="en"> <
+H031 2:0 Consider adding meta keywords. <html lang="en"> <
+
+Linted 2 files, found 5 errors.
 
 
 ::endgroup::
-::group::[32m✅ Linted [HTML] files with [htmlhint] successfully - (0.19s)[0m (expand for details)
+::group::[32m✅ Linted [HTML] files with [htmlhint] successfully - (0.17s)[0m (expand for details)
 - Using [htmlhint v1.5.1] https://megalinter.io/8.8.0/descriptors/html_htmlhint
 - MegaLinter key: [HTML_HTMLHINT]
 - Rules config: [/github/workspace/config/.htmlhintrc]
-- Number of files analyzed: [1]
-- Command: [htmlhint --config /github/workspace/config/.htmlhintrc docs/index.html]
+- Number of files analyzed: [2]
+- Command: [htmlhint --config /github/workspace/config/.htmlhintrc docs/index.html ui/index.html]
 ::endgroup::
-::group::[31m❌ Linted [JSON] files with [jsonlint]: Found 1 error(s) and 0 warning(s) - (0.15s)[0m (expand for details)
+Unable to get number of errors with regex_sum and ✖ ([0-9]+) problem
+::group::[31m❌ Linted [JAVASCRIPT] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.3s)[0m (expand for details)
+- Using [eslint v8.57.1] https://megalinter.io/8.8.0/descriptors/javascript_eslint
+- MegaLinter key: [JAVASCRIPT_ES]
+- Rules config: [/github/workspace/config/.eslint.config.mjs]
+- Number of files analyzed: [1]
+- Command: [eslint --no-ignore -c /github/workspace/config/.eslint.config.mjs --no-eslintrc ui/eslint.config.js]
+--Error detail:
+
+Oops! Something went wrong! :(
+
+ESLint: 8.57.1
+
+YAMLException: Cannot read config file: /github/workspace/config/.eslint.config.mjs
+Error: end of the stream or a document separator is expected (25:14)
+
+ 22 |     js.configs.recommended,
+ 23 | 
+ 24 |     {
+ 25 |         files: ["**/*.{ts,tsx}"],
+-------------------^
+ 26 |         languageOptions: {
+ 27 |             parser: tsparser,
+    at generateError (/node-deps/node_modules/js-yaml/lib/loader.js:183:10)
+    at throwError (/node-deps/node_modules/js-yaml/lib/loader.js:187:9)
+    at readDocument (/node-deps/node_modules/js-yaml/lib/loader.js:1645:5)
+    at loadDocuments (/node-deps/node_modules/js-yaml/lib/loader.js:1688:5)
+    at Object.load (/node-deps/node_modules/js-yaml/lib/loader.js:1714:19)
+    at loadLegacyConfigFile (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2565:21)
+    at loadConfigFile (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2680:20)
+    at ConfigArrayFactory._loadConfigData (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2984:42)
+    at ConfigArrayFactory.loadFile (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2850:40)
+    at createCLIConfigArray (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:3660:35)
+
+::endgroup::
+::group::[31m❌ Linted [JAVASCRIPT] files with [prettier]: Found 1 error(s) and 0 warning(s) - (0.18s)[0m (expand for details)
+- Using [prettier v3.5.3] https://megalinter.io/8.8.0/descriptors/javascript_prettier
+- MegaLinter key: [JAVASCRIPT_PRETTIER]
+- Rules config: [/github/workspace/config/.prettier.config.mjs]
+- Number of files analyzed: [1]
+- Command: [prettier --check --config /github/workspace/config/.prettier.config.mjs ui/eslint.config.js]
+--Error detail:
+Checking formatting...
+[error] Cannot find package 'prettier-plugin-sh' imported from /github/workspace/noop.js
+
+::endgroup::
+::group::[31m❌ Linted [JSON] files with [jsonlint]: Found 1 error(s) and 0 warning(s) - (0.11s)[0m (expand for details)
 - Using [jsonlint v16.0.0] https://megalinter.io/8.8.0/descriptors/json_jsonlint
 - MegaLinter key: [JSON_JSONLINT]
 - Rules config: [/github/workspace/config/.jsonlintrc]
-- Number of files analyzed: [25]
+- Number of files analyzed: [30]
 - Command: [jsonlint --quiet --config /github/workspace/config/.jsonlintrc .vscode/extensions.json .vscode/launch.json .vscode/settings.json .vscode/tasks.json config/.coffee-lint.json config/.devskim.json config/.editorconfig-checker.json config/.eslintrc-json....(truncated)]
 --Error detail:
 File: .vscode/settings.json
@@ -371,11 +554,11 @@ Parse error on line 80, column 5:
 Trailing comma in object
 
 ::endgroup::
-::group::[31m❌ Linted [JSON] files with [v8r]: Found 1 error(s) and 0 warning(s) - (9.73s)[0m (expand for details)
+::group::[31m❌ Linted [JSON] files with [v8r]: Found 1 error(s) and 0 warning(s) - (9.92s)[0m (expand for details)
 - Using [v8r v5.0.0] https://megalinter.io/8.8.0/descriptors/json_v8r
 - MegaLinter key: [JSON_V8R]
 - Rules config: identified by [v8r]
-- Number of files analyzed: [25]
+- Number of files analyzed: [30]
 - Command: [v8r --ignore-errors .vscode/extensions.json .vscode/launch.json .vscode/settings.json .vscode/tasks.json config/.coffee-lint.json config/.devskim.json config/.editorconfig-checker.json config/.eslintrc-json.json config/.flow-scanner.json config/.groo...(truncated)]
 --Error detail:
 ℹ No config file found
@@ -505,20 +688,37 @@ config/.groovylintrc.json#/rules must NOT have additional properties, found addi
 ℹ Validating package.json against schema from https://www.schemastore.org/package.json ...
 ✔ package.json is valid
 
+ℹ Processing ui/package-lock.json
+✖ Could not find a schema to validate ui/package-lock.json
+
+ℹ Processing ui/package.json
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating ui/package.json against schema from https://www.schemastore.org/package.json ...
+✔ ui/package.json is valid
+
+ℹ Processing ui/tsconfig.app.json
+✖ Could not find a schema to validate ui/tsconfig.app.json
+
+ℹ Processing ui/tsconfig.json
+✖ Could not find a schema to validate ui/tsconfig.json
+
+ℹ Processing ui/tsconfig.node.json
+✖ Could not find a schema to validate ui/tsconfig.node.json
+
 
 ::endgroup::
-::group::[31m❌ Linted [JSON] files with [prettier]: Found 1 error(s) and 0 warning(s) - (0.22s)[0m (expand for details)
+::group::[31m❌ Linted [JSON] files with [prettier]: Found 1 error(s) and 0 warning(s) - (0.16s)[0m (expand for details)
 - Using [prettier v3.5.3] https://megalinter.io/8.8.0/descriptors/json_prettier
 - MegaLinter key: [JSON_PRETTIER]
 - Rules config: [/github/workspace/config/.prettier.config.mjs]
-- Number of files analyzed: [25]
+- Number of files analyzed: [30]
 - Command: [prettier --check --config /github/workspace/config/.prettier.config.mjs .vscode/extensions.json .vscode/launch.json .vscode/settings.json .vscode/tasks.json config/.coffee-lint.json config/.devskim.json config/.editorconfig-checker.json config/.eslin...(truncated)]
 --Error detail:
 Checking formatting...
 [error] Cannot find package 'prettier-plugin-sh' imported from /github/workspace/noop.js
 
 ::endgroup::
-::group::[31m❌ Linted [JSON] files with [npm-package-json-lint]: Found 1 error(s) and 0 warning(s) - (0.29s)[0m (expand for details)
+::group::[31m❌ Linted [JSON] files with [npm-package-json-lint]: Found 1 error(s) and 0 warning(s) - (0.24s)[0m (expand for details)
 - Using [npm-package-json-lint v8.0.0] https://megalinter.io/8.8.0/descriptors/json_npm_package_json_lint
 - MegaLinter key: [JSON_NPM_PACKAGE_JSON_LINT]
 - Rules config: [/github/workspace/config/.npmpackagejsonlintrc.json]
@@ -531,31 +731,47 @@ cli:
 
 
 ::endgroup::
-::group::[32m✅ Linted [MARKDOWN] files with [markdownlint] successfully - (0.33s)[0m (expand for details)
+::group::[31m❌ Linted [MARKDOWN] files with [markdownlint]: Found 14 error(s) and 0 warning(s) - (0.33s)[0m (expand for details)
 - Using [markdownlint v0.45.0] https://megalinter.io/8.8.0/descriptors/markdown_markdownlint
 - MegaLinter key: [MARKDOWN_MARKDOWNLINT]
 - Rules config: [/github/workspace/config/.markdownlint.json]
-- Number of files analyzed: [2]
-- Command: [markdownlint -c /github/workspace/config/.markdownlint.json config/styles/proselint/README.md config/styles/write-good/README.md]
+- Number of files analyzed: [7]
+- Command: [markdownlint -c /github/workspace/config/.markdownlint.json README.md config/styles/proselint/README.md config/styles/write-good/README.md core/README.md schema/README.md server/README.md ui/README.md]
+--Error detail:
+core/README.md:15 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+README.md:7 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+README.md:60:8 MD034/no-bare-urls Bare URL used [Context: "http://localhost:8000"]
+README.md:61:22 MD034/no-bare-urls Bare URL used [Context: "http://localhost:8000/docs"]
+README.md:62:17 MD034/no-bare-urls Bare URL used [Context: "http://localhost:8000/health"]
+README.md:81:38 MD034/no-bare-urls Bare URL used [Context: "http://localhost:5173"]
+schema/README.md:15 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+server/README.md:25:8 MD034/no-bare-urls Bare URL used [Context: "http://localhost:8000"]
+server/README.md:26:22 MD034/no-bare-urls Bare URL used [Context: "http://localhost:8000/docs"]
+server/README.md:27:17 MD034/no-bare-urls Bare URL used [Context: "http://localhost:8000/health"]
+ui/README.md:7:121 MD013/line-length Line length [Expected: 120; Actual: 241]
+ui/README.md:8:121 MD013/line-length Line length [Expected: 120; Actual: 154]
+ui/README.md:12:121 MD013/line-length Line length [Expected: 120; Actual: 191]
+ui/README.md:46:121 MD013/line-length Line length [Expected: 120; Actual: 285]
+
 ::endgroup::
-::group::[32m✅ Linted [MARKDOWN] files with [markdown-link-check] successfully - (0.89s)[0m (expand for details)
+::group::[32m✅ Linted [MARKDOWN] files with [markdown-link-check] successfully - (2.75s)[0m (expand for details)
 - Using [markdown-link-check v3.12.2] https://megalinter.io/8.8.0/descriptors/markdown_markdown_link_check
 - MegaLinter key: [MARKDOWN_MARKDOWN_LINK_CHECK]
 - Rules config: [/github/workspace/config/.markdown-link-check.json]
-- Number of files analyzed: [2]
-- Command: [markdown-link-check --quiet -c /github/workspace/config/.markdown-link-check.json config/styles/proselint/README.md config/styles/write-good/README.md]
+- Number of files analyzed: [7]
+- Command: [markdown-link-check --quiet -c /github/workspace/config/.markdown-link-check.json README.md config/styles/proselint/README.md config/styles/write-good/README.md core/README.md schema/README.md server/README.md ui/README.md]
 ::endgroup::
-::group::[32m✅ Linted [MARKDOWN] files with [markdown-table-formatter] successfully - (0.16s)[0m (expand for details)
+::group::[32m✅ Linted [MARKDOWN] files with [markdown-table-formatter] successfully - (0.14s)[0m (expand for details)
 - Using [markdown-table-formatter v1.6.1] https://megalinter.io/8.8.0/descriptors/markdown_markdown_table_formatter
 - MegaLinter key: [MARKDOWN_MARKDOWN_TABLE_FORMATTER]
 - Rules config: identified by [markdown-table-formatter]
-- Number of files analyzed: [2]
-- Command: [markdown-table-formatter --check config/styles/proselint/README.md config/styles/write-good/README.md]
+- Number of files analyzed: [7]
+- Command: [markdown-table-formatter --check README.md config/styles/proselint/README.md config/styles/write-good/README.md core/README.md schema/README.md server/README.md ui/README.md]
 ::endgroup::
 Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning|Error|ParseError)\s
 Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning|Error|ParseError)\s
 Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning|Error|ParseError)\s
-::group::[31m❌ Linted [POWERSHELL] files with [powershell]: Found 3 error(s) and 0 warning(s) - (1.83s)[0m (expand for details)
+::group::[31m❌ Linted [POWERSHELL] files with [powershell]: Found 3 error(s) and 0 warning(s) - (1.54s)[0m (expand for details)
 - Using [powershell v7.5.1] https://megalinter.io/8.8.0/descriptors/powershell_powershell
 - MegaLinter key: [POWERSHELL_POWERSHELL]
 - Rules config: [/github/workspace/config/.powershell-psscriptanalyzer.psd1]
@@ -570,14 +786,14 @@ Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning
 [0m
 [31m[powershell] config/.powershell-formatter.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-ScriptAnalyzer: [31;1mrootmodule is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-ScriptAnalyzer: [31;1mpowershellversion is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 [31m[powershell] config/.powershell-psscriptanalyzer.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
 [31;1mInvoke-ScriptAnalyzer: [31;1mValue System.Collections.Generic.Dictionary`2[System.String,System.Object] for key severity has the wrong data type.[0m
 [0m
 ::endgroup::
-::group::[31m❌ Linted [POWERSHELL] files with [powershell_formatter]: Found 3 error(s) and 0 warning(s) - (1.62s)[0m (expand for details)
+::group::[31m❌ Linted [POWERSHELL] files with [powershell_formatter]: Found 3 error(s) and 0 warning(s) - (1.43s)[0m (expand for details)
 - Using [powershell_formatter v7.5.1] https://megalinter.io/8.8.0/descriptors/powershell_powershell_formatter
 - MegaLinter key: [POWERSHELL_POWERSHELL_FORMATTER]
 - Rules config: [/github/workspace/config/.powershell-formatter.psd1]
@@ -592,71 +808,73 @@ Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning
 [0m
 [31m[powershell_formatter] config/.powershell-formatter.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-Formatter: [31;1mopenbraceonsameline is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-Formatter: [31;1mmaxlinelength is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 [31m[powershell_formatter] config/.powershell-psscriptanalyzer.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-Formatter: [31;1mindentationtype is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-Formatter: [31;1mwhitespacearoundoperator is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [checkov]: Found 1 error(s) and 0 warning(s) - (20.71s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [checkov]: Found 1 error(s) and 0 warning(s) - (15.72s)[0m (expand for details)
 - Using [checkov v3.2.413] https://megalinter.io/8.8.0/descriptors/repository_checkov
 - MegaLinter key: [REPOSITORY_CHECKOV]
 - Rules config: [/github/workspace/config/.checkov.yml]
 - Command: [checkov --directory . --config-file /github/workspace/config/.checkov.yml]
 --Error detail:
-2026-02-15 01:13:40,509 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
-2026-02-15 01:13:40,546 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.16.3
-2026-02-15 01:13:40,546 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
-2026-02-15 01:13:40,547 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
-2026-02-15 01:13:40,548 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
-2026-02-15 01:13:41,176 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
-2026-02-15 01:13:41,176 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
-2026-02-15 01:13:41,176 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
-2026-02-15 01:13:41,176 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
-2026-02-15 01:13:41,184 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
-2026-02-15 01:13:41,184 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
-2026-02-15 01:13:41,187 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-02-15 01:13:41,200 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-02-15 01:13:41,201 [MainThread  ] [INFO ]  Successfully created Serverless graph
-2026-02-15 01:13:41,230 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-02-15 01:13:41,230 [MainThread  ] [INFO ]  Creating vertices
-2026-02-15 01:13:41,230 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 2 vertices
-2026-02-15 01:13:41,230 [MainThread  ] [INFO ]  Creating edges
-2026-02-15 01:13:41,230 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-02-15 01:13:41,230 [MainThread  ] [INFO ]  Rendering variables, graph has 2 vertices and 0 edges
-2026-02-15 01:13:41,239 [MainThread  ] [INFO ]  Building cross variable edges
-2026-02-15 01:13:41,239 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-02-15 01:13:41,239 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-02-15 01:13:41,239 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-02-15 01:13:41,245 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-02-15 01:13:41,246 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-02-15 01:13:41,248 [MainThread  ] [INFO ]  Creating ARM graph
-2026-02-15 01:13:41,249 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-02-15 01:13:41,257 [MainThread  ] [INFO ]  Custom detector found at /venvs/checkov/lib/python3.13/site-packages/checkov/secrets/plugins/custom_regex_detector.py. Loading...
-2026-02-15 01:13:41,309 [MainThread  ] [INFO ]  Secrets scanning will scan 61 files
-2026-02-15 01:13:41,330 [MainThread  ] [INFO ]  Creating vertices
-2026-02-15 01:13:41,330 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-02-15 01:13:41,330 [MainThread  ] [INFO ]  Creating edges
-2026-02-15 01:13:41,330 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-02-15 01:13:43,054 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-02-15 01:13:43,055 [MainThread  ] [INFO ]  Successfully created Ansible graph
-2026-02-15 01:13:43,150 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-02-15 01:13:43,159 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-02-15 01:13:43,291 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-02-15 01:13:43,292 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 vertices
-2026-02-15 01:13:43,292 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-02-15 01:13:43,292 [MainThread  ] [INFO ]  Rendering variables, graph has 0 vertices and 0 edges
-2026-02-15 01:13:43,293 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-02-15 01:13:43,425 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 1150 has a length of 19462, which is higher than the max 10000
-2026-02-15 01:13:46,873 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-02-15 01:13:46,874 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-02-15 01:13:49,181 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 26666 has a length of 23967, which is higher than the max 10000
-2026-02-15 01:13:50,940 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 35520 has a length of 18999, which is higher than the max 10000
-2026-02-15 01:13:52,277 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 42242 has a length of 10516, which is higher than the max 10000
-2026-02-15 01:13:52,500 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 43385 has a length of 16796, which is higher than the max 10000
-2026-02-15 01:13:52,517 [MainThread  ] [INFO ]  Secret scanning for ./docs/reports/megalinter/mega-linter-report.json took 0:00:10.197890 seconds
-2026-02-15 01:13:52,783 [MainThread  ] [INFO ]  Cleanup the whole temp directory: /tmp/tmpi9fy7pjd
+2026-02-18 04:19:09,696 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
+2026-02-18 04:19:09,800 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.16.3
+2026-02-18 04:19:09,800 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
+2026-02-18 04:19:09,801 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
+2026-02-18 04:19:09,801 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
+2026-02-18 04:19:10,273 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
+2026-02-18 04:19:10,273 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
+2026-02-18 04:19:10,273 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
+2026-02-18 04:19:10,273 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
+2026-02-18 04:19:10,278 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
+2026-02-18 04:19:10,279 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
+2026-02-18 04:19:10,282 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-02-18 04:19:10,293 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-02-18 04:19:10,293 [MainThread  ] [INFO ]  Successfully created Serverless graph
+2026-02-18 04:19:10,316 [MainThread  ] [INFO ]  Creating ARM graph
+2026-02-18 04:19:10,317 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-02-18 04:19:10,322 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-02-18 04:19:10,323 [MainThread  ] [INFO ]  Creating vertices
+2026-02-18 04:19:10,323 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 2 vertices
+2026-02-18 04:19:10,323 [MainThread  ] [INFO ]  Creating edges
+2026-02-18 04:19:10,323 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-02-18 04:19:10,323 [MainThread  ] [INFO ]  Rendering variables, graph has 2 vertices and 0 edges
+2026-02-18 04:19:10,326 [MainThread  ] [INFO ]  Building cross variable edges
+2026-02-18 04:19:10,326 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-02-18 04:19:10,327 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-02-18 04:19:10,327 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-02-18 04:19:10,340 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-02-18 04:19:10,340 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-02-18 04:19:10,350 [MainThread  ] [INFO ]  Custom detector found at /venvs/checkov/lib/python3.13/site-packages/checkov/secrets/plugins/custom_regex_detector.py. Loading...
+2026-02-18 04:19:10,384 [MainThread  ] [INFO ]  Secrets scanning will scan 65 files
+2026-02-18 04:19:10,446 [MainThread  ] [INFO ]  Creating vertices
+2026-02-18 04:19:10,446 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-02-18 04:19:10,446 [MainThread  ] [INFO ]  Creating edges
+2026-02-18 04:19:10,446 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-02-18 04:19:12,138 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-02-18 04:19:12,139 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-02-18 04:19:12,214 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-02-18 04:19:12,215 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 vertices
+2026-02-18 04:19:12,215 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-02-18 04:19:12,215 [MainThread  ] [INFO ]  Rendering variables, graph has 0 vertices and 0 edges
+2026-02-18 04:19:12,216 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-02-18 04:19:12,252 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 589 has a length of 19546, which is higher than the max 10000
+2026-02-18 04:19:12,282 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-02-18 04:19:12,291 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-02-18 04:19:14,705 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-02-18 04:19:14,705 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-02-18 04:19:16,691 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 24595 has a length of 46711, which is higher than the max 10000
+2026-02-18 04:19:17,497 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 29639 has a length of 10611, which is higher than the max 10000
+2026-02-18 04:19:17,633 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 30511 has a length of 16885, which is higher than the max 10000
+2026-02-18 04:19:17,870 [MainThread  ] [INFO ]  Cleanup the whole temp directory: /tmp/tmpoqcp6dje
+terraform_plan scan results:
+
+Passed checks: 0, Failed checks: 0, Skipped checks: 0, Parsing errors: 2
+
 secrets scan results:
 
 Passed checks: 0, Failed checks: 1, Skipped checks: 0
@@ -674,13 +892,13 @@ Passed checks: 64, Failed checks: 0, Skipped checks: 0
 
 
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [dustilock] successfully - (0.29s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [dustilock] successfully - (1.41s)[0m (expand for details)
 - Using [dustilock v1.2.0] https://megalinter.io/8.8.0/descriptors/repository_dustilock
 - MegaLinter key: [REPOSITORY_DUSTILOCK]
 - Rules config: identified by [dustilock]
 - Command: [dustilock --recursive]
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [git_diff] successfully - (0.07s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [git_diff] successfully - (0.11s)[0m (expand for details)
 - Using [git_diff v2.47.2] https://megalinter.io/8.8.0/descriptors/repository_git_diff
 - MegaLinter key: [REPOSITORY_GIT_DIFF]
 - Rules config: identified by [git_diff]
@@ -700,16 +918,16 @@ Unable to get number of errors with regex_sum and leaks found: ([0-9]+)
     ○ ░
     ░    gitleaks
 
-[90m1:13AM[0m [31mFTL[0m [1mFailed to load config[0m [36merror=[0m[31m[1m"[[allowlists]] must contain at least one check for: commits, paths, regexes, or stopwords"[0m[0m
+[90m4:19AM[0m [31mFTL[0m [1mFailed to load config[0m [36merror=[0m[31m[1m"[[allowlists]] must contain at least one check for: commits, paths, regexes, or stopwords"[0m[0m
 
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [grype] successfully - (26.65s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [grype] successfully - (32.69s)[0m (expand for details)
 - Using [grype v0.94.0] https://megalinter.io/8.8.0/descriptors/repository_grype
 - MegaLinter key: [REPOSITORY_GRYPE]
 - Rules config: [/github/workspace/config/.grype.yaml]
 - Command: [grype --config /github/workspace/config/.grype.yaml dir:.]
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [kics]: Found 1 error(s) and 0 warning(s) - (14.73s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [kics]: Found 1 error(s) and 0 warning(s) - (13.96s)[0m (expand for details)
 - Using [kics v2.1.10] https://megalinter.io/8.8.0/descriptors/repository_kics
 - MegaLinter key: [REPOSITORY_KICS]
 - Rules config: [/github/workspace/config/.kics.config.json]
@@ -768,16 +986,16 @@ TOTAL: 1
 [38;2;255;153;19mA new version 'v2.1.19' of KICS is available, please consider updating[0m
 
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [ls-lint]: Found 1 error(s) and 0 warning(s) - (0.49s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [ls-lint]: Found 1 error(s) and 0 warning(s) - (0.05s)[0m (expand for details)
 - Using [ls-lint v2.3.1] https://megalinter.io/8.8.0/descriptors/repository_ls_lint
 - MegaLinter key: [REPOSITORY_LS_LINT]
 - Rules config: [/github/workspace/config/.ls-lint.yml]
 - Command: [ls-lint --config /github/workspace/config/.ls-lint.yml]
 --Error detail:
-2026/02/15 01:14:38 rule ignore not exists
+2026/02/18 04:20:08 rule ignore not exists
 
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [secretlint]: Found 1 error(s) and 0 warning(s) - (9.14s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [secretlint]: Found 1 error(s) and 0 warning(s) - (7.83s)[0m (expand for details)
 - Using [secretlint v10.1.0] https://megalinter.io/8.8.0/descriptors/repository_secretlint
 - MegaLinter key: [REPOSITORY_SECRETLINT]
 - Rules config: [/github/workspace/config/.secretlintrc.json]
@@ -786,7 +1004,7 @@ TOTAL: 1
 [Pre][REPOSITORY_SECRETLINT] run: [cd /node-deps && npm install --no-audit --no-fund --silent @secretlint/secretlint-rule-preset-recommend @secretlint/secretlint-rule-openai @secretlint/secretlint-rule-npm @secretlint/secretlint-rule-pattern @secretlint/secretlint-rule-secp256k1-privatekey @secretlint/secretlint-rule-no-dotenv @secretlint/secretlint-rule-no-homedir @secretlint/secretlint-rule-github @secretlint/secretlint-rule-gcp @secretlint/secretlint-rule-database-connection-string @secretlint/secretlint-rule-privatekey @secretlint/secretlint-rule-aws @secretlint/secretlint-rule-basicauth
 ] in cwd [/github/workspace]
 [Pre][REPOSITORY_SECRETLINT] error:
-(node:1011) ExperimentalWarning: CommonJS module /usr/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /usr/lib/node_modules/npm/node_modules/supports-color/index.js using require().
+(node:1229) ExperimentalWarning: CommonJS module /usr/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /usr/lib/node_modules/npm/node_modules/supports-color/index.js using require().
 Support for loading ES Module in require() is an experimental feature and might change at any time
 (Use `node --trace-warnings ...` to show where the warning was created)
 
@@ -841,40 +1059,40 @@ Following config is invalid because the preset(@secretlint/secretlint-rule-prese
 'catalogers[0]' expected type 'string', got unconvertible type 'map[string]interface {}', value: 'map[enabled:[apkdb dpkgdb rpmdb python-package node-package java go-module rust-crate]]'[0m
 
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [trivy] successfully - (8.67s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [trivy] successfully - (7.77s)[0m (expand for details)
 - Using [trivy v0.63.0] https://megalinter.io/8.8.0/descriptors/repository_trivy
 - MegaLinter key: [REPOSITORY_TRIVY]
 - Rules config: [/github/workspace/config/trivy.yaml]
 - Command: [trivy fs --scanners vuln,misconfig --exit-code 1 --config /github/workspace/config/trivy.yaml .]
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [trivy-sbom] successfully - (0.27s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [trivy-sbom] successfully - (0.28s)[0m (expand for details)
 - Using [trivy-sbom v0.63.0] https://megalinter.io/8.8.0/descriptors/repository_trivy_sbom
 - MegaLinter key: [REPOSITORY_TRIVY_SBOM]
 - Rules config: [/github/workspace/config/trivy-sbom.yaml]
 - Command: [trivy fs --format cyclonedx --config /github/workspace/config/trivy-sbom.yaml .]
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [trufflehog]: Found 1 error(s) and 0 warning(s) - (2.21s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [trufflehog]: Found 1 error(s) and 0 warning(s) - (2.22s)[0m (expand for details)
 - Using [trufflehog v3.89.1] https://megalinter.io/8.8.0/descriptors/repository_trufflehog
 - MegaLinter key: [REPOSITORY_TRUFFLEHOG]
 - Rules config: [/github/workspace/config/.trufflehog.yml]
 - Command: [trufflehog filesystem . --fail --only-verified --no-update --exclude-paths=config/.trufflehogignore --config /github/workspace/config/.trufflehog.yml]
 --Error detail:
-2026-02-15T01:14:59Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"branch\""}
+2026-02-18T04:20:27Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"branch\""}
 
 ::endgroup::
-::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-apex] successfully - (21.65s)[0m (expand for details)
+::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-apex] successfully - (20.07s)[0m (expand for details)
 - Using [sfdx-scanner-apex v4.12.0] https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_apex
 - MegaLinter key: [SALESFORCE_SFDX_SCANNER_APEX]
 - Rules config: [/github/workspace/config/apex-pmd-ruleset.xml]
 - Command: [sf scanner:run --engine pmd --target "./**/*" --severity-threshold 2 --outfile reports/megalinter/sfdx-scanner-report-apex.csv --format csv --pmdconfig /github/workspace/config/apex-pmd-ruleset.xml]
 ::endgroup::
-::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-aura] successfully - (8.39s)[0m (expand for details)
+::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-aura] successfully - (6.24s)[0m (expand for details)
 - Using [sfdx-scanner-aura v4.12.0] https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_aura
 - MegaLinter key: [SALESFORCE_SFDX_SCANNER_AURA]
 - Rules config: identified by [sfdx-scanner-aura]
 - Command: [sf scanner:run --engine eslint --target **/aura/**/*.js --severity-threshold 2 --outfile reports/megalinter/sfdx-scanner-report-aura.csv --format csv]
 ::endgroup::
-::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-lwc] successfully - (8.41s)[0m (expand for details)
+::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-lwc] successfully - (6.34s)[0m (expand for details)
 - Using [sfdx-scanner-lwc v4.12.0] https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_lwc
 - MegaLinter key: [SALESFORCE_SFDX_SCANNER_LWC]
 - Rules config: identified by [sfdx-scanner-lwc]
@@ -894,7 +1112,7 @@ flow 1.0.2
 signups 2.6.28
 @salesforce/sfdx-plugin-lwc-test 1.2.1
 
-::group::[31m❌ Linted [SALESFORCE] files with [lightning-flow-scanner]: Found 1 error(s) and 0 warning(s) - (0.8s)[0m (expand for details)
+::group::[31m❌ Linted [SALESFORCE] files with [lightning-flow-scanner]: Found 1 error(s) and 0 warning(s) - (0.69s)[0m (expand for details)
 - Using [lightning-flow-scanner vERROR] https://megalinter.io/8.8.0/descriptors/salesforce_lightning_flow_scanner
 - MegaLinter key: [SALESFORCE_LIGHTNING_FLOW_SCANNER]
 - Rules config: [/github/workspace/config/.flow-scanner.json]
@@ -905,739 +1123,1060 @@ signups 2.6.28
  ›   Error: Run sf help flow for a list of available commands.
 
 ::endgroup::
-::group::[32m✅ Linted [SPELL] files with [cspell] successfully - (0.89s)[0m (expand for details)
+::group::[32m✅ Linted [SPELL] files with [cspell] successfully - (0.82s)[0m (expand for details)
 - Using [cspell v9.1.1] https://megalinter.io/8.8.0/descriptors/spell_cspell
 - MegaLinter key: [SPELL_CSPELL]
 - Rules config: [/github/workspace/config/.cspell.config.mjs]
-- Number of files analyzed: [167]
+- Number of files analyzed: [190]
 - Command: [cspell --show-context --show-suggestions --no-must-find-files --no-progress --quiet --format json --cache-location .cache/.cspellcache -c /github/workspace/config/.cspell.config.mjs .ansible/.lock .codespellrc .dockerignore .editorconfig .github/lint...(truncated)]
 ::endgroup::
-::group::[31m❌ Linted [SPELL] files with [proselint]: Found 1 error(s) and 0 warning(s) - (3.27s)[0m (expand for details)
+::group::[31m❌ Linted [SPELL] files with [proselint]: Found 4 error(s) and 0 warning(s) - (3.15s)[0m (expand for details)
 - Using [proselint v0.14.0] https://megalinter.io/8.8.0/descriptors/spell_proselint
 - MegaLinter key: [SPELL_PROSELINT]
 - Rules config: [/github/workspace/config/.proselintrc]
-- Number of files analyzed: [2]
-- Command: [proselint --config /github/workspace/config/.proselintrc config/styles/proselint/README.md config/styles/write-good/README.md]
+- Number of files analyzed: [8]
+- Command: [proselint --config /github/workspace/config/.proselintrc README.md config/styles/proselint/README.md config/styles/write-good/README.md core/README.md schema/README.md server/README.md server/requirements.txt ui/README.md]
 --Error detail:
+README.md:126:26: leonard.exclamation.30ppm More than 30 ppm of exclamations. Keep them under control.
 config/styles/write-good/README.md:8:12: typography.symbols.copyright (c) is a goofy alphabetic approximation, use the symbol ©.
+ui/README.md:24:24: typography.symbols.ellipsis '...' is an approximation, use the ellipsis symbol '…'. Found 5 times elsewhere.
+ui/README.md:33:24: typography.symbols.ellipsis '...' is an approximation, use the ellipsis symbol '…'.
 
 ::endgroup::
-::group::[32m✅ Linted [SPELL] files with [vale] successfully - (0.13s)[0m (expand for details)
+::group::[33m⚠️ Linted [SPELL] files with [vale]: Found 0 non blocking error(s) and 8 non blocking warning(s) - (0.24s)[0m (expand for details)
 - Using [vale v3.11.2] https://megalinter.io/8.8.0/descriptors/spell_vale
 - MegaLinter key: [SPELL_VALE]
 - Rules config: [/github/workspace/config/.vale.ini]
-- Number of files analyzed: [2]
-- Command: [vale --config /github/workspace/config/.vale.ini config/styles/proselint/README.md config/styles/write-good/README.md]
+- Number of files analyzed: [7]
+- Command: [vale --config /github/workspace/config/.vale.ini README.md config/styles/proselint/README.md config/styles/write-good/README.md core/README.md schema/README.md server/README.md ui/README.md]
+--Error detail:
+
+ [4mREADME.md[0m
+ 20:84   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
+ 20:84   [33mwarning[0m     'be used' may be passive        write-good.Passive 
+                     voice. Use active voice if you                     
+                     can.                                               
+ 25:40   [33mwarning[0m     'various' is a weasel word!     write-good.Weasel  
+ 59:14   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
+ 81:22   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
+ 92:22   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
+ 126:15  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
+ 128:10  [33mwarning[0m     'are included' may be passive   write-good.Passive 
+                     voice. Use active voice if you                     
+                     can.                                               
+ 128:10  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
+ 129:18  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
+ 129:18  [33mwarning[0m     'is updated' may be passive     write-good.Passive 
+                     voice. Use active voice if you                     
+                     can.                                               
+
+
+ [4mcore/README.md[0m
+ 24:4   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
+ 24:4   [33mwarning[0m     'be defined' may be passive     write-good.Passive 
+                    voice. Use active voice if you                     
+                    can.                                               
+ 24:33  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
+ 24:33  [33mwarning[0m     'is developed' may be passive   write-good.Passive 
+                    voice. Use active voice if you                     
+                    can.                                               
+
+
+ [4mschema/README.md[0m
+ 24:4   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
+ 24:4   [33mwarning[0m     'be defined' may be passive     write-good.Passive 
+                    voice. Use active voice if you                     
+                    can.                                               
+ 24:38  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
+ 24:38  [33mwarning[0m     'are identified' may be         write-good.Passive 
+                    passive voice. Use active                          
+                    voice if you can.                                  
+
+
+ [4mserver/README.md[0m
+ 24:14  [34msuggestion[0m  Try to avoid using 'be'.  write-good.E-Prime 
+
+
+ [4mui/README.md[0m
+ 5:33   [34msuggestion[0m  Try to avoid using 'are'.  write-good.E-Prime 
+ 12:20  [34msuggestion[0m  Try to avoid using 'is'.   write-good.E-Prime 
+ 16:8   [34msuggestion[0m  Try to avoid using 'are'.  write-good.E-Prime 
+
+✖ [31m0 errors[0m, [33m8 warnings[0m and [34m15 suggestions[0m in 7 files.
+
 ::endgroup::
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-::group::[31m❌ Linted [SPELL] files with [lychee]: Found 1 error(s) and 0 warning(s) - (6.74s)[0m (expand for details)
+::group::[31m❌ Linted [SPELL] files with [lychee]: Found 1 error(s) and 0 warning(s) - (9.76s)[0m (expand for details)
 - Using [lychee v0.18.0] https://megalinter.io/8.8.0/descriptors/spell_lychee
 - MegaLinter key: [SPELL_LYCHEE]
 - Rules config: [/github/workspace/config/lychee.toml]
-- Number of files analyzed: [96]
+- Number of files analyzed: [108]
 - Command: [lychee --format detailed --no-progress --exclude-path config/.lycheeignore --config /github/workspace/config/lychee.toml .github/workflows/megalinter.yml .github/workflows/pages.yml .megalinter.yml .pre-commit-config.yaml .releaserc.yml .vscode/exten...(truncated)]
 --Error detail:
-[200] https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/pyproject.json
-[200] https://semantic-release.gitbook.io/semantic-release/usage/configuration
 [200] https://www.schemastore.org/task.json
+[200] https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/pyproject.json
+[EXCLUDED] http://localhost:5173/
+[EXCLUDED] http://localhost:8000/
+[EXCLUDED] http://localhost:8000/docs
+[EXCLUDED] http://localhost:8000/health
 [200] https://www.schemastore.org/markdown-link-check.json
 [200] https://www.schemastore.org/yamllint.json
-[200] https://json.schemastore.org/prettierrc.json
-[200] https://pre-commit.com/hooks.html
-[200] https://megalinter.io/latest/descriptors/javascript_prettier/
-[200] https://megalinter.io/latest/descriptors/salesforce_sfdx_scanner_apex/
 [200] https://pre-commit.com/
-[200] https://json.schemastore.org/web-manifest-combined.json
-[404] https://json.schemastore.org/luacheckrc.json | Network error: Not Found
-[404] https://json.schemastore.org/npm-package-json-lint.json | Network error: Not Found
+[200] https://json.schemastore.org/prettierrc.json
 [200] https://json.schemastore.org/htmlhint.json
+[200] https://pre-commit.com/hooks.html
+[200] https://signal.egohygiene.io/reports/megalinter/
+[404] https://json.schemastore.org/npm-package-json-lint.json | Network error: Not Found
+[200] https://json.schemastore.org/web-manifest-combined.json
+[200] https://rubocop.org/
+[404] https://json.schemastore.org/luacheckrc.json | Network error: Not Found
+[200] https://github.com/adrienverge/yamllint
 [200] https://github.com/psf/black
+[200] https://github.com/Yelp/detect-secrets
+[200] https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/
 [200] https://github.com/hadolint/hadolint
 [200] https://github.com/pre-commit/pre-commit-hooks
-[200] https://megalinter.io/latest/descriptors/go_revive/
-[200] https://prettier.io/
+[200] https://stoplight.io/open-source/spectral
+[200] https://megalinter.io/latest/descriptors/scala_scalafix/
 [200] https://github.com/igorshubovych/markdownlint-cli
-[200] https://github.com/shellcheck-py/shellcheck-py
+[200] https://clang.llvm.org/docs/ClangFormat.html
 [200] https://github.com/astral-sh/ruff-pre-commit
-[200] https://eslint.org/
-[200] https://megalinter.io/latest/descriptors/sql_sqlfluff/
-[200] https://megalinter.io/latest/descriptors/raku_raku/
-[200] https://megalinter.io/latest/descriptors/swift_swiftlint/
-[200] https://pylint.pycqa.org/en/latest/
-[200] https://megalinter.io/latest/descriptors/rust_clippy/
-[200] https://megalinter.io/latest/descriptors/typescript_eslint/
-[200] https://github.com/adrienverge/yamllint
-[200] https://megalinter.io/latest/descriptors/javascript_eslint/
-[200] https://megalinter.io/latest/descriptors/arm_arm_ttk/
-[200] https://flake8.pycqa.org/en/latest/
-[200] https://megalinter.io/latest/descriptors/php_phpstan/
-[200] https://ansible.readthedocs.io/projects/lint/
-[200] https://pmd.github.io/
-[200] https://yamllint.readthedocs.io/en/stable/
-[200] https://mypy.readthedocs.io/en/stable/
-[200] https://github.com/editorconfig-checker/editorconfig-checker
-[200] https://megalinter.io/latest/descriptors/spell_lychee/
-[200] https://megalinter.io/latest/descriptors/repository_checkov/
-[200] https://megalinter.io/latest/descriptors/rst_rstcheck/
-[200] https://megalinter.io/latest/descriptors/terraform_terragrunt/
-[EXCLUDED] mailto:szmyty@gmail.com
-[200] https://megalinter.io/latest/descriptors/repository_kics/
+[200] https://github.com/shellcheck-py/shellcheck-py
+[200] https://semantic-release.gitbook.io/semantic-release/usage/configuration
+[200] https://megalinter.io/latest/descriptors/html_htmlhint/
+[200] https://megalinter.io/8/descriptors/repository_ls_lint/
+[200] https://megalinter.io/latest/descriptors/repository_trivy/
+[200] https://megalinter.io/latest/descriptors/lua_luacheck/
+[200] https://megalinter.io/latest/descriptors/jsx_eslint/
+[200] https://megalinter.io/latest/descriptors/cpp_clang_format/
+[200] https://megalinter.io/latest/descriptors/r_lintr/
 [200] https://pycqa.github.io/isort/
-[200] https://bandit.readthedocs.io/en/latest/
-[200] https://github.com/tenable/terrascan
-[200] https://black.readthedocs.io/en/stable/
-[200] https://psalm.dev/
+[200] https://megalinter.io/latest/descriptors/repository_grype/
+[200] https://megalinter.io/latest/descriptors/c_clang_format/
+[200] https://megalinter.io/latest/descriptors/python_pylint/
+[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/
+[200] https://megalinter.io/latest/descriptors/swift_swiftlint/
+[200] https://megalinter.io/latest/descriptors/php_phpstan/
+[200] https://megalinter.io/latest/descriptors/makefile_checkmake/
+[200] https://github.com/greglook/cljstyle
+[200] https://megalinter.io/latest/descriptors/repository_secretlint/
+[200] https://github.com/errata-ai/vale
+[200] https://github.com/checkmake/checkmake
+[200] https://megalinter.io/latest/descriptors/protobuf_protolint/
+[200] https://github.com/hadolint/hadolint | OK (cached)
+[200] https://megalinter.io/latest/descriptors/sql_sqlfluff/
+[200] https://megalinter.io/latest/descriptors/dockerfile_hadolint/
+[200] https://megalinter.io/latest/descriptors/latex_chktex/
+[200] https://megalinter.io/latest/descriptors/cloudformation_cfn_lint/
 [200] https://megalinter.io/latest/descriptors/gherkin_gherkin_lint/
-[200] https://github.com/scalacenter/scalafix
-[200] https://megalinter.io/latest/descriptors/ansible_ansible_lint/
-[200] https://megalinter.io/latest/json-schemas/configuration.html
-[404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ | Network error: Not Found
-[200] https://megalinter.io/latest/descriptors/clojure_clj_kondo/
-[200] https://megalinter.io/latest/descriptors/markdown_remark_lint/
+[200] https://phpstan.org/
+[200] https://megalinter.io/latest/descriptors/javascript_prettier/
+[EXCLUDED] mailto:szmyty@gmail.com
+[200] https://github.com/tclindner/npm-package-json-lint
+[200] https://megalinter.io/latest/descriptors/repository_checkov/
+[200] https://github.com/yoheimuta/protolint
+[200] https://github.com/amperser/proselint
+[200] https://megalinter.io/latest/descriptors/repository_trufflehog/
+[200] https://megalinter.io/latest/descriptors/typescript_eslint/
+[200] https://github.com/mpeterv/luacheck
+[200] https://github.com/checkmarx/kics
+[200] https://megalinter.io/latest/descriptors/rst_rstcheck/
+[200] https://github.com/ota-meshi/eslint-plugin-jsonc
+[200] https://megalinter.io/latest/descriptors/php_psalm/
+[200] https://megalinter.io/latest/supported-linters/
+[200] https://github.com/loeffel-io/ls-lint
+[200] https://api.github.com/
+[200] https://megalinter.io/latest/descriptors/repository_gitleaks/
+[200] https://github.com/forcedotcom/code-analyzer
+[200] https://megalinter.io/latest/descriptors/typescript_prettier/
+[200] https://dart.dev/tools/dart-analyze
+[200] https://prettier.io/
+[200] https://github.com/clj-kondo/clj-kondo
+[200] https://megalinter.io/latest/descriptors/copypaste_jscpd/
+[404] https://megalinter.io/latest/descriptors/markdown_markdown_link_check/ | Network error: Not Found
+[200] https://megalinter.io/latest/descriptors/markdown_markdownlint/
+[200] https://megalinter.io/latest/descriptors/javascript_eslint/
+[200] https://github.com/overtrue/phplint
+[200] https://github.com/rust-lang/rust-clippy
+[200] https://flake8.pycqa.org/en/latest/
+[200] https://megalinter.io/latest/descriptors/puppet_puppet_lint/
+[ERROR] https://pyrightlang.org/ | Network error: error sending request for url (https://pyrightlang.org/) Maybe a certificate error?
 [200] https://checkstyle.org/
 [200] https://github.com/tcort/markdown-link-check
-[200] https://megalinter.io/latest/descriptors/protobuf_protolint/
-[200] https://github.com/greglook/cljstyle
-[200] https://megalinter.io/latest/descriptors/html_htmlhint/
-[200] https://megalinter.io/latest/descriptors/repository_secretlint/
-[200] https://github.com/puppetlabs/puppet-lint
-[200] https://megalinter.io/latest/descriptors/repository_trivy/
-[200] https://megalinter.io/latest/descriptors/repository_syft/
-[200] https://github.com/chris48s/v8r
-[200] https://megalinter.io/latest/descriptors/markdown_markdownlint/
-[200] https://megalinter.io/latest/descriptors/java_pmd/
-[200] https://rubocop.org/
-[200] https://www.nongnu.org/chktex/
-[200] https://github.com/yoheimuta/protolint
-[200] https://megalinter.io/latest/descriptors/makefile_checkmake/
-[200] https://github.com/gitleaks/gitleaks
-[200] https://github.com/ota-meshi/eslint-plugin-jsonc
-[200] https://megalinter.io/latest/descriptors/dockerfile_hadolint/
-[ERROR] https://pyrightlang.org/ | Network error: error sending request for url (https://pyrightlang.org/) Maybe a certificate error?
-[200] https://megalinter.io/latest/descriptors/java_checkstyle/
-[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/
-[200] https://github.com/hadolint/hadolint | OK (cached)
-[200] https://megalinter.io/latest/descriptors/api_spectral/
-[200] https://github.com/zaach/jsonlint
-[200] https://megalinter.io/latest/descriptors/salesforce_lightning_flow_scanner/
-[200] https://github.com/clj-kondo/clj-kondo
-[200] https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/
-[200] https://megalinter.io/latest/descriptors/terraform_terrascan/
-[200] https://megalinter.io/latest/descriptors/yaml_prettier/
-[200] https://github.com/aquasecurity/trivy
-[200] https://github.com/Yelp/detect-secrets
-[200] https://megalinter.io/latest/descriptors/repository_gitleaks/
-[200] https://github.com/streetsidesoftware/cspell
-[404] https://megalinter.io/latest/descriptors/markdown_markdown_link_check/ | Network error: Not Found
-[200] https://megalinter.io/latest/descriptors/lua_luacheck/
-[200] https://github.com/terraform-linters/tflint
-[200] https://github.com/aws-cloudformation/cfn-lint
-[200] https://github.com/tclindner/npm-package-json-lint
-[200] https://megalinter.io/latest/descriptors/r_lintr/
-[200] https://megalinter.io/latest/supported-linters/
-[200] https://megalinter.io/latest/descriptors/cloudformation_cfn_lint/
-[200] https://github.com/r-lib/lintr
-[200] https://megalinter.io/latest/descriptors/json_eslint_plugin_jsonc/
-[200] https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
-[200] https://github.com/rstcheck/rstcheck
-[200] https://megalinter.io/latest/descriptors/python_ruff/
-[200] https://github.com/gherkin-lint/gherkin-lint
-[200] https://megalinter.io/latest/descriptors/puppet_puppet_lint/
-[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/
-[200] https://megalinter.io/latest/descriptors/graphql_graphql_schema_linter/
-[200] https://github.com/anchore/grype
-[200] https://github.com/Lightning-Flow-Scanner/lightning-flow-scanner-sfdx
-[200] https://github.com/Azure/arm-ttk
-[200] https://megalinter.io/latest/descriptors/yaml_yamllint/
-[200] https://phpstan.org/
-[200] https://megalinter.io/latest/descriptors/jsx_eslint/
-[200] https://megalinter.io/latest/descriptors/c_clang_format/
-[200] https://megalinter.io/latest/descriptors/python_pyright/
-[200] https://megalinter.io/latest/descriptors/python_flake8/
-[200] https://github.com/microsoft/DevSkim
-[200] https://stylelint.io/
-[200] https://github.com/realm/SwiftLint
-[200] https://megalinter.io/latest/descriptors/css_stylelint/
-[200] https://dart.dev/tools/dart-analyze
-[200] https://megalinter.io/latest/descriptors/typescript_prettier/
-[200] https://megalinter.io/8/descriptors/repository_ls_lint/
-[200] https://megalinter.io/latest/descriptors/json_jsonlint/
-[200] https://megalinter.io/latest/descriptors/yaml_v8r/
-[200] https://api.github.com/
-[200] https://megalinter.io/latest/descriptors/json_npm_package_json_lint/
-[200] https://megalinter.io/latest/descriptors/dart_dartanalyzer/
-[200] https://github.com/snakemake/snakefmt
-[200] https://github.com/trufflesecurity/trufflehog
-[200] https://github.com/IBM/tekton-lint
-[200] https://megalinter.io/latest/descriptors/json_prettier/
-[200] https://megalinter.io/latest/descriptors/cpp_clang_format/
-[200] https://megalinter.io/latest/descriptors/scala_scalafix/
-[200] https://megalinter.io/latest/descriptors/action_actionlint/
-[200] https://github.com/lycheeverse/lychee
-[200] https://github.com/
-[200] https://megalinter.io/latest/descriptors/repository_trufflehog/
-[200] https://megalinter.io/latest/descriptors/python_mypy/
-[200] https://megalinter.io/latest/descriptors/powershell_powershell_formatter/
-[200] https://megalinter.io/latest/descriptors/copypaste_jscpd/
 [200] https://megalinter.io/latest/descriptors/php_phplint/
-[200] https://megalinter.io/latest/descriptors/spell_proselint/
-[200] https://megalinter.io/latest/descriptors/spell_vale/
-[200] https://github.com/remarkjs/remark-lint
-[200] https://github.com/anchore/syft
-[200] https://megalinter.io/latest/config-variables/
-[200] https://megalinter.io/latest/descriptors/sql_tsqllint/
-[200] https://megalinter.io/latest/descriptors/python_isort/
-[200] https://megalinter.io/latest/descriptors/python_pylint/
-[200] https://megalinter.io/latest/descriptors/powershell_powershell/
-[200] https://megalinter.io/latest/descriptors/php_phpcs/
-[200] https://megalinter.io/latest/descriptors/latex_chktex/
-[200] https://github.com/amperser/proselint
-[200] https://github.com/rhysd/actionlint
-[200] https://github.com/gruntwork-io/terragrunt
-[200] https://clang.llvm.org/docs/ClangFormat.html
-[200] https://megalinter.io/latest/descriptors/repository_grype/
+[200] https://megalinter.io/latest/descriptors/java_checkstyle/
 [200] https://raku.org/
-[200] https://stoplight.io/open-source/spectral
-[200] https://megalinter.io/latest/descriptors/python_black/
-[200] https://github.com/mpeterv/luacheck
-[200] https://megalinter.io/latest/descriptors/php_psalm/
-[200] https://megalinter.io/latest/descriptors/ruby_rubocop/
-[200] https://megalinter.io/latest/descriptors/python_bandit/
-[200] https://github.com/errata-ai/vale
-[200] https://megalinter.io/latest/descriptors/repository_devskim/
+[200] https://github.com/puppetlabs/puppet-lint
+[200] https://github.com/scalacenter/scalafix
+[200] https://megalinter.io/latest/descriptors/action_actionlint/
+[200] https://mypy.readthedocs.io/en/stable/
+[200] https://megalinter.io/latest/descriptors/salesforce_lightning_flow_scanner/
+[200] https://megalinter.io/latest/descriptors/markdown_remark_lint/
+[200] https://megalinter.io/latest/descriptors/spell_lychee/
 [200] https://github.com/PHPCSStandards/PHP_CodeSniffer/
-[200] https://megalinter.io/latest/descriptors/snakemake_snakefmt/
-[200] https://github.com/cjoudrey/graphql-schema-linter
-[200] https://megalinter.io/latest/descriptors/spell_cspell/
-[200] https://github.com/tsqllint/tsqllint
-[200] https://megalinter.io/latest/descriptors/groovy_npm_groovy_lint/
-[200] https://github.com/nvuillam/npm-groovy-lint
-[200] https://megalinter.io/latest/descriptors/clojure_cljstyle/
-[200] https://github.com/rust-lang/rust-clippy
-[200] https://github.com/loeffel-io/ls-lint
-[200] https://github.com/PowerShell/PSScriptAnalyzer
 [200] https://megalinter.io/latest/descriptors/terraform_tflint/
-[403] https://nvd.nist.gov/vuln/detail/CVE-2018-20225 | 403 Forbidden: Forbidden
-[200] https://github.com/checkmake/checkmake
+[200] https://psalm.dev/
+[200] https://megalinter.io/latest/descriptors/python_flake8/
+[200] https://github.com/
+[200] https://github.com/remarkjs/remark-lint
+[200] https://megalinter.io/latest/descriptors/json_prettier/
+[200] https://megalinter.io/latest/descriptors/repository_syft/
+[200] https://megalinter.io/latest/descriptors/salesforce_sfdx_scanner_apex/
+[200] https://megalinter.io/latest/descriptors/spell_cspell/
+[200] https://megalinter.io/latest/descriptors/clojure_cljstyle/
+[200] https://megalinter.io/latest/descriptors/groovy_npm_groovy_lint/
+[200] https://megalinter.io/latest/descriptors/json_npm_package_json_lint/
+[200] https://megalinter.io/latest/descriptors/java_pmd/
+[200] https://black.readthedocs.io/en/stable/
+[200] https://megalinter.io/latest/descriptors/python_ruff/
+[200] https://megalinter.io/latest/descriptors/api_spectral/
+[200] https://megalinter.io/latest/descriptors/ansible_ansible_lint/
+[200] https://megalinter.io/latest/descriptors/clojure_clj_kondo/
+[200] https://megalinter.io/latest/descriptors/spell_proselint/
+[200] https://pmd.github.io/
+[200] https://megalinter.io/latest/descriptors/powershell_powershell_formatter/
+[200] https://ruff.rs/
+[200] https://megalinter.io/latest/descriptors/repository_devskim/
+[200] https://megalinter.io/latest/descriptors/yaml_prettier/
+[200] https://megalinter.io/latest/descriptors/yaml_v8r/
+[200] https://github.com/anchore/grype
+[200] https://eslint.org/
+[200] https://megalinter.io/latest/descriptors/powershell_powershell/
 [200] https://github.com/mgechev/revive
+[200] https://github.com/tsqllint/tsqllint
+[200] https://github.com/zaach/jsonlint
+[200] https://megalinter.io/latest/descriptors/dart_dartanalyzer/
+[200] https://github.com/realm/SwiftLint
+[200] https://megalinter.io/latest/descriptors/snakemake_snakefmt/
+[200] https://megalinter.io/latest/descriptors/graphql_graphql_schema_linter/
+[200] https://yamllint.readthedocs.io/en/stable/
+[200] https://github.com/gherkin-lint/gherkin-lint
+[200] https://megalinter.io/latest/descriptors/repository_kics/
+[200] https://github.com/gruntwork-io/terragrunt
+[200] https://megalinter.io/latest/descriptors/json_eslint_plugin_jsonc/
+[200] https://megalinter.io/latest/config-variables/
+[200] https://github.com/rhysd/actionlint
+[200] https://github.com/anchore/syft
+[200] https://megalinter.io/latest/descriptors/rust_clippy/
+[200] https://github.com/sqlfluff/sqlfluff
+[200] https://bandit.readthedocs.io/en/latest/
+[200] https://megalinter.io/latest/descriptors/python_pyright/
+[200] https://megalinter.io/latest/descriptors/python_mypy/
+[200] https://megalinter.io/latest/descriptors/arm_arm_ttk/
+[200] https://github.com/snakemake/snakefmt
+[200] https://github.com/Lightning-Flow-Scanner/lightning-flow-scanner-sfdx
+[200] https://megalinter.io/latest/descriptors/python_isort/
+[200] https://megalinter.io/latest/descriptors/terraform_terragrunt/
+[200] https://github.com/trufflesecurity/trufflehog
+[200] https://megalinter.io/latest/descriptors/go_revive/
+[200] https://github.com/nvuillam/npm-groovy-lint
+[404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ | Network error: Not Found
+[200] https://megalinter.io/latest/descriptors/sql_tsqllint/
+[200] https://megalinter.io/latest/json-schemas/configuration.html
+[200] https://www.nongnu.org/chktex/
+[200] https://github.com/r-lib/lintr
+[200] https://megalinter.io/latest/descriptors/ruby_rubocop/
+[200] https://megalinter.io/latest/descriptors/css_stylelint/
+[200] https://megalinter.io/latest/descriptors/json_jsonlint/
+[200] https://megalinter.io/latest/descriptors/raku_raku/
+[200] https://megalinter.io/latest/descriptors/python_bandit/
+[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/
+[200] https://github.com/IBM/tekton-lint
+[200] https://github.com/terraform-linters/tflint
+[200] https://megalinter.io/latest/descriptors/spell_vale/
+[200] https://github.com/chris48s/v8r
+[200] https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
+[200] https://github.com/lycheeverse/lychee
+[200] https://github.com/rstcheck/rstcheck
+[200] https://megalinter.io/latest/descriptors/terraform_terrascan/
+[200] https://megalinter.io/latest/descriptors/php_phpcs/
+[200] https://github.com/kucherenko/jscpd
+[200] https://stylelint.io/
+[200] https://megalinter.io/latest/descriptors/python_black/
+[200] https://megalinter.io/latest/descriptors/yaml_yamllint/
+[200] https://github.com/coffeelint/coffeelint
+[200] https://www.schemastore.org/coffeelint.json
+[200] https://github.com/aws-cloudformation/cfn-lint
+   [WARN ] Error creating request: InvalidPathToUri("/vite.svg")
+[200] https://www.checkov.io/
+[200] https://toolbox-data.anchore.io/grype/databases/listing.json
+[EXCLUDED] http://localhost/
 [EXCLUDED] https://localhost/
 [200] https://github.com/ | OK (cached)
-[EXCLUDED] http://localhost/
-[200] https://github.com/hadolint/hadolint#linting-labels
-[200] https://github.com/DavidAnson/markdownlint
-[200] https://www.schemastore.org/coffeelint.json
+[200] https://ansible.readthedocs.io/projects/lint/
+[200] https://github.com/gitleaks/gitleaks
+[200] https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json
+[200] https://github.com/editorconfig-checker/editorconfig-checker
 [200] https://www.schemastore.org/stylelintrc.json
-[200] https://ruff.rs/
 [400] https://search.maven.org/solrsearch/select | Network error: Bad Request
 [EXCLUDED] mailto:you@example.com
-[200] https://github.com/checkmarx/kics
-[200] https://www.checkov.io/
-[200] https://github.com/amperser/proselint | OK (cached)
-[200] https://raw.githubusercontent.com/microsoft/pyright/main/packages/vscode-pyright/schemas/pyrightconfig.schema.json
-[EXCLUDED] mailto:support@errata.ai
+[403] https://nvd.nist.gov/vuln/detail/CVE-2018-20225 | 403 Forbidden: Forbidden
 [200] https://raw.githubusercontent.com/hadolint/hadolint/master/contrib/hadolint.json
-[200] https://github.com/overtrue/phplint
-[200] https://github.com/coffeelint/coffeelint
-[200] https://www.rubyschema.org/rubocop.json
 [200] https://www.schemastore.org/npmpackagejsonlintrc.json
-[200] https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json
-[200] https://toolbox-data.anchore.io/grype/databases/listing.json
-[200] https://registry.npmjs.org/@kwsites/file-exists/-/file-exists-1.1.1.tgz
-[200] https://registry.npmjs.org/@isaacs/fs-minipass/-/fs-minipass-4.0.1.tgz
-[200] https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json
-[200] https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz
-[200] https://registry.npmjs.org/minipass-pipeline/-/minipass-pipeline-1.2.4.tgz
-[404] https://github.com/yourusername/your-module-name/issues | Network error: Not Found
-[200] https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz
-[200] https://registry.npmjs.org/onetime/-/onetime-7.0.0.tgz
-[200] https://registry.npmjs.org/@sigstore/core/-/core-3.1.0.tgz
-[200] https://registry.npmjs.org/is-path-inside/-/is-path-inside-4.0.0.tgz
-[200] https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz
+[200] https://github.com/amperser/proselint | OK (cached)
+[200] https://pylint.pycqa.org/en/latest/
+[200] https://github.com/DavidAnson/markdownlint
+[EXCLUDED] mailto:support@errata.ai
+[200] https://github.com/cjoudrey/graphql-schema-linter
+[200] https://raw.githubusercontent.com/microsoft/pyright/main/packages/vscode-pyright/schemas/pyrightconfig.schema.json
 [200] https://golangci-lint.run/jsonschema/golangci.jsonschema.json
-[200] https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz
-[200] https://registry.npmjs.org/cli-width/-/cli-width-4.1.0.tgz
-[200] https://registry.npmjs.org/nopt/-/nopt-9.0.0.tgz
-[200] https://registry.npmjs.org/index-to-position/-/index-to-position-1.2.0.tgz
-[200] https://signal.egohygiene.io/reports/megalinter/
-[200] https://registry.npmjs.org/binaryextensions/-/binaryextensions-6.11.0.tgz
-[200] https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz
-[200] https://registry.npmjs.org/commondir/-/commondir-1.0.1.tgz
-[200] https://registry.npmjs.org/wsl-utils/-/wsl-utils-0.3.1.tgz
-[200] https://registry.npmjs.org/@tufjs/models/-/models-4.1.0.tgz
-[200] https://registry.npmjs.org/is-stream/-/is-stream-4.0.1.tgz
-[200] https://registry.npmjs.org/@npmcli/metavuln-calculator/-/metavuln-calculator-9.0.3.tgz
-[200] https://registry.npmjs.org/@inquirer/type/-/type-3.0.10.tgz
+[404] https://github.com/yourusername/your-module-name/issues | Network error: Not Found
+[200] https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json
+[200] https://github.com/streetsidesoftware/cspell
+[200] https://github.com/Azure/arm-ttk
 [404] https://github.com/yourusername/your-module-name | Network error: Not Found
-[200] https://registry.npmjs.org/just-diff/-/just-diff-6.0.2.tgz
-[200] https://registry.npmjs.org/define-lazy-prop/-/define-lazy-prop-3.0.0.tgz
-[200] https://registry.npmjs.org/@inquirer/prompts/-/prompts-7.10.1.tgz
-[200] https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz
-[200] https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz
-[200] https://github.com/errata-ai/proselint/releases.atom
-[200] https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz
-[200] https://github.com/errata-ai/write-good/releases.atom
-[200] https://registry.npmjs.org/@sigstore/verify/-/verify-3.1.0.tgz
-[200] https://registry.npmjs.org/rc/-/rc-1.2.8.tgz
-[200] https://registry.npmjs.org/@npmcli/run-script/-/run-script-10.0.3.tgz
-[200] https://registry.npmjs.org/minipass-sized/-/minipass-sized-2.0.0.tgz
-[200] https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz
-[200] https://registry.npmjs.org/p-queue/-/p-queue-8.1.1.tgz
-[200] https://registry.npmjs.org/config-chain/-/config-chain-1.1.13.tgz
-[200] https://registry.npmjs.org/p-timeout/-/p-timeout-6.1.4.tgz
-[200] https://registry.npmjs.org/p-map/-/p-map-7.0.4.tgz
-[200] https://github.com/errata-ai/proselint/issues/new
-[200] https://github.com/sqlfluff/sqlfluff
-[200] https://registry.npmjs.org/mega-linter-runner/-/mega-linter-runner-9.3.0.tgz
-[200] https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz
-[200] https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.0.tgz
-[404] https://github.com/yourusername/your-module-name.git | Network error: Not Found
-[200] https://registry.npmjs.org/@octokit/types/-/types-14.1.0.tgz
-[200] https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.23.tgz
-[200] https://registry.npmjs.org/tar/-/tar-7.5.7.tgz
-[200] https://registry.npmjs.org/@secretlint/types/-/types-11.3.1.tgz
-[200] https://registry.npmjs.org/@sigstore/protobuf-specs/-/protobuf-specs-0.5.0.tgz
-[200] https://registry.npmjs.org/parse-json/-/parse-json-8.3.0.tgz
-[200] https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz
-[200] https://registry.npmjs.org/strip-bom-buf/-/strip-bom-buf-3.0.1.tgz
-[200] https://registry.npmjs.org/@isaacs/string-locale-compare/-/string-locale-compare-1.1.0.tgz
-[200] https://github.com/kucherenko/jscpd
-[200] https://registry.npmjs.org/json5/-/json5-2.2.3.tgz
-[200] https://registry.npmjs.org/which/-/which-6.0.1.tgz
-[200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip
-[200] https://registry.npmjs.org/path-key/-/path-key-4.0.0.tgz
-[200] https://registry.npmjs.org/ky/-/ky-1.14.3.tgz
-[200] https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz
-[200] https://registry.npmjs.org/package-json/-/package-json-10.0.1.tgz
-[200] https://registry.npmjs.org/get-stream/-/get-stream-9.0.1.tgz
-[200] https://registry.npmjs.org/strip-final-newline/-/strip-final-newline-4.0.0.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-aws/-/secretlint-rule-aws-11.3.1.tgz
-[200] https://registry.npmjs.org/yallist/-/yallist-5.0.0.tgz
-[200] https://registry.npmjs.org/read-cmd-shim/-/read-cmd-shim-6.0.0.tgz
-[200] https://registry.npmjs.org/@inquirer/figures/-/figures-1.0.15.tgz
-[200] https://registry.npmjs.org/@secretlint/config-loader/-/config-loader-11.3.1.tgz
-[200] https://registry.npmjs.org/is-glob/-/is-glob-4.0.3.tgz
-[200] https://github.com/sirupsen/logrus#level-logging
-[200] https://registry.npmjs.org/@octokit/request-error/-/request-error-6.1.8.tgz
-[200] https://registry.npmjs.org/@kwsites/promise-deferred/-/promise-deferred-1.1.1.tgz
-[200] https://registry.npmjs.org/execa/-/execa-9.6.1.tgz
-[200] https://github.com/bridgecrewio/checkov#configuration-using-a-config-file
-[200] https://registry.npmjs.org/@npmcli/agent/-/agent-4.0.0.tgz
-[200] https://registry.npmjs.org/bn.js/-/bn.js-5.2.2.tgz
-[200] https://registry.npmjs.org/streamx/-/streamx-2.23.0.tgz
-[200] https://registry.npmjs.org/sisteransi/-/sisteransi-1.0.5.tgz
-[200] https://registry.npmjs.org/jsonparse/-/jsonparse-1.3.1.tgz
-[200] https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz
-[200] https://registry.npmjs.org/@types/secp256k1/-/secp256k1-4.0.7.tgz
-[200] https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-6.2.0.tgz
-[200] https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.22.tgz
-[200] https://registry.npmjs.org/json-parse-even-better-errors/-/json-parse-even-better-errors-5.0.0.tgz
-[200] https://registry.npmjs.org/unique-filename/-/unique-filename-5.0.0.tgz
-[200] https://registry.npmjs.org/@inquirer/editor/-/editor-4.2.23.tgz
-[200] https://github.com/forcedotcom/code-analyzer
-[200] https://registry.npmjs.org/ini/-/ini-6.0.0.tgz
-[200] https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz
-[200] https://registry.npmjs.org/npm-pick-manifest/-/npm-pick-manifest-11.0.3.tgz
-[200] https://registry.npmjs.org/node-gyp/-/node-gyp-12.2.0.tgz
-[200] https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz
-[200] https://registry.npmjs.org/execa/-/execa-8.0.1.tgz
-[200] https://registry.npmjs.org/ini/-/ini-1.3.8.tgz
-[200] https://registry.npmjs.org/@npmcli/arborist/-/arborist-9.3.0.tgz
-[200] https://registry.npmjs.org/@npmcli/redact/-/redact-4.0.0.tgz
-[200] https://registry.npmjs.org/run-async/-/run-async-4.0.6.tgz
-[200] https://registry.npmjs.org/fast-content-type-parse/-/fast-content-type-parse-2.0.1.tgz
-[200] https://registry.npmjs.org/@octokit/plugin-paginate-rest/-/plugin-paginate-rest-11.6.0.tgz
-[200] https://registry.npmjs.org/npm-bundled/-/npm-bundled-5.0.0.tgz
-[200] https://registry.npmjs.org/istextorbinary/-/istextorbinary-9.5.0.tgz
-[200] https://registry.npmjs.org/ignore/-/ignore-7.0.5.tgz
-[200] https://registry.npmjs.org/minipass-fetch/-/minipass-fetch-5.0.1.tgz
-[200] https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.29.0.tgz
-[200] https://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz
-[200] https://registry.npmjs.org/async/-/async-3.2.6.tgz
-[200] https://registry.npmjs.org/mimic-function/-/mimic-function-5.0.1.tgz
-[200] https://registry.npmjs.org/sh-syntax/-/sh-syntax-0.5.8.tgz
-[200] https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.2.tgz
-[200] https://registry.npmjs.org/is-inside-container/-/is-inside-container-1.0.0.tgz
-[200] https://registry.npmjs.org/@pnpm/network.ca-file/-/network.ca-file-1.0.2.tgz
-[200] https://registry.npmjs.org/@isaacs/cliui/-/cliui-9.0.0.tgz
-[200] https://registry.npmjs.org/@tufjs/canonical-json/-/canonical-json-2.0.0.tgz
-[200] https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz
-[200] https://registry.npmjs.org/@octokit/auth-token/-/auth-token-5.1.2.tgz
-[200] https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-4.1.0.tgz
-[200] https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-7.0.2.tgz
-[200] https://registry.npmjs.org/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz
-[200] https://registry.npmjs.org/grouped-queue/-/grouped-queue-2.1.0.tgz
-[200] https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz
-[200] https://registry.npmjs.org/npm-registry-fetch/-/npm-registry-fetch-19.1.1.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-preset-recommend/-/secretlint-rule-preset-recommend-11.3.1.tgz
-[200] https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz
-[200] https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.2.tgz
-[200] https://registry.npmjs.org/@inquirer/core/-/core-10.3.2.tgz
-[200] https://registry.npmjs.org/universalify/-/universalify-2.0.1.tgz
-[200] https://registry.npmjs.org/balanced-match/-/balanced-match-4.0.2.tgz
-[200] https://registry.npmjs.org/which/-/which-2.0.2.tgz
-[200] https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz
-[200] https://github.com/sponsors/fastify
-[200] https://registry.npmjs.org/@octokit/core/-/core-6.1.6.tgz
-[200] https://github.com/btford/write-good
-[200] https://registry.npmjs.org/braces/-/braces-3.0.3.tgz
-[200] https://registry.npmjs.org/brorand/-/brorand-1.1.0.tgz
-[200] https://registry.npmjs.org/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz
-[200] https://registry.npmjs.org/mimic-fn/-/mimic-fn-4.0.0.tgz
-[200] https://registry.npmjs.org/p-limit/-/p-limit-4.0.0.tgz
-[200] https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.7.2.tgz
-[200] https://registry.npmjs.org/log-symbols/-/log-symbols-7.0.1.tgz
-[200] https://registry.npmjs.org/universal-user-agent/-/universal-user-agent-7.0.3.tgz
-[200] https://registry.npmjs.org/version-range/-/version-range-4.15.0.tgz
-[200] https://registry.npmjs.org/err-code/-/err-code-2.0.3.tgz
-[200] https://registry.npmjs.org/slash/-/slash-5.1.0.tgz
-[200] https://registry.npmjs.org/p-transform/-/p-transform-5.0.1.tgz
-[200] https://registry.npmjs.org/@inquirer/external-editor/-/external-editor-1.0.3.tgz
-[200] https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz
-[200] https://registry.npmjs.org/cmd-shim/-/cmd-shim-8.0.0.tgz
-[200] https://registry.npmjs.org/lodash.uniqwith/-/lodash.uniqwith-4.5.0.tgz
-[200] https://registry.npmjs.org/isexe/-/isexe-4.0.0.tgz
-[200] https://registry.npmjs.org/unicorn-magic/-/unicorn-magic-0.3.0.tgz
-[200] https://registry.npmjs.org/kleur/-/kleur-3.0.3.tgz
-[200] https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz
-[200] https://registry.npmjs.org/promise-all-reject-late/-/promise-all-reject-late-1.0.1.tgz
-[200] https://registry.npmjs.org/@octokit/rest/-/rest-21.1.1.tgz
-[200] https://registry.npmjs.org/replace-ext/-/replace-ext-2.0.0.tgz
-[200] https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz
-[200] https://registry.npmjs.org/@inquirer/ansi/-/ansi-1.0.2.tgz
-[200] https://registry.npmjs.org/colors/-/colors-1.0.3.tgz
-[200] https://registry.npmjs.org/fast-fifo/-/fast-fifo-1.3.2.tgz
-[200] https://registry.npmjs.org/which-package-manager/-/which-package-manager-1.0.1.tgz
-[200] https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz
-[200] https://registry.npmjs.org/stdin-discarder/-/stdin-discarder-0.3.1.tgz
-[200] https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz
-[200] https://registry.npmjs.org/pacote/-/pacote-21.3.1.tgz
-[200] https://registry.npmjs.org/jackspeak/-/jackspeak-4.2.3.tgz
-[200] https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz
-[200] https://github.com/chalk/strip-ansi?sponsor=1
-[200] https://registry.npmjs.org/get-stream/-/get-stream-8.0.1.tgz
-[200] https://registry.npmjs.org/@yeoman/transform/-/transform-2.1.0.tgz
-[200] https://registry.npmjs.org/@npmcli/name-from-folder/-/name-from-folder-4.0.0.tgz
-[200] https://registry.npmjs.org/proggy/-/proggy-4.0.0.tgz
-[200] https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz
-[200] https://registry.npmjs.org/@textlint/regexp-string-matcher/-/regexp-string-matcher-2.0.2.tgz
-[200] https://registry.npmjs.org/validate-npm-package-name/-/validate-npm-package-name-7.0.2.tgz
-[200] https://registry.npmjs.org/levn/-/levn-0.4.1.tgz
-[200] https://registry.npmjs.org/@inquirer/rawlist/-/rawlist-4.1.11.tgz
-[200] https://registry.npmjs.org/find-package-json/-/find-package-json-1.2.0.tgz
-[200] https://registry.npmjs.org/@octokit/plugin-request-log/-/plugin-request-log-5.3.1.tgz
-[200] https://registry.npmjs.org/@inquirer/number/-/number-3.0.23.tgz
-[200] https://registry.npmjs.org/boundary/-/boundary-2.0.0.tgz
-[200] https://registry.npmjs.org/agent-base/-/agent-base-7.1.4.tgz
-[200] https://registry.npmjs.org/merge2/-/merge2-1.4.1.tgz
-[200] https://registry.npmjs.org/@inquirer/password/-/password-4.0.23.tgz
-[200] https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz
-[200] https://registry.npmjs.org/deep-extend/-/deep-extend-0.6.0.tgz
-[200] https://registry.npmjs.org/env-paths/-/env-paths-3.0.0.tgz
-[200] https://registry.npmjs.org/multimatch/-/multimatch-7.0.0.tgz
-[200] https://registry.npmjs.org/type-fest/-/type-fest-4.41.0.tgz
-[EXCLUDED] https://registry.npmjs.org/node-gyp-build/-/node-gyp-build-4.8.4.tgz
-[200] https://registry.npmjs.org/pretty-bytes/-/pretty-bytes-7.1.0.tgz
-[200] https://registry.npmjs.org/sort-keys/-/sort-keys-5.1.0.tgz
-[200] https://registry.npmjs.org/@sindresorhus/merge-streams/-/merge-streams-2.3.0.tgz
-[200] https://registry.npmjs.org/is-docker/-/is-docker-3.0.0.tgz
-[200] https://registry.npmjs.org/spdx-correct/-/spdx-correct-3.2.0.tgz
-[200] https://registry.npmjs.org/promise-call-limit/-/promise-call-limit-3.0.2.tgz
-[200] https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz
-[200] https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz
-[200] https://registry.npmjs.org/ms/-/ms-2.1.3.tgz
-[403] https://www.patreon.com/feross | 403 Forbidden: Forbidden
-[200] https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz
-[200] https://registry.npmjs.org/unique-slug/-/unique-slug-6.0.0.tgz
-[200] https://registry.npmjs.org/@types/lodash-es/-/lodash-es-4.17.12.tgz
-[200] https://registry.npmjs.org/untildify/-/untildify-6.0.0.tgz
-[200] https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz
-[200] https://registry.npmjs.org/walk-up-path/-/walk-up-path-4.0.0.tgz
-[200] https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz
-[200] https://registry.npmjs.org/path-type/-/path-type-6.0.0.tgz
-[200] https://registry.npmjs.org/mem-fs/-/mem-fs-4.1.3.tgz
-[200] https://registry.npmjs.org/yocto-queue/-/yocto-queue-1.2.2.tgz
-[200] https://registry.npmjs.org/@sindresorhus/merge-streams/-/merge-streams-4.0.0.tgz
-[200] https://registry.npmjs.org/hash.js/-/hash.js-1.1.7.tgz
-[200] https://registry.npmjs.org/minipass-collect/-/minipass-collect-2.0.1.tgz
-[200] https://registry.npmjs.org/b4a/-/b4a-1.7.4.tgz
-[200] https://github.com/sponsors/broofa
-[200] https://registry.npmjs.org/p-queue/-/p-queue-9.1.0.tgz
-[200] https://registry.npmjs.org/bin-links/-/bin-links-6.0.0.tgz
-[200] https://registry.npmjs.org/npm-run-path/-/npm-run-path-6.0.0.tgz
-[200] https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-2.5.0.tgz
-[200] https://registry.npmjs.org/rc-config-loader/-/rc-config-loader-4.1.3.tgz
-[200] https://registry.npmjs.org/binary-extensions/-/binary-extensions-3.1.0.tgz
-[200] https://registry.npmjs.org/textextensions/-/textextensions-6.11.0.tgz
-[200] https://registry.npmjs.org/yoctocolors-cjs/-/yoctocolors-cjs-2.1.3.tgz
-[200] https://registry.npmjs.org/yeoman-generator/-/yeoman-generator-7.5.1.tgz
-[200] https://registry.npmjs.org/@secretlint/core/-/core-11.3.1.tgz
-[200] https://registry.npmjs.org/@inquirer/search/-/search-3.2.2.tgz
-[200] https://registry.npmjs.org/@types/bn.js/-/bn.js-5.2.0.tgz
-[200] https://registry.npmjs.org/@yeoman/namespace/-/namespace-1.0.1.tgz
-[200] https://registry.npmjs.org/parse-ms/-/parse-ms-4.0.0.tgz
-[200] https://registry.npmjs.org/micromatch/-/micromatch-4.0.8.tgz
-[200] https://registry.npmjs.org/@pnpm/npm-conf/-/npm-conf-3.0.2.tgz
-[200] https://registry.npmjs.org/@npmcli/promise-spawn/-/promise-spawn-9.0.1.tgz
-[200] https://registry.npmjs.org/debug/-/debug-4.4.3.tgz
-[200] https://registry.npmjs.org/string-width/-/string-width-8.1.1.tgz
-[200] https://registry.npmjs.org/@sigstore/sign/-/sign-4.1.0.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-basicauth/-/secretlint-rule-basicauth-11.3.1.tgz
-[200] https://registry.npmjs.org/prettier-plugin-pkg/-/prettier-plugin-pkg-0.21.2.tgz
-[200] https://github.com/sponsors/epoberezkin
-[200] https://registry.npmjs.org/simple-git/-/simple-git-3.31.1.tgz
-[200] https://registry.npmjs.org/@octokit/plugin-rest-endpoint-methods/-/plugin-rest-endpoint-methods-13.5.0.tgz
-[200] https://registry.npmjs.org/npm-normalize-package-bin/-/npm-normalize-package-bin-5.0.0.tgz
-[200] https://registry.npmjs.org/@inquirer/checkbox/-/checkbox-4.3.2.tgz
-[200] https://registry.npmjs.org/human-signals/-/human-signals-8.0.1.tgz
-[200] https://registry.npmjs.org/diff/-/diff-8.0.3.tgz
-[200] https://registry.npmjs.org/semver/-/semver-7.7.4.tgz
-[200] https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.3.tgz
-[200] https://registry.npmjs.org/fill-range/-/fill-range-7.1.1.tgz
-[200] https://registry.npmjs.org/p-timeout/-/p-timeout-7.0.1.tgz
-[200] https://registry.npmjs.org/socks-proxy-agent/-/socks-proxy-agent-8.0.5.tgz
-[200] https://registry.npmjs.org/picomatch/-/picomatch-4.0.3.tgz
-[200] https://registry.npmjs.org/yeoman-environment/-/yeoman-environment-5.1.3.tgz
-[200] https://registry.npmjs.org/locate-path/-/locate-path-8.0.0.tgz
-[200] https://github.com/sponsors/ljharb
-[200] https://registry.npmjs.org/filelist/-/filelist-1.0.4.tgz
-[200] https://github.com/sponsors/SuperchupuDev
-[200] https://registry.npmjs.org/minipass-flush/-/minipass-flush-1.0.5.tgz
-[200] https://registry.npmjs.org/@types/lodash/-/lodash-4.17.23.tgz
-[200] https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz
-[200] https://registry.npmjs.org/is-utf8/-/is-utf8-0.2.1.tgz
-[200] https://registry.npmjs.org/word-wrap/-/word-wrap-1.2.5.tgz
-[200] https://registry.npmjs.org/first-chunk-stream/-/first-chunk-stream-5.0.0.tgz
-[200] https://registry.npmjs.org/registry-url/-/registry-url-6.0.1.tgz
-[200] https://registry.npmjs.org/@inquirer/select/-/select-4.4.2.tgz
-[200] https://registry.npmjs.org/@pnpm/config.env-replace/-/config.env-replace-1.1.0.tgz
-[200] https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-3.0.1.tgz
-[200] https://registry.npmjs.org/undici-types/-/undici-types-7.16.0.tgz
-[200] https://registry.npmjs.org/path-exists/-/path-exists-5.0.0.tgz
-[200] https://registry.npmjs.org/@yeoman/adapter/-/adapter-3.1.1.tgz
-[200] https://github.com/chalk/ansi-regex?sponsor=1
-[200] https://registry.npmjs.org/node-forge/-/node-forge-1.3.3.tgz
-[200] https://registry.npmjs.org/@reteps/dockerfmt/-/dockerfmt-0.3.6.tgz
-[200] https://registry.npmjs.org/chardet/-/chardet-2.1.1.tgz
-[200] https://registry.npmjs.org/strip-final-newline/-/strip-final-newline-3.0.0.tgz
-[200] https://registry.npmjs.org/npm-install-checks/-/npm-install-checks-8.0.0.tgz
-[200] https://registry.npmjs.org/yoctocolors/-/yoctocolors-2.1.2.tgz
-[200] https://registry.npmjs.org/arrify/-/arrify-3.0.0.tgz
-[200] https://registry.npmjs.org/cacache/-/cacache-20.0.3.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-no-homedir/-/secretlint-rule-no-homedir-11.3.1.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-pattern/-/secretlint-rule-pattern-11.3.1.tgz
-[200] https://registry.npmjs.org/text-decoder/-/text-decoder-1.2.6.tgz
-[200] https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.3.tgz
-[200] https://registry.npmjs.org/@secretlint/resolver/-/resolver-11.3.1.tgz
-[200] https://registry.npmjs.org/read-package-up/-/read-package-up-11.0.0.tgz
-[200] https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-9.0.2.tgz
-[200] https://registry.npmjs.org/json-stringify-nice/-/json-stringify-nice-1.1.4.tgz
-[200] https://registry.npmjs.org/@yeoman/conflicter/-/conflicter-4.0.0.tgz
-[200] https://registry.npmjs.org/write-file-atomic/-/write-file-atomic-7.0.0.tgz
-[200] https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.28.5.tgz
-[200] https://registry.npmjs.org/bn.js/-/bn.js-4.12.2.tgz
-[200] https://registry.npmjs.org/powershell-utils/-/powershell-utils-0.1.0.tgz
-[200] https://registry.npmjs.org/default-browser-id/-/default-browser-id-5.0.1.tgz
-[200] https://registry.npmjs.org/registry-url/-/registry-url-7.2.0.tgz
-[200] https://registry.npmjs.org/treeverse/-/treeverse-3.0.0.tgz
-[200] https://registry.npmjs.org/tuf-js/-/tuf-js-4.1.0.tgz
-[200] https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-6.0.2.tgz
-[200] https://registry.npmjs.org/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz
-[200] https://registry.npmjs.org/human-signals/-/human-signals-5.0.0.tgz
-[200] https://registry.npmjs.org/negotiator/-/negotiator-1.0.0.tgz
+[200] https://registry.npmjs.org/onetime/-/onetime-7.0.0.tgz
+[200] https://github.com/aquasecurity/trivy
+[200] https://www.rubyschema.org/rubocop.json
 [200] https://registry.npmjs.org/commander/-/commander-14.0.3.tgz
-[200] https://registry.npmjs.org/unicorn-magic/-/unicorn-magic-0.4.0.tgz
-[200] https://registry.npmjs.org/default-browser/-/default-browser-5.5.0.tgz
-[200] https://registry.npmjs.org/rxjs/-/rxjs-7.8.2.tgz
-[200] https://registry.npmjs.org/editions/-/editions-6.22.0.tgz
-[200] https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz
-[200] https://registry.npmjs.org/ssri/-/ssri-13.0.1.tgz
-[200] https://github.com/sponsors/feross
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-database-connection-string/-/secretlint-rule-database-connection-string-11.3.1.tgz
-[200] https://registry.npmjs.org/@octokit/openapi-types/-/openapi-types-25.1.0.tgz
-[200] https://registry.npmjs.org/array-differ/-/array-differ-4.0.0.tgz
-[200] https://github.com/chalk/chalk?sponsor=1
-[200] https://registry.npmjs.org/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz
-[200] https://registry.npmjs.org/@npmcli/fs/-/fs-5.0.0.tgz
-[200] https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz
-[200] https://registry.npmjs.org/@types/vinyl/-/vinyl-2.0.12.tgz
-[200] https://registry.npmjs.org/lodash.sortby/-/lodash.sortby-4.7.0.tgz
-[200] https://registry.npmjs.org/optionator/-/optionator-0.9.4.tgz
-[200] https://registry.npmjs.org/proc-log/-/proc-log-6.1.0.tgz
-[200] https://registry.npmjs.org/@secretlint/source-creator/-/source-creator-11.3.1.tgz
-[200] https://registry.npmjs.org/elliptic/-/elliptic-6.6.1.tgz
-[200] https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.2.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-npm/-/secretlint-rule-npm-11.3.1.tgz
-[200] https://registry.npmjs.org/mem-fs-editor/-/mem-fs-editor-11.1.4.tgz
-[200] https://registry.npmjs.org/@types/expect/-/expect-1.20.4.tgz
-[200] https://registry.npmjs.org/find-up-simple/-/find-up-simple-1.0.1.tgz
-[200] https://registry.npmjs.org/bare-events/-/bare-events-2.8.2.tgz
-[200] https://github.com/sponsors/isaacs
-[200] https://registry.npmjs.org/@sigstore/tuf/-/tuf-4.0.1.tgz
-[200] https://registry.npmjs.org/locate-path/-/locate-path-7.2.0.tgz
-[200] https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz
-[200] https://registry.npmjs.org/signal-exit/-/signal-exit-4.1.0.tgz
-[200] https://registry.npmjs.org/just-diff-apply/-/just-diff-apply-5.5.0.tgz
-[200] https://registry.npmjs.org/secp256k1/-/secp256k1-5.0.1.tgz
-[200] https://registry.npmjs.org/get-east-asian-width/-/get-east-asian-width-1.4.0.tgz
-[200] https://registry.npmjs.org/strip-bom-stream/-/strip-bom-stream-5.0.0.tgz
-[200] https://bevry.me/fund
-[200] https://registry.npmjs.org/fs-minipass/-/fs-minipass-3.0.3.tgz
-[200] https://registry.npmjs.org/path-scurry/-/path-scurry-2.0.1.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-no-dotenv/-/secretlint-rule-no-dotenv-11.3.1.tgz
-[200] https://registry.npmjs.org/jake/-/jake-10.9.4.tgz
+[200] https://github.com/errata-ai/write-good/releases.atom
+[200] https://github.com/errata-ai/proselint/releases.atom
+[200] https://github.com/sirupsen/logrus#level-logging
 [200] https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz
-[200] https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz
+[200] https://github.com/errata-ai/proselint/issues/new
+[404] https://github.com/yourusername/your-module-name.git | Network error: Not Found
+[200] https://registry.npmjs.org/npm-registry-fetch/-/npm-registry-fetch-19.1.1.tgz
+[200] https://registry.npmjs.org/hash.js/-/hash.js-1.1.7.tgz
+[200] https://github.com/microsoft/DevSkim
+[200] https://registry.npmjs.org/fast-content-type-parse/-/fast-content-type-parse-2.0.1.tgz
+[200] https://registry.npmjs.org/@textlint/regexp-string-matcher/-/regexp-string-matcher-2.0.2.tgz
+[200] https://github.com/bridgecrewio/checkov#configuration-using-a-config-file
+[200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip
+[200] https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz
+[200] https://github.com/hadolint/hadolint#linting-labels
+[200] https://registry.npmjs.org/balanced-match/-/balanced-match-4.0.2.tgz
+[200] https://registry.npmjs.org/structured-source/-/structured-source-4.0.0.tgz
+[200] https://registry.npmjs.org/@isaacs/string-locale-compare/-/string-locale-compare-1.1.0.tgz
+[200] https://registry.npmjs.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz
+[200] https://registry.npmjs.org/@inquirer/prompts/-/prompts-7.10.1.tgz
+[200] https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz
+[200] https://registry.npmjs.org/default-browser/-/default-browser-5.5.0.tgz
+[200] https://registry.npmjs.org/array-union/-/array-union-3.0.1.tgz
+[200] https://registry.npmjs.org/@inquirer/search/-/search-3.2.2.tgz
+[200] https://registry.npmjs.org/@inquirer/core/-/core-10.3.2.tgz
+[200] https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz
+[200] https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz
+[200] https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz
+[200] https://registry.npmjs.org/json-parse-even-better-errors/-/json-parse-even-better-errors-5.0.0.tgz
+[200] https://registry.npmjs.org/json5/-/json5-2.2.3.tgz
+[200] https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.22.tgz
+[200] https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz
+[200] https://registry.npmjs.org/bare-events/-/bare-events-2.8.2.tgz
+[200] https://github.com/btford/write-good
+[200] https://registry.npmjs.org/cli-spinners/-/cli-spinners-3.4.0.tgz
+[200] https://registry.npmjs.org/editions/-/editions-6.22.0.tgz
+[200] https://registry.npmjs.org/stdin-discarder/-/stdin-discarder-0.3.1.tgz
+[200] https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.2.0.tgz
+[200] https://registry.npmjs.org/npm-packlist/-/npm-packlist-10.0.3.tgz
+[200] https://registry.npmjs.org/first-chunk-stream/-/first-chunk-stream-5.0.0.tgz
+[200] https://registry.npmjs.org/@npmcli/name-from-folder/-/name-from-folder-4.0.0.tgz
+[200] https://github.com/sponsors/feross
+[200] https://registry.npmjs.org/prompts/-/prompts-2.4.2.tgz
+[200] https://registry.npmjs.org/restore-cursor/-/restore-cursor-5.1.0.tgz
+[200] https://registry.npmjs.org/is-path-inside/-/is-path-inside-4.0.0.tgz
+[200] https://registry.npmjs.org/@types/vinyl/-/vinyl-2.0.12.tgz
+[200] https://registry.npmjs.org/@sindresorhus/merge-streams/-/merge-streams-4.0.0.tgz
+[200] https://registry.npmjs.org/minimatch/-/minimatch-10.2.0.tgz
+[200] https://registry.npmjs.org/path-scurry/-/path-scurry-2.0.1.tgz
+[200] https://registry.npmjs.org/cli-cursor/-/cli-cursor-5.0.0.tgz
+[200] https://registry.npmjs.org/get-east-asian-width/-/get-east-asian-width-1.4.0.tgz
+[200] https://registry.npmjs.org/read-package-up/-/read-package-up-11.0.0.tgz
+[200] https://registry.npmjs.org/@yeoman/transform/-/transform-2.1.0.tgz
+[200] https://registry.npmjs.org/npm-run-path/-/npm-run-path-5.3.0.tgz
+[200] https://registry.npmjs.org/type-check/-/type-check-0.4.0.tgz
+[200] https://registry.npmjs.org/braces/-/braces-3.0.3.tgz
+[200] https://registry.npmjs.org/proto-list/-/proto-list-1.2.4.tgz
+[200] https://registry.npmjs.org/pretty-ms/-/pretty-ms-9.3.0.tgz
+[200] https://registry.npmjs.org/rc-config-loader/-/rc-config-loader-4.1.3.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-preset-recommend/-/secretlint-rule-preset-recommend-11.3.1.tgz
+[200] https://registry.npmjs.org/@sindresorhus/merge-streams/-/merge-streams-2.3.0.tgz
+[200] https://registry.npmjs.org/minipass-fetch/-/minipass-fetch-5.0.1.tgz
+[200] https://registry.npmjs.org/@inquirer/confirm/-/confirm-5.1.21.tgz
+[200] https://registry.npmjs.org/p-queue/-/p-queue-8.1.1.tgz
+[200] https://registry.npmjs.org/path-type/-/path-type-6.0.0.tgz
+[200] https://registry.npmjs.org/@inquirer/ansi/-/ansi-1.0.2.tgz
+[200] https://registry.npmjs.org/cacache/-/cacache-20.0.3.tgz
+[200] https://registry.npmjs.org/@sigstore/verify/-/verify-3.1.0.tgz
+[200] https://registry.npmjs.org/lodash.sortby/-/lodash.sortby-4.7.0.tgz
+[200] https://registry.npmjs.org/path-key/-/path-key-4.0.0.tgz
+[200] https://registry.npmjs.org/@octokit/plugin-request-log/-/plugin-request-log-5.3.1.tgz
+[200] https://registry.npmjs.org/@octokit/types/-/types-14.1.0.tgz
+[200] https://registry.npmjs.org/@tufjs/canonical-json/-/canonical-json-2.0.0.tgz
+[200] https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz
+[200] https://registry.npmjs.org/grouped-queue/-/grouped-queue-2.1.0.tgz
+[200] https://registry.npmjs.org/promise-call-limit/-/promise-call-limit-3.0.2.tgz
+[200] https://registry.npmjs.org/err-code/-/err-code-2.0.3.tgz
 [200] https://registry.npmjs.org/github-username/-/github-username-9.0.0.tgz
 [200] https://registry.npmjs.org/is-stream/-/is-stream-3.0.0.tgz
-[200] https://registry.npmjs.org/events-universal/-/events-universal-1.0.1.tgz
-[200] https://registry.npmjs.org/cli-table/-/cli-table-0.3.11.tgz
-[200] https://registry.npmjs.org/@npmcli/git/-/git-7.0.1.tgz
-[200] https://registry.npmjs.org/is-unicode-supported/-/is-unicode-supported-2.1.0.tgz
-[200] https://registry.npmjs.org/@inquirer/expand/-/expand-4.0.23.tgz
-[200] https://registry.npmjs.org/globby/-/globby-14.1.0.tgz
-[200] https://registry.npmjs.org/@octokit/types/-/types-13.10.0.tgz
-[200] https://registry.npmjs.org/retry/-/retry-0.12.0.tgz
-[200] https://github.com/sponsors/sindresorhus
-[200] https://registry.npmjs.org/exponential-backoff/-/exponential-backoff-3.1.3.tgz
-[200] https://registry.npmjs.org/@npmcli/package-json/-/package-json-7.0.4.tgz
+[200] https://registry.npmjs.org/kleur/-/kleur-3.0.3.tgz
 [200] https://registry.npmjs.org/glob/-/glob-13.0.3.tgz
-[200] https://registry.npmjs.org/parse-conflict-json/-/parse-conflict-json-5.0.1.tgz
-[200] https://registry.npmjs.org/globby/-/globby-16.1.0.tgz
-[200] https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz
-[200] https://registry.npmjs.org/chalk/-/chalk-5.6.2.tgz
-[200] https://registry.npmjs.org/node-addon-api/-/node-addon-api-5.1.0.tgz
-[200] https://registry.npmjs.org/type-check/-/type-check-0.4.0.tgz
-[200] https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz
-[200] https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz
-[200] https://registry.npmjs.org/@types/ejs/-/ejs-3.1.5.tgz
-[200] https://registry.npmjs.org/uuid/-/uuid-13.0.0.tgz
-[200] https://registry.npmjs.org/dateformat/-/dateformat-5.0.3.tgz
-[200] https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz
-[200] https://feross.org/support
-[200] https://registry.npmjs.org/ini/-/ini-5.0.0.tgz
-[200] https://registry.npmjs.org/is-wsl/-/is-wsl-3.1.0.tgz
-[200] https://registry.npmjs.org/fastq/-/fastq-1.20.1.tgz
-[200] https://registry.npmjs.org/@npmcli/installed-package-contents/-/installed-package-contents-4.0.0.tgz
-[200] https://registry.npmjs.org/structured-source/-/structured-source-4.0.0.tgz
-[200] https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.10.tgz
-[200] https://registry.npmjs.org/abbrev/-/abbrev-4.0.0.tgz
-[200] https://registry.npmjs.org/onetime/-/onetime-6.0.0.tgz
-[200] https://registry.npmjs.org/minimatch/-/minimatch-5.1.6.tgz
-[200] https://registry.npmjs.org/reusify/-/reusify-1.1.0.tgz
-[200] https://registry.npmjs.org/@sec-ant/readable-stream/-/readable-stream-0.4.1.tgz
-[200] https://registry.npmjs.org/restore-cursor/-/restore-cursor-5.1.0.tgz
-[200] https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz
-[200] https://registry.npmjs.org/@octokit/endpoint/-/endpoint-10.1.4.tgz
-[200] https://registry.npmjs.org/@npmcli/node-gyp/-/node-gyp-5.0.0.tgz
-[200] https://registry.npmjs.org/fs-extra/-/fs-extra-11.3.3.tgz
-[200] https://registry.npmjs.org/brace-expansion/-/brace-expansion-5.0.2.tgz
-[200] https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz
-[200] https://registry.npmjs.org/fly-import/-/fly-import-1.0.0.tgz
-[200] https://registry.npmjs.org/ignore-walk/-/ignore-walk-8.0.0.tgz
-[200] https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.4.tgz
-[200] https://registry.npmjs.org/@secretlint/tester/-/tester-11.3.1.tgz
-[200] https://registry.npmjs.org/lru-cache/-/lru-cache-11.2.6.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-github/-/secretlint-rule-github-11.3.1.tgz
-[200] https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz
-[200] https://registry.npmjs.org/chownr/-/chownr-3.0.0.tgz
-[200] https://registry.npmjs.org/open/-/open-11.0.0.tgz
+[200] https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-no-homedir/-/secretlint-rule-no-homedir-11.3.1.tgz
+[200] https://registry.npmjs.org/prettier-plugin-sh/-/prettier-plugin-sh-0.18.0.tgz
+[200] https://registry.npmjs.org/yoctocolors-cjs/-/yoctocolors-cjs-2.1.3.tgz
+[200] https://registry.npmjs.org/undici-types/-/undici-types-7.16.0.tgz
+[200] https://registry.npmjs.org/pacote/-/pacote-21.3.1.tgz
+[200] https://registry.npmjs.org/ora/-/ora-9.3.0.tgz
+[200] https://registry.npmjs.org/@kwsites/promise-deferred/-/promise-deferred-1.1.1.tgz
+[200] https://registry.npmjs.org/validate-npm-package-name/-/validate-npm-package-name-7.0.2.tgz
+[200] https://registry.npmjs.org/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz
 [200] https://registry.npmjs.org/latest-version/-/latest-version-9.0.0.tgz
-[200] https://registry.npmjs.org/is-interactive/-/is-interactive-2.0.0.tgz
-[200] https://registry.npmjs.org/@inquirer/input/-/input-4.3.1.tgz
+[200] https://registry.npmjs.org/@inquirer/number/-/number-3.0.23.tgz
 [200] https://registry.npmjs.org/bundle-name/-/bundle-name-4.1.0.tgz
-[200] https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz
-[200] https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz
-[200] https://registry.npmjs.org/npm-run-path/-/npm-run-path-5.3.0.tgz
-[200] https://registry.npmjs.org/@octokit/openapi-types/-/openapi-types-24.2.0.tgz
-[200] https://registry.npmjs.org/proto-list/-/proto-list-1.2.4.tgz
+[200] https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz
+[200] https://registry.npmjs.org/cmd-shim/-/cmd-shim-8.0.0.tgz
+[200] https://registry.npmjs.org/jake/-/jake-10.9.4.tgz
+[200] https://registry.npmjs.org/cli-table/-/cli-table-0.3.11.tgz
+[200] https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz
+[200] https://registry.npmjs.org/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz
+[200] https://registry.npmjs.org/mem-fs/-/mem-fs-4.1.3.tgz
+[200] https://registry.npmjs.org/fast-fifo/-/fast-fifo-1.3.2.tgz
+[200] https://registry.npmjs.org/universal-user-agent/-/universal-user-agent-7.0.3.tgz
+[200] https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-basicauth/-/secretlint-rule-basicauth-11.3.1.tgz
+[200] https://registry.npmjs.org/deep-is/-/deep-is-0.1.4.tgz
+[200] https://registry.npmjs.org/json-schema/-/json-schema-0.4.0.tgz
+[200] https://registry.npmjs.org/@npmcli/run-script/-/run-script-10.0.3.tgz
+[200] https://registry.npmjs.org/is-docker/-/is-docker-3.0.0.tgz
+[200] https://registry.npmjs.org/@yeoman/conflicter/-/conflicter-4.0.0.tgz
+[200] https://registry.npmjs.org/@kwsites/file-exists/-/file-exists-1.1.1.tgz
+[200] https://registry.npmjs.org/agent-base/-/agent-base-7.1.4.tgz
+[200] https://registry.npmjs.org/elliptic/-/elliptic-6.6.1.tgz
+[200] https://registry.npmjs.org/filelist/-/filelist-1.0.4.tgz
+[200] https://registry.npmjs.org/@octokit/plugin-paginate-rest/-/plugin-paginate-rest-11.6.0.tgz
+[200] https://registry.npmjs.org/isexe/-/isexe-4.0.0.tgz
+[200] https://registry.npmjs.org/yocto-queue/-/yocto-queue-1.2.2.tgz
+[200] https://registry.npmjs.org/@npmcli/installed-package-contents/-/installed-package-contents-4.0.0.tgz
+[200] https://registry.npmjs.org/ms/-/ms-2.1.3.tgz
+[200] https://registry.npmjs.org/@secretlint/resolver/-/resolver-11.3.1.tgz
+[200] https://registry.npmjs.org/merge2/-/merge2-1.4.1.tgz
+[200] https://registry.npmjs.org/@yeoman/adapter/-/adapter-3.1.1.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-secp256k1-privatekey/-/secretlint-rule-secp256k1-privatekey-11.3.1.tgz
+[200] https://registry.npmjs.org/@sigstore/sign/-/sign-4.1.0.tgz
+[200] https://github.com/sponsors/isaacs
+[200] https://registry.npmjs.org/walk-up-path/-/walk-up-path-4.0.0.tgz
+[200] https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.10.tgz
+[200] https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz
+[200] https://registry.npmjs.org/default-browser-id/-/default-browser-id-5.0.1.tgz
+[200] https://registry.npmjs.org/@types/expect/-/expect-1.20.4.tgz
+[200] https://registry.npmjs.org/run-async/-/run-async-4.0.6.tgz
+[200] https://registry.npmjs.org/npm-bundled/-/npm-bundled-5.0.0.tgz
+[200] https://registry.npmjs.org/unicorn-magic/-/unicorn-magic-0.4.0.tgz
+[200] https://registry.npmjs.org/spdx-correct/-/spdx-correct-3.2.0.tgz
+[200] https://registry.npmjs.org/proc-log/-/proc-log-6.1.0.tgz
+[200] https://registry.npmjs.org/make-fetch-happen/-/make-fetch-happen-15.0.3.tgz
+[200] https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.3.tgz
+[200] https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz
+[200] https://registry.npmjs.org/minizlib/-/minizlib-3.1.0.tgz
+[200] https://registry.npmjs.org/strip-bom-buf/-/strip-bom-buf-3.0.1.tgz
+[200] https://registry.npmjs.org/version-range/-/version-range-4.15.0.tgz
+[200] https://registry.npmjs.org/@yeoman/namespace/-/namespace-1.0.1.tgz
+[200] https://registry.npmjs.org/string-width/-/string-width-8.1.1.tgz
+[200] https://registry.npmjs.org/@types/lodash-es/-/lodash-es-4.17.12.tgz
+[200] https://registry.npmjs.org/async/-/async-3.2.6.tgz
+[200] https://registry.npmjs.org/@inquirer/checkbox/-/checkbox-4.3.2.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-aws/-/secretlint-rule-aws-11.3.1.tgz
+[200] https://registry.npmjs.org/bn.js/-/bn.js-4.12.2.tgz
+[200] https://registry.npmjs.org/fastq/-/fastq-1.20.1.tgz
+[200] https://registry.npmjs.org/tar/-/tar-7.5.7.tgz
+[200] https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz
+[200] https://registry.npmjs.org/levn/-/levn-0.4.1.tgz
+[200] https://registry.npmjs.org/lodash.uniqwith/-/lodash.uniqwith-4.5.0.tgz
+[200] https://registry.npmjs.org/locate-path/-/locate-path-7.2.0.tgz
+[200] https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.3.tgz
+[200] https://registry.npmjs.org/registry-auth-token/-/registry-auth-token-5.1.1.tgz
+[200] https://registry.npmjs.org/vinyl/-/vinyl-3.0.1.tgz
+[200] https://registry.npmjs.org/@npmcli/promise-spawn/-/promise-spawn-9.0.1.tgz
+[200] https://registry.npmjs.org/@inquirer/select/-/select-4.4.2.tgz
+[200] https://registry.npmjs.org/write-file-atomic/-/write-file-atomic-7.0.0.tgz
+[200] https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.2.tgz
+[200] https://registry.npmjs.org/minimatch/-/minimatch-5.1.6.tgz
+[200] https://registry.npmjs.org/fly-import/-/fly-import-1.0.0.tgz
+[200] https://registry.npmjs.org/node-addon-api/-/node-addon-api-5.1.0.tgz
+[200] https://registry.npmjs.org/human-signals/-/human-signals-5.0.0.tgz
+[200] https://github.com/sponsors/gjtorikian/
+[200] https://registry.npmjs.org/@tufjs/models/-/models-4.1.0.tgz
+[200] https://registry.npmjs.org/@secretlint/source-creator/-/source-creator-11.3.1.tgz
+[200] https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz
+[200] https://registry.npmjs.org/which/-/which-6.0.1.tgz
+[200] https://registry.npmjs.org/define-lazy-prop/-/define-lazy-prop-3.0.0.tgz
+[200] https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz
+[200] https://registry.npmjs.org/@secretlint/profiler/-/profiler-11.3.1.tgz
+[200] https://registry.npmjs.org/sisteransi/-/sisteransi-1.0.5.tgz
+[200] https://registry.npmjs.org/@octokit/core/-/core-6.1.6.tgz
+[200] https://registry.npmjs.org/@npmcli/fs/-/fs-5.0.0.tgz
+[200] https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-6.0.2.tgz
+[200] https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz
+[200] https://registry.npmjs.org/run-applescript/-/run-applescript-7.1.0.tgz
+[200] https://registry.npmjs.org/@npmcli/query/-/query-5.0.0.tgz
+[200] https://registry.npmjs.org/onetime/-/onetime-6.0.0.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-github/-/secretlint-rule-github-11.3.1.tgz
+[200] https://registry.npmjs.org/deep-extend/-/deep-extend-0.6.0.tgz
+[200] https://github.com/chalk/strip-ansi?sponsor=1
+[200] https://registry.npmjs.org/binaryextensions/-/binaryextensions-6.11.0.tgz
+[200] https://github.com/chalk/chalk?sponsor=1
 [200] https://registry.npmjs.org/read-pkg/-/read-pkg-9.0.1.tgz
+[200] https://registry.npmjs.org/npm-install-checks/-/npm-install-checks-8.0.0.tgz
+[200] https://registry.npmjs.org/@npmcli/arborist/-/arborist-9.3.0.tgz
+[200] https://registry.npmjs.org/@octokit/request/-/request-9.2.4.tgz
+[200] https://registry.npmjs.org/get-stream/-/get-stream-9.0.1.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-privatekey/-/secretlint-rule-privatekey-11.3.1.tgz
+[200] https://registry.npmjs.org/@secretlint/tester/-/tester-11.3.1.tgz
+[200] https://registry.npmjs.org/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz
+[200] https://registry.npmjs.org/@octokit/types/-/types-13.10.0.tgz
+[200] https://registry.npmjs.org/sh-syntax/-/sh-syntax-0.5.8.tgz
+[200] https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz
+[200] https://registry.npmjs.org/human-signals/-/human-signals-8.0.1.tgz
+[200] https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz
+[200] https://registry.npmjs.org/brace-expansion/-/brace-expansion-5.0.2.tgz
+[200] https://registry.npmjs.org/bn.js/-/bn.js-5.2.2.tgz
+[200] https://registry.npmjs.org/@inquirer/editor/-/editor-4.2.23.tgz
+[200] https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz
+[200] https://registry.npmjs.org/jsonparse/-/jsonparse-1.3.1.tgz
+[200] https://registry.npmjs.org/@sec-ant/readable-stream/-/readable-stream-0.4.1.tgz
+[200] https://registry.npmjs.org/@types/lodash/-/lodash-4.17.23.tgz
+[200] https://registry.npmjs.org/diff/-/diff-8.0.3.tgz
+[200] https://registry.npmjs.org/semver/-/semver-7.7.4.tgz
+[200] https://registry.npmjs.org/textextensions/-/textextensions-6.11.0.tgz
+[200] https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz
+[200] https://registry.npmjs.org/globby/-/globby-16.1.0.tgz
+[200] https://registry.npmjs.org/picomatch/-/picomatch-4.0.3.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-gcp/-/secretlint-rule-gcp-11.3.1.tgz
+[200] https://registry.npmjs.org/binary-extensions/-/binary-extensions-3.1.0.tgz
+[200] https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz
+[200] https://registry.npmjs.org/minipass-sized/-/minipass-sized-2.0.0.tgz
+[200] https://registry.npmjs.org/yoctocolors/-/yoctocolors-2.1.2.tgz
+[200] https://registry.npmjs.org/@npmcli/git/-/git-7.0.1.tgz
+[200] https://registry.npmjs.org/reusify/-/reusify-1.1.0.tgz
+[200] https://github.com/PowerShell/PSScriptAnalyzer
+[200] https://registry.npmjs.org/@octokit/rest/-/rest-21.1.1.tgz
+[200] https://registry.npmjs.org/yeoman-environment/-/yeoman-environment-5.1.3.tgz
+[200] https://registry.npmjs.org/eventemitter3/-/eventemitter3-5.0.4.tgz
+[200] https://registry.npmjs.org/yeoman-generator/-/yeoman-generator-7.5.1.tgz
+[200] https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-5.0.0.tgz
+[200] https://registry.npmjs.org/path-exists/-/path-exists-5.0.0.tgz
+[200] https://registry.npmjs.org/isbinaryfile/-/isbinaryfile-5.0.7.tgz
+[200] https://github.com/sponsors/fastify
+[200] https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.23.tgz
+[200] https://registry.npmjs.org/ini/-/ini-6.0.0.tgz
+[200] https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz
+[200] https://registry.npmjs.org/fs-minipass/-/fs-minipass-3.0.3.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-database-connection-string/-/secretlint-rule-database-connection-string-11.3.1.tgz
+[200] https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.15.tgz
+[200] https://registry.npmjs.org/pretty-bytes/-/pretty-bytes-7.1.0.tgz
+[200] https://registry.npmjs.org/universalify/-/universalify-2.0.1.tgz
+[200] https://registry.npmjs.org/@sigstore/bundle/-/bundle-4.0.0.tgz
+[200] https://registry.npmjs.org/execa/-/execa-8.0.1.tgz
+[200] https://registry.npmjs.org/tuf-js/-/tuf-js-4.1.0.tgz
+[200] https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz
+[200] https://registry.npmjs.org/promise-retry/-/promise-retry-2.0.1.tgz
+[200] https://registry.npmjs.org/merge-stream/-/merge-stream-2.0.0.tgz
+[200] https://registry.npmjs.org/minipass-pipeline/-/minipass-pipeline-1.2.4.tgz
+[200] https://registry.npmjs.org/parse-ms/-/parse-ms-4.0.0.tgz
+[200] https://registry.npmjs.org/json-stringify-nice/-/json-stringify-nice-1.1.4.tgz
+[200] https://registry.npmjs.org/ip-address/-/ip-address-10.1.0.tgz
+[200] https://registry.npmjs.org/streamx/-/streamx-2.23.0.tgz
+[200] https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz
+[200] https://registry.npmjs.org/is-inside-container/-/is-inside-container-1.0.0.tgz
+[200] https://github.com/chalk/ansi-styles?sponsor=1
+[200] https://registry.npmjs.org/mem-fs-editor/-/mem-fs-editor-11.1.4.tgz
+[200] https://registry.npmjs.org/p-timeout/-/p-timeout-6.1.4.tgz
+[200] https://registry.npmjs.org/p-limit/-/p-limit-4.0.0.tgz
+[200] https://registry.npmjs.org/slash/-/slash-5.1.0.tgz
+[200] https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz
+[200] https://registry.npmjs.org/is-glob/-/is-glob-4.0.3.tgz
+[200] https://registry.npmjs.org/@npmcli/agent/-/agent-4.0.0.tgz
+[200] https://registry.npmjs.org/brorand/-/brorand-1.1.0.tgz
+[200] https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-7.1.1.tgz
+[200] https://registry.npmjs.org/@isaacs/fs-minipass/-/fs-minipass-4.0.1.tgz
+[200] https://registry.npmjs.org/unicorn-magic/-/unicorn-magic-0.3.0.tgz
+[200] https://registry.npmjs.org/lru-cache/-/lru-cache-11.2.6.tgz
+[200] https://registry.npmjs.org/abbrev/-/abbrev-4.0.0.tgz
+[200] https://registry.npmjs.org/chalk/-/chalk-5.6.2.tgz
+[200] https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.0.tgz
+[200] https://registry.npmjs.org/untildify/-/untildify-6.0.0.tgz
+[200] https://registry.npmjs.org/parse-json/-/parse-json-8.3.0.tgz
+[200] https://registry.npmjs.org/p-locate/-/p-locate-6.0.0.tgz
+[200] https://registry.npmjs.org/ini/-/ini-1.3.8.tgz
+[200] https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz
+[200] https://registry.npmjs.org/@types/node/-/node-25.2.3.tgz
+[200] https://registry.npmjs.org/p-map/-/p-map-7.0.4.tgz
+[200] https://registry.npmjs.org/unicorn-magic/-/unicorn-magic-0.1.0.tgz
+[200] https://registry.npmjs.org/strip-bom-stream/-/strip-bom-stream-5.0.0.tgz
+[200] https://github.com/sindresorhus/execa?sponsor=1
+[200] https://registry.npmjs.org/istextorbinary/-/istextorbinary-9.5.0.tgz
+[200] https://github.com/sponsors/jonschlinkert
+[200] https://registry.npmjs.org/@pnpm/npm-conf/-/npm-conf-3.0.2.tgz
+[200] https://registry.npmjs.org/package-json/-/package-json-10.0.1.tgz
+[200] https://registry.npmjs.org/@octokit/request-error/-/request-error-6.1.8.tgz
+[200] https://registry.npmjs.org/is-interactive/-/is-interactive-2.0.0.tgz
+[200] https://registry.npmjs.org/@inquirer/password/-/password-4.0.23.tgz
+[200] https://registry.npmjs.org/npm-pick-manifest/-/npm-pick-manifest-11.0.3.tgz
+[200] https://registry.npmjs.org/text-decoder/-/text-decoder-1.2.6.tgz
+[200] https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.29.0.tgz
+[200] https://registry.npmjs.org/simple-git/-/simple-git-3.31.1.tgz
+[200] https://github.com/sponsors/ljharb
+[200] https://registry.npmjs.org/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz
+[403] https://www.patreon.com/feross | 403 Forbidden: Forbidden
+[200] https://registry.npmjs.org/arrify/-/arrify-3.0.0.tgz
+[200] https://registry.npmjs.org/find-up-simple/-/find-up-simple-1.0.1.tgz
+[200] https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz
+[200] https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz
+[200] https://registry.npmjs.org/@pnpm/network.ca-file/-/network.ca-file-1.0.2.tgz
+[200] https://registry.npmjs.org/ssri/-/ssri-13.0.1.tgz
+[200] https://registry.npmjs.org/@inquirer/figures/-/figures-1.0.15.tgz
+[200] https://registry.npmjs.org/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz
+[200] https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz
+[200] https://registry.npmjs.org/type-fest/-/type-fest-4.41.0.tgz
+[200] https://registry.npmjs.org/just-diff/-/just-diff-6.0.2.tgz
+[200] https://registry.npmjs.org/fs-extra/-/fs-extra-11.3.3.tgz
+[200] https://registry.npmjs.org/@sigstore/core/-/core-3.1.0.tgz
+[200] https://registry.npmjs.org/treeverse/-/treeverse-3.0.0.tgz
+[200] https://registry.npmjs.org/fill-range/-/fill-range-7.1.1.tgz
+[200] https://registry.npmjs.org/strip-final-newline/-/strip-final-newline-3.0.0.tgz
+[200] https://registry.npmjs.org/socks-proxy-agent/-/socks-proxy-agent-8.0.5.tgz
+[200] https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz
+[200] https://registry.npmjs.org/node-gyp/-/node-gyp-12.2.0.tgz
+[200] https://registry.npmjs.org/events-universal/-/events-universal-1.0.1.tgz
+[200] https://registry.npmjs.org/jsonfile/-/jsonfile-6.2.0.tgz
+[200] https://registry.npmjs.org/clone/-/clone-2.1.2.tgz
+[200] https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.2.tgz
+[200] https://registry.npmjs.org/mega-linter-runner/-/mega-linter-runner-9.3.0.tgz
+[200] https://registry.npmjs.org/vinyl-file/-/vinyl-file-5.0.0.tgz
+[200] https://opencollective.com/fastify
+[200] https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz
+[200] https://registry.npmjs.org/@npmcli/package-json/-/package-json-7.0.4.tgz
+[200] https://registry.npmjs.org/debug/-/debug-4.4.3.tgz
+[200] https://registry.npmjs.org/@yeoman/types/-/types-1.9.1.tgz
+[200] https://registry.npmjs.org/@inquirer/rawlist/-/rawlist-4.1.11.tgz
+[200] https://registry.npmjs.org/cli-width/-/cli-width-4.1.0.tgz
+[200] https://registry.npmjs.org/boundary/-/boundary-2.0.0.tgz
+[200] https://registry.npmjs.org/micromatch/-/micromatch-4.0.8.tgz
+[200] https://registry.npmjs.org/@npmcli/node-gyp/-/node-gyp-5.0.0.tgz
+[200] https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz
+[200] https://registry.npmjs.org/common-ancestor-path/-/common-ancestor-path-2.0.0.tgz
+[200] https://github.com/sponsors/SuperchupuDev
+[200] https://registry.npmjs.org/mimic-fn/-/mimic-fn-4.0.0.tgz
+[200] https://registry.npmjs.org/get-stream/-/get-stream-8.0.1.tgz
+[200] https://registry.npmjs.org/uuid/-/uuid-13.0.0.tgz
+[200] https://registry.npmjs.org/is-unicode-supported/-/is-unicode-supported-2.1.0.tgz
+[200] https://registry.npmjs.org/teex/-/teex-1.0.1.tgz
+[200] https://registry.npmjs.org/which/-/which-2.0.2.tgz
+[200] https://registry.npmjs.org/yallist/-/yallist-5.0.0.tgz
+[200] https://registry.npmjs.org/wsl-utils/-/wsl-utils-0.3.1.tgz
+[200] https://registry.npmjs.org/sort-keys/-/sort-keys-5.1.0.tgz
+[200] https://registry.npmjs.org/word-wrap/-/word-wrap-1.2.5.tgz
+[200] https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz
+[200] https://registry.npmjs.org/open/-/open-11.0.0.tgz
+[EXCLUDED] https://registry.npmjs.org/node-gyp-build/-/node-gyp-build-4.8.4.tgz
+[200] https://registry.npmjs.org/promise-all-reject-late/-/promise-all-reject-late-1.0.1.tgz
+[200] https://registry.npmjs.org/powershell-utils/-/powershell-utils-0.1.0.tgz
+[200] https://registry.npmjs.org/@npmcli/redact/-/redact-4.0.0.tgz
+[200] https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz
+[200] https://registry.npmjs.org/optionator/-/optionator-0.9.4.tgz
+[200] https://registry.npmjs.org/p-timeout/-/p-timeout-7.0.1.tgz
+[200] https://github.com/sindresorhus/ky?sponsor=1
+[200] https://registry.npmjs.org/b4a/-/b4a-1.7.4.tgz
+[200] https://opencollective.com/unts
+[200] https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.4.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-npm/-/secretlint-rule-npm-11.3.1.tgz
+[200] https://registry.npmjs.org/signal-exit/-/signal-exit-4.1.0.tgz
+[200] https://registry.npmjs.org/socks/-/socks-2.8.7.tgz
+[200] https://registry.npmjs.org/strip-final-newline/-/strip-final-newline-4.0.0.tgz
+[200] https://github.com/sponsors/ctavan
+[200] https://registry.npmjs.org/@inquirer/expand/-/expand-4.0.23.tgz
+[200] https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz
+[200] https://registry.npmjs.org/@types/ejs/-/ejs-3.1.5.tgz
+[200] https://registry.npmjs.org/@secretlint/types/-/types-11.3.1.tgz
+[200] https://registry.npmjs.org/before-after-hook/-/before-after-hook-3.0.2.tgz
+[200] https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz
+[200] https://registry.npmjs.org/@reteps/dockerfmt/-/dockerfmt-0.3.6.tgz
+[200] https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-6.2.0.tgz
+[200] https://registry.npmjs.org/is-wsl/-/is-wsl-3.1.0.tgz
+[200] https://registry.npmjs.org/read-cmd-shim/-/read-cmd-shim-6.0.0.tgz
+[200] https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz
+[200] https://registry.npmjs.org/mimic-function/-/mimic-function-5.0.1.tgz
+[200] https://registry.npmjs.org/just-diff-apply/-/just-diff-apply-5.5.0.tgz
+[200] https://registry.npmjs.org/log-symbols/-/log-symbols-7.0.1.tgz
+[200] https://registry.npmjs.org/rc/-/rc-1.2.8.tgz
+[200] https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz
+[200] https://registry.npmjs.org/registry-url/-/registry-url-7.2.0.tgz
+[200] https://registry.npmjs.org/execa/-/execa-9.6.1.tgz
+[200] https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz
+[200] https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.2.tgz
+[200] https://registry.npmjs.org/proggy/-/proggy-4.0.0.tgz
+[200] https://registry.npmjs.org/find-package-json/-/find-package-json-1.2.0.tgz
+[200] https://registry.npmjs.org/p-transform/-/p-transform-5.0.1.tgz
+[200] https://registry.npmjs.org/negotiator/-/negotiator-1.0.0.tgz
+[200] https://registry.npmjs.org/figures/-/figures-6.1.0.tgz
+[200] https://registry.npmjs.org/@pnpm/config.env-replace/-/config.env-replace-1.1.0.tgz
+[200] https://registry.npmjs.org/@sigstore/protobuf-specs/-/protobuf-specs-0.5.0.tgz
 [200] https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz
 [200] https://registry.npmjs.org/@npmcli/map-workspaces/-/map-workspaces-5.0.3.tgz
-[200] https://registry.npmjs.org/p-locate/-/p-locate-6.0.0.tgz
-[200] https://registry.npmjs.org/promise-retry/-/promise-retry-2.0.1.tgz
-[200] https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz
-[200] https://registry.npmjs.org/minizlib/-/minizlib-3.1.0.tgz
-[200] https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz
-[200] https://registry.npmjs.org/eventemitter3/-/eventemitter3-5.0.4.tgz
-[200] https://registry.npmjs.org/socks/-/socks-2.8.7.tgz
-[200] https://registry.npmjs.org/npm-package-arg/-/npm-package-arg-13.0.2.tgz
-[200] https://registry.npmjs.org/vinyl-file/-/vinyl-file-5.0.0.tgz
-[200] https://registry.npmjs.org/find-up/-/find-up-7.0.0.tgz
-[200] https://registry.npmjs.org/cli-spinners/-/cli-spinners-3.4.0.tgz
-[200] https://registry.npmjs.org/merge-stream/-/merge-stream-2.0.0.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-gcp/-/secretlint-rule-gcp-11.3.1.tgz
-[200] https://registry.npmjs.org/ip-address/-/ip-address-10.1.0.tgz
-[200] https://registry.npmjs.org/jsonfile/-/jsonfile-6.2.0.tgz
-[200] https://registry.npmjs.org/vinyl/-/vinyl-3.0.1.tgz
-[200] https://registry.npmjs.org/registry-auth-token/-/registry-auth-token-5.1.1.tgz
-[200] https://registry.npmjs.org/before-after-hook/-/before-after-hook-3.0.2.tgz
-[200] https://registry.npmjs.org/cli-cursor/-/cli-cursor-5.0.0.tgz
-[200] https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz
+[200] https://registry.npmjs.org/array-differ/-/array-differ-4.0.0.tgz
+[200] https://registry.npmjs.org/@octokit/endpoint/-/endpoint-10.1.4.tgz
+[200] https://registry.npmjs.org/jackspeak/-/jackspeak-4.2.3.tgz
+[200] https://registry.npmjs.org/@secretlint/core/-/core-11.3.1.tgz
+[200] https://registry.npmjs.org/chownr/-/chownr-3.0.0.tgz
 [200] https://registry.npmjs.org/sigstore/-/sigstore-4.1.0.tgz
-[200] https://github.com/steveukx/git-js?sponsor=1
-[200] https://registry.npmjs.org/npm-packlist/-/npm-packlist-10.0.3.tgz
-[200] https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.15.tgz
-[200] https://registry.npmjs.org/run-applescript/-/run-applescript-7.1.0.tgz
-[200] https://registry.npmjs.org/ejs/-/ejs-3.1.10.tgz
-[200] https://registry.npmjs.org/ora/-/ora-9.3.0.tgz
-[200] https://registry.npmjs.org/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz
-[200] https://registry.npmjs.org/json-schema/-/json-schema-0.4.0.tgz
-[200] https://opencollective.com/fastify
-[200] https://registry.npmjs.org/make-fetch-happen/-/make-fetch-happen-15.0.3.tgz
-[200] https://registry.npmjs.org/deep-is/-/deep-is-0.1.4.tgz
-[200] https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-5.0.0.tgz
-[200] https://github.com/sindresorhus/execa?sponsor=1
-[200] https://registry.npmjs.org/@types/node/-/node-25.2.3.tgz
-[200] https://registry.npmjs.org/@inquirer/confirm/-/confirm-5.1.21.tgz
-[200] https://registry.npmjs.org/@yeoman/types/-/types-1.9.1.tgz
-[200] https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-7.1.1.tgz
-[200] https://registry.npmjs.org/figures/-/figures-6.1.0.tgz
-[200] https://registry.npmjs.org/@octokit/request/-/request-9.2.4.tgz
-[200] https://registry.npmjs.org/pretty-ms/-/pretty-ms-9.3.0.tgz
-[200] https://github.com/prettier/prettier?sponsor=1
-[200] https://registry.npmjs.org/@secretlint/profiler/-/profiler-11.3.1.tgz
-[200] https://registry.npmjs.org/prettier-plugin-sh/-/prettier-plugin-sh-0.18.0.tgz
-[200] https://registry.npmjs.org/teex/-/teex-1.0.1.tgz
-[200] https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz
-[200] https://registry.npmjs.org/@npmcli/query/-/query-5.0.0.tgz
-[200] https://registry.npmjs.org/common-ancestor-path/-/common-ancestor-path-2.0.0.tgz
-[200] https://registry.npmjs.org/clone/-/clone-2.1.2.tgz
-[200] https://github.com/sponsors/jonschlinkert
-[200] https://registry.npmjs.org/isbinaryfile/-/isbinaryfile-5.0.7.tgz
-[200] https://registry.npmjs.org/is-in-ssh/-/is-in-ssh-1.0.0.tgz
-[200] https://registry.npmjs.org/unicorn-magic/-/unicorn-magic-0.1.0.tgz
-[200] https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz
-[200] https://registry.npmjs.org/prettier/-/prettier-3.8.1.tgz
-[200] https://registry.npmjs.org/mute-stream/-/mute-stream-2.0.0.tgz
-[200] https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz
-[200] https://registry.npmjs.org/prompts/-/prompts-2.4.2.tgz
-[EXCLUDED] file:///github/workspace/docs/reports/megalinter
+[200] https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz
+[200] https://registry.npmjs.org/npm-run-path/-/npm-run-path-6.0.0.tgz
+[200] https://registry.npmjs.org/secp256k1/-/secp256k1-5.0.1.tgz
+[200] https://registry.npmjs.org/ignore/-/ignore-7.0.5.tgz
 [200] https://registry.npmjs.org/inquirer/-/inquirer-12.11.1.tgz
-[200] https://registry.npmjs.org/array-union/-/array-union-3.0.1.tgz
-[200] https://registry.npmjs.org/minimatch/-/minimatch-10.2.0.tgz
-[200] https://registry.npmjs.org/@octokit/graphql/-/graphql-8.2.2.tgz
-[200] https://registry.npmjs.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz
-[200] https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.2.0.tgz
-[200] https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz
+[200] https://registry.npmjs.org/@inquirer/type/-/type-3.0.10.tgz
+[200] https://registry.npmjs.org/npm-package-arg/-/npm-package-arg-13.0.2.tgz
 [200] https://registry.npmjs.org/@secretlint/secretlint-rule-openai/-/secretlint-rule-openai-11.3.1.tgz
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-secp256k1-privatekey/-/secretlint-rule-secp256k1-privatekey-11.3.1.tgz
-[200] https://registry.npmjs.org/@sigstore/bundle/-/bundle-4.0.0.tgz
-[200] https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz
-[200] https://github.com/sponsors/ctavan
-[200] https://opencollective.com/sh-syntax
+[200] https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-4.1.0.tgz
+[200] https://registry.npmjs.org/@octokit/graphql/-/graphql-8.2.2.tgz
+[200] https://registry.npmjs.org/find-up/-/find-up-7.0.0.tgz
+[200] https://registry.npmjs.org/is-stream/-/is-stream-4.0.1.tgz
+[200] https://registry.npmjs.org/@octokit/plugin-rest-endpoint-methods/-/plugin-rest-endpoint-methods-13.5.0.tgz
+[200] https://registry.npmjs.org/npm-normalize-package-bin/-/npm-normalize-package-bin-5.0.0.tgz
+[200] https://registry.npmjs.org/which-package-manager/-/which-package-manager-1.0.1.tgz
+[200] https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz
+[200] https://registry.npmjs.org/chardet/-/chardet-2.1.1.tgz
+[200] https://registry.npmjs.org/node-forge/-/node-forge-1.3.3.tgz
+[200] https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-9.0.2.tgz
+[200] https://registry.npmjs.org/ejs/-/ejs-3.1.10.tgz
+[200] https://registry.npmjs.org/unique-slug/-/unique-slug-6.0.0.tgz
+[200] https://registry.npmjs.org/env-paths/-/env-paths-3.0.0.tgz
+[200] https://registry.npmjs.org/is-in-ssh/-/is-in-ssh-1.0.0.tgz
+[200] https://registry.npmjs.org/@secretlint/config-loader/-/config-loader-11.3.1.tgz
+[200] https://registry.npmjs.org/ignore-walk/-/ignore-walk-8.0.0.tgz
+[200] https://registry.npmjs.org/mute-stream/-/mute-stream-2.0.0.tgz
+[200] https://registry.npmjs.org/prettier/-/prettier-3.8.1.tgz
+[200] https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.28.5.tgz
+[200] https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz
+[200] https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz
+[200] https://github.com/sponsors/sindresorhus
+[200] https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz
+[200] https://registry.npmjs.org/parse-conflict-json/-/parse-conflict-json-5.0.1.tgz
+[200] https://registry.npmjs.org/exponential-backoff/-/exponential-backoff-3.1.3.tgz
+[200] https://registry.npmjs.org/bin-links/-/bin-links-6.0.0.tgz
+[200] https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz
+[200] https://registry.npmjs.org/@octokit/openapi-types/-/openapi-types-25.1.0.tgz
+[200] https://registry.npmjs.org/minipass-flush/-/minipass-flush-1.0.5.tgz
+[200] https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz
+[200] https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz
+[200] https://registry.npmjs.org/replace-ext/-/replace-ext-2.0.0.tgz
+[200] https://registry.npmjs.org/p-queue/-/p-queue-9.1.0.tgz
+[200] https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz
 [200] https://opencollective.com/express
-[200] https://registry.npmjs.org/@secretlint/secretlint-rule-privatekey/-/secretlint-rule-privatekey-11.3.1.tgz
-[200] https://github.com/chalk/ansi-styles?sponsor=1
-[200] https://github.com/sponsors/gjtorikian/
-[200] https://github.com/sindresorhus/ky?sponsor=1
-[200] https://opencollective.com/unts
+[200] https://registry.npmjs.org/globby/-/globby-14.1.0.tgz
+[200] https://registry.npmjs.org/registry-url/-/registry-url-6.0.1.tgz
+[200] https://registry.npmjs.org/@sigstore/tuf/-/tuf-4.0.1.tgz
+[200] https://registry.npmjs.org/dateformat/-/dateformat-5.0.3.tgz
+[200] https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz
+[200] https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz
+[200] https://registry.npmjs.org/@inquirer/external-editor/-/external-editor-1.0.3.tgz
+[200] https://registry.npmjs.org/@isaacs/cliui/-/cliui-9.0.0.tgz
+[200] https://registry.npmjs.org/colors/-/colors-1.0.3.tgz
+[200] https://registry.npmjs.org/unique-filename/-/unique-filename-5.0.0.tgz
+[200] https://registry.npmjs.org/locate-path/-/locate-path-8.0.0.tgz
+[200] https://registry.npmjs.org/minipass-collect/-/minipass-collect-2.0.1.tgz
+[200] https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.7.2.tgz
+[200] https://registry.npmjs.org/prettier-plugin-pkg/-/prettier-plugin-pkg-0.21.2.tgz
+[200] https://registry.npmjs.org/index-to-position/-/index-to-position-1.2.0.tgz
+[200] https://registry.npmjs.org/is-utf8/-/is-utf8-0.2.1.tgz
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-pattern/-/secretlint-rule-pattern-11.3.1.tgz
+[200] https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz
+[200] https://registry.npmjs.org/@octokit/auth-token/-/auth-token-5.1.2.tgz
+[200] https://registry.npmjs.org/@types/secp256k1/-/secp256k1-4.0.7.tgz
+[200] https://registry.npmjs.org/ini/-/ini-5.0.0.tgz
+[200] https://registry.npmjs.org/@inquirer/input/-/input-4.3.1.tgz
+[200] https://registry.npmjs.org/config-chain/-/config-chain-1.1.13.tgz
+[200] https://registry.npmjs.org/nopt/-/nopt-9.0.0.tgz
+[200] https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-3.0.1.tgz
+[200] https://registry.npmjs.org/ky/-/ky-1.14.3.tgz
+[200] https://github.com/prettier/prettier?sponsor=1
+[200] https://registry.npmjs.org/@secretlint/secretlint-rule-no-dotenv/-/secretlint-rule-no-dotenv-11.3.1.tgz
+[200] https://registry.npmjs.org/@octokit/openapi-types/-/openapi-types-24.2.0.tgz
+[EXCLUDED] file:///github/workspace/docs/reports/megalinter
+[EXCLUDED] http://localhost:8000/docs
+[EXCLUDED] http://localhost:8000/health
+[EXCLUDED] http://localhost:8000/
+[200] https://registry.npmjs.org/@npmcli/metavuln-calculator/-/metavuln-calculator-9.0.3.tgz
+[200] https://registry.npmjs.org/retry/-/retry-0.12.0.tgz
+[200] https://registry.npmjs.org/rxjs/-/rxjs-7.8.2.tgz
+[200] https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz
+[200] https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz
+[200] https://registry.npmjs.org/multimatch/-/multimatch-7.0.0.tgz
+[200] https://github.com/sponsors/broofa
+[200] https://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz
+[200] https://registry.npmjs.org/commondir/-/commondir-1.0.1.tgz
+[200] https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-2.5.0.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/android-arm/-/android-arm-0.27.3.tgz
+[200] https://registry.npmjs.org/@types/bn.js/-/bn.js-5.2.0.tgz
+[200] https://github.com/steveukx/git-js?sponsor=1
+[EXCLUDED] https://registry.npmjs.org/esbuild/-/esbuild-0.27.3.tgz
+[200] https://registry.npmjs.org/ignore/-/ignore-7.0.5.tgz | OK (cached)
+[200] https://registry.npmjs.org/flat-cache/-/flat-cache-4.0.1.tgz
+[200] https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-7.0.2.tgz
+[200] https://registry.npmjs.org/@babel/generator/-/generator-7.29.1.tgz
+[200] https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-8.56.0.tgz
+[200] https://registry.npmjs.org/debug/-/debug-4.4.3.tgz | OK (cached)
+[200] https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.15.tgz | OK (cached)
+[200] https://github.com/sponsors/SuperchupuDev | OK (cached)
+[200] https://bevry.me/fund
+[200] https://registry.npmjs.org/@rollup/rollup-win32-ia32-msvc/-/rollup-win32-ia32-msvc-4.57.1.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-linux-loong64-musl/-/rollup-linux-loong64-musl-4.57.1.tgz
+[200] https://github.com/sponsors/epoberezkin
+[200] https://github.com/chalk/chalk?sponsor=1 | OK (cached)
+[200] https://react.dev/learn/react-compiler/installation
+[200] https://oxc.rs/
+[200] https://opencollective.com/sh-syntax
+[EXCLUDED] https://registry.npmjs.org/@esbuild/aix-ppc64/-/aix-ppc64-0.27.3.tgz
+[200] https://registry.npmjs.org/which/-/which-2.0.2.tgz | OK (cached)
+[EXCLUDED] https://registry.npmjs.org/@esbuild/linux-s390x/-/linux-s390x-0.27.3.tgz
+[200] https://babeljs.io/
+[200] https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz | OK (cached)
+[200] https://github.com/tenable/terrascan
+[200] https://registry.npmjs.org/@types/estree/-/estree-1.0.8.tgz
+[200] https://registry.npmjs.org/react-dom/-/react-dom-19.2.4.tgz
+[200] https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz | OK (cached)
+[200] https://registry.npmjs.org/@rollup/rollup-android-arm64/-/rollup-android-arm64-4.57.1.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-linux-riscv64-gnu/-/rollup-linux-riscv64-gnu-4.57.1.tgz
+[200] https://github.com/sponsors/epoberezkin
+[200] https://registry.npmjs.org/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.57.1.tgz
+[200] https://registry.npmjs.org/picomatch/-/picomatch-4.0.3.tgz | OK (cached)
+[200] https://swc.rs/
+[200] https://registry.npmjs.org/glob-parent/-/glob-parent-6.0.2.tgz
+[200] https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/linux-ppc64/-/linux-ppc64-0.27.3.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-linux-arm-gnueabihf/-/rollup-linux-arm-gnueabihf-4.57.1.tgz
+[200] https://vite.dev/guide/rolldown
+[200] https://registry.npmjs.org/@babel/traverse/-/traverse-7.29.0.tgz
+[200] https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz
+[200] https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz | OK (cached)
+[200] https://registry.npmjs.org/@eslint-community/regexpp/-/regexpp-4.12.2.tgz
+[200] https://registry.npmjs.org/@eslint/plugin-kit/-/plugin-kit-0.4.1.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-linux-arm64-musl/-/rollup-linux-arm64-musl-4.57.1.tgz
+[200] https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-4.2.1.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/netbsd-arm64/-/netbsd-arm64-0.27.3.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-linux-riscv64-musl/-/rollup-linux-riscv64-musl-4.57.1.tgz
+[200] https://registry.npmjs.org/react/-/react-19.2.4.tgz
+[200] https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz | OK (cached)
+[200] https://registry.npmjs.org/json5/-/json5-2.2.3.tgz | OK (cached)
+[200] https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-linux-ppc64-gnu/-/rollup-linux-ppc64-gnu-4.57.1.tgz
+[200] https://registry.npmjs.org/path-exists/-/path-exists-4.0.0.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/openharmony-arm64/-/openharmony-arm64-0.27.3.tgz
+[200] https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz
+[200] https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.286.tgz
+[200] https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.28.5.tgz | OK (cached)
+[200] https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz | OK (cached)
+[200] https://registry.npmjs.org/@rollup/rollup-freebsd-arm64/-/rollup-freebsd-arm64-4.57.1.tgz
+[200] https://registry.npmjs.org/@typescript-eslint/tsconfig-utils/-/tsconfig-utils-8.56.0.tgz
+[200] https://registry.npmjs.org/@humanwhocodes/module-importer/-/module-importer-1.0.1.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/win32-ia32/-/win32-ia32-0.27.3.tgz
+[200] https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x
+[EXCLUDED] https://registry.npmjs.org/@esbuild/freebsd-arm64/-/freebsd-arm64-0.27.3.tgz
+[200] https://registry.npmjs.org/callsites/-/callsites-3.1.0.tgz
+[200] https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-3.3.3.tgz
+[200] https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom
+[200] https://registry.npmjs.org/@types/react/-/react-19.2.14.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-freebsd-x64/-/rollup-freebsd-x64-4.57.1.tgz
+[200] https://registry.npmjs.org/@babel/helper-module-transforms/-/helper-module-transforms-7.28.6.tgz
+[200] https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz | OK (cached)
+[200] https://registry.npmjs.org/@eslint-community/eslint-utils/-/eslint-utils-4.9.1.tgz
+[200] https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-5.0.0.tgz
+[200] https://github.com/chalk/ansi-regex?sponsor=1
+[200] https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz | OK (cached)
+[200] https://registry.npmjs.org/eslint/-/eslint-9.39.2.tgz
+[200] https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc
+[200] https://registry.npmjs.org/file-entry-cache/-/file-entry-cache-8.0.0.tgz
+[200] https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz
+[200] https://registry.npmjs.org/@babel/plugin-transform-react-jsx-source/-/plugin-transform-react-jsx-source-7.27.1.tgz
+[200] https://registry.npmjs.org/uri-js/-/uri-js-4.4.1.tgz
+[200] https://registry.npmjs.org/deep-is/-/deep-is-0.1.4.tgz | OK (cached)
+[200] https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz | OK (cached)
+[200] https://registry.npmjs.org/escalade/-/escalade-3.2.0.tgz
+[200] https://github.com/chalk/ansi-styles?sponsor=1 | OK (cached)
+[200] https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz | OK (cached)
+[EXCLUDED] https://registry.npmjs.org/@esbuild/freebsd-x64/-/freebsd-x64-0.27.3.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/linux-arm64/-/linux-arm64-0.27.3.tgz
+[200] https://registry.npmjs.org/browserslist/-/browserslist-4.28.1.tgz
+[200] https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz | OK (cached)
+[200] https://registry.npmjs.org/parent-module/-/parent-module-1.0.1.tgz
+[200] https://registry.npmjs.org/@types/node/-/node-24.10.13.tgz
+[200] https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-8.56.0.tgz
+[200] https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz
+[200] https://registry.npmjs.org/gensync/-/gensync-1.0.0-beta.2.tgz
+[200] https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.1.tgz
+[200] https://registry.npmjs.org/@babel/template/-/template-7.28.6.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/android-arm64/-/android-arm64-0.27.3.tgz
+[200] https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz
+[200] https://registry.npmjs.org/optionator/-/optionator-0.9.4.tgz | OK (cached)
+[200] https://registry.npmjs.org/@rollup/rollup-win32-x64-gnu/-/rollup-win32-x64-gnu-4.57.1.tgz
+[200] https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-8.56.0.tgz
+[200] https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz
+[200] https://registry.npmjs.org/keyv/-/keyv-4.5.4.tgz
+[200] https://registry.npmjs.org/@humanfs/core/-/core-0.19.1.tgz
+[200] https://registry.npmjs.org/@babel/helper-globals/-/helper-globals-7.28.0.tgz
+[200] https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.12.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/netbsd-x64/-/netbsd-x64-0.27.3.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.57.1.tgz
+[200] https://registry.npmjs.org/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz
+[200] https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/openbsd-x64/-/openbsd-x64-0.27.3.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-linux-loong64-gnu/-/rollup-linux-loong64-gnu-4.57.1.tgz
+[200] https://registry.npmjs.org/acorn-jsx/-/acorn-jsx-5.3.2.tgz
+[200] https://registry.npmjs.org/estraverse/-/estraverse-5.3.0.tgz
+[200] https://registry.npmjs.org/@types/babel__template/-/babel__template-7.4.4.tgz
+[200] https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz | OK (cached)
+[200] https://registry.npmjs.org/react-refresh/-/react-refresh-0.18.0.tgz
+[200] https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react
+[200] https://github.com/sponsors/sindresorhus | OK (cached)
+[200] https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz
+[200] https://registry.npmjs.org/convert-source-map/-/convert-source-map-2.0.0.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/linux-arm/-/linux-arm-0.27.3.tgz
+[200] https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz | OK (cached)
+[200] https://registry.npmjs.org/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.57.1.tgz
+[200] https://registry.npmjs.org/@eslint/object-schema/-/object-schema-2.1.7.tgz
+[200] https://registry.npmjs.org/nanoid/-/nanoid-3.3.11.tgz
+[200] https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz
+[200] https://registry.npmjs.org/@babel/compat-data/-/compat-data-7.29.0.tgz
+[200] https://registry.npmjs.org/@eslint/config-array/-/config-array-0.21.1.tgz
+[200] https://github.com/sponsors/isaacs | OK (cached)
+[200] https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/linux-mips64el/-/linux-mips64el-0.27.3.tgz
+[200] https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.29.0.tgz | OK (cached)
+[200] https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.2.tgz | OK (cached)
+[200] https://registry.npmjs.org/@babel/types/-/types-7.29.0.tgz
+[200] https://registry.npmjs.org/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz | OK (cached)
+[200] https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz
+[200] https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz | OK (cached)
+[200] https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz | OK (cached)
+[200] https://registry.npmjs.org/@babel/core/-/core-7.29.0.tgz
+[200] https://registry.npmjs.org/locate-path/-/locate-path-6.0.0.tgz
+[200] https://registry.npmjs.org/zod-validation-error/-/zod-validation-error-4.0.2.tgz
+[200] https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001770.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/linux-riscv64/-/linux-riscv64-0.27.3.tgz
+[200] https://registry.npmjs.org/ts-api-utils/-/ts-api-utils-2.4.0.tgz
+[200] https://registry.npmjs.org/@humanfs/node/-/node-0.16.7.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-linux-arm-musleabihf/-/rollup-linux-arm-musleabihf-4.57.1.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/sunos-x64/-/sunos-x64-0.27.3.tgz
+[200] https://registry.npmjs.org/typescript-eslint/-/typescript-eslint-8.56.0.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-openbsd-x64/-/rollup-openbsd-x64-4.57.1.tgz
+[200] https://registry.npmjs.org/undici-types/-/undici-types-7.16.0.tgz | OK (cached)
+[200] https://registry.npmjs.org/esrecurse/-/esrecurse-4.3.0.tgz
+[200] https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/linux-ia32/-/linux-ia32-0.27.3.tgz
+[200] https://github.com/sponsors/jonschlinkert | OK (cached)
+[200] https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz
+[200] https://registry.npmjs.org/@types/babel__generator/-/babel__generator-7.27.0.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.57.1.tgz
+[200] https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz | OK (cached)
+[200] https://registry.npmjs.org/yallist/-/yallist-3.1.1.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.27.3.tgz
+[200] https://registry.npmjs.org/lru-cache/-/lru-cache-5.1.1.tgz
+[200] https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz
+[200] https://registry.npmjs.org/@typescript-eslint/project-service/-/project-service-8.56.0.tgz
+[200] https://registry.npmjs.org/@eslint/js/-/js-9.39.2.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/linux-loong64/-/linux-loong64-0.27.3.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/darwin-x64/-/darwin-x64-0.27.3.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-linux-ppc64-musl/-/rollup-linux-ppc64-musl-4.57.1.tgz
+[200] https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-3.4.3.tgz
+[200] https://registry.npmjs.org/word-wrap/-/word-wrap-1.2.5.tgz | OK (cached)
+[200] https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz | OK (cached)
+[200] https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz
+[200] https://registry.npmjs.org/acorn/-/acorn-8.15.0.tgz
+[200] https://registry.npmjs.org/@jridgewell/remapping/-/remapping-2.3.5.tgz
+[200] https://registry.npmjs.org/@types/babel__core/-/babel__core-7.20.5.tgz
+[200] https://registry.npmjs.org/flatted/-/flatted-3.3.3.tgz
+[200] https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz
+[200] https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.27.1.tgz
+[200] https://registry.npmjs.org/@babel/plugin-transform-react-jsx-self/-/plugin-transform-react-jsx-self-7.27.1.tgz
+[200] https://registry.npmjs.org/@eslint/config-helpers/-/config-helpers-0.4.2.tgz
+[200] https://registry.npmjs.org/@babel/helper-plugin-utils/-/helper-plugin-utils-7.28.6.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-darwin-x64/-/rollup-darwin-x64-4.57.1.tgz
+[200] https://registry.npmjs.org/esquery/-/esquery-1.7.0.tgz
+[200] https://registry.npmjs.org/ignore/-/ignore-5.3.2.tgz
+[200] https://registry.npmjs.org/json-buffer/-/json-buffer-3.0.1.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-win32-arm64-msvc/-/rollup-win32-arm64-msvc-4.57.1.tgz
+[200] https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz | OK (cached)
+[200] https://registry.npmjs.org/zod/-/zod-4.3.6.tgz
+[200] https://registry.npmjs.org/type-check/-/type-check-0.4.0.tgz | OK (cached)
+[200] https://registry.npmjs.org/globals/-/globals-16.5.0.tgz
+[200] https://registry.npmjs.org/@types/babel__traverse/-/babel__traverse-7.28.0.tgz
+[200] https://registry.npmjs.org/globals/-/globals-14.0.0.tgz
+[200] https://registry.npmjs.org/@babel/helper-validator-option/-/helper-validator-option-7.27.1.tgz
+[200] https://registry.npmjs.org/@typescript-eslint/type-utils/-/type-utils-8.56.0.tgz
+[200] https://registry.npmjs.org/@typescript-eslint/utils/-/utils-8.56.0.tgz
+[200] https://registry.npmjs.org/rollup/-/rollup-4.57.1.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-linux-arm64-gnu/-/rollup-linux-arm64-gnu-4.57.1.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-linux-x64-musl/-/rollup-linux-x64-musl-4.57.1.tgz
+[200] https://registry.npmjs.org/eslint-scope/-/eslint-scope-8.4.0.tgz
+[200] https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz
+[200] https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz
+[200] https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz | OK (cached)
+[200] https://registry.npmjs.org/node-releases/-/node-releases-2.0.27.tgz
+[200] https://eslint.org/donate
+[200] https://registry.npmjs.org/p-locate/-/p-locate-5.0.0.tgz
+[200] https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz
+[200] https://registry.npmjs.org/espree/-/espree-10.4.0.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.27.3.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/openbsd-arm64/-/openbsd-arm64-0.27.3.tgz
+[200] https://registry.npmjs.org/supports-color/-/supports-color-7.2.0.tgz
+[200] https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.9.19.tgz
+[200] https://registry.npmjs.org/semver/-/semver-6.3.1.tgz
+[200] https://github.com/vitejs/vite?sponsor=1
+[200] https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/win32-arm64/-/win32-arm64-0.27.3.tgz
+[200] https://registry.npmjs.org/eslint-plugin-react-refresh/-/eslint-plugin-react-refresh-0.4.26.tgz
+[200] https://registry.npmjs.org/is-glob/-/is-glob-4.0.3.tgz | OK (cached)
+[200] https://github.com/sponsors/nzakas
+[200] https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-5.1.4.tgz
+[200] https://registry.npmjs.org/@humanwhocodes/retry/-/retry-0.4.3.tgz
+[200] https://github.com/sponsors/ai
+[200] https://registry.npmjs.org/@typescript-eslint/parser/-/parser-8.56.0.tgz
+[200] https://registry.npmjs.org/@babel/helpers/-/helpers-7.28.6.tgz
+[200] https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.0-rc.3.tgz
+[200] https://registry.npmjs.org/ms/-/ms-2.1.3.tgz | OK (cached)
+[200] https://registry.npmjs.org/@eslint/core/-/core-0.17.0.tgz
+[200] https://registry.npmjs.org/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-7.0.1.tgz
+[200] https://registry.npmjs.org/semver/-/semver-7.7.4.tgz | OK (cached)
+[200] https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz | OK (cached)
+[200] https://registry.npmjs.org/hermes-parser/-/hermes-parser-0.25.1.tgz
+[200] https://registry.npmjs.org/levn/-/levn-0.4.1.tgz | OK (cached)
+[200] https://registry.npmjs.org/@typescript-eslint/types/-/types-8.56.0.tgz
+[200] https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz
+[200] https://registry.npmjs.org/vite/-/vite-7.3.1.tgz
+[200] https://registry.npmjs.org/@babel/helper-module-imports/-/helper-module-imports-7.28.6.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/android-x64/-/android-x64-0.27.3.tgz
+[EXCLUDED] https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.27.3.tgz
+[200] https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz
+[200] https://registry.npmjs.org/find-up/-/find-up-5.0.0.tgz
+[200] https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz | OK (cached)
+[200] https://registry.npmjs.org/@babel/helper-compilation-targets/-/helper-compilation-targets-7.28.6.tgz
+[200] https://registry.npmjs.org/@babel/parser/-/parser-7.29.0.tgz
+[200] https://registry.npmjs.org/hermes-estree/-/hermes-estree-0.25.1.tgz
+[200] https://registry.npmjs.org/p-limit/-/p-limit-3.1.0.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-openharmony-arm64/-/rollup-openharmony-arm64-4.57.1.tgz
+[200] https://registry.npmjs.org/@types/react-dom/-/react-dom-19.2.3.tgz
+[200] https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz
+[200] https://registry.npmjs.org/postcss/-/postcss-8.5.6.tgz
+[200] https://registry.npmjs.org/@rollup/rollup-linux-s390x-gnu/-/rollup-linux-s390x-gnu-4.57.1.tgz
+[200] https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-8.56.0.tgz
+[200] https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.31.tgz
+[200] https://tidelift.com/funding/github/npm/caniuse-lite
+[200] https://tidelift.com/funding/github/npm/browserslist
+[200] https://tidelift.com/funding/github/npm/postcss
+[200] https://feross.org/support
+[200] https://opencollective.com/babel
+[200] https://opencollective.com/typescript-eslint
+[200] https://github.com/sponsors/colinhacks
+[200] https://opencollective.com/postcss/
+[200] https://opencollective.com/browserslist
+[200] https://opencollective.com/eslint
 Error: Cannot write status output to file
 
 Caused by:
     No such file or directory (os error 2)
 
 ::endgroup::
-::group::[31m❌ Linted [TERRAFORM] files with [terragrunt]: Found 1 error(s) and 0 warning(s) - (0.06s)[0m (expand for details)
+::group::[31m❌ Linted [TERRAFORM] files with [terragrunt]: Found 1 error(s) and 0 warning(s) - (0.05s)[0m (expand for details)
 - Using [terragrunt v0.81.6] https://megalinter.io/8.8.0/descriptors/terraform_terragrunt
 - MegaLinter key: [TERRAFORM_TERRAGRUNT]
 - Rules config: [/github/workspace/config/terragrunt.hcl]
@@ -1645,18 +2184,109 @@ Caused by:
 - Command: [terragrunt hclfmt --terragrunt-check --terragrunt-config /github/workspace/config/terragrunt.hcl --terragrunt-hclfmt-file config/terragrunt.hcl]
 [31m[terragrunt] config/terragrunt.hcl - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[0;90m01:15:57.138[0m [0;33mWARN  [0m The `hclfmt` command is deprecated and will be removed in a future version of Terragrunt. Use `terragrunt hcl format` instead.
-[0;90m01:15:57.139[0m [0;31mERROR [0m flag `--terragrunt-config` is not a valid flag for `format`. Did you mean to use `console --config`?
+[0;90m04:21:21.849[0m [0;33mWARN  [0m The `hclfmt` command is deprecated and will be removed in a future version of Terragrunt. Use `terragrunt hcl format` instead.
+[0;90m04:21:21.850[0m [0;31mERROR [0m flag `--terragrunt-config` is not a valid flag for `format`. Did you mean to use `console --config`?
 [0m
 ::endgroup::
-::group::[32m✅ Linted [XML] files with [xmllint] successfully - (0.16s)[0m (expand for details)
+Unable to get number of errors with regex_sum and ✖ ([0-9]+) problem
+::group::[31m❌ Linted [TSX] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.29s)[0m (expand for details)
+- Using [eslint v8.57.1] https://megalinter.io/8.8.0/descriptors/tsx_eslint
+- MegaLinter key: [TSX_ESLINT]
+- Rules config: [/github/workspace/config/.eslint.config.mjs]
+- Number of files analyzed: [2]
+- Command: [eslint --no-ignore -c /github/workspace/config/.eslint.config.mjs --no-eslintrc ui/src/App.tsx ui/src/main.tsx]
+--Error detail:
+
+Oops! Something went wrong! :(
+
+ESLint: 8.57.1
+
+YAMLException: Cannot read config file: /github/workspace/config/.eslint.config.mjs
+Error: end of the stream or a document separator is expected (25:14)
+
+ 22 |     js.configs.recommended,
+ 23 | 
+ 24 |     {
+ 25 |         files: ["**/*.{ts,tsx}"],
+-------------------^
+ 26 |         languageOptions: {
+ 27 |             parser: tsparser,
+    at generateError (/node-deps/node_modules/js-yaml/lib/loader.js:183:10)
+    at throwError (/node-deps/node_modules/js-yaml/lib/loader.js:187:9)
+    at readDocument (/node-deps/node_modules/js-yaml/lib/loader.js:1645:5)
+    at loadDocuments (/node-deps/node_modules/js-yaml/lib/loader.js:1688:5)
+    at Object.load (/node-deps/node_modules/js-yaml/lib/loader.js:1714:19)
+    at loadLegacyConfigFile (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2565:21)
+    at loadConfigFile (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2680:20)
+    at ConfigArrayFactory._loadConfigData (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2984:42)
+    at ConfigArrayFactory.loadFile (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2850:40)
+    at createCLIConfigArray (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:3660:35)
+
+::endgroup::
+Unable to get number of errors with regex_sum and ✖ ([0-9]+) problem
+::group::[31m❌ Linted [TYPESCRIPT] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.3s)[0m (expand for details)
+- Using [eslint v8.57.1] https://megalinter.io/8.8.0/descriptors/typescript_eslint
+- MegaLinter key: [TYPESCRIPT_ES]
+- Rules config: [/github/workspace/config/.eslint.config.mjs]
+- Number of files analyzed: [1]
+- Command: [eslint --no-ignore -c /github/workspace/config/.eslint.config.mjs --no-eslintrc ui/vite.config.ts]
+--Error detail:
+
+Oops! Something went wrong! :(
+
+ESLint: 8.57.1
+
+YAMLException: Cannot read config file: /github/workspace/config/.eslint.config.mjs
+Error: end of the stream or a document separator is expected (25:14)
+
+ 22 |     js.configs.recommended,
+ 23 | 
+ 24 |     {
+ 25 |         files: ["**/*.{ts,tsx}"],
+-------------------^
+ 26 |         languageOptions: {
+ 27 |             parser: tsparser,
+    at generateError (/node-deps/node_modules/js-yaml/lib/loader.js:183:10)
+    at throwError (/node-deps/node_modules/js-yaml/lib/loader.js:187:9)
+    at readDocument (/node-deps/node_modules/js-yaml/lib/loader.js:1645:5)
+    at loadDocuments (/node-deps/node_modules/js-yaml/lib/loader.js:1688:5)
+    at Object.load (/node-deps/node_modules/js-yaml/lib/loader.js:1714:19)
+    at loadLegacyConfigFile (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2565:21)
+    at loadConfigFile (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2680:20)
+    at ConfigArrayFactory._loadConfigData (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2984:42)
+    at ConfigArrayFactory.loadFile (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2850:40)
+    at createCLIConfigArray (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:3660:35)
+
+::endgroup::
+::group::[31m❌ Linted [TYPESCRIPT] files with [ts-standard]: Found 1 error(s) and 0 warning(s) - (0.26s)[0m (expand for details)
+- Using [ts-standard v12.0.2] https://megalinter.io/8.8.0/descriptors/typescript_ts_standard
+- MegaLinter key: [TYPESCRIPT_STANDARD]
+- Rules config: identified by [ts-standard]
+- Number of files analyzed: [1]
+- Command: [ts-standard ui/vite.config.ts]
+--Error detail:
+Unable to locate the project file. A project file (tsconfig.json or tsconfig.eslint.json) is required in order to use ts-standard.
+
+::endgroup::
+::group::[31m❌ Linted [TYPESCRIPT] files with [prettier]: Found 1 error(s) and 0 warning(s) - (0.15s)[0m (expand for details)
+- Using [prettier v3.5.3] https://megalinter.io/8.8.0/descriptors/typescript_prettier
+- MegaLinter key: [TYPESCRIPT_PRETTIER]
+- Rules config: [/github/workspace/config/.prettier.config.mjs]
+- Number of files analyzed: [1]
+- Command: [prettier --check --config /github/workspace/config/.prettier.config.mjs ui/vite.config.ts]
+--Error detail:
+Checking formatting...
+[error] Cannot find package 'prettier-plugin-sh' imported from /github/workspace/noop.js
+
+::endgroup::
+::group::[32m✅ Linted [XML] files with [xmllint] successfully - (0.12s)[0m (expand for details)
 - Using [xmllint v21304] https://megalinter.io/8.8.0/descriptors/xml_xmllint
 - MegaLinter key: [XML_XMLLINT]
 - Rules config: identified by [xmllint]
 - Number of files analyzed: [5]
 - Command: [xmllint config/apex-pmd-ruleset.xml config/java-pmd-ruleset.xml config/phpcs.xml config/psalm.xml config/sun_checks.xml]
 ::endgroup::
-::group::[31m❌ Linted [YAML] files with [prettier]: Found 1 error(s) and 0 warning(s) - (0.19s)[0m (expand for details)
+::group::[31m❌ Linted [YAML] files with [prettier]: Found 1 error(s) and 0 warning(s) - (0.16s)[0m (expand for details)
 - Using [prettier v3.5.3] https://megalinter.io/8.8.0/descriptors/yaml_prettier
 - MegaLinter key: [YAML_PRETTIER]
 - Rules config: [/github/workspace/config/.prettier.config.mjs]
@@ -1667,7 +2297,7 @@ Checking formatting...
 [error] Cannot find package 'prettier-plugin-sh' imported from /github/workspace/noop.js
 
 ::endgroup::
-::group::[31m❌ Linted [YAML] files with [yamllint]: Found 231 error(s) and 0 warning(s) - (1.73s)[0m (expand for details)
+::group::[31m❌ Linted [YAML] files with [yamllint]: Found 231 error(s) and 0 warning(s) - (1.48s)[0m (expand for details)
 - Using [yamllint v1.37.1] https://megalinter.io/8.8.0/descriptors/yaml_yamllint
 - MegaLinter key: [YAML_YAMLLINT]
 - Rules config: [/github/workspace/config/.yamllint.yml]
@@ -2021,7 +2651,7 @@ pnpm-lock.yaml
 
 
 ::endgroup::
-::group::[32m✅ Linted [YAML] files with [v8r] successfully - (6.08s)[0m (expand for details)
+::group::[32m✅ Linted [YAML] files with [v8r] successfully - (5.99s)[0m (expand for details)
 - Using [v8r v5.0.0] https://megalinter.io/8.8.0/descriptors/yaml_v8r
 - MegaLinter key: [YAML_V8R]
 - Rules config: [/github/workspace/config/.v8rrc.yml]
@@ -2035,51 +2665,66 @@ pnpm-lock.yaml
 | Descriptor        | Linter                   | Mode          | Files | Fixed | Errors | Warnings | Elapsed time |
 +-------------------+--------------------------+---------------+-------+-------+--------+----------+--------------+
 | ❌ ACTION         | actionlint               | list_of_files |     2 |       |     13 |        0 | 0.06s        |
-| ✅ ANSIBLE        | ansible-lint             | project       |   n/a |       |      0 |        0 | 6.84s        |
+| ✅ ANSIBLE        | ansible-lint             | project       |   n/a |       |      0 |        0 | 5.58s        |
 | ✅ BASH           | bash-exec                | file          |     1 |       |      0 |        0 | 0.0s         |
-| ✅ BASH           | shellcheck               | list_of_files |     1 |       |      0 |        0 | 0.06s        |
+| ✅ BASH           | shellcheck               | list_of_files |     1 |       |      0 |        0 | 0.05s        |
 | ❌ BASH           | shfmt                    | list_of_files |     1 |       |      1 |        0 | 0.0s         |
 | ✅ CLOJURE        | cljstyle                 | file          |     1 |       |      0 |        0 | 0.01s        |
 | ❌ CLOJURE        | clj-kondo                | file          |     1 |       |      1 |        0 | 0.01s        |
-| ❌ CLOUDFORMATION | cfn-lint                 | list_of_files |     1 |       |      1 |        0 | 5.67s        |
-| ✅ COPYPASTE      | jscpd                    | project       |   n/a |       |      0 |        0 | 1.04s        |
-| ❌ EDITORCONFIG   | editorconfig-checker     | list_of_files |   166 |       |      1 |        0 | 0.01s        |
-| ❌ HTML           | djlint                   | list_of_files |     1 |       |      3 |        0 | 0.59s        |
-| ✅ HTML           | htmlhint                 | list_of_files |     1 |       |      0 |        0 | 0.19s        |
-| ❌ JSON           | jsonlint                 | list_of_files |    25 |       |      1 |        0 | 0.15s        |
-| ❌ JSON           | npm-package-json-lint    | project       |   n/a |       |      1 |        0 | 0.29s        |
-| ❌ JSON           | prettier                 | list_of_files |    25 |       |      1 |        0 | 0.22s        |
-| ❌ JSON           | v8r                      | list_of_files |    25 |       |      1 |        0 | 9.73s        |
-| ✅ MARKDOWN       | markdownlint             | list_of_files |     2 |       |      0 |        0 | 0.33s        |
-| ✅ MARKDOWN       | markdown-link-check      | list_of_files |     2 |       |      0 |        0 | 0.89s        |
-| ✅ MARKDOWN       | markdown-table-formatter | list_of_files |     2 |       |      0 |        0 | 0.16s        |
-| ❌ POWERSHELL     | powershell               | file          |     3 |       |      3 |        0 | 1.83s        |
-| ❌ POWERSHELL     | powershell_formatter     | file          |     3 |       |      3 |        0 | 1.62s        |
-| ❌ REPOSITORY     | checkov                  | project       |   n/a |       |      1 |        0 | 20.71s       |
-| ✅ REPOSITORY     | dustilock                | project       |   n/a |       |      0 |        0 | 0.29s        |
+| ❌ CLOUDFORMATION | cfn-lint                 | list_of_files |     1 |       |      1 |        0 | 5.21s        |
+| ✅ COPYPASTE      | jscpd                    | project       |   n/a |       |      0 |        0 | 0.96s        |
+| ❌ CSS            | stylelint                | list_of_files |     2 |       |      1 |        0 | 0.44s        |
+| ❌ EDITORCONFIG   | editorconfig-checker     | list_of_files |   189 |       |      1 |        0 | 0.0s         |
+| ❌ HTML           | djlint                   | list_of_files |     2 |       |      5 |        0 | 0.53s        |
+| ✅ HTML           | htmlhint                 | list_of_files |     2 |       |      0 |        0 | 0.17s        |
+| ❌ JAVASCRIPT     | eslint                   | list_of_files |     1 |       |      1 |        0 | 0.3s         |
+| ❌ JAVASCRIPT     | prettier                 | list_of_files |     1 |       |      1 |        0 | 0.18s        |
+| ❌ JSON           | jsonlint                 | list_of_files |    30 |       |      1 |        0 | 0.11s        |
+| ❌ JSON           | npm-package-json-lint    | project       |   n/a |       |      1 |        0 | 0.24s        |
+| ❌ JSON           | prettier                 | list_of_files |    30 |       |      1 |        0 | 0.16s        |
+| ❌ JSON           | v8r                      | list_of_files |    30 |       |      1 |        0 | 9.92s        |
+| ❌ MARKDOWN       | markdownlint             | list_of_files |     7 |       |     14 |        0 | 0.33s        |
+| ✅ MARKDOWN       | markdown-link-check      | list_of_files |     7 |       |      0 |        0 | 2.75s        |
+| ✅ MARKDOWN       | markdown-table-formatter | list_of_files |     7 |       |      0 |        0 | 0.14s        |
+| ❌ POWERSHELL     | powershell               | file          |     3 |       |      3 |        0 | 1.54s        |
+| ❌ POWERSHELL     | powershell_formatter     | file          |     3 |       |      3 |        0 | 1.43s        |
+| ✅ PYTHON         | bandit                   | list_of_files |     1 |       |      0 |        0 | 0.66s        |
+| ✅ PYTHON         | flake8                   | list_of_files |     1 |       |      0 |        0 | 0.31s        |
+| ✅ PYTHON         | isort                    | list_of_files |     1 |       |      0 |        0 | 0.14s        |
+| ❌ PYTHON         | mypy                     | list_of_files |     1 |       |      4 |        0 | 1.63s        |
+| ❌ PYTHON         | pylint                   | list_of_files |     1 |       |      2 |        0 | 1.21s        |
+| ❌ PYTHON         | pyright                  | list_of_files |     1 |       |     10 |        0 | 0.71s        |
+| ✅ PYTHON         | ruff                     | list_of_files |     1 |       |      0 |        0 | 0.01s        |
+| ✅ PYTHON         | ruff-format              | list_of_files |     1 |       |      0 |        0 | 0.01s        |
+| ❌ REPOSITORY     | checkov                  | project       |   n/a |       |      1 |        0 | 15.72s       |
+| ✅ REPOSITORY     | dustilock                | project       |   n/a |       |      0 |        0 | 1.41s        |
 | ❌ REPOSITORY     | gitleaks                 | project       |   n/a |       |      1 |        0 | 0.01s        |
-| ✅ REPOSITORY     | git_diff                 | project       |   n/a |       |      0 |        0 | 0.07s        |
-| ✅ REPOSITORY     | grype                    | project       |   n/a |       |      0 |        0 | 26.65s       |
-| ❌ REPOSITORY     | kics                     | project       |   n/a |       |      1 |        0 | 14.73s       |
-| ❌ REPOSITORY     | ls-lint                  | project       |   n/a |       |      1 |        0 | 0.49s        |
-| ❌ REPOSITORY     | secretlint               | list_of_files |     0 |       |      1 |        0 | 9.14s        |
+| ✅ REPOSITORY     | git_diff                 | project       |   n/a |       |      0 |        0 | 0.11s        |
+| ✅ REPOSITORY     | grype                    | project       |   n/a |       |      0 |        0 | 32.69s       |
+| ❌ REPOSITORY     | kics                     | project       |   n/a |       |      1 |        0 | 13.96s       |
+| ❌ REPOSITORY     | ls-lint                  | project       |   n/a |       |      1 |        0 | 0.05s        |
+| ❌ REPOSITORY     | secretlint               | list_of_files |     0 |       |      1 |        0 | 7.83s        |
 | ❌ REPOSITORY     | syft                     | project       |   n/a |       |      1 |        0 | 0.02s        |
-| ✅ REPOSITORY     | trivy                    | project       |   n/a |       |      0 |        0 | 8.67s        |
-| ✅ REPOSITORY     | trivy-sbom               | project       |   n/a |       |      0 |        0 | 0.27s        |
-| ❌ REPOSITORY     | trufflehog               | project       |   n/a |       |      1 |        0 | 2.21s        |
-| ❌ SALESFORCE     | lightning-flow-scanner   | project       |   n/a |       |      1 |        0 | 0.8s         |
-| ✅ SALESFORCE     | sfdx-scanner-apex        | project       |   n/a |       |      0 |        0 | 21.65s       |
-| ✅ SALESFORCE     | sfdx-scanner-aura        | project       |   n/a |       |      0 |        0 | 8.39s        |
-| ✅ SALESFORCE     | sfdx-scanner-lwc         | project       |   n/a |       |      0 |        0 | 8.41s        |
-| ✅ SPELL          | cspell                   | list_of_files |   167 |       |      0 |        0 | 0.89s        |
-| ❌ SPELL          | lychee                   | list_of_files |    96 |       |      1 |        0 | 6.74s        |
-| ❌ SPELL          | proselint                | list_of_files |     2 |       |      1 |        0 | 3.27s        |
-| ✅ SPELL          | vale                     | list_of_files |     2 |       |      0 |        0 | 0.13s        |
-| ❌ TERRAFORM      | terragrunt               | file          |     1 |       |      1 |        0 | 0.06s        |
-| ✅ XML            | xmllint                  | list_of_files |     5 |       |      0 |        0 | 0.16s        |
-| ❌ YAML           | prettier                 | list_of_files |    68 |       |      1 |        0 | 0.19s        |
-| ✅ YAML           | v8r                      | list_of_files |    68 |       |      0 |        0 | 6.08s        |
-| ❌ YAML           | yamllint                 | list_of_files |    68 |       |    231 |        0 | 1.73s        |
+| ✅ REPOSITORY     | trivy                    | project       |   n/a |       |      0 |        0 | 7.77s        |
+| ✅ REPOSITORY     | trivy-sbom               | project       |   n/a |       |      0 |        0 | 0.28s        |
+| ❌ REPOSITORY     | trufflehog               | project       |   n/a |       |      1 |        0 | 2.22s        |
+| ❌ SALESFORCE     | lightning-flow-scanner   | project       |   n/a |       |      1 |        0 | 0.69s        |
+| ✅ SALESFORCE     | sfdx-scanner-apex        | project       |   n/a |       |      0 |        0 | 20.07s       |
+| ✅ SALESFORCE     | sfdx-scanner-aura        | project       |   n/a |       |      0 |        0 | 6.24s        |
+| ✅ SALESFORCE     | sfdx-scanner-lwc         | project       |   n/a |       |      0 |        0 | 6.34s        |
+| ✅ SPELL          | cspell                   | list_of_files |   190 |       |      0 |        0 | 0.82s        |
+| ❌ SPELL          | lychee                   | list_of_files |   108 |       |      1 |        0 | 9.76s        |
+| ❌ SPELL          | proselint                | list_of_files |     8 |       |      4 |        0 | 3.15s        |
+| ⚠️ SPELL          | vale                     | list_of_files |     7 |       |      0 |        8 | 0.24s        |
+| ❌ TERRAFORM      | terragrunt               | file          |     1 |       |      1 |        0 | 0.05s        |
+| ❌ TSX            | eslint                   | list_of_files |     2 |       |      1 |        0 | 0.29s        |
+| ❌ TYPESCRIPT     | eslint                   | list_of_files |     1 |       |      1 |        0 | 0.3s         |
+| ❌ TYPESCRIPT     | prettier                 | list_of_files |     1 |       |      1 |        0 | 0.15s        |
+| ❌ TYPESCRIPT     | ts-standard              | list_of_files |     1 |       |      1 |        0 | 0.26s        |
+| ✅ XML            | xmllint                  | list_of_files |     5 |       |      0 |        0 | 0.12s        |
+| ❌ YAML           | prettier                 | list_of_files |    68 |       |      1 |        0 | 0.16s        |
+| ✅ YAML           | v8r                      | list_of_files |    68 |       |      0 |        0 | 5.99s        |
+| ❌ YAML           | yamllint                 | list_of_files |    68 |       |    231 |        0 | 1.48s        |
 +-------------------+--------------------------+---------------+-------+-------+--------+----------+--------------+
 
 [MARKDOWN_SUMMARY Reporter] Generated MARKDOWN_SUMMARY report: reports/megalinter/SUMMARY.md

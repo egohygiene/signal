@@ -1,0 +1,18 @@
+Results of stylelint linter (version 16.20.0)
+See documentation on https://megalinter.io/8.8.0/descriptors/css_stylelint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+ConfigurationError: Could not find "stylelint-config-prettier". Do you need to install the package or use the "configBasedir" option?
+    at getModulePath (file:///node-deps/node_modules/stylelint/lib/utils/getModulePath.mjs:29:9)
+    at loadExtendedConfig (file:///node-deps/node_modules/stylelint/lib/augmentConfig.mjs:225:21)
+    at extendConfig (file:///node-deps/node_modules/stylelint/lib/augmentConfig.mjs:193:25)
+    at async augmentConfigBasic (file:///node-deps/node_modules/stylelint/lib/augmentConfig.mjs:58:20)
+    at async augmentConfigFull (file:///node-deps/node_modules/stylelint/lib/augmentConfig.mjs:112:24)
+    at async load (/node-deps/node_modules/cosmiconfig/dist/Explorer.js:20:20)
+    at async Explorer.load (/node-deps/node_modules/cosmiconfig/dist/Explorer.js:23:20)
+    at async getConfigForFile (file:///node-deps/node_modules/stylelint/lib/getConfigForFile.mjs:58:5)
+    at async isPathIgnored (file:///node-deps/node_modules/stylelint/lib/isPathIgnored.mjs:23:17)
+    at async lintSource (file:///node-deps/node_modules/stylelint/lib/lintSource.mjs:43:20)
+

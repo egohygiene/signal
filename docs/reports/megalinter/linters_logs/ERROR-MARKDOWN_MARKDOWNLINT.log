@@ -4,11 +4,18 @@ See documentation on https://megalinter.io/8.8.0/descriptors/markdown_markdownli
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-config/styles/proselint/README.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "Copyright © 2014–2015, Jordan ..."]
-config/styles/proselint/README.md:4:121 MD013/line-length Line length [Expected: 120; Actual: 142]
-config/styles/proselint/README.md:8:121 MD013/line-length Line length [Expected: 120; Actual: 205]
-config/styles/proselint/README.md:10:121 MD013/line-length Line length [Expected: 120; Actual: 190]
-config/styles/proselint/README.md:12:121 MD013/line-length Line length [Expected: 120; Actual: 755]
-config/styles/write-good/README.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "Based on [write-good](https://..."]
-config/styles/write-good/README.md:5 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+core/README.md:15 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+README.md:7 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+README.md:60:8 MD034/no-bare-urls Bare URL used [Context: "http://localhost:8000"]
+README.md:61:22 MD034/no-bare-urls Bare URL used [Context: "http://localhost:8000/docs"]
+README.md:62:17 MD034/no-bare-urls Bare URL used [Context: "http://localhost:8000/health"]
+README.md:81:38 MD034/no-bare-urls Bare URL used [Context: "http://localhost:5173"]
+schema/README.md:15 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+server/README.md:25:8 MD034/no-bare-urls Bare URL used [Context: "http://localhost:8000"]
+server/README.md:26:22 MD034/no-bare-urls Bare URL used [Context: "http://localhost:8000/docs"]
+server/README.md:27:17 MD034/no-bare-urls Bare URL used [Context: "http://localhost:8000/health"]
+ui/README.md:7:121 MD013/line-length Line length [Expected: 120; Actual: 241]
+ui/README.md:8:121 MD013/line-length Line length [Expected: 120; Actual: 154]
+ui/README.md:12:121 MD013/line-length Line length [Expected: 120; Actual: 191]
+ui/README.md:46:121 MD013/line-length Line length [Expected: 120; Actual: 285]
 

@@ -1,0 +1,20 @@
+Results of pyright linter (version 1.1.402)
+See documentation on https://megalinter.io/8.8.0/descriptors/python_pyright/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+venv .venv subdirectory not found in venv path config.
+server/main.py
+  server/main.py:3:6 - error: Import "fastapi" could not be resolved (reportMissingImports)
+  server/main.py:3:21 - error: Type of "FastAPI" is unknown (reportUnknownVariableType)
+  server/main.py:4:6 - error: Import "fastapi.middleware.cors" could not be resolved (reportMissingImports)
+  server/main.py:4:37 - error: Type of "CORSMiddleware" is unknown (reportUnknownVariableType)
+  server/main.py:6:1 - error: Type of "app" is unknown (reportUnknownVariableType)
+  server/main.py:13:1 - error: Type of "add_middleware" is unknown (reportUnknownMemberType)
+  server/main.py:22:2 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/main.py:22:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
+  server/main.py:28:2 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/main.py:28:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
+10 errors, 0 warnings, 0 informations 
+

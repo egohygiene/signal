@@ -1,7 +1,7 @@
 {
 	"kics_version": "v2.1.10",
 	"files_scanned": 11,
-	"lines_scanned": 555,
+	"lines_scanned": 558,
 	"files_parsed": 4,
 	"lines_parsed": 173,
 	"lines_ignored": 2,
@@ -20,8 +20,8 @@
 	},
 	"total_counter": 1,
 	"total_bom_resources": 0,
-	"start": "2026-02-15T01:14:24.203964922Z",
-	"end": "2026-02-15T01:14:36.723358615Z",
+	"start": "2026-02-18T04:19:55.574427914Z",
+	"end": "2026-02-18T04:20:08.343030129Z",
 	"paths": [
 		".",
 		"/usr/bin/assets/queries",

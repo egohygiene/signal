@@ -4,5 +4,8 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_proselint/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
+README.md:126:26: leonard.exclamation.30ppm More than 30 ppm of exclamations. Keep them under control.
 config/styles/write-good/README.md:8:12: typography.symbols.copyright (c) is a goofy alphabetic approximation, use the symbol ©.
+ui/README.md:24:24: typography.symbols.ellipsis '...' is an approximation, use the ellipsis symbol '…'. Found 5 times elsewhere.
+ui/README.md:33:24: typography.symbols.ellipsis '...' is an approximation, use the ellipsis symbol '…'.
 

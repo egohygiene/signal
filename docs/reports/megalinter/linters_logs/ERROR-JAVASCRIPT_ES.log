@@ -1,0 +1,32 @@
+Results of eslint linter (version 8.57.1)
+See documentation on https://megalinter.io/8.8.0/descriptors/javascript_eslint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+
+Oops! Something went wrong! :(
+
+ESLint: 8.57.1
+
+YAMLException: Cannot read config file: config/.eslint.config.mjs
+Error: end of the stream or a document separator is expected (25:14)
+
+ 22 |     js.configs.recommended,
+ 23 | 
+ 24 |     {
+ 25 |         files: ["**/*.{ts,tsx}"],
+-------------------^
+ 26 |         languageOptions: {
+ 27 |             parser: tsparser,
+    at generateError (/node-deps/node_modules/js-yaml/lib/loader.js:183:10)
+    at throwError (/node-deps/node_modules/js-yaml/lib/loader.js:187:9)
+    at readDocument (/node-deps/node_modules/js-yaml/lib/loader.js:1645:5)
+    at loadDocuments (/node-deps/node_modules/js-yaml/lib/loader.js:1688:5)
+    at Object.load (/node-deps/node_modules/js-yaml/lib/loader.js:1714:19)
+    at loadLegacyConfigFile (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2565:21)
+    at loadConfigFile (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2680:20)
+    at ConfigArrayFactory._loadConfigData (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2984:42)
+    at ConfigArrayFactory.loadFile (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:2850:40)
+    at createCLIConfigArray (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:3660:35)
+

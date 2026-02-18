@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:d2fd0bb1-4b79-4cda-96d6-6a90174089aa",
+    "serialNumber": "urn:uuid:76480783-f01f-48e9-a7fd-cd75b0fd2644",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-02-15T01:14:56+00:00",
+        "timestamp": "2026-02-18T04:20:25+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "0a0e6a81-61ff-4388-b74d-7a4bd2f47e9d",
+            "bom-ref": "764925af-1aaf-48c9-8577-d9b48f8b52c1",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,25 +30,7 @@
     },
     "components": [
         {
-            "bom-ref": "821b46c8-3246-4d6e-91db-6e9b06f3f17a",
-            "type": "library",
-            "group": "@secretlint",
-            "name": "secretlint-rule-preset-recommend",
-            "version": "11.3.1",
-            "purl": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@secretlint/secretlint-rule-preset-recommend@11.3.1"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "npm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "8f901202-971b-4f11-a8cb-fb0d33317670",
+            "bom-ref": "00b4153a-7f1c-478d-8d72-7607d5d17d68",
             "type": "application",
             "name": "package-lock.json",
             "properties": [
@@ -63,22 +45,7 @@
             ]
         },
         {
-            "bom-ref": "d58c3a4b-a2f2-4de0-8bcd-b37ace9daeed",
-            "type": "application",
-            "name": "pnpm-lock.yaml",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:Class",
-                    "value": "lang-pkgs"
-                },
-                {
-                    "name": "aquasecurity:trivy:Type",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "dd2ff6ff-10c0-461c-979b-8e139700ba20",
+            "bom-ref": "5a63bbe1-91eb-4a07-815e-4ee7efd15074",
             "type": "library",
             "group": "@secretlint",
             "name": "secretlint-rule-preset-recommend",
@@ -94,34 +61,213 @@
                     "value": "pnpm"
                 }
             ]
+        },
+        {
+            "bom-ref": "6623a633-6fba-4071-9345-8c35dc5ce8e4",
+            "type": "application",
+            "name": "server/requirements.txt",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
+                },
+                {
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "pip"
+                }
+            ]
+        },
+        {
+            "bom-ref": "78ae538d-246a-4ad5-a403-f53350459790",
+            "type": "application",
+            "name": "ui/package-lock.json",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
+                },
+                {
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "dc316728-cb6a-42e9-8869-24dc5460d708",
+            "type": "library",
+            "group": "@secretlint",
+            "name": "secretlint-rule-preset-recommend",
+            "version": "11.3.1",
+            "purl": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@secretlint/secretlint-rule-preset-recommend@11.3.1"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "e41eed3b-94d9-4d32-b238-e287044d1578",
+            "type": "application",
+            "name": "pnpm-lock.yaml",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
+                },
+                {
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/react-dom@19.2.4",
+            "type": "library",
+            "name": "react-dom",
+            "version": "19.2.4",
+            "purl": "pkg:npm/react-dom@19.2.4",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "react-dom@19.2.4"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/react@19.2.4",
+            "type": "library",
+            "name": "react",
+            "version": "19.2.4",
+            "purl": "pkg:npm/react@19.2.4",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "react@19.2.4"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/scheduler@0.27.0",
+            "type": "library",
+            "name": "scheduler",
+            "version": "0.27.0",
+            "purl": "pkg:npm/scheduler@0.27.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "scheduler@0.27.0"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:pypi/fastapi@0.115.6",
+            "type": "library",
+            "name": "fastapi",
+            "version": "0.115.6",
+            "purl": "pkg:pypi/fastapi@0.115.6",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pip"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:pypi/uvicorn@0.34.0",
+            "type": "library",
+            "name": "uvicorn",
+            "version": "0.34.0",
+            "purl": "pkg:pypi/uvicorn@0.34.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pip"
+                }
+            ]
         }
     ],
     "dependencies": [
         {
-            "ref": "0a0e6a81-61ff-4388-b74d-7a4bd2f47e9d",
+            "ref": "00b4153a-7f1c-478d-8d72-7607d5d17d68",
             "dependsOn": [
-                "8f901202-971b-4f11-a8cb-fb0d33317670",
-                "d58c3a4b-a2f2-4de0-8bcd-b37ace9daeed"
+                "dc316728-cb6a-42e9-8869-24dc5460d708"
             ]
         },
         {
-            "ref": "821b46c8-3246-4d6e-91db-6e9b06f3f17a",
+            "ref": "5a63bbe1-91eb-4a07-815e-4ee7efd15074",
             "dependsOn": []
         },
         {
-            "ref": "8f901202-971b-4f11-a8cb-fb0d33317670",
+            "ref": "6623a633-6fba-4071-9345-8c35dc5ce8e4",
             "dependsOn": [
-                "821b46c8-3246-4d6e-91db-6e9b06f3f17a"
+                "pkg:pypi/fastapi@0.115.6",
+                "pkg:pypi/uvicorn@0.34.0"
             ]
         },
         {
-            "ref": "d58c3a4b-a2f2-4de0-8bcd-b37ace9daeed",
+            "ref": "764925af-1aaf-48c9-8577-d9b48f8b52c1",
             "dependsOn": [
-                "dd2ff6ff-10c0-461c-979b-8e139700ba20"
+                "00b4153a-7f1c-478d-8d72-7607d5d17d68",
+                "6623a633-6fba-4071-9345-8c35dc5ce8e4",
+                "78ae538d-246a-4ad5-a403-f53350459790",
+                "e41eed3b-94d9-4d32-b238-e287044d1578"
             ]
         },
         {
-            "ref": "dd2ff6ff-10c0-461c-979b-8e139700ba20",
+            "ref": "78ae538d-246a-4ad5-a403-f53350459790",
+            "dependsOn": [
+                "pkg:npm/react-dom@19.2.4",
+                "pkg:npm/react@19.2.4"
+            ]
+        },
+        {
+            "ref": "dc316728-cb6a-42e9-8869-24dc5460d708",
+            "dependsOn": []
+        },
+        {
+            "ref": "e41eed3b-94d9-4d32-b238-e287044d1578",
+            "dependsOn": [
+                "5a63bbe1-91eb-4a07-815e-4ee7efd15074"
+            ]
+        },
+        {
+            "ref": "pkg:npm/react-dom@19.2.4",
+            "dependsOn": [
+                "pkg:npm/react@19.2.4",
+                "pkg:npm/scheduler@0.27.0"
+            ]
+        },
+        {
+            "ref": "pkg:npm/react@19.2.4",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:npm/scheduler@0.27.0",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:pypi/fastapi@0.115.6",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:pypi/uvicorn@0.34.0",
             "dependsOn": []
         }
     ],

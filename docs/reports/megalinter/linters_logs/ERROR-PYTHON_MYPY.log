@@ -1,0 +1,25 @@
+Results of mypy linter (version 1.16.0)
+See documentation on https://megalinter.io/8.8.0/descriptors/python_mypy/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+server/main.py:3:1: error: Cannot find implementation or library stub for
+module named "fastapi"  [import-not-found]
+    from fastapi import FastAPI
+    ^
+server/main.py:4:1: error: Cannot find implementation or library stub for
+module named "fastapi.middleware.cors"  [import-not-found]
+    from fastapi.middleware.cors import CORSMiddleware
+    ^
+server/main.py:4:1: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+server/main.py:23:1: error: Function is missing a return type annotation 
+[no-untyped-def]
+    async def root():
+    ^
+server/main.py:29:1: error: Function is missing a return type annotation 
+[no-untyped-def]
+    async def health_check():
+    ^
+Found 4 errors in 1 file (checked 1 source file)
+

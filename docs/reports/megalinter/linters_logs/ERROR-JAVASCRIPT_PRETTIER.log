@@ -1,0 +1,9 @@
+Results of prettier linter (version 3.5.3)
+See documentation on https://megalinter.io/8.8.0/descriptors/javascript_prettier/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+Checking formatting...
+[error] Cannot find package 'prettier-plugin-sh' imported from noop.js
+

@@ -5,32 +5,56 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_vale/
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 
- config/styles/proselint/README.md
- 4:82    warning     'are permitted' may be passive  write-good.Passive  
-                     voice. Use active voice if you                      
-                     can.                                                
- 4:82    suggestion  Try to avoid using 'are'.       write-good.E-Prime  
- 4:96    warning     'provided that' is too wordy.   write-good.TooWordy 
- 4:135   warning     'are met' may be passive        write-good.Passive  
-                     voice. Use active voice if you                      
-                     can.                                                
- 4:135   suggestion  Try to avoid using 'are'.       write-good.E-Prime  
- 6:40    warning     'retain' is too wordy.          write-good.TooWordy 
- 10:83   warning     'be used' may be passive        write-good.Passive  
-                     voice. Use active voice if you                      
-                     can.                                                
- 10:83   suggestion  Try to avoid using 'be'.        write-good.E-Prime  
- 12:15   warning     'IS PROVIDED' may be passive    write-good.Passive  
-                     voice. Use active voice if you                      
-                     can.                                                
- 12:15   suggestion  Try to avoid using 'IS'.        write-good.E-Prime  
- 12:226  warning     'ARE DISCLAIMED' may be         write-good.Passive  
-                     passive voice. Use active                           
-                     voice if you can.                                   
- 12:226  suggestion  Try to avoid using 'ARE'.       write-good.E-Prime  
- 12:254  warning     'SHALL' is too wordy.           write-good.TooWordy 
- 12:297  suggestion  Try to avoid using 'BE'.        write-good.E-Prime  
- 12:524  warning     'HOWEVER' is too wordy.         write-good.TooWordy 
+ README.md
+ 20:84   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
+ 20:84   warning     'be used' may be passive        write-good.Passive 
+                     voice. Use active voice if you                     
+                     can.                                               
+ 25:40   warning     'various' is a weasel word!     write-good.Weasel  
+ 59:14   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
+ 81:22   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
+ 92:22   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
+ 126:15  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
+ 128:10  warning     'are included' may be passive   write-good.Passive 
+                     voice. Use active voice if you                     
+                     can.                                               
+ 128:10  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
+ 129:18  suggestion  Try to avoid using 'is'.        write-good.E-Prime 
+ 129:18  warning     'is updated' may be passive     write-good.Passive 
+                     voice. Use active voice if you                     
+                     can.                                               
 
-✖ 0 errors, 9 warnings and 6 suggestions in 2 files.
+
+ core/README.md
+ 24:4   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
+ 24:4   warning     'be defined' may be passive     write-good.Passive 
+                    voice. Use active voice if you                     
+                    can.                                               
+ 24:33  suggestion  Try to avoid using 'is'.        write-good.E-Prime 
+ 24:33  warning     'is developed' may be passive   write-good.Passive 
+                    voice. Use active voice if you                     
+                    can.                                               
+
+
+ schema/README.md
+ 24:4   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
+ 24:4   warning     'be defined' may be passive     write-good.Passive 
+                    voice. Use active voice if you                     
+                    can.                                               
+ 24:38  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
+ 24:38  warning     'are identified' may be         write-good.Passive 
+                    passive voice. Use active                          
+                    voice if you can.                                  
+
+
+ server/README.md
+ 24:14  suggestion  Try to avoid using 'be'.  write-good.E-Prime 
+
+
+ ui/README.md
+ 5:33   suggestion  Try to avoid using 'are'.  write-good.E-Prime 
+ 12:20  suggestion  Try to avoid using 'is'.   write-good.E-Prime 
+ 16:8   suggestion  Try to avoid using 'are'.  write-good.E-Prime 
+
+✖ 0 errors, 8 warnings and 15 suggestions in 7 files.
 

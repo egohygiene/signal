@@ -1,0 +1,10 @@
+Results of pylint linter (version 3.3.7)
+See documentation on https://megalinter.io/8.8.0/descriptors/python_pylint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+************* Module main
+server/main.py:3:0: E0401: Unable to import 'fastapi' (import-error)
+server/main.py:4:0: E0401: Unable to import 'fastapi.middleware.cors' (import-error)
+
