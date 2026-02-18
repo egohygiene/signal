@@ -126,17 +126,22 @@ class PlaidAdapter:
             # Fetch transactions
             response = self.client.transactions_get(request)
 
+            # Convert response to dict for easier access
+            response_dict = response.to_dict()
+
             logger.info(
                 f"Successfully fetched "
-                f"{len(response['transactions'])} "
+                f"{len(response_dict['transactions'])} "
                 f"transactions"
             )
 
             return {
-                "accounts": response.get("accounts", []),
-                "transactions": response.get("transactions", []),
-                "total_transactions": response.get("total_transactions", 0),
-                "request_id": response.get("request_id"),
+                "accounts": response_dict.get("accounts", []),
+                "transactions": response_dict.get("transactions", []),
+                "total_transactions": response_dict.get(
+                    "total_transactions", 0
+                ),
+                "request_id": response_dict.get("request_id"),
             }
 
         except plaid.ApiException as e:

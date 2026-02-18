@@ -164,9 +164,12 @@ async def get_plaid_transactions(request: TransactionsRequest):
         )
 
     try:
+        # Log request details (excluding sensitive data)
         logger.info(
-            f"Fetching Plaid transactions with request: "
-            f"{request.model_dump(exclude={'access_token'})}"
+            f"Fetching Plaid transactions - "
+            f"start_date: {request.start_date}, "
+            f"end_date: {request.end_date}, "
+            f"account_ids: {request.account_ids}"
         )
 
         # Fetch transactions from Plaid
