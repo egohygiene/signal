@@ -3,9 +3,10 @@
 import logging
 import sys
 from contextlib import asynccontextmanager
+from datetime import datetime
 from typing import List, Optional
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -138,6 +139,133 @@ class TransactionsResponse(BaseModel):
     request_id: Optional[str] = None
 
 
+def validate_date_format(date_string: str, param_name: str) -> None:
+    """
+    Validate date format is YYYY-MM-DD.
+
+    Args:
+        date_string: Date string to validate
+        param_name: Parameter name for error message
+
+    Raises:
+        HTTPException: If date format is invalid
+    """
+    try:
+        datetime.strptime(date_string, "%Y-%m-%d")
+    except ValueError:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Invalid {param_name} format. Expected YYYY-MM-DD.",
+        )
+
+
+@app.get("/api/transactions", response_model=TransactionsResponse)
+async def get_transactions(
+    start_date: Optional[str] = None,
+    end_date: Optional[str] = None,
+    account_ids: Optional[str] = None,
+    x_access_token: str = Header(..., description="Plaid access token"),
+):
+    """
+    Fetch and normalize transactions from Plaid API (GET endpoint).
+
+    This is a passthrough endpoint that fetches transactions for a given access
+    token and returns normalized transaction data.
+
+    Security Note: The access token is required via X-Access-Token header to avoid
+    exposure in URL query parameters. This provides secure authentication while
+    maintaining the simplicity of a GET request for frontend consumption.
+
+    Args:
+        start_date: Optional start date in YYYY-MM-DD format (query parameter)
+        end_date: Optional end date in YYYY-MM-DD format (query parameter)
+        account_ids: Optional comma-separated list of account IDs (query parameter)
+        x_access_token: Plaid access token (required header: X-Access-Token)
+
+    Returns:
+        Normalized transactions with metadata
+
+    Raises:
+        HTTPException: If Plaid is not configured or API call fails
+    """
+    # Validate access token is not empty
+    if not x_access_token or not x_access_token.strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Access token cannot be empty.",
+        )
+
+    # Validate date format if provided (before checking Plaid adapter)
+    if start_date:
+        validate_date_format(start_date, "start_date")
+    if end_date:
+        validate_date_format(end_date, "end_date")
+
+    if not plaid_adapter:
+        logger.error("Plaid adapter not configured")
+        raise HTTPException(
+            status_code=503,
+            detail="Plaid integration is not configured. "
+            "Please set PLAID_CLIENT_ID and PLAID_SECRET environment variables.",
+        )
+
+    try:
+        # Parse account_ids from comma-separated string if provided
+        account_ids_list = None
+        if account_ids:
+            # Filter out empty strings after splitting and stripping
+            account_ids_list = [
+                aid.strip() for aid in account_ids.split(",") if aid.strip()
+            ]
+            # If all values were empty, treat as None
+            if not account_ids_list:
+                account_ids_list = None
+
+        # Log request details (excluding sensitive data)
+        account_ids_masked = (
+            f"{len(account_ids_list)} account(s)"
+            if account_ids_list
+            else "all accounts"
+        )
+        logger.info(
+            f"Fetching transactions - "
+            f"start_date: {start_date or 'default'}, "
+            f"end_date: {end_date or 'default'}, "
+            f"accounts: {account_ids_masked}"
+        )
+
+        # Fetch transactions from Plaid
+        result = plaid_adapter.get_transactions(
+            access_token=x_access_token,
+            start_date=start_date,
+            end_date=end_date,
+            account_ids=account_ids_list,
+        )
+
+        # Normalize transactions
+        normalized_transactions = plaid_adapter.normalize_transactions(
+            result.get("transactions", [])
+        )
+
+        logger.info(f"Successfully fetched {len(normalized_transactions)} transactions")
+
+        return TransactionsResponse(
+            transactions=normalized_transactions,
+            total_count=len(normalized_transactions),
+            accounts_count=len(result.get("accounts", [])),
+            request_id=result.get("request_id"),
+        )
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error fetching transactions: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to fetch transactions: {str(e)}",
+        )
+
+
 @app.post("/api/plaid/transactions", response_model=TransactionsResponse)
 async def get_plaid_transactions(request: TransactionsRequest):
     """
@@ -203,9 +331,7 @@ async def get_plaid_transactions(request: TransactionsRequest):
             logger.info(f"  ID: {tx.transaction_id}")
             logger.info(f"  Date: {tx.date}")
             logger.info(f"  Name: {tx.name}")
-            logger.info(
-                f"  Amount: ${tx.amount:.2f} {tx.iso_currency_code or 'USD'}"
-            )
+            logger.info(f"  Amount: ${tx.amount:.2f} {tx.iso_currency_code or 'USD'}")
             logger.info(
                 f"  Category: "
                 f"{', '.join(tx.category) if tx.category else 'Uncategorized'}"
@@ -214,8 +340,7 @@ async def get_plaid_transactions(request: TransactionsRequest):
 
         if len(normalized_transactions) > 10:
             logger.info(
-                f"... and {len(normalized_transactions) - 10} "
-                f"more transactions"
+                f"... and {len(normalized_transactions) - 10} more transactions"
             )
 
         logger.info("=" * 80)
