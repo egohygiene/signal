@@ -1,0 +1,656 @@
+.
+├── .ansible
+│   └── .lock
+├── .github
+│   ├── linters
+│   │   └── .gitkeep
+│   └── workflows
+│       ├── generate_repository_tree.yml
+│       ├── megalinter.yml
+│       └── pages.yml
+├── .history
+│   ├── .github
+│   │   └── workflows
+│   │       ├── megalinter_20260210023512.yml
+│   │       ├── megalinter_20260210072802.yml
+│   │       └── megalinter_20260210073152.yml
+│   ├── .vscode
+│   │   └── dictionaries
+│   │       ├── project-words_20260211161750.dictionary
+│   │       ├── project-words_20260211165055.dictionary
+│   │       ├── project-words_20260211165102.dictionary
+│   │       ├── project-words_20260211165103.dictionary
+│   │       ├── software-terms_20260211161750.dictionary
+│   │       ├── software-terms_20260211165100.dictionary
+│   │       └── software-terms_20260214140640.dictionary
+│   ├── config
+│   │   ├── styles
+│   │   │   ├── proselint
+│   │   │   │   ├── README_20260214004441.md
+│   │   │   │   ├── README_20260214004609.md
+│   │   │   │   ├── README_20260214135750.md
+│   │   │   │   ├── README_20260214135817.md
+│   │   │   │   └── README_20260214135843.md
+│   │   │   └── write-good
+│   │   │       ├── README_20260210023512.md
+│   │   │       ├── README_20260214004618.md
+│   │   │       ├── README_20260214004629.md
+│   │   │       ├── README_20260214004649.md
+│   │   │       ├── README_20260214004703.md
+│   │   │       └── README_20260214134304.md
+│   │   ├── .codespellrc_20260214134340
+│   │   ├── .codespellrc_20260214134342
+│   │   ├── .codespellrc_20260214134536
+│   │   ├── .codespellrc_20260214134720
+│   │   ├── .codespellrc_20260214134722
+│   │   ├── .cspell.config_20260210072522.mjs
+│   │   ├── .cspell.config_20260214134523.mjs
+│   │   ├── .editorconfig-checker_20260211010747.json
+│   │   ├── .editorconfig-checker_20260211010806.json
+│   │   ├── .groovylintrc_20260210072522.json
+│   │   ├── .groovylintrc_20260214141119.json
+│   │   ├── .groovylintrc_20260214141256.json
+│   │   ├── .groovylintrc_20260214141323.json
+│   │   ├── .jscpd_20260210072522.json
+│   │   ├── .jscpd_20260211174943.json
+│   │   ├── .jscpd_20260211175055.json
+│   │   ├── .jscpd_20260211181539.json
+│   │   ├── .jscpd_20260214003745.json
+│   │   ├── .ls-lint_20260211172614.yml
+│   │   ├── .ls-lint_20260211174140.yml
+│   │   ├── .secretlintignore_20260210072522
+│   │   ├── .secretlintignore_20260214145450
+│   │   ├── .secretlintignore_20260214154618
+│   │   ├── .secretlintignore_20260214154716
+│   │   ├── .secretlintignore_20260214154720
+│   │   ├── .secretlintignore_20260214155446
+│   │   ├── .secretlintignore_20260214155543
+│   │   ├── .secretlintignore_20260214155556
+│   │   ├── .secretlintrc_20260210072522.json
+│   │   ├── .secretlintrc_20260211170241.json
+│   │   ├── .secretlintrc_20260211170258.json
+│   │   ├── .secretlintrc_20260211180953.json
+│   │   ├── .secretlintrc_20260214143658.json
+│   │   ├── .secretlintrc_20260214144028.json
+│   │   ├── .secretlintrc_20260214144143.json
+│   │   ├── .secretlintrc_20260214144354.json
+│   │   ├── .secretlintrc_20260214144415.json
+│   │   ├── .secretlintrc_20260214144453.json
+│   │   ├── .secretlintrc_20260214144555.json
+│   │   ├── .secretlintrc_20260214144640.json
+│   │   ├── .secretlintrc_20260214144724.json
+│   │   ├── .secretlintrc_20260214155023.json
+│   │   ├── .secretlintrc_20260214155030.json
+│   │   ├── .secretlintrc_20260214155031.json
+│   │   ├── .secretlintrc_20260214160817.json
+│   │   ├── .secretlintrc_20260214160837.json
+│   │   ├── .secretlintrc_20260214160839.json
+│   │   ├── .secretlintrc_20260214163600.json
+│   │   ├── .secretlintrc_20260214163817.json
+│   │   ├── .secretlintrc_20260214163820.json
+│   │   ├── .secretlintrc_20260214163900.json
+│   │   ├── .secretlintrc_20260214163937.json
+│   │   ├── .secretlintrc_20260214163946.json
+│   │   ├── .secretlintrc_20260214164108.json
+│   │   ├── .secretlintrc_20260214164115.json
+│   │   ├── .secretlintrc_20260214164257.json
+│   │   ├── .secretlintrc_20260214164450.json
+│   │   ├── .secretlintrc_20260214164532.json
+│   │   ├── .secretlintrc_20260214164542.json
+│   │   ├── .secretlintrc_20260214164628.json
+│   │   ├── .secretlintrc_20260214165112.json
+│   │   ├── .secretlintrc_20260214165133.json
+│   │   ├── .secretlintrc_20260214165333.json
+│   │   ├── .secretlintrc_20260214165400.json
+│   │   ├── .secretlintrc_20260214165405.json
+│   │   ├── .secretlintrc_20260214165627.json
+│   │   ├── .secretlintrc_20260214165645.json
+│   │   ├── .secretlintrc_20260214165734.json
+│   │   ├── .secretlintrc_20260214165828.json
+│   │   ├── .secretlintrc_20260214170413.json
+│   │   ├── .secretlintrc_20260214170556.json
+│   │   ├── .v8rrc_20260210031248.yml
+│   │   ├── .v8rrc_20260210031250.yml
+│   │   ├── .v8rrc_20260210031547.yml
+│   │   ├── .v8rrc_20260210031556.yml
+│   │   ├── .v8rrc_20260210031606.yml
+│   │   ├── .v8rrc_20260210031611.yml
+│   │   ├── .vale_20260210072522.ini
+│   │   └── .vale_20260214135833.ini
+│   ├── docs
+│   │   └── reports
+│   │       └── megalinter
+│   │           ├── app_20260210023512.js
+│   │           ├── app_20260210025730.js
+│   │           ├── index_20260210023512.html
+│   │           ├── index_20260210024454.html
+│   │           ├── styles_20260210023512.css
+│   │           └── styles_20260210024716.css
+│   ├── scripts
+│   │   ├── megalinter_20260213235908.sh
+│   │   ├── megalinter_20260214000505.sh
+│   │   ├── megalinter_20260214001113.sh
+│   │   ├── megalinter_20260214001356.sh
+│   │   ├── megalinter_20260214002649.sh
+│   │   ├── megalinter_20260214150002.sh
+│   │   ├── megalinter_20260214150015.sh
+│   │   └── megalinter_20260214152133.sh
+│   ├── .codespellrc_20260214134721
+│   ├── .codespellrc_20260214140631
+│   ├── .codespellrc_20260214140643
+│   ├── .megalinter_20260210023512.yml
+│   ├── .megalinter_20260210031625.yml
+│   ├── .megalinter_20260210031645.yml
+│   ├── .megalinter_20260210073222.yml
+│   ├── .megalinter_20260210073307.yml
+│   ├── .megalinter_20260210073312.yml
+│   ├── .megalinter_20260210073318.yml
+│   ├── .megalinter_20260210073423.yml
+│   ├── .megalinter_20260210073706.yml
+│   ├── .megalinter_20260210073728.yml
+│   ├── .megalinter_20260210073752.yml
+│   ├── .megalinter_20260210073803.yml
+│   ├── .megalinter_20260210073815.yml
+│   ├── .megalinter_20260210073827.yml
+│   ├── .megalinter_20260210073842.yml
+│   ├── .megalinter_20260210073851.yml
+│   ├── .megalinter_20260210073901.yml
+│   ├── .megalinter_20260210073916.yml
+│   ├── .megalinter_20260210073924.yml
+│   ├── .megalinter_20260210073946.yml
+│   ├── .megalinter_20260210074023.yml
+│   ├── .megalinter_20260210074038.yml
+│   ├── .megalinter_20260210074225.yml
+│   ├── .megalinter_20260211010802.yml
+│   ├── .megalinter_20260211020847.yml
+│   ├── .megalinter_20260211020931.yml
+│   ├── .megalinter_20260211020943.yml
+│   ├── .megalinter_20260211021037.yml
+│   ├── .megalinter_20260211164613.yml
+│   ├── .megalinter_20260211164617.yml
+│   ├── .megalinter_20260211164948.yml
+│   ├── .megalinter_20260211164952.yml
+│   ├── .megalinter_20260211165012.yml
+│   ├── .megalinter_20260211165044.yml
+│   ├── .megalinter_20260211165048.yml
+│   ├── .megalinter_20260211165106.yml
+│   ├── .megalinter_20260211165109.yml
+│   ├── .megalinter_20260211172436.yml
+│   ├── .megalinter_20260211172501.yml
+│   ├── .megalinter_20260211172523.yml
+│   ├── .megalinter_20260211172524.yml
+│   ├── .megalinter_20260211181717.yml
+│   ├── .megalinter_20260211182524.yml
+│   ├── .megalinter_20260211183223.yml
+│   ├── .megalinter_20260214000457.yml
+│   ├── .megalinter_20260214000510.yml
+│   ├── .megalinter_20260214000948.yml
+│   ├── .megalinter_20260214001403.yml
+│   ├── .megalinter_20260214001405.yml
+│   ├── .megalinter_20260214002901.yml
+│   ├── .megalinter_20260214002923.yml
+│   ├── .megalinter_20260214003014.yml
+│   ├── .megalinter_20260214003856.yml
+│   ├── .megalinter_20260214140104.yml
+│   ├── .megalinter_20260214140106.yml
+│   ├── .megalinter_20260214140508.yml
+│   ├── .megalinter_20260214141608.yml
+│   ├── .megalinter_20260214141636.yml
+│   ├── .megalinter_20260214141740.yml
+│   ├── .megalinter_20260214142012.yml
+│   ├── .megalinter_20260214142016.yml
+│   ├── .megalinter_20260214142114.yml
+│   ├── .megalinter_20260214142359.yml
+│   ├── .megalinter_20260214142401.yml
+│   ├── .megalinter_20260214142600.yml
+│   ├── .megalinter_20260214142817.yml
+│   ├── .megalinter_20260214142824.yml
+│   ├── .megalinter_20260214143204.yml
+│   ├── .megalinter_20260214143302.yml
+│   ├── .megalinter_20260214143355.yml
+│   ├── .megalinter_20260214143410.yml
+│   ├── .megalinter_20260214143422.yml
+│   ├── .megalinter_20260214143431.yml
+│   ├── .megalinter_20260214143448.yml
+│   ├── .megalinter_20260214150021.yml
+│   ├── .megalinter_20260214150223.yml
+│   ├── .megalinter_20260214150338.yml
+│   ├── .megalinter_20260214150515.yml
+│   ├── .megalinter_20260214150734.yml
+│   ├── .megalinter_20260214150743.yml
+│   ├── .megalinter_20260214151805.yml
+│   ├── .megalinter_20260214151831.yml
+│   ├── .megalinter_20260214152313.yml
+│   ├── .megalinter_20260214152431.yml
+│   ├── .megalinter_20260214152453.yml
+│   ├── .megalinter_20260214152607.yml
+│   ├── .megalinter_20260214152627.yml
+│   ├── .megalinter_20260214152716.yml
+│   ├── .megalinter_20260214153014.yml
+│   ├── .megalinter_20260214153028.yml
+│   ├── .megalinter_20260214153054.yml
+│   ├── .megalinter_20260214153156.yml
+│   ├── .megalinter_20260214153632.yml
+│   ├── .megalinter_20260214153647.yml
+│   ├── .megalinter_20260214153921.yml
+│   ├── .megalinter_20260214153949.yml
+│   ├── .megalinter_20260214154203.yml
+│   ├── .megalinter_20260214154459.yml
+│   ├── .megalinter_20260214155338.yml
+│   ├── .megalinter_20260214155357.yml
+│   ├── .megalinter_20260214161120.yml
+│   ├── .megalinter_20260214161505.yml
+│   ├── .megalinter_20260214161926.yml
+│   ├── .megalinter_20260214162117.yml
+│   ├── .megalinter_20260214162209.yml
+│   ├── .megalinter_20260214162613.yml
+│   ├── .megalinter_20260214162733.yml
+│   ├── .megalinter_20260214162836.yml
+│   ├── .megalinter_20260214163454.yml
+│   ├── package_20260211183048.json
+│   ├── package_20260211183052.json
+│   ├── package_20260211183137.json
+│   ├── package_20260211183208.json
+│   ├── package_20260214134919.json
+│   ├── package_20260214134933.json
+│   ├── package_20260214134940.json
+│   ├── package_20260214135006.json
+│   ├── package_20260214135208.json
+│   ├── package_20260214135211.json
+│   ├── package_20260214135242.json
+│   ├── package_20260214135409.json
+│   ├── package_20260214143714.json
+│   ├── package_20260214143827.json
+│   ├── package_20260214143830.json
+│   ├── package_20260214145744.json
+│   └── package_20260214153330.json
+├── .vscode
+│   ├── dictionaries
+│   │   ├── backend-terms.dictionary
+│   │   ├── devops-cloud-terms.dictionary
+│   │   ├── frontend-terms.dictionary
+│   │   ├── programming-terms.dictionary
+│   │   ├── project-words.dictionary
+│   │   └── software-terms.dictionary
+│   ├── extensions.json
+│   ├── launch.json
+│   ├── settings.json
+│   └── tasks.json
+├── config
+│   ├── .clj-kondo
+│   │   └── config.edn
+│   ├── lynis
+│   │   └── custom.prf
+│   ├── styles
+│   │   ├── proselint
+│   │   │   ├── Airlinese.yml
+│   │   │   ├── AnimalLabels.yml
+│   │   │   ├── Annotations.yml
+│   │   │   ├── Apologizing.yml
+│   │   │   ├── Archaisms.yml
+│   │   │   ├── But.yml
+│   │   │   ├── Cliches.yml
+│   │   │   ├── CorporateSpeak.yml
+│   │   │   ├── Currency.yml
+│   │   │   ├── Cursing.yml
+│   │   │   ├── DateCase.yml
+│   │   │   ├── DateMidnight.yml
+│   │   │   ├── DateRedundancy.yml
+│   │   │   ├── DateSpacing.yml
+│   │   │   ├── DenizenLabels.yml
+│   │   │   ├── Diacritical.yml
+│   │   │   ├── GenderBias.yml
+│   │   │   ├── GroupTerms.yml
+│   │   │   ├── Hedging.yml
+│   │   │   ├── Hyperbole.yml
+│   │   │   ├── Jargon.yml
+│   │   │   ├── LGBTOffensive.yml
+│   │   │   ├── LGBTTerms.yml
+│   │   │   ├── Malapropisms.yml
+│   │   │   ├── Needless.yml
+│   │   │   ├── Nonwords.yml
+│   │   │   ├── Oxymorons.yml
+│   │   │   ├── P-Value.yml
+│   │   │   ├── RASSyndrome.yml
+│   │   │   ├── README.md
+│   │   │   ├── Skunked.yml
+│   │   │   ├── Spelling.yml
+│   │   │   ├── Typography.yml
+│   │   │   ├── Uncomparables.yml
+│   │   │   ├── Very.yml
+│   │   │   └── meta.json
+│   │   └── write-good
+│   │       ├── Cliches.yml
+│   │       ├── E-Prime.yml
+│   │       ├── Illusions.yml
+│   │       ├── Passive.yml
+│   │       ├── README.md
+│   │       ├── So.yml
+│   │       ├── ThereIs.yml
+│   │       ├── TooWordy.yml
+│   │       ├── Weasel.yml
+│   │       └── meta.json
+│   ├── .ansible-lint
+│   ├── .arm-ttk.psd1
+│   ├── .bandit.yml
+│   ├── .cfnlintrc.yml
+│   ├── .checkmake.ini
+│   ├── .checkov.yml
+│   ├── .chktexrc
+│   ├── .clang-format
+│   ├── .clippy.toml
+│   ├── .cljstyle
+│   ├── .coffee-lint.json
+│   ├── .commitlint.config.cjs
+│   ├── .cspell.config.mjs
+│   ├── .devskim.json
+│   ├── .ecrc
+│   ├── .editorconfig-checker.json
+│   ├── .eslint.config.mjs
+│   ├── .eslintrc-json.json
+│   ├── .flake8
+│   ├── .flow-scanner.json
+│   ├── .gherkin-lintrc
+│   ├── .gitleaks.toml
+│   ├── .golangci.yml
+│   ├── .groovylintrc.json
+│   ├── .grype.yaml
+│   ├── .hadolint.yaml
+│   ├── .htmlhintrc
+│   ├── .isort.cfg
+│   ├── .jscpd.json
+│   ├── .jsonlintrc
+│   ├── .kics.config.json
+│   ├── .lintr
+│   ├── .ls-lint.yml
+│   ├── .luacheckrc
+│   ├── .lycheeignore
+│   ├── .markdown-link-check.json
+│   ├── .markdownlint.json
+│   ├── .mypy.ini
+│   ├── .npmpackagejsonlintrc.json
+│   ├── .phplint.yml
+│   ├── .powershell-formatter.psd1
+│   ├── .powershell-psscriptanalyzer.psd1
+│   ├── .prettier.config.mjs
+│   ├── .proselintrc
+│   ├── .protolintrc.yml
+│   ├── .puppet-lint.rc
+│   ├── .pylintrc
+│   ├── .remarkrc.json
+│   ├── .revive.toml
+│   ├── .rstcheck.cfg
+│   ├── .ruby-lint.yml
+│   ├── .ruff.toml
+│   ├── .scalafix.conf
+│   ├── .secretlintignore
+│   ├── .secretlintrc.json
+│   ├── .snakefmt.toml
+│   ├── .spectral.yaml
+│   ├── .sqlfluff
+│   ├── .stylelintrc.json
+│   ├── .swiftlint.yml
+│   ├── .syft.yaml
+│   ├── .tektonlintrc.yaml
+│   ├── .tflint.hcl
+│   ├── .trufflehog.yml
+│   ├── .trufflehogignore
+│   ├── .tsqllintrc.json
+│   ├── .v8rrc.yml
+│   ├── .vale.ini
+│   ├── .yamllint.yml
+│   ├── META6.json
+│   ├── analysis_options.yml
+│   ├── apex-pmd-ruleset.xml
+│   ├── apt.conf
+│   ├── dpkg.cfg
+│   ├── java-pmd-ruleset.xml
+│   ├── lychee.toml
+│   ├── phpcs.xml
+│   ├── phpstan.neon.dist
+│   ├── psalm.xml
+│   ├── pyrightconfig.json
+│   ├── sun_checks.xml
+│   ├── terragrunt.hcl
+│   ├── terrascan-config.toml
+│   ├── trivy-sbom.yaml
+│   └── trivy.yaml
+├── core
+│   └── README.md
+├── docs
+│   ├── reports
+│   │   └── megalinter
+│   │       ├── IDE-config
+│   │       │   ├── .idea
+│   │       │   │   └── externalDependencies.xml
+│   │       │   ├── .vscode
+│   │       │   │   └── extensions.json
+│   │       │   ├── .ansible-lint
+│   │       │   ├── .bandit.yml
+│   │       │   ├── .checkov.yml
+│   │       │   ├── .cljstyle
+│   │       │   ├── .cspell.config.mjs
+│   │       │   ├── .ecrc
+│   │       │   ├── .editorconfig-checker.json
+│   │       │   ├── .eslint.config.mjs
+│   │       │   ├── .flake8
+│   │       │   ├── .flow-scanner.json
+│   │       │   ├── .gitleaks.toml
+│   │       │   ├── .grype.yaml
+│   │       │   ├── .htmlhintrc
+│   │       │   ├── .jscpd.json
+│   │       │   ├── .jsonlintrc
+│   │       │   ├── .kics.config.json
+│   │       │   ├── .ls-lint.yml
+│   │       │   ├── .markdown-link-check.json
+│   │       │   ├── .markdownlint.json
+│   │       │   ├── .mypy.ini
+│   │       │   ├── .npmpackagejsonlintrc.json
+│   │       │   ├── .prettier.config.mjs
+│   │       │   ├── .proselintrc
+│   │       │   ├── .pylintrc
+│   │       │   ├── .ruff.toml
+│   │       │   ├── .secretlintrc.json
+│   │       │   ├── .stylelintrc.json
+│   │       │   ├── .syft.yaml
+│   │       │   ├── .trufflehog.yml
+│   │       │   ├── .v8rrc.yml
+│   │       │   ├── .vale.ini
+│   │       │   ├── .yamllint.yml
+│   │       │   ├── apex-pmd-ruleset.xml
+│   │       │   ├── config.edn
+│   │       │   ├── lychee.toml
+│   │       │   ├── pyrightconfig.json
+│   │       │   ├── terragrunt.hcl
+│   │       │   ├── trivy-sbom.yaml
+│   │       │   └── trivy.yaml
+│   │       ├── copy-paste
+│   │       │   └── html
+│   │       │       ├── js
+│   │       │       │   └── prism.js
+│   │       │       ├── styles
+│   │       │       │   ├── prism.css
+│   │       │       │   └── tailwind.css
+│   │       │       ├── index.html
+│   │       │       └── jscpd-report.json
+│   │       ├── linters_logs
+│   │       │   ├── ERROR-ACTION_ACTIONLINT.log
+│   │       │   ├── ERROR-BASH_SHFMT.log
+│   │       │   ├── ERROR-CLOJURE_CLJ_KONDO.log
+│   │       │   ├── ERROR-CLOUDFORMATION_CFN_LINT.log
+│   │       │   ├── ERROR-COPYPASTE_JSCPD.log
+│   │       │   ├── ERROR-CSS_STYLELINT.log
+│   │       │   ├── ERROR-EDITORCONFIG_EDITORCONFIG_CHECKER.log
+│   │       │   ├── ERROR-HTML_DJLINT.log
+│   │       │   ├── ERROR-JAVASCRIPT_ES.log
+│   │       │   ├── ERROR-JAVASCRIPT_PRETTIER.log
+│   │       │   ├── ERROR-JSON_JSONLINT.log
+│   │       │   ├── ERROR-JSON_NPM_PACKAGE_JSON_LINT.log
+│   │       │   ├── ERROR-JSON_PRETTIER.log
+│   │       │   ├── ERROR-JSON_V8R.log
+│   │       │   ├── ERROR-MARKDOWN_MARKDOWNLINT.log
+│   │       │   ├── ERROR-MARKDOWN_MARKDOWN_TABLE_FORMATTER.log
+│   │       │   ├── ERROR-POWERSHELL_POWERSHELL.log
+│   │       │   ├── ERROR-POWERSHELL_POWERSHELL_FORMATTER.log
+│   │       │   ├── ERROR-PYTHON_FLAKE8.log
+│   │       │   ├── ERROR-PYTHON_ISORT.log
+│   │       │   ├── ERROR-PYTHON_MYPY.log
+│   │       │   ├── ERROR-PYTHON_PYLINT.log
+│   │       │   ├── ERROR-PYTHON_PYRIGHT.log
+│   │       │   ├── ERROR-PYTHON_RUFF_FORMAT.log
+│   │       │   ├── ERROR-REPOSITORY_CHECKOV.log
+│   │       │   ├── ERROR-REPOSITORY_GITLEAKS.log
+│   │       │   ├── ERROR-REPOSITORY_KICS.log
+│   │       │   ├── ERROR-REPOSITORY_LS_LINT.log
+│   │       │   ├── ERROR-REPOSITORY_SECRETLINT.log
+│   │       │   ├── ERROR-REPOSITORY_SYFT.log
+│   │       │   ├── ERROR-REPOSITORY_TRUFFLEHOG.log
+│   │       │   ├── ERROR-SALESFORCE_LIGHTNING_FLOW_SCANNER.log
+│   │       │   ├── ERROR-SALESFORCE_SFDX_SCANNER_APEX.log
+│   │       │   ├── ERROR-SALESFORCE_SFDX_SCANNER_AURA.log
+│   │       │   ├── ERROR-SALESFORCE_SFDX_SCANNER_LWC.log
+│   │       │   ├── ERROR-SPELL_CSPELL.log
+│   │       │   ├── ERROR-SPELL_LYCHEE.log
+│   │       │   ├── ERROR-SPELL_PROSELINT.log
+│   │       │   ├── ERROR-TERRAFORM_TERRAGRUNT.log
+│   │       │   ├── ERROR-TSX_ESLINT.log
+│   │       │   ├── ERROR-TYPESCRIPT_ES.log
+│   │       │   ├── ERROR-TYPESCRIPT_PRETTIER.log
+│   │       │   ├── ERROR-TYPESCRIPT_STANDARD.log
+│   │       │   ├── ERROR-YAML_PRETTIER.log
+│   │       │   ├── ERROR-YAML_V8R.log
+│   │       │   ├── ERROR-YAML_YAMLLINT.log
+│   │       │   ├── SUCCESS-ANSIBLE_ANSIBLE_LINT.log
+│   │       │   ├── SUCCESS-BASH_EXEC.log
+│   │       │   ├── SUCCESS-BASH_SHELLCHECK.log
+│   │       │   ├── SUCCESS-CLOJURE_CLJSTYLE.log
+│   │       │   ├── SUCCESS-COPYPASTE_JSCPD.log
+│   │       │   ├── SUCCESS-HTML_HTMLHINT.log
+│   │       │   ├── SUCCESS-JSON_JSONLINT.log
+│   │       │   ├── SUCCESS-JSON_NPM_PACKAGE_JSON_LINT.log
+│   │       │   ├── SUCCESS-JSON_V8R.log
+│   │       │   ├── SUCCESS-MARKDOWN_MARKDOWNLINT.log
+│   │       │   ├── SUCCESS-MARKDOWN_MARKDOWN_LINK_CHECK.log
+│   │       │   ├── SUCCESS-MARKDOWN_MARKDOWN_TABLE_FORMATTER.log
+│   │       │   ├── SUCCESS-PYTHON_BANDIT.log
+│   │       │   ├── SUCCESS-PYTHON_FLAKE8.log
+│   │       │   ├── SUCCESS-PYTHON_ISORT.log
+│   │       │   ├── SUCCESS-PYTHON_RUFF.log
+│   │       │   ├── SUCCESS-PYTHON_RUFF_FORMAT.log
+│   │       │   ├── SUCCESS-REPOSITORY_CHECKOV.log
+│   │       │   ├── SUCCESS-REPOSITORY_DUSTILOCK.log
+│   │       │   ├── SUCCESS-REPOSITORY_GIT_DIFF.log
+│   │       │   ├── SUCCESS-REPOSITORY_GRYPE.log
+│   │       │   ├── SUCCESS-REPOSITORY_SYFT.log
+│   │       │   ├── SUCCESS-REPOSITORY_TRIVY.log
+│   │       │   ├── SUCCESS-REPOSITORY_TRIVY_SBOM.log
+│   │       │   ├── SUCCESS-SALESFORCE_SFDX_SCANNER_APEX.log
+│   │       │   ├── SUCCESS-SALESFORCE_SFDX_SCANNER_AURA.log
+│   │       │   ├── SUCCESS-SALESFORCE_SFDX_SCANNER_LWC.log
+│   │       │   ├── SUCCESS-SPELL_CSPELL.log
+│   │       │   ├── SUCCESS-SPELL_VALE.log
+│   │       │   ├── SUCCESS-XML_XMLLINT.log
+│   │       │   ├── SUCCESS-YAML_V8R.log
+│   │       │   └── WARNING-SPELL_VALE.log
+│   │       ├── sbom
+│   │       │   ├── syft.json
+│   │       │   ├── syft.txt
+│   │       │   └── trivy.json
+│   │       ├── tap
+│   │       │   ├── mega-linter-ACTION_ACTIONLINT.tap
+│   │       │   ├── mega-linter-CLOJURE_CLJSTYLE.tap
+│   │       │   ├── mega-linter-CLOJURE_CLJ_KONDO.tap
+│   │       │   ├── mega-linter-CLOUDFORMATION_CFN_LINT.tap
+│   │       │   ├── mega-linter-EDITORCONFIG_EDITORCONFIG_CHECKER.tap
+│   │       │   ├── mega-linter-HTML_DJLINT.tap
+│   │       │   ├── mega-linter-HTML_HTMLHINT.tap
+│   │       │   ├── mega-linter-JSON_JSONLINT.tap
+│   │       │   ├── mega-linter-JSON_PRETTIER.tap
+│   │       │   ├── mega-linter-JSON_V8R.tap
+│   │       │   ├── mega-linter-MARKDOWN_MARKDOWNLINT.tap
+│   │       │   ├── mega-linter-MARKDOWN_MARKDOWN_LINK_CHECK.tap
+│   │       │   ├── mega-linter-MARKDOWN_MARKDOWN_TABLE_FORMATTER.tap
+│   │       │   ├── mega-linter-POWERSHELL_POWERSHELL.tap
+│   │       │   ├── mega-linter-POWERSHELL_POWERSHELL_FORMATTER.tap
+│   │       │   ├── mega-linter-SPELL_CSPELL.tap
+│   │       │   ├── mega-linter-SPELL_LYCHEE.tap
+│   │       │   ├── mega-linter-SPELL_PROSELINT.tap
+│   │       │   ├── mega-linter-SPELL_VALE.tap
+│   │       │   ├── mega-linter-TERRAFORM_TERRAGRUNT.tap
+│   │       │   ├── mega-linter-XML_XMLLINT.tap
+│   │       │   ├── mega-linter-YAML_PRETTIER.tap
+│   │       │   ├── mega-linter-YAML_V8R.tap
+│   │       │   └── mega-linter-YAML_YAMLLINT.tap
+│   │       ├── updated_sources
+│   │       │   └── reports
+│   │       │       └── kics
+│   │       │           └── results.json
+│   │       ├── IDE-config.txt
+│   │       ├── README.md
+│   │       ├── SUMMARY.md
+│   │       ├── app.js
+│   │       ├── index.html
+│   │       ├── mega-linter-report.json
+│   │       ├── mega-linter.log
+│   │       ├── sfdx-scanner-report-apex.csv
+│   │       ├── sfdx-scanner-report-aura.csv
+│   │       ├── sfdx-scanner-report-lwc.csv
+│   │       └── styles.css
+│   ├── CNAME
+│   ├── FINANCIAL_OPERATING_SYSTEM.md
+│   ├── favicon.ico
+│   └── index.html
+├── reports
+│   ├── kics
+│   │   └── results.json
+│   └── tree
+│       └── repo.tree
+├── schema
+│   └── README.md
+├── scripts
+│   └── megalinter.sh
+├── server
+│   ├── .env.example
+│   ├── IMPLEMENTATION_SUMMARY.md
+│   ├── PLAID_README.md
+│   ├── README.md
+│   ├── main.py
+│   ├── plaid_adapter.py
+│   ├── pyproject.toml
+│   └── requirements.txt
+├── ui
+│   ├── public
+│   │   └── vite.svg
+│   ├── src
+│   │   ├── assets
+│   │   │   └── react.svg
+│   │   ├── App.css
+│   │   ├── App.tsx
+│   │   ├── index.css
+│   │   └── main.tsx
+│   ├── .gitignore
+│   ├── README.md
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
+├── .codespellrc
+├── .dockerignore
+├── .editorconfig
+├── .gitignore
+├── .megalinter.yml
+├── .pre-commit-config.yaml
+├── .prettierignore
+├── .releaserc.yml
+├── .secrets.baseline
+├── LICENSE
+├── README.md
+├── info.log
+├── package-lock.json
+├── package.json
+├── pnpm-lock.yaml
+└── signal.code-workspace
