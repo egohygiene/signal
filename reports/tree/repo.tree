@@ -604,7 +604,10 @@
 │   ├── kics
 │   │   └── results.json
 │   └── tree
-│       └── repo.tree
+│       ├── repo.html
+│       ├── repo.json
+│       ├── repo.tree
+│       └── repo.xml
 ├── schema
 │   └── README.md
 ├── scripts
@@ -618,6 +621,9 @@
 │   ├── plaid_adapter.py
 │   ├── pyproject.toml
 │   └── requirements.txt
+├── tasks
+│   ├── lint.yml
+│   └── misc.yml
 ├── ui
 │   ├── public
 │   │   └── vite.svg
@@ -649,6 +655,7 @@
 ├── .secrets.baseline
 ├── LICENSE
 ├── README.md
+├── Taskfile.yml
 ├── info.log
 ├── package-lock.json
 ├── package.json

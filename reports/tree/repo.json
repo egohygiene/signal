@@ -648,8 +648,10 @@
         {"type":"file","name":"results.json"}
       ]},
       {"type":"directory","name":"tree","contents":[
+        {"type":"file","name":"repo.html"},
         {"type":"file","name":"repo.json"},
-        {"type":"file","name":"repo.tree"}
+        {"type":"file","name":"repo.tree"},
+        {"type":"file","name":"repo.xml"}
       ]}
     ]},
     {"type":"directory","name":"schema","contents":[
@@ -667,6 +669,10 @@
       {"type":"file","name":"plaid_adapter.py"},
       {"type":"file","name":"pyproject.toml"},
       {"type":"file","name":"requirements.txt"}
+    ]},
+    {"type":"directory","name":"tasks","contents":[
+      {"type":"file","name":"lint.yml"},
+      {"type":"file","name":"misc.yml"}
     ]},
     {"type":"directory","name":"ui","contents":[
       {"type":"directory","name":"public","contents":[
@@ -703,6 +709,7 @@
     {"type":"file","name":".secrets.baseline"},
     {"type":"file","name":"LICENSE"},
     {"type":"file","name":"README.md"},
+    {"type":"file","name":"Taskfile.yml"},
     {"type":"file","name":"info.log"},
     {"type":"file","name":"package-lock.json"},
     {"type":"file","name":"package.json"},

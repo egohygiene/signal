@@ -649,6 +649,7 @@
         <file name="results.json"></file>
       </directory>
       <directory name="tree">
+        <file name="repo.html"></file>
         <file name="repo.json"></file>
         <file name="repo.tree"></file>
         <file name="repo.xml"></file>
@@ -669,6 +670,10 @@
       <file name="plaid_adapter.py"></file>
       <file name="pyproject.toml"></file>
       <file name="requirements.txt"></file>
+    </directory>
+    <directory name="tasks">
+      <file name="lint.yml"></file>
+      <file name="misc.yml"></file>
     </directory>
     <directory name="ui">
       <directory name="public">
@@ -705,6 +710,7 @@
     <file name=".secrets.baseline"></file>
     <file name="LICENSE"></file>
     <file name="README.md"></file>
+    <file name="Taskfile.yml"></file>
     <file name="info.log"></file>
     <file name="package-lock.json"></file>
     <file name="package.json"></file>
