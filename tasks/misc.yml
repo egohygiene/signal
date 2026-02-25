@@ -1,0 +1,12 @@
+version: "3"
+
+tasks:
+  hello:
+    desc: Print a hello message
+    cmds:
+      - echo "Hello from Signal!"
+
+  version-check:
+    desc: Check the Task version
+    cmds:
+      - task --version

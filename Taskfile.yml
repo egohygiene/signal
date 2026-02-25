@@ -1,0 +1,5 @@
+version: "3"
+
+includes:
+  misc: ./tasks/misc.yml
+  lint: ./tasks/lint.yml
