@@ -1,0 +1,7 @@
+version: "3"
+
+tasks:
+  placeholder-lint:
+    desc: Placeholder lint task (dry-run)
+    cmds:
+      - echo "Lint placeholder — no lint errors."

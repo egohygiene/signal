@@ -25,6 +25,34 @@ signal/
 - **config/**: Configuration files for various tools and environments
 - **scripts/**: Utility scripts for development, deployment, and maintenance
 
+## Task Runner
+
+This project uses [Task](https://taskfile.dev) as its task runner. Tasks are defined in `Taskfile.yml` and the `tasks/` directory.
+
+### Install Task
+
+```bash
+# macOS
+brew install go-task
+
+# Windows
+choco install go-task
+
+# Linux / manual
+curl --location https://taskfile.dev/install.sh | sh
+```
+
+### Common Tasks
+
+```bash
+task --list              # List all available tasks
+task misc:hello          # Print a hello message
+task misc:version-check  # Verify Task is installed and in PATH
+task lint:placeholder-lint  # Run the placeholder lint task
+```
+
+---
+
 ## Getting Started
 
 ### Prerequisites
