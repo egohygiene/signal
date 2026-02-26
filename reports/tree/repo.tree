@@ -500,6 +500,7 @@
 │   │       │   ├── ERROR-PYTHON_RUFF_FORMAT.log
 │   │       │   ├── ERROR-REPOSITORY_CHECKOV.log
 │   │       │   ├── ERROR-REPOSITORY_GITLEAKS.log
+│   │       │   ├── ERROR-REPOSITORY_GRYPE.log
 │   │       │   ├── ERROR-REPOSITORY_KICS.log
 │   │       │   ├── ERROR-REPOSITORY_LS_LINT.log
 │   │       │   ├── ERROR-REPOSITORY_SECRETLINT.log
@@ -635,6 +636,7 @@
 │   ├── src
 │   │   ├── app
 │   │   │   ├── layout
+│   │   │   │   ├── Layout.test.tsx
 │   │   │   │   └── Layout.tsx
 │   │   │   └── App.tsx
 │   │   ├── components

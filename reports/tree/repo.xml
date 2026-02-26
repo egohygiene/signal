@@ -535,6 +535,7 @@
             <file name="ERROR-PYTHON_RUFF_FORMAT.log"></file>
             <file name="ERROR-REPOSITORY_CHECKOV.log"></file>
             <file name="ERROR-REPOSITORY_GITLEAKS.log"></file>
+            <file name="ERROR-REPOSITORY_GRYPE.log"></file>
             <file name="ERROR-REPOSITORY_KICS.log"></file>
             <file name="ERROR-REPOSITORY_LS_LINT.log"></file>
             <file name="ERROR-REPOSITORY_SECRETLINT.log"></file>
@@ -688,6 +689,7 @@
       <directory name="src">
         <directory name="app">
           <directory name="layout">
+            <file name="Layout.test.tsx"></file>
             <file name="Layout.tsx"></file>
           </directory>
           <file name="App.tsx"></file>

@@ -534,6 +534,7 @@
             {"type":"file","name":"ERROR-PYTHON_RUFF_FORMAT.log"},
             {"type":"file","name":"ERROR-REPOSITORY_CHECKOV.log"},
             {"type":"file","name":"ERROR-REPOSITORY_GITLEAKS.log"},
+            {"type":"file","name":"ERROR-REPOSITORY_GRYPE.log"},
             {"type":"file","name":"ERROR-REPOSITORY_KICS.log"},
             {"type":"file","name":"ERROR-REPOSITORY_LS_LINT.log"},
             {"type":"file","name":"ERROR-REPOSITORY_SECRETLINT.log"},
@@ -687,6 +688,7 @@
       {"type":"directory","name":"src","contents":[
         {"type":"directory","name":"app","contents":[
           {"type":"directory","name":"layout","contents":[
+            {"type":"file","name":"Layout.test.tsx"},
             {"type":"file","name":"Layout.tsx"}
           ]},
           {"type":"file","name":"App.tsx"}
