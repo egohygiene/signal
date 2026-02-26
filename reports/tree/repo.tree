@@ -599,7 +599,8 @@
 │   ├── CNAME
 │   ├── FINANCIAL_OPERATING_SYSTEM.md
 │   ├── favicon.ico
-│   └── index.html
+│   ├── index.html
+│   └── plaid-setup.md
 ├── reports
 │   ├── kics
 │   │   └── results.json

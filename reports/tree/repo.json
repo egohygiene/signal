@@ -641,7 +641,8 @@
       {"type":"file","name":"CNAME"},
       {"type":"file","name":"FINANCIAL_OPERATING_SYSTEM.md"},
       {"type":"file","name":"favicon.ico"},
-      {"type":"file","name":"index.html"}
+      {"type":"file","name":"index.html"},
+      {"type":"file","name":"plaid-setup.md"}
     ]},
     {"type":"directory","name":"reports","contents":[
       {"type":"directory","name":"kics","contents":[
