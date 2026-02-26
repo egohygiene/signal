@@ -1,6 +1,7 @@
+import '../i18n';
+
 import { render, screen } from '@testing-library/react';
 
-import '../i18n';
 import { HomePage } from './HomePage';
 
 describe('HomePage', () => {
