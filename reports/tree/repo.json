@@ -706,6 +706,7 @@
         {"type":"file","name":"main.tsx"}
       ]},
       {"type":"file","name":".gitignore"},
+      {"type":"file","name":".prettierrc"},
       {"type":"file","name":"README.md"},
       {"type":"file","name":"eslint.config.js"},
       {"type":"file","name":"index.html"},

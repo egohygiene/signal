@@ -707,6 +707,7 @@
         <file name="main.tsx"></file>
       </directory>
       <file name=".gitignore"></file>
+      <file name=".prettierrc"></file>
       <file name="README.md"></file>
       <file name="eslint.config.js"></file>
       <file name="index.html"></file>

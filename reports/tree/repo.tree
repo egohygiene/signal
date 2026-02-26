@@ -648,6 +648,7 @@
 │   │   ├── index.css
 │   │   └── main.tsx
 │   ├── .gitignore
+│   ├── .prettierrc
 │   ├── README.md
 │   ├── eslint.config.js
 │   ├── index.html
