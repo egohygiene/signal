@@ -1,12 +1,24 @@
 import { type JSX } from 'react';
-import { useTranslation } from 'react-i18next';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Layout } from './layout/Layout';
+import { HomePage } from '../pages/HomePage';
+import { TransactionsPage } from '../pages/TransactionsPage';
+import { BudgetsPage } from '../pages/BudgetsPage';
+import { PoolsPage } from '../pages/PoolsPage';
+import { SettingsPage } from '../pages/SettingsPage';
 
 export function App(): JSX.Element {
-  const { t } = useTranslation('common');
   return (
-    <main>
-      <h1>{t('appTitle')}</h1>
-      <p>{t('appInitializing')}</p>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/transactions" element={<TransactionsPage />} />
+          <Route path="/budgets" element={<BudgetsPage />} />
+          <Route path="/pools" element={<PoolsPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }

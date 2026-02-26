@@ -1,4 +1,18 @@
 {
   "appTitle": "Signal",
-  "appInitializing": "Application initializing…"
+  "appInitializing": "Application initializing…",
+  "nav": {
+    "home": "Home",
+    "transactions": "Transactions",
+    "budgets": "Budgets",
+    "pools": "Pools",
+    "settings": "Settings"
+  },
+  "pages": {
+    "home": "Home",
+    "transactions": "Transactions",
+    "budgets": "Budgets",
+    "pools": "Pools",
+    "settings": "Settings"
+  }
 }
