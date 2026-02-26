@@ -5,10 +5,10 @@ See documentation on https://megalinter.io/8.8.0/descriptors/python_pylint/
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 ************* Module main
-server/main.py:8:0: E0401: Unable to import 'fastapi' (import-error)
-server/main.py:9:0: E0401: Unable to import 'fastapi.middleware.cors' (import-error)
-server/main.py:10:0: E0401: Unable to import 'pydantic' (import-error)
-server/main.py:11:0: E0401: Unable to import 'pydantic_settings' (import-error)
+server/main.py:9:0: E0401: Unable to import 'fastapi' (import-error)
+server/main.py:10:0: E0401: Unable to import 'fastapi.middleware.cors' (import-error)
+server/main.py:11:0: E0401: Unable to import 'pydantic' (import-error)
+server/main.py:12:0: E0401: Unable to import 'pydantic_settings' (import-error)
 ************* Module plaid_adapter
 server/plaid_adapter.py:7:0: E0401: Unable to import 'plaid' (import-error)
 server/plaid_adapter.py:8:0: E0401: Unable to import 'plaid.api' (import-error)

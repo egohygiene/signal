@@ -1,9 +1,9 @@
 {
 	"kics_version": "v2.1.10",
-	"files_scanned": 12,
-	"lines_scanned": 602,
-	"files_parsed": 4,
-	"lines_parsed": 173,
+	"files_scanned": 13,
+	"lines_scanned": 661,
+	"files_parsed": 5,
+	"lines_parsed": 232,
 	"lines_ignored": 2,
 	"files_failed_to_scan": 0,
 	"queries_total": 289,
@@ -20,12 +20,12 @@
 	},
 	"total_counter": 1,
 	"total_bom_resources": 0,
-	"start": "2026-02-18T06:56:20.669883187Z",
-	"end": "2026-02-18T06:56:33.330954665Z",
+	"start": "2026-02-26T21:25:45.938438996Z",
+	"end": "2026-02-26T21:25:58.395028395Z",
 	"paths": [
-		".",
 		"/usr/bin/assets/queries",
-		"/usr/bin/assets/libraries"
+		"/usr/bin/assets/libraries",
+		"."
 	],
 	"queries": [
 		{

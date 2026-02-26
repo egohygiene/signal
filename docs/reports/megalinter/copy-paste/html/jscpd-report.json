@@ -1,7 +1,663 @@
 {
   "statistics": {
-    "detectionDate": "2026-02-11T22:54:14.078Z",
+    "detectionDate": "2026-02-26T21:24:28.562Z",
     "formats": {
+      "json": {
+        "sources": {
+          "/github/workspace/ui/src/locales/en/common.json": {
+            "lines": 17,
+            "tokens": 103,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/tsconfig.node.json": {
+            "lines": 25,
+            "tokens": 160,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/tsconfig.json": {
+            "lines": 3,
+            "tokens": 35,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/tsconfig.app.json": {
+            "lines": 27,
+            "tokens": 183,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/package.json": {
+            "lines": 51,
+            "tokens": 336,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/pyrightconfig.json": {
+            "lines": 31,
+            "tokens": 192,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/META6.json": {
+            "lines": 24,
+            "tokens": 155,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.tsqllintrc.json": {
+            "lines": 21,
+            "tokens": 110,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.stylelintrc.json": {
+            "lines": 37,
+            "tokens": 185,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.secretlintrc.json": {
+            "lines": 69,
+            "tokens": 314,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.remarkrc.json": {
+            "lines": 17,
+            "tokens": 104,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.npmpackagejsonlintrc.json": {
+            "lines": 72,
+            "tokens": 380,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.markdownlint.json": {
+            "lines": 24,
+            "tokens": 210,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.markdown-link-check.json": {
+            "lines": 33,
+            "tokens": 161,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.kics.config.json": {
+            "lines": 7,
+            "tokens": 48,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.jscpd.json": {
+            "lines": 23,
+            "tokens": 116,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.groovylintrc.json": {
+            "lines": 41,
+            "tokens": 221,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.flow-scanner.json": {
+            "lines": 40,
+            "tokens": 209,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.eslintrc-json.json": {
+            "lines": 27,
+            "tokens": 151,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.editorconfig-checker.json": {
+            "lines": 40,
+            "tokens": 175,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.coffee-lint.json": {
+            "lines": 57,
+            "tokens": 308,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/.vscode/tasks.json": {
+            "lines": 3,
+            "tokens": 15,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/.vscode/settings.json": {
+            "lines": 135,
+            "tokens": 810,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/.vscode/extensions.json": {
+            "lines": 39,
+            "tokens": 154,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/package.json": {
+            "lines": 165,
+            "tokens": 1129,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 1028,
+          "tokens": 5964,
+          "sources": 25,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "tsx": {
+        "sources": {
+          "/github/workspace/ui/src/components/Placeholder/Placeholder.tsx": {
+            "lines": 6,
+            "tokens": 79,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/components/Placeholder/Placeholder.test.tsx": {
+            "lines": 14,
+            "tokens": 142,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/components/Placeholder/Placeholder.stories.tsx": {
+            "lines": 19,
+            "tokens": 137,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/app/layout/Layout.tsx": {
+            "lines": 18,
+            "tokens": 211,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/pages/TransactionsPage.tsx": {
+            "lines": 10,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/pages/SettingsPage.tsx": {
+            "lines": 10,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/pages/PoolsPage.tsx": {
+            "lines": 10,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/pages/HomePage.tsx": {
+            "lines": 10,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/pages/HomePage.test.tsx": {
+            "lines": 11,
+            "tokens": 106,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/pages/BudgetsPage.tsx": {
+            "lines": 10,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/app/App.tsx": {
+            "lines": 24,
+            "tokens": 278,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/main.tsx": {
+            "lines": 12,
+            "tokens": 84,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 154,
+          "tokens": 1507,
+          "sources": 12,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "javascript": {
+        "sources": {
+          "/github/workspace/ui/src/app/App.tsx": {
+            "lines": 5,
+            "tokens": 106,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/eslint.config.js": {
+            "lines": 51,
+            "tokens": 334,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.prettier.config.mjs": {
+            "lines": 54,
+            "tokens": 325,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.eslint.config.mjs": {
+            "lines": 61,
+            "tokens": 366,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.cspell.config.mjs": {
+            "lines": 126,
+            "tokens": 690,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/config/.commitlint.config.cjs": {
+            "lines": 47,
+            "tokens": 471,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 344,
+          "tokens": 2292,
+          "sources": 6,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "css": {
+        "sources": {
+          "/github/workspace/ui/src/index.css": {
+            "lines": 69,
+            "tokens": 378,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 69,
+          "tokens": 378,
+          "sources": 1,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "typescript": {
+        "sources": {
+          "/github/workspace/ui/src/i18n.ts": {
+            "lines": 19,
+            "tokens": 121,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/.storybook/preview.ts": {
+            "lines": 15,
+            "tokens": 86,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/.storybook/main.ts": {
+            "lines": 10,
+            "tokens": 70,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/vite.config.ts": {
+            "lines": 12,
+            "tokens": 93,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 56,
+          "tokens": 370,
+          "sources": 4,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
       "clojure": {
         "sources": {
           "/github/workspace/config/.clj-kondo/config.edn": {
@@ -47,6 +703,54 @@
           "/github/workspace/.github/workflows/megalinter.yml": {
             "lines": 89,
             "tokens": 306,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/.github/workflows/generate_repository_tree.yml": {
+            "lines": 57,
+            "tokens": 292,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/tasks/misc.yml": {
+            "lines": 11,
+            "tokens": 69,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/tasks/lint.yml": {
+            "lines": 6,
+            "tokens": 46,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/tasks/ci.yml": {
+            "lines": 6,
+            "tokens": 45,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -272,15 +976,15 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
-          "/github/workspace/config/.bandit.yml": {
-            "lines": 301,
-            "tokens": 1466,
+          "/github/workspace/Taskfile.yml": {
+            "lines": 5,
+            "tokens": 25,
             "sources": 1,
-            "clones": 12,
-            "duplicatedLines": 456,
-            "duplicatedTokens": 2208,
-            "percentage": 151.5,
-            "percentageTokens": 150.61,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -309,8 +1013,8 @@
             "newClones": 0
           },
           "/github/workspace/.megalinter.yml": {
-            "lines": 502,
-            "tokens": 1539,
+            "lines": 569,
+            "tokens": 1570,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -322,20 +1026,32 @@
           }
         },
         "total": {
-          "lines": 1940,
-          "tokens": 7882,
-          "sources": 24,
-          "clones": 6,
-          "duplicatedLines": 228,
-          "duplicatedTokens": 1104,
-          "percentage": 11.75,
-          "percentageTokens": 14.01,
+          "lines": 1791,
+          "tokens": 6924,
+          "sources": 28,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
       },
       "markup": {
         "sources": {
+          "/github/workspace/ui/index.html": {
+            "lines": 12,
+            "tokens": 131,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "/github/workspace/docs/index.html": {
             "lines": 16,
             "tokens": 117,
@@ -410,9 +1126,9 @@
           }
         },
         "total": {
-          "lines": 211,
-          "tokens": 1678,
-          "sources": 6,
+          "lines": 223,
+          "tokens": 1809,
+          "sources": 7,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -422,11 +1138,35 @@
           "newClones": 0
         }
       },
-      "json": {
+      "markdown": {
         "sources": {
-          "/github/workspace/config/pyrightconfig.json": {
+          "/github/workspace/ui/README.md": {
+            "lines": 107,
+            "tokens": 626,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/server/requirements.txt": {
+            "lines": 4,
+            "tokens": 8,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/server/README.md": {
             "lines": 31,
-            "tokens": 192,
+            "tokens": 172,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -436,9 +1176,9 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
-          "/github/workspace/config/META6.json": {
-            "lines": 24,
-            "tokens": 155,
+          "/github/workspace/server/PLAID_README.md": {
+            "lines": 182,
+            "tokens": 1114,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -448,9 +1188,21 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
-          "/github/workspace/config/.tsqllintrc.json": {
+          "/github/workspace/server/IMPLEMENTATION_SUMMARY.md": {
+            "lines": 266,
+            "tokens": 1898,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/schema/README.md": {
             "lines": 21,
-            "tokens": 110,
+            "tokens": 115,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -460,9 +1212,9 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
-          "/github/workspace/config/.stylelintrc.json": {
-            "lines": 37,
-            "tokens": 185,
+          "/github/workspace/docs/plaid-setup.md": {
+            "lines": 143,
+            "tokens": 1238,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -472,9 +1224,9 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
-          "/github/workspace/config/.secretlintrc.json": {
-            "lines": 72,
-            "tokens": 347,
+          "/github/workspace/docs/FINANCIAL_OPERATING_SYSTEM.md": {
+            "lines": 295,
+            "tokens": 1608,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -484,9 +1236,9 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
-          "/github/workspace/config/.remarkrc.json": {
-            "lines": 17,
-            "tokens": 104,
+          "/github/workspace/core/README.md": {
+            "lines": 21,
+            "tokens": 117,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -496,196 +1248,96 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
-          "/github/workspace/config/.npmpackagejsonlintrc.json": {
-            "lines": 72,
-            "tokens": 380,
+          "/github/workspace/README.md": {
+            "lines": 186,
+            "tokens": 1177,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
             "duplicatedTokens": 0,
             "percentage": 0,
             "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.markdownlint.json": {
-            "lines": 24,
-            "tokens": 210,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.markdown-link-check.json": {
-            "lines": 33,
-            "tokens": 161,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.kics.config.json": {
-            "lines": 7,
-            "tokens": 48,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.jscpd.json": {
-            "lines": 18,
-            "tokens": 96,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.groovylintrc.json": {
-            "lines": 36,
-            "tokens": 204,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.flow-scanner.json": {
-            "lines": 40,
-            "tokens": 209,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.eslintrc-json.json": {
-            "lines": 27,
-            "tokens": 151,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.editorconfig-checker.json": {
-            "lines": 40,
-            "tokens": 175,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.coffee-lint.json": {
-            "lines": 57,
-            "tokens": 308,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/.vscode/tasks.json": {
-            "lines": 3,
-            "tokens": 15,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/.vscode/settings.json": {
-            "lines": 135,
-            "tokens": 810,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/.vscode/extensions.json": {
-            "lines": 39,
-            "tokens": 154,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/package.json": {
-            "lines": 15,
-            "tokens": 94,
-            "sources": 1,
-            "clones": 1,
-            "duplicatedLines": 15,
-            "duplicatedTokens": 95,
-            "percentage": 100,
-            "percentageTokens": 101.06,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/package-lock.json": {
-            "lines": 741,
-            "tokens": 4385,
-            "sources": 1,
-            "clones": 1,
-            "duplicatedLines": 15,
-            "duplicatedTokens": 95,
-            "percentage": 2.02,
-            "percentageTokens": 2.17,
             "newDuplicatedLines": 0,
             "newClones": 0
           }
         },
         "total": {
-          "lines": 1489,
-          "tokens": 8493,
-          "sources": 21,
+          "lines": 1256,
+          "tokens": 8073,
+          "sources": 10,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "python": {
+        "sources": {
+          "/github/workspace/server/plaid_adapter.py": {
+            "lines": 209,
+            "tokens": 1234,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/server/main.py": {
+            "lines": 361,
+            "tokens": 1937,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 24,
+            "duplicatedTokens": 164,
+            "percentage": 6.65,
+            "percentageTokens": 8.47,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 570,
+          "tokens": 3171,
+          "sources": 2,
           "clones": 1,
-          "duplicatedLines": 15,
-          "duplicatedTokens": 95,
-          "percentage": 1.01,
-          "percentageTokens": 1.12,
+          "duplicatedLines": 12,
+          "duplicatedTokens": 82,
+          "percentage": 2.11,
+          "percentageTokens": 2.59,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "bash": {
+        "sources": {
+          "/github/workspace/scripts/megalinter.sh": {
+            "lines": 180,
+            "tokens": 958,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 180,
+          "tokens": 958,
+          "sources": 1,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -693,8 +1345,8 @@
       "ini": {
         "sources": {
           "/github/workspace/config/.vale.ini": {
-            "lines": 11,
-            "tokens": 37,
+            "lines": 14,
+            "tokens": 44,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -730,73 +1382,9 @@
           }
         },
         "total": {
-          "lines": 81,
-          "tokens": 541,
+          "lines": 84,
+          "tokens": 548,
           "sources": 3,
-          "clones": 0,
-          "duplicatedLines": 0,
-          "duplicatedTokens": 0,
-          "percentage": 0,
-          "percentageTokens": 0,
-          "newDuplicatedLines": 0,
-          "newClones": 0
-        }
-      },
-      "javascript": {
-        "sources": {
-          "/github/workspace/config/.prettier.config.mjs": {
-            "lines": 54,
-            "tokens": 325,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.eslint.config.mjs": {
-            "lines": 61,
-            "tokens": 366,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.cspell.config.mjs": {
-            "lines": 150,
-            "tokens": 911,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/config/.commitlint.config.cjs": {
-            "lines": 47,
-            "tokens": 471,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          }
-        },
-        "total": {
-          "lines": 312,
-          "tokens": 2073,
-          "sources": 4,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -860,268 +1448,52 @@
       }
     },
     "total": {
-      "lines": 4169,
-      "tokens": 21326,
-      "sources": 62,
-      "clones": 7,
-      "duplicatedLines": 243,
-      "duplicatedTokens": 1199,
-      "percentage": 5.83,
-      "percentageTokens": 5.62,
+      "lines": 5891,
+      "tokens": 32653,
+      "sources": 103,
+      "clones": 1,
+      "duplicatedLines": 12,
+      "duplicatedTokens": 82,
+      "percentage": 0.2,
+      "percentageTokens": 0.25,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
   },
   "duplicates": [
     {
-      "format": "yaml",
-      "lines": 39,
-      "fragment": ":\n  no_shell:\n    - os.execl\n    - os.execle\n    - os.execlp\n    - os.execlpe\n    - os.execv\n    - os.execve\n    - os.execvp\n    - os.execvpe\n    - os.spawnl\n    - os.spawnle\n    - os.spawnlp\n    - os.spawnlpe\n    - os.spawnv\n    - os.spawnve\n    - os.spawnvp\n    - os.spawnvpe\n    - os.startfile\n  shell:\n    - os.system\n    - os.popen\n    - os.popen2\n    - os.popen3\n    - os.popen4\n    - popen2.popen2\n    - popen2.popen3\n    - popen2.popen4\n    - popen2.Popen3\n    - popen2.Popen4\n    - commands.getoutput\n    - commands.getstatusoutput\n  subprocess:\n    - subprocess.Popen\n    - subprocess.call\n    - subprocess.check_call\n    - subprocess.check_output\n    - subprocess.run\nssl_with_bad_defaults",
+      "format": "python",
+      "lines": 13,
+      "fragment": ")\n\n        return TransactionsResponse(\n            transactions=normalized_transactions,\n            total_count=len(normalized_transactions),\n            accounts_count=len(result.get(\"accounts\", [])),\n            request_id=result.get(\"request_id\"),\n        )\n\n    except HTTPException:\n        raise\n    except Exception as e:\n        logger.error(f\"Error fetching Plaid transactions: {e}\"",
       "tokens": 0,
       "firstFile": {
-        "name": "/github/workspace/config/.bandit.yml",
-        "start": 46,
-        "end": 84,
+        "name": "/github/workspace/server/main.py",
+        "start": 346,
+        "end": 358,
         "startLoc": {
-          "line": 46,
-          "column": 34,
-          "position": 218
+          "line": 346,
+          "column": 3,
+          "position": 1827
         },
         "endLoc": {
-          "line": 84,
-          "column": 22,
-          "position": 402
+          "line": 358,
+          "column": 41,
+          "position": 1909
         }
       },
       "secondFile": {
-        "name": "/github/workspace/config/.bandit.yml",
-        "start": 1,
-        "end": 39,
+        "name": "/github/workspace/server/main.py",
+        "start": 250,
+        "end": 262,
         "startLoc": {
-          "line": 1,
-          "column": 42,
-          "position": 1
+          "line": 250,
+          "column": 67,
+          "position": 1313
         },
         "endLoc": {
-          "line": 39,
-          "column": 12,
-          "position": 185
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 39,
-      "fragment": ":\n  no_shell:\n    - os.execl\n    - os.execle\n    - os.execlp\n    - os.execlpe\n    - os.execv\n    - os.execve\n    - os.execvp\n    - os.execvpe\n    - os.spawnl\n    - os.spawnle\n    - os.spawnlp\n    - os.spawnlpe\n    - os.spawnv\n    - os.spawnve\n    - os.spawnvp\n    - os.spawnvpe\n    - os.startfile\n  shell:\n    - os.system\n    - os.popen\n    - os.popen2\n    - os.popen3\n    - os.popen4\n    - popen2.popen2\n    - popen2.popen3\n    - popen2.popen4\n    - popen2.Popen3\n    - popen2.Popen4\n    - commands.getoutput\n    - commands.getstatusoutput\n  subprocess:\n    - subprocess.Popen\n    - subprocess.call\n    - subprocess.check_call\n    - subprocess.check_output\n    - subprocess.run\nstart_process_with_no_shell",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/.bandit.yml",
-        "start": 102,
-        "end": 140,
-        "startLoc": {
-          "line": 102,
-          "column": 27,
-          "position": 487
-        },
-        "endLoc": {
-          "line": 140,
-          "column": 28,
-          "position": 671
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/.bandit.yml",
-        "start": 1,
-        "end": 39,
-        "startLoc": {
-          "line": 1,
-          "column": 42,
-          "position": 1
-        },
-        "endLoc": {
-          "line": 39,
-          "column": 12,
-          "position": 185
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 39,
-      "fragment": ":\n  no_shell:\n    - os.execl\n    - os.execle\n    - os.execlp\n    - os.execlpe\n    - os.execv\n    - os.execve\n    - os.execvp\n    - os.execvpe\n    - os.spawnl\n    - os.spawnle\n    - os.spawnlp\n    - os.spawnlpe\n    - os.spawnv\n    - os.spawnve\n    - os.spawnvp\n    - os.spawnvpe\n    - os.startfile\n  shell:\n    - os.system\n    - os.popen\n    - os.popen2\n    - os.popen3\n    - os.popen4\n    - popen2.popen2\n    - popen2.popen3\n    - popen2.popen4\n    - popen2.Popen3\n    - popen2.Popen4\n    - commands.getoutput\n    - commands.getstatusoutput\n  subprocess:\n    - subprocess.Popen\n    - subprocess.call\n    - subprocess.check_call\n    - subprocess.check_output\n    - subprocess.run\nstart_process_with_partial_path",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/.bandit.yml",
-        "start": 140,
-        "end": 178,
-        "startLoc": {
-          "line": 140,
-          "column": 28,
-          "position": 672
-        },
-        "endLoc": {
-          "line": 178,
-          "column": 32,
-          "position": 856
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/.bandit.yml",
-        "start": 1,
-        "end": 39,
-        "startLoc": {
-          "line": 1,
-          "column": 42,
-          "position": 1
-        },
-        "endLoc": {
-          "line": 39,
-          "column": 12,
-          "position": 185
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 39,
-      "fragment": ":\n  no_shell:\n    - os.execl\n    - os.execle\n    - os.execlp\n    - os.execlpe\n    - os.execv\n    - os.execve\n    - os.execvp\n    - os.execvpe\n    - os.spawnl\n    - os.spawnle\n    - os.spawnlp\n    - os.spawnlpe\n    - os.spawnv\n    - os.spawnve\n    - os.spawnvp\n    - os.spawnvpe\n    - os.startfile\n  shell:\n    - os.system\n    - os.popen\n    - os.popen2\n    - os.popen3\n    - os.popen4\n    - popen2.popen2\n    - popen2.popen3\n    - popen2.popen4\n    - popen2.Popen3\n    - popen2.Popen4\n    - commands.getoutput\n    - commands.getstatusoutput\n  subprocess:\n    - subprocess.Popen\n    - subprocess.call\n    - subprocess.check_call\n    - subprocess.check_output\n    - subprocess.run\nsubprocess_popen_with_shell_equals_true",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/.bandit.yml",
-        "start": 178,
-        "end": 216,
-        "startLoc": {
-          "line": 178,
-          "column": 32,
-          "position": 857
-        },
-        "endLoc": {
-          "line": 216,
-          "column": 40,
-          "position": 1041
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/.bandit.yml",
-        "start": 1,
-        "end": 39,
-        "startLoc": {
-          "line": 1,
-          "column": 42,
-          "position": 1
-        },
-        "endLoc": {
-          "line": 39,
-          "column": 12,
-          "position": 185
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 39,
-      "fragment": ":\n  no_shell:\n    - os.execl\n    - os.execle\n    - os.execlp\n    - os.execlpe\n    - os.execv\n    - os.execve\n    - os.execvp\n    - os.execvpe\n    - os.spawnl\n    - os.spawnle\n    - os.spawnlp\n    - os.spawnlpe\n    - os.spawnv\n    - os.spawnve\n    - os.spawnvp\n    - os.spawnvpe\n    - os.startfile\n  shell:\n    - os.system\n    - os.popen\n    - os.popen2\n    - os.popen3\n    - os.popen4\n    - popen2.popen2\n    - popen2.popen3\n    - popen2.popen4\n    - popen2.Popen3\n    - popen2.Popen4\n    - commands.getoutput\n    - commands.getstatusoutput\n  subprocess:\n    - subprocess.Popen\n    - subprocess.call\n    - subprocess.check_call\n    - subprocess.check_output\n    - subprocess.run\nsubprocess_without_shell_equals_true",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/.bandit.yml",
-        "start": 216,
-        "end": 254,
-        "startLoc": {
-          "line": 216,
-          "column": 40,
-          "position": 1042
-        },
-        "endLoc": {
-          "line": 254,
-          "column": 37,
-          "position": 1226
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/.bandit.yml",
-        "start": 1,
-        "end": 39,
-        "startLoc": {
-          "line": 1,
-          "column": 42,
-          "position": 1
-        },
-        "endLoc": {
-          "line": 39,
-          "column": 12,
-          "position": 185
-        }
-      }
-    },
-    {
-      "format": "yaml",
-      "lines": 39,
-      "fragment": ":\n  no_shell:\n    - os.execl\n    - os.execle\n    - os.execlp\n    - os.execlpe\n    - os.execv\n    - os.execve\n    - os.execvp\n    - os.execvpe\n    - os.spawnl\n    - os.spawnle\n    - os.spawnlp\n    - os.spawnlpe\n    - os.spawnv\n    - os.spawnve\n    - os.spawnvp\n    - os.spawnvpe\n    - os.startfile\n  shell:\n    - os.system\n    - os.popen\n    - os.popen2\n    - os.popen3\n    - os.popen4\n    - popen2.popen2\n    - popen2.popen3\n    - popen2.popen4\n    - popen2.Popen3\n    - popen2.Popen4\n    - commands.getoutput\n    - commands.getstatusoutput\n  subprocess:\n    - subprocess.Popen\n    - subprocess.call\n    - subprocess.check_call\n    - subprocess.check_output\n    - subprocess.run\ntry_except_continue",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/config/.bandit.yml",
-        "start": 254,
-        "end": 292,
-        "startLoc": {
-          "line": 254,
-          "column": 37,
-          "position": 1227
-        },
-        "endLoc": {
-          "line": 292,
-          "column": 20,
-          "position": 1411
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/config/.bandit.yml",
-        "start": 1,
-        "end": 39,
-        "startLoc": {
-          "line": 1,
-          "column": 42,
-          "position": 1
-        },
-        "endLoc": {
-          "line": 39,
-          "column": 12,
-          "position": 185
-        }
-      }
-    },
-    {
-      "format": "json",
-      "lines": 16,
-      "fragment": "{\n      \"dependencies\": {\n        \"@secretlint/secretlint-rule-aws\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-basicauth\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-database-connection-string\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-gcp\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-github\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-no-dotenv\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-no-homedir\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-npm\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-openai\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-pattern\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-privatekey\": \"^11.3.1\",\n        \"@secretlint/secretlint-rule-secp256k1-privatekey\": \"^11.3.1\"\n      }\n    }",
-      "tokens": 0,
-      "firstFile": {
-        "name": "/github/workspace/package-lock.json",
-        "start": 6,
-        "end": 21,
-        "startLoc": {
-          "line": 6,
-          "column": 2,
-          "position": 33
-        },
-        "endLoc": {
-          "line": 21,
-          "column": 2,
-          "position": 128
-        }
-      },
-      "secondFile": {
-        "name": "/github/workspace/package.json",
-        "start": 1,
-        "end": 16,
-        "startLoc": {
-          "line": 1,
-          "column": 1,
-          "position": 0
-        },
-        "endLoc": {
-          "line": 16,
-          "column": 2,
-          "position": 94
+          "line": 262,
+          "column": 35,
+          "position": 1395
         }
       }
     }

@@ -139,6 +139,9 @@ config/.groovylintrc.json#/rules must NOT have additional properties, found addi
 ℹ Validating ui/package.json against schema from https://www.schemastore.org/package.json ...
 ✔ ui/package.json is valid
 
+ℹ Processing ui/src/locales/en/common.json
+✖ Could not find a schema to validate ui/src/locales/en/common.json
+
 ℹ Processing ui/tsconfig.app.json
 ✖ Could not find a schema to validate ui/tsconfig.app.json
 

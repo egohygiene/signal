@@ -2,63 +2,271 @@ Results of v8r linter (version 5.0.0)
 See documentation on https://megalinter.io/8.8.0/descriptors/yaml_v8r/
 -----------------------------------------------
 
-✅ [SUCCESS] .github/workflows/megalinter.yml
-✅ [SUCCESS] .github/workflows/pages.yml
-❌ [ERROR] .megalinter.yml
-    ℹ No config file found
-    ℹ Processing .megalinter.yml
-    ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
-    ℹ Validating .megalinter.yml against schema from https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json ...
-    ✖ .megalinter.yml is invalid
-    
-    .megalinter.yml# must NOT have additional properties, found additional property 'GITLAB_ACCESS_TOKEN_MEGALINTER'
-    .megalinter.yml# must NOT have additional properties, found additional property 'GITLAB_CUSTOM_CERTIFICATE'
-    .megalinter.yml# must NOT have additional properties, found additional property 'HTML_REPORTER'
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+ℹ No config file found
+ℹ Processing .github/workflows/generate_repository_tree.yml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating .github/workflows/generate_repository_tree.yml against schema from https://www.schemastore.org/github-workflow.json ...
+✔ .github/workflows/generate_repository_tree.yml is valid
 
-✅ [SUCCESS] .pre-commit-config.yaml
-✅ [SUCCESS] .releaserc.yml
-✅ [SUCCESS] config/analysis_options.yml
-✅ [SUCCESS] config/styles/proselint/Airlinese.yml
-✅ [SUCCESS] config/styles/proselint/AnimalLabels.yml
-✅ [SUCCESS] config/styles/proselint/Annotations.yml
-✅ [SUCCESS] config/styles/proselint/Apologizing.yml
-✅ [SUCCESS] config/styles/proselint/Archaisms.yml
-✅ [SUCCESS] config/styles/proselint/But.yml
-✅ [SUCCESS] config/styles/proselint/Cliches.yml
-✅ [SUCCESS] config/styles/proselint/CorporateSpeak.yml
-✅ [SUCCESS] config/styles/proselint/Currency.yml
-✅ [SUCCESS] config/styles/proselint/Cursing.yml
-✅ [SUCCESS] config/styles/proselint/DateCase.yml
-✅ [SUCCESS] config/styles/proselint/DateMidnight.yml
-✅ [SUCCESS] config/styles/proselint/DateRedundancy.yml
-✅ [SUCCESS] config/styles/proselint/DateSpacing.yml
-✅ [SUCCESS] config/styles/proselint/DenizenLabels.yml
-✅ [SUCCESS] config/styles/proselint/Diacritical.yml
-✅ [SUCCESS] config/styles/proselint/GenderBias.yml
-✅ [SUCCESS] config/styles/proselint/GroupTerms.yml
-✅ [SUCCESS] config/styles/proselint/Hedging.yml
-✅ [SUCCESS] config/styles/proselint/Hyperbole.yml
-✅ [SUCCESS] config/styles/proselint/Jargon.yml
-✅ [SUCCESS] config/styles/proselint/LGBTOffensive.yml
-✅ [SUCCESS] config/styles/proselint/LGBTTerms.yml
-✅ [SUCCESS] config/styles/proselint/Malapropisms.yml
-✅ [SUCCESS] config/styles/proselint/Needless.yml
-✅ [SUCCESS] config/styles/proselint/Nonwords.yml
-✅ [SUCCESS] config/styles/proselint/Oxymorons.yml
-✅ [SUCCESS] config/styles/proselint/P-Value.yml
-✅ [SUCCESS] config/styles/proselint/RASSyndrome.yml
-✅ [SUCCESS] config/styles/proselint/Skunked.yml
-✅ [SUCCESS] config/styles/proselint/Spelling.yml
-✅ [SUCCESS] config/styles/proselint/Typography.yml
-✅ [SUCCESS] config/styles/proselint/Uncomparables.yml
-✅ [SUCCESS] config/styles/proselint/Very.yml
-✅ [SUCCESS] config/styles/write-good/Cliches.yml
-✅ [SUCCESS] config/styles/write-good/E-Prime.yml
-✅ [SUCCESS] config/styles/write-good/Illusions.yml
-✅ [SUCCESS] config/styles/write-good/Passive.yml
-✅ [SUCCESS] config/styles/write-good/So.yml
-✅ [SUCCESS] config/styles/write-good/ThereIs.yml
-✅ [SUCCESS] config/styles/write-good/TooWordy.yml
-✅ [SUCCESS] config/styles/write-good/Weasel.yml
-✅ [SUCCESS] config/trivy-sbom.yaml
-✅ [SUCCESS] config/trivy.yaml
+ℹ Processing .github/workflows/megalinter.yml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating .github/workflows/megalinter.yml against schema from https://www.schemastore.org/github-workflow.json ...
+✔ .github/workflows/megalinter.yml is valid
+
+ℹ Processing .github/workflows/pages.yml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating .github/workflows/pages.yml against schema from https://www.schemastore.org/github-workflow.json ...
+✔ .github/workflows/pages.yml is valid
+
+ℹ Processing .megalinter.yml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating .megalinter.yml against schema from https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json ...
+✔ .megalinter.yml is valid
+
+ℹ Processing .pre-commit-config.yaml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating .pre-commit-config.yaml against schema from https://www.schemastore.org/pre-commit-config.json ...
+✔ .pre-commit-config.yaml is valid
+
+ℹ Processing .releaserc.yml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating .releaserc.yml against schema from https://www.schemastore.org/semantic-release.json ...
+✔ .releaserc.yml is valid
+
+ℹ Processing config/.bandit.yml
+✖ Could not find a schema to validate config/.bandit.yml
+
+ℹ Processing config/.cfnlintrc.yml
+✖ Could not find a schema to validate config/.cfnlintrc.yml
+
+ℹ Processing config/.checkov.yml
+✖ Could not find a schema to validate config/.checkov.yml
+
+ℹ Processing config/.golangci.yml
+ℹ Found multiple possible matches for config/.golangci.yml. Possible matches:
+
+  Golangci-lint Configuration (1)
+  golangci-lint configuration file
+  https://golangci-lint.run/jsonschema/golangci.v1.jsonschema.json
+
+  Golangci-lint Configuration (2)
+  golangci-lint configuration file
+  https://golangci-lint.run/jsonschema/golangci.v2.jsonschema.json
+
+✖ Found multiple possible schemas to validate config/.golangci.yml
+
+ℹ Processing config/.grype.yaml
+✖ Could not find a schema to validate config/.grype.yaml
+
+ℹ Processing config/.hadolint.yaml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating config/.hadolint.yaml against schema from https://raw.githubusercontent.com/hadolint/hadolint/master/contrib/hadolint.json ...
+✔ config/.hadolint.yaml is valid
+
+ℹ Processing config/.ls-lint.yml
+✖ Could not find a schema to validate config/.ls-lint.yml
+
+ℹ Processing config/.phplint.yml
+✖ Could not find a schema to validate config/.phplint.yml
+
+ℹ Processing config/.protolintrc.yml
+✖ Could not find a schema to validate config/.protolintrc.yml
+
+ℹ Processing config/.ruby-lint.yml
+✖ Could not find a schema to validate config/.ruby-lint.yml
+
+ℹ Processing config/.spectral.yaml
+✖ Could not find a schema to validate config/.spectral.yaml
+
+ℹ Processing config/.swiftlint.yml
+✖ Could not find a schema to validate config/.swiftlint.yml
+
+ℹ Processing config/.syft.yaml
+✖ Could not find a schema to validate config/.syft.yaml
+
+ℹ Processing config/.tektonlintrc.yaml
+✖ Could not find a schema to validate config/.tektonlintrc.yaml
+
+ℹ Processing config/.trufflehog.yml
+✖ Could not find a schema to validate config/.trufflehog.yml
+
+ℹ Processing config/.v8rrc.yml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating config/.v8rrc.yml against schema from https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json ...
+✔ config/.v8rrc.yml is valid
+
+ℹ Processing config/.yamllint.yml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating config/.yamllint.yml against schema from https://www.schemastore.org/yamllint.json ...
+✔ config/.yamllint.yml is valid
+
+ℹ Processing config/analysis_options.yml
+✖ Could not find a schema to validate config/analysis_options.yml
+
+ℹ Processing config/styles/proselint/Airlinese.yml
+✖ Could not find a schema to validate config/styles/proselint/Airlinese.yml
+
+ℹ Processing config/styles/proselint/AnimalLabels.yml
+✖ Could not find a schema to validate config/styles/proselint/AnimalLabels.yml
+
+ℹ Processing config/styles/proselint/Annotations.yml
+✖ Could not find a schema to validate config/styles/proselint/Annotations.yml
+
+ℹ Processing config/styles/proselint/Apologizing.yml
+✖ Could not find a schema to validate config/styles/proselint/Apologizing.yml
+
+ℹ Processing config/styles/proselint/Archaisms.yml
+✖ Could not find a schema to validate config/styles/proselint/Archaisms.yml
+
+ℹ Processing config/styles/proselint/But.yml
+✖ Could not find a schema to validate config/styles/proselint/But.yml
+
+ℹ Processing config/styles/proselint/Cliches.yml
+✖ Could not find a schema to validate config/styles/proselint/Cliches.yml
+
+ℹ Processing config/styles/proselint/CorporateSpeak.yml
+✖ Could not find a schema to validate config/styles/proselint/CorporateSpeak.yml
+
+ℹ Processing config/styles/proselint/Currency.yml
+✖ Could not find a schema to validate config/styles/proselint/Currency.yml
+
+ℹ Processing config/styles/proselint/Cursing.yml
+✖ Could not find a schema to validate config/styles/proselint/Cursing.yml
+
+ℹ Processing config/styles/proselint/DateCase.yml
+✖ Could not find a schema to validate config/styles/proselint/DateCase.yml
+
+ℹ Processing config/styles/proselint/DateMidnight.yml
+✖ Could not find a schema to validate config/styles/proselint/DateMidnight.yml
+
+ℹ Processing config/styles/proselint/DateRedundancy.yml
+✖ Could not find a schema to validate config/styles/proselint/DateRedundancy.yml
+
+ℹ Processing config/styles/proselint/DateSpacing.yml
+✖ Could not find a schema to validate config/styles/proselint/DateSpacing.yml
+
+ℹ Processing config/styles/proselint/DenizenLabels.yml
+✖ Could not find a schema to validate config/styles/proselint/DenizenLabels.yml
+
+ℹ Processing config/styles/proselint/Diacritical.yml
+✖ Could not find a schema to validate config/styles/proselint/Diacritical.yml
+
+ℹ Processing config/styles/proselint/GenderBias.yml
+✖ Could not find a schema to validate config/styles/proselint/GenderBias.yml
+
+ℹ Processing config/styles/proselint/GroupTerms.yml
+✖ Could not find a schema to validate config/styles/proselint/GroupTerms.yml
+
+ℹ Processing config/styles/proselint/Hedging.yml
+✖ Could not find a schema to validate config/styles/proselint/Hedging.yml
+
+ℹ Processing config/styles/proselint/Hyperbole.yml
+✖ Could not find a schema to validate config/styles/proselint/Hyperbole.yml
+
+ℹ Processing config/styles/proselint/Jargon.yml
+✖ Could not find a schema to validate config/styles/proselint/Jargon.yml
+
+ℹ Processing config/styles/proselint/LGBTOffensive.yml
+✖ Could not find a schema to validate config/styles/proselint/LGBTOffensive.yml
+
+ℹ Processing config/styles/proselint/LGBTTerms.yml
+✖ Could not find a schema to validate config/styles/proselint/LGBTTerms.yml
+
+ℹ Processing config/styles/proselint/Malapropisms.yml
+✖ Could not find a schema to validate config/styles/proselint/Malapropisms.yml
+
+ℹ Processing config/styles/proselint/Needless.yml
+✖ Could not find a schema to validate config/styles/proselint/Needless.yml
+
+ℹ Processing config/styles/proselint/Nonwords.yml
+✖ Could not find a schema to validate config/styles/proselint/Nonwords.yml
+
+ℹ Processing config/styles/proselint/Oxymorons.yml
+✖ Could not find a schema to validate config/styles/proselint/Oxymorons.yml
+
+ℹ Processing config/styles/proselint/P-Value.yml
+✖ Could not find a schema to validate config/styles/proselint/P-Value.yml
+
+ℹ Processing config/styles/proselint/RASSyndrome.yml
+✖ Could not find a schema to validate config/styles/proselint/RASSyndrome.yml
+
+ℹ Processing config/styles/proselint/Skunked.yml
+✖ Could not find a schema to validate config/styles/proselint/Skunked.yml
+
+ℹ Processing config/styles/proselint/Spelling.yml
+✖ Could not find a schema to validate config/styles/proselint/Spelling.yml
+
+ℹ Processing config/styles/proselint/Typography.yml
+✖ Could not find a schema to validate config/styles/proselint/Typography.yml
+
+ℹ Processing config/styles/proselint/Uncomparables.yml
+✖ Could not find a schema to validate config/styles/proselint/Uncomparables.yml
+
+ℹ Processing config/styles/proselint/Very.yml
+✖ Could not find a schema to validate config/styles/proselint/Very.yml
+
+ℹ Processing config/styles/write-good/Cliches.yml
+✖ Could not find a schema to validate config/styles/write-good/Cliches.yml
+
+ℹ Processing config/styles/write-good/E-Prime.yml
+✖ Could not find a schema to validate config/styles/write-good/E-Prime.yml
+
+ℹ Processing config/styles/write-good/Illusions.yml
+✖ Could not find a schema to validate config/styles/write-good/Illusions.yml
+
+ℹ Processing config/styles/write-good/Passive.yml
+✖ Could not find a schema to validate config/styles/write-good/Passive.yml
+
+ℹ Processing config/styles/write-good/So.yml
+✖ Could not find a schema to validate config/styles/write-good/So.yml
+
+ℹ Processing config/styles/write-good/ThereIs.yml
+✖ Could not find a schema to validate config/styles/write-good/ThereIs.yml
+
+ℹ Processing config/styles/write-good/TooWordy.yml
+✖ Could not find a schema to validate config/styles/write-good/TooWordy.yml
+
+ℹ Processing config/styles/write-good/Weasel.yml
+✖ Could not find a schema to validate config/styles/write-good/Weasel.yml
+
+ℹ Processing config/trivy-sbom.yaml
+✖ Could not find a schema to validate config/trivy-sbom.yaml
+
+ℹ Processing config/trivy.yaml
+✖ Could not find a schema to validate config/trivy.yaml
+
+ℹ Processing pnpm-lock.yaml
+✖ Could not find a schema to validate pnpm-lock.yaml
+
+ℹ Processing Taskfile.yml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating Taskfile.yml against schema from https://taskfile.dev/schema.json ...
+✔ Taskfile.yml is valid
+
+ℹ Processing tasks/ci.yml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating tasks/ci.yml against schema from https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible.json#/$defs/tasks ...
+✖ tasks/ci.yml is invalid
+
+tasks/ci.yml# must NOT have additional properties, found additional property 'version'
+tasks/ci.yml# must NOT have additional properties, found additional property 'tasks'
+
+ℹ Processing tasks/lint.yml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating tasks/lint.yml against schema from https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible.json#/$defs/tasks ...
+✖ tasks/lint.yml is invalid
+
+tasks/lint.yml# must NOT have additional properties, found additional property 'version'
+tasks/lint.yml# must NOT have additional properties, found additional property 'tasks'
+
+ℹ Processing tasks/misc.yml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating tasks/misc.yml against schema from https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible.json#/$defs/tasks ...
+✖ tasks/misc.yml is invalid
+
+tasks/misc.yml# must NOT have additional properties, found additional property 'version'
+tasks/misc.yml# must NOT have additional properties, found additional property 'tasks'
+
+

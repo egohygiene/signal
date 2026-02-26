@@ -4,10 +4,14 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_proselint/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-README.md:126:26: leonard.exclamation.30ppm More than 30 ppm of exclamations. Keep them under control.
+README.md:51:57: lexical_illusions.misc There's a lexical illusion here: a word is repeated.
+README.md:186:26: leonard.exclamation.30ppm More than 30 ppm of exclamations. Keep them under control.
 config/styles/write-good/README.md:8:12: typography.symbols.copyright (c) is a goofy alphabetic approximation, use the symbol ©.
+docs/FINANCIAL_OPERATING_SYSTEM.md:8:60: needless_variants.misc Needless variant. 'extendable' is the preferred form.
+docs/plaid-setup.md:13:36: typography.symbols.curly_quotes Use curly quotes “”, not straight quotes "". Found 7 times elsewhere.
+docs/plaid-setup.md:113:21: lexical_illusions.misc There's a lexical illusion here: a word is repeated.
 server/IMPLEMENTATION_SUMMARY.md:179:4: typography.symbols.ellipsis '...' is an approximation, use the ellipsis symbol '…'.
 server/PLAID_README.md:144:2: typography.symbols.ellipsis '...' is an approximation, use the ellipsis symbol '…'.
-ui/README.md:24:24: typography.symbols.ellipsis '...' is an approximation, use the ellipsis symbol '…'. Found 5 times elsewhere.
-ui/README.md:33:24: typography.symbols.ellipsis '...' is an approximation, use the ellipsis symbol '…'.
+ui/README.md:63:24: typography.symbols.ellipsis '...' is an approximation, use the ellipsis symbol '…'. Found 5 times elsewhere.
+ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use the ellipsis symbol '…'.
 

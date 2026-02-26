@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:481d12bf-9285-4a41-b314-b00c7be96917",
+    "serialNumber": "urn:uuid:07eaec50-8ea1-4908-bb99-9f979b5b160e",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-02-18T06:56:51+00:00",
+        "timestamp": "2026-02-26T21:26:16+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "c44d7ce7-9206-4878-8974-d5d6abbc627c",
+            "bom-ref": "648b6425-e242-4d02-aad4-889177cc5755",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,73 +30,7 @@
     },
     "components": [
         {
-            "bom-ref": "3f47446c-2be7-41c3-8178-f8b7248fa71a",
-            "type": "library",
-            "group": "@secretlint",
-            "name": "secretlint-rule-preset-recommend",
-            "version": "11.3.1",
-            "purl": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@secretlint/secretlint-rule-preset-recommend@11.3.1"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "594e6828-6aa0-4b5e-947c-b872fb26d1b2",
-            "type": "library",
-            "group": "@secretlint",
-            "name": "secretlint-rule-preset-recommend",
-            "version": "11.3.1",
-            "purl": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@secretlint/secretlint-rule-preset-recommend@11.3.1"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "npm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "9120bab9-f02b-4960-a75d-c0bfb061efb5",
-            "type": "application",
-            "name": "package-lock.json",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:Class",
-                    "value": "lang-pkgs"
-                },
-                {
-                    "name": "aquasecurity:trivy:Type",
-                    "value": "npm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "ba01aec9-5e14-4d1b-8b59-4236360a55cb",
-            "type": "application",
-            "name": "ui/package-lock.json",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:Class",
-                    "value": "lang-pkgs"
-                },
-                {
-                    "name": "aquasecurity:trivy:Type",
-                    "value": "npm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "d5732ee6-7780-4a92-b312-e49647ae9736",
+            "bom-ref": "04aa2093-4357-4c01-b3e9-59e1bc1acafa",
             "type": "application",
             "name": "server/requirements.txt",
             "properties": [
@@ -111,7 +45,7 @@
             ]
         },
         {
-            "bom-ref": "f0317541-b605-4945-bec9-8d80d4b76459",
+            "bom-ref": "23414150-6325-4644-a927-0de078e460c2",
             "type": "application",
             "name": "pnpm-lock.yaml",
             "properties": [
@@ -126,6 +60,141 @@
             ]
         },
         {
+            "bom-ref": "42c6bfe0-a778-4f6b-907c-281e31c6e64d",
+            "type": "application",
+            "name": "package-lock.json",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
+                },
+                {
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "5f377166-5772-42cf-a6a5-a3e05fbe8d21",
+            "type": "application",
+            "name": "ui/package-lock.json",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
+                },
+                {
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "69d0d057-61ab-4f14-81c9-b739d595bbda",
+            "type": "library",
+            "group": "@secretlint",
+            "name": "secretlint-rule-preset-recommend",
+            "version": "11.3.1",
+            "purl": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@secretlint/secretlint-rule-preset-recommend@11.3.1"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "97d804ce-549e-4fea-8924-9eedfd300722",
+            "type": "library",
+            "group": "@secretlint",
+            "name": "secretlint-rule-preset-recommend",
+            "version": "11.3.1",
+            "purl": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@secretlint/secretlint-rule-preset-recommend@11.3.1"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/%40babel/runtime@7.28.6",
+            "type": "library",
+            "group": "@babel",
+            "name": "runtime",
+            "version": "7.28.6",
+            "purl": "pkg:npm/%40babel/runtime@7.28.6",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@babel/runtime@7.28.6"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/cookie@1.1.1",
+            "type": "library",
+            "name": "cookie",
+            "version": "1.1.1",
+            "purl": "pkg:npm/cookie@1.1.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "cookie@1.1.1"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/html-parse-stringify@3.0.1",
+            "type": "library",
+            "name": "html-parse-stringify",
+            "version": "3.0.1",
+            "purl": "pkg:npm/html-parse-stringify@3.0.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "html-parse-stringify@3.0.1"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/i18next@25.8.13",
+            "type": "library",
+            "name": "i18next",
+            "version": "25.8.13",
+            "purl": "pkg:npm/i18next@25.8.13",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "i18next@25.8.13"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
             "bom-ref": "pkg:npm/react-dom@19.2.4",
             "type": "library",
             "name": "react-dom",
@@ -135,6 +204,57 @@
                 {
                     "name": "aquasecurity:trivy:PkgID",
                     "value": "react-dom@19.2.4"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/react-i18next@16.5.4",
+            "type": "library",
+            "name": "react-i18next",
+            "version": "16.5.4",
+            "purl": "pkg:npm/react-i18next@16.5.4",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "react-i18next@16.5.4"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/react-router-dom@7.13.1",
+            "type": "library",
+            "name": "react-router-dom",
+            "version": "7.13.1",
+            "purl": "pkg:npm/react-router-dom@7.13.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "react-router-dom@7.13.1"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/react-router@7.13.1",
+            "type": "library",
+            "name": "react-router",
+            "version": "7.13.1",
+            "purl": "pkg:npm/react-router@7.13.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "react-router@7.13.1"
                 },
                 {
                     "name": "aquasecurity:trivy:PkgType",
@@ -169,6 +289,74 @@
                 {
                     "name": "aquasecurity:trivy:PkgID",
                     "value": "scheduler@0.27.0"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/set-cookie-parser@2.7.2",
+            "type": "library",
+            "name": "set-cookie-parser",
+            "version": "2.7.2",
+            "purl": "pkg:npm/set-cookie-parser@2.7.2",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "set-cookie-parser@2.7.2"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/typescript@5.9.3",
+            "type": "library",
+            "name": "typescript",
+            "version": "5.9.3",
+            "purl": "pkg:npm/typescript@5.9.3",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "typescript@5.9.3"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/use-sync-external-store@1.6.0",
+            "type": "library",
+            "name": "use-sync-external-store",
+            "version": "1.6.0",
+            "purl": "pkg:npm/use-sync-external-store@1.6.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "use-sync-external-store@1.6.0"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:npm/void-elements@3.1.0",
+            "type": "library",
+            "name": "void-elements",
+            "version": "3.1.0",
+            "purl": "pkg:npm/void-elements@3.1.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "void-elements@3.1.0"
                 },
                 {
                     "name": "aquasecurity:trivy:PkgType",
@@ -244,37 +432,7 @@
     ],
     "dependencies": [
         {
-            "ref": "3f47446c-2be7-41c3-8178-f8b7248fa71a",
-            "dependsOn": []
-        },
-        {
-            "ref": "594e6828-6aa0-4b5e-947c-b872fb26d1b2",
-            "dependsOn": []
-        },
-        {
-            "ref": "9120bab9-f02b-4960-a75d-c0bfb061efb5",
-            "dependsOn": [
-                "594e6828-6aa0-4b5e-947c-b872fb26d1b2"
-            ]
-        },
-        {
-            "ref": "ba01aec9-5e14-4d1b-8b59-4236360a55cb",
-            "dependsOn": [
-                "pkg:npm/react-dom@19.2.4",
-                "pkg:npm/react@19.2.4"
-            ]
-        },
-        {
-            "ref": "c44d7ce7-9206-4878-8974-d5d6abbc627c",
-            "dependsOn": [
-                "9120bab9-f02b-4960-a75d-c0bfb061efb5",
-                "ba01aec9-5e14-4d1b-8b59-4236360a55cb",
-                "d5732ee6-7780-4a92-b312-e49647ae9736",
-                "f0317541-b605-4945-bec9-8d80d4b76459"
-            ]
-        },
-        {
-            "ref": "d5732ee6-7780-4a92-b312-e49647ae9736",
+            "ref": "04aa2093-4357-4c01-b3e9-59e1bc1acafa",
             "dependsOn": [
                 "pkg:pypi/fastapi@0.115.6",
                 "pkg:pypi/plaid-python@25.0.0",
@@ -284,9 +442,64 @@
             ]
         },
         {
-            "ref": "f0317541-b605-4945-bec9-8d80d4b76459",
+            "ref": "23414150-6325-4644-a927-0de078e460c2",
             "dependsOn": [
-                "3f47446c-2be7-41c3-8178-f8b7248fa71a"
+                "97d804ce-549e-4fea-8924-9eedfd300722"
+            ]
+        },
+        {
+            "ref": "42c6bfe0-a778-4f6b-907c-281e31c6e64d",
+            "dependsOn": [
+                "69d0d057-61ab-4f14-81c9-b739d595bbda"
+            ]
+        },
+        {
+            "ref": "5f377166-5772-42cf-a6a5-a3e05fbe8d21",
+            "dependsOn": [
+                "pkg:npm/i18next@25.8.13",
+                "pkg:npm/react-dom@19.2.4",
+                "pkg:npm/react-i18next@16.5.4",
+                "pkg:npm/react-router-dom@7.13.1",
+                "pkg:npm/react@19.2.4",
+                "pkg:npm/typescript@5.9.3"
+            ]
+        },
+        {
+            "ref": "648b6425-e242-4d02-aad4-889177cc5755",
+            "dependsOn": [
+                "04aa2093-4357-4c01-b3e9-59e1bc1acafa",
+                "23414150-6325-4644-a927-0de078e460c2",
+                "42c6bfe0-a778-4f6b-907c-281e31c6e64d",
+                "5f377166-5772-42cf-a6a5-a3e05fbe8d21"
+            ]
+        },
+        {
+            "ref": "69d0d057-61ab-4f14-81c9-b739d595bbda",
+            "dependsOn": []
+        },
+        {
+            "ref": "97d804ce-549e-4fea-8924-9eedfd300722",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:npm/%40babel/runtime@7.28.6",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:npm/cookie@1.1.1",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:npm/html-parse-stringify@3.0.1",
+            "dependsOn": [
+                "pkg:npm/void-elements@3.1.0"
+            ]
+        },
+        {
+            "ref": "pkg:npm/i18next@25.8.13",
+            "dependsOn": [
+                "pkg:npm/%40babel/runtime@7.28.6",
+                "pkg:npm/typescript@5.9.3"
             ]
         },
         {
@@ -297,11 +510,57 @@
             ]
         },
         {
+            "ref": "pkg:npm/react-i18next@16.5.4",
+            "dependsOn": [
+                "pkg:npm/%40babel/runtime@7.28.6",
+                "pkg:npm/html-parse-stringify@3.0.1",
+                "pkg:npm/i18next@25.8.13",
+                "pkg:npm/react@19.2.4",
+                "pkg:npm/typescript@5.9.3",
+                "pkg:npm/use-sync-external-store@1.6.0"
+            ]
+        },
+        {
+            "ref": "pkg:npm/react-router-dom@7.13.1",
+            "dependsOn": [
+                "pkg:npm/react-dom@19.2.4",
+                "pkg:npm/react-router@7.13.1",
+                "pkg:npm/react@19.2.4"
+            ]
+        },
+        {
+            "ref": "pkg:npm/react-router@7.13.1",
+            "dependsOn": [
+                "pkg:npm/cookie@1.1.1",
+                "pkg:npm/react-dom@19.2.4",
+                "pkg:npm/react@19.2.4",
+                "pkg:npm/set-cookie-parser@2.7.2"
+            ]
+        },
+        {
             "ref": "pkg:npm/react@19.2.4",
             "dependsOn": []
         },
         {
             "ref": "pkg:npm/scheduler@0.27.0",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:npm/set-cookie-parser@2.7.2",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:npm/typescript@5.9.3",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:npm/use-sync-external-store@1.6.0",
+            "dependsOn": [
+                "pkg:npm/react@19.2.4"
+            ]
+        },
+        {
+            "ref": "pkg:npm/void-elements@3.1.0",
             "dependsOn": []
         },
         {

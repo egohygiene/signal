@@ -25,42 +25,50 @@ server/plaid_adapter.py:11:1: error: Cannot find implementation or library stub
 for module named "pydantic"  [import-not-found]
     from pydantic import BaseModel
     ^
-server/main.py:8:1: error: Cannot find implementation or library stub for
-module named "fastapi"  [import-not-found]
-    from fastapi import FastAPI, HTTPException
-    ^
 server/main.py:9:1: error: Cannot find implementation or library stub for
+module named "fastapi"  [import-not-found]
+    from fastapi import FastAPI, Header, HTTPException
+    ^
+server/main.py:10:1: error: Cannot find implementation or library stub for
 module named "fastapi.middleware.cors"  [import-not-found]
     from fastapi.middleware.cors import CORSMiddleware
     ^
-server/main.py:9:1: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
-server/main.py:10:1: error: Cannot find implementation or library stub for
+server/main.py:10:1: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+server/main.py:11:1: error: Cannot find implementation or library stub for
 module named "pydantic"  [import-not-found]
     from pydantic import BaseModel
     ^
-server/main.py:11:1: error: Cannot find implementation or library stub for
+server/main.py:12:1: error: Cannot find implementation or library stub for
 module named "pydantic_settings"  [import-not-found]
     from pydantic_settings import BaseSettings, SettingsConfigDict
     ^
-server/main.py:75:1: error: Function is missing a return type annotation 
+server/main.py:76:1: error: Function is missing a return type annotation 
 [no-untyped-def]
     async def lifespan(app: FastAPI):
     ^
-server/main.py:106:1: error: Function is missing a return type annotation 
+server/main.py:107:1: error: Function is missing a return type annotation 
 [no-untyped-def]
     async def root():
     ^
-server/main.py:113:1: error: Function is missing a return type annotation 
+server/main.py:114:1: error: Function is missing a return type annotation 
 [no-untyped-def]
     async def health_check():
     ^
-server/main.py:141:2: error: Untyped decorator makes function
+server/main.py:162:2: error: Untyped decorator makes function
+"get_transactions" untyped  [misc]
+    @app.get("/api/transactions", response_model=TransactionsResponse)
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+server/main.py:163:1: error: Function is missing a return type annotation 
+[no-untyped-def]
+    async def get_transactions(
+    ^
+server/main.py:269:2: error: Untyped decorator makes function
 "get_plaid_transactions" untyped  [misc]
     @app.post("/api/plaid/transactions", response_model=TransactionsRespon...
      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/main.py:142:1: error: Function is missing a return type annotation 
+server/main.py:270:1: error: Function is missing a return type annotation 
 [no-untyped-def]
     async def get_plaid_transactions(request: TransactionsRequest):
     ^
-Found 14 errors in 2 files (checked 2 source files)
+Found 16 errors in 2 files (checked 2 source files)
 

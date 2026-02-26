@@ -4,11 +4,18 @@ See documentation on https://megalinter.io/8.8.0/descriptors/yaml_yamllint/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
+.github/workflows/generate_repository_tree.yml
+  1:1       warning  missing document start "---"  (document-start)
+  3:1       warning  truthy value should be one of [false, true]  (truthy)
+
 .github/workflows/megalinter.yml
   4:1       warning  truthy value should be one of [false, true]  (truthy)
 
 .github/workflows/pages.yml
   4:1       warning  truthy value should be one of [false, true]  (truthy)
+
+Taskfile.yml
+  1:1       warning  missing document start "---"  (document-start)
 
 config/.bandit.yml
   1:1       warning  missing document start "---"  (document-start)
@@ -347,6 +354,15 @@ config/trivy.yaml
   3:1       warning  missing document start "---"  (document-start)
 
 pnpm-lock.yaml
+  1:1       warning  missing document start "---"  (document-start)
+
+tasks/ci.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+tasks/lint.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+tasks/misc.yml
   1:1       warning  missing document start "---"  (document-start)
 
 
