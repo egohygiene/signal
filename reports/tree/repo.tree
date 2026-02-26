@@ -626,6 +626,9 @@
 │   ├── lint.yml
 │   └── misc.yml
 ├── ui
+│   ├── .storybook
+│   │   ├── main.ts
+│   │   └── preview.ts
 │   ├── public
 │   │   └── vite.svg
 │   ├── src
@@ -633,6 +636,10 @@
 │   │   │   ├── layout
 │   │   │   │   └── Layout.tsx
 │   │   │   └── App.tsx
+│   │   ├── components
+│   │   │   └── Placeholder
+│   │   │       ├── Placeholder.stories.tsx
+│   │   │       └── Placeholder.tsx
 │   │   ├── features
 │   │   │   └── .gitkeep
 │   │   ├── locales

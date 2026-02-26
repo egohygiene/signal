@@ -676,6 +676,10 @@
       {"type":"file","name":"misc.yml"}
     ]},
     {"type":"directory","name":"ui","contents":[
+      {"type":"directory","name":".storybook","contents":[
+        {"type":"file","name":"main.ts"},
+        {"type":"file","name":"preview.ts"}
+      ]},
       {"type":"directory","name":"public","contents":[
         {"type":"file","name":"vite.svg"}
       ]},
@@ -685,6 +689,12 @@
             {"type":"file","name":"Layout.tsx"}
           ]},
           {"type":"file","name":"App.tsx"}
+        ]},
+        {"type":"directory","name":"components","contents":[
+          {"type":"directory","name":"Placeholder","contents":[
+            {"type":"file","name":"Placeholder.stories.tsx"},
+            {"type":"file","name":"Placeholder.tsx"}
+          ]}
         ]},
         {"type":"directory","name":"features","contents":[
           {"type":"file","name":".gitkeep"}

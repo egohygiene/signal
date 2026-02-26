@@ -677,6 +677,10 @@
       <file name="misc.yml"></file>
     </directory>
     <directory name="ui">
+      <directory name=".storybook">
+        <file name="main.ts"></file>
+        <file name="preview.ts"></file>
+      </directory>
       <directory name="public">
         <file name="vite.svg"></file>
       </directory>
@@ -686,6 +690,12 @@
             <file name="Layout.tsx"></file>
           </directory>
           <file name="App.tsx"></file>
+        </directory>
+        <directory name="components">
+          <directory name="Placeholder">
+            <file name="Placeholder.stories.tsx"></file>
+            <file name="Placeholder.tsx"></file>
+          </directory>
         </directory>
         <directory name="features">
           <file name=".gitkeep"></file>
