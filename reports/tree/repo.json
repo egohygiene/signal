@@ -672,6 +672,7 @@
       {"type":"file","name":"requirements.txt"}
     ]},
     {"type":"directory","name":"tasks","contents":[
+      {"type":"file","name":"ci.yml"},
       {"type":"file","name":"lint.yml"},
       {"type":"file","name":"misc.yml"}
     ]},

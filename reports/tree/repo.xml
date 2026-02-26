@@ -673,6 +673,7 @@
       <file name="requirements.txt"></file>
     </directory>
     <directory name="tasks">
+      <file name="ci.yml"></file>
       <file name="lint.yml"></file>
       <file name="misc.yml"></file>
     </directory>
