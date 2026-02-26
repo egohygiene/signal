@@ -681,6 +681,9 @@
       ]},
       {"type":"directory","name":"src","contents":[
         {"type":"directory","name":"app","contents":[
+          {"type":"directory","name":"layout","contents":[
+            {"type":"file","name":"Layout.tsx"}
+          ]},
           {"type":"file","name":"App.tsx"}
         ]},
         {"type":"directory","name":"features","contents":[
@@ -690,6 +693,13 @@
           {"type":"directory","name":"en","contents":[
             {"type":"file","name":"common.json"}
           ]}
+        ]},
+        {"type":"directory","name":"pages","contents":[
+          {"type":"file","name":"BudgetsPage.tsx"},
+          {"type":"file","name":"HomePage.tsx"},
+          {"type":"file","name":"PoolsPage.tsx"},
+          {"type":"file","name":"SettingsPage.tsx"},
+          {"type":"file","name":"TransactionsPage.tsx"}
         ]},
         {"type":"file","name":"i18n.ts"},
         {"type":"file","name":"index.css"},

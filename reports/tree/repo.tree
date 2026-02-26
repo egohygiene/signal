@@ -630,12 +630,20 @@
 │   │   └── vite.svg
 │   ├── src
 │   │   ├── app
+│   │   │   ├── layout
+│   │   │   │   └── Layout.tsx
 │   │   │   └── App.tsx
 │   │   ├── features
 │   │   │   └── .gitkeep
 │   │   ├── locales
 │   │   │   └── en
 │   │   │       └── common.json
+│   │   ├── pages
+│   │   │   ├── BudgetsPage.tsx
+│   │   │   ├── HomePage.tsx
+│   │   │   ├── PoolsPage.tsx
+│   │   │   ├── SettingsPage.tsx
+│   │   │   └── TransactionsPage.tsx
 │   │   ├── i18n.ts
 │   │   ├── index.css
 │   │   └── main.tsx

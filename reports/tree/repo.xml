@@ -682,6 +682,9 @@
       </directory>
       <directory name="src">
         <directory name="app">
+          <directory name="layout">
+            <file name="Layout.tsx"></file>
+          </directory>
           <file name="App.tsx"></file>
         </directory>
         <directory name="features">
@@ -691,6 +694,13 @@
           <directory name="en">
             <file name="common.json"></file>
           </directory>
+        </directory>
+        <directory name="pages">
+          <file name="BudgetsPage.tsx"></file>
+          <file name="HomePage.tsx"></file>
+          <file name="PoolsPage.tsx"></file>
+          <file name="SettingsPage.tsx"></file>
+          <file name="TransactionsPage.tsx"></file>
         </directory>
         <file name="i18n.ts"></file>
         <file name="index.css"></file>
