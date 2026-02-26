@@ -13,7 +13,9 @@ export function Layout(): JSX.Element {
         <NavLink to="/pools">{t('nav.pools')}</NavLink>
         <NavLink to="/settings">{t('nav.settings')}</NavLink>
       </nav>
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 }
