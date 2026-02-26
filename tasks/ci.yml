@@ -1,0 +1,7 @@
+version: "3"
+
+tasks:
+  run:
+    desc: Run the generate_repository_tree workflow locally using act
+    cmds:
+      - act workflow_dispatch -W .github/workflows/generate_repository_tree.yml

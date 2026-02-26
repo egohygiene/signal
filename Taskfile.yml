@@ -1,5 +1,6 @@
 version: "3"
 
 includes:
+  ci: ./tasks/ci.yml
   misc: ./tasks/misc.yml
   lint: ./tasks/lint.yml
