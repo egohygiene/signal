@@ -1,8 +1,6 @@
 import { type JSX } from 'react';
 
-export interface PlaceholderProps {
-  label?: string;
-}
+import type { PlaceholderProps } from './Placeholder.types';
 
 export function Placeholder({ label = 'Placeholder' }: PlaceholderProps): JSX.Element {
   return <div data-testid="placeholder">{label}</div>;
