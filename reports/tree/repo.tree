@@ -633,6 +633,10 @@
 │   │   │   └── App.tsx
 │   │   ├── features
 │   │   │   └── .gitkeep
+│   │   ├── locales
+│   │   │   └── en
+│   │   │       └── common.json
+│   │   ├── i18n.ts
 │   │   ├── index.css
 │   │   └── main.tsx
 │   ├── .gitignore

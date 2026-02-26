@@ -686,6 +686,12 @@
         {"type":"directory","name":"features","contents":[
           {"type":"file","name":".gitkeep"}
         ]},
+        {"type":"directory","name":"locales","contents":[
+          {"type":"directory","name":"en","contents":[
+            {"type":"file","name":"common.json"}
+          ]}
+        ]},
+        {"type":"file","name":"i18n.ts"},
         {"type":"file","name":"index.css"},
         {"type":"file","name":"main.tsx"}
       ]},

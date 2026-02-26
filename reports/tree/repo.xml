@@ -687,6 +687,12 @@
         <directory name="features">
           <file name=".gitkeep"></file>
         </directory>
+        <directory name="locales">
+          <directory name="en">
+            <file name="common.json"></file>
+          </directory>
+        </directory>
+        <file name="i18n.ts"></file>
         <file name="index.css"></file>
         <file name="main.tsx"></file>
       </directory>
