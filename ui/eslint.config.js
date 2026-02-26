@@ -43,4 +43,10 @@ export default defineConfig([
       'no-restricted-syntax': 'off',
     },
   },
+  {
+    files: ['**/*.stories.{ts,tsx}', '.storybook/*.{ts,tsx}'],
+    rules: {
+      'no-restricted-syntax': 'off',
+    },
+  },
 ]);
