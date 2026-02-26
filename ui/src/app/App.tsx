@@ -1,12 +1,11 @@
+import { Layout } from '@egohygiene/signal/app/layout/Layout';
+import { BudgetsPage } from '@egohygiene/signal/pages/BudgetsPage';
+import { HomePage } from '@egohygiene/signal/pages/HomePage';
+import { PoolsPage } from '@egohygiene/signal/pages/PoolsPage';
+import { SettingsPage } from '@egohygiene/signal/pages/SettingsPage';
+import { TransactionsPage } from '@egohygiene/signal/pages/TransactionsPage';
 import { type JSX } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-import { BudgetsPage } from '../pages/BudgetsPage';
-import { HomePage } from '../pages/HomePage';
-import { PoolsPage } from '../pages/PoolsPage';
-import { SettingsPage } from '../pages/SettingsPage';
-import { TransactionsPage } from '../pages/TransactionsPage';
-import { Layout } from './layout/Layout';
 
 export function App(): JSX.Element {
   return (
