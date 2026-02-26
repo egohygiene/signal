@@ -49,6 +49,38 @@ task --list              # List all available tasks
 task misc:hello          # Print a hello message
 task misc:version-check  # Verify Task is installed and in PATH
 task lint:placeholder-lint  # Run the placeholder lint task
+task ci:run              # Run the generate_repository_tree workflow locally via act
+```
+
+---
+
+## Local GitHub Actions with act
+
+[act](https://github.com/nektos/act) lets you run GitHub Actions workflows locally.
+
+### Install act
+
+```bash
+# macOS
+brew install act
+
+# Windows
+choco install act
+
+# Linux / manual
+curl --location https://raw.githubusercontent.com/nektos/act/master/install.sh | bash
+```
+
+### Run a workflow locally
+
+```bash
+task ci:run
+```
+
+This runs the `generate_repository_tree` workflow using `workflow_dispatch` locally. Verify `act` is installed and in PATH before running:
+
+```bash
+act --version
 ```
 
 ---
