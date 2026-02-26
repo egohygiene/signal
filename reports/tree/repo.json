@@ -696,10 +696,14 @@
         ]},
         {"type":"directory","name":"pages","contents":[
           {"type":"file","name":"BudgetsPage.tsx"},
+          {"type":"file","name":"HomePage.test.tsx"},
           {"type":"file","name":"HomePage.tsx"},
           {"type":"file","name":"PoolsPage.tsx"},
           {"type":"file","name":"SettingsPage.tsx"},
           {"type":"file","name":"TransactionsPage.tsx"}
+        ]},
+        {"type":"directory","name":"test","contents":[
+          {"type":"file","name":"setup.ts"}
         ]},
         {"type":"file","name":"i18n.ts"},
         {"type":"file","name":"index.css"},

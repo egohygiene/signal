@@ -697,10 +697,14 @@
         </directory>
         <directory name="pages">
           <file name="BudgetsPage.tsx"></file>
+          <file name="HomePage.test.tsx"></file>
           <file name="HomePage.tsx"></file>
           <file name="PoolsPage.tsx"></file>
           <file name="SettingsPage.tsx"></file>
           <file name="TransactionsPage.tsx"></file>
+        </directory>
+        <directory name="test">
+          <file name="setup.ts"></file>
         </directory>
         <file name="i18n.ts"></file>
         <file name="index.css"></file>

@@ -640,10 +640,13 @@
 │   │   │       └── common.json
 │   │   ├── pages
 │   │   │   ├── BudgetsPage.tsx
+│   │   │   ├── HomePage.test.tsx
 │   │   │   ├── HomePage.tsx
 │   │   │   ├── PoolsPage.tsx
 │   │   │   ├── SettingsPage.tsx
 │   │   │   └── TransactionsPage.tsx
+│   │   ├── test
+│   │   │   └── setup.ts
 │   │   ├── i18n.ts
 │   │   ├── index.css
 │   │   └── main.tsx
