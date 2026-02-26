@@ -680,11 +680,12 @@
         {"type":"file","name":"vite.svg"}
       ]},
       {"type":"directory","name":"src","contents":[
-        {"type":"directory","name":"assets","contents":[
-          {"type":"file","name":"react.svg"}
+        {"type":"directory","name":"app","contents":[
+          {"type":"file","name":"App.tsx"}
         ]},
-        {"type":"file","name":"App.css"},
-        {"type":"file","name":"App.tsx"},
+        {"type":"directory","name":"features","contents":[
+          {"type":"file","name":".gitkeep"}
+        ]},
         {"type":"file","name":"index.css"},
         {"type":"file","name":"main.tsx"}
       ]},

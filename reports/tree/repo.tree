@@ -629,10 +629,10 @@
 │   ├── public
 │   │   └── vite.svg
 │   ├── src
-│   │   ├── assets
-│   │   │   └── react.svg
-│   │   ├── App.css
-│   │   ├── App.tsx
+│   │   ├── app
+│   │   │   └── App.tsx
+│   │   ├── features
+│   │   │   └── .gitkeep
 │   │   ├── index.css
 │   │   └── main.tsx
 │   ├── .gitignore

@@ -681,11 +681,12 @@
         <file name="vite.svg"></file>
       </directory>
       <directory name="src">
-        <directory name="assets">
-          <file name="react.svg"></file>
+        <directory name="app">
+          <file name="App.tsx"></file>
         </directory>
-        <file name="App.css"></file>
-        <file name="App.tsx"></file>
+        <directory name="features">
+          <file name=".gitkeep"></file>
+        </directory>
         <file name="index.css"></file>
         <file name="main.tsx"></file>
       </directory>
