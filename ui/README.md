@@ -1,5 +1,44 @@
 # React + TypeScript + Vite
 
+## Component Folder Architecture Pattern
+
+All components follow a consistent folder structure under `src/components/`:
+
+```
+ComponentName/
+├── ComponentName.tsx          # Component implementation
+├── ComponentName.types.ts     # Prop types (using `type`, not `interface`)
+├── ComponentName.test.tsx     # Vitest + Testing Library tests
+├── ComponentName.stories.tsx  # Storybook stories
+└── index.ts                   # Barrel export
+```
+
+### Rules
+
+- **No default exports** — all exports are named exports.
+- **Types in `.types.ts`** — prop types are defined using `type` (not `interface`) in a dedicated `.types.ts` file.
+- **Barrel export via `index.ts`** — consumers import from the component folder, not individual files.
+
+### Example
+
+```tsx
+// Placeholder.types.ts
+export type PlaceholderProps = {
+  label?: string;
+};
+
+// Placeholder.tsx
+import type { PlaceholderProps } from './Placeholder.types';
+
+export function Placeholder({ label = 'Placeholder' }: PlaceholderProps) {
+  return <div>{label}</div>;
+}
+
+// index.ts
+export { Placeholder } from './Placeholder';
+export type { PlaceholderProps } from './Placeholder.types';
+```
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
