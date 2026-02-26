@@ -694,7 +694,10 @@
         <directory name="components">
           <directory name="Placeholder">
             <file name="Placeholder.stories.tsx"></file>
+            <file name="Placeholder.test.tsx"></file>
             <file name="Placeholder.tsx"></file>
+            <file name="Placeholder.types.ts"></file>
+            <file name="index.ts"></file>
           </directory>
         </directory>
         <directory name="features">

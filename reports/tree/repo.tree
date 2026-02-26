@@ -639,7 +639,10 @@
 │   │   ├── components
 │   │   │   └── Placeholder
 │   │   │       ├── Placeholder.stories.tsx
-│   │   │       └── Placeholder.tsx
+│   │   │       ├── Placeholder.test.tsx
+│   │   │       ├── Placeholder.tsx
+│   │   │       ├── Placeholder.types.ts
+│   │   │       └── index.ts
 │   │   ├── features
 │   │   │   └── .gitkeep
 │   │   ├── locales

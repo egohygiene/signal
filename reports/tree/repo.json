@@ -693,7 +693,10 @@
         {"type":"directory","name":"components","contents":[
           {"type":"directory","name":"Placeholder","contents":[
             {"type":"file","name":"Placeholder.stories.tsx"},
-            {"type":"file","name":"Placeholder.tsx"}
+            {"type":"file","name":"Placeholder.test.tsx"},
+            {"type":"file","name":"Placeholder.tsx"},
+            {"type":"file","name":"Placeholder.types.ts"},
+            {"type":"file","name":"index.ts"}
           ]}
         ]},
         {"type":"directory","name":"features","contents":[
