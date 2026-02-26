@@ -1,6 +1,6 @@
 import { type JSX } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { NavLink, Outlet } from 'react-router-dom';
 
 export function Layout(): JSX.Element {
   const { t } = useTranslation('common');
