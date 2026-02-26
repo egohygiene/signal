@@ -23,6 +23,7 @@
     "secretlint": "^11.3.1"
   },
   "scripts": {
+    "test": "npm --prefix ui test",
     "lint:base": "cross-env PYTHONWARNINGS=\"ignore:Possible nested set:FutureWarning,ignore:pkg_resources is deprecated:UserWarning\" mega-linter-runner --container-name megalinter --platform linux/amd64 --path . --image ghcr.io/oxsecurity/megalinter@sha256:b38439f4563ac9400cd9e1833b428848f66bb0a0f1c531506a701479b80ded24",
     "lint:spellcheck": "npm run lint:base -- --env ENABLE=SPELL",
     "lint:mypy": "npm run lint:base -- --env ENABLE_LINTERS=PYTHON_MYPY",
