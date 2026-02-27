@@ -705,6 +705,14 @@
           </directory>
         </directory>
         <directory name="features">
+          <directory name="budgets">
+            <file name="BudgetsList.test.tsx"></file>
+            <file name="BudgetsList.tsx"></file>
+            <file name="budgetCalculations.test.ts"></file>
+            <file name="budgetCalculations.ts"></file>
+            <file name="index.ts"></file>
+            <file name="useBudgetSummary.ts"></file>
+          </directory>
           <directory name="transactions">
             <file name="TransactionsList.test.tsx"></file>
             <file name="TransactionsList.tsx"></file>

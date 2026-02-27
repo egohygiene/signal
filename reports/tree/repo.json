@@ -704,6 +704,14 @@
           ]}
         ]},
         {"type":"directory","name":"features","contents":[
+          {"type":"directory","name":"budgets","contents":[
+            {"type":"file","name":"BudgetsList.test.tsx"},
+            {"type":"file","name":"BudgetsList.tsx"},
+            {"type":"file","name":"budgetCalculations.test.ts"},
+            {"type":"file","name":"budgetCalculations.ts"},
+            {"type":"file","name":"index.ts"},
+            {"type":"file","name":"useBudgetSummary.ts"}
+          ]},
           {"type":"directory","name":"transactions","contents":[
             {"type":"file","name":"TransactionsList.test.tsx"},
             {"type":"file","name":"TransactionsList.tsx"},

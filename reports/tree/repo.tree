@@ -648,6 +648,13 @@
 │   │   │       ├── Placeholder.types.ts
 │   │   │       └── index.ts
 │   │   ├── features
+│   │   │   ├── budgets
+│   │   │   │   ├── BudgetsList.test.tsx
+│   │   │   │   ├── BudgetsList.tsx
+│   │   │   │   ├── budgetCalculations.test.ts
+│   │   │   │   ├── budgetCalculations.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── useBudgetSummary.ts
 │   │   │   ├── transactions
 │   │   │   │   ├── TransactionsList.test.tsx
 │   │   │   │   ├── TransactionsList.tsx
