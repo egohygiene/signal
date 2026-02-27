@@ -1,0 +1,38 @@
+---
+name: NSFW Detection
+
+on:
+  workflow_dispatch: # Allows manual triggering only
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - '**.png'
+  #     - '**.jpg'
+  #     - '**.jpeg'
+  #     - '**.gif'
+  # pull_request:
+  #   paths:
+  #     - '**.png'
+  #     - '**.jpg'
+  #     - '**.jpeg'
+  #     - '**.gif'
+
+permissions:
+  contents: read
+
+jobs:
+  nsfw-detection:
+    name: NSFW Detection
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run NSFW Detection
+        uses: fabasoad/nsfw-detection-action@0765793ab34d8864d91bf36d9956dad979463eeb # v3.0.1
+        with:
+          api-key: ${{ secrets.NSFW_API_KEY }}
+          folder: .
+          extensions: png,jpg,jpeg,gif
+          fail-on-detection: false
