@@ -724,6 +724,11 @@
           {"type":"file","name":"SettingsPage.tsx"},
           {"type":"file","name":"TransactionsPage.tsx"}
         ]},
+        {"type":"directory","name":"query","contents":[
+          {"type":"file","name":"QueryProvider.test.tsx"},
+          {"type":"file","name":"QueryProvider.tsx"},
+          {"type":"file","name":"queryClient.ts"}
+        ]},
         {"type":"directory","name":"store","contents":[
           {"type":"file","name":"index.ts"},
           {"type":"file","name":"types.ts"},

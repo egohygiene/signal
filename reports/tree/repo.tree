@@ -663,6 +663,10 @@
 │   │   │   ├── PoolsPage.tsx
 │   │   │   ├── SettingsPage.tsx
 │   │   │   └── TransactionsPage.tsx
+│   │   ├── query
+│   │   │   ├── QueryProvider.test.tsx
+│   │   │   ├── QueryProvider.tsx
+│   │   │   └── queryClient.ts
 │   │   ├── store
 │   │   │   ├── index.ts
 │   │   │   ├── types.ts
