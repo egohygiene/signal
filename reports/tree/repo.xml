@@ -711,6 +711,12 @@
             <file name="common.json"></file>
           </directory>
         </directory>
+        <directory name="logging">
+          <file name="index.ts"></file>
+          <file name="logger.test.ts"></file>
+          <file name="logger.ts"></file>
+          <file name="rollingBuffer.ts"></file>
+        </directory>
         <directory name="pages">
           <file name="BudgetsPage.tsx"></file>
           <file name="HomePage.test.tsx"></file>

@@ -710,6 +710,12 @@
             {"type":"file","name":"common.json"}
           ]}
         ]},
+        {"type":"directory","name":"logging","contents":[
+          {"type":"file","name":"index.ts"},
+          {"type":"file","name":"logger.test.ts"},
+          {"type":"file","name":"logger.ts"},
+          {"type":"file","name":"rollingBuffer.ts"}
+        ]},
         {"type":"directory","name":"pages","contents":[
           {"type":"file","name":"BudgetsPage.tsx"},
           {"type":"file","name":"HomePage.test.tsx"},

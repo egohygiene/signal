@@ -651,6 +651,11 @@
 │   │   ├── locales
 │   │   │   └── en
 │   │   │       └── common.json
+│   │   ├── logging
+│   │   │   ├── index.ts
+│   │   │   ├── logger.test.ts
+│   │   │   ├── logger.ts
+│   │   │   └── rollingBuffer.ts
 │   │   ├── pages
 │   │   │   ├── BudgetsPage.tsx
 │   │   │   ├── HomePage.test.tsx
