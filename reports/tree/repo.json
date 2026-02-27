@@ -743,7 +743,12 @@
         {"type":"directory","name":"query","contents":[
           {"type":"file","name":"QueryProvider.test.tsx"},
           {"type":"file","name":"QueryProvider.tsx"},
-          {"type":"file","name":"queryClient.ts"}
+          {"type":"file","name":"queryClient.ts"},
+          {"type":"file","name":"useBudgetsQuery.ts"},
+          {"type":"file","name":"useCategoriesQuery.ts"},
+          {"type":"file","name":"usePoolsQuery.ts"},
+          {"type":"file","name":"useTransactionsQuery.test.tsx"},
+          {"type":"file","name":"useTransactionsQuery.ts"}
         ]},
         {"type":"directory","name":"schema","contents":[
           {"type":"directory","name":"v1","contents":[

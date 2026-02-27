@@ -745,6 +745,11 @@
           <file name="QueryProvider.test.tsx"></file>
           <file name="QueryProvider.tsx"></file>
           <file name="queryClient.ts"></file>
+          <file name="useBudgetsQuery.ts"></file>
+          <file name="useCategoriesQuery.ts"></file>
+          <file name="usePoolsQuery.ts"></file>
+          <file name="useTransactionsQuery.test.tsx"></file>
+          <file name="useTransactionsQuery.ts"></file>
         </directory>
         <directory name="schema">
           <directory name="v1">
