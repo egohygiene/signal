@@ -39,9 +39,10 @@ describe('TransactionsList', () => {
     useAppStore.setState({ transactions: { items: [] }, categories: { items: [] } });
   });
 
-  it('renders an empty list when the store has no transactions', () => {
+  it('renders an empty state message when the store has no transactions', () => {
     render(<TransactionsList />);
     expect(screen.queryAllByRole('listitem')).toHaveLength(0);
+    expect(screen.getByText('No transactions found.')).toBeInTheDocument();
   });
 
   it('renders a list of transactions from the store', () => {
