@@ -85,6 +85,43 @@ act --version
 
 ---
 
+## Dev Container
+
+The fastest way to get a fully configured development environment is to use the
+included [Dev Container](https://containers.dev) configuration.
+
+### VS Code Dev Containers
+
+1. Install the
+   [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+   extension.
+2. Open the repository in VS Code.
+3. When prompted, click **Reopen in Container** (or run the command
+   **Dev Containers: Reopen in Container**).
+
+VS Code will build the image, install all tools, and run `pnpm install`
+automatically. Ports **5173** (Vite) and **8000** (FastAPI) are forwarded to
+your host.
+
+### GitHub Codespaces
+
+Click the **Code → Codespaces → Create codespace** button on the repository
+page. The environment is configured identically to the local Dev Container.
+
+### What's included
+
+| Tool | Version |
+| ---- | ------- |
+| Node.js | 24 (LTS) |
+| pnpm | latest (via corepack) |
+| Python | 3.12 |
+| uv | latest |
+| act | latest |
+| task | latest |
+| git, curl | pre-installed |
+
+---
+
 ## Getting Started
 
 ### Prerequisites
