@@ -1,5 +1,6 @@
 import { type JSX } from 'react';
 
+import { BudgetIndicator } from './BudgetIndicator';
 import { useBudgetSummary } from './useBudgetSummary';
 
 export function BudgetsList(): JSX.Element {
@@ -11,7 +12,7 @@ export function BudgetsList(): JSX.Element {
 
   return (
     <ul>
-      {comparisons.map(({ budget, spent, remaining, isOverBudget }) => (
+      {comparisons.map(({ budget, spent, remaining, isOverBudget, percentageUsed }) => (
         <li key={budget.id} data-over-budget={isOverBudget}>
           <span data-field="name">{budget.name}</span>
           {' — '}
@@ -20,9 +21,11 @@ export function BudgetsList(): JSX.Element {
           <span data-field="spent">{budget.currency} {spent.toFixed(2)}</span>
           {' — '}
           <span data-field="remaining">{budget.currency} {remaining.toFixed(2)}</span>
-          {isOverBudget ? ' ⚠ over budget' : ''}
+          {' — '}
+          <BudgetIndicator percentageUsed={percentageUsed} isOverBudget={isOverBudget} />
         </li>
       ))}
     </ul>
   );
 }
+
