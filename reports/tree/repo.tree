@@ -663,6 +663,9 @@
 │   │   │   ├── PoolsPage.tsx
 │   │   │   ├── SettingsPage.tsx
 │   │   │   └── TransactionsPage.tsx
+│   │   ├── providers
+│   │   │   ├── DataProvider.test.ts
+│   │   │   └── DataProvider.ts
 │   │   ├── query
 │   │   │   ├── QueryProvider.test.tsx
 │   │   │   ├── QueryProvider.tsx

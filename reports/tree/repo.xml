@@ -725,6 +725,10 @@
           <file name="SettingsPage.tsx"></file>
           <file name="TransactionsPage.tsx"></file>
         </directory>
+        <directory name="providers">
+          <file name="DataProvider.test.ts"></file>
+          <file name="DataProvider.ts"></file>
+        </directory>
         <directory name="query">
           <file name="QueryProvider.test.tsx"></file>
           <file name="QueryProvider.tsx"></file>
