@@ -1,3 +1,4 @@
+import type { Category } from '@egohygiene/signal/schema/v1/category';
 import type { Transaction } from '@egohygiene/signal/schema/v1/transaction';
 import { useAppStore } from '@egohygiene/signal/store';
 import { render, screen } from '@testing-library/react';
@@ -28,9 +29,14 @@ const mockTransactions: Transaction[] = [
   },
 ];
 
+const mockCategories: Category[] = [
+  { id: 'cat-1', name: 'Food & Dining', parentId: null },
+  { id: 'cat-2', name: 'Groceries', parentId: null },
+];
+
 describe('TransactionsList', () => {
   beforeEach(() => {
-    useAppStore.setState({ transactions: { items: [] } });
+    useAppStore.setState({ transactions: { items: [] }, categories: { items: [] } });
   });
 
   it('renders an empty list when the store has no transactions', () => {
@@ -70,5 +76,28 @@ describe('TransactionsList', () => {
     render(<TransactionsList />);
     expect(screen.getByText('acc-1')).toBeInTheDocument();
     expect(screen.getByText('acc-2')).toBeInTheDocument();
+  });
+
+  it('renders the category name for each transaction when categories are in the store', () => {
+    useAppStore.setState({ transactions: { items: mockTransactions }, categories: { items: mockCategories } });
+    render(<TransactionsList />);
+    expect(screen.getByText('Food & Dining')).toBeInTheDocument();
+    expect(screen.getByText('Groceries')).toBeInTheDocument();
+  });
+
+  it('renders a dash when transaction has no categoryId', () => {
+    const txWithoutCategory: Transaction[] = [
+      { ...mockTransactions[0]!, categoryId: null },
+    ];
+    useAppStore.setState({ transactions: { items: txWithoutCategory }, categories: { items: mockCategories } });
+    render(<TransactionsList />);
+    expect(screen.getByText('—')).toBeInTheDocument();
+  });
+
+  it('renders categoryId as fallback when category is not found in store', () => {
+    useAppStore.setState({ transactions: { items: mockTransactions }, categories: { items: [] } });
+    render(<TransactionsList />);
+    expect(screen.getByText('cat-1')).toBeInTheDocument();
+    expect(screen.getByText('cat-2')).toBeInTheDocument();
   });
 });
