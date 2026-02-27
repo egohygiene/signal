@@ -667,6 +667,16 @@
 │   │   │   ├── QueryProvider.test.tsx
 │   │   │   ├── QueryProvider.tsx
 │   │   │   └── queryClient.ts
+│   │   ├── schema
+│   │   │   └── v1
+│   │   │       ├── account.ts
+│   │   │       ├── allocation-rule.ts
+│   │   │       ├── budget.ts
+│   │   │       ├── category.ts
+│   │   │       ├── index.ts
+│   │   │       ├── pool.ts
+│   │   │       ├── schema.test.ts
+│   │   │       └── transaction.ts
 │   │   ├── store
 │   │   │   ├── index.ts
 │   │   │   ├── types.ts

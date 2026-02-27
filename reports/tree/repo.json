@@ -729,6 +729,18 @@
           {"type":"file","name":"QueryProvider.tsx"},
           {"type":"file","name":"queryClient.ts"}
         ]},
+        {"type":"directory","name":"schema","contents":[
+          {"type":"directory","name":"v1","contents":[
+            {"type":"file","name":"account.ts"},
+            {"type":"file","name":"allocation-rule.ts"},
+            {"type":"file","name":"budget.ts"},
+            {"type":"file","name":"category.ts"},
+            {"type":"file","name":"index.ts"},
+            {"type":"file","name":"pool.ts"},
+            {"type":"file","name":"schema.test.ts"},
+            {"type":"file","name":"transaction.ts"}
+          ]}
+        ]},
         {"type":"directory","name":"store","contents":[
           {"type":"file","name":"index.ts"},
           {"type":"file","name":"types.ts"},

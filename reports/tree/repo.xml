@@ -730,6 +730,18 @@
           <file name="QueryProvider.tsx"></file>
           <file name="queryClient.ts"></file>
         </directory>
+        <directory name="schema">
+          <directory name="v1">
+            <file name="account.ts"></file>
+            <file name="allocation-rule.ts"></file>
+            <file name="budget.ts"></file>
+            <file name="category.ts"></file>
+            <file name="index.ts"></file>
+            <file name="pool.ts"></file>
+            <file name="schema.test.ts"></file>
+            <file name="transaction.ts"></file>
+          </directory>
+        </directory>
         <directory name="store">
           <file name="index.ts"></file>
           <file name="types.ts"></file>
