@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:0d76f14d-6b01-42eb-9127-110dee10f857",
+    "serialNumber": "urn:uuid:5ee4923b-c552-498d-aa11-5a5a0761b653",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-02-27T16:08:13+00:00",
+        "timestamp": "2026-02-27T19:18:25+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "1f98815b-2cd3-41c5-bbba-2325d93b98b1",
+            "bom-ref": "31758e2d-48d9-496d-a5ae-57c8aaeff5d3",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,7 +30,25 @@
     },
     "components": [
         {
-            "bom-ref": "4eb52598-16b5-42e8-9833-0601b44e2ee9",
+            "bom-ref": "705f6409-39d3-4f1e-9880-e50cbe7bcdff",
+            "type": "library",
+            "group": "@secretlint",
+            "name": "secretlint-rule-preset-recommend",
+            "version": "11.3.1",
+            "purl": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@secretlint/secretlint-rule-preset-recommend@11.3.1"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "npm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "7220c1a2-56ee-4da1-8206-1ece9dc2442f",
             "type": "library",
             "group": "@secretlint",
             "name": "secretlint-rule-preset-recommend",
@@ -48,22 +66,7 @@
             ]
         },
         {
-            "bom-ref": "59a538ae-8fd1-4827-a2ec-d58558387c74",
-            "type": "application",
-            "name": "server/requirements.txt",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:Class",
-                    "value": "lang-pkgs"
-                },
-                {
-                    "name": "aquasecurity:trivy:Type",
-                    "value": "pip"
-                }
-            ]
-        },
-        {
-            "bom-ref": "73bf3e19-0d3f-4d20-90b2-d8b7d5740be5",
+            "bom-ref": "7ead2cf2-4f09-4fb0-9ab6-8cb1a66e5a59",
             "type": "application",
             "name": "package-lock.json",
             "properties": [
@@ -78,7 +81,7 @@
             ]
         },
         {
-            "bom-ref": "88206442-83d5-46d3-b1e8-5789699228fd",
+            "bom-ref": "84f1338d-769a-4e86-a958-f4c16539ddab",
             "type": "application",
             "name": "pnpm-lock.yaml",
             "properties": [
@@ -93,25 +96,22 @@
             ]
         },
         {
-            "bom-ref": "accce305-6db0-4df2-bd9a-a2235ea752d9",
-            "type": "library",
-            "group": "@secretlint",
-            "name": "secretlint-rule-preset-recommend",
-            "version": "11.3.1",
-            "purl": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
+            "bom-ref": "c6d17eca-911f-4865-9587-cf523a200ad2",
+            "type": "application",
+            "name": "server/requirements.txt",
             "properties": [
                 {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@secretlint/secretlint-rule-preset-recommend@11.3.1"
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
                 },
                 {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "npm"
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "pip"
                 }
             ]
         },
         {
-            "bom-ref": "bdcdcb81-37bb-4d98-8990-1d3af5b3cccb",
+            "bom-ref": "de3938e9-e6be-4a9b-a7a3-d1707d21adb4",
             "type": "application",
             "name": "ui/package-lock.json",
             "properties": [
@@ -742,20 +742,36 @@
     ],
     "dependencies": [
         {
-            "ref": "1f98815b-2cd3-41c5-bbba-2325d93b98b1",
+            "ref": "31758e2d-48d9-496d-a5ae-57c8aaeff5d3",
             "dependsOn": [
-                "59a538ae-8fd1-4827-a2ec-d58558387c74",
-                "73bf3e19-0d3f-4d20-90b2-d8b7d5740be5",
-                "88206442-83d5-46d3-b1e8-5789699228fd",
-                "bdcdcb81-37bb-4d98-8990-1d3af5b3cccb"
+                "7ead2cf2-4f09-4fb0-9ab6-8cb1a66e5a59",
+                "84f1338d-769a-4e86-a958-f4c16539ddab",
+                "c6d17eca-911f-4865-9587-cf523a200ad2",
+                "de3938e9-e6be-4a9b-a7a3-d1707d21adb4"
             ]
         },
         {
-            "ref": "4eb52598-16b5-42e8-9833-0601b44e2ee9",
+            "ref": "705f6409-39d3-4f1e-9880-e50cbe7bcdff",
             "dependsOn": []
         },
         {
-            "ref": "59a538ae-8fd1-4827-a2ec-d58558387c74",
+            "ref": "7220c1a2-56ee-4da1-8206-1ece9dc2442f",
+            "dependsOn": []
+        },
+        {
+            "ref": "7ead2cf2-4f09-4fb0-9ab6-8cb1a66e5a59",
+            "dependsOn": [
+                "705f6409-39d3-4f1e-9880-e50cbe7bcdff"
+            ]
+        },
+        {
+            "ref": "84f1338d-769a-4e86-a958-f4c16539ddab",
+            "dependsOn": [
+                "7220c1a2-56ee-4da1-8206-1ece9dc2442f"
+            ]
+        },
+        {
+            "ref": "c6d17eca-911f-4865-9587-cf523a200ad2",
             "dependsOn": [
                 "pkg:pypi/fastapi@0.115.6",
                 "pkg:pypi/plaid-python@25.0.0",
@@ -765,23 +781,7 @@
             ]
         },
         {
-            "ref": "73bf3e19-0d3f-4d20-90b2-d8b7d5740be5",
-            "dependsOn": [
-                "accce305-6db0-4df2-bd9a-a2235ea752d9"
-            ]
-        },
-        {
-            "ref": "88206442-83d5-46d3-b1e8-5789699228fd",
-            "dependsOn": [
-                "4eb52598-16b5-42e8-9833-0601b44e2ee9"
-            ]
-        },
-        {
-            "ref": "accce305-6db0-4df2-bd9a-a2235ea752d9",
-            "dependsOn": []
-        },
-        {
-            "ref": "bdcdcb81-37bb-4d98-8990-1d3af5b3cccb",
+            "ref": "de3938e9-e6be-4a9b-a7a3-d1707d21adb4",
             "dependsOn": [
                 "pkg:npm/%40tanstack/react-query@5.90.21",
                 "pkg:npm/%40types/react@19.2.14",

@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-02-27T16:06:22.888Z",
+    "detectionDate": "2026-02-27T19:16:35.569Z",
     "formats": {
       "typescript": {
         "sources": {
@@ -17,8 +17,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/schema/v1/schema.test.ts": {
-            "lines": 195,
-            "tokens": 1568,
+            "lines": 208,
+            "tokens": 1672,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -53,8 +53,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/schema/v1/category.ts": {
-            "lines": 4,
-            "tokens": 36,
+            "lines": 5,
+            "tokens": 47,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -91,6 +91,54 @@
           "/github/workspace/ui/src/schema/v1/account.ts": {
             "lines": 8,
             "tokens": 78,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/budgets/useBudgetSummary.ts": {
+            "lines": 24,
+            "tokens": 266,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/budgets/index.ts": {
+            "lines": 10,
+            "tokens": 105,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/budgets/budgetCalculations.ts": {
+            "lines": 64,
+            "tokens": 599,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/budgets/budgetCalculations.test.ts": {
+            "lines": 144,
+            "tokens": 1765,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -221,8 +269,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/providers/FakeDataProvider.ts": {
-            "lines": 105,
-            "tokens": 1172,
+            "lines": 106,
+            "tokens": 1241,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -233,14 +281,14 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/providers/FakeDataProvider.test.ts": {
-            "lines": 105,
-            "tokens": 1398,
+            "lines": 117,
+            "tokens": 1579,
             "sources": 1,
             "clones": 1,
             "duplicatedLines": 6,
             "duplicatedTokens": 72,
-            "percentage": 5.71,
-            "percentageTokens": 5.15,
+            "percentage": 5.13,
+            "percentageTokens": 4.56,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -354,14 +402,14 @@
           }
         },
         "total": {
-          "lines": 976,
-          "tokens": 9749,
-          "sources": 29,
+          "lines": 1245,
+          "tokens": 12849,
+          "sources": 33,
           "clones": 1,
           "duplicatedLines": 6,
           "duplicatedTokens": 72,
-          "percentage": 0.61,
-          "percentageTokens": 0.74,
+          "percentage": 0.48,
+          "percentageTokens": 0.56,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -696,6 +744,42 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
+          "/github/workspace/ui/src/features/budgets/BudgetsList.tsx": {
+            "lines": 9,
+            "tokens": 153,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/budgets/BudgetIndicator.tsx": {
+            "lines": 2,
+            "tokens": 35,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/budgets/BudgetIndicator.test.tsx": {
+            "lines": 27,
+            "tokens": 314,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "/github/workspace/ui/src/app/layout/Layout.test.tsx": {
             "lines": 4,
             "tokens": 67,
@@ -842,9 +926,9 @@
           }
         },
         "total": {
-          "lines": 396,
-          "tokens": 2867,
-          "sources": 13,
+          "lines": 434,
+          "tokens": 3369,
+          "sources": 16,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -871,6 +955,54 @@
           "/github/workspace/ui/src/features/transactions/TransactionsList.test.tsx": {
             "lines": 103,
             "tokens": 1149,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/budgets/BudgetsList.tsx": {
+            "lines": 29,
+            "tokens": 328,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/budgets/BudgetsList.test.tsx": {
+            "lines": 141,
+            "tokens": 1560,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/budgets/BudgetIndicator.tsx": {
+            "lines": 24,
+            "tokens": 223,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/budgets/BudgetIndicator.test.tsx": {
+            "lines": 37,
+            "tokens": 425,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1085,8 +1217,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/pages/BudgetsPage.tsx": {
-            "lines": 10,
-            "tokens": 94,
+            "lines": 13,
+            "tokens": 114,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1122,9 +1254,9 @@
           }
         },
         "total": {
-          "lines": 713,
-          "tokens": 7488,
-          "sources": 22,
+          "lines": 947,
+          "tokens": 10044,
+          "sources": 26,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -1195,6 +1327,18 @@
           "/github/workspace/.github/workflows/pages.yml": {
             "lines": 49,
             "tokens": 239,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/.github/workflows/nsfw-detection.yml": {
+            "lines": 37,
+            "tokens": 179,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1530,9 +1674,9 @@
           }
         },
         "total": {
-          "lines": 1791,
-          "tokens": 6924,
-          "sources": 28,
+          "lines": 1828,
+          "tokens": 7103,
+          "sources": 29,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -1952,14 +2096,14 @@
       }
     },
     "total": {
-      "lines": 7433,
-      "tokens": 48658,
-      "sources": 145,
+      "lines": 8011,
+      "tokens": 54995,
+      "sources": 157,
       "clones": 2,
       "duplicatedLines": 18,
       "duplicatedTokens": 154,
-      "percentage": 0.24,
-      "percentageTokens": 0.32,
+      "percentage": 0.22,
+      "percentageTokens": 0.28,
       "newDuplicatedLines": 0,
       "newClones": 0
     }

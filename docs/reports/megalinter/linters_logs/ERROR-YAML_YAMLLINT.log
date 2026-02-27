@@ -11,6 +11,9 @@ Linter raw log:
 .github/workflows/megalinter.yml
   4:1       warning  truthy value should be one of [false, true]  (truthy)
 
+.github/workflows/nsfw-detection.yml
+  4:1       warning  truthy value should be one of [false, true]  (truthy)
+
 .github/workflows/pages.yml
   4:1       warning  truthy value should be one of [false, true]  (truthy)
 

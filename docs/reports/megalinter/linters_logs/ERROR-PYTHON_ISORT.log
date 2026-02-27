@@ -5,8 +5,8 @@ See documentation on https://megalinter.io/8.8.0/descriptors/python_isort/
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 ERROR: server/main.py Imports are incorrectly sorted and/or formatted.
---- server/main.py:before	2026-02-27 16:05:54.701335
-+++ server/main.py:after	2026-02-27 16:06:03.147074
+--- server/main.py:before	2026-02-27 19:16:07.428154
++++ server/main.py:after	2026-02-27 19:16:15.749131
 @@ -8,10 +8,9 @@
  
  from fastapi import FastAPI, Header, HTTPException
