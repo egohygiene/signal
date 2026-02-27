@@ -1,0 +1,22 @@
+name: Generate Table of Contents
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  toc:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate TOC
+        uses: technote-space/toc-generator@v4
+        with:
+          COMMIT_MESSAGE: "chore: update table of contents"
+          TARGET_PATHS: "README.md,docs/**/*.md"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
