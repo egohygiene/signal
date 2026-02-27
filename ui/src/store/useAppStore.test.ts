@@ -1,6 +1,36 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 
+import type { Budget } from '../schema/v1/budget';
+import type { Category } from '../schema/v1/category';
+import type { Pool } from '../schema/v1/pool';
+import type { Transaction } from '../schema/v1/transaction';
 import { useAppStore } from './useAppStore';
+
+const mockTransaction: Transaction = {
+  id: 'tx-1',
+  accountId: 'acc-1',
+  categoryId: null,
+  poolId: null,
+  amount: 42.5,
+  currency: 'USD',
+  date: '2024-01-01',
+  description: 'Test transaction',
+};
+
+const mockCategory: Category = { id: 'cat-1', name: 'Food', parentId: null };
+
+const mockBudget: Budget = {
+  id: 'bud-1',
+  name: 'Food Budget',
+  categoryId: 'cat-1',
+  amount: 500,
+  currency: 'USD',
+  period: 'monthly',
+  startDate: '2024-01-01',
+  endDate: null,
+};
+
+const mockPool: Pool = { id: 'pool-1', name: 'Emergency Fund', currency: 'USD', targetAmount: null };
 
 describe('useAppStore', () => {
   beforeEach(() => {
@@ -40,25 +70,25 @@ describe('useAppStore', () => {
   });
 
   it('setTransactions updates transaction state', () => {
-    useAppStore.getState().setTransactions({ items: [{ id: 'tx-1' }] });
+    useAppStore.getState().setTransactions({ items: [mockTransaction] });
     expect(useAppStore.getState().transactions.items).toHaveLength(1);
     expect(useAppStore.getState().transactions.items[0]?.id).toBe('tx-1');
   });
 
   it('setCategories updates category state', () => {
-    useAppStore.getState().setCategories({ items: [{ id: 'cat-1' }] });
+    useAppStore.getState().setCategories({ items: [mockCategory] });
     expect(useAppStore.getState().categories.items).toHaveLength(1);
     expect(useAppStore.getState().categories.items[0]?.id).toBe('cat-1');
   });
 
   it('setBudgets updates budget state', () => {
-    useAppStore.getState().setBudgets({ items: [{ id: 'bud-1' }] });
+    useAppStore.getState().setBudgets({ items: [mockBudget] });
     expect(useAppStore.getState().budgets.items).toHaveLength(1);
     expect(useAppStore.getState().budgets.items[0]?.id).toBe('bud-1');
   });
 
   it('setPools updates pool state', () => {
-    useAppStore.getState().setPools({ items: [{ id: 'pool-1' }] });
+    useAppStore.getState().setPools({ items: [mockPool] });
     expect(useAppStore.getState().pools.items).toHaveLength(1);
     expect(useAppStore.getState().pools.items[0]?.id).toBe('pool-1');
   });

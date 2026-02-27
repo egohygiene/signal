@@ -5,6 +5,7 @@ import { PoolsPage } from '@egohygiene/signal/pages/PoolsPage';
 import { SettingsPage } from '@egohygiene/signal/pages/SettingsPage';
 import { TransactionsPage } from '@egohygiene/signal/pages/TransactionsPage';
 import { DataProviderProvider } from '@egohygiene/signal/providers/DataProviderContext';
+import { DataSyncProvider } from '@egohygiene/signal/providers/DataSyncProvider';
 import { createFakeDataProvider } from '@egohygiene/signal/providers/FakeDataProvider';
 import { QueryProvider } from '@egohygiene/signal/query/QueryProvider';
 import { type JSX, useMemo } from 'react';
@@ -15,17 +16,19 @@ export function App(): JSX.Element {
   return (
     <QueryProvider>
       <DataProviderProvider provider={dataProvider}>
-        <BrowserRouter>
-          <Routes>
-            <Route element={<Layout />}>
-              <Route index element={<HomePage />} />
-              <Route path="/transactions" element={<TransactionsPage />} />
-              <Route path="/budgets" element={<BudgetsPage />} />
-              <Route path="/pools" element={<PoolsPage />} />
-              <Route path="/settings" element={<SettingsPage />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
+        <DataSyncProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route element={<Layout />}>
+                <Route index element={<HomePage />} />
+                <Route path="/transactions" element={<TransactionsPage />} />
+                <Route path="/budgets" element={<BudgetsPage />} />
+                <Route path="/pools" element={<PoolsPage />} />
+                <Route path="/settings" element={<SettingsPage />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </DataSyncProvider>
       </DataProviderProvider>
     </QueryProvider>
   );
