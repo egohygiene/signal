@@ -735,6 +735,8 @@
           <file name="DataProvider.ts"></file>
           <file name="DataProviderContext.test.tsx"></file>
           <file name="DataProviderContext.tsx"></file>
+          <file name="DataSyncProvider.test.tsx"></file>
+          <file name="DataSyncProvider.tsx"></file>
           <file name="FakeDataProvider.test.ts"></file>
           <file name="FakeDataProvider.ts"></file>
           <file name="useDataProvider.ts"></file>

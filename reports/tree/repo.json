@@ -734,6 +734,8 @@
           {"type":"file","name":"DataProvider.ts"},
           {"type":"file","name":"DataProviderContext.test.tsx"},
           {"type":"file","name":"DataProviderContext.tsx"},
+          {"type":"file","name":"DataSyncProvider.test.tsx"},
+          {"type":"file","name":"DataSyncProvider.tsx"},
           {"type":"file","name":"FakeDataProvider.test.ts"},
           {"type":"file","name":"FakeDataProvider.ts"},
           {"type":"file","name":"useDataProvider.ts"}
