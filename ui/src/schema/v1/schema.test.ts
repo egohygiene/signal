@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
 
 import {
-  SCHEMA_VERSION,
   type Account,
   type AllocationRule,
   type Budget,
   type Category,
   type Pool,
+  SCHEMA_VERSION,
   type Transaction,
 } from './index';
 
