@@ -7,6 +7,10 @@ export function TransactionsList(): JSX.Element {
 
   const categoryMap = useMemo(() => new Map(categories.map((c) => [c.id, c.name])), [categories]);
 
+  if (transactions.length === 0) {
+    return <p>No transactions found.</p>;
+  }
+
   return (
     <ul>
       {transactions.map((tx) => (
