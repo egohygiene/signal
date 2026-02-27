@@ -6,19 +6,19 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_vale/
 Linter raw log:
 
  README.md
+ 20:84   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
  20:84   warning     'be used' may be passive        write-good.Passive 
                      voice. Use active voice if you                     
                      can.                                               
- 20:84   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
  25:40   warning     'various' is a weasel word!     write-good.Weasel  
+ 30:74   suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  30:74   warning     'are defined' may be passive    write-good.Passive 
                      voice. Use active voice if you                     
                      can.                                               
- 30:74   suggestion  Try to avoid using 'are'.       write-good.E-Prime 
- 80:99   suggestion  Try to avoid using 'is'.        write-good.E-Prime 
  80:99   warning     'is installed' may be passive   write-good.Passive 
                      voice. Use active voice if you                     
                      can.                                               
+ 80:99   suggestion  Try to avoid using 'is'.        write-good.E-Prime 
  119:14  suggestion  Try to avoid using 'be'.        write-good.E-Prime 
  141:22  suggestion  Try to avoid using 'be'.        write-good.E-Prime 
  152:22  suggestion  Try to avoid using 'be'.        write-good.E-Prime 
@@ -34,36 +34,36 @@ Linter raw log:
 
 
  core/README.md
+ 24:4   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
  24:4   warning     'be defined' may be passive     write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
- 24:4   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
+ 24:33  suggestion  Try to avoid using 'is'.        write-good.E-Prime 
  24:33  warning     'is developed' may be passive   write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
- 24:33  suggestion  Try to avoid using 'is'.        write-good.E-Prime 
 
 
  docs/FINANCIAL_OPERATING_SYSTEM.md
  8:60    warning     Prefer 'extendable' over        proselint.Needless  
                      'extensible'                                        
  18:20   suggestion  Try to avoid using 'is'.        write-good.E-Prime  
+ 18:55   suggestion  Try to avoid using 'be'.        write-good.E-Prime  
  18:55   warning     'be adapted' may be passive     write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 18:55   suggestion  Try to avoid using 'be'.        write-good.E-Prime  
  45:44   warning     'minimum' is too wordy.         write-good.TooWordy 
  51:54   suggestion  Try to avoid using 'is'.        write-good.E-Prime  
+ 66:12   suggestion  Try to avoid using 'are'.       write-good.E-Prime  
  66:12   warning     'are grouped' may be passive    write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 66:12   suggestion  Try to avoid using 'are'.       write-good.E-Prime  
  248:3   warning     'Minimum' is too wordy.         write-good.TooWordy 
  257:32  warning     'Minimum' is too wordy.         write-good.TooWordy 
+ 277:36  suggestion  Try to avoid using 'be'.        write-good.E-Prime  
  277:36  warning     'be reviewed' may be passive    write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 277:36  suggestion  Try to avoid using 'be'.        write-good.E-Prime  
  287:21  warning     'be stored' may be passive      write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
@@ -115,10 +115,10 @@ Linter raw log:
 
 
  server/PLAID_README.md
- 68:16   suggestion  Try to avoid using 'is'.        write-good.E-Prime  
  68:16   warning     'is configured' may be passive  write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 68:16   suggestion  Try to avoid using 'is'.        write-good.E-Prime  
  127:19  warning     'are fetched' may be passive    write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
@@ -128,15 +128,15 @@ Linter raw log:
                      can.                                                
  127:53  suggestion  Try to avoid using 'is'.        write-good.E-Prime  
  150:21  warning     'various' is a weasel word!     write-good.Weasel   
+ 157:12  suggestion  Try to avoid using 'are'.       write-good.E-Prime  
  157:12  warning     'are logged' may be passive     write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 157:12  suggestion  Try to avoid using 'are'.       write-good.E-Prime  
  171:17  suggestion  Try to avoid using 'is'.        write-good.E-Prime  
+ 179:24  suggestion  Try to avoid using 'be'.        write-good.E-Prime  
  179:24  warning     'be stored' may be passive      write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 179:24  suggestion  Try to avoid using 'be'.        write-good.E-Prime  
  186:3   warning     'Implement' is too wordy.       write-good.TooWordy 
  187:19  warning     'additional' is too wordy.      write-good.TooWordy 
 
@@ -146,14 +146,14 @@ Linter raw log:
 
 
  ui/README.md
+ 18:40  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  18:40  warning     'are named' may be passive      write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
- 18:40  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
+ 19:41  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  19:41  warning     'are defined' may be passive    write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
- 19:41  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  44:33  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  51:20  suggestion  Try to avoid using 'is'.        write-good.E-Prime 
  55:8   suggestion  Try to avoid using 'are'.       write-good.E-Prime 

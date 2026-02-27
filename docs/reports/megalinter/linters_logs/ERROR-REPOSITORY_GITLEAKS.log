@@ -11,5 +11,5 @@ Linter raw log:
     ○ ░
     ░    gitleaks
 
-12:00AM FTL Failed to load config error="[[allowlists]] must contain at least one check for: commits, paths, regexes, or stopwords"
+3:54PM FTL Failed to load config error="[[allowlists]] must contain at least one check for: commits, paths, regexes, or stopwords"
 

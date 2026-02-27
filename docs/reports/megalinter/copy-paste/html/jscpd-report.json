@@ -1,7 +1,371 @@
 {
   "statistics": {
-    "detectionDate": "2026-02-27T00:00:08.756Z",
+    "detectionDate": "2026-02-27T15:53:58.524Z",
     "formats": {
+      "typescript": {
+        "sources": {
+          "/github/workspace/ui/src/schema/v1/transaction.ts": {
+            "lines": 9,
+            "tokens": 75,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/schema/v1/schema.test.ts": {
+            "lines": 195,
+            "tokens": 1568,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/schema/v1/pool.ts": {
+            "lines": 5,
+            "tokens": 43,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/schema/v1/index.ts": {
+            "lines": 7,
+            "tokens": 110,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/schema/v1/category.ts": {
+            "lines": 4,
+            "tokens": 36,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/schema/v1/budget.ts": {
+            "lines": 11,
+            "tokens": 95,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/schema/v1/allocation-rule.ts": {
+            "lines": 8,
+            "tokens": 76,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/schema/v1/account.ts": {
+            "lines": 8,
+            "tokens": 78,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/store/useAppStore.ts": {
+            "lines": 22,
+            "tokens": 262,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/store/useAppStore.test.ts": {
+            "lines": 100,
+            "tokens": 1124,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/store/types.ts": {
+            "lines": 44,
+            "tokens": 358,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/store/index.ts": {
+            "lines": 14,
+            "tokens": 72,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/query/useTransactionsQuery.ts": {
+            "lines": 10,
+            "tokens": 87,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/query/usePoolsQuery.ts": {
+            "lines": 10,
+            "tokens": 87,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/query/useCategoriesQuery.ts": {
+            "lines": 10,
+            "tokens": 87,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/query/useBudgetsQuery.ts": {
+            "lines": 10,
+            "tokens": 87,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/query/queryClient.ts": {
+            "lines": 10,
+            "tokens": 79,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/providers/useDataProvider.ts": {
+            "lines": 12,
+            "tokens": 111,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/providers/FakeDataProvider.ts": {
+            "lines": 105,
+            "tokens": 1172,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/providers/FakeDataProvider.test.ts": {
+            "lines": 105,
+            "tokens": 1398,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 72,
+            "percentage": 5.71,
+            "percentageTokens": 5.15,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/providers/DataProvider.ts": {
+            "lines": 10,
+            "tokens": 140,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/providers/DataProvider.test.ts": {
+            "lines": 46,
+            "tokens": 500,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 72,
+            "percentage": 13.04,
+            "percentageTokens": 14.4,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/logging/rollingBuffer.ts": {
+            "lines": 34,
+            "tokens": 252,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/logging/logger.ts": {
+            "lines": 35,
+            "tokens": 335,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/logging/logger.test.ts": {
+            "lines": 89,
+            "tokens": 1088,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/i18n.ts": {
+            "lines": 19,
+            "tokens": 121,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/.storybook/preview.ts": {
+            "lines": 15,
+            "tokens": 86,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/.storybook/main.ts": {
+            "lines": 10,
+            "tokens": 70,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/vite.config.ts": {
+            "lines": 19,
+            "tokens": 152,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 976,
+          "tokens": 9749,
+          "sources": 29,
+          "clones": 1,
+          "duplicatedLines": 6,
+          "duplicatedTokens": 72,
+          "percentage": 0.61,
+          "percentageTokens": 0.74,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
       "json": {
         "sources": {
           "/github/workspace/ui/src/locales/en/common.json": {
@@ -53,8 +417,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/package.json": {
-            "lines": 51,
-            "tokens": 336,
+            "lines": 56,
+            "tokens": 371,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -306,181 +670,9 @@
           }
         },
         "total": {
-          "lines": 1034,
-          "tokens": 5999,
+          "lines": 1039,
+          "tokens": 6034,
           "sources": 25,
-          "clones": 0,
-          "duplicatedLines": 0,
-          "duplicatedTokens": 0,
-          "percentage": 0,
-          "percentageTokens": 0,
-          "newDuplicatedLines": 0,
-          "newClones": 0
-        }
-      },
-      "tsx": {
-        "sources": {
-          "/github/workspace/ui/src/components/Placeholder/Placeholder.tsx": {
-            "lines": 6,
-            "tokens": 79,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/src/components/Placeholder/Placeholder.test.tsx": {
-            "lines": 14,
-            "tokens": 142,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/src/components/Placeholder/Placeholder.stories.tsx": {
-            "lines": 19,
-            "tokens": 137,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/src/app/layout/Layout.tsx": {
-            "lines": 20,
-            "tokens": 221,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/src/app/layout/Layout.test.tsx": {
-            "lines": 51,
-            "tokens": 539,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/src/pages/TransactionsPage.tsx": {
-            "lines": 10,
-            "tokens": 94,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/src/pages/SettingsPage.tsx": {
-            "lines": 10,
-            "tokens": 94,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/src/pages/PoolsPage.tsx": {
-            "lines": 10,
-            "tokens": 94,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/src/pages/HomePage.tsx": {
-            "lines": 10,
-            "tokens": 94,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/src/pages/HomePage.test.tsx": {
-            "lines": 11,
-            "tokens": 106,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/src/pages/BudgetsPage.tsx": {
-            "lines": 10,
-            "tokens": 94,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/src/app/App.tsx": {
-            "lines": 23,
-            "tokens": 277,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/src/main.tsx": {
-            "lines": 12,
-            "tokens": 84,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          }
-        },
-        "total": {
-          "lines": 206,
-          "tokens": 2055,
-          "sources": 13,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -492,6 +684,18 @@
       },
       "javascript": {
         "sources": {
+          "/github/workspace/ui/src/features/transactions/TransactionsList.tsx": {
+            "lines": 0,
+            "tokens": 5,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "/github/workspace/ui/src/app/layout/Layout.test.tsx": {
             "lines": 4,
             "tokens": 67,
@@ -504,9 +708,69 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
+          "/github/workspace/ui/src/query/useTransactionsQuery.test.tsx": {
+            "lines": 41,
+            "tokens": 427,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/query/QueryProvider.tsx": {
+            "lines": 2,
+            "tokens": 30,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/providers/DataSyncProvider.test.tsx": {
+            "lines": 1,
+            "tokens": 14,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/providers/DataProviderContext.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/providers/DataProviderContext.test.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "/github/workspace/ui/src/app/App.tsx": {
-            "lines": 5,
-            "tokens": 106,
+            "lines": 9,
+            "tokens": 132,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -578,9 +842,289 @@
           }
         },
         "total": {
-          "lines": 348,
-          "tokens": 2359,
-          "sources": 7,
+          "lines": 396,
+          "tokens": 2867,
+          "sources": 13,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "tsx": {
+        "sources": {
+          "/github/workspace/ui/src/features/transactions/TransactionsList.tsx": {
+            "lines": 26,
+            "tokens": 349,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/transactions/TransactionsList.test.tsx": {
+            "lines": 102,
+            "tokens": 1133,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/components/Placeholder/Placeholder.tsx": {
+            "lines": 6,
+            "tokens": 79,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/components/Placeholder/Placeholder.test.tsx": {
+            "lines": 14,
+            "tokens": 142,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/components/Placeholder/Placeholder.stories.tsx": {
+            "lines": 19,
+            "tokens": 137,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/app/layout/Layout.tsx": {
+            "lines": 20,
+            "tokens": 221,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/app/layout/Layout.test.tsx": {
+            "lines": 51,
+            "tokens": 539,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/query/useTransactionsQuery.test.tsx": {
+            "lines": 86,
+            "tokens": 896,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/query/QueryProvider.tsx": {
+            "lines": 17,
+            "tokens": 154,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/query/QueryProvider.test.tsx": {
+            "lines": 42,
+            "tokens": 376,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/providers/DataSyncProvider.tsx": {
+            "lines": 39,
+            "tokens": 479,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/providers/DataSyncProvider.test.tsx": {
+            "lines": 126,
+            "tokens": 1264,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/providers/DataProviderContext.tsx": {
+            "lines": 12,
+            "tokens": 119,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/providers/DataProviderContext.test.tsx": {
+            "lines": 34,
+            "tokens": 381,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/pages/TransactionsPage.tsx": {
+            "lines": 13,
+            "tokens": 114,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/pages/SettingsPage.tsx": {
+            "lines": 10,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/pages/PoolsPage.tsx": {
+            "lines": 10,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/pages/HomePage.tsx": {
+            "lines": 10,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/pages/HomePage.test.tsx": {
+            "lines": 11,
+            "tokens": 106,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/pages/BudgetsPage.tsx": {
+            "lines": 10,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/app/App.tsx": {
+            "lines": 34,
+            "tokens": 392,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/main.tsx": {
+            "lines": 12,
+            "tokens": 84,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 704,
+          "tokens": 7341,
+          "sources": 22,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -609,70 +1153,6 @@
           "lines": 69,
           "tokens": 378,
           "sources": 1,
-          "clones": 0,
-          "duplicatedLines": 0,
-          "duplicatedTokens": 0,
-          "percentage": 0,
-          "percentageTokens": 0,
-          "newDuplicatedLines": 0,
-          "newClones": 0
-        }
-      },
-      "typescript": {
-        "sources": {
-          "/github/workspace/ui/src/i18n.ts": {
-            "lines": 19,
-            "tokens": 121,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/.storybook/preview.ts": {
-            "lines": 15,
-            "tokens": 86,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/.storybook/main.ts": {
-            "lines": 10,
-            "tokens": 70,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/ui/vite.config.ts": {
-            "lines": 18,
-            "tokens": 137,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          }
-        },
-        "total": {
-          "lines": 62,
-          "tokens": 414,
-          "sources": 4,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -1472,19 +1952,55 @@
       }
     },
     "total": {
-      "lines": 5959,
-      "tokens": 33347,
-      "sources": 105,
-      "clones": 1,
-      "duplicatedLines": 12,
-      "duplicatedTokens": 82,
-      "percentage": 0.2,
-      "percentageTokens": 0.25,
+      "lines": 7424,
+      "tokens": 48511,
+      "sources": 145,
+      "clones": 2,
+      "duplicatedLines": 18,
+      "duplicatedTokens": 154,
+      "percentage": 0.24,
+      "percentageTokens": 0.32,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
   },
   "duplicates": [
+    {
+      "format": "typescript",
+      "lines": 7,
+      "fragment": "expect(typeof provider.getTransactions).toBe('function');\n    expect(typeof provider.getCategories).toBe('function');\n    expect(typeof provider.getBudgets).toBe('function');\n    expect(typeof provider.getPools).toBe('function');\n  });\n\n  it('getTransactions returns a Promise'",
+      "tokens": 0,
+      "firstFile": {
+        "name": "/github/workspace/ui/src/providers/DataProvider.test.ts",
+        "start": 18,
+        "end": 24,
+        "startLoc": {
+          "line": 18,
+          "column": 5,
+          "position": 174
+        },
+        "endLoc": {
+          "line": 24,
+          "column": 36,
+          "position": 246
+        }
+      },
+      "secondFile": {
+        "name": "/github/workspace/ui/src/providers/FakeDataProvider.test.ts",
+        "start": 12,
+        "end": 18,
+        "startLoc": {
+          "line": 12,
+          "column": 5,
+          "position": 132
+        },
+        "endLoc": {
+          "line": 18,
+          "column": 74,
+          "position": 204
+        }
+      }
+    },
     {
       "format": "python",
       "lines": 13,
