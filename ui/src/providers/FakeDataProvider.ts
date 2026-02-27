@@ -29,19 +29,45 @@ const POOL_NAMES = ['Emergency Fund', 'Vacation', 'Home Down Payment', 'Retireme
 
 const CURRENCIES = ['USD'];
 
-function buildCategories(rng: typeof faker, pools: Pool[]): Category[] {
-  const parents = CATEGORY_NAMES.slice(0, 7).map((name, i) => ({
-    id: `cat-parent-${i + 1}`,
-    name,
-    parentId: null,
-    poolId: rng.datatype.boolean() ? pools[i % pools.length].id : null,
-  }));
-  const children = CATEGORY_NAMES.slice(7).map((name, i) => ({
-    id: `cat-child-${i + 1}`,
-    name,
-    parentId: parents[i % parents.length].id,
-    poolId: rng.datatype.boolean() ? pools[i % pools.length].id : null,
-  }));
+// Explicit mapping from category name to pool index (0-based) or null for no pool.
+// Pool indices correspond to POOL_NAMES order:
+//   0 = Emergency Fund, 1 = Vacation, 2 = Home Down Payment, 3 = Retirement, 4 = Car Replacement
+const CATEGORY_POOL_INDICES: (number | null)[] = [
+  0, // Food & Dining    -> Emergency Fund
+  0, // Groceries        -> Emergency Fund
+  1, // Restaurants      -> Vacation
+  4, // Transportation   -> Car Replacement
+  4, // Fuel             -> Car Replacement
+  0, // Public Transit   -> Emergency Fund
+  2, // Housing          -> Home Down Payment
+  0, // Utilities        -> Emergency Fund
+  1, // Entertainment    -> Vacation
+  null, // Shopping      -> (unmapped)
+  3, // Health & Fitness -> Retirement
+  1, // Travel           -> Vacation
+  3, // Education        -> Retirement
+  null, // Personal Care -> (unmapped)
+];
+
+function buildCategories(pools: Pool[]): Category[] {
+  const parents = CATEGORY_NAMES.slice(0, 7).map((name, i) => {
+    const poolIndex = CATEGORY_POOL_INDICES[i] ?? null;
+    return {
+      id: `cat-parent-${i + 1}`,
+      name,
+      parentId: null,
+      poolId: poolIndex !== null ? pools[poolIndex].id : null,
+    };
+  });
+  const children = CATEGORY_NAMES.slice(7).map((name, i) => {
+    const poolIndex = CATEGORY_POOL_INDICES[7 + i] ?? null;
+    return {
+      id: `cat-child-${i + 1}`,
+      name,
+      parentId: parents[i % parents.length].id,
+      poolId: poolIndex !== null ? pools[poolIndex].id : null,
+    };
+  });
   return [...parents, ...children];
 }
 
@@ -94,7 +120,7 @@ function createSeededFaker(): typeof faker {
 export function createFakeDataProvider(): DataProvider {
   const rng = createSeededFaker();
   const pools = buildPools(rng);
-  const categories = buildCategories(rng, pools);
+  const categories = buildCategories(pools);
   const budgets = buildBudgets(rng, categories);
   const transactions = buildTransactions(rng, categories, pools);
 
