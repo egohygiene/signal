@@ -1,39 +1,24 @@
+import { useBudgetsQuery } from '@egohygiene/signal/query/useBudgetsQuery';
+import { useCategoriesQuery } from '@egohygiene/signal/query/useCategoriesQuery';
+import { usePoolsQuery } from '@egohygiene/signal/query/usePoolsQuery';
+import { useTransactionsQuery } from '@egohygiene/signal/query/useTransactionsQuery';
 import { useAppStore } from '@egohygiene/signal/store';
-import { useQuery } from '@tanstack/react-query';
 import { type JSX, type ReactNode, useEffect } from 'react';
-
-import { useDataProvider } from './useDataProvider';
 
 interface DataSyncProviderProps {
   children: ReactNode;
 }
 
 export function DataSyncProvider({ children }: DataSyncProviderProps): JSX.Element {
-  const dataProvider = useDataProvider();
   const setTransactions = useAppStore((s) => s.setTransactions);
   const setCategories = useAppStore((s) => s.setCategories);
   const setBudgets = useAppStore((s) => s.setBudgets);
   const setPools = useAppStore((s) => s.setPools);
 
-  const { data: transactions } = useQuery({
-    queryKey: ['transactions'],
-    queryFn: () => dataProvider.getTransactions(),
-  });
-
-  const { data: categories } = useQuery({
-    queryKey: ['categories'],
-    queryFn: () => dataProvider.getCategories(),
-  });
-
-  const { data: budgets } = useQuery({
-    queryKey: ['budgets'],
-    queryFn: () => dataProvider.getBudgets(),
-  });
-
-  const { data: pools } = useQuery({
-    queryKey: ['pools'],
-    queryFn: () => dataProvider.getPools(),
-  });
+  const { data: transactions } = useTransactionsQuery();
+  const { data: categories } = useCategoriesQuery();
+  const { data: budgets } = useBudgetsQuery();
+  const { data: pools } = usePoolsQuery();
 
   useEffect(() => {
     if (transactions) setTransactions({ items: transactions });
