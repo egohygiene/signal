@@ -2,4 +2,5 @@ export type Category = {
   id: string;
   name: string;
   parentId: string | null;
+  poolId: string | null;
 };
