@@ -9,6 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@egohygiene/signal': path.resolve(__dirname, './src'),
+      pino: path.resolve(__dirname, './node_modules/pino/browser.js'),
     },
   },
   test: {
