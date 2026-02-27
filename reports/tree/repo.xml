@@ -715,6 +715,12 @@
             <file name="index.ts"></file>
             <file name="useBudgetSummary.ts"></file>
           </directory>
+          <directory name="pools">
+            <file name="index.ts"></file>
+            <file name="poolCalculations.test.ts"></file>
+            <file name="poolCalculations.ts"></file>
+            <file name="usePoolSummary.ts"></file>
+          </directory>
           <directory name="transactions">
             <file name="TransactionsList.test.tsx"></file>
             <file name="TransactionsList.tsx"></file>

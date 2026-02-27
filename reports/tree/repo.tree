@@ -657,6 +657,11 @@
 │   │   │   │   ├── budgetCalculations.ts
 │   │   │   │   ├── index.ts
 │   │   │   │   └── useBudgetSummary.ts
+│   │   │   ├── pools
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── poolCalculations.test.ts
+│   │   │   │   ├── poolCalculations.ts
+│   │   │   │   └── usePoolSummary.ts
 │   │   │   ├── transactions
 │   │   │   │   ├── TransactionsList.test.tsx
 │   │   │   │   ├── TransactionsList.tsx

@@ -714,6 +714,12 @@
             {"type":"file","name":"index.ts"},
             {"type":"file","name":"useBudgetSummary.ts"}
           ]},
+          {"type":"directory","name":"pools","contents":[
+            {"type":"file","name":"index.ts"},
+            {"type":"file","name":"poolCalculations.test.ts"},
+            {"type":"file","name":"poolCalculations.ts"},
+            {"type":"file","name":"usePoolSummary.ts"}
+          ]},
           {"type":"directory","name":"transactions","contents":[
             {"type":"file","name":"TransactionsList.test.tsx"},
             {"type":"file","name":"TransactionsList.tsx"},
