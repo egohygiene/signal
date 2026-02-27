@@ -11,6 +11,7 @@
       <directory name="workflows">
         <file name="generate_repository_tree.yml"></file>
         <file name="megalinter.yml"></file>
+        <file name="nsfw-detection.yml"></file>
         <file name="pages.yml"></file>
       </directory>
     </directory>

@@ -10,6 +10,7 @@
       {"type":"directory","name":"workflows","contents":[
         {"type":"file","name":"generate_repository_tree.yml"},
         {"type":"file","name":"megalinter.yml"},
+        {"type":"file","name":"nsfw-detection.yml"},
         {"type":"file","name":"pages.yml"}
       ]}
     ]},
