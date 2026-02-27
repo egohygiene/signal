@@ -4,6 +4,12 @@
     <directory name=".ansible">
       <file name=".lock"></file>
     </directory>
+    <directory name=".devcontainer">
+      <directory name="scripts">
+        <file name="post-create.sh"></file>
+      </directory>
+      <file name="devcontainer.json"></file>
+    </directory>
     <directory name=".github">
       <directory name="linters">
         <file name=".gitkeep"></file>

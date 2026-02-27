@@ -3,6 +3,12 @@
     {"type":"directory","name":".ansible","contents":[
       {"type":"file","name":".lock"}
     ]},
+    {"type":"directory","name":".devcontainer","contents":[
+      {"type":"directory","name":"scripts","contents":[
+        {"type":"file","name":"post-create.sh"}
+      ]},
+      {"type":"file","name":"devcontainer.json"}
+    ]},
     {"type":"directory","name":".github","contents":[
       {"type":"directory","name":"linters","contents":[
         {"type":"file","name":".gitkeep"}
