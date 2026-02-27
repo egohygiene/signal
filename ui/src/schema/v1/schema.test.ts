@@ -55,10 +55,12 @@ describe('Category type', () => {
       id: 'cat-1',
       name: 'Food',
       parentId: null,
+      poolId: null,
     };
     expect(cat.id).toBe('cat-1');
     expect(cat.name).toBe('Food');
     expect(cat.parentId).toBeNull();
+    expect(cat.poolId).toBeNull();
   });
 
   it('accepts a category with a parent', () => {
@@ -66,8 +68,19 @@ describe('Category type', () => {
       id: 'cat-2',
       name: 'Groceries',
       parentId: 'cat-1',
+      poolId: null,
     };
     expect(cat.parentId).toBe('cat-1');
+  });
+
+  it('accepts a category with a pool reference', () => {
+    const cat: Category = {
+      id: 'cat-3',
+      name: 'Savings',
+      parentId: null,
+      poolId: 'pool-1',
+    };
+    expect(cat.poolId).toBe('pool-1');
   });
 });
 

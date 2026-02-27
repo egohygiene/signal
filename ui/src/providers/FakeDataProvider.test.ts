@@ -39,6 +39,7 @@ describe('FakeDataProvider', () => {
       expect(typeof cat.id).toBe('string');
       expect(typeof cat.name).toBe('string');
       expect(cat.parentId === null || typeof cat.parentId === 'string').toBe(true);
+      expect(cat.poolId === null || typeof cat.poolId === 'string').toBe(true);
     }
   });
 
@@ -100,6 +101,17 @@ describe('FakeDataProvider', () => {
     for (const tx of transactions) {
       if (tx.poolId !== null) {
         expect(poolIds.has(tx.poolId)).toBe(true);
+      }
+    }
+  });
+
+  it('category poolIds reference valid pool ids', async () => {
+    const provider = createFakeDataProvider();
+    const [categories, pools] = await Promise.all([provider.getCategories(), provider.getPools()]);
+    const poolIds = new Set(pools.map((p) => p.id));
+    for (const cat of categories) {
+      if (cat.poolId !== null) {
+        expect(poolIds.has(cat.poolId)).toBe(true);
       }
     }
   });

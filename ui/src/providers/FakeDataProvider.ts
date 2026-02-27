@@ -29,18 +29,19 @@ const POOL_NAMES = ['Emergency Fund', 'Vacation', 'Home Down Payment', 'Retireme
 
 const CURRENCIES = ['USD'];
 
-function buildCategories(rng: typeof faker): Category[] {
+function buildCategories(rng: typeof faker, pools: Pool[]): Category[] {
   const parents = CATEGORY_NAMES.slice(0, 7).map((name, i) => ({
     id: `cat-parent-${i + 1}`,
     name,
     parentId: null,
+    poolId: rng.datatype.boolean() ? pools[i % pools.length].id : null,
   }));
   const children = CATEGORY_NAMES.slice(7).map((name, i) => ({
     id: `cat-child-${i + 1}`,
     name,
     parentId: parents[i % parents.length].id,
+    poolId: rng.datatype.boolean() ? pools[i % pools.length].id : null,
   }));
-  void rng;
   return [...parents, ...children];
 }
 
@@ -92,8 +93,8 @@ function createSeededFaker(): typeof faker {
 
 export function createFakeDataProvider(): DataProvider {
   const rng = createSeededFaker();
-  const categories = buildCategories(rng);
   const pools = buildPools(rng);
+  const categories = buildCategories(rng, pools);
   const budgets = buildBudgets(rng, categories);
   const transactions = buildTransactions(rng, categories, pools);
 
