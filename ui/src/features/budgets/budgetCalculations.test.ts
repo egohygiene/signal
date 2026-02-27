@@ -104,6 +104,7 @@ describe('compareBudgets', () => {
     expect(result?.spent).toBe(0);
     expect(result?.remaining).toBe(200);
     expect(result?.isOverBudget).toBe(false);
+    expect(result?.percentageUsed).toBe(0);
   });
 
   it('computes remaining correctly when under budget', () => {
@@ -112,6 +113,7 @@ describe('compareBudgets', () => {
     expect(result?.spent).toBe(150);
     expect(result?.remaining).toBe(50);
     expect(result?.isOverBudget).toBe(false);
+    expect(result?.percentageUsed).toBe(75);
   });
 
   it('marks isOverBudget true when spending exceeds budget amount', () => {
@@ -120,11 +122,24 @@ describe('compareBudgets', () => {
     expect(result?.spent).toBe(150);
     expect(result?.remaining).toBe(-50);
     expect(result?.isOverBudget).toBe(true);
+    expect(result?.percentageUsed).toBe(150);
   });
 
   it('attaches the original budget to the result', () => {
     const budget = makeBudget();
     const [result] = compareBudgets([budget], []);
     expect(result?.budget).toBe(budget);
+  });
+
+  it('returns 100% for percentageUsed when budget amount is zero and there is spending', () => {
+    const budget = makeBudget({ categoryId: 'cat-1', amount: 0 });
+    const [result] = compareBudgets([budget], [{ categoryId: 'cat-1', total: 50 }]);
+    expect(result?.percentageUsed).toBe(100);
+  });
+
+  it('returns 0% for percentageUsed when budget amount is zero and there is no spending', () => {
+    const budget = makeBudget({ categoryId: 'cat-1', amount: 0 });
+    const [result] = compareBudgets([budget], []);
+    expect(result?.percentageUsed).toBe(0);
   });
 });

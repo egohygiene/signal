@@ -11,6 +11,7 @@ export type BudgetComparison = {
   spent: number;
   remaining: number;
   isOverBudget: boolean;
+  percentageUsed: number;
 };
 
 /**
@@ -52,11 +53,13 @@ export function compareBudgets(
   return budgets.map((budget) => {
     const spent = totalMap.get(budget.categoryId) ?? 0;
     const remaining = budget.amount - spent;
+    const percentageUsed = budget.amount > 0 ? (spent / budget.amount) * 100 : spent > 0 ? 100 : 0;
     return {
       budget,
       spent,
       remaining,
       isOverBudget: spent > budget.amount,
+      percentageUsed,
     };
   });
 }

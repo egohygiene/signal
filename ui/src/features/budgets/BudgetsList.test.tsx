@@ -110,12 +110,33 @@ describe('BudgetsList', () => {
   it('shows warning text when over budget', () => {
     useAppStore.setState({ budgets: { items: [mockBudgets[1]!] }, transactions: { items: mockTransactions } });
     render(<BudgetsList />);
-    expect(screen.getByText(/over budget/)).toBeInTheDocument();
+    expect(screen.getByLabelText(/over budget/i)).toBeInTheDocument();
   });
 
   it('does not show warning text when under budget', () => {
     useAppStore.setState({ budgets: { items: [mockBudgets[0]!] }, transactions: { items: mockTransactions } });
     render(<BudgetsList />);
-    expect(screen.queryByText(/over budget/)).not.toBeInTheDocument();
+    expect(screen.queryByLabelText(/over budget/i)).not.toBeInTheDocument();
+  });
+
+  it('shows percentage used in indicator', () => {
+    useAppStore.setState({ budgets: { items: [mockBudgets[0]!] }, transactions: { items: mockTransactions } });
+    render(<BudgetsList />);
+    // Food Budget: 150 spent of 200 = 75%
+    expect(screen.getByLabelText(/75%/)).toBeInTheDocument();
+  });
+
+  it('shows over status indicator for over-budget category', () => {
+    useAppStore.setState({ budgets: { items: [mockBudgets[1]!] }, transactions: { items: mockTransactions } });
+    render(<BudgetsList />);
+    const indicator = document.querySelector('[data-status="over"]');
+    expect(indicator).toBeInTheDocument();
+  });
+
+  it('shows under status indicator for under-budget category', () => {
+    useAppStore.setState({ budgets: { items: [mockBudgets[0]!] }, transactions: { items: mockTransactions } });
+    render(<BudgetsList />);
+    const indicator = document.querySelector('[data-status="under"]');
+    expect(indicator).toBeInTheDocument();
   });
 });
