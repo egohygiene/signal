@@ -665,7 +665,12 @@
 │   │   │   └── TransactionsPage.tsx
 │   │   ├── providers
 │   │   │   ├── DataProvider.test.ts
-│   │   │   └── DataProvider.ts
+│   │   │   ├── DataProvider.ts
+│   │   │   ├── DataProviderContext.test.tsx
+│   │   │   ├── DataProviderContext.tsx
+│   │   │   ├── FakeDataProvider.test.ts
+│   │   │   ├── FakeDataProvider.ts
+│   │   │   └── useDataProvider.ts
 │   │   ├── query
 │   │   │   ├── QueryProvider.test.tsx
 │   │   │   ├── QueryProvider.tsx

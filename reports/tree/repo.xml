@@ -728,6 +728,11 @@
         <directory name="providers">
           <file name="DataProvider.test.ts"></file>
           <file name="DataProvider.ts"></file>
+          <file name="DataProviderContext.test.tsx"></file>
+          <file name="DataProviderContext.tsx"></file>
+          <file name="FakeDataProvider.test.ts"></file>
+          <file name="FakeDataProvider.ts"></file>
+          <file name="useDataProvider.ts"></file>
         </directory>
         <directory name="query">
           <file name="QueryProvider.test.tsx"></file>

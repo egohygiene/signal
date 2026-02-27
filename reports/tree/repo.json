@@ -726,7 +726,12 @@
         ]},
         {"type":"directory","name":"providers","contents":[
           {"type":"file","name":"DataProvider.test.ts"},
-          {"type":"file","name":"DataProvider.ts"}
+          {"type":"file","name":"DataProvider.ts"},
+          {"type":"file","name":"DataProviderContext.test.tsx"},
+          {"type":"file","name":"DataProviderContext.tsx"},
+          {"type":"file","name":"FakeDataProvider.test.ts"},
+          {"type":"file","name":"FakeDataProvider.ts"},
+          {"type":"file","name":"useDataProvider.ts"}
         ]},
         {"type":"directory","name":"query","contents":[
           {"type":"file","name":"QueryProvider.test.tsx"},
