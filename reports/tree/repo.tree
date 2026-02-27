@@ -663,6 +663,11 @@
 │   │   │   ├── PoolsPage.tsx
 │   │   │   ├── SettingsPage.tsx
 │   │   │   └── TransactionsPage.tsx
+│   │   ├── store
+│   │   │   ├── index.ts
+│   │   │   ├── types.ts
+│   │   │   ├── useAppStore.test.ts
+│   │   │   └── useAppStore.ts
 │   │   ├── test
 │   │   │   └── setup.ts
 │   │   ├── i18n.ts

@@ -725,6 +725,12 @@
           <file name="SettingsPage.tsx"></file>
           <file name="TransactionsPage.tsx"></file>
         </directory>
+        <directory name="store">
+          <file name="index.ts"></file>
+          <file name="types.ts"></file>
+          <file name="useAppStore.test.ts"></file>
+          <file name="useAppStore.ts"></file>
+        </directory>
         <directory name="test">
           <file name="setup.ts"></file>
         </directory>

@@ -724,6 +724,12 @@
           {"type":"file","name":"SettingsPage.tsx"},
           {"type":"file","name":"TransactionsPage.tsx"}
         ]},
+        {"type":"directory","name":"store","contents":[
+          {"type":"file","name":"index.ts"},
+          {"type":"file","name":"types.ts"},
+          {"type":"file","name":"useAppStore.test.ts"},
+          {"type":"file","name":"useAppStore.ts"}
+        ]},
         {"type":"directory","name":"test","contents":[
           {"type":"file","name":"setup.ts"}
         ]},
