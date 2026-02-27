@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-02-26T21:24:28.562Z",
+    "detectionDate": "2026-02-27T00:00:08.756Z",
     "formats": {
       "json": {
         "sources": {
@@ -41,8 +41,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/tsconfig.app.json": {
-            "lines": 27,
-            "tokens": 183,
+            "lines": 33,
+            "tokens": 218,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -306,8 +306,8 @@
           }
         },
         "total": {
-          "lines": 1028,
-          "tokens": 5964,
+          "lines": 1034,
+          "tokens": 5999,
           "sources": 25,
           "clones": 0,
           "duplicatedLines": 0,
@@ -357,8 +357,20 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/app/layout/Layout.tsx": {
-            "lines": 18,
-            "tokens": 211,
+            "lines": 20,
+            "tokens": 221,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/app/layout/Layout.test.tsx": {
+            "lines": 51,
+            "tokens": 539,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -441,8 +453,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/app/App.tsx": {
-            "lines": 24,
-            "tokens": 278,
+            "lines": 23,
+            "tokens": 277,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -466,9 +478,9 @@
           }
         },
         "total": {
-          "lines": 154,
-          "tokens": 1507,
-          "sources": 12,
+          "lines": 206,
+          "tokens": 2055,
+          "sources": 13,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -480,6 +492,18 @@
       },
       "javascript": {
         "sources": {
+          "/github/workspace/ui/src/app/layout/Layout.test.tsx": {
+            "lines": 4,
+            "tokens": 67,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "/github/workspace/ui/src/app/App.tsx": {
             "lines": 5,
             "tokens": 106,
@@ -554,9 +578,9 @@
           }
         },
         "total": {
-          "lines": 344,
-          "tokens": 2292,
-          "sources": 6,
+          "lines": 348,
+          "tokens": 2359,
+          "sources": 7,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -633,8 +657,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/vite.config.ts": {
-            "lines": 12,
-            "tokens": 93,
+            "lines": 18,
+            "tokens": 137,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -646,8 +670,8 @@
           }
         },
         "total": {
-          "lines": 56,
-          "tokens": 370,
+          "lines": 62,
+          "tokens": 414,
           "sources": 4,
           "clones": 0,
           "duplicatedLines": 0,
@@ -1448,9 +1472,9 @@
       }
     },
     "total": {
-      "lines": 5891,
-      "tokens": 32653,
-      "sources": 103,
+      "lines": 5959,
+      "tokens": 33347,
+      "sources": 105,
       "clones": 1,
       "duplicatedLines": 12,
       "duplicatedTokens": 82,

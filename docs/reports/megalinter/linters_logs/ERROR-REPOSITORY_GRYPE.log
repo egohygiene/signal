@@ -13,5 +13,5 @@ tar        7.5.7      7.5.8     npm   GHSA-83g3-92jg-28cx  High       2.09  < 0.
 bn.js      4.12.2     4.12.3    npm   GHSA-378v-28hj-76wf  Medium     2.85  < 0.1  
 bn.js      5.2.2      5.2.3     npm   GHSA-378v-28hj-76wf  Medium     2.85  < 0.1  
 elliptic   6.6.1                npm   GHSA-848j-6mx2-7j84  Low        1.27  < 0.1
-[0026] ERROR discovered vulnerabilities at or above the severity threshold
+[0027] ERROR discovered vulnerabilities at or above the severity threshold
 
