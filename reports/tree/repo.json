@@ -703,6 +703,11 @@
           ]}
         ]},
         {"type":"directory","name":"features","contents":[
+          {"type":"directory","name":"transactions","contents":[
+            {"type":"file","name":"TransactionsList.test.tsx"},
+            {"type":"file","name":"TransactionsList.tsx"},
+            {"type":"file","name":"index.ts"}
+          ]},
           {"type":"file","name":".gitkeep"}
         ]},
         {"type":"directory","name":"locales","contents":[

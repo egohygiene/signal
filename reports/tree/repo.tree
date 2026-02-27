@@ -647,6 +647,10 @@
 │   │   │       ├── Placeholder.types.ts
 │   │   │       └── index.ts
 │   │   ├── features
+│   │   │   ├── transactions
+│   │   │   │   ├── TransactionsList.test.tsx
+│   │   │   │   ├── TransactionsList.tsx
+│   │   │   │   └── index.ts
 │   │   │   └── .gitkeep
 │   │   ├── locales
 │   │   │   └── en

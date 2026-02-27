@@ -704,6 +704,11 @@
           </directory>
         </directory>
         <directory name="features">
+          <directory name="transactions">
+            <file name="TransactionsList.test.tsx"></file>
+            <file name="TransactionsList.tsx"></file>
+            <file name="index.ts"></file>
+          </directory>
           <file name=".gitkeep"></file>
         </directory>
         <directory name="locales">
