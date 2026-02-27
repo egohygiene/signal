@@ -4,5 +4,5 @@ See documentation on https://megalinter.io/8.8.0/descriptors/repository_truffleh
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-2026-02-27T15:55:50Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"branch\""}
+2026-02-27T16:08:15Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"branch\""}
 

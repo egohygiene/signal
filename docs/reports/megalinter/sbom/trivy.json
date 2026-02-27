@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:ca5ef4cf-5492-4175-80d5-187c1cd01653",
+    "serialNumber": "urn:uuid:0d76f14d-6b01-42eb-9127-110dee10f857",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-02-27T15:55:47+00:00",
+        "timestamp": "2026-02-27T16:08:13+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "d8d2c787-6a1c-42da-90ec-cdabef8882e3",
+            "bom-ref": "1f98815b-2cd3-41c5-bbba-2325d93b98b1",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,7 +30,25 @@
     },
     "components": [
         {
-            "bom-ref": "0e8132df-efc5-4053-8bc0-850c55bf1000",
+            "bom-ref": "4eb52598-16b5-42e8-9833-0601b44e2ee9",
+            "type": "library",
+            "group": "@secretlint",
+            "name": "secretlint-rule-preset-recommend",
+            "version": "11.3.1",
+            "purl": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgID",
+                    "value": "@secretlint/secretlint-rule-preset-recommend@11.3.1"
+                },
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pnpm"
+                }
+            ]
+        },
+        {
+            "bom-ref": "59a538ae-8fd1-4827-a2ec-d58558387c74",
             "type": "application",
             "name": "server/requirements.txt",
             "properties": [
@@ -45,9 +63,9 @@
             ]
         },
         {
-            "bom-ref": "4e9e871c-f002-4374-abf6-f4ccc8411723",
+            "bom-ref": "73bf3e19-0d3f-4d20-90b2-d8b7d5740be5",
             "type": "application",
-            "name": "ui/package-lock.json",
+            "name": "package-lock.json",
             "properties": [
                 {
                     "name": "aquasecurity:trivy:Class",
@@ -60,7 +78,7 @@
             ]
         },
         {
-            "bom-ref": "5fbd433e-3e03-45cc-bb79-20ec6204e5af",
+            "bom-ref": "88206442-83d5-46d3-b1e8-5789699228fd",
             "type": "application",
             "name": "pnpm-lock.yaml",
             "properties": [
@@ -75,7 +93,7 @@
             ]
         },
         {
-            "bom-ref": "a6d2b119-0ea5-453c-8b83-4177f8ce3557",
+            "bom-ref": "accce305-6db0-4df2-bd9a-a2235ea752d9",
             "type": "library",
             "group": "@secretlint",
             "name": "secretlint-rule-preset-recommend",
@@ -93,27 +111,9 @@
             ]
         },
         {
-            "bom-ref": "b72d9422-31bb-4ae9-95c6-d67a41dfd18f",
-            "type": "library",
-            "group": "@secretlint",
-            "name": "secretlint-rule-preset-recommend",
-            "version": "11.3.1",
-            "purl": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@secretlint/secretlint-rule-preset-recommend@11.3.1"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "d5041e1f-dafe-4420-8e3b-236b29b38188",
+            "bom-ref": "bdcdcb81-37bb-4d98-8990-1d3af5b3cccb",
             "type": "application",
-            "name": "package-lock.json",
+            "name": "ui/package-lock.json",
             "properties": [
                 {
                     "name": "aquasecurity:trivy:Class",
@@ -742,7 +742,20 @@
     ],
     "dependencies": [
         {
-            "ref": "0e8132df-efc5-4053-8bc0-850c55bf1000",
+            "ref": "1f98815b-2cd3-41c5-bbba-2325d93b98b1",
+            "dependsOn": [
+                "59a538ae-8fd1-4827-a2ec-d58558387c74",
+                "73bf3e19-0d3f-4d20-90b2-d8b7d5740be5",
+                "88206442-83d5-46d3-b1e8-5789699228fd",
+                "bdcdcb81-37bb-4d98-8990-1d3af5b3cccb"
+            ]
+        },
+        {
+            "ref": "4eb52598-16b5-42e8-9833-0601b44e2ee9",
+            "dependsOn": []
+        },
+        {
+            "ref": "59a538ae-8fd1-4827-a2ec-d58558387c74",
             "dependsOn": [
                 "pkg:pypi/fastapi@0.115.6",
                 "pkg:pypi/plaid-python@25.0.0",
@@ -752,7 +765,23 @@
             ]
         },
         {
-            "ref": "4e9e871c-f002-4374-abf6-f4ccc8411723",
+            "ref": "73bf3e19-0d3f-4d20-90b2-d8b7d5740be5",
+            "dependsOn": [
+                "accce305-6db0-4df2-bd9a-a2235ea752d9"
+            ]
+        },
+        {
+            "ref": "88206442-83d5-46d3-b1e8-5789699228fd",
+            "dependsOn": [
+                "4eb52598-16b5-42e8-9833-0601b44e2ee9"
+            ]
+        },
+        {
+            "ref": "accce305-6db0-4df2-bd9a-a2235ea752d9",
+            "dependsOn": []
+        },
+        {
+            "ref": "bdcdcb81-37bb-4d98-8990-1d3af5b3cccb",
             "dependsOn": [
                 "pkg:npm/%40tanstack/react-query@5.90.21",
                 "pkg:npm/%40types/react@19.2.14",
@@ -764,35 +793,6 @@
                 "pkg:npm/react@19.2.4",
                 "pkg:npm/typescript@5.9.3",
                 "pkg:npm/zustand@5.0.11"
-            ]
-        },
-        {
-            "ref": "5fbd433e-3e03-45cc-bb79-20ec6204e5af",
-            "dependsOn": [
-                "b72d9422-31bb-4ae9-95c6-d67a41dfd18f"
-            ]
-        },
-        {
-            "ref": "a6d2b119-0ea5-453c-8b83-4177f8ce3557",
-            "dependsOn": []
-        },
-        {
-            "ref": "b72d9422-31bb-4ae9-95c6-d67a41dfd18f",
-            "dependsOn": []
-        },
-        {
-            "ref": "d5041e1f-dafe-4420-8e3b-236b29b38188",
-            "dependsOn": [
-                "a6d2b119-0ea5-453c-8b83-4177f8ce3557"
-            ]
-        },
-        {
-            "ref": "d8d2c787-6a1c-42da-90ec-cdabef8882e3",
-            "dependsOn": [
-                "0e8132df-efc5-4053-8bc0-850c55bf1000",
-                "4e9e871c-f002-4374-abf6-f4ccc8411723",
-                "5fbd433e-3e03-45cc-bb79-20ec6204e5af",
-                "d5041e1f-dafe-4420-8e3b-236b29b38188"
             ]
         },
         {

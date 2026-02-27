@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-02-27T15:53:58.524Z",
+    "detectionDate": "2026-02-27T16:06:22.888Z",
     "formats": {
       "typescript": {
         "sources": {
@@ -857,8 +857,8 @@
       "tsx": {
         "sources": {
           "/github/workspace/ui/src/features/transactions/TransactionsList.tsx": {
-            "lines": 26,
-            "tokens": 349,
+            "lines": 30,
+            "tokens": 385,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -869,8 +869,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/features/transactions/TransactionsList.test.tsx": {
-            "lines": 102,
-            "tokens": 1133,
+            "lines": 103,
+            "tokens": 1149,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1025,8 +1025,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/pages/TransactionsPage.tsx": {
-            "lines": 13,
-            "tokens": 114,
+            "lines": 17,
+            "tokens": 209,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1122,8 +1122,8 @@
           }
         },
         "total": {
-          "lines": 704,
-          "tokens": 7341,
+          "lines": 713,
+          "tokens": 7488,
           "sources": 22,
           "clones": 0,
           "duplicatedLines": 0,
@@ -1952,8 +1952,8 @@
       }
     },
     "total": {
-      "lines": 7424,
-      "tokens": 48511,
+      "lines": 7433,
+      "tokens": 48658,
       "sources": 145,
       "clones": 2,
       "duplicatedLines": 18,

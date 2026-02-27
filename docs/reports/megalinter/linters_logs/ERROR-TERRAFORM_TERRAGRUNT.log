@@ -3,6 +3,6 @@ See documentation on https://megalinter.io/8.8.0/descriptors/terraform_terragrun
 -----------------------------------------------
 
 ❌ [ERROR] config/terragrunt.hcl
-    15:56:58.698 WARN   The `hclfmt` command is deprecated and will be removed in a future version of Terragrunt. Use `terragrunt hcl format` instead.
-    15:56:58.699 ERROR  flag `--terragrunt-config` is not a valid flag for `format`. Did you mean to use `console --config`?
+    16:09:24.181 WARN   The `hclfmt` command is deprecated and will be removed in a future version of Terragrunt. Use `terragrunt hcl format` instead.
+    16:09:24.183 ERROR  flag `--terragrunt-config` is not a valid flag for `format`. Did you mean to use `console --config`?
 
