@@ -1,18 +1,9 @@
-export type Transaction = {
-  id: string;
-};
+import type { Budget } from '../schema/v1/budget';
+import type { Category } from '../schema/v1/category';
+import type { Pool } from '../schema/v1/pool';
+import type { Transaction } from '../schema/v1/transaction';
 
-export type Category = {
-  id: string;
-};
-
-export type Budget = {
-  id: string;
-};
-
-export type Pool = {
-  id: string;
-};
+export type { Budget, Category, Pool, Transaction };
 
 export type TransactionsState = {
   items: Transaction[];

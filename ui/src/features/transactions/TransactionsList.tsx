@@ -1,22 +1,8 @@
-import { useDataProvider } from '@egohygiene/signal/providers/useDataProvider';
-import { useQuery } from '@tanstack/react-query';
+import { useAppStore } from '@egohygiene/signal/store';
 import { type JSX } from 'react';
 
 export function TransactionsList(): JSX.Element {
-  const dataProvider = useDataProvider();
-
-  const { data: transactions = [], isLoading, isError } = useQuery({
-    queryKey: ['transactions'],
-    queryFn: () => dataProvider.getTransactions(),
-  });
-
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
-
-  if (isError) {
-    return <p>Failed to load transactions.</p>;
-  }
+  const transactions = useAppStore((s) => s.transactions.items);
 
   return (
     <ul>
