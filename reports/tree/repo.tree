@@ -649,6 +649,8 @@
 │   │   │       └── index.ts
 │   │   ├── features
 │   │   │   ├── budgets
+│   │   │   │   ├── BudgetIndicator.test.tsx
+│   │   │   │   ├── BudgetIndicator.tsx
 │   │   │   │   ├── BudgetsList.test.tsx
 │   │   │   │   ├── BudgetsList.tsx
 │   │   │   │   ├── budgetCalculations.test.ts

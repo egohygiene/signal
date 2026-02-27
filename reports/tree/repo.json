@@ -705,6 +705,8 @@
         ]},
         {"type":"directory","name":"features","contents":[
           {"type":"directory","name":"budgets","contents":[
+            {"type":"file","name":"BudgetIndicator.test.tsx"},
+            {"type":"file","name":"BudgetIndicator.tsx"},
             {"type":"file","name":"BudgetsList.test.tsx"},
             {"type":"file","name":"BudgetsList.tsx"},
             {"type":"file","name":"budgetCalculations.test.ts"},

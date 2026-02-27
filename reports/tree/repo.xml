@@ -706,6 +706,8 @@
         </directory>
         <directory name="features">
           <directory name="budgets">
+            <file name="BudgetIndicator.test.tsx"></file>
+            <file name="BudgetIndicator.tsx"></file>
             <file name="BudgetsList.test.tsx"></file>
             <file name="BudgetsList.tsx"></file>
             <file name="budgetCalculations.test.ts"></file>
