@@ -133,6 +133,9 @@ config/.groovylintrc.json#/rules must NOT have additional properties, found addi
 ℹ Validating package.json against schema from https://www.schemastore.org/package.json ...
 ✔ package.json is valid
 
+ℹ Processing ui/package-lock.json
+✖ Could not find a schema to validate ui/package-lock.json
+
 ℹ Processing ui/package.json
 ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
 ℹ Validating ui/package.json against schema from https://www.schemastore.org/package.json ...

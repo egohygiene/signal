@@ -20,10 +20,10 @@ Linter raw log:
                      voice. Use active voice if you                     
                      can.                                               
  90:67   suggestion  Try to avoid using 'is'.        write-good.E-Prime 
+ 103:61  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  103:61  warning     'are forwarded' may be passive  write-good.Passive 
                      voice. Use active voice if you                     
                      can.                                               
- 103:61  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  109:23  suggestion  Try to avoid using 'is'.        write-good.E-Prime 
  109:23  warning     'is configured' may be passive  write-good.Passive 
                      voice. Use active voice if you                     
@@ -83,10 +83,10 @@ Linter raw log:
  docs/plaid-setup.md
  13:62   suggestion  Try to avoid using 'I'm'.       write-good.E-Prime 
  31:31   suggestion  Try to avoid using 'is'.        write-good.E-Prime 
- 32:67   suggestion  Try to avoid using 'is'.        write-good.E-Prime 
  32:67   warning     'is limited' may be passive     write-good.Passive 
                      voice. Use active voice if you                     
                      can.                                               
+ 32:67   suggestion  Try to avoid using 'is'.        write-good.E-Prime 
  32:113  suggestion  Try to avoid using 'is'.        write-good.E-Prime 
  49:39   suggestion  Try to avoid using 'is'.        write-good.E-Prime 
  73:83   suggestion  Try to avoid using 'are'.       write-good.E-Prime 
@@ -117,10 +117,10 @@ Linter raw log:
  221:6    warning     'Obtain' is too wordy.          write-good.TooWordy 
  244:15   warning     'additional' is too wordy.      write-good.TooWordy 
  260:34   suggestion  Try to avoid using 'is'.        write-good.E-Prime  
+ 260:131  suggestion  Try to avoid using 'been'.      write-good.E-Prime  
  260:131  warning     'been met' may be passive       write-good.Passive  
                       voice. Use active voice if you                      
                       can.                                                
- 260:131  suggestion  Try to avoid using 'been'.      write-good.E-Prime  
  273:175  suggestion  Try to avoid using 'is'.        write-good.E-Prime  
 
 
