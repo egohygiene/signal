@@ -654,7 +654,6 @@
 │   │   │       ├── Placeholder.stories.tsx
 │   │   │       ├── Placeholder.test.tsx
 │   │   │       ├── Placeholder.tsx
-│   │   │       ├── Placeholder.types.ts
 │   │   │       └── index.ts
 │   │   ├── features
 │   │   │   ├── allocations
