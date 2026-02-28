@@ -1,2 +1,1 @@
-export { Placeholder } from './Placeholder';
-export type { PlaceholderProps } from './Placeholder.types';
+export { Placeholder, type PlaceholderProps } from './Placeholder';
