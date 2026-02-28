@@ -711,6 +711,8 @@
             <file name="Placeholder.tsx"></file>
             <file name="index.ts"></file>
           </directory>
+          <file name="ErrorBoundary.test.tsx"></file>
+          <file name="ErrorBoundary.tsx"></file>
         </directory>
         <directory name="features">
           <directory name="allocations">

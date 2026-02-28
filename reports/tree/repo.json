@@ -709,7 +709,9 @@
             {"type":"file","name":"Placeholder.test.tsx"},
             {"type":"file","name":"Placeholder.tsx"},
             {"type":"file","name":"index.ts"}
-          ]}
+          ]},
+          {"type":"file","name":"ErrorBoundary.test.tsx"},
+          {"type":"file","name":"ErrorBoundary.tsx"}
         ]},
         {"type":"directory","name":"features","contents":[
           {"type":"directory","name":"allocations","contents":[

@@ -648,11 +648,13 @@
 │   │   │   │   └── Layout.tsx
 │   │   │   └── App.tsx
 │   │   ├── components
-│   │   │   └── Placeholder
-│   │   │       ├── Placeholder.stories.tsx
-│   │   │       ├── Placeholder.test.tsx
-│   │   │       ├── Placeholder.tsx
-│   │   │       └── index.ts
+│   │   │   ├── Placeholder
+│   │   │   │   ├── Placeholder.stories.tsx
+│   │   │   │   ├── Placeholder.test.tsx
+│   │   │   │   ├── Placeholder.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── ErrorBoundary.test.tsx
+│   │   │   └── ErrorBoundary.tsx
 │   │   ├── features
 │   │   │   ├── allocations
 │   │   │   │   ├── allocationStrategy.test.ts
