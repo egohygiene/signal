@@ -12,7 +12,8 @@
 │       ├── generate_repository_tree.yml
 │       ├── megalinter.yml
 │       ├── nsfw-detection.yml
-│       └── pages.yml
+│       ├── pages.yml
+│       └── toc.yml
 ├── .history
 │   ├── .github
 │   │   └── workflows

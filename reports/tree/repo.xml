@@ -19,6 +19,7 @@
         <file name="megalinter.yml"></file>
         <file name="nsfw-detection.yml"></file>
         <file name="pages.yml"></file>
+        <file name="toc.yml"></file>
       </directory>
     </directory>
     <directory name=".history">

@@ -17,7 +17,8 @@
         {"type":"file","name":"generate_repository_tree.yml"},
         {"type":"file","name":"megalinter.yml"},
         {"type":"file","name":"nsfw-detection.yml"},
-        {"type":"file","name":"pages.yml"}
+        {"type":"file","name":"pages.yml"},
+        {"type":"file","name":"toc.yml"}
       ]}
     ]},
     {"type":"directory","name":".history","contents":[
