@@ -5,9 +5,9 @@ import { useTransactionsQuery } from '@egohygiene/signal/query/useTransactionsQu
 import { useAppStore } from '@egohygiene/signal/store';
 import { type JSX, type ReactNode, useEffect } from 'react';
 
-interface DataSyncProviderProps {
+type DataSyncProviderProps = {
   children: ReactNode;
-}
+};
 
 export function DataSyncProvider({ children }: DataSyncProviderProps): JSX.Element {
   const setTransactions = useAppStore((s) => s.setTransactions);
