@@ -304,6 +304,9 @@
       {"type":"file","name":"settings.json"},
       {"type":"file","name":"tasks.json"}
     ]},
+    {"type":"directory","name":"audits","contents":[
+      {"type":"file","name":"audit-2026-02-28T184945.log"}
+    ]},
     {"type":"directory","name":"config","contents":[
       {"type":"directory","name":".clj-kondo","contents":[
         {"type":"file","name":"config.edn"}

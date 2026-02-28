@@ -305,6 +305,9 @@
       <file name="settings.json"></file>
       <file name="tasks.json"></file>
     </directory>
+    <directory name="audits">
+      <file name="audit-2026-02-28T184945.log"></file>
+    </directory>
     <directory name="config">
       <directory name=".clj-kondo">
         <file name="config.edn"></file>

@@ -282,6 +282,8 @@
 │   ├── launch.json
 │   ├── settings.json
 │   └── tasks.json
+├── audits
+│   └── audit-2026-02-28T184945.log
 ├── config
 │   ├── .clj-kondo
 │   │   └── config.edn
