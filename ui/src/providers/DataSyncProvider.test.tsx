@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render, waitFor } from '@testing-library/react';
 import { beforeEach, describe, expect, it } from 'vitest';
 
-import { DataSyncProvider } from './DataSyncProvider';
+import { DataSyncProvider, useDataSyncState } from './DataSyncProvider';
 
 const mockTransactions = [
   {
@@ -55,6 +55,26 @@ function renderWithProviders(provider: DataProvider) {
       </DataProviderProvider>
     </QueryClientProvider>,
   );
+}
+
+/** Helper that renders a consumer of useDataSyncState and captures its value. */
+function renderWithStateCapture(provider: DataProvider) {
+  let capturedState = { isLoading: false, errors: [] as Error[] };
+  function Consumer() {
+    capturedState = useDataSyncState();
+    return null;
+  }
+  const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  render(
+    <QueryClientProvider client={client}>
+      <DataProviderProvider provider={provider}>
+        <DataSyncProvider>
+          <Consumer />
+        </DataSyncProvider>
+      </DataProviderProvider>
+    </QueryClientProvider>,
+  );
+  return { getState: () => capturedState };
 }
 
 describe('DataSyncProvider', () => {
@@ -123,5 +143,34 @@ describe('DataSyncProvider', () => {
     };
     renderWithProviders(slowProvider);
     expect(useAppStore.getState().transactions.items).toHaveLength(0);
+  });
+
+  it('exposes isLoading true while queries are pending', () => {
+    const slowProvider: DataProvider = {
+      ...mockProvider,
+      getTransactions: () => new Promise(() => {}),
+    };
+    const { getState } = renderWithStateCapture(slowProvider);
+    expect(getState().isLoading).toBe(true);
+  });
+
+  it('exposes query errors via context when a query fails', async () => {
+    const errorProvider: DataProvider = {
+      ...mockProvider,
+      getTransactions: () => Promise.reject(new Error('fetch failed')),
+    };
+    const { getState } = renderWithStateCapture(errorProvider);
+    await waitFor(() => {
+      expect(getState().errors).toHaveLength(1);
+    });
+    expect(getState().errors[0]?.message).toBe('fetch failed');
+  });
+
+  it('exposes an empty errors array when all queries succeed', async () => {
+    const { getState } = renderWithStateCapture(mockProvider);
+    await waitFor(() => {
+      expect(getState().isLoading).toBe(false);
+    });
+    expect(getState().errors).toHaveLength(0);
   });
 });
