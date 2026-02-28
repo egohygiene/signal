@@ -9,7 +9,6 @@ signal/
 ├── core/         # Core business logic and shared utilities
 ├── server/       # FastAPI backend
 ├── ui/           # React + Vite + TypeScript frontend
-├── schema/       # Data schemas and type definitions
 ├── docs/         # Project documentation
 ├── config/       # Configuration files
 └── scripts/      # Utility scripts
@@ -20,7 +19,7 @@ signal/
 - **core/**: Contains shared business logic, utilities, and domain models that can be used across the application
 - **server/**: FastAPI backend providing REST API endpoints
 - **ui/**: React frontend built with Vite and TypeScript for the user interface
-- **schema/**: Centralized location for data schemas, API contracts, and type definitions
+  - Schema types are versioned under `ui/src/schema/v1/`
 - **docs/**: Project documentation and guides
 - **config/**: Configuration files for various tools and environments
 - **scripts/**: Utility scripts for development, deployment, and maintenance
@@ -211,8 +210,7 @@ This project maintains clean separation between modules:
 
 - **core**: Pure business logic, no dependencies on server or ui
 - **server**: API layer, depends on core for business logic
-- **ui**: Presentation layer, communicates with server via REST API
-- **schema**: Type definitions shared across modules
+- **ui**: Presentation layer, communicates with server via REST API; schema types versioned under `ui/src/schema/v1/`
 
 ## License
 
