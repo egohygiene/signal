@@ -669,9 +669,6 @@
         {"type":"file","name":"repo.xml"}
       ]}
     ]},
-    {"type":"directory","name":"schema","contents":[
-      {"type":"file","name":"README.md"}
-    ]},
     {"type":"directory","name":"scripts","contents":[
       {"type":"file","name":"megalinter.sh"}
     ]},

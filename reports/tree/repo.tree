@@ -620,8 +620,6 @@
 │       ├── repo.json
 │       ├── repo.tree
 │       └── repo.xml
-├── schema
-│   └── README.md
 ├── scripts
 │   └── megalinter.sh
 ├── server

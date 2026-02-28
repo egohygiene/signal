@@ -670,9 +670,6 @@
         <file name="repo.xml"></file>
       </directory>
     </directory>
-    <directory name="schema">
-      <file name="README.md"></file>
-    </directory>
     <directory name="scripts">
       <file name="megalinter.sh"></file>
     </directory>
