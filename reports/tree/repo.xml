@@ -810,8 +810,8 @@
       <file name="README.md"></file>
       <file name="eslint.config.js"></file>
       <file name="index.html"></file>
-      <file name="package-lock.json"></file>
       <file name="package.json"></file>
+      <file name="pnpm-lock.yaml"></file>
       <file name="tsconfig.app.json"></file>
       <file name="tsconfig.json"></file>
       <file name="tsconfig.node.json"></file>
@@ -830,7 +830,6 @@
     <file name="README.md"></file>
     <file name="Taskfile.yml"></file>
     <file name="info.log"></file>
-    <file name="package-lock.json"></file>
     <file name="package.json"></file>
     <file name="pnpm-lock.yaml"></file>
     <file name="signal.code-workspace"></file>

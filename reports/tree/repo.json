@@ -809,8 +809,8 @@
       {"type":"file","name":"README.md"},
       {"type":"file","name":"eslint.config.js"},
       {"type":"file","name":"index.html"},
-      {"type":"file","name":"package-lock.json"},
       {"type":"file","name":"package.json"},
+      {"type":"file","name":"pnpm-lock.yaml"},
       {"type":"file","name":"tsconfig.app.json"},
       {"type":"file","name":"tsconfig.json"},
       {"type":"file","name":"tsconfig.node.json"},
@@ -829,7 +829,6 @@
     {"type":"file","name":"README.md"},
     {"type":"file","name":"Taskfile.yml"},
     {"type":"file","name":"info.log"},
-    {"type":"file","name":"package-lock.json"},
     {"type":"file","name":"package.json"},
     {"type":"file","name":"pnpm-lock.yaml"},
     {"type":"file","name":"signal.code-workspace"}

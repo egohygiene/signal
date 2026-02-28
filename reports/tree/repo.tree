@@ -735,8 +735,8 @@
 │   ├── README.md
 │   ├── eslint.config.js
 │   ├── index.html
-│   ├── package-lock.json
 │   ├── package.json
+│   ├── pnpm-lock.yaml
 │   ├── tsconfig.app.json
 │   ├── tsconfig.json
 │   ├── tsconfig.node.json
@@ -754,7 +754,6 @@
 ├── README.md
 ├── Taskfile.yml
 ├── info.log
-├── package-lock.json
 ├── package.json
 ├── pnpm-lock.yaml
 └── signal.code-workspace
