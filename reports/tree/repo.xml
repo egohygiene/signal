@@ -521,6 +521,8 @@
           </directory>
           <directory name="linters_logs">
             <file name="ERROR-ACTION_ACTIONLINT.log"></file>
+            <file name="ERROR-BASH_EXEC.log"></file>
+            <file name="ERROR-BASH_SHELLCHECK.log"></file>
             <file name="ERROR-BASH_SHFMT.log"></file>
             <file name="ERROR-CLOJURE_CLJ_KONDO.log"></file>
             <file name="ERROR-CLOUDFORMATION_CFN_LINT.log"></file>
@@ -777,6 +779,8 @@
           <file name="QueryProvider.test.tsx"></file>
           <file name="QueryProvider.tsx"></file>
           <file name="queryClient.ts"></file>
+          <file name="queryKeys.test.ts"></file>
+          <file name="queryKeys.ts"></file>
           <file name="useBudgetsQuery.ts"></file>
           <file name="useCategoriesQuery.ts"></file>
           <file name="usePoolsQuery.ts"></file>
@@ -813,6 +817,7 @@
       <file name="README.md"></file>
       <file name="eslint.config.js"></file>
       <file name="index.html"></file>
+      <file name="package-lock.json"></file>
       <file name="package.json"></file>
       <file name="pnpm-lock.yaml"></file>
       <file name="tsconfig.app.json"></file>
