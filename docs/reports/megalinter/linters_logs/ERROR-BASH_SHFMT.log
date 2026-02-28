@@ -4,6 +4,29 @@ See documentation on https://megalinter.io/8.8.0/descriptors/bash_shfmt/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
+diff .devcontainer/scripts/post-create.sh.orig .devcontainer/scripts/post-create.sh
+--- .devcontainer/scripts/post-create.sh.orig
++++ .devcontainer/scripts/post-create.sh
+@@ -8,8 +8,8 @@
+ 
+ echo "==> Installing act (GitHub Actions local runner)..."
+ curl --proto '=https' --tlsv1.2 -sSf \
+-  https://raw.githubusercontent.com/nektos/act/master/install.sh \
+-  | sudo bash -s -- -b /usr/local/bin
++  https://raw.githubusercontent.com/nektos/act/master/install.sh |
++  sudo bash -s -- -b /usr/local/bin
+ 
+ echo "==> Installing task (Taskfile runner)..."
+ sh -c "$(curl --proto '=https' --tlsv1.2 -sSf https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
+@@ -18,7 +18,7 @@
+ curl -LsSf https://astral.sh/uv/install.sh | sh
+ # Make uv available in PATH for this session and future shells
+ export PATH="$HOME/.local/bin:$PATH"
+-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
++echo 'export PATH="$HOME/.local/bin:$PATH"' >>~/.bashrc
+ 
+ echo "==> Installing Node dependencies with pnpm..."
+ pnpm install
 diff scripts/megalinter.sh.orig scripts/megalinter.sh
 --- scripts/megalinter.sh.orig
 +++ scripts/megalinter.sh

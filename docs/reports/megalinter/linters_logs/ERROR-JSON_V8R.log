@@ -5,6 +5,11 @@ See documentation on https://megalinter.io/8.8.0/descriptors/json_v8r/
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 ℹ No config file found
+ℹ Processing .devcontainer/devcontainer.json
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating .devcontainer/devcontainer.json against schema from https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json ...
+✖ ENOENT: no such file or directory, open 'devContainer.base.schema.json'
+
 ℹ Processing .vscode/extensions.json
 ✖ Could not find a schema to validate .vscode/extensions.json
 
@@ -123,16 +128,10 @@ config/.groovylintrc.json#/rules must NOT have additional properties, found addi
 ℹ Processing config/styles/write-good/meta.json
 ✖ Could not find a schema to validate config/styles/write-good/meta.json
 
-ℹ Processing package-lock.json
-✖ Could not find a schema to validate package-lock.json
-
 ℹ Processing package.json
 ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
 ℹ Validating package.json against schema from https://www.schemastore.org/package.json ...
 ✔ package.json is valid
-
-ℹ Processing ui/package-lock.json
-✖ Could not find a schema to validate ui/package-lock.json
 
 ℹ Processing ui/package.json
 ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...

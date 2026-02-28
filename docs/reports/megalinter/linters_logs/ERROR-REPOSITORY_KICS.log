@@ -32,13 +32,20 @@ Scanning with Keeping Infrastructure as Code Secure v2.1.10
 
 
 
-Unpinned Actions Full Length Commit SHA, Severity: LOW, Results: 1
+Unpinned Actions Full Length Commit SHA, Severity: LOW, Results: 2
 Description: Pinning an action to a full length commit SHA is currently the only way to use an action as an immutable release. Pinning to a particular SHA helps mitigate the risk of a bad actor adding a backdoor to the action's repository, as they would need to generate a SHA-1 collision for a valid Git object payload. When selecting a SHA, you should verify it is from the action's repository and not a repository fork.
 Platform: CICD
 CWE: 829
 Learn more about this vulnerability: https://docs.kics.io/latest/queries/cicd-queries/555ab8f9-2001-455e-a077-f2d0f41e2fb9
 
-	[1]: .github/workflows/megalinter.yml:39
+	[1]: .github/workflows/toc.yml:18
+
+		017:       - name: Generate TOC
+		018:         uses: technote-space/toc-generator@v4
+		019:         with:
+
+
+	[2]: .github/workflows/megalinter.yml:39
 
 		038:         id: ml
 		039:         uses: oxsecurity/megalinter@v8.8.0
@@ -50,9 +57,9 @@ Results Summary:
 CRITICAL: 0
 HIGH: 0
 MEDIUM: 0
-LOW: 1
+LOW: 2
 INFO: 0
-TOTAL: 1
+TOTAL: 2
 
 A new version 'v2.1.19' of KICS is available, please consider updating
 

@@ -1,0 +1,14 @@
+Results of shellcheck linter (version 0.10.0)
+See documentation on https://megalinter.io/8.8.0/descriptors/bash_shellcheck/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+
+In .devcontainer/scripts/post-create.sh line 21:
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+     ^-- SC2016 (info): Expressions don't expand in single quotes, use double quotes for that.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2016 -- Expressions don't expand in singl...
+

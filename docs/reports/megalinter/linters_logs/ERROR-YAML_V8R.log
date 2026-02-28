@@ -25,6 +25,11 @@ Linter raw log:
 ℹ Validating .github/workflows/pages.yml against schema from https://www.schemastore.org/github-workflow.json ...
 ✔ .github/workflows/pages.yml is valid
 
+ℹ Processing .github/workflows/toc.yml
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating .github/workflows/toc.yml against schema from https://www.schemastore.org/github-workflow.json ...
+✔ .github/workflows/toc.yml is valid
+
 ℹ Processing .megalinter.yml
 ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
 ℹ Validating .megalinter.yml against schema from https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json ...
@@ -273,5 +278,8 @@ tasks/lint.yml# must NOT have additional properties, found additional property '
 
 tasks/misc.yml# must NOT have additional properties, found additional property 'version'
 tasks/misc.yml# must NOT have additional properties, found additional property 'tasks'
+
+ℹ Processing ui/pnpm-lock.yaml
+✖ Could not find a schema to validate ui/pnpm-lock.yaml
 
 

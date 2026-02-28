@@ -1,9 +1,9 @@
 {
 	"kics_version": "v2.1.10",
-	"files_scanned": 14,
-	"lines_scanned": 700,
-	"files_parsed": 6,
-	"lines_parsed": 271,
+	"files_scanned": 15,
+	"lines_scanned": 723,
+	"files_parsed": 7,
+	"lines_parsed": 294,
 	"lines_ignored": 2,
 	"files_failed_to_scan": 0,
 	"queries_total": 289,
@@ -14,18 +14,18 @@
 		"CRITICAL": 0,
 		"HIGH": 0,
 		"INFO": 0,
-		"LOW": 1,
+		"LOW": 2,
 		"MEDIUM": 0,
 		"TRACE": 0
 	},
-	"total_counter": 1,
+	"total_counter": 2,
 	"total_bom_resources": 0,
-	"start": "2026-02-27T19:17:54.940219175Z",
-	"end": "2026-02-27T19:18:07.464580158Z",
+	"start": "2026-02-28T20:23:47.679756112Z",
+	"end": "2026-02-28T20:24:00.604020881Z",
 	"paths": [
-		".",
 		"/usr/bin/assets/queries",
-		"/usr/bin/assets/libraries"
+		"/usr/bin/assets/libraries",
+		"."
 	],
 	"queries": [
 		{
@@ -41,6 +41,17 @@
 			"description": "Pinning an action to a full length commit SHA is currently the only way to use an action as an immutable release. Pinning to a particular SHA helps mitigate the risk of a bad actor adding a backdoor to the action's repository, as they would need to generate a SHA-1 collision for a valid Git object payload. When selecting a SHA, you should verify it is from the action's repository and not a repository fork.",
 			"description_id": "9cb8402d",
 			"files": [
+				{
+					"file_name": ".github/workflows/toc.yml",
+					"similarity_id": "0fbc2dac8b3c7031489c7784000dd7ccb8e398f83405d52bfb5162843eab3282",
+					"line": 18,
+					"issue_type": "IncorrectValue",
+					"search_key": "uses={{technote-space/toc-generator@v4}}",
+					"search_line": 18,
+					"search_value": "",
+					"expected_value": "Action pinned to a full length commit SHA.",
+					"actual_value": "Action is not pinned to a full length commit SHA."
+				},
 				{
 					"file_name": ".github/workflows/megalinter.yml",
 					"similarity_id": "a1842fdbecf9d48d1371f77e535eff59428e15c1336a13acf501808afbbdb480",

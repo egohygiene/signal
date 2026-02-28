@@ -17,6 +17,10 @@ Linter raw log:
 .github/workflows/pages.yml
   4:1       warning  truthy value should be one of [false, true]  (truthy)
 
+.github/workflows/toc.yml
+  1:1       warning  missing document start "---"  (document-start)
+  3:1       warning  truthy value should be one of [false, true]  (truthy)
+
 Taskfile.yml
   1:1       warning  missing document start "---"  (document-start)
 
@@ -366,6 +370,9 @@ tasks/lint.yml
   1:1       warning  missing document start "---"  (document-start)
 
 tasks/misc.yml
+  1:1       warning  missing document start "---"  (document-start)
+
+ui/pnpm-lock.yaml
   1:1       warning  missing document start "---"  (document-start)
 
 

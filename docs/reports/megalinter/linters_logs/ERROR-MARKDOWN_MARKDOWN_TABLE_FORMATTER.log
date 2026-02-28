@@ -4,7 +4,8 @@ See documentation on https://megalinter.io/8.8.0/descriptors/markdown_markdown_t
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-2 files contain markdown tables to format:
+3 files contain markdown tables to format:
+- README.md
 - docs/plaid-setup.md
 - server/IMPLEMENTATION_SUMMARY.md
 

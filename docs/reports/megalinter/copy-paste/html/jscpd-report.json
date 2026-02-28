@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-02-27T19:16:35.569Z",
+    "detectionDate": "2026-02-28T20:22:26.846Z",
     "formats": {
       "typescript": {
         "sources": {
@@ -100,15 +100,63 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
-          "/github/workspace/ui/src/features/budgets/useBudgetSummary.ts": {
-            "lines": 24,
-            "tokens": 266,
+          "/github/workspace/ui/src/features/pools/usePoolSummary.ts": {
+            "lines": 43,
+            "tokens": 524,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 8,
+            "duplicatedTokens": 101,
+            "percentage": 18.6,
+            "percentageTokens": 19.27,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/pools/poolCalculations.ts": {
+            "lines": 62,
+            "tokens": 631,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 18,
+            "duplicatedTokens": 236,
+            "percentage": 29.03,
+            "percentageTokens": 37.4,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/pools/poolCalculations.test.ts": {
+            "lines": 151,
+            "tokens": 1995,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 16,
+            "duplicatedTokens": 109,
+            "percentage": 10.6,
+            "percentageTokens": 5.46,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/pools/index.ts": {
+            "lines": 3,
+            "tokens": 60,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
             "duplicatedTokens": 0,
             "percentage": 0,
             "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/budgets/useBudgetSummary.ts": {
+            "lines": 24,
+            "tokens": 266,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 8,
+            "duplicatedTokens": 101,
+            "percentage": 33.33,
+            "percentageTokens": 37.97,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -140,11 +188,35 @@
             "lines": 144,
             "tokens": 1765,
             "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 16,
+            "duplicatedTokens": 109,
+            "percentage": 11.11,
+            "percentageTokens": 6.18,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/allocations/allocationStrategy.ts": {
+            "lines": 56,
+            "tokens": 346,
+            "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
             "duplicatedTokens": 0,
             "percentage": 0,
             "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/features/allocations/allocationStrategy.test.ts": {
+            "lines": 103,
+            "tokens": 1274,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 12,
+            "duplicatedTokens": 140,
+            "percentage": 11.65,
+            "percentageTokens": 10.99,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -269,8 +341,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/providers/FakeDataProvider.ts": {
-            "lines": 106,
-            "tokens": 1241,
+            "lines": 132,
+            "tokens": 1381,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -402,14 +474,14 @@
           }
         },
         "total": {
-          "lines": 1245,
-          "tokens": 12849,
-          "sources": 33,
-          "clones": 1,
-          "duplicatedLines": 6,
-          "duplicatedTokens": 72,
-          "percentage": 0.48,
-          "percentageTokens": 0.56,
+          "lines": 1689,
+          "tokens": 17819,
+          "sources": 39,
+          "clones": 5,
+          "duplicatedLines": 45,
+          "duplicatedTokens": 470,
+          "percentage": 2.66,
+          "percentageTokens": 2.64,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -465,8 +537,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/package.json": {
-            "lines": 56,
-            "tokens": 371,
+            "lines": 57,
+            "tokens": 378,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -704,9 +776,21 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
+          "/github/workspace/.devcontainer/devcontainer.json": {
+            "lines": 41,
+            "tokens": 211,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "/github/workspace/package.json": {
-            "lines": 165,
-            "tokens": 1129,
+            "lines": 166,
+            "tokens": 1136,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -718,9 +802,9 @@
           }
         },
         "total": {
-          "lines": 1039,
-          "tokens": 6034,
-          "sources": 25,
+          "lines": 1082,
+          "tokens": 6259,
+          "sources": 26,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -1086,7 +1170,7 @@
           },
           "/github/workspace/ui/src/query/QueryProvider.tsx": {
             "lines": 17,
-            "tokens": 154,
+            "tokens": 157,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1110,7 +1194,7 @@
           },
           "/github/workspace/ui/src/providers/DataSyncProvider.tsx": {
             "lines": 39,
-            "tokens": 479,
+            "tokens": 482,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1134,7 +1218,7 @@
           },
           "/github/workspace/ui/src/providers/DataProviderContext.tsx": {
             "lines": 12,
-            "tokens": 119,
+            "tokens": 122,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1255,7 +1339,7 @@
         },
         "total": {
           "lines": 947,
-          "tokens": 10044,
+          "tokens": 10053,
           "sources": 26,
           "clones": 0,
           "duplicatedLines": 0,
@@ -1324,6 +1408,18 @@
       },
       "yaml": {
         "sources": {
+          "/github/workspace/.github/workflows/toc.yml": {
+            "lines": 21,
+            "tokens": 123,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "/github/workspace/.github/workflows/pages.yml": {
             "lines": 49,
             "tokens": 239,
@@ -1674,9 +1770,49 @@
           }
         },
         "total": {
-          "lines": 1828,
-          "tokens": 7103,
-          "sources": 29,
+          "lines": 1849,
+          "tokens": 7226,
+          "sources": 30,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "bash": {
+        "sources": {
+          "/github/workspace/.devcontainer/scripts/post-create.sh": {
+            "lines": 31,
+            "tokens": 166,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/scripts/megalinter.sh": {
+            "lines": 180,
+            "tokens": 958,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 211,
+          "tokens": 1124,
+          "sources": 2,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -1897,8 +2033,8 @@
             "newClones": 0
           },
           "/github/workspace/README.md": {
-            "lines": 186,
-            "tokens": 1177,
+            "lines": 223,
+            "tokens": 1467,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1910,8 +2046,8 @@
           }
         },
         "total": {
-          "lines": 1256,
-          "tokens": 8073,
+          "lines": 1293,
+          "tokens": 8363,
           "sources": 10,
           "clones": 0,
           "duplicatedLines": 0,
@@ -1958,34 +2094,6 @@
           "duplicatedTokens": 82,
           "percentage": 2.11,
           "percentageTokens": 2.59,
-          "newDuplicatedLines": 0,
-          "newClones": 0
-        }
-      },
-      "bash": {
-        "sources": {
-          "/github/workspace/scripts/megalinter.sh": {
-            "lines": 180,
-            "tokens": 958,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          }
-        },
-        "total": {
-          "lines": 180,
-          "tokens": 958,
-          "sources": 1,
-          "clones": 0,
-          "duplicatedLines": 0,
-          "duplicatedTokens": 0,
-          "percentage": 0,
-          "percentageTokens": 0,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -2096,19 +2204,163 @@
       }
     },
     "total": {
-      "lines": 8011,
-      "tokens": 54995,
-      "sources": 157,
-      "clones": 2,
-      "duplicatedLines": 18,
-      "duplicatedTokens": 154,
-      "percentage": 0.22,
-      "percentageTokens": 0.28,
+      "lines": 8587,
+      "tokens": 60778,
+      "sources": 166,
+      "clones": 6,
+      "duplicatedLines": 57,
+      "duplicatedTokens": 552,
+      "percentage": 0.66,
+      "percentageTokens": 0.91,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
   },
   "duplicates": [
+    {
+      "format": "typescript",
+      "lines": 10,
+      "fragment": "[] {\n  const categoryPoolMap = new Map<string, string>(\n    categories\n      .filter((c): c is Category & { poolId: string } => c.poolId !== null)\n      .map((c) => [c.id, c.poolId]),\n  );\n\n  const totals = new Map<string, number>();\n\n  for (const budget",
+      "tokens": 0,
+      "firstFile": {
+        "name": "/github/workspace/ui/src/features/pools/poolCalculations.ts",
+        "start": 47,
+        "end": 56,
+        "startLoc": {
+          "line": 47,
+          "column": 16,
+          "position": 399
+        },
+        "endLoc": {
+          "line": 56,
+          "column": 7,
+          "position": 517
+        }
+      },
+      "secondFile": {
+        "name": "/github/workspace/ui/src/features/pools/poolCalculations.ts",
+        "start": 22,
+        "end": 31,
+        "startLoc": {
+          "line": 22,
+          "column": 18,
+          "position": 133
+        },
+        "endLoc": {
+          "line": 31,
+          "column": 3,
+          "position": 251
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 9,
+      "fragment": ".items);\n  const budgets = useAppStore((s) => s.budgets.items);\n\n  const now = new Date();\n  const resolvedYear = year ?? now.getUTCFullYear();\n  const resolvedMonth = month ?? now.getUTCMonth() + 1;\n\n  return useMemo(() => {\n    const totals",
+      "tokens": 0,
+      "firstFile": {
+        "name": "/github/workspace/ui/src/features/budgets/useBudgetSummary.ts",
+        "start": 14,
+        "end": 22,
+        "startLoc": {
+          "line": 14,
+          "column": 13,
+          "position": 118
+        },
+        "endLoc": {
+          "line": 22,
+          "column": 7,
+          "position": 219
+        }
+      },
+      "secondFile": {
+        "name": "/github/workspace/ui/src/features/pools/usePoolSummary.ts",
+        "start": 19,
+        "end": 27,
+        "startLoc": {
+          "line": 19,
+          "column": 11,
+          "position": 162
+        },
+        "endLoc": {
+          "line": 27,
+          "column": 15,
+          "position": 263
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 17,
+      "fragment": ",\n  ...overrides,\n});\n\nconst makeBudget = (overrides: Partial<Budget> = {}): Budget => ({\n  id: 'bud-1',\n  name: 'Food Budget',\n  categoryId: 'cat-1',\n  amount: 200,\n  currency: 'USD',\n  period: 'monthly',\n  startDate: '2024-01-01',\n  endDate: null,\n  ...overrides,\n});\n\ndescribe('isInMonth'",
+      "tokens": 0,
+      "firstFile": {
+        "name": "/github/workspace/ui/src/features/budgets/budgetCalculations.test.ts",
+        "start": 19,
+        "end": 35,
+        "startLoc": {
+          "line": 19,
+          "column": 7,
+          "position": 157
+        },
+        "endLoc": {
+          "line": 35,
+          "column": 12,
+          "position": 266
+        }
+      },
+      "secondFile": {
+        "name": "/github/workspace/ui/src/features/pools/poolCalculations.test.ts",
+        "start": 12,
+        "end": 28,
+        "startLoc": {
+          "line": 12,
+          "column": 9,
+          "position": 137
+        },
+        "endLoc": {
+          "line": 28,
+          "column": 28,
+          "position": 246
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 7,
+      "fragment": "})];\n    const result = applyAllocationRules(1000, rules);\n    expect(result).toHaveLength(1);\n    expect(result[0]).toEqual({ poolId: 'pool-1', amount: 200 });\n  });\n\n  it('prefers fixedAmount over percentage when both are set'",
+      "tokens": 0,
+      "firstFile": {
+        "name": "/github/workspace/ui/src/features/allocations/allocationStrategy.test.ts",
+        "start": 33,
+        "end": 39,
+        "startLoc": {
+          "line": 33,
+          "column": 2,
+          "position": 320
+        },
+        "endLoc": {
+          "line": 39,
+          "column": 56,
+          "position": 390
+        }
+      },
+      "secondFile": {
+        "name": "/github/workspace/ui/src/features/allocations/allocationStrategy.test.ts",
+        "start": 26,
+        "end": 32,
+        "startLoc": {
+          "line": 26,
+          "column": 2,
+          "position": 223
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 54,
+          "position": 293
+        }
+      }
+    },
     {
       "format": "typescript",
       "lines": 7,
