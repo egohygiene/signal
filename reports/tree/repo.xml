@@ -801,6 +801,8 @@
         </directory>
         <directory name="store">
           <file name="index.ts"></file>
+          <file name="selectors.test.ts"></file>
+          <file name="selectors.ts"></file>
           <file name="types.ts"></file>
           <file name="useAppStore.test.ts"></file>
           <file name="useAppStore.ts"></file>

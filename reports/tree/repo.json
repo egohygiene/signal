@@ -800,6 +800,8 @@
         ]},
         {"type":"directory","name":"store","contents":[
           {"type":"file","name":"index.ts"},
+          {"type":"file","name":"selectors.test.ts"},
+          {"type":"file","name":"selectors.ts"},
           {"type":"file","name":"types.ts"},
           {"type":"file","name":"useAppStore.test.ts"},
           {"type":"file","name":"useAppStore.ts"}
