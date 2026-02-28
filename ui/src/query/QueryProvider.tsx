@@ -4,9 +4,9 @@ import { type JSX, type ReactNode } from 'react';
 
 import { queryClient } from './queryClient';
 
-interface QueryProviderProps {
+type QueryProviderProps = {
   children: ReactNode;
-}
+};
 
 export function QueryProvider({ children }: QueryProviderProps): JSX.Element {
   return (
