@@ -1,0 +1,117 @@
+Architectural Audit Report
+Generated: 2026-02-28T18:49:45Z
+Repository: egohygiene/signal
+
+================================================================================
+STRUCTURE
+================================================================================
+
+- Monorepo layout is clear: ui/, server/, core/, schema/, scripts/ are well separated
+- ui/src/ follows a consistent domain-driven structure: app/, features/, providers/, query/, store/, pages/, components/, logging/, schema/, locales/
+- features/ sub-directories (allocations, budgets, pools, transactions) each have an index.ts barrel export — consistent and clean
+- components/ contains only a single shared component (Placeholder); other reusable UI elements live inside feature directories — acceptable for early stage but may need a shared/ layer as the project grows
+- schema/ at the repo root is empty (contains only README.md); all runtime schema types are defined inside ui/src/schema/v1/ — the top-level schema/ directory is misleading and adds noise
+- core/ module is largely empty; its intended role is not yet reflected in code
+- server/ (FastAPI + Plaid adapter) is isolated from the UI; no shared contract types exist between server/ and ui/src/schema/ — risk of schema drift
+- pages/ components have no co-located styles or sub-components; they are thin wrappers which is appropriate at this stage
+- No audits/ directory existed prior to this audit
+
+================================================================================
+PATTERNS
+================================================================================
+
+- DataProvider pattern is well implemented: DataProvider type defines a clean interface, FakeDataProvider is a concrete implementation, DataProviderContext provides DI via React context
+- Strategy pattern is correctly applied in features/allocations/allocationStrategy.ts — AllocationStrategy type abstracts the algorithm, applyAllocationRules is the concrete implementation
+- Separation of concerns is respected: schema types are isolated, query hooks are separate from store logic, calculation utilities are pure functions
+- DataSyncProvider couples TanStack Query results to Zustand store via useEffect — this is a deliberate bridge layer and is documented implicitly by its name; acceptable but adds indirection
+- No god components or barrel-of-everything files detected
+- QueryProvider and DataProviderContext are correctly split into distinct provider components
+- rollingBuffer.ts is a well-isolated utility with no side effects on import
+
+================================================================================
+TYPES
+================================================================================
+
+- `type` is consistently used for domain types in schema/v1/, store/types.ts, and feature modules — correct
+- 4 locations use `interface` instead of `type`:
+  - ui/src/query/QueryProvider.tsx: QueryProviderProps
+  - ui/src/providers/DataSyncProvider.tsx: DataSyncProviderProps
+  - ui/src/providers/DataProviderContext.tsx: DataProviderProviderProps
+  - ui/src/logging/rollingBuffer.ts: LogEntry
+- All four interface usages are props or simple object shapes with no extension — should be converted to `type` for consistency with the rest of the codebase
+- Strict TypeScript mode is enabled (strict: true, noUnusedLocals, noUnusedParameters) — good
+- `import type` is used correctly throughout for compile-only imports
+- Path alias @egohygiene/signal/* is configured in tsconfig.app.json and used consistently in cross-module imports
+- No implicit any detected in reviewed files
+
+================================================================================
+STATE MANAGEMENT
+================================================================================
+
+- Zustand store (useAppStore) covers all four core domains: transactions, categories, budgets, pools — well scoped
+- AppStore = AppState & AppActions intersection type is idiomatic for Zustand — correct
+- Store actions are simple setters with no derived logic — appropriately thin
+- No selectors are co-located with the store; components define inline selectors (e.g., s => s.transactions.items) — acceptable but a selectors.ts file would improve discoverability
+- DataSyncProvider syncs query data to the store via useEffect — this pattern is functional but creates two sources of truth; components should prefer consuming TanStack Query directly for server state unless client-side mutation is needed
+- Settings state (currency, locale) in Zustand is reasonable for client-only preferences
+- No Zustand persistence (zustand/middleware/persist) is used; if settings need to survive page reload, persistence will be required
+- No Zustand devtools middleware is configured — would aid debugging
+
+================================================================================
+DATA LAYER
+================================================================================
+
+- TanStack Query is correctly used for server state; queryClient is configured with sensible defaults (staleTime 5m, retry 1, no refetch on focus)
+- All four query hooks (useTransactionsQuery, useBudgetsQuery, useCategoriesQuery, usePoolsQuery) follow the same pattern — consistent
+- Query keys are simple string arrays (['transactions'], etc.) — no factory pattern or namespacing; risk of key collisions if query complexity grows
+- FakeDataProvider is the only DataProvider implementation; no real API integration exists yet
+- No error or loading state handling is surfaced from DataSyncProvider to consumers — query errors are silently ignored in the sync layer
+- No mutation hooks (useMutation) exist; the data layer is read-only at this stage
+- server/ Plaid adapter is not connected to the UI; integration path is undefined
+- Schema types are versioned under schema/v1/ — good forward-thinking structure, but no migration or versioning strategy is documented
+
+================================================================================
+UI LAYER
+================================================================================
+
+- Named exports are enforced via ESLint (no-default-export rule) — correct and consistent
+- Component props types follow the pattern of co-located type exports (e.g., BudgetIndicatorProps in BudgetIndicator.tsx, Placeholder types in Placeholder.types.ts) — minor inconsistency; prefer a single convention
+- Tailwind CSS v4 is used; no custom component abstractions over Tailwind classes — could lead to repetitive class strings as UI grows
+- i18next is configured but only a single locale (en/common.json) exists with minimal keys — i18n infrastructure is in place but underutilized
+- Pino logger is initialized at module level and exports rollingBuffer — logger is available but no components or features currently use it at runtime (only tested in isolation)
+- Storybook exists only for the Placeholder component; no stories for feature components or pages
+- React 19 is used; no legacy patterns (class components, old context API) detected
+- React Router v7 is used with nested routes defined in App.tsx — correct
+
+================================================================================
+TESTING
+================================================================================
+
+- 18 test files cover: schema, store, providers, query, features (budgets, pools, allocations, transactions), components, logging, layout, and pages
+- Test runner is Vitest with jsdom environment and React Testing Library — appropriate stack
+- Feature modules with pure functions (budgetCalculations, poolCalculations, allocationStrategy) have dedicated unit tests — good
+- DataSyncProvider.test.tsx exists but coverage of error and loading states is likely missing based on the implementation
+- No tests for pages other than HomePage — BudgetsPage, PoolsPage, TransactionsPage, SettingsPage are untested
+- No integration tests or end-to-end tests (Playwright/Cypress) exist
+- No tests for i18n configuration or translation loading
+- No tests for the Vite/build configuration
+- Test setup (src/test/setup.ts) imports @testing-library/jest-dom — correct
+
+================================================================================
+SUGGESTED REFACTORS
+================================================================================
+
+- Convert 4 interface declarations to type aliases (QueryProviderProps, DataSyncProviderProps, DataProviderProviderProps, LogEntry) for consistency
+- Add a query key factory (e.g., queryKeys.ts) to centralize and namespace TanStack Query keys, preventing future collisions
+- Add a store/selectors.ts file with named selectors to improve discoverability and reduce inline selector duplication in components
+- Consider removing DataSyncProvider bridging for read-only data and having components consume TanStack Query directly; keep Zustand only for client-derived or user-modified state
+- Add error and loading state propagation in DataSyncProvider or remove the silent-fail pattern
+- Standardize component props type co-location: either always use a .types.ts file (like Placeholder) or always co-locate in the component file (like BudgetIndicator)
+- Add Zustand devtools middleware for improved developer experience
+- Populate top-level schema/ directory or remove it to avoid confusion with ui/src/schema/v1/
+- Add Storybook stories for BudgetsList, BudgetIndicator, and TransactionsList as the UI matures
+- Document the server-to-UI schema contract to prevent drift between FastAPI models and TypeScript schema types
+
+================================================================================
+END OF REPORT
+================================================================================
