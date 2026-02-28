@@ -711,6 +711,11 @@
           </directory>
         </directory>
         <directory name="features">
+          <directory name="allocations">
+            <file name="allocationStrategy.test.ts"></file>
+            <file name="allocationStrategy.ts"></file>
+            <file name="index.ts"></file>
+          </directory>
           <directory name="budgets">
             <file name="BudgetIndicator.test.tsx"></file>
             <file name="BudgetIndicator.tsx"></file>

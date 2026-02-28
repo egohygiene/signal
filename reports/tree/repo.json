@@ -710,6 +710,11 @@
           ]}
         ]},
         {"type":"directory","name":"features","contents":[
+          {"type":"directory","name":"allocations","contents":[
+            {"type":"file","name":"allocationStrategy.test.ts"},
+            {"type":"file","name":"allocationStrategy.ts"},
+            {"type":"file","name":"index.ts"}
+          ]},
           {"type":"directory","name":"budgets","contents":[
             {"type":"file","name":"BudgetIndicator.test.tsx"},
             {"type":"file","name":"BudgetIndicator.tsx"},

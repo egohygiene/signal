@@ -652,6 +652,10 @@
 │   │   │       ├── Placeholder.types.ts
 │   │   │       └── index.ts
 │   │   ├── features
+│   │   │   ├── allocations
+│   │   │   │   ├── allocationStrategy.test.ts
+│   │   │   │   ├── allocationStrategy.ts
+│   │   │   │   └── index.ts
 │   │   │   ├── budgets
 │   │   │   │   ├── BudgetIndicator.test.tsx
 │   │   │   │   ├── BudgetIndicator.tsx
