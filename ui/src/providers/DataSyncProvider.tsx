@@ -2,7 +2,7 @@ import { useBudgetsQuery } from '@egohygiene/signal/query/useBudgetsQuery';
 import { useCategoriesQuery } from '@egohygiene/signal/query/useCategoriesQuery';
 import { usePoolsQuery } from '@egohygiene/signal/query/usePoolsQuery';
 import { useTransactionsQuery } from '@egohygiene/signal/query/useTransactionsQuery';
-import { useAppStore } from '@egohygiene/signal/store';
+import { selectSetBudgets, selectSetCategories, selectSetPools, selectSetTransactions, useAppStore } from '@egohygiene/signal/store';
 import { type JSX, type ReactNode, useEffect } from 'react';
 
 type DataSyncProviderProps = {
@@ -10,10 +10,10 @@ type DataSyncProviderProps = {
 };
 
 export function DataSyncProvider({ children }: DataSyncProviderProps): JSX.Element {
-  const setTransactions = useAppStore((s) => s.setTransactions);
-  const setCategories = useAppStore((s) => s.setCategories);
-  const setBudgets = useAppStore((s) => s.setBudgets);
-  const setPools = useAppStore((s) => s.setPools);
+  const setTransactions = useAppStore(selectSetTransactions);
+  const setCategories = useAppStore(selectSetCategories);
+  const setBudgets = useAppStore(selectSetBudgets);
+  const setPools = useAppStore(selectSetPools);
 
   const { data: transactions } = useTransactionsQuery();
   const { data: categories } = useCategoriesQuery();

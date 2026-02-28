@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 
+import { selectBudgets, selectCategories, selectTransactions } from '../../store/selectors';
 import { useAppStore } from '../../store/useAppStore';
 import { computeCategoryTotals } from '../budgets/budgetCalculations';
 import { computePoolBudgetTotals, computePoolSpendingTotals } from './poolCalculations';
@@ -15,9 +16,9 @@ export type PoolSummary = {
  * computed from store state. Defaults to the current UTC year and month when not provided.
  */
 export function usePoolSummary(year?: number, month?: number): PoolSummary[] {
-  const transactions = useAppStore((s) => s.transactions.items);
-  const categories = useAppStore((s) => s.categories.items);
-  const budgets = useAppStore((s) => s.budgets.items);
+  const transactions = useAppStore(selectTransactions);
+  const categories = useAppStore(selectCategories);
+  const budgets = useAppStore(selectBudgets);
 
   const now = new Date();
   const resolvedYear = year ?? now.getUTCFullYear();

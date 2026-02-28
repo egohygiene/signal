@@ -1,9 +1,9 @@
-import { useAppStore } from '@egohygiene/signal/store';
+import { selectCategories, selectTransactions, useAppStore } from '@egohygiene/signal/store';
 import { type JSX, useMemo } from 'react';
 
 export function TransactionsList(): JSX.Element {
-  const transactions = useAppStore((s) => s.transactions.items);
-  const categories = useAppStore((s) => s.categories.items);
+  const transactions = useAppStore(selectTransactions);
+  const categories = useAppStore(selectCategories);
 
   const categoryMap = useMemo(() => new Map(categories.map((c) => [c.id, c.name])), [categories]);
 

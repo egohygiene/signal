@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 
+import { selectBudgets, selectTransactions } from '../../store/selectors';
 import { useAppStore } from '../../store/useAppStore';
 import type { BudgetComparison } from './budgetCalculations';
 import { compareBudgets, computeCategoryTotals } from './budgetCalculations';
@@ -11,8 +12,8 @@ export type { BudgetComparison };
  * Defaults to the current UTC year and month when not provided.
  */
 export function useBudgetSummary(year?: number, month?: number): BudgetComparison[] {
-  const transactions = useAppStore((s) => s.transactions.items);
-  const budgets = useAppStore((s) => s.budgets.items);
+  const transactions = useAppStore(selectTransactions);
+  const budgets = useAppStore(selectBudgets);
 
   const now = new Date();
   const resolvedYear = year ?? now.getUTCFullYear();
