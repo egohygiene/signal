@@ -12,8 +12,8 @@ import {
   selectSetCategories,
   selectSetPools,
   selectSetSettings,
-  selectSetTransactions,
   selectSettings,
+  selectSetTransactions,
   selectTransactions,
 } from './selectors';
 import { useAppStore } from './useAppStore';

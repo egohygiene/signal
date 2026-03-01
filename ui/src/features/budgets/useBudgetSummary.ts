@@ -1,9 +1,9 @@
+import { selectBudgets, selectTransactions, useAppStore } from '@egohygiene/signal/store';
+import { computeCategoryTotals } from '@egohygiene/signal/utils/transactionUtils';
 import { useMemo } from 'react';
 
-import { selectBudgets, selectTransactions } from '../../store/selectors';
-import { useAppStore } from '../../store/useAppStore';
 import type { BudgetComparison } from './budgetCalculations';
-import { compareBudgets, computeCategoryTotals } from './budgetCalculations';
+import { compareBudgets } from './budgetCalculations';
 
 export type { BudgetComparison };
 

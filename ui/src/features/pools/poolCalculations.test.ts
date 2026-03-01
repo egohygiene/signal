@@ -1,8 +1,8 @@
+import type { Budget } from '@egohygiene/signal/schema/v1/budget';
+import type { Category } from '@egohygiene/signal/schema/v1/category';
+import type { CategoryTotal } from '@egohygiene/signal/utils/transactionUtils';
 import { describe, expect, it } from 'vitest';
 
-import type { Budget } from '../../schema/v1/budget';
-import type { Category } from '../../schema/v1/category';
-import type { CategoryTotal } from '../budgets/budgetCalculations';
 import { computePoolBudgetTotals, computePoolSpendingTotals } from './poolCalculations';
 
 const makeCategory = (overrides: Partial<Category> = {}): Category => ({

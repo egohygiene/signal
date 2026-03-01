@@ -1,8 +1,7 @@
+import { selectBudgets, selectCategories, selectTransactions, useAppStore } from '@egohygiene/signal/store';
+import { computeCategoryTotals } from '@egohygiene/signal/utils/transactionUtils';
 import { useMemo } from 'react';
 
-import { selectBudgets, selectCategories, selectTransactions } from '../../store/selectors';
-import { useAppStore } from '../../store/useAppStore';
-import { computeCategoryTotals } from '../budgets/budgetCalculations';
 import { computePoolBudgetTotals, computePoolSpendingTotals } from './poolCalculations';
 
 export type PoolSummary = {
