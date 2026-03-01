@@ -2,6 +2,102 @@
 
 A modern monorepo application for financial data analysis and visualization.
 
+## Quick Start
+
+The fastest path from a fresh clone to a running application.
+
+### Prerequisites
+
+| Tool | Version | Install |
+| ---- | ------- | ------- |
+| Node.js | 24+ | [nodejs.org](https://nodejs.org) |
+| pnpm | 10+ | `npm install -g pnpm` or [pnpm.io](https://pnpm.io/installation) |
+| Python | 3.12+ | [python.org](https://www.python.org/downloads/) |
+
+> **Tip:** The included [Dev Container](#dev-container) provides all of the above pre-installed.
+
+### 1. Install frontend dependencies
+
+```bash
+cd ui
+pnpm install
+```
+
+### 2. Start the frontend
+
+```bash
+pnpm dev
+```
+
+The UI is available at **http://localhost:5173**.
+
+> By default the app runs in **fake data mode** — no backend or Plaid account is required. See [Fake Data Mode](#fake-data-mode) for details.
+
+### 3. Set up backend environment variables
+
+```bash
+cd server
+cp .env.example .env
+```
+
+Edit `server/.env` and fill in your Plaid credentials (or leave the defaults to run without Plaid — see [Fake Data Mode](#fake-data-mode)).
+
+### 4. Install backend dependencies
+
+```bash
+# Using uv (recommended)
+pip install uv
+uv pip install -r requirements.txt
+
+# Or using pip directly
+pip install -r requirements.txt
+```
+
+### 5. Start the backend
+
+```bash
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+The API is available at **http://localhost:8000** · Docs at **http://localhost:8000/docs**.
+
+---
+
+## Fake Data Mode
+
+The frontend ships with a built-in fake data provider that generates realistic
+but synthetic financial data (transactions, categories, pools, budgets). This
+mode is **active by default** — you can browse the full UI without a backend or
+Plaid account.
+
+The fake data is generated deterministically using a fixed seed, so the data
+looks the same on every run.
+
+To connect real data, configure Plaid credentials in `server/.env` and point
+the frontend at the running backend. See [Plaid Sandbox Setup](#plaid-sandbox-setup)
+for credential setup.
+
+---
+
+## Plaid Sandbox Setup
+
+For a full walkthrough of creating a Plaid developer account, generating API
+keys, and testing the sandbox connection, see
+[docs/plaid-setup.md](docs/plaid-setup.md).
+
+**Required environment variables** (add to `server/.env`):
+
+```dotenv
+PLAID_CLIENT_ID=your_client_id_here
+PLAID_SECRET=your_sandbox_secret_here
+PLAID_ENV=sandbox
+```
+
+Sandbox credentials are free and do not require production access. See
+[docs/plaid-setup.md](docs/plaid-setup.md) for cost and tier details.
+
+---
+
 ## Project Structure
 
 ```
@@ -123,11 +219,13 @@ page. The environment is configured identically to the local Dev Container.
 
 ## Getting Started
 
+See the [Quick Start](#quick-start) section at the top for the fastest path to a running application.
+
 ### Prerequisites
 
 - Python 3.12+
 - Node.js 24+
-- npm or pnpm
+- pnpm 10+ (`npm install -g pnpm`)
 
 ### Backend Setup
 
@@ -136,10 +234,10 @@ page. The environment is configured identically to the local Dev Container.
    cd server
    ```
 
-2. Create and activate a virtual environment:
+2. Copy and configure environment variables:
    ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   cp .env.example .env
+   # Edit .env to set PLAID_CLIENT_ID and PLAID_SECRET if using Plaid
    ```
 
 3. Install dependencies:
@@ -166,12 +264,12 @@ The API will be available at:
 
 2. Install dependencies:
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. Run the development server:
    ```bash
-   npm run dev
+   pnpm dev
    ```
 
 The application will be available at http://localhost:5173
@@ -182,7 +280,7 @@ To build the frontend for production:
 
 ```bash
 cd ui
-npm run build
+pnpm build
 ```
 
 The built files will be in the `ui/dist` directory.
