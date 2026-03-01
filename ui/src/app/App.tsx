@@ -8,12 +8,16 @@ import { TransactionsPage } from '@egohygiene/signal/pages/TransactionsPage';
 import { DataProviderProvider } from '@egohygiene/signal/providers/DataProviderContext';
 import { DataSyncProvider } from '@egohygiene/signal/providers/DataSyncProvider';
 import { createFakeDataProvider } from '@egohygiene/signal/providers/FakeDataProvider';
+import { createHttpDataProvider } from '@egohygiene/signal/providers/HttpDataProvider';
 import { QueryProvider } from '@egohygiene/signal/query/QueryProvider';
 import { type JSX, useMemo } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 export function App(): JSX.Element {
-  const dataProvider = useMemo(() => createFakeDataProvider(), []);
+  const dataProvider = useMemo(
+    () => (import.meta.env.DEV ? createHttpDataProvider() : createFakeDataProvider()),
+    [],
+  );
   return (
     <ErrorBoundary>
       <QueryProvider>
