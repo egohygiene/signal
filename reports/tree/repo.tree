@@ -625,6 +625,12 @@
 ├── scripts
 │   └── megalinter.sh
 ├── server
+│   ├── tests
+│   │   ├── __init__.py
+│   │   ├── conftest.py
+│   │   ├── test_error_handling.py
+│   │   ├── test_health.py
+│   │   └── test_plaid_adapter.py
 │   ├── .env.example
 │   ├── IMPLEMENTATION_SUMMARY.md
 │   ├── PLAID_README.md

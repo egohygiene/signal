@@ -676,6 +676,13 @@
       <file name="megalinter.sh"></file>
     </directory>
     <directory name="server">
+      <directory name="tests">
+        <file name="__init__.py"></file>
+        <file name="conftest.py"></file>
+        <file name="test_error_handling.py"></file>
+        <file name="test_health.py"></file>
+        <file name="test_plaid_adapter.py"></file>
+      </directory>
       <file name=".env.example"></file>
       <file name="IMPLEMENTATION_SUMMARY.md"></file>
       <file name="PLAID_README.md"></file>
