@@ -540,6 +540,7 @@
             {"type":"file","name":"ERROR-MARKDOWN_MARKDOWN_TABLE_FORMATTER.log"},
             {"type":"file","name":"ERROR-POWERSHELL_POWERSHELL.log"},
             {"type":"file","name":"ERROR-POWERSHELL_POWERSHELL_FORMATTER.log"},
+            {"type":"file","name":"ERROR-PYTHON_BANDIT.log"},
             {"type":"file","name":"ERROR-PYTHON_FLAKE8.log"},
             {"type":"file","name":"ERROR-PYTHON_ISORT.log"},
             {"type":"file","name":"ERROR-PYTHON_MYPY.log"},
@@ -702,6 +703,7 @@
         {"type":"file","name":"preview.ts"}
       ]},
       {"type":"directory","name":"public","contents":[
+        {"type":"file","name":"mockServiceWorker.js"},
         {"type":"file","name":"vite.svg"}
       ]},
       {"type":"directory","name":"src","contents":[
@@ -762,6 +764,11 @@
           {"type":"file","name":"logger.ts"},
           {"type":"file","name":"rollingBuffer.ts"}
         ]},
+        {"type":"directory","name":"mocks","contents":[
+          {"type":"file","name":"browser.ts"},
+          {"type":"file","name":"handlers.ts"},
+          {"type":"file","name":"server.ts"}
+        ]},
         {"type":"directory","name":"pages","contents":[
           {"type":"file","name":"BudgetsPage.tsx"},
           {"type":"file","name":"HomePage.test.tsx"},
@@ -779,6 +786,8 @@
           {"type":"file","name":"DataSyncProvider.tsx"},
           {"type":"file","name":"FakeDataProvider.test.ts"},
           {"type":"file","name":"FakeDataProvider.ts"},
+          {"type":"file","name":"HttpDataProvider.test.ts"},
+          {"type":"file","name":"HttpDataProvider.ts"},
           {"type":"file","name":"useDataProvider.ts"}
         ]},
         {"type":"directory","name":"query","contents":[

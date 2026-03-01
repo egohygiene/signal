@@ -503,6 +503,7 @@
 │   │       │   ├── ERROR-MARKDOWN_MARKDOWN_TABLE_FORMATTER.log
 │   │       │   ├── ERROR-POWERSHELL_POWERSHELL.log
 │   │       │   ├── ERROR-POWERSHELL_POWERSHELL_FORMATTER.log
+│   │       │   ├── ERROR-PYTHON_BANDIT.log
 │   │       │   ├── ERROR-PYTHON_FLAKE8.log
 │   │       │   ├── ERROR-PYTHON_ISORT.log
 │   │       │   ├── ERROR-PYTHON_MYPY.log
@@ -648,6 +649,7 @@
 │   │   ├── main.ts
 │   │   └── preview.ts
 │   ├── public
+│   │   ├── mockServiceWorker.js
 │   │   └── vite.svg
 │   ├── src
 │   │   ├── app
@@ -695,6 +697,10 @@
 │   │   │   ├── logger.test.ts
 │   │   │   ├── logger.ts
 │   │   │   └── rollingBuffer.ts
+│   │   ├── mocks
+│   │   │   ├── browser.ts
+│   │   │   ├── handlers.ts
+│   │   │   └── server.ts
 │   │   ├── pages
 │   │   │   ├── BudgetsPage.tsx
 │   │   │   ├── HomePage.test.tsx
@@ -711,6 +717,8 @@
 │   │   │   ├── DataSyncProvider.tsx
 │   │   │   ├── FakeDataProvider.test.ts
 │   │   │   ├── FakeDataProvider.ts
+│   │   │   ├── HttpDataProvider.test.ts
+│   │   │   ├── HttpDataProvider.ts
 │   │   │   └── useDataProvider.ts
 │   │   ├── query
 │   │   │   ├── QueryProvider.test.tsx

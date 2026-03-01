@@ -541,6 +541,7 @@
             <file name="ERROR-MARKDOWN_MARKDOWN_TABLE_FORMATTER.log"></file>
             <file name="ERROR-POWERSHELL_POWERSHELL.log"></file>
             <file name="ERROR-POWERSHELL_POWERSHELL_FORMATTER.log"></file>
+            <file name="ERROR-PYTHON_BANDIT.log"></file>
             <file name="ERROR-PYTHON_FLAKE8.log"></file>
             <file name="ERROR-PYTHON_ISORT.log"></file>
             <file name="ERROR-PYTHON_MYPY.log"></file>
@@ -703,6 +704,7 @@
         <file name="preview.ts"></file>
       </directory>
       <directory name="public">
+        <file name="mockServiceWorker.js"></file>
         <file name="vite.svg"></file>
       </directory>
       <directory name="src">
@@ -763,6 +765,11 @@
           <file name="logger.ts"></file>
           <file name="rollingBuffer.ts"></file>
         </directory>
+        <directory name="mocks">
+          <file name="browser.ts"></file>
+          <file name="handlers.ts"></file>
+          <file name="server.ts"></file>
+        </directory>
         <directory name="pages">
           <file name="BudgetsPage.tsx"></file>
           <file name="HomePage.test.tsx"></file>
@@ -780,6 +787,8 @@
           <file name="DataSyncProvider.tsx"></file>
           <file name="FakeDataProvider.test.ts"></file>
           <file name="FakeDataProvider.ts"></file>
+          <file name="HttpDataProvider.test.ts"></file>
+          <file name="HttpDataProvider.ts"></file>
           <file name="useDataProvider.ts"></file>
         </directory>
         <directory name="query">
