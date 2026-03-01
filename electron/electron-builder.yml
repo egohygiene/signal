@@ -1,0 +1,20 @@
+appId: com.egohygiene.signal
+productName: Signal
+directories:
+  output: dist
+  buildResources: build
+files:
+  - main.js
+  - preload.js
+  - "!node_modules"
+extraResources:
+  - from: "../ui/dist"
+    to: "../ui/dist"
+    filter:
+      - "**/*"
+mac:
+  category: public.app-category.productivity
+win:
+  target: nsis
+linux:
+  target: AppImage
