@@ -1,0 +1,138 @@
+Stack Enhancement Audit
+Generated: 2026-03-01T02:20:46Z
+Repository: egohygiene/signal
+
+================================================================================
+CURRENT STACK SUMMARY
+================================================================================
+
+Frontend (ui/):
+- React 19 + TypeScript ~5.9.3
+- Vite 7 + Tailwind CSS v4
+- TanStack Query v5 + Zustand v5
+- React Router v7
+- i18next + react-i18next
+- pino (browser logger)
+- Vitest + React Testing Library + @faker-js/faker
+- Storybook v9
+- ESLint v9 + typescript-eslint + Prettier
+
+Backend (server/):
+- Python 3.12 + FastAPI 0.115+ + Uvicorn
+- Pydantic Settings + python-dotenv
+- plaid-python 25.0+
+- stdlib logging (no structured logging library)
+- No test suite
+
+Dev Tooling:
+- pnpm workspaces + Task (Taskfile)
+- MegaLinter + pre-commit (black, ruff, shellcheck, hadolint, detect-secrets)
+- secretlint + prettier-plugin-sh/pkg
+- Dev Container (Node 24 + Python 3.12)
+
+CI/CD:
+- GitHub Actions
+- semantic-release (.releaserc.yml)
+
+================================================================================
+CORE UPGRADE — High Impact, Low Complexity
+================================================================================
+
+- [ ] pytest + httpx (backend testing)
+      No test coverage exists for server/; pytest with httpx provides async-
+      compatible FastAPI test client and is the de-facto standard for Python
+      API testing.
+
+- [ ] zod (frontend schema validation)
+      TypeScript types exist in ui/src/schema/v1/ but provide no runtime
+      validation; zod bridges compile-time types and runtime data contracts,
+      eliminating silent schema drift when the real Plaid API is wired up.
+
+- [ ] react-error-boundary (frontend resilience)
+      No error boundaries exist; react-error-boundary provides declarative
+      per-feature error isolation with minimal boilerplate and is the React-
+      recommended approach.
+
+- [ ] MSW — Mock Service Worker (frontend test isolation)
+      Tests currently rely on FakeDataProvider; MSW intercepts HTTP at the
+      network layer, making tests agnostic to the data-provider abstraction
+      and preparing them for real API integration.
+
+================================================================================
+STRATEGIC UPGRADE — Medium Impact
+================================================================================
+
+- [ ] openapi-typescript (schema contract codegen)
+      FastAPI already emits an OpenAPI spec at /openapi.json; openapi-
+      typescript generates TypeScript types directly from that spec,
+      eliminating hand-written schema/ types and preventing server-client
+      drift.
+
+- [ ] Docker Compose (local multi-service orchestration)
+      Dev Container runs each service independently; a docker-compose.yml
+      with ui + server + optional database services would make full-stack
+      local development a single command.
+
+- [ ] structlog or loguru (backend structured logging)
+      stdlib logging produces unstructured text; structlog or loguru produce
+      JSON-structured, contextual log records that integrate with log
+      aggregation tools without additional parsing.
+
+- [ ] Playwright (end-to-end testing)
+      No E2E tests exist; Playwright provides cross-browser coverage with
+      first-class Vite integration and component testing support, making it
+      additive over the existing Vitest unit tests.
+
+================================================================================
+NICE-TO-HAVE — Optional / Low Urgency
+================================================================================
+
+- [ ] rollup-plugin-visualizer (bundle analysis)
+      Vite bundles are currently unmonitored; the plugin adds a one-command
+      visual treemap of bundle composition with zero runtime cost.
+
+- [ ] @storybook/addon-a11y (accessibility testing in Storybook)
+      Storybook is already configured; the addon runs axe-core rules per
+      story and catches accessibility regressions early with no test-writing
+      overhead.
+
+- [ ] zustand/middleware/persist (settings persistence)
+      Settings state (currency, locale) is identified in the existing audit
+      as needing persistence; the middleware is already shipped inside the
+      zustand package and requires no additional dependency.
+
+- [ ] react-hook-form (form state management)
+      No form library is present; if the application adds budget-entry or
+      settings forms, react-hook-form provides uncontrolled-component
+      performance and built-in validation integration with zod.
+
+================================================================================
+NOT RECOMMENDED
+================================================================================
+
+- [ ] Redux / Redux Toolkit
+      Zustand v5 already covers all current state management needs; Redux
+      would add boilerplate without architectural benefit.
+
+- [ ] GraphQL (Apollo / URQL)
+      The backend is a thin REST/Plaid passthrough; adding a GraphQL layer
+      would introduce resolver complexity disproportionate to the data model.
+
+- [ ] Next.js migration
+      The project is a client-side SPA with no SSR or SSG requirements;
+      migrating from Vite to Next.js would add build complexity without
+      addressing any current limitation.
+
+- [ ] SWR
+      TanStack Query v5 is already in use; SWR duplicates server-state
+      management capabilities and would create two competing data-fetching
+      paradigms.
+
+- [ ] Nx / Turborepo (monorepo build orchestration)
+      The monorepo has two packages (ui + server) with independent build
+      pipelines; a dedicated build orchestrator adds significant tooling
+      overhead for a project at this scale.
+
+================================================================================
+END OF REPORT
+================================================================================
