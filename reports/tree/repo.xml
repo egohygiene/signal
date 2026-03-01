@@ -307,6 +307,7 @@
     </directory>
     <directory name="audits">
       <file name="audit-2026-02-28T184945.log"></file>
+      <file name="stack-audit-2026-03-01T022046.log"></file>
     </directory>
     <directory name="config">
       <directory name=".clj-kondo">
