@@ -655,6 +655,7 @@
       </directory>
       <file name="CNAME"></file>
       <file name="FINANCIAL_OPERATING_SYSTEM.md"></file>
+      <file name="SCHEMA_CONTRACT.md"></file>
       <file name="favicon.ico"></file>
       <file name="index.html"></file>
       <file name="plaid-setup.md"></file>

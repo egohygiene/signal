@@ -609,6 +609,7 @@
 │   │       └── styles.css
 │   ├── CNAME
 │   ├── FINANCIAL_OPERATING_SYSTEM.md
+│   ├── SCHEMA_CONTRACT.md
 │   ├── favicon.ico
 │   ├── index.html
 │   └── plaid-setup.md
