@@ -752,7 +752,6 @@
 │   ├── README.md
 │   ├── eslint.config.js
 │   ├── index.html
-│   ├── package-lock.json
 │   ├── package.json
 │   ├── pnpm-lock.yaml
 │   ├── tsconfig.app.json
