@@ -1,12 +1,18 @@
-export type BudgetPeriod = 'weekly' | 'monthly' | 'yearly' | 'custom';
+import { z } from 'zod';
 
-export type Budget = {
-  id: string;
-  name: string;
-  categoryId: string;
-  amount: number;
-  currency: string;
-  period: BudgetPeriod;
-  startDate: string;
-  endDate: string | null;
-};
+export const BudgetPeriodSchema = z.enum(['weekly', 'monthly', 'yearly', 'custom']);
+
+export const BudgetSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  categoryId: z.string(),
+  amount: z.number(),
+  currency: z.string(),
+  period: BudgetPeriodSchema,
+  startDate: z.string(),
+  endDate: z.string().nullable(),
+});
+
+export type BudgetPeriod = z.infer<typeof BudgetPeriodSchema>;
+
+export type Budget = z.infer<typeof BudgetSchema>;

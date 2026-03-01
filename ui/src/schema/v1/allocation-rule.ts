@@ -1,9 +1,13 @@
-export type AllocationRule = {
-  id: string;
-  name: string;
-  poolId: string;
-  categoryId: string | null;
-  percentage: number | null;
-  fixedAmount: number | null;
-  currency: string | null;
-};
+import { z } from 'zod';
+
+export const AllocationRuleSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  poolId: z.string(),
+  categoryId: z.string().nullable(),
+  percentage: z.number().nullable(),
+  fixedAmount: z.number().nullable(),
+  currency: z.string().nullable(),
+});
+
+export type AllocationRule = z.infer<typeof AllocationRuleSchema>;

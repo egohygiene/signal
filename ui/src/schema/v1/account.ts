@@ -1,9 +1,15 @@
-export type AccountType = 'checking' | 'savings' | 'credit' | 'investment' | 'other';
+import { z } from 'zod';
 
-export type Account = {
-  id: string;
-  name: string;
-  type: AccountType;
-  currency: string;
-  balance: number | null;
-};
+export const AccountTypeSchema = z.enum(['checking', 'savings', 'credit', 'investment', 'other']);
+
+export const AccountSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  type: AccountTypeSchema,
+  currency: z.string(),
+  balance: z.number().nullable(),
+});
+
+export type AccountType = z.infer<typeof AccountTypeSchema>;
+
+export type Account = z.infer<typeof AccountSchema>;

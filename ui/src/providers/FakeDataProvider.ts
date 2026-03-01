@@ -1,8 +1,13 @@
 import type { Budget } from '@egohygiene/signal/schema/v1/budget';
+import { BudgetSchema } from '@egohygiene/signal/schema/v1/budget';
 import type { Category } from '@egohygiene/signal/schema/v1/category';
+import { CategorySchema } from '@egohygiene/signal/schema/v1/category';
 import type { Pool } from '@egohygiene/signal/schema/v1/pool';
+import { PoolSchema } from '@egohygiene/signal/schema/v1/pool';
 import type { Transaction } from '@egohygiene/signal/schema/v1/transaction';
+import { TransactionSchema } from '@egohygiene/signal/schema/v1/transaction';
 import { faker } from '@faker-js/faker';
+import { z } from 'zod';
 
 import type { DataProvider } from './DataProvider';
 
@@ -119,10 +124,10 @@ function createSeededFaker(): typeof faker {
 
 export function createFakeDataProvider(): DataProvider {
   const rng = createSeededFaker();
-  const pools = buildPools(rng);
-  const categories = buildCategories(pools);
-  const budgets = buildBudgets(rng, categories);
-  const transactions = buildTransactions(rng, categories, pools);
+  const pools = z.array(PoolSchema).parse(buildPools(rng));
+  const categories = z.array(CategorySchema).parse(buildCategories(pools));
+  const budgets = z.array(BudgetSchema).parse(buildBudgets(rng, categories));
+  const transactions = z.array(TransactionSchema).parse(buildTransactions(rng, categories, pools));
 
   return {
     getTransactions: () => Promise.resolve(transactions),
