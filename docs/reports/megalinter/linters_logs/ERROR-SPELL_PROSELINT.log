@@ -4,8 +4,9 @@ See documentation on https://megalinter.io/8.8.0/descriptors/spell_proselint/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-README.md:50:57: lexical_illusions.misc There's a lexical illusion here: a word is repeated.
-README.md:221:26: leonard.exclamation.30ppm More than 30 ppm of exclamations. Keep them under control.
+README.md:49:14: lexical_illusions.misc There's a lexical illusion here: a word is repeated.
+README.md:146:57: lexical_illusions.misc There's a lexical illusion here: a word is repeated.
+README.md:319:26: leonard.exclamation.30ppm More than 30 ppm of exclamations. Keep them under control.
 config/styles/write-good/README.md:8:12: typography.symbols.copyright (c) is a goofy alphabetic approximation, use the symbol ©.
 docs/FINANCIAL_OPERATING_SYSTEM.md:8:60: needless_variants.misc Needless variant. 'extendable' is the preferred form.
 docs/plaid-setup.md:13:36: typography.symbols.curly_quotes Use curly quotes “”, not straight quotes "". Found 7 times elsewhere.

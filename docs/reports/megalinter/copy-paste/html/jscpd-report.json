@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-03-01T00:24:44.329Z",
+    "detectionDate": "2026-03-01T02:23:11.168Z",
     "formats": {
       "typescript": {
         "sources": {
@@ -101,14 +101,14 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/features/pools/usePoolSummary.ts": {
-            "lines": 44,
-            "tokens": 513,
+            "lines": 43,
+            "tokens": 503,
             "sources": 1,
             "clones": 1,
             "duplicatedLines": 8,
             "duplicatedTokens": 89,
-            "percentage": 18.18,
-            "percentageTokens": 17.35,
+            "percentage": 18.6,
+            "percentageTokens": 17.69,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -161,8 +161,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/features/budgets/index.ts": {
-            "lines": 10,
-            "tokens": 105,
+            "lines": 7,
+            "tokens": 111,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -173,8 +173,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/features/budgets/budgetCalculations.ts": {
-            "lines": 64,
-            "tokens": 599,
+            "lines": 32,
+            "tokens": 296,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -185,14 +185,14 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/features/budgets/budgetCalculations.test.ts": {
-            "lines": 144,
-            "tokens": 1765,
+            "lines": 141,
+            "tokens": 1771,
             "sources": 1,
             "clones": 1,
             "duplicatedLines": 16,
             "duplicatedTokens": 109,
-            "percentage": 11.11,
-            "percentageTokens": 6.18,
+            "percentage": 11.35,
+            "percentageTokens": 6.15,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -217,6 +217,18 @@
             "duplicatedTokens": 140,
             "percentage": 11.65,
             "percentageTokens": 10.99,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/utils/transactionUtils.ts": {
+            "lines": 32,
+            "tokens": 316,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -522,13 +534,13 @@
           }
         },
         "total": {
-          "lines": 1880,
-          "tokens": 19881,
-          "sources": 43,
+          "lines": 1873,
+          "tokens": 19896,
+          "sources": 44,
           "clones": 7,
           "duplicatedLines": 85,
           "duplicatedTokens": 808,
-          "percentage": 4.52,
+          "percentage": 4.54,
           "percentageTokens": 4.06,
           "newDuplicatedLines": 0,
           "newClones": 0
@@ -1021,8 +1033,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/eslint.config.js": {
-            "lines": 51,
-            "tokens": 334,
+            "lines": 71,
+            "tokens": 437,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1082,8 +1094,8 @@
           }
         },
         "total": {
-          "lines": 474,
-          "tokens": 3770,
+          "lines": 494,
+          "tokens": 3873,
           "sources": 18,
           "clones": 0,
           "duplicatedLines": 0,
@@ -1373,8 +1385,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/pages/BudgetsPage.tsx": {
-            "lines": 18,
-            "tokens": 210,
+            "lines": 17,
+            "tokens": 209,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1385,8 +1397,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/components/ErrorBoundary.tsx": {
-            "lines": 34,
-            "tokens": 274,
+            "lines": 33,
+            "tokens": 273,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1434,8 +1446,8 @@
           }
         },
         "total": {
-          "lines": 1135,
-          "tokens": 11767,
+          "lines": 1133,
+          "tokens": 11765,
           "sources": 28,
           "clones": 0,
           "duplicatedLines": 0,
@@ -2092,6 +2104,18 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
+          "/github/workspace/docs/SCHEMA_CONTRACT.md": {
+            "lines": 140,
+            "tokens": 1259,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "/github/workspace/docs/FINANCIAL_OPERATING_SYSTEM.md": {
             "lines": 295,
             "tokens": 1608,
@@ -2117,8 +2141,8 @@
             "newClones": 0
           },
           "/github/workspace/README.md": {
-            "lines": 221,
-            "tokens": 1432,
+            "lines": 319,
+            "tokens": 2086,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -2130,9 +2154,9 @@
           }
         },
         "total": {
-          "lines": 1270,
-          "tokens": 8213,
-          "sources": 9,
+          "lines": 1508,
+          "tokens": 10126,
+          "sources": 10,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -2288,14 +2312,14 @@
       }
     },
     "total": {
-      "lines": 8983,
-      "tokens": 64805,
-      "sources": 173,
+      "lines": 9232,
+      "tokens": 66834,
+      "sources": 175,
       "clones": 8,
       "duplicatedLines": 97,
       "duplicatedTokens": 890,
-      "percentage": 1.08,
-      "percentageTokens": 1.37,
+      "percentage": 1.05,
+      "percentageTokens": 1.33,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
@@ -2359,17 +2383,17 @@
       },
       "secondFile": {
         "name": "/github/workspace/ui/src/features/pools/usePoolSummary.ts",
-        "start": 20,
-        "end": 28,
+        "start": 19,
+        "end": 27,
         "startLoc": {
-          "line": 20,
+          "line": 19,
           "column": 17,
-          "position": 163
+          "position": 153
         },
         "endLoc": {
-          "line": 28,
+          "line": 27,
           "column": 15,
-          "position": 252
+          "position": 242
         }
       }
     },
@@ -2380,17 +2404,17 @@
       "tokens": 0,
       "firstFile": {
         "name": "/github/workspace/ui/src/features/budgets/budgetCalculations.test.ts",
-        "start": 19,
-        "end": 35,
+        "start": 16,
+        "end": 32,
         "startLoc": {
-          "line": 19,
+          "line": 16,
           "column": 7,
-          "position": 157
+          "position": 163
         },
         "endLoc": {
-          "line": 35,
+          "line": 32,
           "column": 12,
-          "position": 266
+          "position": 272
         }
       },
       "secondFile": {
