@@ -1,12 +1,12 @@
 {
   "statistics": {
-    "detectionDate": "2026-03-01T02:23:11.168Z",
+    "detectionDate": "2026-03-01T18:18:20.517Z",
     "formats": {
       "typescript": {
         "sources": {
           "/github/workspace/ui/src/schema/v1/transaction.ts": {
-            "lines": 9,
-            "tokens": 75,
+            "lines": 13,
+            "tokens": 145,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -29,8 +29,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/schema/v1/pool.ts": {
-            "lines": 5,
-            "tokens": 43,
+            "lines": 9,
+            "tokens": 97,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -41,8 +41,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/schema/v1/index.ts": {
-            "lines": 7,
-            "tokens": 110,
+            "lines": 13,
+            "tokens": 194,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -53,8 +53,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/schema/v1/category.ts": {
-            "lines": 5,
-            "tokens": 47,
+            "lines": 9,
+            "tokens": 101,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -65,8 +65,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/schema/v1/budget.ts": {
-            "lines": 11,
-            "tokens": 95,
+            "lines": 17,
+            "tokens": 184,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -77,8 +77,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/schema/v1/allocation-rule.ts": {
-            "lines": 8,
-            "tokens": 76,
+            "lines": 12,
+            "tokens": 142,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -89,8 +89,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/schema/v1/account.ts": {
-            "lines": 8,
-            "tokens": 78,
+            "lines": 14,
+            "tokens": 154,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -401,8 +401,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/providers/FakeDataProvider.ts": {
-            "lines": 132,
-            "tokens": 1381,
+            "lines": 137,
+            "tokens": 1486,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -534,14 +534,14 @@
           }
         },
         "total": {
-          "lines": 1873,
-          "tokens": 19896,
+          "lines": 1912,
+          "tokens": 20494,
           "sources": 44,
           "clones": 7,
           "duplicatedLines": 85,
           "duplicatedTokens": 808,
-          "percentage": 4.54,
-          "percentageTokens": 4.06,
+          "percentage": 4.45,
+          "percentageTokens": 3.94,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -597,8 +597,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/package.json": {
-            "lines": 57,
-            "tokens": 378,
+            "lines": 59,
+            "tokens": 392,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -862,8 +862,8 @@
           }
         },
         "total": {
-          "lines": 1082,
-          "tokens": 6259,
+          "lines": 1084,
+          "tokens": 6273,
           "sources": 26,
           "clones": 0,
           "duplicatedLines": 0,
@@ -1008,9 +1008,45 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
+          "/github/workspace/ui/src/pages/TransactionsPage.tsx": {
+            "lines": 0,
+            "tokens": 5,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/pages/BudgetsPage.tsx": {
+            "lines": 0,
+            "tokens": 5,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/components/ErrorBoundary.tsx": {
+            "lines": 2,
+            "tokens": 32,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "/github/workspace/ui/src/components/ErrorBoundary.test.tsx": {
-            "lines": 21,
-            "tokens": 220,
+            "lines": 41,
+            "tokens": 404,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1094,9 +1130,9 @@
           }
         },
         "total": {
-          "lines": 494,
-          "tokens": 3873,
-          "sources": 18,
+          "lines": 516,
+          "tokens": 4099,
+          "sources": 21,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -1325,8 +1361,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/pages/TransactionsPage.tsx": {
-            "lines": 17,
-            "tokens": 209,
+            "lines": 24,
+            "tokens": 275,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1385,8 +1421,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/pages/BudgetsPage.tsx": {
-            "lines": 17,
-            "tokens": 209,
+            "lines": 24,
+            "tokens": 275,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1397,8 +1433,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/components/ErrorBoundary.tsx": {
-            "lines": 33,
-            "tokens": 273,
+            "lines": 31,
+            "tokens": 235,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1409,8 +1445,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/components/ErrorBoundary.test.tsx": {
-            "lines": 41,
-            "tokens": 419,
+            "lines": 61,
+            "tokens": 602,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1446,8 +1482,8 @@
           }
         },
         "total": {
-          "lines": 1133,
-          "tokens": 11765,
+          "lines": 1165,
+          "tokens": 12042,
           "sources": 28,
           "clones": 0,
           "duplicatedLines": 0,
@@ -1482,6 +1518,94 @@
           "duplicatedTokens": 0,
           "percentage": 0,
           "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "python": {
+        "sources": {
+          "/github/workspace/server/tests/test_plaid_adapter.py": {
+            "lines": 138,
+            "tokens": 918,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/server/tests/test_health.py": {
+            "lines": 43,
+            "tokens": 296,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/server/tests/test_error_handling.py": {
+            "lines": 80,
+            "tokens": 567,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/server/tests/conftest.py": {
+            "lines": 14,
+            "tokens": 79,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/server/plaid_adapter.py": {
+            "lines": 209,
+            "tokens": 1234,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/server/main.py": {
+            "lines": 361,
+            "tokens": 1937,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 24,
+            "duplicatedTokens": 164,
+            "percentage": 6.65,
+            "percentageTokens": 8.47,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 845,
+          "tokens": 5031,
+          "sources": 6,
+          "clones": 1,
+          "duplicatedLines": 12,
+          "duplicatedTokens": 82,
+          "percentage": 1.42,
+          "percentageTokens": 1.63,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -2166,46 +2290,6 @@
           "newClones": 0
         }
       },
-      "python": {
-        "sources": {
-          "/github/workspace/server/plaid_adapter.py": {
-            "lines": 209,
-            "tokens": 1234,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "/github/workspace/server/main.py": {
-            "lines": 361,
-            "tokens": 1937,
-            "sources": 1,
-            "clones": 2,
-            "duplicatedLines": 24,
-            "duplicatedTokens": 164,
-            "percentage": 6.65,
-            "percentageTokens": 8.47,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          }
-        },
-        "total": {
-          "lines": 570,
-          "tokens": 3171,
-          "sources": 2,
-          "clones": 1,
-          "duplicatedLines": 12,
-          "duplicatedTokens": 82,
-          "percentage": 2.11,
-          "percentageTokens": 2.59,
-          "newDuplicatedLines": 0,
-          "newClones": 0
-        }
-      },
       "ini": {
         "sources": {
           "/github/workspace/config/.vale.ini": {
@@ -2312,14 +2396,14 @@
       }
     },
     "total": {
-      "lines": 9232,
-      "tokens": 66834,
-      "sources": 175,
+      "lines": 9602,
+      "tokens": 69809,
+      "sources": 182,
       "clones": 8,
       "duplicatedLines": 97,
       "duplicatedTokens": 890,
-      "percentage": 1.05,
-      "percentageTokens": 1.33,
+      "percentage": 1.01,
+      "percentageTokens": 1.27,
       "newDuplicatedLines": 0,
       "newClones": 0
     }

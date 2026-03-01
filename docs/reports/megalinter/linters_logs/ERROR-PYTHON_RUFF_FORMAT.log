@@ -5,5 +5,6 @@ See documentation on https://megalinter.io/8.8.0/descriptors/python_ruff_format/
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 Would reformat: server/plaid_adapter.py
-1 file would be reformatted, 1 file already formatted
+Would reformat: server/tests/test_plaid_adapter.py
+2 files would be reformatted, 5 files already formatted
 

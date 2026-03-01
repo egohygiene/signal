@@ -15,4 +15,13 @@ server/plaid_adapter.py:8:0: E0401: Unable to import 'plaid.api' (import-error)
 server/plaid_adapter.py:9:0: E0401: Unable to import 'plaid.model.transactions_get_request' (import-error)
 server/plaid_adapter.py:10:0: E0401: Unable to import 'plaid.model.transactions_get_request_options' (import-error)
 server/plaid_adapter.py:11:0: E0401: Unable to import 'pydantic' (import-error)
+************* Module tests.conftest
+server/tests/conftest.py:3:0: E0401: Unable to import 'pytest' (import-error)
+server/tests/conftest.py:4:0: E0401: Unable to import 'httpx' (import-error)
+************* Module tests.test_error_handling
+server/tests/test_error_handling.py:3:0: E0401: Unable to import 'pytest' (import-error)
+************* Module tests.test_health
+server/tests/test_health.py:3:0: E0401: Unable to import 'pytest' (import-error)
+************* Module tests.test_plaid_adapter
+server/tests/test_plaid_adapter.py:3:0: E0401: Unable to import 'pytest' (import-error)
 

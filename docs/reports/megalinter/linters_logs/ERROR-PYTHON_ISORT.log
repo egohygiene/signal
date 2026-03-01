@@ -5,8 +5,10 @@ See documentation on https://megalinter.io/8.8.0/descriptors/python_isort/
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 ERROR: server/main.py Imports are incorrectly sorted and/or formatted.
---- server/main.py:before	2026-03-01 02:22:41.103815
-+++ server/main.py:after	2026-03-01 02:22:49.497066
+ERROR: server/tests/conftest.py Imports are incorrectly sorted and/or formatted.
+ERROR: server/tests/test_plaid_adapter.py Imports are incorrectly sorted and/or formatted.
+--- server/main.py:before	2026-03-01 18:17:49.078712
++++ server/main.py:after	2026-03-01 18:17:57.766295
 @@ -8,10 +8,9 @@
  
  from fastapi import FastAPI, Header, HTTPException
@@ -19,4 +21,24 @@ ERROR: server/main.py Imports are incorrectly sorted and/or formatted.
  
  
  class Settings(BaseSettings):
+--- server/tests/conftest.py:before	2026-03-01 18:17:49.079192
++++ server/tests/conftest.py:after	2026-03-01 18:17:57.771848
+@@ -2,7 +2,6 @@
+ 
+ import pytest
+ from httpx import ASGITransport, AsyncClient
+-
+ from main import app
+ 
+ 
+--- server/tests/test_plaid_adapter.py:before	2026-03-01 18:17:49.079192
++++ server/tests/test_plaid_adapter.py:after	2026-03-01 18:17:57.776142
+@@ -1,7 +1,6 @@
+ """Tests for the PlaidAdapter stub (no real API calls)."""
+ 
+ import pytest
+-
+ from plaid_adapter import NormalizedTransaction, PlaidAdapter
+ 
+ 
 

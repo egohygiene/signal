@@ -4,6 +4,66 @@ See documentation on https://megalinter.io/8.8.0/descriptors/python_mypy/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
+server/tests/test_health.py:3:1: error: Cannot find implementation or library
+stub for module named "pytest"  [import-not-found]
+    import pytest
+    ^
+server/tests/test_health.py:7:1: error: Function is missing a type annotation 
+[no-untyped-def]
+    async def test_root_endpoint(client):
+    ^
+server/tests/test_health.py:15:1: error: Function is missing a type annotation 
+[no-untyped-def]
+    async def test_health_endpoint_returns_200(client):
+    ^
+server/tests/test_health.py:22:1: error: Function is missing a type annotation 
+[no-untyped-def]
+    async def test_health_endpoint_schema(client):
+    ^
+server/tests/test_health.py:32:1: error: Function is missing a type annotation 
+[no-untyped-def]
+    async def test_health_endpoint_status_value(client):
+    ^
+server/tests/test_health.py:39:1: error: Function is missing a type annotation 
+[no-untyped-def]
+    async def test_health_endpoint_plaid_not_configured(client):
+    ^
+server/tests/test_error_handling.py:3:1: error: Cannot find implementation or
+library stub for module named "pytest"  [import-not-found]
+    import pytest
+    ^
+server/tests/test_error_handling.py:7:1: error: Function is missing a type
+annotation  [no-untyped-def]
+    async def test_transactions_get_missing_access_token(client):
+    ^
+server/tests/test_error_handling.py:14:1: error: Function is missing a type
+annotation  [no-untyped-def]
+    async def test_transactions_get_empty_access_token(client):
+    ^
+server/tests/test_error_handling.py:25:1: error: Function is missing a type
+annotation  [no-untyped-def]
+    async def test_transactions_get_invalid_start_date(client):
+    ^
+server/tests/test_error_handling.py:37:1: error: Function is missing a type
+annotation  [no-untyped-def]
+    async def test_transactions_get_invalid_end_date(client):
+    ^
+server/tests/test_error_handling.py:49:1: error: Function is missing a type
+annotation  [no-untyped-def]
+    async def test_transactions_get_plaid_not_configured(client):
+    ^
+server/tests/test_error_handling.py:60:1: error: Function is missing a type
+annotation  [no-untyped-def]
+    async def test_plaid_transactions_post_missing_body(client):
+    ^
+server/tests/test_error_handling.py:67:1: error: Function is missing a type
+annotation  [no-untyped-def]
+    async def test_plaid_transactions_post_plaid_not_configured(client):
+    ^
+server/tests/test_error_handling.py:78:1: error: Function is missing a type
+annotation  [no-untyped-def]
+    async def test_not_found_endpoint(client):
+    ^
 server/plaid_adapter.py:7:1: error: Cannot find implementation or library stub
 for module named "plaid"  [import-not-found]
     import plaid
@@ -25,6 +85,45 @@ server/plaid_adapter.py:11:1: error: Cannot find implementation or library stub
 for module named "pydantic"  [import-not-found]
     from pydantic import BaseModel
     ^
+server/tests/test_plaid_adapter.py:3:1: error: Cannot find implementation or
+library stub for module named "pytest"  [import-not-found]
+    import pytest
+    ^
+server/tests/test_plaid_adapter.py:11:5: error: Function is missing a return
+type annotation  [no-untyped-def]
+        def test_required_fields(self):
+        ^
+server/tests/test_plaid_adapter.py:11:5: note: Use "-> None" if function does not return a value
+server/tests/test_plaid_adapter.py:28:5: error: Function is missing a return
+type annotation  [no-untyped-def]
+        def test_optional_fields_default_to_none(self):
+        ^
+server/tests/test_plaid_adapter.py:28:5: note: Use "-> None" if function does not return a value
+server/tests/test_plaid_adapter.py:43:5: error: Function is missing a return
+type annotation  [no-untyped-def]
+        def test_optional_fields_set(self):
+        ^
+server/tests/test_plaid_adapter.py:43:5: note: Use "-> None" if function does not return a value
+server/tests/test_plaid_adapter.py:67:5: error: Function is missing a type
+annotation  [no-untyped-def]
+        def adapter(self, monkeypatch):
+        ^
+server/tests/test_plaid_adapter.py:81:5: error: Function is missing a type
+annotation  [no-untyped-def]
+        def test_normalize_transaction_from_dict(self, adapter):
+        ^
+server/tests/test_plaid_adapter.py:96:5: error: Function is missing a type
+annotation  [no-untyped-def]
+        def test_normalize_transaction_missing_optional_fields(self, adapt...
+        ^
+server/tests/test_plaid_adapter.py:110:5: error: Function is missing a type
+annotation  [no-untyped-def]
+        def test_normalize_transactions_skips_invalid(self, adapter, caplo...
+        ^
+server/tests/test_plaid_adapter.py:132:5: error: Function is missing a type
+annotation  [no-untyped-def]
+        def test_invalid_environment_raises(self, monkeypatch):
+        ^
 server/main.py:9:1: error: Cannot find implementation or library stub for
 module named "fastapi"  [import-not-found]
     from fastapi import FastAPI, Header, HTTPException
@@ -70,5 +169,17 @@ server/main.py:270:1: error: Function is missing a return type annotation
 [no-untyped-def]
     async def get_plaid_transactions(request: TransactionsRequest):
     ^
-Found 16 errors in 2 files (checked 2 source files)
+server/tests/conftest.py:3:1: error: Cannot find implementation or library stub
+for module named "pytest"  [import-not-found]
+    import pytest
+    ^
+server/tests/conftest.py:4:1: error: Cannot find implementation or library stub
+for module named "httpx"  [import-not-found]
+    from httpx import ASGITransport, AsyncClient
+    ^
+server/tests/conftest.py:10:1: error: Function is missing a return type
+annotation  [no-untyped-def]
+    async def client():
+    ^
+Found 43 errors in 6 files (checked 7 source files)
 
