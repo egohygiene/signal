@@ -3,11 +3,11 @@ See documentation on https://megalinter.io/8.8.0/descriptors/powershell_powershe
 -----------------------------------------------
 
 ❌ [ERROR] config/.arm-ttk.psd1
-    Invoke-ScriptAnalyzer: Value System.Collections.Generic.Dictionary`2[System.String,System.Object] for key severity has the wrong data type.
-
-❌ [ERROR] config/.powershell-formatter.psd1
     Invoke-ScriptAnalyzer: rootmodule is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
 
+❌ [ERROR] config/.powershell-formatter.psd1
+    Invoke-ScriptAnalyzer: powershellversion is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
+
 ❌ [ERROR] config/.powershell-psscriptanalyzer.psd1
-    Invoke-ScriptAnalyzer: Value System.Collections.Generic.Dictionary`2[System.String,System.Object] for key severity has the wrong data type.
+    Invoke-ScriptAnalyzer: rootmodule is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.
 

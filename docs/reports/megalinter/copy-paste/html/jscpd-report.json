@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-02-28T20:48:16.670Z",
+    "detectionDate": "2026-03-01T00:24:44.329Z",
     "formats": {
       "typescript": {
         "sources": {
@@ -221,8 +221,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/store/useAppStore.ts": {
-            "lines": 22,
-            "tokens": 262,
+            "lines": 27,
+            "tokens": 335,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -522,14 +522,14 @@
           }
         },
         "total": {
-          "lines": 1875,
-          "tokens": 19808,
+          "lines": 1880,
+          "tokens": 19881,
           "sources": 43,
           "clones": 7,
           "duplicatedLines": 85,
           "duplicatedTokens": 808,
-          "percentage": 4.53,
-          "percentageTokens": 4.08,
+          "percentage": 4.52,
+          "percentageTokens": 4.06,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -996,6 +996,18 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
+          "/github/workspace/ui/src/components/ErrorBoundary.test.tsx": {
+            "lines": 21,
+            "tokens": 220,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "/github/workspace/ui/src/app/App.tsx": {
             "lines": 9,
             "tokens": 132,
@@ -1070,9 +1082,9 @@
           }
         },
         "total": {
-          "lines": 453,
-          "tokens": 3550,
-          "sources": 17,
+          "lines": 474,
+          "tokens": 3770,
+          "sources": 18,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -1157,8 +1169,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/components/Placeholder/Placeholder.tsx": {
-            "lines": 6,
-            "tokens": 79,
+            "lines": 8,
+            "tokens": 85,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1361,8 +1373,32 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/pages/BudgetsPage.tsx": {
-            "lines": 13,
-            "tokens": 114,
+            "lines": 18,
+            "tokens": 210,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/components/ErrorBoundary.tsx": {
+            "lines": 34,
+            "tokens": 274,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/github/workspace/ui/src/components/ErrorBoundary.test.tsx": {
+            "lines": 41,
+            "tokens": 419,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1373,8 +1409,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/app/App.tsx": {
-            "lines": 34,
-            "tokens": 392,
+            "lines": 37,
+            "tokens": 415,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1398,9 +1434,9 @@
           }
         },
         "total": {
-          "lines": 1050,
-          "tokens": 10949,
-          "sources": 26,
+          "lines": 1135,
+          "tokens": 11767,
+          "sources": 28,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -2044,18 +2080,6 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
-          "/github/workspace/schema/README.md": {
-            "lines": 21,
-            "tokens": 115,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
           "/github/workspace/docs/plaid-setup.md": {
             "lines": 143,
             "tokens": 1238,
@@ -2093,8 +2117,8 @@
             "newClones": 0
           },
           "/github/workspace/README.md": {
-            "lines": 223,
-            "tokens": 1467,
+            "lines": 221,
+            "tokens": 1432,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -2106,9 +2130,9 @@
           }
         },
         "total": {
-          "lines": 1293,
-          "tokens": 8363,
-          "sources": 10,
+          "lines": 1270,
+          "tokens": 8213,
+          "sources": 9,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
@@ -2264,14 +2288,14 @@
       }
     },
     "total": {
-      "lines": 8895,
-      "tokens": 63844,
-      "sources": 171,
+      "lines": 8983,
+      "tokens": 64805,
+      "sources": 173,
       "clones": 8,
       "duplicatedLines": 97,
       "duplicatedTokens": 890,
-      "percentage": 1.09,
-      "percentageTokens": 1.39,
+      "percentage": 1.08,
+      "percentageTokens": 1.37,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
