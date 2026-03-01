@@ -809,6 +809,9 @@
         <directory name="test">
           <file name="setup.ts"></file>
         </directory>
+        <directory name="utils">
+          <file name="transactionUtils.ts"></file>
+        </directory>
         <file name="i18n.ts"></file>
         <file name="index.css"></file>
         <file name="main.tsx"></file>
