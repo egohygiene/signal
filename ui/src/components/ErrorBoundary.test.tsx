@@ -39,4 +39,24 @@ describe('ErrorBoundary', () => {
     expect(screen.getByRole('alert')).toHaveTextContent('Custom error');
     spy.mockRestore();
   });
+
+  it('resets when resetKeys change, recovering when children no longer throw', () => {
+    // Simulates navigation: path A causes an error, navigating to path B (where the
+    // feature renders successfully) should recover the boundary.
+    const spy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const { rerender } = render(
+      <ErrorBoundary resetKeys={['/transactions']}>
+        <ThrowingComponent shouldThrow={true} />
+      </ErrorBoundary>,
+    );
+    expect(screen.getByRole('alert')).toBeInTheDocument();
+
+    rerender(
+      <ErrorBoundary resetKeys={['/budgets']}>
+        <ThrowingComponent shouldThrow={false} />
+      </ErrorBoundary>,
+    );
+    expect(screen.getByTestId('child')).toBeInTheDocument();
+    spy.mockRestore();
+  });
 });
