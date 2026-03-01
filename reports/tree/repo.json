@@ -661,6 +661,12 @@
       {"type":"file","name":"index.html"},
       {"type":"file","name":"plaid-setup.md"}
     ]},
+    {"type":"directory","name":"electron","contents":[
+      {"type":"file","name":"electron-builder.yml"},
+      {"type":"file","name":"main.js"},
+      {"type":"file","name":"package.json"},
+      {"type":"file","name":"preload.js"}
+    ]},
     {"type":"directory","name":"reports","contents":[
       {"type":"directory","name":"kics","contents":[
         {"type":"file","name":"results.json"}

@@ -615,6 +615,11 @@
 │   ├── favicon.ico
 │   ├── index.html
 │   └── plaid-setup.md
+├── electron
+│   ├── electron-builder.yml
+│   ├── main.js
+│   ├── package.json
+│   └── preload.js
 ├── reports
 │   ├── kics
 │   │   └── results.json
