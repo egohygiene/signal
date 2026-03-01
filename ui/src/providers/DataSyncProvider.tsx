@@ -4,7 +4,7 @@ import { useCategoriesQuery } from '@egohygiene/signal/query/useCategoriesQuery'
 import { usePoolsQuery } from '@egohygiene/signal/query/usePoolsQuery';
 import { useTransactionsQuery } from '@egohygiene/signal/query/useTransactionsQuery';
 import { selectSetBudgets, selectSetCategories, selectSetPools, selectSetTransactions, useAppStore } from '@egohygiene/signal/store';
-import { createContext, useContext, type JSX, type ReactNode, useEffect, useMemo } from 'react';
+import { createContext, type JSX, type ReactNode, useContext, useEffect, useMemo } from 'react';
 
 export type DataSyncState = {
   /** True while any query is still fetching for the first time. */

@@ -1,6 +1,6 @@
+import type { AllocationRule } from '@egohygiene/signal/schema/v1/allocation-rule';
 import { describe, expect, it } from 'vitest';
 
-import type { AllocationRule } from '../../schema/v1/allocation-rule';
 import {
   applyAllocationRules,
   DefaultAllocationStrategy,

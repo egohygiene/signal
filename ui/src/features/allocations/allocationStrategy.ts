@@ -1,4 +1,4 @@
-import type { AllocationRule } from '../../schema/v1/allocation-rule';
+import type { AllocationRule } from '@egohygiene/signal/schema/v1/allocation-rule';
 
 export type AllocationResult = {
   poolId: string;

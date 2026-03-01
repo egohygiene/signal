@@ -1,6 +1,5 @@
+import { logger } from '@egohygiene/signal/logging';
 import { Component, type ErrorInfo, type ReactNode } from 'react';
-
-import { logger } from '../logging/logger';
 
 type ErrorBoundaryProps = {
   children: ReactNode;

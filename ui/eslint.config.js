@@ -49,4 +49,24 @@ export default defineConfig([
       'no-restricted-syntax': 'off',
     },
   },
+  // Enforce import boundary rules: within src/, cross-layer imports must use
+  // the @egohygiene/signal/* path alias rather than relative paths that escape
+  // the current module directory.
+  {
+    files: ['src/**/*.{ts,tsx}'],
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['../../*', '../../../*'],
+              message:
+                'Cross-layer relative imports are not allowed. Use the @egohygiene/signal/* path alias instead (e.g. @egohygiene/signal/store).',
+            },
+          ],
+        },
+      ],
+    },
+  },
 ]);

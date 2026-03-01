@@ -1,12 +1,9 @@
+import type { Budget } from '@egohygiene/signal/schema/v1/budget';
+import type { Transaction } from '@egohygiene/signal/schema/v1/transaction';
+import { computeCategoryTotals, isInMonth } from '@egohygiene/signal/utils/transactionUtils';
 import { describe, expect, it } from 'vitest';
 
-import type { Budget } from '../../schema/v1/budget';
-import type { Transaction } from '../../schema/v1/transaction';
-import {
-  compareBudgets,
-  computeCategoryTotals,
-  isInMonth,
-} from './budgetCalculations';
+import { compareBudgets } from './budgetCalculations';
 
 const makeTransaction = (overrides: Partial<Transaction> = {}): Transaction => ({
   id: 'tx-1',
