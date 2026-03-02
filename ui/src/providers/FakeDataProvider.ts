@@ -6,7 +6,7 @@ import type { Pool } from '@egohygiene/signal/schema/v1/pool';
 import { PoolSchema } from '@egohygiene/signal/schema/v1/pool';
 import type { Transaction } from '@egohygiene/signal/schema/v1/transaction';
 import { TransactionSchema } from '@egohygiene/signal/schema/v1/transaction';
-import { faker } from '@faker-js/faker';
+import { Faker, en } from '@faker-js/faker';
 import { z } from 'zod';
 
 import type { DataProvider } from './DataProvider';
@@ -76,7 +76,7 @@ function buildCategories(pools: Pool[]): Category[] {
   return [...parents, ...children];
 }
 
-function buildPools(rng: typeof faker): Pool[] {
+function buildPools(rng: Faker): Pool[] {
   return POOL_NAMES.map((name, i) => ({
     id: `pool-${i + 1}`,
     name,
@@ -85,7 +85,7 @@ function buildPools(rng: typeof faker): Pool[] {
   }));
 }
 
-function buildBudgets(rng: typeof faker, categories: Category[]): Budget[] {
+function buildBudgets(rng: Faker, categories: Category[]): Budget[] {
   const periods: Budget['period'][] = ['weekly', 'monthly', 'yearly', 'custom'];
   return categories.slice(0, 6).map((cat, i) => ({
     id: `budget-${i + 1}`,
@@ -99,7 +99,7 @@ function buildBudgets(rng: typeof faker, categories: Category[]): Budget[] {
   }));
 }
 
-function buildTransactions(rng: typeof faker, categories: Category[], pools: Pool[]): Transaction[] {
+function buildTransactions(rng: Faker, categories: Category[], pools: Pool[]): Transaction[] {
   return Array.from({ length: 50 }, (_, i) => {
     const cat = rng.helpers.arrayElement(categories);
     const pool = rng.datatype.boolean() ? rng.helpers.arrayElement(pools) : null;
@@ -117,9 +117,8 @@ function buildTransactions(rng: typeof faker, categories: Category[], pools: Poo
   });
 }
 
-function createSeededFaker(): typeof faker {
-  faker.seed(SEED);
-  return faker;
+function createSeededFaker(): Faker {
+  return new Faker({ locale: en, seed: SEED });
 }
 
 export function createFakeDataProvider(): DataProvider {
