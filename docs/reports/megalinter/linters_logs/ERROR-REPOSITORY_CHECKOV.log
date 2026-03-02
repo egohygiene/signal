@@ -4,60 +4,61 @@ See documentation on https://megalinter.io/8.8.0/descriptors/repository_checkov/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-2026-03-01 18:18:54,285 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
-2026-03-01 18:18:54,468 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.16.3
-2026-03-01 18:18:54,468 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
-2026-03-01 18:18:54,469 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
-2026-03-01 18:18:54,470 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
-2026-03-01 18:18:54,917 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
-2026-03-01 18:18:54,918 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
-2026-03-01 18:18:54,918 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
-2026-03-01 18:18:54,918 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
-2026-03-01 18:18:54,924 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
-2026-03-01 18:18:54,924 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
-2026-03-01 18:18:54,929 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-03-01 18:18:54,949 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-03-01 18:18:54,950 [MainThread  ] [INFO ]  Successfully created Serverless graph
-2026-03-01 18:18:54,989 [MainThread  ] [INFO ]  Creating ARM graph
-2026-03-01 18:18:54,995 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-03-01 18:18:55,001 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-03-01 18:18:55,004 [MainThread  ] [INFO ]  Creating vertices
-2026-03-01 18:18:55,004 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 2 vertices
-2026-03-01 18:18:55,004 [MainThread  ] [INFO ]  Creating edges
-2026-03-01 18:18:55,004 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-03-01 18:18:55,004 [MainThread  ] [INFO ]  Rendering variables, graph has 2 vertices and 0 edges
-2026-03-01 18:18:55,007 [MainThread  ] [INFO ]  Building cross variable edges
-2026-03-01 18:18:55,007 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-03-01 18:18:55,007 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-03-01 18:18:55,007 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-03-01 18:18:55,013 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-03-01 18:18:55,014 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-03-01 18:18:55,025 [MainThread  ] [INFO ]  Custom detector found at /venvs/checkov/lib/python3.13/site-packages/checkov/secrets/plugins/custom_regex_detector.py. Loading...
-2026-03-01 18:18:55,073 [MainThread  ] [INFO ]  Creating vertices
-2026-03-01 18:18:55,073 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-03-01 18:18:55,074 [MainThread  ] [INFO ]  Creating edges
-2026-03-01 18:18:55,074 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-03-01 18:18:55,092 [MainThread  ] [INFO ]  Secrets scanning will scan 74 files
-2026-03-01 18:18:57,708 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-03-01 18:18:57,709 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 vertices
-2026-03-01 18:18:57,709 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-03-01 18:18:57,709 [MainThread  ] [INFO ]  Rendering variables, graph has 0 vertices and 0 edges
-2026-03-01 18:18:57,710 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-03-01 18:18:58,313 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 627 has a length of 38433, which is higher than the max 10000
-2026-03-01 18:18:58,900 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-03-01 18:18:58,900 [MainThread  ] [INFO ]  Successfully created Ansible graph
-2026-03-01 18:18:59,249 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-03-01 18:18:59,266 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-03-01 18:18:59,863 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 3413 has a length of 15494, which is higher than the max 10000
-2026-03-01 18:19:02,500 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-03-01 18:19:02,500 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-03-01 18:19:02,807 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 18122 has a length of 18461, which is higher than the max 10000
-2026-03-01 18:19:03,453 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 20992 has a length of 50545, which is higher than the max 10000
-2026-03-01 18:19:04,706 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 27904 has a length of 55612, which is higher than the max 10000
-2026-03-01 18:19:04,836 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 28530 has a length of 16258, which is higher than the max 10000
-2026-03-01 18:19:06,019 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 35064 has a length of 13375, which is higher than the max 10000
-2026-03-01 18:19:06,193 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 36016 has a length of 17818, which is higher than the max 10000
-2026-03-01 18:19:07,130 [MainThread  ] [INFO ]  Cleanup the whole temp directory: /tmp/tmpmu6k0o7h
+2026-03-02 04:18:59,546 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
+2026-03-02 04:18:59,679 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.16.3
+2026-03-02 04:18:59,680 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
+2026-03-02 04:18:59,681 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
+2026-03-02 04:18:59,681 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
+2026-03-02 04:18:59,965 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
+2026-03-02 04:18:59,965 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
+2026-03-02 04:18:59,965 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
+2026-03-02 04:18:59,965 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
+2026-03-02 04:18:59,972 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
+2026-03-02 04:18:59,972 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
+2026-03-02 04:18:59,976 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-03-02 04:18:59,997 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-03-02 04:18:59,997 [MainThread  ] [INFO ]  Successfully created Serverless graph
+2026-03-02 04:19:00,037 [MainThread  ] [INFO ]  Creating ARM graph
+2026-03-02 04:19:00,038 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-03-02 04:19:00,044 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-03-02 04:19:00,045 [MainThread  ] [INFO ]  Creating vertices
+2026-03-02 04:19:00,045 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 2 vertices
+2026-03-02 04:19:00,045 [MainThread  ] [INFO ]  Creating edges
+2026-03-02 04:19:00,045 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-03-02 04:19:00,045 [MainThread  ] [INFO ]  Rendering variables, graph has 2 vertices and 0 edges
+2026-03-02 04:19:00,047 [MainThread  ] [INFO ]  Building cross variable edges
+2026-03-02 04:19:00,047 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-03-02 04:19:00,047 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-03-02 04:19:00,047 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-03-02 04:19:00,070 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-03-02 04:19:00,073 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-03-02 04:19:00,099 [MainThread  ] [INFO ]  Custom detector found at /venvs/checkov/lib/python3.13/site-packages/checkov/secrets/plugins/custom_regex_detector.py. Loading...
+2026-03-02 04:19:00,145 [MainThread  ] [INFO ]  Creating vertices
+2026-03-02 04:19:00,145 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-03-02 04:19:00,145 [MainThread  ] [INFO ]  Creating edges
+2026-03-02 04:19:00,145 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-03-02 04:19:00,150 [MainThread  ] [INFO ]  Secrets scanning will scan 76 files
+2026-03-02 04:19:02,555 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-03-02 04:19:02,556 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 vertices
+2026-03-02 04:19:02,556 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-03-02 04:19:02,556 [MainThread  ] [INFO ]  Rendering variables, graph has 0 vertices and 0 edges
+2026-03-02 04:19:02,557 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-03-02 04:19:03,524 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 627 has a length of 47309, which is higher than the max 10000
+2026-03-02 04:19:03,955 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-03-02 04:19:03,956 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-03-02 04:19:04,319 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-03-02 04:19:04,332 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-03-02 04:19:04,988 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 3413 has a length of 15494, which is higher than the max 10000
+2026-03-02 04:19:07,635 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-03-02 04:19:07,636 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-03-02 04:19:07,865 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 17099 has a length of 24574, which is higher than the max 10000
+2026-03-02 04:19:08,161 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 18441 has a length of 43248, which is higher than the max 10000
+2026-03-02 04:19:08,817 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 21411 has a length of 28705, which is higher than the max 10000
+2026-03-02 04:19:10,073 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 28363 has a length of 15552, which is higher than the max 10000
+2026-03-02 04:19:10,204 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 28989 has a length of 16258, which is higher than the max 10000
+2026-03-02 04:19:11,414 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 35523 has a length of 13375, which is higher than the max 10000
+2026-03-02 04:19:11,602 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 36475 has a length of 17818, which is higher than the max 10000
+2026-03-02 04:19:12,283 [MainThread  ] [INFO ]  Cleanup the whole temp directory: /tmp/tmpumw6jklf
 terraform_plan scan results:
 
 Passed checks: 0, Failed checks: 0, Skipped checks: 0, Parsing errors: 2
@@ -67,10 +68,10 @@ secrets scan results:
 Passed checks: 0, Failed checks: 1, Skipped checks: 0
 
 Check: CKV_SECRET_6: "Base64 High Entropy String"
-	FAILED for resource: HIDDEN_BY_MEGALINTER	File: /package.json:46-47
+	FAILED for resource: HIDDEN_BY_MEGALINTER	File: /package.json:49-50
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/secrets-policies/secrets-policy-index/git-secrets-6
 
-		46 |     "lint:secretlint": "npm run lint:base -- --env ENABLE_LINTERS=REPOS**********",
+		49 |     "lint:secretlint": "npm run lint:base -- --env ENABLE_LINTERS=REPOS**********",
 
 github_actions scan results:
 

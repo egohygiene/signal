@@ -12,7 +12,7 @@ The MegaLinter documentation can be found at:
 MegaLinter will analyze workspace [/github/workspace]
 GITHUB_REPOSITORY: egohygiene/signal
 GITHUB_REF: refs/heads/main
-GITHUB_RUN_ID: 22549487105
+GITHUB_RUN_ID: 22561131388
 
 
 [Pre] run: [echo "Calling pre-commands from $(pwd)"] in cwd [/github/workspace]
@@ -91,7 +91,7 @@ Listing all files in directory [/github/workspace], then filter with:
 )
 
 - Excluding .gitignored files [1]: reports/megalinter/mega-linter.log
-Kept [285] files on [285] found files
+Kept [296] files on [296] found files
 
 +----MATCHING LINTERS-----------------------+------------------------------------------------------------------------+----------------+------------+
 | Descriptor     | Linter                   | Criteria                                                               | Matching files | Format/Fix |
@@ -114,14 +114,14 @@ Kept [285] files on [285] found files
 | CLOUDFORMATION | cfn-lint                 | .yml|.yaml|.json                                                       | 1              | no         |
 | COPYPASTE      | jscpd                    |                                                                        | project        | no         |
 | CSS            | stylelint                | .css|.scss|.saas                                                       | 1              | no         |
-| EDITORCONFIG   | editorconfig-checker     | *                                                                      | 285            | no         |
+| EDITORCONFIG   | editorconfig-checker     | *                                                                      | 296            | no         |
 | HTML           | djlint                   | .html|.htm                                                             | 2              | no         |
 | HTML           | htmlhint                 | .html|.htm                                                             | 2              | no         |
-| JAVASCRIPT     | eslint                   | .js|.vue                                                               | 1              | no         |
-| JAVASCRIPT     | prettier                 | .js                                                                    | 1              | no         |
-| JSON           | jsonlint                 | .json                                                                  | 30             | no         |
-| JSON           | v8r                      | .json                                                                  | 30             | no         |
-| JSON           | prettier                 | .json                                                                  | 30             | no         |
+| JAVASCRIPT     | eslint                   | .js|.vue                                                               | 4              | no         |
+| JAVASCRIPT     | prettier                 | .js                                                                    | 4              | no         |
+| JSON           | jsonlint                 | .json                                                                  | 31             | no         |
+| JSON           | v8r                      | .json                                                                  | 31             | no         |
+| JSON           | prettier                 | .json                                                                  | 31             | no         |
 | JSON           | npm-package-json-lint    | .json|package\.json                                                    | project        | no         |
 | MARKDOWN       | markdownlint             | .md                                                                    | 11             | no         |
 | MARKDOWN       | markdown-link-check      | .md                                                                    | 11             | no         |
@@ -144,22 +144,22 @@ Kept [285] files on [285] found files
 | SALESFORCE     | sfdx-scanner-aura        |                                                                        | project        | no         |
 | SALESFORCE     | sfdx-scanner-lwc         |                                                                        | project        | no         |
 | SALESFORCE     | lightning-flow-scanner   |                                                                        | project        | no         |
-| SPELL          | cspell                   |                                                                        | 285            | no         |
+| SPELL          | cspell                   |                                                                        | 296            | no         |
 | SPELL          | proselint                | .md|.txt                                                               | 12             | no         |
 | SPELL          | vale                     | .md|.rst                                                               | 11             | no         |
-| SPELL          | lychee                   | .md|.mdx|.markdown|.html|.htm|.rst|.txt|.json|.jsonc|.json5|.yaml|.yml | 120            | no         |
+| SPELL          | lychee                   | .md|.mdx|.markdown|.html|.htm|.rst|.txt|.json|.jsonc|.json5|.yaml|.yml | 122            | no         |
 | TERRAFORM      | terragrunt               | .hcl                                                                   | 1              | no         |
 | TSX            | eslint                   | .tsx                                                                   | 28             | no         |
-| TYPESCRIPT     | eslint                   | .ts                                                                    | 49             | no         |
-| TYPESCRIPT     | ts-standard              | .ts                                                                    | 49             | no         |
-| TYPESCRIPT     | prettier                 | .ts                                                                    | 49             | no         |
+| TYPESCRIPT     | eslint                   | .ts                                                                    | 54             | no         |
+| TYPESCRIPT     | ts-standard              | .ts                                                                    | 54             | no         |
+| TYPESCRIPT     | prettier                 | .ts                                                                    | 54             | no         |
 | XML            | xmllint                  | .xml|.xsd                                                              | 5              | no         |
-| YAML           | prettier                 | .yml|.yaml                                                             | 76             | no         |
-| YAML           | yamllint                 | .yml|.yaml                                                             | 76             | no         |
-| YAML           | v8r                      | .yml|.yaml                                                             | 76             | no         |
+| YAML           | prettier                 | .yml|.yaml                                                             | 77             | no         |
+| YAML           | yamllint                 | .yml|.yaml                                                             | 77             | no         |
+| YAML           | v8r                      | .yml|.yaml                                                             | 77             | no         |
 +----------------+--------------------------+------------------------------------------------------------------------+----------------+------------+
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [pylint]: Found 14 error(s) and 0 warning(s) - (3.45s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [pylint]: Found 14 error(s) and 0 warning(s) - (3.47s)[0m (expand for details)
 - Using [pylint v3.3.7] https://megalinter.io/8.8.0/descriptors/python_pylint
 - MegaLinter key: [PYTHON_PYLINT]
 - Rules config: [/github/workspace/config/.pylintrc]
@@ -195,7 +195,7 @@ server/tests/test_plaid_adapter.py:3:0: E0401: Unable to import 'pytest' (import
 - Number of files analyzed: [7]
 - Command: [flake8 --config /github/workspace/config/.flake8 server/main.py server/plaid_adapter.py server/tests/__init__.py server/tests/conftest.py server/tests/test_error_handling.py server/tests/test_health.py server/tests/test_plaid_adapter.py]
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [isort]: Found 3 error(s) and 0 warning(s) - (0.18s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [isort]: Found 3 error(s) and 0 warning(s) - (0.17s)[0m (expand for details)
 - Using [isort v6.0.1] https://megalinter.io/8.8.0/descriptors/python_isort
 - MegaLinter key: [PYTHON_ISORT]
 - Rules config: identified by [isort]
@@ -205,8 +205,8 @@ server/tests/test_plaid_adapter.py:3:0: E0401: Unable to import 'pytest' (import
 ERROR: /github/workspace/server/main.py Imports are incorrectly sorted and/or formatted.
 ERROR: /github/workspace/server/tests/conftest.py Imports are incorrectly sorted and/or formatted.
 ERROR: /github/workspace/server/tests/test_plaid_adapter.py Imports are incorrectly sorted and/or formatted.
---- /github/workspace/server/main.py:before	2026-03-01 18:17:49.078712
-+++ /github/workspace/server/main.py:after	2026-03-01 18:17:57.766295
+--- /github/workspace/server/main.py:before	2026-03-02 04:17:52.357043
++++ /github/workspace/server/main.py:after	2026-03-02 04:18:01.448709
 @@ -8,10 +8,9 @@
  
  from fastapi import FastAPI, Header, HTTPException
@@ -219,8 +219,8 @@ ERROR: /github/workspace/server/tests/test_plaid_adapter.py Imports are incorrec
  
  
  class Settings(BaseSettings):
---- /github/workspace/server/tests/conftest.py:before	2026-03-01 18:17:49.079192
-+++ /github/workspace/server/tests/conftest.py:after	2026-03-01 18:17:57.771848
+--- /github/workspace/server/tests/conftest.py:before	2026-03-02 04:17:52.357494
++++ /github/workspace/server/tests/conftest.py:after	2026-03-02 04:18:01.454214
 @@ -2,7 +2,6 @@
  
  import pytest
@@ -229,8 +229,8 @@ ERROR: /github/workspace/server/tests/test_plaid_adapter.py Imports are incorrec
  from main import app
  
  
---- /github/workspace/server/tests/test_plaid_adapter.py:before	2026-03-01 18:17:49.079192
-+++ /github/workspace/server/tests/test_plaid_adapter.py:after	2026-03-01 18:17:57.776142
+--- /github/workspace/server/tests/test_plaid_adapter.py:before	2026-03-02 04:17:52.357494
++++ /github/workspace/server/tests/test_plaid_adapter.py:after	2026-03-02 04:18:01.458533
 @@ -1,7 +1,6 @@
  """Tests for the PlaidAdapter stub (no real API calls)."""
  
@@ -241,14 +241,14 @@ ERROR: /github/workspace/server/tests/test_plaid_adapter.py Imports are incorrec
  
 
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [bandit]: Found 44 error(s) and 0 warning(s) - (1.57s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [bandit]: Found 46 error(s) and 0 warning(s) - (1.63s)[0m (expand for details)
 - Using [bandit v1.8.3] https://megalinter.io/8.8.0/descriptors/python_bandit
 - MegaLinter key: [PYTHON_BANDIT]
 - Rules config: [/github/workspace/config/.bandit.yml]
 - Number of files analyzed: [7]
 - Command: [bandit --quiet -c /github/workspace/config/.bandit.yml server/main.py server/plaid_adapter.py server/tests/__init__.py server/tests/conftest.py server/tests/test_error_handling.py server/tests/test_health.py server/tests/test_plaid_adapter.py]
 --Error detail:
-Run started:2026-03-01 18:17:58.790547
+Run started:2026-03-02 04:18:02.471186
 
 Test results:
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
@@ -357,8 +357,8 @@ Test results:
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
    Location: ./server/tests/test_error_handling.py:73:4
 72	    )
-73	    assert response.status_code == 503
-74	    assert "not configured" in response.json()["detail"].lower()
+73	    assert response.status_code == 400
+74	    assert "empty" in response.json()["detail"].lower()
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
@@ -366,8 +366,8 @@ Test results:
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
    Location: ./server/tests/test_error_handling.py:74:4
-73	    assert response.status_code == 503
-74	    assert "not configured" in response.json()["detail"].lower()
+73	    assert response.status_code == 400
+74	    assert "empty" in response.json()["detail"].lower()
 75	
 
 --------------------------------------------------
@@ -375,9 +375,29 @@ Test results:
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_error_handling.py:81:4
-80	    response = await client.get("/nonexistent")
-81	    assert response.status_code == 404
+   Location: ./server/tests/test_error_handling.py:84:4
+83	    )
+84	    assert response.status_code == 503
+85	    assert "not configured" in response.json()["detail"].lower()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_error_handling.py:85:4
+84	    assert response.status_code == 503
+85	    assert "not configured" in response.json()["detail"].lower()
+86	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_error_handling.py:92:4
+91	    response = await client.get("/nonexistent")
+92	    assert response.status_code == 404
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
@@ -698,25 +718,25 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 668
+	Total lines of code: 682
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 44
+		Low: 46
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 2
-		High: 42
+		High: 44
 Files skipped (0):
 
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [mypy]: Found 43 error(s) and 0 warning(s) - (2.35s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [mypy]: Found 44 error(s) and 0 warning(s) - (2.3s)[0m (expand for details)
 - Using [mypy v1.16.0] https://megalinter.io/8.8.0/descriptors/python_mypy
 - MegaLinter key: [PYTHON_MYPY]
 - Rules config: [/github/workspace/config/.mypy.ini]
@@ -777,9 +797,13 @@ annotation  [no-untyped-def]
     ^
 server/tests/test_error_handling.py:67:1: error: Function is missing a type
 annotation  [no-untyped-def]
-    async def test_plaid_transactions_post_plaid_not_configured(client):
+    async def test_plaid_transactions_post_empty_access_token(client):
     ^
 server/tests/test_error_handling.py:78:1: error: Function is missing a type
+annotation  [no-untyped-def]
+    async def test_plaid_transactions_post_plaid_not_configured(client):
+    ^
+server/tests/test_error_handling.py:89:1: error: Function is missing a type
 annotation  [no-untyped-def]
     async def test_not_found_endpoint(client):
     ^
@@ -900,10 +924,10 @@ server/tests/conftest.py:10:1: error: Function is missing a return type
 annotation  [no-untyped-def]
     async def client():
     ^
-Found 43 errors in 6 files (checked 7 source files)
+Found 44 errors in 6 files (checked 7 source files)
 
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [pyright]: Found 302 error(s) and 0 warning(s) - (2.41s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [pyright]: Found 312 error(s) and 0 warning(s) - (2.32s)[0m (expand for details)
 - Using [pyright v1.1.402] https://megalinter.io/8.8.0/descriptors/python_pyright
 - MegaLinter key: [PYTHON_PYRIGHT]
 - Rules config: [/github/workspace/config/pyrightconfig.json]
@@ -955,39 +979,39 @@ venv .venv subdirectory not found in venv path /github/workspace/config.
   /github/workspace/server/main.py:256:24 - error: Type of "get" is unknown (reportUnknownMemberType)
   /github/workspace/server/main.py:269:2 - error: Type of "post" is unknown (reportUnknownMemberType)
   /github/workspace/server/main.py:269:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
-  /github/workspace/server/main.py:304:9 - error: Type of "result" is unknown (reportUnknownVariableType)
-  /github/workspace/server/main.py:304:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  /github/workspace/server/main.py:312:9 - error: Type of "normalized_transactions" is unknown (reportUnknownVariableType)
-  /github/workspace/server/main.py:312:35 - error: Type of "normalize_transactions" is unknown (reportUnknownMemberType)
-  /github/workspace/server/main.py:313:13 - error: Type of "get" is unknown (reportUnknownMemberType)
-  /github/workspace/server/main.py:320:56 - error: Argument type is unknown
+  /github/workspace/server/main.py:311:9 - error: Type of "result" is unknown (reportUnknownVariableType)
+  /github/workspace/server/main.py:311:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:319:9 - error: Type of "normalized_transactions" is unknown (reportUnknownVariableType)
+  /github/workspace/server/main.py:319:35 - error: Type of "normalize_transactions" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:320:13 - error: Type of "get" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:327:56 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  /github/workspace/server/main.py:321:47 - error: Type of "get" is unknown (reportUnknownMemberType)
-  /github/workspace/server/main.py:321:47 - error: Argument type is unknown
+  /github/workspace/server/main.py:328:47 - error: Type of "get" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:328:47 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  /github/workspace/server/main.py:329:16 - error: Type of "tx" is unknown (reportUnknownVariableType)
-  /github/workspace/server/main.py:329:32 - error: Argument type is unknown
+  /github/workspace/server/main.py:336:16 - error: Type of "tx" is unknown (reportUnknownVariableType)
+  /github/workspace/server/main.py:336:32 - error: Argument type is unknown
     Argument corresponds to parameter "iterable" in function "__new__" (reportUnknownArgumentType)
-  /github/workspace/server/main.py:331:34 - error: Type of "transaction_id" is unknown (reportUnknownMemberType)
-  /github/workspace/server/main.py:332:36 - error: Type of "date" is unknown (reportUnknownMemberType)
-  /github/workspace/server/main.py:333:36 - error: Type of "name" is unknown (reportUnknownMemberType)
-  /github/workspace/server/main.py:334:39 - error: Type of "amount" is unknown (reportUnknownMemberType)
-  /github/workspace/server/main.py:334:55 - error: Type of "iso_currency_code" is unknown (reportUnknownMemberType)
-  /github/workspace/server/main.py:337:30 - error: Type of "category" is unknown (reportUnknownMemberType)
-  /github/workspace/server/main.py:337:30 - error: Argument type is unknown
+  /github/workspace/server/main.py:338:34 - error: Type of "transaction_id" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:339:36 - error: Type of "date" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:340:36 - error: Type of "name" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:341:39 - error: Type of "amount" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:341:55 - error: Type of "iso_currency_code" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:344:30 - error: Type of "category" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:344:30 - error: Argument type is unknown
     Argument corresponds to parameter "iterable" in function "join" (reportUnknownArgumentType)
-  /github/workspace/server/main.py:337:46 - error: Type of "category" is unknown (reportUnknownMemberType)
-  /github/workspace/server/main.py:339:39 - error: Type of "pending" is unknown (reportUnknownMemberType)
-  /github/workspace/server/main.py:341:16 - error: Argument type is unknown
+  /github/workspace/server/main.py:344:46 - error: Type of "category" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:346:39 - error: Type of "pending" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:348:16 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  /github/workspace/server/main.py:343:32 - error: Argument type is unknown
+  /github/workspace/server/main.py:350:32 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  /github/workspace/server/main.py:350:29 - error: Argument type is unknown
+  /github/workspace/server/main.py:357:29 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  /github/workspace/server/main.py:351:32 - error: Type of "get" is unknown (reportUnknownMemberType)
-  /github/workspace/server/main.py:351:32 - error: Argument type is unknown
+  /github/workspace/server/main.py:358:32 - error: Type of "get" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:358:32 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  /github/workspace/server/main.py:352:24 - error: Type of "get" is unknown (reportUnknownMemberType)
+  /github/workspace/server/main.py:359:24 - error: Type of "get" is unknown (reportUnknownMemberType)
 /github/workspace/server/plaid_adapter.py
   /github/workspace/server/plaid_adapter.py:7:8 - error: Import "plaid" could not be resolved (reportMissingImports)
   /github/workspace/server/plaid_adapter.py:8:6 - error: Import "plaid.api" could not be resolved (reportMissingImports)
@@ -1137,21 +1161,31 @@ venv .venv subdirectory not found in venv path /github/workspace/config.
   /github/workspace/server/tests/test_error_handling.py:66:2 - error: Type of "mark" is unknown (reportUnknownMemberType)
   /github/workspace/server/tests/test_error_handling.py:66:2 - error: Type of "asyncio" is unknown (reportUnknownMemberType)
   /github/workspace/server/tests/test_error_handling.py:66:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
-  /github/workspace/server/tests/test_error_handling.py:67:61 - error: Type of parameter "client" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_error_handling.py:67:61 - error: Type annotation is missing for parameter "client" (reportMissingParameterType)
+  /github/workspace/server/tests/test_error_handling.py:67:59 - error: Type of parameter "client" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_error_handling.py:67:59 - error: Type annotation is missing for parameter "client" (reportMissingParameterType)
   /github/workspace/server/tests/test_error_handling.py:69:5 - error: Type of "response" is unknown (reportUnknownVariableType)
   /github/workspace/server/tests/test_error_handling.py:69:22 - error: Type of "post" is unknown (reportUnknownMemberType)
   /github/workspace/server/tests/test_error_handling.py:73:12 - error: Type of "status_code" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_error_handling.py:74:32 - error: Type of "json" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_error_handling.py:74:32 - error: Type of "lower" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_error_handling.py:74:23 - error: Type of "json" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_error_handling.py:74:23 - error: Type of "lower" is unknown (reportUnknownMemberType)
   /github/workspace/server/tests/test_error_handling.py:77:2 - error: Type of "mark" is unknown (reportUnknownMemberType)
   /github/workspace/server/tests/test_error_handling.py:77:2 - error: Type of "asyncio" is unknown (reportUnknownMemberType)
   /github/workspace/server/tests/test_error_handling.py:77:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
-  /github/workspace/server/tests/test_error_handling.py:78:35 - error: Type of parameter "client" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_error_handling.py:78:35 - error: Type annotation is missing for parameter "client" (reportMissingParameterType)
+  /github/workspace/server/tests/test_error_handling.py:78:61 - error: Type of parameter "client" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_error_handling.py:78:61 - error: Type annotation is missing for parameter "client" (reportMissingParameterType)
   /github/workspace/server/tests/test_error_handling.py:80:5 - error: Type of "response" is unknown (reportUnknownVariableType)
-  /github/workspace/server/tests/test_error_handling.py:80:22 - error: Type of "get" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_error_handling.py:81:12 - error: Type of "status_code" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_error_handling.py:80:22 - error: Type of "post" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_error_handling.py:84:12 - error: Type of "status_code" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_error_handling.py:85:32 - error: Type of "json" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_error_handling.py:85:32 - error: Type of "lower" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_error_handling.py:88:2 - error: Type of "mark" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_error_handling.py:88:2 - error: Type of "asyncio" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_error_handling.py:88:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
+  /github/workspace/server/tests/test_error_handling.py:89:35 - error: Type of parameter "client" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_error_handling.py:89:35 - error: Type annotation is missing for parameter "client" (reportMissingParameterType)
+  /github/workspace/server/tests/test_error_handling.py:91:5 - error: Type of "response" is unknown (reportUnknownVariableType)
+  /github/workspace/server/tests/test_error_handling.py:91:22 - error: Type of "get" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_error_handling.py:92:12 - error: Type of "status_code" is unknown (reportUnknownMemberType)
 /github/workspace/server/tests/test_health.py
   /github/workspace/server/tests/test_health.py:3:8 - error: Import "pytest" could not be resolved (reportMissingImports)
   /github/workspace/server/tests/test_health.py:6:2 - error: Type of "mark" is unknown (reportUnknownMemberType)
@@ -1254,7 +1288,7 @@ venv .venv subdirectory not found in venv path /github/workspace/config.
   /github/workspace/server/tests/test_plaid_adapter.py:132:47 - error: Type of parameter "monkeypatch" is unknown (reportUnknownParameterType)
   /github/workspace/server/tests/test_plaid_adapter.py:132:47 - error: Type annotation is missing for parameter "monkeypatch" (reportMissingParameterType)
   /github/workspace/server/tests/test_plaid_adapter.py:134:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
-302 errors, 0 warnings, 0 informations 
+312 errors, 0 warnings, 0 informations 
 
 ::endgroup::
 ::group::[32m✅ Linted [PYTHON] files with [ruff] successfully - (0.01s)[0m (expand for details)
@@ -1337,7 +1371,7 @@ Would reformat: [1mserver/tests/test_plaid_adapter.py[0m
    |         ^~~~
 
 ::endgroup::
-::group::[32m✅ Linted [ANSIBLE] files with [ansible-lint] successfully - (6.83s)[0m (expand for details)
+::group::[32m✅ Linted [ANSIBLE] files with [ansible-lint] successfully - (6.75s)[0m (expand for details)
 - Using [ansible-lint v25.5.0] https://megalinter.io/8.8.0/descriptors/ansible_ansible_lint
 - MegaLinter key: [ANSIBLE_ANSIBLE_LINT]
 - Rules config: [/github/workspace/config/.ansible-lint]
@@ -1450,7 +1484,7 @@ linting took 4ms, errors: 0, warnings: 4
 - Number of files analyzed: [1]
 - Command: [cljstyle check config/.clj-kondo/config.edn]
 ::endgroup::
-::group::[31m❌ Linted [CLOUDFORMATION] files with [cfn-lint]: Found 1 error(s) and 0 warning(s) - (5.93s)[0m (expand for details)
+::group::[31m❌ Linted [CLOUDFORMATION] files with [cfn-lint]: Found 1 error(s) and 0 warning(s) - (5.81s)[0m (expand for details)
 - Using [cfn-lint v1.36.0] https://megalinter.io/8.8.0/descriptors/cloudformation_cfn_lint
 - MegaLinter key: [CLOUDFORMATION_CFN_LINT]
 - Rules config: identified by [cfn-lint]
@@ -1483,7 +1517,7 @@ config/.cfnlintrc.yml:32:1
 
 
 ::endgroup::
-::group::[31m❌ Linted [COPYPASTE] files with [jscpd]: Found 8 error(s) and 0 warning(s) - (1.68s)[0m (expand for details)
+::group::[31m❌ Linted [COPYPASTE] files with [jscpd]: Found 8 error(s) and 0 warning(s) - (1.61s)[0m (expand for details)
 - Using [jscpd v4.0.5] https://megalinter.io/8.8.0/descriptors/copypaste_jscpd
 - MegaLinter key: [COPYPASTE_JSCPD]
 - Rules config: [/github/workspace/config/.jscpd.json]
@@ -1518,27 +1552,27 @@ Clone found (typescript):
    /github/workspace/ui/src/providers/FakeDataProvider.test.ts [12:5 - 18:74]
 
 Clone found (python):
- - /github/workspace/server/main.py [346:3 - 358:41] (12 lines, 82 tokens)
+ - /github/workspace/server/main.py [353:3 - 365:41] (12 lines, 82 tokens)
    /github/workspace/server/main.py [250:67 - 262:35]
 
 ┌────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
 │ Format     │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ typescript │ 44             │ 1912        │ 20494        │ 7            │ 85 (4.45%)       │ 808 (3.94%)       │
+│ typescript │ 50             │ 2013        │ 21764        │ 7            │ 85 (4.22%)       │ 808 (3.71%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json       │ 26             │ 1084        │ 6273         │ 0            │ 0 (0%)           │ 0 (0%)            │
+│ json       │ 27             │ 1110        │ 6421         │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ javascript │ 21             │ 516         │ 4099         │ 0            │ 0 (0%)           │ 0 (0%)            │
+│ javascript │ 23             │ 901         │ 6443         │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ tsx        │ 28             │ 1165        │ 12042        │ 0            │ 0 (0%)           │ 0 (0%)            │
+│ tsx        │ 28             │ 1178        │ 12172        │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ css        │ 1              │ 69          │ 378          │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python     │ 6              │ 845         │ 5031         │ 1            │ 12 (1.42%)       │ 82 (1.63%)        │
+│ python     │ 6              │ 863         │ 5160         │ 1            │ 12 (1.39%)       │ 82 (1.59%)        │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ clojure    │ 1              │ 33          │ 208          │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml       │ 30             │ 1849        │ 7226         │ 0            │ 0 (0%)           │ 0 (0%)            │
+│ yaml       │ 31             │ 1868        │ 7322         │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ bash       │ 2              │ 211         │ 1124         │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -1550,12 +1584,12 @@ Clone found (python):
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ powershell │ 3              │ 103         │ 451          │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 182            │ 9602        │ 69809        │ 8            │ 97 (1.01%)       │ 890 (1.27%)       │
+│ Total:     │ 192            │ 10164       │ 73926        │ 8            │ 97 (0.95%)       │ 890 (1.2%)        │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
 Found 8 clones.
 HTML report saved to reports/megalinter/copy-paste/html/
-ERROR: jscpd found too many duplicates (1.01%) over threshold (0%)
-Error: ERROR: jscpd found too many duplicates (1.01%) over threshold (0%)
+ERROR: jscpd found too many duplicates (0.95%) over threshold (0%)
+Error: ERROR: jscpd found too many duplicates (0.95%) over threshold (0%)
     at ThresholdReporter.report (/node-deps/node_modules/@jscpd/finder/dist/index.js:612:13)
     at /node-deps/node_modules/@jscpd/finder/dist/index.js:110:18
     at Array.forEach (<anonymous>)
@@ -1564,7 +1598,7 @@ Error: ERROR: jscpd found too many duplicates (1.01%) over threshold (0%)
 
 ::endgroup::
 Unable to get number of errors with regex_number and ([0-9]+) errors
-::group::[31m❌ Linted [CSS] files with [stylelint]: Found 1 error(s) and 0 warning(s) - (0.51s)[0m (expand for details)
+::group::[31m❌ Linted [CSS] files with [stylelint]: Found 1 error(s) and 0 warning(s) - (0.53s)[0m (expand for details)
 - Using [stylelint v16.20.0] https://megalinter.io/8.8.0/descriptors/css_stylelint
 - MegaLinter key: [CSS_STYLELINT]
 - Rules config: [/github/workspace/config/.stylelintrc.json]
@@ -1588,13 +1622,13 @@ ConfigurationError: Could not find "stylelint-config-prettier". Do you need to i
 - Using [editorconfig-checker v3.3.0] https://megalinter.io/8.8.0/descriptors/editorconfig_editorconfig_checker
 - MegaLinter key: [EDITORCONFIG_EDITORCONFIG_CHECKER]
 - Rules config: [/github/workspace/config/.editorconfig-checker.json]
-- Number of files analyzed: [285]
+- Number of files analyzed: [296]
 - Command: [editorconfig-checker -config /github/workspace/config/.editorconfig-checker.json .ansible/.lock .codespellrc .devcontainer/devcontainer.json .devcontainer/scripts/post-create.sh .dockerignore .editorconfig .github/linters/.gitkeep .github/workflows/g...(truncated)]
 --Error detail:
 [31;1mjson: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks[33;0m
 
 ::endgroup::
-::group::[31m❌ Linted [HTML] files with [djlint]: Found 5 error(s) and 0 warning(s) - (0.62s)[0m (expand for details)
+::group::[31m❌ Linted [HTML] files with [djlint]: Found 5 error(s) and 0 warning(s) - (0.63s)[0m (expand for details)
 - Using [djlint v1.36.4] https://megalinter.io/8.8.0/descriptors/html_djlint
 - MegaLinter key: [HTML_DJLINT]
 - Rules config: identified by [djlint]
@@ -1628,12 +1662,12 @@ Linted 2 files, found 5 errors.
 - Command: [htmlhint --config /github/workspace/config/.htmlhintrc docs/index.html ui/index.html]
 ::endgroup::
 Unable to get number of errors with regex_sum and ✖ ([0-9]+) problem
-::group::[31m❌ Linted [JAVASCRIPT] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.35s)[0m (expand for details)
+::group::[31m❌ Linted [JAVASCRIPT] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.36s)[0m (expand for details)
 - Using [eslint v8.57.1] https://megalinter.io/8.8.0/descriptors/javascript_eslint
 - MegaLinter key: [JAVASCRIPT_ES]
 - Rules config: [/github/workspace/config/.eslint.config.mjs]
-- Number of files analyzed: [1]
-- Command: [eslint --no-ignore -c /github/workspace/config/.eslint.config.mjs --no-eslintrc ui/eslint.config.js]
+- Number of files analyzed: [4]
+- Command: [eslint --no-ignore -c /github/workspace/config/.eslint.config.mjs --no-eslintrc electron/main.js electron/preload.js ui/eslint.config.js ui/public/mockServiceWorker.js]
 --Error detail:
 
 Oops! Something went wrong! :(
@@ -1666,8 +1700,8 @@ Error: end of the stream or a document separator is expected (25:14)
 - Using [prettier v3.5.3] https://megalinter.io/8.8.0/descriptors/javascript_prettier
 - MegaLinter key: [JAVASCRIPT_PRETTIER]
 - Rules config: [/github/workspace/config/.prettier.config.mjs]
-- Number of files analyzed: [1]
-- Command: [prettier --check --config /github/workspace/config/.prettier.config.mjs ui/eslint.config.js]
+- Number of files analyzed: [4]
+- Command: [prettier --check --config /github/workspace/config/.prettier.config.mjs electron/main.js electron/preload.js ui/eslint.config.js ui/public/mockServiceWorker.js]
 --Error detail:
 Checking formatting...
 [error] Cannot find package 'prettier-plugin-sh' imported from /github/workspace/noop.js
@@ -1677,7 +1711,7 @@ Checking formatting...
 - Using [jsonlint v16.0.0] https://megalinter.io/8.8.0/descriptors/json_jsonlint
 - MegaLinter key: [JSON_JSONLINT]
 - Rules config: [/github/workspace/config/.jsonlintrc]
-- Number of files analyzed: [30]
+- Number of files analyzed: [31]
 - Command: [jsonlint --quiet --config /github/workspace/config/.jsonlintrc .devcontainer/devcontainer.json .vscode/extensions.json .vscode/launch.json .vscode/settings.json .vscode/tasks.json config/.coffee-lint.json config/.devskim.json config/.editorconfig-che...(truncated)]
 --Error detail:
 File: .vscode/settings.json
@@ -1687,11 +1721,11 @@ Parse error on line 80, column 5:
 Trailing comma in object
 
 ::endgroup::
-::group::[31m❌ Linted [JSON] files with [v8r]: Found 1 error(s) and 0 warning(s) - (9.79s)[0m (expand for details)
+::group::[31m❌ Linted [JSON] files with [v8r]: Found 1 error(s) and 0 warning(s) - (11.3s)[0m (expand for details)
 - Using [v8r v5.0.0] https://megalinter.io/8.8.0/descriptors/json_v8r
 - MegaLinter key: [JSON_V8R]
 - Rules config: identified by [v8r]
-- Number of files analyzed: [30]
+- Number of files analyzed: [31]
 - Command: [v8r --ignore-errors .devcontainer/devcontainer.json .vscode/extensions.json .vscode/launch.json .vscode/settings.json .vscode/tasks.json config/.coffee-lint.json config/.devskim.json config/.editorconfig-checker.json config/.eslintrc-json.json config...(truncated)]
 --Error detail:
 ℹ No config file found
@@ -1818,6 +1852,11 @@ config/.groovylintrc.json#/rules must NOT have additional properties, found addi
 ℹ Processing config/styles/write-good/meta.json
 ✖ Could not find a schema to validate config/styles/write-good/meta.json
 
+ℹ Processing electron/package.json
+ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
+ℹ Validating electron/package.json against schema from https://www.schemastore.org/package.json ...
+✔ electron/package.json is valid
+
 ℹ Processing package.json
 ℹ Found schema in https://www.schemastore.org/api/json/catalog.json ...
 ℹ Validating package.json against schema from https://www.schemastore.org/package.json ...
@@ -1846,7 +1885,7 @@ config/.groovylintrc.json#/rules must NOT have additional properties, found addi
 - Using [prettier v3.5.3] https://megalinter.io/8.8.0/descriptors/json_prettier
 - MegaLinter key: [JSON_PRETTIER]
 - Rules config: [/github/workspace/config/.prettier.config.mjs]
-- Number of files analyzed: [30]
+- Number of files analyzed: [31]
 - Command: [prettier --check --config /github/workspace/config/.prettier.config.mjs .devcontainer/devcontainer.json .vscode/extensions.json .vscode/launch.json .vscode/settings.json .vscode/tasks.json config/.coffee-lint.json config/.devskim.json config/.editorc...(truncated)]
 --Error detail:
 Checking formatting...
@@ -1866,7 +1905,7 @@ cli:
 
 
 ::endgroup::
-::group::[31m❌ Linted [MARKDOWN] files with [markdownlint]: Found 52 error(s) and 0 warning(s) - (0.51s)[0m (expand for details)
+::group::[31m❌ Linted [MARKDOWN] files with [markdownlint]: Found 52 error(s) and 0 warning(s) - (0.56s)[0m (expand for details)
 - Using [markdownlint v0.45.0] https://megalinter.io/8.8.0/descriptors/markdown_markdownlint
 - MegaLinter key: [MARKDOWN_MARKDOWNLINT]
 - Rules config: [/github/workspace/config/.markdownlint.json]
@@ -1927,14 +1966,14 @@ ui/README.md:51:121 MD013/line-length Line length [Expected: 120; Actual: 191]
 ui/README.md:85:121 MD013/line-length Line length [Expected: 120; Actual: 285]
 
 ::endgroup::
-::group::[32m✅ Linted [MARKDOWN] files with [markdown-link-check] successfully - (3.86s)[0m (expand for details)
+::group::[32m✅ Linted [MARKDOWN] files with [markdown-link-check] successfully - (4.23s)[0m (expand for details)
 - Using [markdown-link-check v3.12.2] https://megalinter.io/8.8.0/descriptors/markdown_markdown_link_check
 - MegaLinter key: [MARKDOWN_MARKDOWN_LINK_CHECK]
 - Rules config: [/github/workspace/config/.markdown-link-check.json]
 - Number of files analyzed: [11]
 - Command: [markdown-link-check --quiet -c /github/workspace/config/.markdown-link-check.json README.md config/styles/proselint/README.md config/styles/write-good/README.md core/README.md docs/FINANCIAL_OPERATING_SYSTEM.md docs/SCHEMA_CONTRACT.md docs/plaid-setu...(truncated)]
 ::endgroup::
-::group::[31m❌ Linted [MARKDOWN] files with [markdown-table-formatter]: Found 1 error(s) and 0 warning(s) - (0.18s)[0m (expand for details)
+::group::[31m❌ Linted [MARKDOWN] files with [markdown-table-formatter]: Found 1 error(s) and 0 warning(s) - (0.17s)[0m (expand for details)
 - Using [markdown-table-formatter v1.6.1] https://megalinter.io/8.8.0/descriptors/markdown_markdown_table_formatter
 - MegaLinter key: [MARKDOWN_MARKDOWN_TABLE_FORMATTER]
 - Rules config: identified by [markdown-table-formatter]
@@ -1966,14 +2005,14 @@ Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning
 [0m
 [31m[powershell] config/.powershell-formatter.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-ScriptAnalyzer: [31;1mValue System.Collections.Generic.Dictionary`2[System.String,System.Object] for key severity has the wrong data type.[0m
+[31;1mInvoke-ScriptAnalyzer: [31;1mpowershellversion is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 [31m[powershell] config/.powershell-psscriptanalyzer.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
 [31;1mInvoke-ScriptAnalyzer: [31;1mValue System.Collections.Generic.Dictionary`2[System.String,System.Object] for key severity has the wrong data type.[0m
 [0m
 ::endgroup::
-::group::[31m❌ Linted [POWERSHELL] files with [powershell_formatter]: Found 3 error(s) and 0 warning(s) - (1.67s)[0m (expand for details)
+::group::[31m❌ Linted [POWERSHELL] files with [powershell_formatter]: Found 3 error(s) and 0 warning(s) - (1.69s)[0m (expand for details)
 - Using [powershell_formatter v7.5.1] https://megalinter.io/8.8.0/descriptors/powershell_powershell_formatter
 - MegaLinter key: [POWERSHELL_POWERSHELL_FORMATTER]
 - Rules config: [/github/workspace/config/.powershell-formatter.psd1]
@@ -1984,77 +2023,78 @@ Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning
   [pwsh -NoProfile -NoLogo -Command Invoke-Formatter -Settings /github/workspace/config/.powershell-formatter.psd1 -ScriptDefinition (Get-Content -Path 'config/.powershell-psscriptanalyzer.psd1' -Raw)]
 [31m[powershell_formatter] config/.arm-ttk.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-Formatter: [31;1mnewlineafteropenbrace is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-Formatter: [31;1museconstantstrings is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 [31m[powershell_formatter] config/.powershell-formatter.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-Formatter: [31;1mconverttoconsistentcommentstyle is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-Formatter: [31;1museconstantstrings is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 [31m[powershell_formatter] config/.powershell-psscriptanalyzer.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-Formatter: [31;1mindentationsize is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-Formatter: [31;1mplaceclosebraceonnewline is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [checkov]: Found 1 error(s) and 0 warning(s) - (21.5s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [checkov]: Found 1 error(s) and 0 warning(s) - (21.42s)[0m (expand for details)
 - Using [checkov v3.2.413] https://megalinter.io/8.8.0/descriptors/repository_checkov
 - MegaLinter key: [REPOSITORY_CHECKOV]
 - Rules config: [/github/workspace/config/.checkov.yml]
 - Command: [checkov --directory . --config-file /github/workspace/config/.checkov.yml]
 --Error detail:
-2026-03-01 18:18:54,285 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
-2026-03-01 18:18:54,468 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.16.3
-2026-03-01 18:18:54,468 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
-2026-03-01 18:18:54,469 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
-2026-03-01 18:18:54,470 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
-2026-03-01 18:18:54,917 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
-2026-03-01 18:18:54,918 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
-2026-03-01 18:18:54,918 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
-2026-03-01 18:18:54,918 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
-2026-03-01 18:18:54,924 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
-2026-03-01 18:18:54,924 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
-2026-03-01 18:18:54,929 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-03-01 18:18:54,949 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-03-01 18:18:54,950 [MainThread  ] [INFO ]  Successfully created Serverless graph
-2026-03-01 18:18:54,989 [MainThread  ] [INFO ]  Creating ARM graph
-2026-03-01 18:18:54,995 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-03-01 18:18:55,001 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-03-01 18:18:55,004 [MainThread  ] [INFO ]  Creating vertices
-2026-03-01 18:18:55,004 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 2 vertices
-2026-03-01 18:18:55,004 [MainThread  ] [INFO ]  Creating edges
-2026-03-01 18:18:55,004 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-03-01 18:18:55,004 [MainThread  ] [INFO ]  Rendering variables, graph has 2 vertices and 0 edges
-2026-03-01 18:18:55,007 [MainThread  ] [INFO ]  Building cross variable edges
-2026-03-01 18:18:55,007 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-03-01 18:18:55,007 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-03-01 18:18:55,007 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-03-01 18:18:55,013 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-03-01 18:18:55,014 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-03-01 18:18:55,025 [MainThread  ] [INFO ]  Custom detector found at /venvs/checkov/lib/python3.13/site-packages/checkov/secrets/plugins/custom_regex_detector.py. Loading...
-2026-03-01 18:18:55,073 [MainThread  ] [INFO ]  Creating vertices
-2026-03-01 18:18:55,073 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-03-01 18:18:55,074 [MainThread  ] [INFO ]  Creating edges
-2026-03-01 18:18:55,074 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-03-01 18:18:55,092 [MainThread  ] [INFO ]  Secrets scanning will scan 74 files
-2026-03-01 18:18:57,708 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-03-01 18:18:57,709 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 vertices
-2026-03-01 18:18:57,709 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-03-01 18:18:57,709 [MainThread  ] [INFO ]  Rendering variables, graph has 0 vertices and 0 edges
-2026-03-01 18:18:57,710 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-03-01 18:18:58,313 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 627 has a length of 38433, which is higher than the max 10000
-2026-03-01 18:18:58,900 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-03-01 18:18:58,900 [MainThread  ] [INFO ]  Successfully created Ansible graph
-2026-03-01 18:18:59,249 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-03-01 18:18:59,266 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-03-01 18:18:59,863 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 3413 has a length of 15494, which is higher than the max 10000
-2026-03-01 18:19:02,500 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-03-01 18:19:02,500 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-03-01 18:19:02,807 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 18122 has a length of 18461, which is higher than the max 10000
-2026-03-01 18:19:03,453 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 20992 has a length of 50545, which is higher than the max 10000
-2026-03-01 18:19:04,706 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 27904 has a length of 55612, which is higher than the max 10000
-2026-03-01 18:19:04,836 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 28530 has a length of 16258, which is higher than the max 10000
-2026-03-01 18:19:06,019 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 35064 has a length of 13375, which is higher than the max 10000
-2026-03-01 18:19:06,193 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 36016 has a length of 17818, which is higher than the max 10000
-2026-03-01 18:19:07,130 [MainThread  ] [INFO ]  Cleanup the whole temp directory: /tmp/tmpmu6k0o7h
+2026-03-02 04:18:59,546 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
+2026-03-02 04:18:59,679 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.16.3
+2026-03-02 04:18:59,680 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
+2026-03-02 04:18:59,681 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
+2026-03-02 04:18:59,681 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
+2026-03-02 04:18:59,965 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
+2026-03-02 04:18:59,965 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
+2026-03-02 04:18:59,965 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
+2026-03-02 04:18:59,965 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
+2026-03-02 04:18:59,972 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
+2026-03-02 04:18:59,972 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
+2026-03-02 04:18:59,976 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-03-02 04:18:59,997 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-03-02 04:18:59,997 [MainThread  ] [INFO ]  Successfully created Serverless graph
+2026-03-02 04:19:00,037 [MainThread  ] [INFO ]  Creating ARM graph
+2026-03-02 04:19:00,038 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-03-02 04:19:00,044 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-03-02 04:19:00,045 [MainThread  ] [INFO ]  Creating vertices
+2026-03-02 04:19:00,045 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 2 vertices
+2026-03-02 04:19:00,045 [MainThread  ] [INFO ]  Creating edges
+2026-03-02 04:19:00,045 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-03-02 04:19:00,045 [MainThread  ] [INFO ]  Rendering variables, graph has 2 vertices and 0 edges
+2026-03-02 04:19:00,047 [MainThread  ] [INFO ]  Building cross variable edges
+2026-03-02 04:19:00,047 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-03-02 04:19:00,047 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-03-02 04:19:00,047 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-03-02 04:19:00,070 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-03-02 04:19:00,073 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-03-02 04:19:00,099 [MainThread  ] [INFO ]  Custom detector found at /venvs/checkov/lib/python3.13/site-packages/checkov/secrets/plugins/custom_regex_detector.py. Loading...
+2026-03-02 04:19:00,145 [MainThread  ] [INFO ]  Creating vertices
+2026-03-02 04:19:00,145 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-03-02 04:19:00,145 [MainThread  ] [INFO ]  Creating edges
+2026-03-02 04:19:00,145 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-03-02 04:19:00,150 [MainThread  ] [INFO ]  Secrets scanning will scan 76 files
+2026-03-02 04:19:02,555 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-03-02 04:19:02,556 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 vertices
+2026-03-02 04:19:02,556 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-03-02 04:19:02,556 [MainThread  ] [INFO ]  Rendering variables, graph has 0 vertices and 0 edges
+2026-03-02 04:19:02,557 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-03-02 04:19:03,524 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 627 has a length of 47309, which is higher than the max 10000
+2026-03-02 04:19:03,955 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-03-02 04:19:03,956 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-03-02 04:19:04,319 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-03-02 04:19:04,332 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-03-02 04:19:04,988 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 3413 has a length of 15494, which is higher than the max 10000
+2026-03-02 04:19:07,635 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-03-02 04:19:07,636 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-03-02 04:19:07,865 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 17099 has a length of 24574, which is higher than the max 10000
+2026-03-02 04:19:08,161 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 18441 has a length of 43248, which is higher than the max 10000
+2026-03-02 04:19:08,817 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 21411 has a length of 28705, which is higher than the max 10000
+2026-03-02 04:19:10,073 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 28363 has a length of 15552, which is higher than the max 10000
+2026-03-02 04:19:10,204 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 28989 has a length of 16258, which is higher than the max 10000
+2026-03-02 04:19:11,414 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 35523 has a length of 13375, which is higher than the max 10000
+2026-03-02 04:19:11,602 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 36475 has a length of 17818, which is higher than the max 10000
+2026-03-02 04:19:12,283 [MainThread  ] [INFO ]  Cleanup the whole temp directory: /tmp/tmpumw6jklf
 terraform_plan scan results:
 
 Passed checks: 0, Failed checks: 0, Skipped checks: 0, Parsing errors: 2
@@ -2064,10 +2104,10 @@ secrets scan results:
 Passed checks: 0, Failed checks: 1, Skipped checks: 0
 
 Check: CKV_SECRET_6: "Base64 High Entropy String"
-	FAILED for resource: HIDDEN_BY_MEGALINTER	File: /package.json:46-47
+	FAILED for resource: HIDDEN_BY_MEGALINTER	File: /package.json:49-50
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/secrets-policies/secrets-policy-index/git-secrets-6
 
-		46 |     "lint:secretlint": "npm run lint:base -- --env ENABLE_LINTERS=REPOS**********",
+		49 |     "lint:secretlint": "npm run lint:base -- --env ENABLE_LINTERS=REPOS**********",
 
 github_actions scan results:
 
@@ -2076,7 +2116,7 @@ Passed checks: 136, Failed checks: 0, Skipped checks: 0
 
 
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [dustilock] successfully - (1.18s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [dustilock] successfully - (1.61s)[0m (expand for details)
 - Using [dustilock v1.2.0] https://megalinter.io/8.8.0/descriptors/repository_dustilock
 - MegaLinter key: [REPOSITORY_DUSTILOCK]
 - Rules config: identified by [dustilock]
@@ -2102,10 +2142,10 @@ Unable to get number of errors with regex_sum and leaks found: ([0-9]+)
     ○ ░
     ░    gitleaks
 
-[90m6:19PM[0m [31mFTL[0m [1mFailed to load config[0m [36merror=[0m[31m[1m"[[allowlists]] must contain at least one check for: commits, paths, regexes, or stopwords"[0m[0m
+[90m4:19AM[0m [31mFTL[0m [1mFailed to load config[0m [36merror=[0m[31m[1m"[[allowlists]] must contain at least one check for: commits, paths, regexes, or stopwords"[0m[0m
 
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [grype]: Found 13 error(s) and 0 warning(s) - (27.75s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [grype]: Found 13 error(s) and 0 warning(s) - (27.8s)[0m (expand for details)
 - Using [grype v0.94.0] https://megalinter.io/8.8.0/descriptors/repository_grype
 - MegaLinter key: [REPOSITORY_GRYPE]
 - Rules config: [/github/workspace/config/.grype.yaml]
@@ -2129,7 +2169,7 @@ elliptic   6.6.1                npm   GHSA-848j-6mx2-7j84  Low        1.28  < 0.
 [0027] ERROR [31mdiscovered vulnerabilities at or above the severity threshold[0m
 
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [kics]: Found 2 error(s) and 0 warning(s) - (13.9s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [kics]: Found 2 error(s) and 0 warning(s) - (19.91s)[0m (expand for details)
 - Using [kics v2.1.10] https://megalinter.io/8.8.0/descriptors/repository_kics
 - MegaLinter key: [REPOSITORY_KICS]
 - Rules config: [/github/workspace/config/.kics.config.json]
@@ -2169,18 +2209,18 @@ Scanning with Keeping Infrastructure as Code Secure v2.1.10
 [1mCWE:[0m 829
 [1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/cicd-queries/555ab8f9-2001-455e-a077-f2d0f41e2fb9
 
-	[38;2;237;213;126m[1]:[0m .github/workflows/megalinter.yml:[38;2;34;187;51m39[0m
-
-		038:         id: ml
-[38;2;240;173;78m		039:         uses: oxsecurity/megalinter@v8.8.0
-[0m		040:         continue-on-error: true
-
-
-	[38;2;237;213;126m[2]:[0m .github/workflows/toc.yml:[38;2;34;187;51m18[0m
+	[38;2;237;213;126m[1]:[0m .github/workflows/toc.yml:[38;2;34;187;51m18[0m
 
 		017:       - name: Generate TOC
 [38;2;240;173;78m		018:         uses: technote-space/toc-generator@v4
 [0m		019:         with:
+
+
+	[38;2;237;213;126m[2]:[0m .github/workflows/megalinter.yml:[38;2;34;187;51m39[0m
+
+		038:         id: ml
+[38;2;240;173;78m		039:         uses: oxsecurity/megalinter@v8.8.0
+[0m		040:         continue-on-error: true
 
 
 
@@ -2201,10 +2241,10 @@ TOTAL: 2
 - Rules config: [/github/workspace/config/.ls-lint.yml]
 - Command: [ls-lint --config /github/workspace/config/.ls-lint.yml]
 --Error detail:
-2026/03/01 18:19:53 rule ignore not exists
+2026/03/02 04:20:05 rule ignore not exists
 
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [secretlint]: Found 1 error(s) and 0 warning(s) - (10.36s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [secretlint]: Found 1 error(s) and 0 warning(s) - (8.97s)[0m (expand for details)
 - Using [secretlint v10.1.0] https://megalinter.io/8.8.0/descriptors/repository_secretlint
 - MegaLinter key: [REPOSITORY_SECRETLINT]
 - Rules config: [/github/workspace/config/.secretlintrc.json]
@@ -2213,7 +2253,7 @@ TOTAL: 2
 [Pre][REPOSITORY_SECRETLINT] run: [cd /node-deps && npm install --no-audit --no-fund --silent @secretlint/secretlint-rule-preset-recommend @secretlint/secretlint-rule-openai @secretlint/secretlint-rule-npm @secretlint/secretlint-rule-pattern @secretlint/secretlint-rule-secp256k1-privatekey @secretlint/secretlint-rule-no-dotenv @secretlint/secretlint-rule-no-homedir @secretlint/secretlint-rule-github @secretlint/secretlint-rule-gcp @secretlint/secretlint-rule-database-connection-string @secretlint/secretlint-rule-privatekey @secretlint/secretlint-rule-aws @secretlint/secretlint-rule-basicauth
 ] in cwd [/github/workspace]
 [Pre][REPOSITORY_SECRETLINT] error:
-(node:1694) ExperimentalWarning: CommonJS module /usr/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /usr/lib/node_modules/npm/node_modules/supports-color/index.js using require().
+(node:1756) ExperimentalWarning: CommonJS module /usr/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /usr/lib/node_modules/npm/node_modules/supports-color/index.js using require().
 Support for loading ES Module in require() is an experimental feature and might change at any time
 (Use `node --trace-warnings ...` to show where the warning was created)
 
@@ -2268,13 +2308,13 @@ Following config is invalid because the preset(@secretlint/secretlint-rule-prese
 'catalogers[0]' expected type 'string', got unconvertible type 'map[string]interface {}', value: 'map[enabled:[apkdb dpkgdb rpmdb python-package node-package java go-module rust-crate]]'[0m
 
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [trivy] successfully - (6.82s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [trivy] successfully - (5.94s)[0m (expand for details)
 - Using [trivy v0.63.0] https://megalinter.io/8.8.0/descriptors/repository_trivy
 - MegaLinter key: [REPOSITORY_TRIVY]
 - Rules config: [/github/workspace/config/trivy.yaml]
 - Command: [trivy fs --scanners vuln,misconfig --exit-code 1 --config /github/workspace/config/trivy.yaml .]
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [trivy-sbom] successfully - (0.57s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [trivy-sbom] successfully - (0.58s)[0m (expand for details)
 - Using [trivy-sbom v0.63.0] https://megalinter.io/8.8.0/descriptors/repository_trivy_sbom
 - MegaLinter key: [REPOSITORY_TRIVY_SBOM]
 - Rules config: [/github/workspace/config/trivy-sbom.yaml]
@@ -2286,22 +2326,22 @@ Following config is invalid because the preset(@secretlint/secretlint-rule-prese
 - Rules config: [/github/workspace/config/.trufflehog.yml]
 - Command: [trufflehog filesystem . --fail --only-verified --no-update --exclude-paths=config/.trufflehogignore --config /github/workspace/config/.trufflehog.yml]
 --Error detail:
-2026-03-01T18:20:14Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"branch\""}
+2026-03-02T04:20:23Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"branch\""}
 
 ::endgroup::
-::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-apex] successfully - (21.2s)[0m (expand for details)
+::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-apex] successfully - (22.16s)[0m (expand for details)
 - Using [sfdx-scanner-apex v4.12.0] https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_apex
 - MegaLinter key: [SALESFORCE_SFDX_SCANNER_APEX]
 - Rules config: [/github/workspace/config/apex-pmd-ruleset.xml]
 - Command: [sf scanner:run --engine pmd --target "./**/*" --severity-threshold 2 --outfile reports/megalinter/sfdx-scanner-report-apex.csv --format csv --pmdconfig /github/workspace/config/apex-pmd-ruleset.xml]
 ::endgroup::
-::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-aura] successfully - (8.53s)[0m (expand for details)
+::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-aura] successfully - (8.37s)[0m (expand for details)
 - Using [sfdx-scanner-aura v4.12.0] https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_aura
 - MegaLinter key: [SALESFORCE_SFDX_SCANNER_AURA]
 - Rules config: identified by [sfdx-scanner-aura]
 - Command: [sf scanner:run --engine eslint --target **/aura/**/*.js --severity-threshold 2 --outfile reports/megalinter/sfdx-scanner-report-aura.csv --format csv]
 ::endgroup::
-::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-lwc] successfully - (8.58s)[0m (expand for details)
+::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-lwc] successfully - (8.33s)[0m (expand for details)
 - Using [sfdx-scanner-lwc v4.12.0] https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_lwc
 - MegaLinter key: [SALESFORCE_SFDX_SCANNER_LWC]
 - Rules config: identified by [sfdx-scanner-lwc]
@@ -2321,7 +2361,7 @@ flow 1.0.2
 signups 2.6.28
 @salesforce/sfdx-plugin-lwc-test 1.2.1
 
-::group::[31m❌ Linted [SALESFORCE] files with [lightning-flow-scanner]: Found 1 error(s) and 0 warning(s) - (0.86s)[0m (expand for details)
+::group::[31m❌ Linted [SALESFORCE] files with [lightning-flow-scanner]: Found 1 error(s) and 0 warning(s) - (0.85s)[0m (expand for details)
 - Using [lightning-flow-scanner vERROR] https://megalinter.io/8.8.0/descriptors/salesforce_lightning_flow_scanner
 - MegaLinter key: [SALESFORCE_LIGHTNING_FLOW_SCANNER]
 - Rules config: [/github/workspace/config/.flow-scanner.json]
@@ -2332,14 +2372,14 @@ signups 2.6.28
  ›   Error: Run sf help flow for a list of available commands.
 
 ::endgroup::
-::group::[32m✅ Linted [SPELL] files with [cspell] successfully - (0.93s)[0m (expand for details)
+::group::[32m✅ Linted [SPELL] files with [cspell] successfully - (0.98s)[0m (expand for details)
 - Using [cspell v9.1.1] https://megalinter.io/8.8.0/descriptors/spell_cspell
 - MegaLinter key: [SPELL_CSPELL]
 - Rules config: [/github/workspace/config/.cspell.config.mjs]
-- Number of files analyzed: [286]
+- Number of files analyzed: [297]
 - Command: [cspell --show-context --show-suggestions --no-must-find-files --no-progress --quiet --format json --cache-location .cache/.cspellcache -c /github/workspace/config/.cspell.config.mjs .ansible/.lock .codespellrc .devcontainer/devcontainer.json .devcont...(truncated)]
 ::endgroup::
-::group::[31m❌ Linted [SPELL] files with [proselint]: Found 11 error(s) and 0 warning(s) - (9.44s)[0m (expand for details)
+::group::[31m❌ Linted [SPELL] files with [proselint]: Found 11 error(s) and 0 warning(s) - (9.66s)[0m (expand for details)
 - Using [proselint v0.14.0] https://megalinter.io/8.8.0/descriptors/spell_proselint
 - MegaLinter key: [SPELL_PROSELINT]
 - Rules config: [/github/workspace/config/.proselintrc]
@@ -2376,19 +2416,19 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
                      can.                                                
  62:9    [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  70:6    [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
+ 73:15   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  73:15   [33mwarning[0m     'is generated' may be passive   write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 73:15   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  96:21   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  115:84  [33mwarning[0m     'be used' may be passive        write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
  115:84  [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime  
- 118:18  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  118:18  [33mwarning[0m     'are versioned' may be passive  write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 118:18  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  120:40  [33mwarning[0m     'various' is a weasel word!     write-good.Weasel   
  125:74  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  125:74  [33mwarning[0m     'are defined' may be passive    write-good.Passive  
@@ -2399,38 +2439,38 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
                      voice. Use active voice if you                      
                      can.                                                
  185:67  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
+ 198:61  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  198:61  [33mwarning[0m     'are forwarded' may be passive  write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 198:61  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
+ 204:23  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  204:23  [33mwarning[0m     'is configured' may be passive  write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 204:23  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  206:5   [34msuggestion[0m  Try to avoid using 'What's'.    write-good.E-Prime  
  253:14  [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime  
  275:22  [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime  
  286:22  [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime  
  319:15  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
- 321:10  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  321:10  [33mwarning[0m     'are included' may be passive   write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 322:18  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
+ 321:10  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  322:18  [33mwarning[0m     'is updated' may be passive     write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 322:18  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
 
 
  [4mcore/README.md[0m
- 24:4   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
  24:4   [33mwarning[0m     'be defined' may be passive     write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
- 24:33  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
+ 24:4   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
  24:33  [33mwarning[0m     'is developed' may be passive   write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
+ 24:33  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
 
 
  [4mdocs/FINANCIAL_OPERATING_SYSTEM.md[0m
@@ -2462,14 +2502,14 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
  [4mdocs/SCHEMA_CONTRACT.md[0m
  5:132    [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
  13:51    [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
- 13:262   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
  13:262   [33mwarning[0m     'be propagated' may be passive  write-good.Passive 
                       voice. Use active voice if you                     
                       can.                                               
+ 13:262   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
+ 111:19   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
  111:19   [33mwarning[0m     'are expressed' may be passive  write-good.Passive 
                       voice. Use active voice if you                     
                       can.                                               
- 111:19   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
  112:32   [33mwarning[0m     'is exported' may be passive    write-good.Passive 
                       voice. Use active voice if you                     
                       can.                                               
@@ -2482,14 +2522,14 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
  114:71   [33mwarning[0m     'be made' may be passive        write-good.Passive 
                       voice. Use active voice if you                     
                       can.                                               
- 115:22   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
  115:22   [33mwarning[0m     'is introduced' may be passive  write-good.Passive 
                       voice. Use active voice if you                     
                       can.                                               
- 115:101  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
+ 115:22   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
  115:101  [33mwarning[0m     'are migrated' may be passive   write-good.Passive 
                       voice. Use active voice if you                     
                       can.                                               
+ 115:101  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
  123:121  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
  125:81   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
  125:81   [33mwarning[0m     'be added' may be passive       write-good.Passive 
@@ -2513,29 +2553,29 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
 
  [4mserver/IMPLEMENTATION_SUMMARY.md[0m
  57:7     [33mwarning[0m     'Additional' is too wordy.      write-good.TooWordy 
- 161:19   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  161:19   [33mwarning[0m     'are fetched' may be passive    write-good.Passive  
                       voice. Use active voice if you                      
                       can.                                                
- 161:53   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
+ 161:19   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  161:53   [33mwarning[0m     'is logged' may be passive      write-good.Passive  
                       voice. Use active voice if you                      
                       can.                                                
+ 161:53   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  221:6    [33mwarning[0m     'Obtain' is too wordy.          write-good.TooWordy 
  244:15   [33mwarning[0m     'additional' is too wordy.      write-good.TooWordy 
  260:34   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
- 260:131  [34msuggestion[0m  Try to avoid using 'been'.      write-good.E-Prime  
  260:131  [33mwarning[0m     'been met' may be passive       write-good.Passive  
                       voice. Use active voice if you                      
                       can.                                                
+ 260:131  [34msuggestion[0m  Try to avoid using 'been'.      write-good.E-Prime  
  273:175  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
 
 
  [4mserver/PLAID_README.md[0m
- 68:16   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  68:16   [33mwarning[0m     'is configured' may be passive  write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 68:16   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  127:19  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  127:19  [33mwarning[0m     'are fetched' may be passive    write-good.Passive  
                      voice. Use active voice if you                      
@@ -2550,10 +2590,10 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
                      voice. Use active voice if you                      
                      can.                                                
  171:17  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
- 179:24  [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime  
  179:24  [33mwarning[0m     'be stored' may be passive      write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 179:24  [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime  
  186:3   [33mwarning[0m     'Implement' is too wordy.       write-good.TooWordy 
  187:19  [33mwarning[0m     'additional' is too wordy.      write-good.TooWordy 
 
@@ -2563,14 +2603,14 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
 
 
  [4mui/README.md[0m
+ 18:40  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
  18:40  [33mwarning[0m     'are named' may be passive      write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
- 18:40  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
- 19:41  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
  19:41  [33mwarning[0m     'are defined' may be passive    write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
+ 19:41  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
  44:33  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
  51:20  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
  55:8   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
@@ -2579,289 +2619,290 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
 
 ::endgroup::
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-::group::[31m❌ Linted [SPELL] files with [lychee]: Found 1 error(s) and 0 warning(s) - (3.46s)[0m (expand for details)
+::group::[31m❌ Linted [SPELL] files with [lychee]: Found 1 error(s) and 0 warning(s) - (3.11s)[0m (expand for details)
 - Using [lychee v0.18.0] https://megalinter.io/8.8.0/descriptors/spell_lychee
 - MegaLinter key: [SPELL_LYCHEE]
 - Rules config: [/github/workspace/config/lychee.toml]
-- Number of files analyzed: [120]
+- Number of files analyzed: [122]
 - Command: [lychee --format detailed --no-progress --exclude-path config/.lycheeignore --config /github/workspace/config/lychee.toml .devcontainer/devcontainer.json .github/workflows/generate_repository_tree.yml .github/workflows/megalinter.yml .github/workflows...(truncated)]
 --Error detail:
-[ERROR] https://pyrightlang.org/ | Network error: error sending request for url (https://pyrightlang.org/) Maybe a certificate error?
-[200] https://checkstyle.org/
-[200] https://megalinter.io/latest/descriptors/html_htmlhint/
-[200] https://megalinter.io/latest/descriptors/scala_scalafix/
-[200] https://megalinter.io/latest/descriptors/swift_swiftlint/
-[200] https://pre-commit.com/hooks.html
-[200] https://signal.egohygiene.io/reports/megalinter/
-[200] https://megalinter.io/latest/descriptors/python_bandit/
-[200] https://megalinter.io/latest/descriptors/jsx_eslint/
-[200] https://www.checkov.io/
-[200] https://megalinter.io/latest/descriptors/java_checkstyle/
-[200] https://megalinter.io/latest/descriptors/markdown_remark_lint/
-[200] https://pre-commit.com/
-[200] https://semantic-release.gitbook.io/semantic-release/usage/configuration
-[200] https://megalinter.io/latest/descriptors/terraform_terragrunt/
-[200] https://megalinter.io/latest/descriptors/php_phpstan/
-[200] https://pycqa.github.io/isort/
-[200] https://megalinter.io/latest/descriptors/json_eslint_plugin_jsonc/
-[200] https://megalinter.io/latest/descriptors/python_flake8/
-[200] https://yamllint.readthedocs.io/en/stable/
-[200] https://megalinter.io/latest/descriptors/puppet_puppet_lint/
-[200] https://github.com/adrienverge/yamllint
-[200] https://megalinter.io/latest/descriptors/salesforce_sfdx_scanner_apex/
-[200] https://github.com/igorshubovych/markdownlint-cli
-[200] https://github.com/rstcheck/rstcheck
-[200] https://github.com/astral-sh/ruff-pre-commit
-[200] https://github.com/Yelp/detect-secrets
-[200] https://megalinter.io/latest/descriptors/python_pyright/
-[200] https://github.com/shellcheck-py/shellcheck-py
-[200] https://github.com/psf/black
-[200] https://github.com/chris48s/v8r
-[200] https://github.com/pre-commit/pre-commit-hooks
-[200] https://github.com/forcedotcom/code-analyzer
-[200] https://phpstan.org/
-[200] https://megalinter.io/latest/descriptors/ruby_rubocop/
-[200] https://github.com/hadolint/hadolint
-[200] https://megalinter.io/latest/descriptors/java_pmd/
-[200] https://github.com/editorconfig-checker/editorconfig-checker
-[200] https://megalinter.io/latest/descriptors/sql_sqlfluff/
-[200] https://github.com/terraform-linters/tflint
-[200] https://megalinter.io/latest/descriptors/python_pylint/
-[200] https://megalinter.io/latest/descriptors/json_npm_package_json_lint/
-[200] https://megalinter.io/latest/descriptors/copypaste_jscpd/
-[200] https://github.com/checkmarx/kics
-[200] https://github.com/gruntwork-io/terragrunt
-[200] https://megalinter.io/latest/descriptors/php_phpcs/
-[200] https://megalinter.io/latest/descriptors/python_black/
-[200] https://megalinter.io/latest/descriptors/snakemake_snakefmt/
-[200] https://github.com/gherkin-lint/gherkin-lint
-[200] https://megalinter.io/latest/supported-linters/
-[200] https://megalinter.io/latest/descriptors/rust_clippy/
-[200] https://stylelint.io/
-[200] https://megalinter.io/latest/descriptors/action_actionlint/
-[200] https://psalm.dev/
-[200] https://github.com/zaach/jsonlint
-[200] https://github.com/puppetlabs/puppet-lint
-[404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ | Network error: Not Found
-[200] https://megalinter.io/latest/descriptors/ansible_ansible_lint/
-[200] https://megalinter.io/latest/descriptors/c_clang_format/
-[200] https://megalinter.io/latest/descriptors/python_mypy/
-[200] https://megalinter.io/latest/descriptors/spell_cspell/
-[200] https://github.com/loeffel-io/ls-lint
-[200] https://megalinter.io/latest/descriptors/salesforce_lightning_flow_scanner/
-[200] https://megalinter.io/latest/descriptors/lua_luacheck/
-[200] https://megalinter.io/latest/descriptors/latex_chktex/
-[200] https://megalinter.io/latest/descriptors/repository_kics/
-[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/
-[200] https://megalinter.io/latest/descriptors/sql_tsqllint/
-[200] https://github.com/ota-meshi/eslint-plugin-jsonc
-[200] https://megalinter.io/latest/descriptors/typescript_prettier/
-[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/
-[EXCLUDED] mailto:szmyty@gmail.com
-[200] https://github.com/tenable/terrascan
-[200] https://black.readthedocs.io/en/stable/
-[200] https://github.com/yoheimuta/protolint
-[200] https://github.com/greglook/cljstyle
-[200] https://megalinter.io/latest/descriptors/cloudformation_cfn_lint/
-[200] https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/
-[200] https://megalinter.io/latest/descriptors/yaml_yamllint/
-[200] https://megalinter.io/latest/descriptors/repository_grype/
-[200] https://prettier.io/
-[200] https://megalinter.io/latest/descriptors/powershell_powershell_formatter/
-[200] https://megalinter.io/latest/descriptors/gherkin_gherkin_lint/
-[200] https://megalinter.io/latest/descriptors/go_revive/
-[200] https://megalinter.io/latest/descriptors/powershell_powershell/
-[200] https://megalinter.io/latest/descriptors/json_prettier/
-[200] https://megalinter.io/latest/descriptors/spell_proselint/
-[200] https://github.com/IBM/tekton-lint
-[200] https://github.com/kucherenko/jscpd
-[200] https://megalinter.io/latest/descriptors/php_phplint/
-[200] https://api.github.com/
-[200] https://github.com/errata-ai/vale
-[200] https://megalinter.io/latest/descriptors/arm_arm_ttk/
-[200] https://github.com/mpeterv/luacheck
-[200] https://megalinter.io/latest/descriptors/rst_rstcheck/
-[200] https://megalinter.io/latest/descriptors/javascript_prettier/
-[200] https://github.com/DavidAnson/markdownlint
-[200] https://megalinter.io/latest/descriptors/terraform_terrascan/
-[200] https://megalinter.io/latest/descriptors/repository_secretlint/
-[200] https://clang.llvm.org/docs/ClangFormat.html
-[200] https://megalinter.io/latest/descriptors/repository_trivy/
-[200] https://megalinter.io/latest/descriptors/repository_devskim/
-[200] https://github.com/Lightning-Flow-Scanner/lightning-flow-scanner-sfdx
-[200] https://megalinter.io/latest/descriptors/yaml_v8r/
-[200] https://github.com/r-lib/lintr
-[200] https://github.com/anchore/syft
-[200] https://github.com/overtrue/phplint
-[200] https://www.nongnu.org/chktex/
-[200] https://github.com/microsoft/DevSkim
-[200] https://github.com/tcort/markdown-link-check
-[200] https://github.com/realm/SwiftLint
-[200] https://megalinter.io/latest/descriptors/python_isort/
-[200] https://megalinter.io/latest/descriptors/clojure_cljstyle/
-[200] https://ansible.readthedocs.io/projects/lint/
-[200] https://megalinter.io/latest/descriptors/repository_syft/
-[200] https://dart.dev/tools/dart-analyze
-[200] https://github.com/snakemake/snakefmt
-[200] https://github.com/clj-kondo/clj-kondo
-[200] https://github.com/PowerShell/PSScriptAnalyzer
-[200] https://megalinter.io/latest/descriptors/cpp_clang_format/
-[200] https://rubocop.org/
-[200] https://flake8.pycqa.org/en/latest/
-[404] https://megalinter.io/latest/descriptors/markdown_markdown_link_check/ | Network error: Not Found
-[200] https://megalinter.io/latest/descriptors/json_jsonlint/
-[200] https://megalinter.io/latest/descriptors/markdown_markdownlint/
-[200] https://megalinter.io/latest/descriptors/php_psalm/
-[200] https://megalinter.io/latest/descriptors/repository_trufflehog/
-[200] https://megalinter.io/latest/descriptors/repository_gitleaks/
-[200] https://github.com/aws-cloudformation/cfn-lint
-[200] https://github.com/sqlfluff/sqlfluff
-[200] https://megalinter.io/latest/descriptors/dockerfile_hadolint/
-[200] https://megalinter.io/latest/descriptors/terraform_tflint/
-[200] https://github.com/trufflesecurity/trufflehog
-[200] https://github.com/mgechev/revive
-[200] https://megalinter.io/latest/config-variables/
-[200] https://megalinter.io/latest/descriptors/repository_checkov/
-[200] https://megalinter.io/latest/descriptors/typescript_eslint/
-[200] https://megalinter.io/latest/descriptors/yaml_prettier/
-[200] https://github.com/PHPCSStandards/PHP_CodeSniffer/
-[200] https://megalinter.io/latest/descriptors/groovy_npm_groovy_lint/
-[200] https://megalinter.io/latest/descriptors/api_spectral/
-[200] https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
-[200] https://megalinter.io/latest/descriptors/protobuf_protolint/
-[200] https://pmd.github.io/
-[200] https://megalinter.io/8/descriptors/repository_ls_lint/
-[200] https://github.com/lycheeverse/lychee
-[200] https://github.com/aquasecurity/trivy
-[200] https://megalinter.io/latest/descriptors/python_ruff/
-[200] https://megalinter.io/latest/descriptors/javascript_eslint/
-[200] https://megalinter.io/latest/descriptors/spell_lychee/
-[200] https://megalinter.io/latest/descriptors/spell_vale/
-[200] https://megalinter.io/latest/descriptors/makefile_checkmake/
-[200] https://github.com/hadolint/hadolint | OK (cached)
-[200] https://megalinter.io/latest/descriptors/dart_dartanalyzer/
-[200] https://megalinter.io/latest/descriptors/raku_raku/
-[200] https://github.com/gitleaks/gitleaks
-[200] https://github.com/
-[200] https://github.com/anchore/grype
-[200] https://megalinter.io/latest/descriptors/r_lintr/
-[200] https://github.com/scalacenter/scalafix
-[200] https://mypy.readthedocs.io/en/stable/
-[200] https://megalinter.io/latest/descriptors/css_stylelint/
-[200] https://github.com/checkmake/checkmake
-[200] https://megalinter.io/latest/descriptors/graphql_graphql_schema_linter/
-[EXCLUDED] http://localhost:8000/health
-[200] https://stoplight.io/open-source/spectral
-[200] https://megalinter.io/latest/json-schemas/configuration.html
-[200] https://eslint.org/
-[EXCLUDED] http://localhost:8000/
-[200] https://github.com/rust-lang/rust-clippy
-[EXCLUDED] http://localhost:8000/docs
+[200] https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/pyproject.json
 [EXCLUDED] file:///github/workspace/docs/plaid-setup.md
-[200] https://containers.dev/
+[EXCLUDED] http://localhost:8000/
+[200] https://www.schemastore.org/yamllint.json
+[EXCLUDED] file:///github/workspace/README.md#plaid-sandbox-setup
+[EXCLUDED] http://localhost:8000/health
+[200] https://taskfile.dev/
+[200] https://www.python.org/downloads/
+[EXCLUDED] http://localhost:8000/docs
+[200] https://www.schemastore.org/markdown-link-check.json
+[200] https://signal.egohygiene.io/reports/megalinter/
+[EXCLUDED] file:///github/workspace/README.md#dev-container
+[EXCLUDED] file:///github/workspace/README.md#quick-start
+[200] https://pnpm.io/installation
+[200] https://pre-commit.com/hooks.html
 [EXCLUDED] http://localhost:5173/
 [EXCLUDED] file:///github/workspace/README.md#fake-data-mode
-[EXCLUDED] file:///github/workspace/README.md#dev-container
-[EXCLUDED] file:///github/workspace/README.md#plaid-sandbox-setup
-[200] https://megalinter.io/latest/descriptors/clojure_clj_kondo/
-[EXCLUDED] file:///github/workspace/README.md#quick-start
-[200] https://github.com/cjoudrey/graphql-schema-linter
-[200] https://www.python.org/downloads/
-[200] https://pnpm.io/installation
-[200] https://github.com/amperser/proselint
-[200] https://taskfile.dev/
-[200] https://www.schemastore.org/markdown-link-check.json
-[200] https://github.com/rhysd/actionlint
-[200] https://pylint.pycqa.org/en/latest/
-[200] https://www.schemastore.org/yamllint.json
-[200] https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/pyproject.json
-[200] https://bandit.readthedocs.io/en/latest/
-[200] https://github.com/tsqllint/tsqllint
+[200] https://containers.dev/
+[200] https://json.schemastore.org/htmlhint.json
+[200] https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
+[200] https://semantic-release.gitbook.io/semantic-release/usage/configuration
+[404] https://json.schemastore.org/luacheckrc.json | Network error: Not Found
+[ERROR] https://pyrightlang.org/ | Network error: error sending request for url (https://pyrightlang.org/) Maybe a certificate error?
+[200] https://json.schemastore.org/web-manifest-combined.json
+[200] https://pre-commit.com/
+[200] https://json.schemastore.org/prettierrc.json
 [200] https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
-[200] https://www.schemastore.org/coffeelint.json
-[200] https://golangci-lint.run/jsonschema/golangci.jsonschema.json
-[200] https://toolbox-data.anchore.io/grype/databases/listing.json
-[200] https://ruff.rs/
-[200] https://github.com/remarkjs/remark-lint
-   [WARN ] Error creating request: InvalidPathToUri("/vite.svg")
-[200] https://github.com/coffeelint/coffeelint
-[403] https://nvd.nist.gov/vuln/detail/CVE-2018-20225 | 403 Forbidden: Forbidden
-[200] https://github.com/hadolint/hadolint#linting-labels
-[EXCLUDED] https://localhost/
-[200] https://github.com/ | OK (cached)
-[EXCLUDED] http://localhost/
-[200] https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json
+[404] https://json.schemastore.org/npm-package-json-lint.json | Network error: Not Found
+[200] https://phpstan.org/
+[200] https://megalinter.io/latest/config-variables/
+[200] https://megalinter.io/latest/descriptors/java_pmd/
+[200] https://megalinter.io/latest/descriptors/go_revive/
+[200] https://megalinter.io/latest/descriptors/repository_trivy/
+[200] https://megalinter.io/latest/descriptors/scala_scalafix/
+[200] https://github.com/Yelp/detect-secrets
+[200] https://megalinter.io/latest/descriptors/dart_dartanalyzer/
+[200] https://checkstyle.org/
+[200] https://github.com/pre-commit/pre-commit-hooks
+[200] https://megalinter.io/latest/descriptors/powershell_powershell_formatter/
+[200] https://github.com/igorshubovych/markdownlint-cli
+[200] https://github.com/astral-sh/ruff-pre-commit
+[200] https://github.com/shellcheck-py/shellcheck-py
+[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/
+[200] https://megalinter.io/latest/supported-linters/
+[200] https://github.com/hadolint/hadolint
+[200] https://megalinter.io/latest/descriptors/yaml_yamllint/
 [200] https://nodejs.org/
+[200] https://github.com/nektos/act
+[200] https://github.com/psf/black
+[200] https://megalinter.io/latest/descriptors/clojure_cljstyle/
+[200] https://www.nongnu.org/chktex/
+[200] https://github.com/adrienverge/yamllint
+[200] https://pycqa.github.io/isort/
+[200] https://megalinter.io/latest/descriptors/swift_swiftlint/
+[200] https://megalinter.io/latest/descriptors/repository_trufflehog/
+[200] https://megalinter.io/latest/descriptors/gherkin_gherkin_lint/
+[404] https://megalinter.io/latest/descriptors/markdown_markdown_link_check/ | Network error: Not Found
+[200] https://megalinter.io/latest/descriptors/rst_rstcheck/
+[200] https://megalinter.io/latest/descriptors/api_spectral/
+[200] https://megalinter.io/latest/descriptors/python_bandit/
+[200] https://bandit.readthedocs.io/en/latest/
+[200] https://megalinter.io/latest/descriptors/spell_proselint/
+[200] https://megalinter.io/latest/descriptors/action_actionlint/
+[200] https://megalinter.io/latest/descriptors/salesforce_sfdx_scanner_apex/
+[200] https://dart.dev/tools/dart-analyze
+[200] https://megalinter.io/latest/descriptors/markdown_markdownlint/
+[200] https://api.github.com/
+[200] https://megalinter.io/latest/descriptors/yaml_v8r/
+[200] https://black.readthedocs.io/en/stable/
+[200] https://megalinter.io/latest/descriptors/python_isort/
+[200] https://pmd.github.io/
+[200] https://github.com/rust-lang/rust-clippy
+[200] https://megalinter.io/latest/descriptors/python_mypy/
+[200] https://megalinter.io/latest/descriptors/powershell_powershell/
+[200] https://megalinter.io/latest/descriptors/puppet_puppet_lint/
+[200] https://github.com/PowerShell/PSScriptAnalyzer
+[200] https://megalinter.io/latest/json-schemas/configuration.html
+[200] https://ansible.readthedocs.io/projects/lint/
+[200] https://megalinter.io/latest/descriptors/repository_checkov/
+[200] https://megalinter.io/latest/descriptors/sql_sqlfluff/
+[200] https://megalinter.io/latest/descriptors/copypaste_jscpd/
+[200] https://megalinter.io/latest/descriptors/python_ruff/
+[200] https://github.com/aws-cloudformation/cfn-lint
+[200] https://github.com/tcort/markdown-link-check
+[200] https://clang.llvm.org/docs/ClangFormat.html
+[200] https://github.com/gherkin-lint/gherkin-lint
+[200] https://megalinter.io/latest/descriptors/terraform_tflint/
+[200] https://github.com/sqlfluff/sqlfluff
+[200] https://github.com/trufflesecurity/trufflehog
+[200] https://megalinter.io/latest/descriptors/c_clang_format/
+[200] https://megalinter.io/latest/descriptors/css_stylelint/
+[200] https://megalinter.io/latest/descriptors/lua_luacheck/
+[200] https://megalinter.io/latest/descriptors/php_phpcs/
+[200] https://megalinter.io/latest/descriptors/snakemake_snakefmt/
+[200] https://github.com/realm/SwiftLint
+[200] https://github.com/zaach/jsonlint
+[200] https://stoplight.io/open-source/spectral
+[200] https://github.com/terraform-linters/tflint
+[200] https://github.com/Azure/arm-ttk
+[200] https://megalinter.io/latest/descriptors/ansible_ansible_lint/
+[200] https://github.com/tsqllint/tsqllint
+[200] https://megalinter.io/latest/descriptors/php_phplint/
+[200] https://megalinter.io/latest/descriptors/arm_arm_ttk/
+[200] https://rubocop.org/
+[200] https://github.com/DavidAnson/markdownlint
+[200] https://megalinter.io/latest/descriptors/python_pyright/
+[200] https://megalinter.io/latest/descriptors/python_flake8/
+[EXCLUDED] mailto:szmyty@gmail.com
+[200] https://megalinter.io/latest/descriptors/r_lintr/
+[200] https://megalinter.io/latest/descriptors/salesforce_lightning_flow_scanner/
+[200] https://megalinter.io/latest/descriptors/json_jsonlint/
+[200] https://ruff.rs/
+[200] https://megalinter.io/latest/descriptors/sql_tsqllint/
+[200] https://megalinter.io/latest/descriptors/clojure_clj_kondo/
+[200] https://megalinter.io/latest/descriptors/javascript_prettier/
+[200] https://megalinter.io/latest/descriptors/jsx_eslint/
+[200] https://megalinter.io/latest/descriptors/cloudformation_cfn_lint/
+[200] https://megalinter.io/latest/descriptors/repository_kics/
+[200] https://megalinter.io/latest/descriptors/php_phpstan/
+[200] https://megalinter.io/latest/descriptors/spell_cspell/
+[200] https://github.com/amperser/proselint
+[200] https://megalinter.io/latest/descriptors/repository_gitleaks/
+[200] https://megalinter.io/latest/descriptors/ruby_rubocop/
+[200] https://megalinter.io/latest/descriptors/spell_lychee/
+[200] https://megalinter.io/latest/descriptors/php_psalm/
+[200] https://github.com/kucherenko/jscpd
+[200] https://megalinter.io/latest/descriptors/json_prettier/
+[200] https://megalinter.io/8/descriptors/repository_ls_lint/
+[200] https://github.com/mgechev/revive
+[200] https://megalinter.io/latest/descriptors/rust_clippy/
+[200] https://github.com/gruntwork-io/terragrunt
+[200] https://github.com/tenable/terrascan
+[200] https://megalinter.io/latest/descriptors/repository_secretlint/
+[200] https://megalinter.io/latest/descriptors/java_checkstyle/
+[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/
+[200] https://prettier.io/
+[200] https://eslint.org/
+[200] https://github.com/yoheimuta/protolint
+[200] https://megalinter.io/latest/descriptors/graphql_graphql_schema_linter/
+[200] https://github.com/nvuillam/npm-groovy-lint
+[200] https://megalinter.io/latest/descriptors/json_npm_package_json_lint/
+[200] https://stylelint.io/
+[200] https://github.com/checkmarx/kics
+[200] https://github.com/rstcheck/rstcheck
+[200] https://megalinter.io/latest/descriptors/python_pylint/
+[200] https://github.com/r-lib/lintr
+[200] https://github.com/
 [200] https://github.com/streetsidesoftware/cspell
+[200] https://megalinter.io/latest/descriptors/repository_devskim/
+[404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ | Network error: Not Found
+[200] https://github.com/hadolint/hadolint | OK (cached)
+[200] https://megalinter.io/latest/descriptors/terraform_terragrunt/
+[200] https://github.com/scalacenter/scalafix
+[200] https://megalinter.io/latest/descriptors/html_htmlhint/
+[200] https://megalinter.io/latest/descriptors/repository_grype/
+[200] https://pylint.pycqa.org/en/latest/
+[200] https://megalinter.io/latest/descriptors/json_eslint_plugin_jsonc/
+[200] https://megalinter.io/latest/descriptors/typescript_eslint/
+[200] https://megalinter.io/latest/descriptors/latex_chktex/
+[200] https://psalm.dev/
+[200] https://flake8.pycqa.org/en/latest/
+[200] https://github.com/clj-kondo/clj-kondo
+[200] https://megalinter.io/latest/descriptors/yaml_prettier/
+[200] https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/
+[200] https://megalinter.io/latest/descriptors/javascript_eslint/
+[200] https://mypy.readthedocs.io/en/stable/
+[200] https://megalinter.io/latest/descriptors/markdown_remark_lint/
+[200] https://github.com/IBM/tekton-lint
+[200] https://megalinter.io/latest/descriptors/cpp_clang_format/
+[200] https://raku.org/
+[200] https://github.com/tclindner/npm-package-json-lint
+[200] https://megalinter.io/latest/descriptors/dockerfile_hadolint/
+[200] https://megalinter.io/latest/descriptors/makefile_checkmake/
+[200] https://www.checkov.io/
+[200] https://github.com/greglook/cljstyle
+[200] https://megalinter.io/latest/descriptors/protobuf_protolint/
+[200] https://megalinter.io/latest/descriptors/spell_vale/
+[200] https://megalinter.io/latest/descriptors/python_black/
+[200] https://github.com/remarkjs/remark-lint
+[200] https://megalinter.io/latest/descriptors/groovy_npm_groovy_lint/
+[200] https://github.com/loeffel-io/ls-lint
+[200] https://megalinter.io/latest/descriptors/terraform_terrascan/
+[200] https://yamllint.readthedocs.io/en/stable/
+[200] https://github.com/coffeelint/coffeelint
+[200] https://megalinter.io/latest/descriptors/typescript_prettier/
+[200] https://github.com/anchore/syft
+[200] https://megalinter.io/latest/descriptors/raku_raku/
+[200] https://megalinter.io/latest/descriptors/repository_syft/
+[200] https://github.com/snakemake/snakefmt
+[200] https://github.com/ota-meshi/eslint-plugin-jsonc
 [200] https://www.schemastore.org/task.json
+[200] https://www.schemastore.org/coffeelint.json
+[200] https://github.com/puppetlabs/puppet-lint
+[200] https://github.com/mpeterv/luacheck
+[403] https://nvd.nist.gov/vuln/detail/CVE-2018-20225 | 403 Forbidden: Forbidden
 [200] https://raw.githubusercontent.com/hadolint/hadolint/master/contrib/hadolint.json
+[200] https://golangci-lint.run/jsonschema/golangci.jsonschema.json
+   [WARN ] Error creating request: InvalidPathToUri("/vite.svg")
+[200] https://github.com/rhysd/actionlint
+[200] https://github.com/hadolint/hadolint#linting-labels
+[200] https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json
+[EXCLUDED] https://localhost/
+[EXCLUDED] http://localhost/
+[200] https://github.com/ | OK (cached)
+[200] https://toolbox-data.anchore.io/grype/databases/listing.json
+[200] https://github.com/anchore/grype
+[200] https://www.schemastore.org/npmpackagejsonlintrc.json
 [200] https://www.schemastore.org/stylelintrc.json
 [EXCLUDED] mailto:you@example.com
-[200] https://www.schemastore.org/npmpackagejsonlintrc.json
-[200] https://github.com/amperser/proselint | OK (cached)
-[400] https://search.maven.org/solrsearch/select | Network error: Bad Request
+[200] https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json
+[200] https://github.com/editorconfig-checker/editorconfig-checker
 [200] https://raw.githubusercontent.com/microsoft/pyright/main/packages/vscode-pyright/schemas/pyrightconfig.schema.json
 [EXCLUDED] mailto:support@errata.ai
-[200] https://github.com/nvuillam/npm-groovy-lint
-[200] https://github.com/tclindner/npm-package-json-lint
-[200] https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json
-[EXCLUDED] file:///github/workspace/docs/reports/megalinter
-[404] https://github.com/yourusername/your-module-name/issues | Network error: Not Found
-[404] https://json.schemastore.org/npm-package-json-lint.json | Network error: Not Found
+[200] https://github.com/chris48s/v8r
+[200] https://github.com/amperser/proselint | OK (cached)
+[400] https://search.maven.org/solrsearch/select | Network error: Bad Request
+[200] https://github.com/forcedotcom/code-analyzer
 [200] https://www.rubyschema.org/rubocop.json
-[EXCLUDED] file:///github/workspace/docs/plaid-setup.md#5-environment-variable-storage
-[200] https://github.com/nektos/act
-[404] https://github.com/yourusername/your-module-name.git | Network error: Not Found
-[200] https://github.com/Azure/arm-ttk
+[404] https://github.com/yourusername/your-module-name/issues | Network error: Not Found
+[EXCLUDED] file:///github/workspace/docs/reports/megalinter
+[EXCLUDED] http://localhost:5173/
+[EXCLUDED] http://localhost:8000/health
+[200] https://github.com/gitleaks/gitleaks
+[EXCLUDED] http://localhost:8000/docs
+[200] https://github.com/errata-ai/vale
+[200] https://github.com/microsoft/DevSkim
 [200] https://dashboard.plaid.com/
+[200] https://github.com/PHPCSStandards/PHP_CodeSniffer/
+[200] https://github.com/cjoudrey/graphql-schema-linter
+[404] https://github.com/yourusername/your-module-name | Network error: Not Found
 [200] https://github.com/errata-ai/proselint/issues/new
-[200] https://dashboard.plaid.com/team/keys
-[200] https://raku.org/
 [200] https://dashboard.plaid.com/ | OK (cached)
-[200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip
-[200] https://dashboard.plaid.com/team/billing
+[200] https://dashboard.plaid.com/signup
+[200] https://github.com/aquasecurity/trivy
+[200] https://github.com/Lightning-Flow-Scanner/lightning-flow-scanner-sfdx
+[200] https://dashboard.plaid.com/signup | OK (cached)
 [200] https://dashboard.plaid.com/team/keys
-[200] https://json.schemastore.org/web-manifest-combined.json
-[200] https://json.schemastore.org/prettierrc.json
+[EXCLUDED] file:///github/workspace/docs/plaid-setup.md#5-environment-variable-storage
+[200] https://github.com/overtrue/phplint
+[404] https://github.com/yourusername/your-module-name.git | Network error: Not Found
+[200] https://github.com/errata-ai/write-good/releases.atom
+[EXCLUDED] http://localhost:8000/health
 [EXCLUDED] http://localhost:8000/
 [EXCLUDED] http://localhost:8000/docs
-[EXCLUDED] http://localhost:8000/health
-[200] https://json.schemastore.org/htmlhint.json
+[200] https://dashboard.plaid.com/team/keys
+[200] https://github.com/lycheeverse/lychee
+[200] https://dashboard.plaid.com/signup
 [200] https://github.com/errata-ai/proselint/releases.atom
-[200] https://github.com/errata-ai/write-good/releases.atom
-[200] https://dashboard.plaid.com/signup
-[200] https://dashboard.plaid.com/team/billing
 [200] https://github.com/bridgecrewio/checkov#configuration-using-a-config-file
-[200] https://dashboard.plaid.com/signup
-[200] https://github.com/sirupsen/logrus#level-logging
-[200] https://plaid.com/pricing/
-[EXCLUDED] http://localhost:8000/docs
-[200] https://dashboard.plaid.com/signup | OK (cached)
-[EXCLUDED] http://localhost:8000/health
-[404] https://json.schemastore.org/luacheckrc.json | Network error: Not Found
-[EXCLUDED] http://localhost:8000/docs
-[200] https://dashboard.plaid.com/signup | OK (cached)
+[200] https://plaid.com/docs/sandbox/
+[200] https://dashboard.plaid.com/team/billing
+[200] https://github.com/checkmake/checkmake
+[200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip
+[200] https://dashboard.plaid.com/team/billing
 [EXCLUDED] http://localhost:8000/redoc
+[EXCLUDED] http://localhost:8000/docs
+[200] https://dashboard.plaid.com/signup | OK (cached)
 [EXCLUDED] mailto:i@izs.me
-[200] https://babeljs.io/
+[200] https://plaid.com/pricing/
 [200] https://vite.dev/guide/rolldown
-[200] https://swc.rs/
-[200] https://react.dev/learn/react-compiler/installation
+[200] https://babeljs.io/
+[200] https://github.com/sirupsen/logrus#level-logging
 [200] https://oxc.rs/
 [200] https://plaid.com/docs/
-[200] https://github.com/btford/write-good
+[200] https://react.dev/learn/react-compiler/installation
 [200] https://plaid.com/docs/sandbox/
-[200] https://plaid.com/docs/sandbox/
-[200] https://plaid.com/pricing/
-[200] https://plaid.com/docs/link/web/
 [200] https://plaid.com/docs/
-[200] https://github.com/plaid/quickstart
+[200] https://github.com/btford/write-good
 [200] https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom
-[200] https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc
+[200] https://swc.rs/
 [200] https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x
+[200] https://plaid.com/docs/link/web/
+[200] https://plaid.com/pricing/
 [200] https://github.com/plaid/quickstart
+[200] https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc
 [200] https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react
-[404] https://github.com/yourusername/your-module-name | Network error: Not Found
+[200] https://github.com/plaid/quickstart
 Error: Cannot write status output to file
 
 Caused by:
@@ -2876,12 +2917,12 @@ Caused by:
 - Command: [terragrunt hclfmt --terragrunt-check --terragrunt-config /github/workspace/config/terragrunt.hcl --terragrunt-hclfmt-file config/terragrunt.hcl]
 [31m[terragrunt] config/terragrunt.hcl - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[0;90m18:21:16.292[0m [0;33mWARN  [0m The `hclfmt` command is deprecated and will be removed in a future version of Terragrunt. Use `terragrunt hcl format` instead.
-[0;90m18:21:16.293[0m [0;31mERROR [0m flag `--terragrunt-config` is not a valid flag for `format`. Did you mean to use `console --config`?
+[0;90m04:21:25.878[0m [0;33mWARN  [0m The `hclfmt` command is deprecated and will be removed in a future version of Terragrunt. Use `terragrunt hcl format` instead.
+[0;90m04:21:25.879[0m [0;31mERROR [0m flag `--terragrunt-config` is not a valid flag for `format`. Did you mean to use `console --config`?
 [0m
 ::endgroup::
 Unable to get number of errors with regex_sum and ✖ ([0-9]+) problem
-::group::[31m❌ Linted [TSX] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.35s)[0m (expand for details)
+::group::[31m❌ Linted [TSX] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.37s)[0m (expand for details)
 - Using [eslint v8.57.1] https://megalinter.io/8.8.0/descriptors/tsx_eslint
 - MegaLinter key: [TSX_ESLINT]
 - Rules config: [/github/workspace/config/.eslint.config.mjs]
@@ -2916,11 +2957,11 @@ Error: end of the stream or a document separator is expected (25:14)
 
 ::endgroup::
 Unable to get number of errors with regex_sum and ✖ ([0-9]+) problem
-::group::[31m❌ Linted [TYPESCRIPT] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.37s)[0m (expand for details)
+::group::[31m❌ Linted [TYPESCRIPT] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.36s)[0m (expand for details)
 - Using [eslint v8.57.1] https://megalinter.io/8.8.0/descriptors/typescript_eslint
 - MegaLinter key: [TYPESCRIPT_ES]
 - Rules config: [/github/workspace/config/.eslint.config.mjs]
-- Number of files analyzed: [49]
+- Number of files analyzed: [54]
 - Command: [eslint --no-ignore -c /github/workspace/config/.eslint.config.mjs --no-eslintrc ui/.storybook/main.ts ui/.storybook/preview.ts ui/src/components/Placeholder/index.ts ui/src/features/allocations/allocationStrategy.test.ts ui/src/features/allocations/a...(truncated)]
 --Error detail:
 
@@ -2954,7 +2995,7 @@ Error: end of the stream or a document separator is expected (25:14)
 - Using [ts-standard v12.0.2] https://megalinter.io/8.8.0/descriptors/typescript_ts_standard
 - MegaLinter key: [TYPESCRIPT_STANDARD]
 - Rules config: identified by [ts-standard]
-- Number of files analyzed: [49]
+- Number of files analyzed: [54]
 - Command: [ts-standard ui/.storybook/main.ts ui/.storybook/preview.ts ui/src/components/Placeholder/index.ts ui/src/features/allocations/allocationStrategy.test.ts ui/src/features/allocations/allocationStrategy.ts ui/src/features/allocations/index.ts ui/src/fea...(truncated)]
 --Error detail:
 Unable to locate the project file. A project file (tsconfig.json or tsconfig.eslint.json) is required in order to use ts-standard.
@@ -2964,7 +3005,7 @@ Unable to locate the project file. A project file (tsconfig.json or tsconfig.esl
 - Using [prettier v3.5.3] https://megalinter.io/8.8.0/descriptors/typescript_prettier
 - MegaLinter key: [TYPESCRIPT_PRETTIER]
 - Rules config: [/github/workspace/config/.prettier.config.mjs]
-- Number of files analyzed: [49]
+- Number of files analyzed: [54]
 - Command: [prettier --check --config /github/workspace/config/.prettier.config.mjs ui/.storybook/main.ts ui/.storybook/preview.ts ui/src/components/Placeholder/index.ts ui/src/features/allocations/allocationStrategy.test.ts ui/src/features/allocations/allocatio...(truncated)]
 --Error detail:
 Checking formatting...
@@ -2982,18 +3023,18 @@ Checking formatting...
 - Using [prettier v3.5.3] https://megalinter.io/8.8.0/descriptors/yaml_prettier
 - MegaLinter key: [YAML_PRETTIER]
 - Rules config: [/github/workspace/config/.prettier.config.mjs]
-- Number of files analyzed: [76]
+- Number of files analyzed: [77]
 - Command: [prettier --check --config /github/workspace/config/.prettier.config.mjs .github/workflows/generate_repository_tree.yml .github/workflows/megalinter.yml .github/workflows/nsfw-detection.yml .github/workflows/pages.yml .github/workflows/toc.yml .megali...(truncated)]
 --Error detail:
 Checking formatting...
 [error] Cannot find package 'prettier-plugin-sh' imported from /github/workspace/noop.js
 
 ::endgroup::
-::group::[31m❌ Linted [YAML] files with [yamllint]: Found 241 error(s) and 0 warning(s) - (2.61s)[0m (expand for details)
+::group::[31m❌ Linted [YAML] files with [yamllint]: Found 242 error(s) and 0 warning(s) - (2.65s)[0m (expand for details)
 - Using [yamllint v1.37.1] https://megalinter.io/8.8.0/descriptors/yaml_yamllint
 - MegaLinter key: [YAML_YAMLLINT]
 - Rules config: [/github/workspace/config/.yamllint.yml]
-- Number of files analyzed: [76]
+- Number of files analyzed: [77]
 - Command: [yamllint --format standard -c /github/workspace/config/.yamllint.yml .github/workflows/generate_repository_tree.yml .github/workflows/megalinter.yml .github/workflows/nsfw-detection.yml .github/workflows/pages.yml .github/workflows/toc.yml .megalinte...(truncated)]
 --Error detail:
 .github/workflows/generate_repository_tree.yml
@@ -3352,6 +3393,9 @@ config/trivy-sbom.yaml
 config/trivy.yaml
   3:1       warning  missing document start "---"  (document-start)
 
+electron/electron-builder.yml
+  1:1       warning  missing document start "---"  (document-start)
+
 pnpm-lock.yaml
   1:1       warning  missing document start "---"  (document-start)
 
@@ -3369,11 +3413,11 @@ ui/pnpm-lock.yaml
 
 
 ::endgroup::
-::group::[31m❌ Linted [YAML] files with [v8r]: Found 1 error(s) and 0 warning(s) - (7.08s)[0m (expand for details)
+::group::[31m❌ Linted [YAML] files with [v8r]: Found 1 error(s) and 0 warning(s) - (6.77s)[0m (expand for details)
 - Using [v8r v5.0.0] https://megalinter.io/8.8.0/descriptors/yaml_v8r
 - MegaLinter key: [YAML_V8R]
 - Rules config: [/github/workspace/config/.v8rrc.yml]
-- Number of files analyzed: [76]
+- Number of files analyzed: [77]
 - Command: [v8r --ignore-errors .github/workflows/generate_repository_tree.yml .github/workflows/megalinter.yml .github/workflows/nsfw-detection.yml .github/workflows/pages.yml .github/workflows/toc.yml .megalinter.yml .pre-commit-config.yaml .releaserc.yml Task...(truncated)]
 --Error detail:
 ℹ No config file found
@@ -3619,6 +3663,9 @@ ui/pnpm-lock.yaml
 ℹ Processing config/trivy.yaml
 ✖ Could not find a schema to validate config/trivy.yaml
 
+ℹ Processing electron/electron-builder.yml
+✖ Could not find a schema to validate electron/electron-builder.yml
+
 ℹ Processing pnpm-lock.yaml
 ✖ Could not find a schema to validate pnpm-lock.yaml
 
@@ -3663,66 +3710,66 @@ tasks/misc.yml# must NOT have additional properties, found additional property '
 | Descriptor        | Linter                   | Mode          | Files | Fixed | Errors | Warnings | Elapsed time |
 +-------------------+--------------------------+---------------+-------+-------+--------+----------+--------------+
 | ❌ ACTION         | actionlint               | list_of_files |     5 |       |     13 |        0 | 0.08s        |
-| ✅ ANSIBLE        | ansible-lint             | project       |   n/a |       |      0 |        0 | 6.83s        |
+| ✅ ANSIBLE        | ansible-lint             | project       |   n/a |       |      0 |        0 | 6.75s        |
 | ❌ BASH           | bash-exec                | file          |     2 |       |      1 |        0 | 0.01s        |
 | ❌ BASH           | shellcheck               | list_of_files |     2 |       |      1 |        0 | 0.08s        |
 | ❌ BASH           | shfmt                    | list_of_files |     2 |       |      2 |        0 | 0.0s         |
 | ✅ CLOJURE        | cljstyle                 | file          |     1 |       |      0 |        0 | 0.01s        |
 | ❌ CLOJURE        | clj-kondo                | file          |     1 |       |      1 |        0 | 0.01s        |
-| ❌ CLOUDFORMATION | cfn-lint                 | list_of_files |     1 |       |      1 |        0 | 5.93s        |
-| ❌ COPYPASTE      | jscpd                    | project       |   n/a |       |      8 |        0 | 1.68s        |
-| ❌ CSS            | stylelint                | list_of_files |     1 |       |      1 |        0 | 0.51s        |
-| ❌ EDITORCONFIG   | editorconfig-checker     | list_of_files |   285 |       |      1 |        0 | 0.01s        |
-| ❌ HTML           | djlint                   | list_of_files |     2 |       |      5 |        0 | 0.62s        |
+| ❌ CLOUDFORMATION | cfn-lint                 | list_of_files |     1 |       |      1 |        0 | 5.81s        |
+| ❌ COPYPASTE      | jscpd                    | project       |   n/a |       |      8 |        0 | 1.61s        |
+| ❌ CSS            | stylelint                | list_of_files |     1 |       |      1 |        0 | 0.53s        |
+| ❌ EDITORCONFIG   | editorconfig-checker     | list_of_files |   296 |       |      1 |        0 | 0.01s        |
+| ❌ HTML           | djlint                   | list_of_files |     2 |       |      5 |        0 | 0.63s        |
 | ✅ HTML           | htmlhint                 | list_of_files |     2 |       |      0 |        0 | 0.2s         |
-| ❌ JAVASCRIPT     | eslint                   | list_of_files |     1 |       |      1 |        0 | 0.35s        |
-| ❌ JAVASCRIPT     | prettier                 | list_of_files |     1 |       |      1 |        0 | 0.22s        |
-| ❌ JSON           | jsonlint                 | list_of_files |    30 |       |      1 |        0 | 0.14s        |
+| ❌ JAVASCRIPT     | eslint                   | list_of_files |     4 |       |      1 |        0 | 0.36s        |
+| ❌ JAVASCRIPT     | prettier                 | list_of_files |     4 |       |      1 |        0 | 0.22s        |
+| ❌ JSON           | jsonlint                 | list_of_files |    31 |       |      1 |        0 | 0.14s        |
 | ❌ JSON           | npm-package-json-lint    | project       |   n/a |       |      1 |        0 | 0.3s         |
-| ❌ JSON           | prettier                 | list_of_files |    30 |       |      1 |        0 | 0.19s        |
-| ❌ JSON           | v8r                      | list_of_files |    30 |       |      1 |        0 | 9.79s        |
-| ❌ MARKDOWN       | markdownlint             | list_of_files |    11 |       |     52 |        0 | 0.51s        |
-| ✅ MARKDOWN       | markdown-link-check      | list_of_files |    11 |       |      0 |        0 | 3.86s        |
-| ❌ MARKDOWN       | markdown-table-formatter | list_of_files |    11 |       |      1 |        0 | 0.18s        |
+| ❌ JSON           | prettier                 | list_of_files |    31 |       |      1 |        0 | 0.19s        |
+| ❌ JSON           | v8r                      | list_of_files |    31 |       |      1 |        0 | 11.3s        |
+| ❌ MARKDOWN       | markdownlint             | list_of_files |    11 |       |     52 |        0 | 0.56s        |
+| ✅ MARKDOWN       | markdown-link-check      | list_of_files |    11 |       |      0 |        0 | 4.23s        |
+| ❌ MARKDOWN       | markdown-table-formatter | list_of_files |    11 |       |      1 |        0 | 0.17s        |
 | ❌ POWERSHELL     | powershell               | file          |     3 |       |      3 |        0 | 1.88s        |
-| ❌ POWERSHELL     | powershell_formatter     | file          |     3 |       |      3 |        0 | 1.67s        |
-| ❌ PYTHON         | bandit                   | list_of_files |     7 |       |     44 |        0 | 1.57s        |
+| ❌ POWERSHELL     | powershell_formatter     | file          |     3 |       |      3 |        0 | 1.69s        |
+| ❌ PYTHON         | bandit                   | list_of_files |     7 |       |     46 |        0 | 1.63s        |
 | ✅ PYTHON         | flake8                   | list_of_files |     7 |       |      0 |        0 | 0.43s        |
-| ❌ PYTHON         | isort                    | list_of_files |     7 |       |      3 |        0 | 0.18s        |
-| ❌ PYTHON         | mypy                     | list_of_files |     7 |       |     43 |        0 | 2.35s        |
-| ❌ PYTHON         | pylint                   | list_of_files |     7 |       |     14 |        0 | 3.45s        |
-| ❌ PYTHON         | pyright                  | list_of_files |     7 |       |    302 |        0 | 2.41s        |
+| ❌ PYTHON         | isort                    | list_of_files |     7 |       |      3 |        0 | 0.17s        |
+| ❌ PYTHON         | mypy                     | list_of_files |     7 |       |     44 |        0 | 2.3s         |
+| ❌ PYTHON         | pylint                   | list_of_files |     7 |       |     14 |        0 | 3.47s        |
+| ❌ PYTHON         | pyright                  | list_of_files |     7 |       |    312 |        0 | 2.32s        |
 | ✅ PYTHON         | ruff                     | list_of_files |     7 |       |      0 |        0 | 0.01s        |
 | ❌ PYTHON         | ruff-format              | list_of_files |     7 |       |      1 |        0 | 0.01s        |
-| ❌ REPOSITORY     | checkov                  | project       |   n/a |       |      1 |        0 | 21.5s        |
-| ✅ REPOSITORY     | dustilock                | project       |   n/a |       |      0 |        0 | 1.18s        |
+| ❌ REPOSITORY     | checkov                  | project       |   n/a |       |      1 |        0 | 21.42s       |
+| ✅ REPOSITORY     | dustilock                | project       |   n/a |       |      0 |        0 | 1.61s        |
 | ❌ REPOSITORY     | gitleaks                 | project       |   n/a |       |      1 |        0 | 0.01s        |
 | ✅ REPOSITORY     | git_diff                 | project       |   n/a |       |      0 |        0 | 0.08s        |
-| ❌ REPOSITORY     | grype                    | project       |   n/a |       |     13 |        0 | 27.75s       |
-| ❌ REPOSITORY     | kics                     | project       |   n/a |       |      2 |        0 | 13.9s        |
+| ❌ REPOSITORY     | grype                    | project       |   n/a |       |     13 |        0 | 27.8s        |
+| ❌ REPOSITORY     | kics                     | project       |   n/a |       |      2 |        0 | 19.91s       |
 | ❌ REPOSITORY     | ls-lint                  | project       |   n/a |       |      1 |        0 | 0.06s        |
-| ❌ REPOSITORY     | secretlint               | list_of_files |     0 |       |      1 |        0 | 10.36s       |
+| ❌ REPOSITORY     | secretlint               | list_of_files |     0 |       |      1 |        0 | 8.97s        |
 | ❌ REPOSITORY     | syft                     | project       |   n/a |       |      1 |        0 | 0.02s        |
-| ✅ REPOSITORY     | trivy                    | project       |   n/a |       |      0 |        0 | 6.82s        |
-| ✅ REPOSITORY     | trivy-sbom               | project       |   n/a |       |      0 |        0 | 0.57s        |
+| ✅ REPOSITORY     | trivy                    | project       |   n/a |       |      0 |        0 | 5.94s        |
+| ✅ REPOSITORY     | trivy-sbom               | project       |   n/a |       |      0 |        0 | 0.58s        |
 | ❌ REPOSITORY     | trufflehog               | project       |   n/a |       |      1 |        0 | 2.24s        |
-| ❌ SALESFORCE     | lightning-flow-scanner   | project       |   n/a |       |      1 |        0 | 0.86s        |
-| ✅ SALESFORCE     | sfdx-scanner-apex        | project       |   n/a |       |      0 |        0 | 21.2s        |
-| ✅ SALESFORCE     | sfdx-scanner-aura        | project       |   n/a |       |      0 |        0 | 8.53s        |
-| ✅ SALESFORCE     | sfdx-scanner-lwc         | project       |   n/a |       |      0 |        0 | 8.58s        |
-| ✅ SPELL          | cspell                   | list_of_files |   286 |       |      0 |        0 | 0.93s        |
-| ❌ SPELL          | lychee                   | list_of_files |   120 |       |      1 |        0 | 3.46s        |
-| ❌ SPELL          | proselint                | list_of_files |    12 |       |     11 |        0 | 9.44s        |
+| ❌ SALESFORCE     | lightning-flow-scanner   | project       |   n/a |       |      1 |        0 | 0.85s        |
+| ✅ SALESFORCE     | sfdx-scanner-apex        | project       |   n/a |       |      0 |        0 | 22.16s       |
+| ✅ SALESFORCE     | sfdx-scanner-aura        | project       |   n/a |       |      0 |        0 | 8.37s        |
+| ✅ SALESFORCE     | sfdx-scanner-lwc         | project       |   n/a |       |      0 |        0 | 8.33s        |
+| ✅ SPELL          | cspell                   | list_of_files |   297 |       |      0 |        0 | 0.98s        |
+| ❌ SPELL          | lychee                   | list_of_files |   122 |       |      1 |        0 | 3.11s        |
+| ❌ SPELL          | proselint                | list_of_files |    12 |       |     11 |        0 | 9.66s        |
 | ⚠️ SPELL          | vale                     | list_of_files |    11 |       |      0 |       47 | 0.83s        |
 | ❌ TERRAFORM      | terragrunt               | file          |     1 |       |      1 |        0 | 0.06s        |
-| ❌ TSX            | eslint                   | list_of_files |    28 |       |      1 |        0 | 0.35s        |
-| ❌ TYPESCRIPT     | eslint                   | list_of_files |    49 |       |      1 |        0 | 0.37s        |
-| ❌ TYPESCRIPT     | prettier                 | list_of_files |    49 |       |      1 |        0 | 0.2s         |
-| ❌ TYPESCRIPT     | ts-standard              | list_of_files |    49 |       |      1 |        0 | 0.33s        |
+| ❌ TSX            | eslint                   | list_of_files |    28 |       |      1 |        0 | 0.37s        |
+| ❌ TYPESCRIPT     | eslint                   | list_of_files |    54 |       |      1 |        0 | 0.36s        |
+| ❌ TYPESCRIPT     | prettier                 | list_of_files |    54 |       |      1 |        0 | 0.2s         |
+| ❌ TYPESCRIPT     | ts-standard              | list_of_files |    54 |       |      1 |        0 | 0.33s        |
 | ✅ XML            | xmllint                  | list_of_files |     5 |       |      0 |        0 | 0.16s        |
-| ❌ YAML           | prettier                 | list_of_files |    76 |       |      1 |        0 | 0.2s         |
-| ❌ YAML           | v8r                      | list_of_files |    76 |       |      1 |        0 | 7.08s        |
-| ❌ YAML           | yamllint                 | list_of_files |    76 |       |    241 |        0 | 2.61s        |
+| ❌ YAML           | prettier                 | list_of_files |    77 |       |      1 |        0 | 0.2s         |
+| ❌ YAML           | v8r                      | list_of_files |    77 |       |      1 |        0 | 6.77s        |
+| ❌ YAML           | yamllint                 | list_of_files |    77 |       |    242 |        0 | 2.65s        |
 +-------------------+--------------------------+---------------+-------+-------+--------+----------+--------------+
 
 [MARKDOWN_SUMMARY Reporter] Generated MARKDOWN_SUMMARY report: reports/megalinter/SUMMARY.md

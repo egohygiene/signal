@@ -1,12 +1,12 @@
 {
 	"kics_version": "v2.1.10",
-	"files_scanned": 15,
-	"lines_scanned": 723,
-	"files_parsed": 7,
-	"lines_parsed": 294,
+	"files_scanned": 16,
+	"lines_scanned": 744,
+	"files_parsed": 8,
+	"lines_parsed": 315,
 	"lines_ignored": 2,
 	"files_failed_to_scan": 0,
-	"queries_total": 289,
+	"queries_total": 789,
 	"queries_failed_to_execute": 0,
 	"queries_failed_to_compute_similarity_id": 0,
 	"scan_id": "console",
@@ -20,12 +20,12 @@
 	},
 	"total_counter": 2,
 	"total_bom_resources": 0,
-	"start": "2026-03-01T18:19:40.293169369Z",
-	"end": "2026-03-01T18:19:53.0169259Z",
+	"start": "2026-03-02T04:19:45.87289231Z",
+	"end": "2026-03-02T04:20:04.727457761Z",
 	"paths": [
+		".",
 		"/usr/bin/assets/queries",
-		"/usr/bin/assets/libraries",
-		"."
+		"/usr/bin/assets/libraries"
 	],
 	"queries": [
 		{
@@ -42,23 +42,23 @@
 			"description_id": "9cb8402d",
 			"files": [
 				{
-					"file_name": ".github/workflows/megalinter.yml",
-					"similarity_id": "a1842fdbecf9d48d1371f77e535eff59428e15c1336a13acf501808afbbdb480",
-					"line": 39,
-					"issue_type": "IncorrectValue",
-					"search_key": "uses={{oxsecurity/megalinter@v8.8.0}}",
-					"search_line": 39,
-					"search_value": "",
-					"expected_value": "Action pinned to a full length commit SHA.",
-					"actual_value": "Action is not pinned to a full length commit SHA."
-				},
-				{
 					"file_name": ".github/workflows/toc.yml",
 					"similarity_id": "0fbc2dac8b3c7031489c7784000dd7ccb8e398f83405d52bfb5162843eab3282",
 					"line": 18,
 					"issue_type": "IncorrectValue",
 					"search_key": "uses={{technote-space/toc-generator@v4}}",
 					"search_line": 18,
+					"search_value": "",
+					"expected_value": "Action pinned to a full length commit SHA.",
+					"actual_value": "Action is not pinned to a full length commit SHA."
+				},
+				{
+					"file_name": ".github/workflows/megalinter.yml",
+					"similarity_id": "a1842fdbecf9d48d1371f77e535eff59428e15c1336a13acf501808afbbdb480",
+					"line": 39,
+					"issue_type": "IncorrectValue",
+					"search_key": "uses={{oxsecurity/megalinter@v8.8.0}}",
+					"search_line": 39,
 					"search_value": "",
 					"expected_value": "Action pinned to a full length commit SHA.",
 					"actual_value": "Action is not pinned to a full length commit SHA."

@@ -247,6 +247,9 @@ Linter raw log:
 ℹ Processing config/trivy.yaml
 ✖ Could not find a schema to validate config/trivy.yaml
 
+ℹ Processing electron/electron-builder.yml
+✖ Could not find a schema to validate electron/electron-builder.yml
+
 ℹ Processing pnpm-lock.yaml
 ✖ Could not find a schema to validate pnpm-lock.yaml
 

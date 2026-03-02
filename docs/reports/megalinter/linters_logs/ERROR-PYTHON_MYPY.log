@@ -58,9 +58,13 @@ annotation  [no-untyped-def]
     ^
 server/tests/test_error_handling.py:67:1: error: Function is missing a type
 annotation  [no-untyped-def]
-    async def test_plaid_transactions_post_plaid_not_configured(client):
+    async def test_plaid_transactions_post_empty_access_token(client):
     ^
 server/tests/test_error_handling.py:78:1: error: Function is missing a type
+annotation  [no-untyped-def]
+    async def test_plaid_transactions_post_plaid_not_configured(client):
+    ^
+server/tests/test_error_handling.py:89:1: error: Function is missing a type
 annotation  [no-untyped-def]
     async def test_not_found_endpoint(client):
     ^
@@ -181,5 +185,5 @@ server/tests/conftest.py:10:1: error: Function is missing a return type
 annotation  [no-untyped-def]
     async def client():
     ^
-Found 43 errors in 6 files (checked 7 source files)
+Found 44 errors in 6 files (checked 7 source files)
 

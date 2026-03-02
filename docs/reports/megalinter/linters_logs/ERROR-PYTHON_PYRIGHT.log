@@ -49,39 +49,39 @@ server/main.py
   server/main.py:256:24 - error: Type of "get" is unknown (reportUnknownMemberType)
   server/main.py:269:2 - error: Type of "post" is unknown (reportUnknownMemberType)
   server/main.py:269:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
-  server/main.py:304:9 - error: Type of "result" is unknown (reportUnknownVariableType)
-  server/main.py:304:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  server/main.py:312:9 - error: Type of "normalized_transactions" is unknown (reportUnknownVariableType)
-  server/main.py:312:35 - error: Type of "normalize_transactions" is unknown (reportUnknownMemberType)
-  server/main.py:313:13 - error: Type of "get" is unknown (reportUnknownMemberType)
-  server/main.py:320:56 - error: Argument type is unknown
+  server/main.py:311:9 - error: Type of "result" is unknown (reportUnknownVariableType)
+  server/main.py:311:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  server/main.py:319:9 - error: Type of "normalized_transactions" is unknown (reportUnknownVariableType)
+  server/main.py:319:35 - error: Type of "normalize_transactions" is unknown (reportUnknownMemberType)
+  server/main.py:320:13 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/main.py:327:56 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  server/main.py:321:47 - error: Type of "get" is unknown (reportUnknownMemberType)
-  server/main.py:321:47 - error: Argument type is unknown
+  server/main.py:328:47 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/main.py:328:47 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  server/main.py:329:16 - error: Type of "tx" is unknown (reportUnknownVariableType)
-  server/main.py:329:32 - error: Argument type is unknown
+  server/main.py:336:16 - error: Type of "tx" is unknown (reportUnknownVariableType)
+  server/main.py:336:32 - error: Argument type is unknown
     Argument corresponds to parameter "iterable" in function "__new__" (reportUnknownArgumentType)
-  server/main.py:331:34 - error: Type of "transaction_id" is unknown (reportUnknownMemberType)
-  server/main.py:332:36 - error: Type of "date" is unknown (reportUnknownMemberType)
-  server/main.py:333:36 - error: Type of "name" is unknown (reportUnknownMemberType)
-  server/main.py:334:39 - error: Type of "amount" is unknown (reportUnknownMemberType)
-  server/main.py:334:55 - error: Type of "iso_currency_code" is unknown (reportUnknownMemberType)
-  server/main.py:337:30 - error: Type of "category" is unknown (reportUnknownMemberType)
-  server/main.py:337:30 - error: Argument type is unknown
+  server/main.py:338:34 - error: Type of "transaction_id" is unknown (reportUnknownMemberType)
+  server/main.py:339:36 - error: Type of "date" is unknown (reportUnknownMemberType)
+  server/main.py:340:36 - error: Type of "name" is unknown (reportUnknownMemberType)
+  server/main.py:341:39 - error: Type of "amount" is unknown (reportUnknownMemberType)
+  server/main.py:341:55 - error: Type of "iso_currency_code" is unknown (reportUnknownMemberType)
+  server/main.py:344:30 - error: Type of "category" is unknown (reportUnknownMemberType)
+  server/main.py:344:30 - error: Argument type is unknown
     Argument corresponds to parameter "iterable" in function "join" (reportUnknownArgumentType)
-  server/main.py:337:46 - error: Type of "category" is unknown (reportUnknownMemberType)
-  server/main.py:339:39 - error: Type of "pending" is unknown (reportUnknownMemberType)
-  server/main.py:341:16 - error: Argument type is unknown
+  server/main.py:344:46 - error: Type of "category" is unknown (reportUnknownMemberType)
+  server/main.py:346:39 - error: Type of "pending" is unknown (reportUnknownMemberType)
+  server/main.py:348:16 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  server/main.py:343:32 - error: Argument type is unknown
+  server/main.py:350:32 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  server/main.py:350:29 - error: Argument type is unknown
+  server/main.py:357:29 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  server/main.py:351:32 - error: Type of "get" is unknown (reportUnknownMemberType)
-  server/main.py:351:32 - error: Argument type is unknown
+  server/main.py:358:32 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/main.py:358:32 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  server/main.py:352:24 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/main.py:359:24 - error: Type of "get" is unknown (reportUnknownMemberType)
 server/plaid_adapter.py
   server/plaid_adapter.py:7:8 - error: Import "plaid" could not be resolved (reportMissingImports)
   server/plaid_adapter.py:8:6 - error: Import "plaid.api" could not be resolved (reportMissingImports)
@@ -231,21 +231,31 @@ server/tests/test_error_handling.py
   server/tests/test_error_handling.py:66:2 - error: Type of "mark" is unknown (reportUnknownMemberType)
   server/tests/test_error_handling.py:66:2 - error: Type of "asyncio" is unknown (reportUnknownMemberType)
   server/tests/test_error_handling.py:66:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
-  server/tests/test_error_handling.py:67:61 - error: Type of parameter "client" is unknown (reportUnknownParameterType)
-  server/tests/test_error_handling.py:67:61 - error: Type annotation is missing for parameter "client" (reportMissingParameterType)
+  server/tests/test_error_handling.py:67:59 - error: Type of parameter "client" is unknown (reportUnknownParameterType)
+  server/tests/test_error_handling.py:67:59 - error: Type annotation is missing for parameter "client" (reportMissingParameterType)
   server/tests/test_error_handling.py:69:5 - error: Type of "response" is unknown (reportUnknownVariableType)
   server/tests/test_error_handling.py:69:22 - error: Type of "post" is unknown (reportUnknownMemberType)
   server/tests/test_error_handling.py:73:12 - error: Type of "status_code" is unknown (reportUnknownMemberType)
-  server/tests/test_error_handling.py:74:32 - error: Type of "json" is unknown (reportUnknownMemberType)
-  server/tests/test_error_handling.py:74:32 - error: Type of "lower" is unknown (reportUnknownMemberType)
+  server/tests/test_error_handling.py:74:23 - error: Type of "json" is unknown (reportUnknownMemberType)
+  server/tests/test_error_handling.py:74:23 - error: Type of "lower" is unknown (reportUnknownMemberType)
   server/tests/test_error_handling.py:77:2 - error: Type of "mark" is unknown (reportUnknownMemberType)
   server/tests/test_error_handling.py:77:2 - error: Type of "asyncio" is unknown (reportUnknownMemberType)
   server/tests/test_error_handling.py:77:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
-  server/tests/test_error_handling.py:78:35 - error: Type of parameter "client" is unknown (reportUnknownParameterType)
-  server/tests/test_error_handling.py:78:35 - error: Type annotation is missing for parameter "client" (reportMissingParameterType)
+  server/tests/test_error_handling.py:78:61 - error: Type of parameter "client" is unknown (reportUnknownParameterType)
+  server/tests/test_error_handling.py:78:61 - error: Type annotation is missing for parameter "client" (reportMissingParameterType)
   server/tests/test_error_handling.py:80:5 - error: Type of "response" is unknown (reportUnknownVariableType)
-  server/tests/test_error_handling.py:80:22 - error: Type of "get" is unknown (reportUnknownMemberType)
-  server/tests/test_error_handling.py:81:12 - error: Type of "status_code" is unknown (reportUnknownMemberType)
+  server/tests/test_error_handling.py:80:22 - error: Type of "post" is unknown (reportUnknownMemberType)
+  server/tests/test_error_handling.py:84:12 - error: Type of "status_code" is unknown (reportUnknownMemberType)
+  server/tests/test_error_handling.py:85:32 - error: Type of "json" is unknown (reportUnknownMemberType)
+  server/tests/test_error_handling.py:85:32 - error: Type of "lower" is unknown (reportUnknownMemberType)
+  server/tests/test_error_handling.py:88:2 - error: Type of "mark" is unknown (reportUnknownMemberType)
+  server/tests/test_error_handling.py:88:2 - error: Type of "asyncio" is unknown (reportUnknownMemberType)
+  server/tests/test_error_handling.py:88:2 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
+  server/tests/test_error_handling.py:89:35 - error: Type of parameter "client" is unknown (reportUnknownParameterType)
+  server/tests/test_error_handling.py:89:35 - error: Type annotation is missing for parameter "client" (reportMissingParameterType)
+  server/tests/test_error_handling.py:91:5 - error: Type of "response" is unknown (reportUnknownVariableType)
+  server/tests/test_error_handling.py:91:22 - error: Type of "get" is unknown (reportUnknownMemberType)
+  server/tests/test_error_handling.py:92:12 - error: Type of "status_code" is unknown (reportUnknownMemberType)
 server/tests/test_health.py
   server/tests/test_health.py:3:8 - error: Import "pytest" could not be resolved (reportMissingImports)
   server/tests/test_health.py:6:2 - error: Type of "mark" is unknown (reportUnknownMemberType)
@@ -348,5 +358,5 @@ server/tests/test_plaid_adapter.py
   server/tests/test_plaid_adapter.py:132:47 - error: Type of parameter "monkeypatch" is unknown (reportUnknownParameterType)
   server/tests/test_plaid_adapter.py:132:47 - error: Type annotation is missing for parameter "monkeypatch" (reportMissingParameterType)
   server/tests/test_plaid_adapter.py:134:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
-302 errors, 0 warnings, 0 informations 
+312 errors, 0 warnings, 0 informations 
 

@@ -4,7 +4,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/python_bandit/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-Run started:2026-03-01 18:17:58.790547
+Run started:2026-03-02 04:18:02.471186
 
 Test results:
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
@@ -113,8 +113,8 @@ Test results:
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
    Location: ./server/tests/test_error_handling.py:73:4
 72	    )
-73	    assert response.status_code == 503
-74	    assert "not configured" in response.json()["detail"].lower()
+73	    assert response.status_code == 400
+74	    assert "empty" in response.json()["detail"].lower()
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
@@ -122,8 +122,8 @@ Test results:
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
    Location: ./server/tests/test_error_handling.py:74:4
-73	    assert response.status_code == 503
-74	    assert "not configured" in response.json()["detail"].lower()
+73	    assert response.status_code == 400
+74	    assert "empty" in response.json()["detail"].lower()
 75	
 
 --------------------------------------------------
@@ -131,9 +131,29 @@ Test results:
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_error_handling.py:81:4
-80	    response = await client.get("/nonexistent")
-81	    assert response.status_code == 404
+   Location: ./server/tests/test_error_handling.py:84:4
+83	    )
+84	    assert response.status_code == 503
+85	    assert "not configured" in response.json()["detail"].lower()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_error_handling.py:85:4
+84	    assert response.status_code == 503
+85	    assert "not configured" in response.json()["detail"].lower()
+86	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_error_handling.py:92:4
+91	    response = await client.get("/nonexistent")
+92	    assert response.status_code == 404
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
@@ -454,20 +474,20 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 668
+	Total lines of code: 682
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 44
+		Low: 46
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 2
-		High: 42
+		High: 44
 Files skipped (0):
 
