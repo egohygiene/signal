@@ -1,0 +1,126 @@
+Stability Audit Report
+Generated: 2026-03-01T18:54:26Z
+Repository: egohygiene/signal
+Auditor: copilot
+Scope: Pre-local-build stability review — frontend (ui/) and backend (server/)
+
+================================================================================
+🔴 CRITICAL — Must fix before local run
+================================================================================
+
+[C1] POST /api/plaid/transactions does not validate empty access_token
+  - server/main.py:286–292: the GET /api/transactions endpoint rejects blank
+    access_token (line 192–195); the POST endpoint has no equivalent guard.
+  - Empty token is forwarded to Plaid, producing an opaque upstream error
+    instead of a 400. Add the same blank-token check to the POST handler.
+
+[C2] Plaid pagination not implemented — large accounts silently truncated
+  - server/plaid_adapter.py:127: `transactions_get` returns at most 500 items
+    per call. No pagination loop exists. Accounts with >500 transactions in the
+    requested range return only the first page with no warning to the caller.
+  - Affects data integrity for any real Plaid connection. Implement cursor-based
+    pagination or document the hard limit in the response.
+
+[C3] enableMocking() rejection is unhandled — app silently fails to boot
+  - ui/src/main.tsx:16: `enableMocking().then(...)` has no `.catch()`.
+    If the dynamic import of msw/browser throws (e.g. missing service-worker
+    file), the app never renders and there is no error surfaced to the user.
+  - Add a `.catch(console.error)` or explicit error handler.
+
+================================================================================
+🟡 RISK — Should fix soon
+================================================================================
+
+[R1] TransactionsList shows "No transactions found" before sync completes
+  - ui/src/features/transactions/TransactionsList.tsx:10: reads directly from
+    Zustand store. The DataSyncProvider populates the store after query data
+    arrives. During that window the store is empty, causing a false-negative
+    empty state before loading finishes.
+  - Pass an isLoading prop or read from the query directly in this component.
+
+[R2] isInMonth silently drops transactions on malformed date strings
+  - ui/src/utils/transactionUtils.ts:12–14: `new Date(dateStr)` returns
+    `Invalid Date` for non-ISO strings. `getUTCFullYear()` on an Invalid Date
+    returns NaN, so the guard fails silently and those transactions are excluded
+    from every monthly total without any log or error.
+  - Add a date-format assertion and log a warning on invalid input.
+
+[R3] normalize_transaction silently defaults critical IDs to empty string
+  - server/plaid_adapter.py:177–178: when `transaction_id` or `account_id` is
+    absent from the raw dict, `tx.get("transaction_id", "")` produces an empty
+    string that satisfies the Pydantic model. Downstream deduplication and
+    account-level grouping will be silently corrupted.
+  - Raise an exception (or at minimum log a warning) when these required IDs
+    are absent rather than defaulting to empty string.
+
+[R4] DataSyncProvider error useEffect fires on every mount with null errors
+  - ui/src/providers/DataSyncProvider.tsx:56–65: the effect iterates all four
+    query errors on every mount, including the initial state where all errors
+    are null. The `if (err)` guard prevents spurious log output today, but if
+    the guard is ever removed or restructured this will produce false error logs.
+  - Restructure to only log errors that are non-null, and consider not running
+    the effect when no errors exist.
+
+[R5] Global faker.seed() in FakeDataProvider mutates shared module instance
+  - ui/src/providers/FakeDataProvider.ts:121–123: `faker.seed(SEED)` modifies
+    the global faker singleton. If multiple test files import this module in
+    parallel, seed state leaks between tests, producing non-deterministic output.
+  - Use `new Faker({ locale: [en] })` with an explicit seed instead of seeding
+    the global instance.
+
+================================================================================
+🔵 IMPROVEMENT — Can defer
+================================================================================
+
+[I1] POST body exposes access_token — prefer header transport
+  - server/main.py:124–130: `TransactionsRequest` places `access_token` in the
+    JSON request body. The GET endpoint correctly uses an X-Access-Token header
+    to keep tokens out of logs. Align the POST endpoint for consistency.
+
+[I2] No gcTime configured on QueryClient — implicit 5-minute default
+  - ui/src/query/queryClient.ts:3–11: `staleTime` is set explicitly but
+    `gcTime` (formerly `cacheTime`) is not. The TanStack Query v5 default is
+    5 minutes, which is acceptable but should be explicit to avoid surprises
+    when upgrading.
+
+[I3] usePoolSummary / useBudgetSummary: new Date() outside useMemo
+  - ui/src/features/pools/usePoolSummary.ts:22–24 and
+    ui/src/features/budgets/useBudgetSummary.ts:18–20: `new Date()` is called
+    on every render before `resolvedYear`/`resolvedMonth` are computed. This
+    is not inside the `useMemo` callback, so the Date is constructed on every
+    render even when the memo result is reused. Move inside useMemo or
+    memoize separately.
+
+[I4] TransactionSchema date field accepts any string — no format constraint
+  - ui/src/schema/v1/transaction.ts:9: `date: z.string()` does not enforce
+    YYYY-MM-DD format. A malformed date from the API passes Zod validation and
+    then silently fails the isInMonth filter (see R2).
+  - Add `z.string().regex(/^\d{4}-\d{2}-\d{2}$/)` to enforce format at the
+    boundary.
+
+[I5] Non-null assertion on root DOM element has no graceful fallback
+  - ui/src/main.tsx:18: `document.getElementById('root')!` will throw a
+    cryptic TypeError if the element is absent (e.g. template change). Add a
+    null check with a descriptive error message.
+
+[I6] Server transaction log loop iterates up to 10 sensitive records
+  - server/main.py:329–345: the POST endpoint logs the first 10 transaction
+    names and merchant names to stdout. In a non-sandbox environment this
+    leaks real financial merchant names to server logs.
+  - Gate this detailed logging behind `settings.debug` or remove in production.
+
+================================================================================
+SUMMARY
+================================================================================
+
+  🔴 Critical : 3  (C1–C3)
+  🟡 Risk     : 5  (R1–R5)
+  🔵 Improve  : 6  (I1–I6)
+
+No code was modified during this audit.
+Previous audits: audits/audit-2026-02-28T184945.log,
+                 audits/stack-audit-2026-03-01T022046.log
+
+================================================================================
+END OF REPORT
+================================================================================
