@@ -53,6 +53,7 @@ export function DataSyncProvider({ children }: DataSyncProviderProps): JSX.Eleme
   const { data: pools, isLoading: poolLoading, error: poolError } = usePoolsQuery();
 
   useEffect(() => {
+    if (!txError && !catError && !budError && !poolError) return;
     const queryErrors: [string, Error | null][] = [
       ['transactions', txError],
       ['categories', catError],
