@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:f8b976f1-7473-41b5-b1e4-026380fcd289",
+    "serialNumber": "urn:uuid:a91b8aad-38ae-4093-ad00-cdb701077da7",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-03-02T21:09:44+00:00",
+        "timestamp": "2026-03-02T22:09:24+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "4eb91111-570a-43d9-a1ab-b15d02603ef7",
+            "bom-ref": "df5aaff4-5647-4574-b0a1-8d2ff8aa9509",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,7 +30,7 @@
     },
     "components": [
         {
-            "bom-ref": "08821805-93df-4f8c-9329-0175a61e6a2a",
+            "bom-ref": "4918f1b3-d6aa-473f-99ae-ed26c74a3570",
             "type": "application",
             "name": "ui/pnpm-lock.yaml",
             "properties": [
@@ -45,7 +45,7 @@
             ]
         },
         {
-            "bom-ref": "b1028f04-190d-4e1a-98fa-c4b1977aab66",
+            "bom-ref": "bd1a284c-a9c0-487c-ae2a-4ae4f5863cde",
             "type": "application",
             "name": "server/requirements.txt",
             "properties": [
@@ -710,7 +710,7 @@
     ],
     "dependencies": [
         {
-            "ref": "08821805-93df-4f8c-9329-0175a61e6a2a",
+            "ref": "4918f1b3-d6aa-473f-99ae-ed26c74a3570",
             "dependsOn": [
                 "pkg:npm/%40tanstack/react-query@5.90.21",
                 "pkg:npm/%40types/react@19.2.14",
@@ -727,20 +727,20 @@
             ]
         },
         {
-            "ref": "4eb91111-570a-43d9-a1ab-b15d02603ef7",
-            "dependsOn": [
-                "08821805-93df-4f8c-9329-0175a61e6a2a",
-                "b1028f04-190d-4e1a-98fa-c4b1977aab66"
-            ]
-        },
-        {
-            "ref": "b1028f04-190d-4e1a-98fa-c4b1977aab66",
+            "ref": "bd1a284c-a9c0-487c-ae2a-4ae4f5863cde",
             "dependsOn": [
                 "pkg:pypi/fastapi@0.115.6",
                 "pkg:pypi/plaid-python@25.0.0",
                 "pkg:pypi/pydantic-settings@2.7.1",
                 "pkg:pypi/python-dotenv@1.0.1",
                 "pkg:pypi/uvicorn@0.34.0"
+            ]
+        },
+        {
+            "ref": "df5aaff4-5647-4574-b0a1-8d2ff8aa9509",
+            "dependsOn": [
+                "4918f1b3-d6aa-473f-99ae-ed26c74a3570",
+                "bd1a284c-a9c0-487c-ae2a-4ae4f5863cde"
             ]
         },
         {
