@@ -137,3 +137,155 @@ class TestPlaidAdapterNormalize:
                 secret="secret",
                 environment="unknown_env",
             )
+
+
+def _make_sync_response(added, has_more, next_cursor="cursor_next", accounts=None, request_id="req_1"):
+    """Build a mock transactions_sync response dict."""
+
+    class MockResponse:
+        def to_dict(self_inner):
+            return {
+                "added": added,
+                "modified": [],
+                "removed": [],
+                "has_more": has_more,
+                "next_cursor": next_cursor,
+                "accounts": accounts or [],
+                "request_id": request_id,
+            }
+
+    return MockResponse()
+
+
+class TestGetTransactionsPagination:
+    """Tests for cursor-based pagination in PlaidAdapter.get_transactions."""
+
+    @pytest.fixture
+    def adapter(self, monkeypatch):
+        """Return a PlaidAdapter with a mocked Plaid client."""
+        monkeypatch.setattr("plaid_adapter.plaid.ApiClient", lambda config: None)
+        monkeypatch.setattr("plaid_adapter.plaid_api.PlaidApi", lambda client: None)
+        instance = PlaidAdapter(
+            client_id="fake_client_id",
+            secret="fake_secret",
+            environment="sandbox",
+        )
+        return instance
+
+    def _make_tx(self, tx_id, date="2024-01-10", account_id="acc_1"):
+        return {
+            "transaction_id": tx_id,
+            "account_id": account_id,
+            "amount": 10.0,
+            "date": date,
+            "name": "Merchant",
+            "pending": False,
+        }
+
+    def test_single_page_returns_all_transactions(self, adapter):
+        """Single page (has_more=False) returns all added transactions."""
+        txs = [self._make_tx("tx_1"), self._make_tx("tx_2")]
+        calls = [_make_sync_response(txs, has_more=False, accounts=[{"id": "acc_1"}])]
+        adapter.client = type("FakeClient", (), {"transactions_sync": lambda self, req: calls.pop(0)})()
+
+        result = adapter.get_transactions("access-token-abc")
+
+        assert len(result["transactions"]) == 2
+        assert result["total_transactions"] == 2
+        assert result["accounts"] == [{"id": "acc_1"}]
+        assert result["request_id"] == "req_1"
+
+    def test_multiple_pages_aggregated(self, adapter):
+        """All pages are fetched and their transactions are aggregated."""
+        page1_txs = [self._make_tx("tx_1"), self._make_tx("tx_2")]
+        page2_txs = [self._make_tx("tx_3"), self._make_tx("tx_4")]
+        page3_txs = [self._make_tx("tx_5")]
+
+        responses = iter([
+            _make_sync_response(page1_txs, has_more=True, next_cursor="c1"),
+            _make_sync_response(page2_txs, has_more=True, next_cursor="c2"),
+            _make_sync_response(page3_txs, has_more=False, next_cursor="c3"),
+        ])
+        adapter.client = type("FakeClient", (), {"transactions_sync": lambda self, req: next(responses)})()
+
+        result = adapter.get_transactions("access-token-abc")
+
+        assert len(result["transactions"]) == 5
+        assert result["total_transactions"] == 5
+
+    def test_duplicate_transactions_deduplicated(self, adapter):
+        """Duplicate transaction_ids across pages are not included twice."""
+        tx = self._make_tx("tx_dup")
+        responses = iter([
+            _make_sync_response([tx], has_more=True, next_cursor="c1"),
+            _make_sync_response([tx], has_more=False),  # same tx_id repeated
+        ])
+        adapter.client = type("FakeClient", (), {"transactions_sync": lambda self, req: next(responses)})()
+
+        result = adapter.get_transactions("access-token-abc")
+
+        assert len(result["transactions"]) == 1
+        assert result["transactions"][0]["transaction_id"] == "tx_dup"
+
+    def test_account_ids_filter_applied_post_fetch(self, adapter):
+        """Only transactions matching account_ids are returned."""
+        txs = [
+            self._make_tx("tx_a", account_id="acc_a"),
+            self._make_tx("tx_b", account_id="acc_b"),
+        ]
+        responses = iter([_make_sync_response(txs, has_more=False)])
+        adapter.client = type("FakeClient", (), {"transactions_sync": lambda self, req: next(responses)})()
+
+        result = adapter.get_transactions("tok", account_ids=["acc_a"])
+
+        assert len(result["transactions"]) == 1
+        assert result["transactions"][0]["transaction_id"] == "tx_a"
+
+    def test_date_filter_applied_post_fetch(self, adapter):
+        """Transactions outside the requested date range are excluded."""
+        txs = [
+            self._make_tx("tx_old", date="2024-01-01"),
+            self._make_tx("tx_mid", date="2024-01-15"),
+            self._make_tx("tx_new", date="2024-02-01"),
+        ]
+        responses = iter([_make_sync_response(txs, has_more=False)])
+        adapter.client = type("FakeClient", (), {"transactions_sync": lambda self, req: next(responses)})()
+
+        result = adapter.get_transactions("tok", start_date="2024-01-10", end_date="2024-01-20")
+
+        assert len(result["transactions"]) == 1
+        assert result["transactions"][0]["transaction_id"] == "tx_mid"
+
+    def test_plaid_api_error_raises_exception(self, adapter):
+        """A PlaidApiException during pagination is raised as a generic Exception."""
+        import plaid
+
+        def raise_api_error(_self, req):
+            exc = plaid.ApiException(status=500, reason="Internal Server Error")
+            exc.body = '{"error_code": "INTERNAL_SERVER_ERROR"}'
+            raise exc
+
+        adapter.client = type("FakeClient", (), {"transactions_sync": raise_api_error})()
+
+        with pytest.raises(Exception, match="Failed to fetch transactions"):
+            adapter.get_transactions("access-token-abc")
+
+    def test_plaid_api_error_mid_pagination_raises(self, adapter):
+        """A PlaidApiException on page 2 is raised after partial data fetched."""
+        import plaid
+
+        page1_txs = [self._make_tx("tx_1")]
+        call_count = [0]
+
+        def side_effect(_self, req):
+            call_count[0] += 1
+            if call_count[0] == 1:
+                return _make_sync_response(page1_txs, has_more=True, next_cursor="c1")
+            exc = plaid.ApiException(status=500, reason="Server Error")
+            exc.body = '{"error_code": "INTERNAL_SERVER_ERROR"}'
+            raise exc
+
+        adapter.client = type("FakeClient", (), {"transactions_sync": side_effect})()
+
+        with pytest.raises(Exception, match="Failed to fetch transactions"):
+            adapter.get_transactions("access-token-abc")
