@@ -64,6 +64,17 @@ async def test_plaid_transactions_post_missing_body(client):
 
 
 @pytest.mark.asyncio
+async def test_plaid_transactions_post_empty_access_token(client):
+    """POST /api/plaid/transactions with a blank access_token returns 400."""
+    response = await client.post(
+        "/api/plaid/transactions",
+        json={"access_token": "   "},
+    )
+    assert response.status_code == 400
+    assert "empty" in response.json()["detail"].lower()
+
+
+@pytest.mark.asyncio
 async def test_plaid_transactions_post_plaid_not_configured(client):
     """POST /api/plaid/transactions returns 503 when Plaid is not configured."""
     response = await client.post(
