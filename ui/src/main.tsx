@@ -5,6 +5,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import { App } from './app/App.tsx';
+import { logger } from './logging';
 
 async function enableMocking(): Promise<void> {
   if (import.meta.env.DEV) {
@@ -13,10 +14,17 @@ async function enableMocking(): Promise<void> {
   }
 }
 
-enableMocking().then(() => {
+function renderApp(): void {
   createRoot(document.getElementById('root')!).render(
     <StrictMode>
       <App />
     </StrictMode>,
   );
-});
+}
+
+enableMocking()
+  .then(renderApp)
+  .catch((error: unknown) => {
+    logger.error(error, 'MSW failed to initialize. Rendering app without mocking.');
+    renderApp();
+  });
