@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@secretlint/secretlint-rule-preset-recommend':
-        specifier: ^11.3.1
-        version: 11.3.1
     devDependencies:
       '@secretlint/secretlint-rule-aws':
         specifier: ^11.3.1
@@ -40,6 +36,9 @@ importers:
         specifier: ^11.3.1
         version: 11.3.1
       '@secretlint/secretlint-rule-pattern':
+        specifier: ^11.3.1
+        version: 11.3.1
+      '@secretlint/secretlint-rule-preset-recommend':
         specifier: ^11.3.1
         version: 11.3.1
       '@secretlint/secretlint-rule-privatekey':

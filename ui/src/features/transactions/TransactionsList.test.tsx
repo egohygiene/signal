@@ -1,8 +1,9 @@
+import * as DataSyncProvider from '@egohygiene/signal/providers/DataSyncProvider';
 import type { Category } from '@egohygiene/signal/schema/v1/category';
 import type { Transaction } from '@egohygiene/signal/schema/v1/transaction';
 import { useAppStore } from '@egohygiene/signal/store';
 import { render, screen } from '@testing-library/react';
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeEach, afterEach, describe, expect, it, vi } from 'vitest';
 
 import { TransactionsList } from './TransactionsList';
 
@@ -39,10 +40,21 @@ describe('TransactionsList', () => {
     useAppStore.setState({ transactions: { items: [] }, categories: { items: [] } });
   });
 
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
   it('renders an empty state message when the store has no transactions', () => {
     render(<TransactionsList />);
     expect(screen.queryAllByRole('listitem')).toHaveLength(0);
     expect(screen.getByText('No transactions found.')).toBeInTheDocument();
+  });
+
+  it('renders a loading indicator when data is still loading', () => {
+    vi.spyOn(DataSyncProvider, 'useDataSyncState').mockReturnValue({ isLoading: true, errors: [] });
+    render(<TransactionsList />);
+    expect(screen.getByText('Loading transactions…')).toBeInTheDocument();
+    expect(screen.queryByText('No transactions found.')).not.toBeInTheDocument();
   });
 
   it('renders a list of transactions from the store', () => {
