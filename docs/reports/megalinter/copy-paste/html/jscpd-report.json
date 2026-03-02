@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-03-02T17:43:04.816Z",
+    "detectionDate": "2026-03-02T19:08:35.514Z",
     "formats": {
       "typescript": {
         "sources": {
@@ -1253,8 +1253,8 @@
       "tsx": {
         "sources": {
           "/github/workspace/ui/src/features/transactions/TransactionsList.tsx": {
-            "lines": 30,
-            "tokens": 371,
+            "lines": 36,
+            "tokens": 427,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1265,8 +1265,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/features/transactions/TransactionsList.test.tsx": {
-            "lines": 103,
-            "tokens": 1149,
+            "lines": 115,
+            "tokens": 1286,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1590,8 +1590,8 @@
           }
         },
         "total": {
-          "lines": 1186,
-          "tokens": 12231,
+          "lines": 1204,
+          "tokens": 12424,
           "sources": 28,
           "clones": 0,
           "duplicatedLines": 0,
@@ -2516,8 +2516,8 @@
       }
     },
     "total": {
-      "lines": 10403,
-      "tokens": 75971,
+      "lines": 10421,
+      "tokens": 76164,
       "sources": 192,
       "clones": 9,
       "duplicatedLines": 102,

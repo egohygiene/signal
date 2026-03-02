@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:5872ee2b-60e6-4e61-9ef2-14e474b777ca",
+    "serialNumber": "urn:uuid:7956f488-afdf-466e-8b99-b563cdc9c9c6",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-03-02T17:45:08+00:00",
+        "timestamp": "2026-03-02T19:10:31+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "1d3c1be1-163f-4599-8a60-dc19bf3732fe",
+            "bom-ref": "f23c1dc7-e2f2-4fe9-be01-6621bcc2228d",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,7 +30,7 @@
     },
     "components": [
         {
-            "bom-ref": "0bced73b-7861-4551-a721-0c2347f5c77d",
+            "bom-ref": "2bfa6730-be5b-4636-a656-37fa262ba6b6",
             "type": "application",
             "name": "ui/pnpm-lock.yaml",
             "properties": [
@@ -45,22 +45,7 @@
             ]
         },
         {
-            "bom-ref": "62e304a7-2bb5-44bb-b612-cf886585bea0",
-            "type": "application",
-            "name": "pnpm-lock.yaml",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:Class",
-                    "value": "lang-pkgs"
-                },
-                {
-                    "name": "aquasecurity:trivy:Type",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "eac36676-4a4b-4eae-9f88-712e501386c1",
+            "bom-ref": "813c69f4-f90f-42e2-8da6-cf3b2bf25adc",
             "type": "application",
             "name": "server/requirements.txt",
             "properties": [
@@ -103,24 +88,6 @@
                 {
                     "name": "aquasecurity:trivy:PkgID",
                     "value": "@pinojs/redact@0.4.0"
-                },
-                {
-                    "name": "aquasecurity:trivy:PkgType",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
-            "type": "library",
-            "group": "@secretlint",
-            "name": "secretlint-rule-preset-recommend",
-            "version": "11.3.1",
-            "purl": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:PkgID",
-                    "value": "@secretlint/secretlint-rule-preset-recommend@11.3.1"
                 },
                 {
                     "name": "aquasecurity:trivy:PkgType",
@@ -743,7 +710,7 @@
     ],
     "dependencies": [
         {
-            "ref": "0bced73b-7861-4551-a721-0c2347f5c77d",
+            "ref": "2bfa6730-be5b-4636-a656-37fa262ba6b6",
             "dependsOn": [
                 "pkg:npm/%40tanstack/react-query@5.90.21",
                 "pkg:npm/%40types/react@19.2.14",
@@ -760,21 +727,7 @@
             ]
         },
         {
-            "ref": "1d3c1be1-163f-4599-8a60-dc19bf3732fe",
-            "dependsOn": [
-                "0bced73b-7861-4551-a721-0c2347f5c77d",
-                "62e304a7-2bb5-44bb-b612-cf886585bea0",
-                "eac36676-4a4b-4eae-9f88-712e501386c1"
-            ]
-        },
-        {
-            "ref": "62e304a7-2bb5-44bb-b612-cf886585bea0",
-            "dependsOn": [
-                "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1"
-            ]
-        },
-        {
-            "ref": "eac36676-4a4b-4eae-9f88-712e501386c1",
+            "ref": "813c69f4-f90f-42e2-8da6-cf3b2bf25adc",
             "dependsOn": [
                 "pkg:pypi/fastapi@0.115.6",
                 "pkg:pypi/plaid-python@25.0.0",
@@ -784,15 +737,18 @@
             ]
         },
         {
+            "ref": "f23c1dc7-e2f2-4fe9-be01-6621bcc2228d",
+            "dependsOn": [
+                "2bfa6730-be5b-4636-a656-37fa262ba6b6",
+                "813c69f4-f90f-42e2-8da6-cf3b2bf25adc"
+            ]
+        },
+        {
             "ref": "pkg:npm/%40babel/runtime@7.28.6",
             "dependsOn": []
         },
         {
             "ref": "pkg:npm/%40pinojs/redact@0.4.0",
-            "dependsOn": []
-        },
-        {
-            "ref": "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1",
             "dependsOn": []
         },
         {
