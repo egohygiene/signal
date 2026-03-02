@@ -1,7 +1,8 @@
 import type { Budget } from '@egohygiene/signal/schema/v1/budget';
 import type { Transaction } from '@egohygiene/signal/schema/v1/transaction';
+import { rollingBuffer } from '@egohygiene/signal/logging';
 import { computeCategoryTotals, isInMonth } from '@egohygiene/signal/utils/transactionUtils';
-import { describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 import { compareBudgets } from './budgetCalculations';
 
@@ -30,6 +31,10 @@ const makeBudget = (overrides: Partial<Budget> = {}): Budget => ({
 });
 
 describe('isInMonth', () => {
+  beforeEach(() => {
+    rollingBuffer.clear();
+  });
+
   it('returns true for a date in the given year and month', () => {
     expect(isInMonth('2024-03-15', 2024, 3)).toBe(true);
   });
@@ -40,6 +45,17 @@ describe('isInMonth', () => {
 
   it('returns false for a date in a different year', () => {
     expect(isInMonth('2023-03-15', 2024, 3)).toBe(false);
+  });
+
+  it('returns false for a malformed date string', () => {
+    expect(isInMonth('not-a-date', 2024, 3)).toBe(false);
+  });
+
+  it('logs a structured warning when a malformed date string is given', () => {
+    isInMonth('bad-date', 2024, 3);
+    const entry = rollingBuffer.getAll().at(-1);
+    expect(entry?.level).toBe('warn');
+    expect(entry?.msg).toContain('malformed date string detected');
   });
 });
 

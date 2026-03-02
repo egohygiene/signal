@@ -1,4 +1,5 @@
 import type { Transaction } from '@egohygiene/signal/schema/v1/transaction';
+import { logger } from '@egohygiene/signal/logging';
 
 export type CategoryTotal = {
   categoryId: string;
@@ -7,9 +8,14 @@ export type CategoryTotal = {
 
 /**
  * Returns true if the given date string falls within the specified year and month (1-based).
+ * Logs a structured warning and returns false when the date string is malformed or invalid.
  */
 export function isInMonth(dateStr: string, year: number, month: number): boolean {
   const date = new Date(dateStr);
+  if (isNaN(date.getTime())) {
+    logger.warn({ dateStr, year, month }, 'isInMonth: malformed date string detected; skipping transaction');
+    return false;
+  }
   return date.getUTCFullYear() === year && date.getUTCMonth() + 1 === month;
 }
 
