@@ -306,6 +306,7 @@
     ]},
     {"type":"directory","name":"audits","contents":[
       {"type":"file","name":"audit-2026-02-28T184945.log"},
+      {"type":"file","name":"stability-audit-2026-03-01T185426.log"},
       {"type":"file","name":"stack-audit-2026-03-01T022046.log"}
     ]},
     {"type":"directory","name":"config","contents":[
