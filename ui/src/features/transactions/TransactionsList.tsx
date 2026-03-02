@@ -1,11 +1,17 @@
+import { useDataSyncState } from '@egohygiene/signal/providers/DataSyncProvider';
 import { selectCategories, selectTransactions, useAppStore } from '@egohygiene/signal/store';
 import { type JSX, useMemo } from 'react';
 
 export function TransactionsList(): JSX.Element {
   const transactions = useAppStore(selectTransactions);
   const categories = useAppStore(selectCategories);
+  const { isLoading } = useDataSyncState();
 
   const categoryMap = useMemo(() => new Map(categories.map((c) => [c.id, c.name])), [categories]);
+
+  if (isLoading) {
+    return <p>Loading transactions…</p>;
+  }
 
   if (transactions.length === 0) {
     return <p>No transactions found.</p>;
