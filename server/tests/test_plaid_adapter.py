@@ -107,6 +107,56 @@ class TestPlaidAdapterNormalize:
         assert tx.merchant_name is None
         assert tx.category is None
 
+    def test_normalize_transaction_missing_transaction_id_raises(self, adapter):
+        """normalize_transaction raises ValueError when transaction_id is absent."""
+        raw = {
+            "account_id": "acc_x",
+            "amount": 5.0,
+            "date": "2024-04-01",
+            "name": "Merchant",
+            "pending": False,
+        }
+        with pytest.raises(ValueError, match="transaction_id"):
+            adapter.normalize_transaction(raw)
+
+    def test_normalize_transaction_empty_transaction_id_raises(self, adapter):
+        """normalize_transaction raises ValueError when transaction_id is empty string."""
+        raw = {
+            "transaction_id": "",
+            "account_id": "acc_x",
+            "amount": 5.0,
+            "date": "2024-04-01",
+            "name": "Merchant",
+            "pending": False,
+        }
+        with pytest.raises(ValueError, match="transaction_id"):
+            adapter.normalize_transaction(raw)
+
+    def test_normalize_transaction_missing_account_id_raises(self, adapter):
+        """normalize_transaction raises ValueError when account_id is absent."""
+        raw = {
+            "transaction_id": "tx_x",
+            "amount": 5.0,
+            "date": "2024-04-01",
+            "name": "Merchant",
+            "pending": False,
+        }
+        with pytest.raises(ValueError, match="account_id"):
+            adapter.normalize_transaction(raw)
+
+    def test_normalize_transaction_empty_account_id_raises(self, adapter):
+        """normalize_transaction raises ValueError when account_id is empty string."""
+        raw = {
+            "transaction_id": "tx_x",
+            "account_id": "",
+            "amount": 5.0,
+            "date": "2024-04-01",
+            "name": "Merchant",
+            "pending": False,
+        }
+        with pytest.raises(ValueError, match="account_id"):
+            adapter.normalize_transaction(raw)
+
     def test_normalize_transactions_skips_invalid(self, adapter, caplog):
         """normalize_transactions skips malformed entries and logs a warning."""
         import logging

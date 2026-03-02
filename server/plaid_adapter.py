@@ -252,9 +252,29 @@ class PlaidAdapter:
                 else transaction
             )
 
+        transaction_id = tx.get("transaction_id")
+        if transaction_id is None:
+            raise ValueError(
+                "normalize_transaction: 'transaction_id' is missing"
+            )
+        if not transaction_id:
+            raise ValueError(
+                "normalize_transaction: 'transaction_id' is empty"
+            )
+
+        account_id = tx.get("account_id")
+        if account_id is None:
+            raise ValueError(
+                "normalize_transaction: 'account_id' is missing"
+            )
+        if not account_id:
+            raise ValueError(
+                "normalize_transaction: 'account_id' is empty"
+            )
+
         return NormalizedTransaction(
-            transaction_id=tx.get("transaction_id", ""),
-            account_id=tx.get("account_id", ""),
+            transaction_id=transaction_id,
+            account_id=account_id,
             amount=float(tx.get("amount", 0.0)),
             date=tx.get("date", ""),
             name=tx.get("name", ""),
