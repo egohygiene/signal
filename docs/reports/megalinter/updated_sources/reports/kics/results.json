@@ -20,12 +20,12 @@
 	},
 	"total_counter": 2,
 	"total_bom_resources": 0,
-	"start": "2026-03-02T04:19:45.87289231Z",
-	"end": "2026-03-02T04:20:04.727457761Z",
+	"start": "2026-03-02T16:25:48.832202845Z",
+	"end": "2026-03-02T16:26:07.317016329Z",
 	"paths": [
-		".",
 		"/usr/bin/assets/queries",
-		"/usr/bin/assets/libraries"
+		"/usr/bin/assets/libraries",
+		"."
 	],
 	"queries": [
 		{

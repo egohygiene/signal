@@ -12,9 +12,8 @@ server/main.py:12:0: E0401: Unable to import 'pydantic_settings' (import-error)
 ************* Module plaid_adapter
 server/plaid_adapter.py:7:0: E0401: Unable to import 'plaid' (import-error)
 server/plaid_adapter.py:8:0: E0401: Unable to import 'plaid.api' (import-error)
-server/plaid_adapter.py:9:0: E0401: Unable to import 'plaid.model.transactions_get_request' (import-error)
-server/plaid_adapter.py:10:0: E0401: Unable to import 'plaid.model.transactions_get_request_options' (import-error)
-server/plaid_adapter.py:11:0: E0401: Unable to import 'pydantic' (import-error)
+server/plaid_adapter.py:9:0: E0401: Unable to import 'plaid.model.transactions_sync_request' (import-error)
+server/plaid_adapter.py:10:0: E0401: Unable to import 'pydantic' (import-error)
 ************* Module tests.conftest
 server/tests/conftest.py:3:0: E0401: Unable to import 'pytest' (import-error)
 server/tests/conftest.py:4:0: E0401: Unable to import 'httpx' (import-error)
@@ -24,4 +23,7 @@ server/tests/test_error_handling.py:3:0: E0401: Unable to import 'pytest' (impor
 server/tests/test_health.py:3:0: E0401: Unable to import 'pytest' (import-error)
 ************* Module tests.test_plaid_adapter
 server/tests/test_plaid_adapter.py:3:0: E0401: Unable to import 'pytest' (import-error)
+server/tests/test_plaid_adapter.py:146:8: E0213: Method 'to_dict' should have "self" as first argument (no-self-argument)
+server/tests/test_plaid_adapter.py:261:8: E0401: Unable to import 'plaid' (import-error)
+server/tests/test_plaid_adapter.py:275:8: E0401: Unable to import 'plaid' (import-error)
 

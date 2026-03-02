@@ -33,6 +33,10 @@ Clone found (typescript):
    ui/src/providers/FakeDataProvider.test.ts [12:5 - 18:74]
 
 Clone found (python):
+ - server/tests/test_plaid_adapter.py [249:13 - 254:11] (5 lines, 76 tokens)
+   server/tests/test_plaid_adapter.py [234:8 - 239:12]
+
+Clone found (python):
  - server/main.py [353:3 - 365:41] (12 lines, 82 tokens)
    server/main.py [250:67 - 262:35]
 
@@ -49,7 +53,7 @@ Clone found (python):
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ css        │ 1              │ 69          │ 378          │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python     │ 6              │ 863         │ 5160         │ 1            │ 12 (1.39%)       │ 82 (1.59%)        │
+│ python     │ 6              │ 1094        │ 7146         │ 2            │ 17 (1.55%)       │ 158 (2.21%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ clojure    │ 1              │ 33          │ 208          │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -65,12 +69,12 @@ Clone found (python):
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ powershell │ 3              │ 103         │ 451          │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 192            │ 10164       │ 73926        │ 8            │ 97 (0.95%)       │ 890 (1.2%)        │
+│ Total:     │ 192            │ 10395       │ 75912        │ 9            │ 102 (0.98%)      │ 966 (1.27%)       │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 8 clones.
+Found 9 clones.
 HTML report saved to reports/megalinter/copy-paste/html/
-ERROR: jscpd found too many duplicates (0.95%) over threshold (0%)
-Error: ERROR: jscpd found too many duplicates (0.95%) over threshold (0%)
+ERROR: jscpd found too many duplicates (0.98%) over threshold (0%)
+Error: ERROR: jscpd found too many duplicates (0.98%) over threshold (0%)
     at ThresholdReporter.report (/node-deps/node_modules/@jscpd/finder/dist/index.js:612:13)
     at /node-deps/node_modules/@jscpd/finder/dist/index.js:110:18
     at Array.forEach (<anonymous>)

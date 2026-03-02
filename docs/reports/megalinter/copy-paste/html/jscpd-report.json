@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-03-02T04:18:23.816Z",
+    "detectionDate": "2026-03-02T16:24:23.133Z",
     "formats": {
       "typescript": {
         "sources": {
@@ -1633,14 +1633,14 @@
       "python": {
         "sources": {
           "/github/workspace/server/tests/test_plaid_adapter.py": {
-            "lines": 138,
-            "tokens": 918,
+            "lines": 290,
+            "tokens": 2412,
             "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
+            "clones": 2,
+            "duplicatedLines": 10,
+            "duplicatedTokens": 152,
+            "percentage": 3.45,
+            "percentageTokens": 6.3,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -1681,8 +1681,8 @@
             "newClones": 0
           },
           "/github/workspace/server/plaid_adapter.py": {
-            "lines": 209,
-            "tokens": 1234,
+            "lines": 288,
+            "tokens": 1726,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1706,14 +1706,14 @@
           }
         },
         "total": {
-          "lines": 863,
-          "tokens": 5160,
+          "lines": 1094,
+          "tokens": 7146,
           "sources": 6,
-          "clones": 1,
-          "duplicatedLines": 12,
-          "duplicatedTokens": 82,
-          "percentage": 1.39,
-          "percentageTokens": 1.59,
+          "clones": 2,
+          "duplicatedLines": 17,
+          "duplicatedTokens": 158,
+          "percentage": 1.55,
+          "percentageTokens": 2.21,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -2516,14 +2516,14 @@
       }
     },
     "total": {
-      "lines": 10164,
-      "tokens": 73926,
+      "lines": 10395,
+      "tokens": 75912,
       "sources": 192,
-      "clones": 8,
-      "duplicatedLines": 97,
-      "duplicatedTokens": 890,
-      "percentage": 0.95,
-      "percentageTokens": 1.2,
+      "clones": 9,
+      "duplicatedLines": 102,
+      "duplicatedTokens": 966,
+      "percentage": 0.98,
+      "percentageTokens": 1.27,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
@@ -2778,6 +2778,42 @@
           "line": 18,
           "column": 74,
           "position": 204
+        }
+      }
+    },
+    {
+      "format": "python",
+      "lines": 6,
+      "fragment": "),\n        ]\n        responses = iter([_make_sync_response(txs, has_more=False)])\n        adapter.client = type(\"FakeClient\", (), {\"transactions_sync\": lambda self, req: next(responses)})()\n\n        result = adapter.get_transactions(\"tok\", start_date",
+      "tokens": 0,
+      "firstFile": {
+        "name": "/github/workspace/server/tests/test_plaid_adapter.py",
+        "start": 249,
+        "end": 254,
+        "startLoc": {
+          "line": 249,
+          "column": 13,
+          "position": 1991
+        },
+        "endLoc": {
+          "line": 254,
+          "column": 11,
+          "position": 2067
+        }
+      },
+      "secondFile": {
+        "name": "/github/workspace/server/tests/test_plaid_adapter.py",
+        "start": 234,
+        "end": 239,
+        "startLoc": {
+          "line": 234,
+          "column": 8,
+          "position": 1812
+        },
+        "endLoc": {
+          "line": 239,
+          "column": 12,
+          "position": 1888
         }
       }
     },

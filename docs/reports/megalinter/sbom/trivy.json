@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:eaa06d2f-b9ca-4309-855a-846559bc3ebe",
+    "serialNumber": "urn:uuid:deffde3e-754e-41f4-a488-369ae95e63ee",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-03-02T04:20:20+00:00",
+        "timestamp": "2026-03-02T16:26:25+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "1c09aa57-b95e-473e-9073-6aec7ec34f75",
+            "bom-ref": "f9b99e59-fccc-4cca-9d3f-ca7f0635e9e3",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,9 +30,9 @@
     },
     "components": [
         {
-            "bom-ref": "636bcc6e-bfe5-4ade-b64c-c29f3ad3f677",
+            "bom-ref": "7c696c38-77be-4572-9667-f3845b9bd5d0",
             "type": "application",
-            "name": "server/requirements.txt",
+            "name": "pnpm-lock.yaml",
             "properties": [
                 {
                     "name": "aquasecurity:trivy:Class",
@@ -40,12 +40,12 @@
                 },
                 {
                     "name": "aquasecurity:trivy:Type",
-                    "value": "pip"
+                    "value": "pnpm"
                 }
             ]
         },
         {
-            "bom-ref": "65e8aaec-9a78-4678-80e9-d0f08665b424",
+            "bom-ref": "8ce7253f-aa61-4a19-83de-2fa3d6930994",
             "type": "application",
             "name": "ui/pnpm-lock.yaml",
             "properties": [
@@ -60,9 +60,9 @@
             ]
         },
         {
-            "bom-ref": "fed09a7e-01bf-471b-9a7f-e4174382c5a2",
+            "bom-ref": "c06d2fea-0481-46ed-8760-a93ee031bd4d",
             "type": "application",
-            "name": "pnpm-lock.yaml",
+            "name": "server/requirements.txt",
             "properties": [
                 {
                     "name": "aquasecurity:trivy:Class",
@@ -70,7 +70,7 @@
                 },
                 {
                     "name": "aquasecurity:trivy:Type",
-                    "value": "pnpm"
+                    "value": "pip"
                 }
             ]
         },
@@ -743,25 +743,13 @@
     ],
     "dependencies": [
         {
-            "ref": "1c09aa57-b95e-473e-9073-6aec7ec34f75",
+            "ref": "7c696c38-77be-4572-9667-f3845b9bd5d0",
             "dependsOn": [
-                "636bcc6e-bfe5-4ade-b64c-c29f3ad3f677",
-                "65e8aaec-9a78-4678-80e9-d0f08665b424",
-                "fed09a7e-01bf-471b-9a7f-e4174382c5a2"
+                "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1"
             ]
         },
         {
-            "ref": "636bcc6e-bfe5-4ade-b64c-c29f3ad3f677",
-            "dependsOn": [
-                "pkg:pypi/fastapi@0.115.6",
-                "pkg:pypi/plaid-python@25.0.0",
-                "pkg:pypi/pydantic-settings@2.7.1",
-                "pkg:pypi/python-dotenv@1.0.1",
-                "pkg:pypi/uvicorn@0.34.0"
-            ]
-        },
-        {
-            "ref": "65e8aaec-9a78-4678-80e9-d0f08665b424",
+            "ref": "8ce7253f-aa61-4a19-83de-2fa3d6930994",
             "dependsOn": [
                 "pkg:npm/%40tanstack/react-query@5.90.21",
                 "pkg:npm/%40types/react@19.2.14",
@@ -778,9 +766,21 @@
             ]
         },
         {
-            "ref": "fed09a7e-01bf-471b-9a7f-e4174382c5a2",
+            "ref": "c06d2fea-0481-46ed-8760-a93ee031bd4d",
             "dependsOn": [
-                "pkg:npm/%40secretlint/secretlint-rule-preset-recommend@11.3.1"
+                "pkg:pypi/fastapi@0.115.6",
+                "pkg:pypi/plaid-python@25.0.0",
+                "pkg:pypi/pydantic-settings@2.7.1",
+                "pkg:pypi/python-dotenv@1.0.1",
+                "pkg:pypi/uvicorn@0.34.0"
+            ]
+        },
+        {
+            "ref": "f9b99e59-fccc-4cca-9d3f-ca7f0635e9e3",
+            "dependsOn": [
+                "7c696c38-77be-4572-9667-f3845b9bd5d0",
+                "8ce7253f-aa61-4a19-83de-2fa3d6930994",
+                "c06d2fea-0481-46ed-8760-a93ee031bd4d"
             ]
         },
         {

@@ -4,7 +4,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/python_bandit/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-Run started:2026-03-02 04:18:02.471186
+Run started:2026-03-02 16:24:01.191610
 
 Test results:
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
@@ -470,24 +470,159 @@ Test results:
 137	                secret="secret",
 138	                environment="unknown_env",
 139	            )
+140	
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'fake_secret'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b106_hardcoded_password_funcarg.html
+   Location: ./server/tests/test_plaid_adapter.py:168:19
+167	        monkeypatch.setattr("plaid_adapter.plaid_api.PlaidApi", lambda client: None)
+168	        instance = PlaidAdapter(
+169	            client_id="fake_client_id",
+170	            secret="fake_secret",
+171	            environment="sandbox",
+172	        )
+173	        return instance
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_plaid_adapter.py:193:8
+192	
+193	        assert len(result["transactions"]) == 2
+194	        assert result["total_transactions"] == 2
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_plaid_adapter.py:194:8
+193	        assert len(result["transactions"]) == 2
+194	        assert result["total_transactions"] == 2
+195	        assert result["accounts"] == [{"id": "acc_1"}]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_plaid_adapter.py:195:8
+194	        assert result["total_transactions"] == 2
+195	        assert result["accounts"] == [{"id": "acc_1"}]
+196	        assert result["request_id"] == "req_1"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_plaid_adapter.py:196:8
+195	        assert result["accounts"] == [{"id": "acc_1"}]
+196	        assert result["request_id"] == "req_1"
+197	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_plaid_adapter.py:213:8
+212	
+213	        assert len(result["transactions"]) == 5
+214	        assert result["total_transactions"] == 5
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_plaid_adapter.py:214:8
+213	        assert len(result["transactions"]) == 5
+214	        assert result["total_transactions"] == 5
+215	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_plaid_adapter.py:227:8
+226	
+227	        assert len(result["transactions"]) == 1
+228	        assert result["transactions"][0]["transaction_id"] == "tx_dup"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_plaid_adapter.py:228:8
+227	        assert len(result["transactions"]) == 1
+228	        assert result["transactions"][0]["transaction_id"] == "tx_dup"
+229	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_plaid_adapter.py:241:8
+240	
+241	        assert len(result["transactions"]) == 1
+242	        assert result["transactions"][0]["transaction_id"] == "tx_a"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_plaid_adapter.py:242:8
+241	        assert len(result["transactions"]) == 1
+242	        assert result["transactions"][0]["transaction_id"] == "tx_a"
+243	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_plaid_adapter.py:256:8
+255	
+256	        assert len(result["transactions"]) == 1
+257	        assert result["transactions"][0]["transaction_id"] == "tx_mid"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_plaid_adapter.py:257:8
+256	        assert len(result["transactions"]) == 1
+257	        assert result["transactions"][0]["transaction_id"] == "tx_mid"
+258	
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 682
+	Total lines of code: 870
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 46
+		Low: 59
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
-		Medium: 2
-		High: 44
+		Medium: 3
+		High: 56
 Files skipped (0):
 
