@@ -2,12 +2,11 @@
 
 import logging
 from datetime import datetime, timedelta
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set
 
 import plaid
 from plaid.api import plaid_api
-from plaid.model.transactions_get_request import TransactionsGetRequest
-from plaid.model.transactions_get_request_options import TransactionsGetRequestOptions
+from plaid.model.transactions_sync_request import TransactionsSyncRequest
 from pydantic import BaseModel
 
 logger = logging.getLogger(__name__)
@@ -84,74 +83,154 @@ class PlaidAdapter:
         account_ids: Optional[List[str]] = None,
     ) -> Dict[str, Any]:
         """
-        Fetch transactions from Plaid API.
+        Fetch all transactions from Plaid API using cursor-based pagination.
+
+        Iterates through all pages using ``next_cursor`` until ``has_more``
+        is ``False``, aggregating every page of ``added`` transactions.
+        Transactions are deduplicated by ``transaction_id`` across pages.
+        Optional ``start_date``/``end_date`` filters are applied after all
+        pages have been fetched.
 
         Args:
             access_token: Plaid access token for the account
-            start_date: Start date in YYYY-MM-DD format (defaults to 30 days ago)
-            end_date: End date in YYYY-MM-DD format (defaults to today)
-            account_ids: Optional list of specific account IDs to fetch
+            start_date: Optional start date in YYYY-MM-DD format to filter
+                results (defaults to 30 days ago when used for display only)
+            end_date: Optional end date in YYYY-MM-DD format to filter results
+            account_ids: Optional list of account IDs to restrict results to
 
         Returns:
             Dictionary containing transactions and account information
 
         Raises:
-            Exception: If API call fails
+            Exception: If a Plaid API error occurs during pagination
         """
+        # Resolve display-only defaults for logging
+        log_start = start_date or (
+            datetime.now() - timedelta(days=30)
+        ).strftime("%Y-%m-%d")
+        log_end = end_date or datetime.now().strftime("%Y-%m-%d")
+
+        logger.info(
+            f"Fetching transactions from {log_start} to {log_end} "
+            f"for token ending in ...{access_token[-4:]}"
+        )
+
+        all_transactions: List[Dict[str, Any]] = []
+        seen_ids: Set[str] = set()
+        accounts: List[Any] = []
+        request_id: Optional[str] = None
+        cursor: Optional[str] = None
+        page = 0
+
         try:
-            # Set default date range if not provided
-            if not end_date:
-                end_date = datetime.now().strftime("%Y-%m-%d")
-            if not start_date:
-                start_date = (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
+            while True:
+                page += 1
+                # Build the sync request; omit cursor on the first call so
+                # Plaid returns the full history from the beginning.
+                if cursor:
+                    request = TransactionsSyncRequest(
+                        access_token=access_token,
+                        cursor=cursor,
+                    )
+                else:
+                    request = TransactionsSyncRequest(
+                        access_token=access_token,
+                    )
 
-            logger.info(
-                f"Fetching transactions from {start_date} to {end_date} "
-                f"for token ending in ...{access_token[-4:]}"
-            )
+                response = self.client.transactions_sync(request)
+                response_dict = response.to_dict()
 
-            # Create request options
-            options = None
-            if account_ids:
-                options = TransactionsGetRequestOptions(account_ids=account_ids)
+                # Capture accounts from the first non-empty response; keep first request_id
+                accounts = accounts or response_dict.get("accounts", [])
+                request_id = request_id or response_dict.get("request_id")
 
-            # Create transactions request
-            request = TransactionsGetRequest(
-                access_token=access_token,
-                start_date=datetime.strptime(start_date, "%Y-%m-%d").date(),
-                end_date=datetime.strptime(end_date, "%Y-%m-%d").date(),
-                options=options,
-            )
+                # Deduplicate added transactions by transaction_id
+                for tx in response_dict.get("added", []):
+                    tx_id = tx.get("transaction_id")
+                    if tx_id and tx_id not in seen_ids:
+                        seen_ids.add(tx_id)
+                        all_transactions.append(tx)
 
-            # Fetch transactions
-            response = self.client.transactions_get(request)
+                logger.debug(
+                    f"Page {page}: fetched "
+                    f"{len(response_dict.get('added', []))} added transactions "
+                    f"(running total: {len(all_transactions)})"
+                )
 
-            # Convert response to dict for easier access
-            response_dict = response.to_dict()
+                has_more = response_dict.get("has_more", False)
+                cursor = response_dict.get("next_cursor")
 
-            logger.info(
-                f"Successfully fetched "
-                f"{len(response_dict['transactions'])} "
-                f"transactions"
-            )
-
-            return {
-                "accounts": response_dict.get("accounts", []),
-                "transactions": response_dict.get("transactions", []),
-                "total_transactions": response_dict.get(
-                    "total_transactions", 0
-                ),
-                "request_id": response_dict.get("request_id"),
-            }
+                if not has_more:
+                    break
 
         except plaid.ApiException as e:
-            logger.error(f"Plaid API error: {e}")
+            logger.error(
+                f"Plaid API error on page {page} "
+                f"({len(all_transactions)} transactions already fetched): {e}"
+            )
             error_response = e.body if hasattr(e, "body") else str(e)
             logger.error(f"Error details: {error_response}")
             raise Exception(f"Failed to fetch transactions: {error_response}")
         except Exception as e:
-            logger.error(f"Unexpected error fetching transactions: {e}")
+            logger.error(
+                f"Unexpected error fetching transactions on page {page}: {e}"
+            )
             raise
+
+        # Apply optional account_ids filter post-fetch
+        if account_ids:
+            account_ids_set = set(account_ids)
+            all_transactions = [
+                tx
+                for tx in all_transactions
+                if tx.get("account_id") in account_ids_set
+            ]
+
+        # Apply optional date range filter post-fetch
+        if start_date or end_date:
+            start_dt = (
+                datetime.strptime(start_date, "%Y-%m-%d").date()
+                if start_date
+                else None
+            )
+            end_dt = (
+                datetime.strptime(end_date, "%Y-%m-%d").date()
+                if end_date
+                else None
+            )
+            filtered = []
+            for tx in all_transactions:
+                tx_date_raw = tx.get("date")
+                if tx_date_raw is None:
+                    filtered.append(tx)
+                    continue
+                # date may be a date object or an ISO string
+                if isinstance(tx_date_raw, str):
+                    try:
+                        tx_date = datetime.strptime(tx_date_raw, "%Y-%m-%d").date()
+                    except ValueError:
+                        filtered.append(tx)
+                        continue
+                else:
+                    tx_date = tx_date_raw
+                if start_dt and tx_date < start_dt:
+                    continue
+                if end_dt and tx_date > end_dt:
+                    continue
+                filtered.append(tx)
+            all_transactions = filtered
+
+        logger.info(
+            f"Successfully fetched {len(all_transactions)} transactions "
+            f"across {page} page(s)"
+        )
+
+        return {
+            "accounts": accounts,
+            "transactions": all_transactions,
+            "total_transactions": len(all_transactions),
+            "request_id": request_id,
+        }
 
     def normalize_transaction(self, transaction: Any) -> NormalizedTransaction:
         """
