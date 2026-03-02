@@ -283,6 +283,13 @@ async def get_plaid_transactions(request: TransactionsRequest):
     Raises:
         HTTPException: If Plaid is not configured or API call fails
     """
+    # Validate access token is not empty
+    if not request.access_token or not request.access_token.strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Access token cannot be empty.",
+        )
+
     if not plaid_adapter:
         logger.error("Plaid adapter not configured")
         raise HTTPException(
