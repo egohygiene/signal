@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:7956f488-afdf-466e-8b99-b563cdc9c9c6",
+    "serialNumber": "urn:uuid:014eadbc-85c3-4ac2-a289-a0cca3bb6b2a",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-03-02T19:10:31+00:00",
+        "timestamp": "2026-03-02T20:31:05+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "f23c1dc7-e2f2-4fe9-be01-6621bcc2228d",
+            "bom-ref": "230ed19e-91bf-4019-8dd3-f03cc79516cc",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,22 +30,7 @@
     },
     "components": [
         {
-            "bom-ref": "2bfa6730-be5b-4636-a656-37fa262ba6b6",
-            "type": "application",
-            "name": "ui/pnpm-lock.yaml",
-            "properties": [
-                {
-                    "name": "aquasecurity:trivy:Class",
-                    "value": "lang-pkgs"
-                },
-                {
-                    "name": "aquasecurity:trivy:Type",
-                    "value": "pnpm"
-                }
-            ]
-        },
-        {
-            "bom-ref": "813c69f4-f90f-42e2-8da6-cf3b2bf25adc",
+            "bom-ref": "1184ade7-acd2-47cd-a843-a70c36ccbfef",
             "type": "application",
             "name": "server/requirements.txt",
             "properties": [
@@ -56,6 +41,21 @@
                 {
                     "name": "aquasecurity:trivy:Type",
                     "value": "pip"
+                }
+            ]
+        },
+        {
+            "bom-ref": "d198e702-6144-4081-b694-ea4d21a5bacd",
+            "type": "application",
+            "name": "ui/pnpm-lock.yaml",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
+                },
+                {
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "pnpm"
                 }
             ]
         },
@@ -710,7 +710,24 @@
     ],
     "dependencies": [
         {
-            "ref": "2bfa6730-be5b-4636-a656-37fa262ba6b6",
+            "ref": "1184ade7-acd2-47cd-a843-a70c36ccbfef",
+            "dependsOn": [
+                "pkg:pypi/fastapi@0.115.6",
+                "pkg:pypi/plaid-python@25.0.0",
+                "pkg:pypi/pydantic-settings@2.7.1",
+                "pkg:pypi/python-dotenv@1.0.1",
+                "pkg:pypi/uvicorn@0.34.0"
+            ]
+        },
+        {
+            "ref": "230ed19e-91bf-4019-8dd3-f03cc79516cc",
+            "dependsOn": [
+                "1184ade7-acd2-47cd-a843-a70c36ccbfef",
+                "d198e702-6144-4081-b694-ea4d21a5bacd"
+            ]
+        },
+        {
+            "ref": "d198e702-6144-4081-b694-ea4d21a5bacd",
             "dependsOn": [
                 "pkg:npm/%40tanstack/react-query@5.90.21",
                 "pkg:npm/%40types/react@19.2.14",
@@ -724,23 +741,6 @@
                 "pkg:npm/typescript@5.9.3",
                 "pkg:npm/zod@4.3.6",
                 "pkg:npm/zustand@5.0.11"
-            ]
-        },
-        {
-            "ref": "813c69f4-f90f-42e2-8da6-cf3b2bf25adc",
-            "dependsOn": [
-                "pkg:pypi/fastapi@0.115.6",
-                "pkg:pypi/plaid-python@25.0.0",
-                "pkg:pypi/pydantic-settings@2.7.1",
-                "pkg:pypi/python-dotenv@1.0.1",
-                "pkg:pypi/uvicorn@0.34.0"
-            ]
-        },
-        {
-            "ref": "f23c1dc7-e2f2-4fe9-be01-6621bcc2228d",
-            "dependsOn": [
-                "2bfa6730-be5b-4636-a656-37fa262ba6b6",
-                "813c69f4-f90f-42e2-8da6-cf3b2bf25adc"
             ]
         },
         {

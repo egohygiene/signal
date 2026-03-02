@@ -50,14 +50,14 @@ Linter raw log:
  275:22  suggestion  Try to avoid using 'be'.        write-good.E-Prime  
  286:22  suggestion  Try to avoid using 'be'.        write-good.E-Prime  
  319:15  suggestion  Try to avoid using 'are'.       write-good.E-Prime  
+ 321:10  suggestion  Try to avoid using 'are'.       write-good.E-Prime  
  321:10  warning     'are included' may be passive   write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 321:10  suggestion  Try to avoid using 'are'.       write-good.E-Prime  
- 322:18  suggestion  Try to avoid using 'is'.        write-good.E-Prime  
  322:18  warning     'is updated' may be passive     write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 322:18  suggestion  Try to avoid using 'is'.        write-good.E-Prime  
 
 
  core/README.md
@@ -81,20 +81,20 @@ Linter raw log:
                      can.                                                
  45:44   warning     'minimum' is too wordy.         write-good.TooWordy 
  51:54   suggestion  Try to avoid using 'is'.        write-good.E-Prime  
+ 66:12   suggestion  Try to avoid using 'are'.       write-good.E-Prime  
  66:12   warning     'are grouped' may be passive    write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 66:12   suggestion  Try to avoid using 'are'.       write-good.E-Prime  
  248:3   warning     'Minimum' is too wordy.         write-good.TooWordy 
  257:32  warning     'Minimum' is too wordy.         write-good.TooWordy 
  277:36  suggestion  Try to avoid using 'be'.        write-good.E-Prime  
  277:36  warning     'be reviewed' may be passive    write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 287:21  suggestion  Try to avoid using 'be'.        write-good.E-Prime  
  287:21  warning     'be stored' may be passive      write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 287:21  suggestion  Try to avoid using 'be'.        write-good.E-Prime  
 
 
  docs/SCHEMA_CONTRACT.md
@@ -104,10 +104,10 @@ Linter raw log:
  13:262   warning     'be propagated' may be passive  write-good.Passive 
                       voice. Use active voice if you                     
                       can.                                               
- 111:19   suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  111:19   warning     'are expressed' may be passive  write-good.Passive 
                       voice. Use active voice if you                     
                       can.                                               
+ 111:19   suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  112:32   suggestion  Try to avoid using 'is'.        write-good.E-Prime 
  112:32   warning     'is exported' may be passive    write-good.Passive 
                       voice. Use active voice if you                     
@@ -162,10 +162,10 @@ Linter raw log:
  221:6    warning     'Obtain' is too wordy.          write-good.TooWordy 
  244:15   warning     'additional' is too wordy.      write-good.TooWordy 
  260:34   suggestion  Try to avoid using 'is'.        write-good.E-Prime  
+ 260:131  suggestion  Try to avoid using 'been'.      write-good.E-Prime  
  260:131  warning     'been met' may be passive       write-good.Passive  
                       voice. Use active voice if you                      
                       can.                                                
- 260:131  suggestion  Try to avoid using 'been'.      write-good.E-Prime  
  273:175  suggestion  Try to avoid using 'is'.        write-good.E-Prime  
 
 
@@ -201,10 +201,10 @@ Linter raw log:
 
 
  ui/README.md
+ 18:40  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  18:40  warning     'are named' may be passive      write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
- 18:40  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  19:41  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  19:41  warning     'are defined' may be passive    write-good.Passive 
                     voice. Use active voice if you                     

@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-03-02T19:08:35.514Z",
+    "detectionDate": "2026-03-02T20:29:06.293Z",
     "formats": {
       "typescript": {
         "sources": {
@@ -185,14 +185,14 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/features/budgets/budgetCalculations.test.ts": {
-            "lines": 141,
-            "tokens": 1771,
+            "lines": 157,
+            "tokens": 1933,
             "sources": 1,
             "clones": 1,
             "duplicatedLines": 16,
             "duplicatedTokens": 109,
-            "percentage": 11.35,
-            "percentageTokens": 6.15,
+            "percentage": 10.19,
+            "percentageTokens": 5.64,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -221,8 +221,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/utils/transactionUtils.ts": {
-            "lines": 32,
-            "tokens": 316,
+            "lines": 38,
+            "tokens": 376,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -606,14 +606,14 @@
           }
         },
         "total": {
-          "lines": 2013,
-          "tokens": 21764,
+          "lines": 2035,
+          "tokens": 21986,
           "sources": 50,
           "clones": 7,
           "duplicatedLines": 85,
           "duplicatedTokens": 808,
-          "percentage": 4.22,
-          "percentageTokens": 3.71,
+          "percentage": 4.18,
+          "percentageTokens": 3.68,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -2516,14 +2516,14 @@
       }
     },
     "total": {
-      "lines": 10421,
-      "tokens": 76164,
+      "lines": 10443,
+      "tokens": 76386,
       "sources": 192,
       "clones": 9,
       "duplicatedLines": 102,
       "duplicatedTokens": 966,
       "percentage": 0.98,
-      "percentageTokens": 1.27,
+      "percentageTokens": 1.26,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
@@ -2608,17 +2608,17 @@
       "tokens": 0,
       "firstFile": {
         "name": "/github/workspace/ui/src/features/budgets/budgetCalculations.test.ts",
-        "start": 16,
-        "end": 32,
+        "start": 17,
+        "end": 33,
         "startLoc": {
-          "line": 16,
+          "line": 17,
           "column": 7,
-          "position": 163
+          "position": 179
         },
         "endLoc": {
-          "line": 32,
+          "line": 33,
           "column": 12,
-          "position": 272
+          "position": 288
         }
       },
       "secondFile": {
