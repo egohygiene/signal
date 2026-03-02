@@ -151,35 +151,39 @@ server/plaid_adapter.py
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
   server/plaid_adapter.py:247:13 - error: Type of "tx" is partially unknown
     Type of "tx" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
-  server/plaid_adapter.py:256:28 - error: Type of "get" is partially unknown
+  server/plaid_adapter.py:255:9 - error: Type of "transaction_id" is partially unknown
+    Type of "transaction_id" is "Unknown | Any | None" (reportUnknownVariableType)
+  server/plaid_adapter.py:255:26 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  server/plaid_adapter.py:257:24 - error: Type of "get" is partially unknown
+  server/plaid_adapter.py:265:9 - error: Type of "account_id" is partially unknown
+    Type of "account_id" is "Unknown | Any | None" (reportUnknownVariableType)
+  server/plaid_adapter.py:265:22 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  server/plaid_adapter.py:258:26 - error: Type of "get" is partially unknown
+  server/plaid_adapter.py:278:26 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  server/plaid_adapter.py:258:26 - error: Argument type is partially unknown
+  server/plaid_adapter.py:278:26 - error: Argument type is partially unknown
     Argument corresponds to parameter "x" in function "__new__"
     Argument type is "Unknown | Any" (reportUnknownArgumentType)
-  server/plaid_adapter.py:259:18 - error: Type of "get" is partially unknown
+  server/plaid_adapter.py:279:18 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  server/plaid_adapter.py:260:18 - error: Type of "get" is partially unknown
+  server/plaid_adapter.py:280:18 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  server/plaid_adapter.py:261:27 - error: Type of "get" is partially unknown
+  server/plaid_adapter.py:281:27 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  server/plaid_adapter.py:262:22 - error: Type of "get" is partially unknown
+  server/plaid_adapter.py:282:22 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  server/plaid_adapter.py:263:21 - error: Type of "get" is partially unknown
+  server/plaid_adapter.py:283:21 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  server/plaid_adapter.py:264:29 - error: Type of "get" is partially unknown
+  server/plaid_adapter.py:284:29 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  server/plaid_adapter.py:265:31 - error: Type of "get" is partially unknown
+  server/plaid_adapter.py:285:31 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  server/plaid_adapter.py:283:17 - error: Type of "append" is partially unknown
+  server/plaid_adapter.py:303:17 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  server/plaid_adapter.py:288:52 - error: Argument type is partially unknown
+  server/plaid_adapter.py:308:52 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  server/plaid_adapter.py:289:16 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  server/plaid_adapter.py:309:16 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
 server/tests/conftest.py
   server/tests/conftest.py:3:8 - error: Import "pytest" could not be resolved (reportMissingImports)
   server/tests/conftest.py:4:6 - error: Import "httpx" could not be resolved (reportMissingImports)
@@ -364,153 +368,169 @@ server/tests/test_plaid_adapter.py
   server/tests/test_plaid_adapter.py:106:14 - error: Type of "normalize_transaction" is unknown (reportUnknownMemberType)
   server/tests/test_plaid_adapter.py:107:16 - error: Type of "merchant_name" is unknown (reportUnknownMemberType)
   server/tests/test_plaid_adapter.py:108:16 - error: Type of "category" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:110:57 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:110:57 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:110:66 - error: Type of parameter "caplog" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:110:66 - error: Type annotation is missing for parameter "caplog" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:126:14 - error: Type of "at_level" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:127:13 - error: Type of "results" is unknown (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:127:23 - error: Type of "normalize_transactions" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:129:20 - error: Argument type is unknown
+  server/tests/test_plaid_adapter.py:110:72 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:110:72 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:119:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:120:13 - error: Type of "normalize_transaction" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:122:70 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:122:70 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:132:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:133:13 - error: Type of "normalize_transaction" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:135:68 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:135:68 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:144:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:145:13 - error: Type of "normalize_transaction" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:147:66 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:147:66 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:157:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:158:13 - error: Type of "normalize_transaction" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:160:57 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:160:57 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:160:66 - error: Type of parameter "caplog" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:160:66 - error: Type annotation is missing for parameter "caplog" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:176:14 - error: Type of "at_level" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:177:13 - error: Type of "results" is unknown (reportUnknownVariableType)
+  server/tests/test_plaid_adapter.py:177:23 - error: Type of "normalize_transactions" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:179:20 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  server/tests/test_plaid_adapter.py:130:16 - error: Type of "transaction_id" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:132:47 - error: Type of parameter "monkeypatch" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:132:47 - error: Type annotation is missing for parameter "monkeypatch" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:134:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:142:25 - error: Type of parameter "added" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:142:25 - error: Type annotation is missing for parameter "added" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:142:32 - error: Type of parameter "has_more" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:142:32 - error: Type annotation is missing for parameter "has_more" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:142:42 - error: Type annotation is missing for parameter "next_cursor" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:142:69 - error: Type of parameter "accounts" is partially unknown
+  server/tests/test_plaid_adapter.py:180:16 - error: Type of "transaction_id" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:182:47 - error: Type of parameter "monkeypatch" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:182:47 - error: Type annotation is missing for parameter "monkeypatch" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:184:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:192:25 - error: Type of parameter "added" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:192:25 - error: Type annotation is missing for parameter "added" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:192:32 - error: Type of parameter "has_more" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:192:32 - error: Type annotation is missing for parameter "has_more" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:192:42 - error: Type annotation is missing for parameter "next_cursor" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:192:69 - error: Type of parameter "accounts" is partially unknown
     Parameter type is "Unknown | None" (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:142:69 - error: Type annotation is missing for parameter "accounts" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:142:84 - error: Type annotation is missing for parameter "request_id" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:146:13 - error: Return type, "dict[str, Unknown | str | list[Unknown]]", is partially unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:146:21 - error: Instance methods should take a "self" parameter (reportSelfClsParameterName)
-  server/tests/test_plaid_adapter.py:147:20 - error: Return type, "dict[str, Unknown | str | list[Unknown]]", is partially unknown (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:163:6 - error: Type of "fixture" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:163:6 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
-  server/tests/test_plaid_adapter.py:164:9 - error: Return type is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:164:23 - error: Type of parameter "monkeypatch" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:164:23 - error: Type annotation is missing for parameter "monkeypatch" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:166:9 - error: Type of "setattr" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:166:69 - error: Type of parameter "config" is unknown (reportUnknownLambdaType)
-  server/tests/test_plaid_adapter.py:167:9 - error: Type of "setattr" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:167:72 - error: Type of parameter "client" is unknown (reportUnknownLambdaType)
-  server/tests/test_plaid_adapter.py:168:9 - error: Type of "instance" is unknown (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:173:16 - error: Return type is unknown (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:175:9 - error: Return type, "dict[str, Unknown | str | float | bool]", is partially unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:175:24 - error: Type of parameter "tx_id" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:175:24 - error: Type annotation is missing for parameter "tx_id" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:175:31 - error: Type annotation is missing for parameter "date" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:175:50 - error: Type annotation is missing for parameter "account_id" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:176:16 - error: Return type, "dict[str, Unknown | str | float | bool]", is partially unknown (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:185:57 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:185:57 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:187:9 - error: Type of "txs" is partially unknown
+  server/tests/test_plaid_adapter.py:192:69 - error: Type annotation is missing for parameter "accounts" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:192:84 - error: Type annotation is missing for parameter "request_id" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:196:13 - error: Return type, "dict[str, Unknown | str | list[Unknown]]", is partially unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:196:21 - error: Instance methods should take a "self" parameter (reportSelfClsParameterName)
+  server/tests/test_plaid_adapter.py:197:20 - error: Return type, "dict[str, Unknown | str | list[Unknown]]", is partially unknown (reportUnknownVariableType)
+  server/tests/test_plaid_adapter.py:213:6 - error: Type of "fixture" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:213:6 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
+  server/tests/test_plaid_adapter.py:214:9 - error: Return type is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:214:23 - error: Type of parameter "monkeypatch" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:214:23 - error: Type annotation is missing for parameter "monkeypatch" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:216:9 - error: Type of "setattr" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:216:69 - error: Type of parameter "config" is unknown (reportUnknownLambdaType)
+  server/tests/test_plaid_adapter.py:217:9 - error: Type of "setattr" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:217:72 - error: Type of parameter "client" is unknown (reportUnknownLambdaType)
+  server/tests/test_plaid_adapter.py:218:9 - error: Type of "instance" is unknown (reportUnknownVariableType)
+  server/tests/test_plaid_adapter.py:223:16 - error: Return type is unknown (reportUnknownVariableType)
+  server/tests/test_plaid_adapter.py:225:9 - error: Return type, "dict[str, Unknown | str | float | bool]", is partially unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:225:24 - error: Type of parameter "tx_id" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:225:24 - error: Type annotation is missing for parameter "tx_id" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:225:31 - error: Type annotation is missing for parameter "date" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:225:50 - error: Type annotation is missing for parameter "account_id" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:226:16 - error: Return type, "dict[str, Unknown | str | float | bool]", is partially unknown (reportUnknownVariableType)
+  server/tests/test_plaid_adapter.py:235:57 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:235:57 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:237:9 - error: Type of "txs" is partially unknown
     Type of "txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:187:16 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:237:16 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:187:39 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:237:39 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:189:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
-  server/tests/test_plaid_adapter.py:189:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
-  server/tests/test_plaid_adapter.py:191:9 - error: Type of "result" is unknown (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:191:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:193:20 - error: Argument type is unknown
+  server/tests/test_plaid_adapter.py:239:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
+  server/tests/test_plaid_adapter.py:239:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
+  server/tests/test_plaid_adapter.py:241:9 - error: Type of "result" is unknown (reportUnknownVariableType)
+  server/tests/test_plaid_adapter.py:241:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:243:20 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  server/tests/test_plaid_adapter.py:198:46 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:198:46 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:200:9 - error: Type of "page1_txs" is partially unknown
+  server/tests/test_plaid_adapter.py:248:46 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:248:46 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:250:9 - error: Type of "page1_txs" is partially unknown
     Type of "page1_txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:200:22 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:250:22 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:200:45 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:250:45 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:201:9 - error: Type of "page2_txs" is partially unknown
+  server/tests/test_plaid_adapter.py:251:9 - error: Type of "page2_txs" is partially unknown
     Type of "page2_txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:201:22 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:251:22 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:201:45 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:251:45 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:202:9 - error: Type of "page3_txs" is partially unknown
+  server/tests/test_plaid_adapter.py:252:9 - error: Type of "page3_txs" is partially unknown
     Type of "page3_txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:202:22 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:252:22 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:209:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
-  server/tests/test_plaid_adapter.py:209:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
-  server/tests/test_plaid_adapter.py:211:9 - error: Type of "result" is unknown (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:211:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:213:20 - error: Argument type is unknown
+  server/tests/test_plaid_adapter.py:259:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
+  server/tests/test_plaid_adapter.py:259:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
+  server/tests/test_plaid_adapter.py:261:9 - error: Type of "result" is unknown (reportUnknownVariableType)
+  server/tests/test_plaid_adapter.py:261:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:263:20 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  server/tests/test_plaid_adapter.py:216:56 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:216:56 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:218:9 - error: Type of "tx" is partially unknown
+  server/tests/test_plaid_adapter.py:266:56 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:266:56 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:268:9 - error: Type of "tx" is partially unknown
     Type of "tx" is "dict[str, Unknown | str | float | bool]" (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:218:14 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:268:14 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:223:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
-  server/tests/test_plaid_adapter.py:223:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
-  server/tests/test_plaid_adapter.py:225:9 - error: Type of "result" is unknown (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:225:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:227:20 - error: Argument type is unknown
+  server/tests/test_plaid_adapter.py:273:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
+  server/tests/test_plaid_adapter.py:273:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
+  server/tests/test_plaid_adapter.py:275:9 - error: Type of "result" is unknown (reportUnknownVariableType)
+  server/tests/test_plaid_adapter.py:275:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:277:20 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  server/tests/test_plaid_adapter.py:230:58 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:230:58 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:232:9 - error: Type of "txs" is partially unknown
+  server/tests/test_plaid_adapter.py:280:58 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:280:58 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:282:9 - error: Type of "txs" is partially unknown
     Type of "txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:233:13 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:283:13 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:234:13 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:284:13 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:237:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
-  server/tests/test_plaid_adapter.py:237:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
-  server/tests/test_plaid_adapter.py:239:9 - error: Type of "result" is unknown (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:239:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:241:20 - error: Argument type is unknown
+  server/tests/test_plaid_adapter.py:287:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
+  server/tests/test_plaid_adapter.py:287:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
+  server/tests/test_plaid_adapter.py:289:9 - error: Type of "result" is unknown (reportUnknownVariableType)
+  server/tests/test_plaid_adapter.py:289:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:291:20 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  server/tests/test_plaid_adapter.py:244:51 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:244:51 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:246:9 - error: Type of "txs" is partially unknown
+  server/tests/test_plaid_adapter.py:294:51 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:294:51 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:296:9 - error: Type of "txs" is partially unknown
     Type of "txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:247:13 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:297:13 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:248:13 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:298:13 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:249:13 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:299:13 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:252:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
-  server/tests/test_plaid_adapter.py:252:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
-  server/tests/test_plaid_adapter.py:254:9 - error: Type of "result" is unknown (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:254:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:256:20 - error: Argument type is unknown
+  server/tests/test_plaid_adapter.py:302:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
+  server/tests/test_plaid_adapter.py:302:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
+  server/tests/test_plaid_adapter.py:304:9 - error: Type of "result" is unknown (reportUnknownVariableType)
+  server/tests/test_plaid_adapter.py:304:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:306:20 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  server/tests/test_plaid_adapter.py:259:53 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:259:53 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:261:16 - error: Import "plaid" could not be resolved (reportMissingImports)
-  server/tests/test_plaid_adapter.py:263:29 - error: Type of parameter "_self" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:263:29 - error: Type annotation is missing for parameter "_self" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:263:36 - error: Type of parameter "req" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:263:36 - error: Type annotation is missing for parameter "req" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:264:13 - error: Type of "exc" is unknown (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:264:19 - error: Type of "ApiException" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:270:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:271:13 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:273:58 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:273:58 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:275:16 - error: Import "plaid" could not be resolved (reportMissingImports)
-  server/tests/test_plaid_adapter.py:277:9 - error: Type of "page1_txs" is partially unknown
+  server/tests/test_plaid_adapter.py:309:53 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:309:53 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:311:16 - error: Import "plaid" could not be resolved (reportMissingImports)
+  server/tests/test_plaid_adapter.py:313:29 - error: Type of parameter "_self" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:313:29 - error: Type annotation is missing for parameter "_self" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:313:36 - error: Type of parameter "req" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:313:36 - error: Type annotation is missing for parameter "req" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:314:13 - error: Type of "exc" is unknown (reportUnknownVariableType)
+  server/tests/test_plaid_adapter.py:314:19 - error: Type of "ApiException" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:320:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:321:13 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:323:58 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:323:58 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:325:16 - error: Import "plaid" could not be resolved (reportMissingImports)
+  server/tests/test_plaid_adapter.py:327:9 - error: Type of "page1_txs" is partially unknown
     Type of "page1_txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:277:22 - error: Type of "_make_tx" is partially unknown
+  server/tests/test_plaid_adapter.py:327:22 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:280:25 - error: Type of parameter "_self" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:280:25 - error: Type annotation is missing for parameter "_self" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:280:32 - error: Type of parameter "req" is unknown (reportUnknownParameterType)
-  server/tests/test_plaid_adapter.py:280:32 - error: Type annotation is missing for parameter "req" (reportMissingParameterType)
-  server/tests/test_plaid_adapter.py:284:13 - error: Type of "exc" is unknown (reportUnknownVariableType)
-  server/tests/test_plaid_adapter.py:284:19 - error: Type of "ApiException" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:290:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
-  server/tests/test_plaid_adapter.py:291:13 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-431 errors, 0 warnings, 0 informations 
+  server/tests/test_plaid_adapter.py:330:25 - error: Type of parameter "_self" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:330:25 - error: Type annotation is missing for parameter "_self" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:330:32 - error: Type of parameter "req" is unknown (reportUnknownParameterType)
+  server/tests/test_plaid_adapter.py:330:32 - error: Type annotation is missing for parameter "req" (reportMissingParameterType)
+  server/tests/test_plaid_adapter.py:334:13 - error: Type of "exc" is unknown (reportUnknownVariableType)
+  server/tests/test_plaid_adapter.py:334:19 - error: Type of "ApiException" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:340:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  server/tests/test_plaid_adapter.py:341:13 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+449 errors, 0 warnings, 0 informations 
 

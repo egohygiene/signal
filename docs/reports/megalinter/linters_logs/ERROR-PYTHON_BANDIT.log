@@ -4,7 +4,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/python_bandit/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-Run started:2026-03-02 20:28:44.353262
+Run started:2026-03-02 21:07:18.303805
 
 Test results:
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
@@ -443,173 +443,173 @@ Test results:
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:129:8
-128	
-129	        assert len(results) == 1
-130	        assert results[0].transaction_id == "tx_200"
+   Location: ./server/tests/test_plaid_adapter.py:179:8
+178	
+179	        assert len(results) == 1
+180	        assert results[0].transaction_id == "tx_200"
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:130:8
-129	        assert len(results) == 1
-130	        assert results[0].transaction_id == "tx_200"
-131	
+   Location: ./server/tests/test_plaid_adapter.py:180:8
+179	        assert len(results) == 1
+180	        assert results[0].transaction_id == "tx_200"
+181	
 
 --------------------------------------------------
 >> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'secret'
    Severity: Low   Confidence: Medium
    CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b106_hardcoded_password_funcarg.html
-   Location: ./server/tests/test_plaid_adapter.py:135:12
-134	        with pytest.raises(ValueError, match="Invalid environment"):
-135	            PlaidAdapter(
-136	                client_id="id",
-137	                secret="secret",
-138	                environment="unknown_env",
-139	            )
-140	
+   Location: ./server/tests/test_plaid_adapter.py:185:12
+184	        with pytest.raises(ValueError, match="Invalid environment"):
+185	            PlaidAdapter(
+186	                client_id="id",
+187	                secret="secret",
+188	                environment="unknown_env",
+189	            )
+190	
 
 --------------------------------------------------
 >> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'fake_secret'
    Severity: Low   Confidence: Medium
    CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b106_hardcoded_password_funcarg.html
-   Location: ./server/tests/test_plaid_adapter.py:168:19
-167	        monkeypatch.setattr("plaid_adapter.plaid_api.PlaidApi", lambda client: None)
-168	        instance = PlaidAdapter(
-169	            client_id="fake_client_id",
-170	            secret="fake_secret",
-171	            environment="sandbox",
-172	        )
-173	        return instance
+   Location: ./server/tests/test_plaid_adapter.py:218:19
+217	        monkeypatch.setattr("plaid_adapter.plaid_api.PlaidApi", lambda client: None)
+218	        instance = PlaidAdapter(
+219	            client_id="fake_client_id",
+220	            secret="fake_secret",
+221	            environment="sandbox",
+222	        )
+223	        return instance
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:193:8
-192	
-193	        assert len(result["transactions"]) == 2
-194	        assert result["total_transactions"] == 2
+   Location: ./server/tests/test_plaid_adapter.py:243:8
+242	
+243	        assert len(result["transactions"]) == 2
+244	        assert result["total_transactions"] == 2
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:194:8
-193	        assert len(result["transactions"]) == 2
-194	        assert result["total_transactions"] == 2
-195	        assert result["accounts"] == [{"id": "acc_1"}]
+   Location: ./server/tests/test_plaid_adapter.py:244:8
+243	        assert len(result["transactions"]) == 2
+244	        assert result["total_transactions"] == 2
+245	        assert result["accounts"] == [{"id": "acc_1"}]
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:195:8
-194	        assert result["total_transactions"] == 2
-195	        assert result["accounts"] == [{"id": "acc_1"}]
-196	        assert result["request_id"] == "req_1"
+   Location: ./server/tests/test_plaid_adapter.py:245:8
+244	        assert result["total_transactions"] == 2
+245	        assert result["accounts"] == [{"id": "acc_1"}]
+246	        assert result["request_id"] == "req_1"
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:196:8
-195	        assert result["accounts"] == [{"id": "acc_1"}]
-196	        assert result["request_id"] == "req_1"
-197	
+   Location: ./server/tests/test_plaid_adapter.py:246:8
+245	        assert result["accounts"] == [{"id": "acc_1"}]
+246	        assert result["request_id"] == "req_1"
+247	
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:213:8
-212	
-213	        assert len(result["transactions"]) == 5
-214	        assert result["total_transactions"] == 5
+   Location: ./server/tests/test_plaid_adapter.py:263:8
+262	
+263	        assert len(result["transactions"]) == 5
+264	        assert result["total_transactions"] == 5
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:214:8
-213	        assert len(result["transactions"]) == 5
-214	        assert result["total_transactions"] == 5
-215	
+   Location: ./server/tests/test_plaid_adapter.py:264:8
+263	        assert len(result["transactions"]) == 5
+264	        assert result["total_transactions"] == 5
+265	
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:227:8
-226	
-227	        assert len(result["transactions"]) == 1
-228	        assert result["transactions"][0]["transaction_id"] == "tx_dup"
+   Location: ./server/tests/test_plaid_adapter.py:277:8
+276	
+277	        assert len(result["transactions"]) == 1
+278	        assert result["transactions"][0]["transaction_id"] == "tx_dup"
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:228:8
-227	        assert len(result["transactions"]) == 1
-228	        assert result["transactions"][0]["transaction_id"] == "tx_dup"
-229	
+   Location: ./server/tests/test_plaid_adapter.py:278:8
+277	        assert len(result["transactions"]) == 1
+278	        assert result["transactions"][0]["transaction_id"] == "tx_dup"
+279	
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:241:8
-240	
-241	        assert len(result["transactions"]) == 1
-242	        assert result["transactions"][0]["transaction_id"] == "tx_a"
+   Location: ./server/tests/test_plaid_adapter.py:291:8
+290	
+291	        assert len(result["transactions"]) == 1
+292	        assert result["transactions"][0]["transaction_id"] == "tx_a"
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:242:8
-241	        assert len(result["transactions"]) == 1
-242	        assert result["transactions"][0]["transaction_id"] == "tx_a"
-243	
+   Location: ./server/tests/test_plaid_adapter.py:292:8
+291	        assert len(result["transactions"]) == 1
+292	        assert result["transactions"][0]["transaction_id"] == "tx_a"
+293	
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:256:8
-255	
-256	        assert len(result["transactions"]) == 1
-257	        assert result["transactions"][0]["transaction_id"] == "tx_mid"
+   Location: ./server/tests/test_plaid_adapter.py:306:8
+305	
+306	        assert len(result["transactions"]) == 1
+307	        assert result["transactions"][0]["transaction_id"] == "tx_mid"
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:257:8
-256	        assert len(result["transactions"]) == 1
-257	        assert result["transactions"][0]["transaction_id"] == "tx_mid"
-258	
+   Location: ./server/tests/test_plaid_adapter.py:307:8
+306	        assert len(result["transactions"]) == 1
+307	        assert result["transactions"][0]["transaction_id"] == "tx_mid"
+308	
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 870
+	Total lines of code: 934
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 

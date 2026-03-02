@@ -12,7 +12,7 @@ The MegaLinter documentation can be found at:
 MegaLinter will analyze workspace [/github/workspace]
 GITHUB_REPOSITORY: egohygiene/signal
 GITHUB_REF: refs/heads/main
-GITHUB_RUN_ID: 22594268632
+GITHUB_RUN_ID: 22595599868
 
 
 [Pre] run: [echo "Calling pre-commands from $(pwd)"] in cwd [/github/workspace]
@@ -159,7 +159,7 @@ Kept [296] files on [296] found files
 | YAML           | v8r                      | .yml|.yaml                                                             | 77             | no         |
 +----------------+--------------------------+------------------------------------------------------------------------+----------------+------------+
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [pylint]: Found 16 error(s) and 0 warning(s) - (3.56s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [pylint]: Found 16 error(s) and 0 warning(s) - (3.46s)[0m (expand for details)
 - Using [pylint v3.3.7] https://megalinter.io/8.8.0/descriptors/python_pylint
 - MegaLinter key: [PYTHON_PYLINT]
 - Rules config: [/github/workspace/config/.pylintrc]
@@ -185,12 +185,12 @@ server/tests/test_error_handling.py:3:0: E0401: Unable to import 'pytest' (impor
 server/tests/test_health.py:3:0: E0401: Unable to import 'pytest' (import-error)
 ************* Module tests.test_plaid_adapter
 server/tests/test_plaid_adapter.py:3:0: E0401: Unable to import 'pytest' (import-error)
-server/tests/test_plaid_adapter.py:146:8: E0213: Method 'to_dict' should have "self" as first argument (no-self-argument)
-server/tests/test_plaid_adapter.py:261:8: E0401: Unable to import 'plaid' (import-error)
-server/tests/test_plaid_adapter.py:275:8: E0401: Unable to import 'plaid' (import-error)
+server/tests/test_plaid_adapter.py:196:8: E0213: Method 'to_dict' should have "self" as first argument (no-self-argument)
+server/tests/test_plaid_adapter.py:311:8: E0401: Unable to import 'plaid' (import-error)
+server/tests/test_plaid_adapter.py:325:8: E0401: Unable to import 'plaid' (import-error)
 
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [flake8]: Found 9 error(s) and 0 warning(s) - (0.47s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [flake8]: Found 10 error(s) and 0 warning(s) - (0.48s)[0m (expand for details)
 - Using [flake8 v7.2.0] https://megalinter.io/8.8.0/descriptors/python_flake8
 - MegaLinter key: [PYTHON_FLAKE8]
 - Rules config: [/github/workspace/config/.flake8]
@@ -198,14 +198,15 @@ server/tests/test_plaid_adapter.py:275:8: E0401: Unable to import 'plaid' (impor
 - Command: [flake8 --config /github/workspace/config/.flake8 server/main.py server/plaid_adapter.py server/tests/__init__.py server/tests/conftest.py server/tests/test_error_handling.py server/tests/test_health.py server/tests/test_plaid_adapter.py]
 --Error detail:
 server/plaid_adapter.py:143:89: E501 line too long (91 > 88 characters)
-server/tests/test_plaid_adapter.py:142:89: E501 line too long (103 > 88 characters)
-server/tests/test_plaid_adapter.py:189:89: E501 line too long (104 > 88 characters)
-server/tests/test_plaid_adapter.py:209:89: E501 line too long (107 > 88 characters)
-server/tests/test_plaid_adapter.py:223:89: E501 line too long (107 > 88 characters)
-server/tests/test_plaid_adapter.py:237:89: E501 line too long (107 > 88 characters)
-server/tests/test_plaid_adapter.py:252:89: E501 line too long (107 > 88 characters)
-server/tests/test_plaid_adapter.py:254:89: E501 line too long (96 > 88 characters)
-server/tests/test_plaid_adapter.py:268:89: E501 line too long (89 > 88 characters)
+server/tests/test_plaid_adapter.py:123:89: E501 line too long (90 > 88 characters)
+server/tests/test_plaid_adapter.py:192:89: E501 line too long (103 > 88 characters)
+server/tests/test_plaid_adapter.py:239:89: E501 line too long (104 > 88 characters)
+server/tests/test_plaid_adapter.py:259:89: E501 line too long (107 > 88 characters)
+server/tests/test_plaid_adapter.py:273:89: E501 line too long (107 > 88 characters)
+server/tests/test_plaid_adapter.py:287:89: E501 line too long (107 > 88 characters)
+server/tests/test_plaid_adapter.py:302:89: E501 line too long (107 > 88 characters)
+server/tests/test_plaid_adapter.py:304:89: E501 line too long (96 > 88 characters)
+server/tests/test_plaid_adapter.py:318:89: E501 line too long (89 > 88 characters)
 
 ::endgroup::
 ::group::[31m❌ Linted [PYTHON] files with [isort]: Found 3 error(s) and 0 warning(s) - (0.17s)[0m (expand for details)
@@ -218,8 +219,8 @@ server/tests/test_plaid_adapter.py:268:89: E501 line too long (89 > 88 character
 ERROR: /github/workspace/server/main.py Imports are incorrectly sorted and/or formatted.
 ERROR: /github/workspace/server/tests/conftest.py Imports are incorrectly sorted and/or formatted.
 ERROR: /github/workspace/server/tests/test_plaid_adapter.py Imports are incorrectly sorted and/or formatted.
---- /github/workspace/server/main.py:before	2026-03-02 20:28:34.570174
-+++ /github/workspace/server/main.py:after	2026-03-02 20:28:43.350856
+--- /github/workspace/server/main.py:before	2026-03-02 21:07:08.479278
++++ /github/workspace/server/main.py:after	2026-03-02 21:07:17.277233
 @@ -8,10 +8,9 @@
  
  from fastapi import FastAPI, Header, HTTPException
@@ -232,8 +233,8 @@ ERROR: /github/workspace/server/tests/test_plaid_adapter.py Imports are incorrec
  
  
  class Settings(BaseSettings):
---- /github/workspace/server/tests/conftest.py:before	2026-03-02 20:28:34.570650
-+++ /github/workspace/server/tests/conftest.py:after	2026-03-02 20:28:43.356259
+--- /github/workspace/server/tests/conftest.py:before	2026-03-02 21:07:08.479734
++++ /github/workspace/server/tests/conftest.py:after	2026-03-02 21:07:17.282682
 @@ -2,7 +2,6 @@
  
  import pytest
@@ -242,8 +243,8 @@ ERROR: /github/workspace/server/tests/test_plaid_adapter.py Imports are incorrec
  from main import app
  
  
---- /github/workspace/server/tests/test_plaid_adapter.py:before	2026-03-02 20:28:34.570650
-+++ /github/workspace/server/tests/test_plaid_adapter.py:after	2026-03-02 20:28:43.363691
+--- /github/workspace/server/tests/test_plaid_adapter.py:before	2026-03-02 21:07:08.479734
++++ /github/workspace/server/tests/test_plaid_adapter.py:after	2026-03-02 21:07:17.290748
 @@ -1,7 +1,6 @@
  """Tests for the PlaidAdapter stub (no real API calls)."""
  
@@ -254,14 +255,14 @@ ERROR: /github/workspace/server/tests/test_plaid_adapter.py Imports are incorrec
  
 
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [bandit]: Found 59 error(s) and 0 warning(s) - (1.8s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [bandit]: Found 59 error(s) and 0 warning(s) - (1.84s)[0m (expand for details)
 - Using [bandit v1.8.3] https://megalinter.io/8.8.0/descriptors/python_bandit
 - MegaLinter key: [PYTHON_BANDIT]
 - Rules config: [/github/workspace/config/.bandit.yml]
 - Number of files analyzed: [7]
 - Command: [bandit --quiet -c /github/workspace/config/.bandit.yml server/main.py server/plaid_adapter.py server/tests/__init__.py server/tests/conftest.py server/tests/test_error_handling.py server/tests/test_health.py server/tests/test_plaid_adapter.py]
 --Error detail:
-Run started:2026-03-02 20:28:44.353262
+Run started:2026-03-02 21:07:18.303805
 
 Test results:
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
@@ -700,173 +701,173 @@ Test results:
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:129:8
-128	
-129	        assert len(results) == 1
-130	        assert results[0].transaction_id == "tx_200"
+   Location: ./server/tests/test_plaid_adapter.py:179:8
+178	
+179	        assert len(results) == 1
+180	        assert results[0].transaction_id == "tx_200"
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:130:8
-129	        assert len(results) == 1
-130	        assert results[0].transaction_id == "tx_200"
-131	
+   Location: ./server/tests/test_plaid_adapter.py:180:8
+179	        assert len(results) == 1
+180	        assert results[0].transaction_id == "tx_200"
+181	
 
 --------------------------------------------------
 >> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'secret'
    Severity: Low   Confidence: Medium
    CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b106_hardcoded_password_funcarg.html
-   Location: ./server/tests/test_plaid_adapter.py:135:12
-134	        with pytest.raises(ValueError, match="Invalid environment"):
-135	            PlaidAdapter(
-136	                client_id="id",
-137	                secret="secret",
-138	                environment="unknown_env",
-139	            )
-140	
+   Location: ./server/tests/test_plaid_adapter.py:185:12
+184	        with pytest.raises(ValueError, match="Invalid environment"):
+185	            PlaidAdapter(
+186	                client_id="id",
+187	                secret="secret",
+188	                environment="unknown_env",
+189	            )
+190	
 
 --------------------------------------------------
 >> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'fake_secret'
    Severity: Low   Confidence: Medium
    CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b106_hardcoded_password_funcarg.html
-   Location: ./server/tests/test_plaid_adapter.py:168:19
-167	        monkeypatch.setattr("plaid_adapter.plaid_api.PlaidApi", lambda client: None)
-168	        instance = PlaidAdapter(
-169	            client_id="fake_client_id",
-170	            secret="fake_secret",
-171	            environment="sandbox",
-172	        )
-173	        return instance
+   Location: ./server/tests/test_plaid_adapter.py:218:19
+217	        monkeypatch.setattr("plaid_adapter.plaid_api.PlaidApi", lambda client: None)
+218	        instance = PlaidAdapter(
+219	            client_id="fake_client_id",
+220	            secret="fake_secret",
+221	            environment="sandbox",
+222	        )
+223	        return instance
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:193:8
-192	
-193	        assert len(result["transactions"]) == 2
-194	        assert result["total_transactions"] == 2
+   Location: ./server/tests/test_plaid_adapter.py:243:8
+242	
+243	        assert len(result["transactions"]) == 2
+244	        assert result["total_transactions"] == 2
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:194:8
-193	        assert len(result["transactions"]) == 2
-194	        assert result["total_transactions"] == 2
-195	        assert result["accounts"] == [{"id": "acc_1"}]
+   Location: ./server/tests/test_plaid_adapter.py:244:8
+243	        assert len(result["transactions"]) == 2
+244	        assert result["total_transactions"] == 2
+245	        assert result["accounts"] == [{"id": "acc_1"}]
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:195:8
-194	        assert result["total_transactions"] == 2
-195	        assert result["accounts"] == [{"id": "acc_1"}]
-196	        assert result["request_id"] == "req_1"
+   Location: ./server/tests/test_plaid_adapter.py:245:8
+244	        assert result["total_transactions"] == 2
+245	        assert result["accounts"] == [{"id": "acc_1"}]
+246	        assert result["request_id"] == "req_1"
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:196:8
-195	        assert result["accounts"] == [{"id": "acc_1"}]
-196	        assert result["request_id"] == "req_1"
-197	
+   Location: ./server/tests/test_plaid_adapter.py:246:8
+245	        assert result["accounts"] == [{"id": "acc_1"}]
+246	        assert result["request_id"] == "req_1"
+247	
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:213:8
-212	
-213	        assert len(result["transactions"]) == 5
-214	        assert result["total_transactions"] == 5
+   Location: ./server/tests/test_plaid_adapter.py:263:8
+262	
+263	        assert len(result["transactions"]) == 5
+264	        assert result["total_transactions"] == 5
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:214:8
-213	        assert len(result["transactions"]) == 5
-214	        assert result["total_transactions"] == 5
-215	
+   Location: ./server/tests/test_plaid_adapter.py:264:8
+263	        assert len(result["transactions"]) == 5
+264	        assert result["total_transactions"] == 5
+265	
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:227:8
-226	
-227	        assert len(result["transactions"]) == 1
-228	        assert result["transactions"][0]["transaction_id"] == "tx_dup"
+   Location: ./server/tests/test_plaid_adapter.py:277:8
+276	
+277	        assert len(result["transactions"]) == 1
+278	        assert result["transactions"][0]["transaction_id"] == "tx_dup"
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:228:8
-227	        assert len(result["transactions"]) == 1
-228	        assert result["transactions"][0]["transaction_id"] == "tx_dup"
-229	
+   Location: ./server/tests/test_plaid_adapter.py:278:8
+277	        assert len(result["transactions"]) == 1
+278	        assert result["transactions"][0]["transaction_id"] == "tx_dup"
+279	
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:241:8
-240	
-241	        assert len(result["transactions"]) == 1
-242	        assert result["transactions"][0]["transaction_id"] == "tx_a"
+   Location: ./server/tests/test_plaid_adapter.py:291:8
+290	
+291	        assert len(result["transactions"]) == 1
+292	        assert result["transactions"][0]["transaction_id"] == "tx_a"
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:242:8
-241	        assert len(result["transactions"]) == 1
-242	        assert result["transactions"][0]["transaction_id"] == "tx_a"
-243	
+   Location: ./server/tests/test_plaid_adapter.py:292:8
+291	        assert len(result["transactions"]) == 1
+292	        assert result["transactions"][0]["transaction_id"] == "tx_a"
+293	
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:256:8
-255	
-256	        assert len(result["transactions"]) == 1
-257	        assert result["transactions"][0]["transaction_id"] == "tx_mid"
+   Location: ./server/tests/test_plaid_adapter.py:306:8
+305	
+306	        assert len(result["transactions"]) == 1
+307	        assert result["transactions"][0]["transaction_id"] == "tx_mid"
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_plaid_adapter.py:257:8
-256	        assert len(result["transactions"]) == 1
-257	        assert result["transactions"][0]["transaction_id"] == "tx_mid"
-258	
+   Location: ./server/tests/test_plaid_adapter.py:307:8
+306	        assert len(result["transactions"]) == 1
+307	        assert result["transactions"][0]["transaction_id"] == "tx_mid"
+308	
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 870
+	Total lines of code: 934
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
@@ -884,7 +885,7 @@ Run metrics:
 Files skipped (0):
 
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [mypy]: Found 77 error(s) and 0 warning(s) - (2.46s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [mypy]: Found 81 error(s) and 0 warning(s) - (2.51s)[0m (expand for details)
 - Using [mypy v1.16.0] https://megalinter.io/8.8.0/descriptors/python_mypy
 - MegaLinter key: [PYTHON_MYPY]
 - Rules config: [/github/workspace/config/.mypy.ini]
@@ -1004,145 +1005,161 @@ annotation  [no-untyped-def]
         ^
 server/tests/test_plaid_adapter.py:110:5: error: Function is missing a type
 annotation  [no-untyped-def]
+        def test_normalize_transaction_missing_transaction_id_raises(self,...
+        ^
+server/tests/test_plaid_adapter.py:122:5: error: Function is missing a type
+annotation  [no-untyped-def]
+        def test_normalize_transaction_empty_transaction_id_raises(self, a...
+        ^
+server/tests/test_plaid_adapter.py:135:5: error: Function is missing a type
+annotation  [no-untyped-def]
+        def test_normalize_transaction_missing_account_id_raises(self, ada...
+        ^
+server/tests/test_plaid_adapter.py:147:5: error: Function is missing a type
+annotation  [no-untyped-def]
+        def test_normalize_transaction_empty_account_id_raises(self, adapt...
+        ^
+server/tests/test_plaid_adapter.py:160:5: error: Function is missing a type
+annotation  [no-untyped-def]
         def test_normalize_transactions_skips_invalid(self, adapter, caplo...
         ^
-server/tests/test_plaid_adapter.py:132:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:182:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_invalid_environment_raises(self, monkeypatch):
         ^
-server/tests/test_plaid_adapter.py:142:1: error: Function is missing a type
+server/tests/test_plaid_adapter.py:192:1: error: Function is missing a type
 annotation  [no-untyped-def]
     def _make_sync_response(added, has_more, next_cursor="cursor_next", ac...
     ^
-server/tests/test_plaid_adapter.py:146:9: error: Function is missing a type
+server/tests/test_plaid_adapter.py:196:9: error: Function is missing a type
 annotation  [no-untyped-def]
             def to_dict(self_inner):
             ^
-server/tests/test_plaid_adapter.py:164:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:214:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def adapter(self, monkeypatch):
         ^
-server/tests/test_plaid_adapter.py:175:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:225:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def _make_tx(self, tx_id, date="2024-01-10", account_id="acc_1"):
         ^
-server/tests/test_plaid_adapter.py:185:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:235:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_single_page_returns_all_transactions(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:187:16: error: Call to untyped function
+server/tests/test_plaid_adapter.py:237:16: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
             txs = [self._make_tx("tx_1"), self._make_tx("tx_2")]
                    ^~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:188:18: error: Call to untyped function
+server/tests/test_plaid_adapter.py:238:18: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
             calls = [_make_sync_response(txs, has_more=False, accounts=[{"...
                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
-server/tests/test_plaid_adapter.py:198:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:248:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_multiple_pages_aggregated(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:200:22: error: Call to untyped function
+server/tests/test_plaid_adapter.py:250:22: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
             page1_txs = [self._make_tx("tx_1"), self._make_tx("tx_2")]
                          ^~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:201:22: error: Call to untyped function
+server/tests/test_plaid_adapter.py:251:22: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
             page2_txs = [self._make_tx("tx_3"), self._make_tx("tx_4")]
                          ^~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:202:22: error: Call to untyped function
+server/tests/test_plaid_adapter.py:252:22: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
             page3_txs = [self._make_tx("tx_5")]
                          ^~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:205:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:255:13: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
                 _make_sync_response(page1_txs, has_more=True, next_cursor=...
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
-server/tests/test_plaid_adapter.py:206:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:256:13: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
                 _make_sync_response(page2_txs, has_more=True, next_cursor=...
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
-server/tests/test_plaid_adapter.py:207:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:257:13: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
                 _make_sync_response(page3_txs, has_more=False, next_cursor...
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
-server/tests/test_plaid_adapter.py:216:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:266:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_duplicate_transactions_deduplicated(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:218:14: error: Call to untyped function
+server/tests/test_plaid_adapter.py:268:14: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
             tx = self._make_tx("tx_dup")
                  ^~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:220:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:270:13: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
                 _make_sync_response([tx], has_more=True, next_cursor="c1")...
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:221:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:271:13: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
                 _make_sync_response([tx], has_more=False),  # same tx_id r...
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:230:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:280:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_account_ids_filter_applied_post_fetch(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:233:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:283:13: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
                 self._make_tx("tx_a", account_id="acc_a"),
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:234:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:284:13: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
                 self._make_tx("tx_b", account_id="acc_b"),
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:236:27: error: Call to untyped function
+server/tests/test_plaid_adapter.py:286:27: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
             responses = iter([_make_sync_response(txs, has_more=False)])
                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:244:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:294:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_date_filter_applied_post_fetch(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:247:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:297:13: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
                 self._make_tx("tx_old", date="2024-01-01"),
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:248:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:298:13: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
                 self._make_tx("tx_mid", date="2024-01-15"),
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:249:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:299:13: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
                 self._make_tx("tx_new", date="2024-02-01"),
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:251:27: error: Call to untyped function
+server/tests/test_plaid_adapter.py:301:27: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
             responses = iter([_make_sync_response(txs, has_more=False)])
                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:259:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:309:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_plaid_api_error_raises_exception(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:261:1: error: Cannot find implementation or
+server/tests/test_plaid_adapter.py:311:1: error: Cannot find implementation or
 library stub for module named "plaid"  [import-not-found]
             import plaid
     ^
-server/tests/test_plaid_adapter.py:263:9: error: Function is missing a type
+server/tests/test_plaid_adapter.py:313:9: error: Function is missing a type
 annotation  [no-untyped-def]
             def raise_api_error(_self, req):
             ^
-server/tests/test_plaid_adapter.py:273:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:323:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_plaid_api_error_mid_pagination_raises(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:277:22: error: Call to untyped function
+server/tests/test_plaid_adapter.py:327:22: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
             page1_txs = [self._make_tx("tx_1")]
                          ^~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:280:9: error: Function is missing a type
+server/tests/test_plaid_adapter.py:330:9: error: Function is missing a type
 annotation  [no-untyped-def]
             def side_effect(_self, req):
             ^
-server/tests/test_plaid_adapter.py:283:24: error: Call to untyped function
+server/tests/test_plaid_adapter.py:333:24: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
                     return _make_sync_response(page1_txs, has_more=True, n...
                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
@@ -1203,10 +1220,10 @@ server/tests/conftest.py:10:1: error: Function is missing a return type
 annotation  [no-untyped-def]
     async def client():
     ^
-Found 77 errors in 6 files (checked 7 source files)
+Found 81 errors in 6 files (checked 7 source files)
 
 ::endgroup::
-::group::[31m❌ Linted [PYTHON] files with [pyright]: Found 431 error(s) and 0 warning(s) - (2.86s)[0m (expand for details)
+::group::[31m❌ Linted [PYTHON] files with [pyright]: Found 449 error(s) and 0 warning(s) - (2.89s)[0m (expand for details)
 - Using [pyright v1.1.402] https://megalinter.io/8.8.0/descriptors/python_pyright
 - MegaLinter key: [PYTHON_PYRIGHT]
 - Rules config: [/github/workspace/config/pyrightconfig.json]
@@ -1360,35 +1377,39 @@ venv .venv subdirectory not found in venv path /github/workspace/config.
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
   /github/workspace/server/plaid_adapter.py:247:13 - error: Type of "tx" is partially unknown
     Type of "tx" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
-  /github/workspace/server/plaid_adapter.py:256:28 - error: Type of "get" is partially unknown
+  /github/workspace/server/plaid_adapter.py:255:9 - error: Type of "transaction_id" is partially unknown
+    Type of "transaction_id" is "Unknown | Any | None" (reportUnknownVariableType)
+  /github/workspace/server/plaid_adapter.py:255:26 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  /github/workspace/server/plaid_adapter.py:257:24 - error: Type of "get" is partially unknown
+  /github/workspace/server/plaid_adapter.py:265:9 - error: Type of "account_id" is partially unknown
+    Type of "account_id" is "Unknown | Any | None" (reportUnknownVariableType)
+  /github/workspace/server/plaid_adapter.py:265:22 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  /github/workspace/server/plaid_adapter.py:258:26 - error: Type of "get" is partially unknown
+  /github/workspace/server/plaid_adapter.py:278:26 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  /github/workspace/server/plaid_adapter.py:258:26 - error: Argument type is partially unknown
+  /github/workspace/server/plaid_adapter.py:278:26 - error: Argument type is partially unknown
     Argument corresponds to parameter "x" in function "__new__"
     Argument type is "Unknown | Any" (reportUnknownArgumentType)
-  /github/workspace/server/plaid_adapter.py:259:18 - error: Type of "get" is partially unknown
+  /github/workspace/server/plaid_adapter.py:279:18 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  /github/workspace/server/plaid_adapter.py:260:18 - error: Type of "get" is partially unknown
+  /github/workspace/server/plaid_adapter.py:280:18 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  /github/workspace/server/plaid_adapter.py:261:27 - error: Type of "get" is partially unknown
+  /github/workspace/server/plaid_adapter.py:281:27 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  /github/workspace/server/plaid_adapter.py:262:22 - error: Type of "get" is partially unknown
+  /github/workspace/server/plaid_adapter.py:282:22 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  /github/workspace/server/plaid_adapter.py:263:21 - error: Type of "get" is partially unknown
+  /github/workspace/server/plaid_adapter.py:283:21 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  /github/workspace/server/plaid_adapter.py:264:29 - error: Type of "get" is partially unknown
+  /github/workspace/server/plaid_adapter.py:284:29 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  /github/workspace/server/plaid_adapter.py:265:31 - error: Type of "get" is partially unknown
+  /github/workspace/server/plaid_adapter.py:285:31 - error: Type of "get" is partially unknown
     Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)] | Any" (reportUnknownMemberType)
-  /github/workspace/server/plaid_adapter.py:283:17 - error: Type of "append" is partially unknown
+  /github/workspace/server/plaid_adapter.py:303:17 - error: Type of "append" is partially unknown
     Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  /github/workspace/server/plaid_adapter.py:288:52 - error: Argument type is partially unknown
+  /github/workspace/server/plaid_adapter.py:308:52 - error: Argument type is partially unknown
     Argument corresponds to parameter "obj" in function "len"
     Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  /github/workspace/server/plaid_adapter.py:289:16 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
+  /github/workspace/server/plaid_adapter.py:309:16 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
 /github/workspace/server/tests/conftest.py
   /github/workspace/server/tests/conftest.py:3:8 - error: Import "pytest" could not be resolved (reportMissingImports)
   /github/workspace/server/tests/conftest.py:4:6 - error: Import "httpx" could not be resolved (reportMissingImports)
@@ -1573,155 +1594,171 @@ venv .venv subdirectory not found in venv path /github/workspace/config.
   /github/workspace/server/tests/test_plaid_adapter.py:106:14 - error: Type of "normalize_transaction" is unknown (reportUnknownMemberType)
   /github/workspace/server/tests/test_plaid_adapter.py:107:16 - error: Type of "merchant_name" is unknown (reportUnknownMemberType)
   /github/workspace/server/tests/test_plaid_adapter.py:108:16 - error: Type of "category" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:110:57 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:110:57 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:110:66 - error: Type of parameter "caplog" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:110:66 - error: Type annotation is missing for parameter "caplog" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:126:14 - error: Type of "at_level" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:127:13 - error: Type of "results" is unknown (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:127:23 - error: Type of "normalize_transactions" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:129:20 - error: Argument type is unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:110:72 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:110:72 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:119:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:120:13 - error: Type of "normalize_transaction" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:122:70 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:122:70 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:132:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:133:13 - error: Type of "normalize_transaction" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:135:68 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:135:68 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:144:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:145:13 - error: Type of "normalize_transaction" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:147:66 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:147:66 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:157:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:158:13 - error: Type of "normalize_transaction" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:160:57 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:160:57 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:160:66 - error: Type of parameter "caplog" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:160:66 - error: Type annotation is missing for parameter "caplog" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:176:14 - error: Type of "at_level" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:177:13 - error: Type of "results" is unknown (reportUnknownVariableType)
+  /github/workspace/server/tests/test_plaid_adapter.py:177:23 - error: Type of "normalize_transactions" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:179:20 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  /github/workspace/server/tests/test_plaid_adapter.py:130:16 - error: Type of "transaction_id" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:132:47 - error: Type of parameter "monkeypatch" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:132:47 - error: Type annotation is missing for parameter "monkeypatch" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:134:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:142:25 - error: Type of parameter "added" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:142:25 - error: Type annotation is missing for parameter "added" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:142:32 - error: Type of parameter "has_more" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:142:32 - error: Type annotation is missing for parameter "has_more" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:142:42 - error: Type annotation is missing for parameter "next_cursor" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:142:69 - error: Type of parameter "accounts" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:180:16 - error: Type of "transaction_id" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:182:47 - error: Type of parameter "monkeypatch" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:182:47 - error: Type annotation is missing for parameter "monkeypatch" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:184:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:192:25 - error: Type of parameter "added" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:192:25 - error: Type annotation is missing for parameter "added" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:192:32 - error: Type of parameter "has_more" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:192:32 - error: Type annotation is missing for parameter "has_more" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:192:42 - error: Type annotation is missing for parameter "next_cursor" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:192:69 - error: Type of parameter "accounts" is partially unknown
     Parameter type is "Unknown | None" (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:142:69 - error: Type annotation is missing for parameter "accounts" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:142:84 - error: Type annotation is missing for parameter "request_id" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:146:13 - error: Return type, "dict[str, Unknown | str | list[Unknown]]", is partially unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:146:21 - error: Instance methods should take a "self" parameter (reportSelfClsParameterName)
-  /github/workspace/server/tests/test_plaid_adapter.py:147:20 - error: Return type, "dict[str, Unknown | str | list[Unknown]]", is partially unknown (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:163:6 - error: Type of "fixture" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:163:6 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
-  /github/workspace/server/tests/test_plaid_adapter.py:164:9 - error: Return type is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:164:23 - error: Type of parameter "monkeypatch" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:164:23 - error: Type annotation is missing for parameter "monkeypatch" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:166:9 - error: Type of "setattr" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:166:69 - error: Type of parameter "config" is unknown (reportUnknownLambdaType)
-  /github/workspace/server/tests/test_plaid_adapter.py:167:9 - error: Type of "setattr" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:167:72 - error: Type of parameter "client" is unknown (reportUnknownLambdaType)
-  /github/workspace/server/tests/test_plaid_adapter.py:168:9 - error: Type of "instance" is unknown (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:173:16 - error: Return type is unknown (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:175:9 - error: Return type, "dict[str, Unknown | str | float | bool]", is partially unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:175:24 - error: Type of parameter "tx_id" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:175:24 - error: Type annotation is missing for parameter "tx_id" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:175:31 - error: Type annotation is missing for parameter "date" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:175:50 - error: Type annotation is missing for parameter "account_id" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:176:16 - error: Return type, "dict[str, Unknown | str | float | bool]", is partially unknown (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:185:57 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:185:57 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:187:9 - error: Type of "txs" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:192:69 - error: Type annotation is missing for parameter "accounts" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:192:84 - error: Type annotation is missing for parameter "request_id" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:196:13 - error: Return type, "dict[str, Unknown | str | list[Unknown]]", is partially unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:196:21 - error: Instance methods should take a "self" parameter (reportSelfClsParameterName)
+  /github/workspace/server/tests/test_plaid_adapter.py:197:20 - error: Return type, "dict[str, Unknown | str | list[Unknown]]", is partially unknown (reportUnknownVariableType)
+  /github/workspace/server/tests/test_plaid_adapter.py:213:6 - error: Type of "fixture" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:213:6 - error: Untyped function decorator obscures type of function; ignoring decorator (reportUntypedFunctionDecorator)
+  /github/workspace/server/tests/test_plaid_adapter.py:214:9 - error: Return type is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:214:23 - error: Type of parameter "monkeypatch" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:214:23 - error: Type annotation is missing for parameter "monkeypatch" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:216:9 - error: Type of "setattr" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:216:69 - error: Type of parameter "config" is unknown (reportUnknownLambdaType)
+  /github/workspace/server/tests/test_plaid_adapter.py:217:9 - error: Type of "setattr" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:217:72 - error: Type of parameter "client" is unknown (reportUnknownLambdaType)
+  /github/workspace/server/tests/test_plaid_adapter.py:218:9 - error: Type of "instance" is unknown (reportUnknownVariableType)
+  /github/workspace/server/tests/test_plaid_adapter.py:223:16 - error: Return type is unknown (reportUnknownVariableType)
+  /github/workspace/server/tests/test_plaid_adapter.py:225:9 - error: Return type, "dict[str, Unknown | str | float | bool]", is partially unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:225:24 - error: Type of parameter "tx_id" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:225:24 - error: Type annotation is missing for parameter "tx_id" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:225:31 - error: Type annotation is missing for parameter "date" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:225:50 - error: Type annotation is missing for parameter "account_id" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:226:16 - error: Return type, "dict[str, Unknown | str | float | bool]", is partially unknown (reportUnknownVariableType)
+  /github/workspace/server/tests/test_plaid_adapter.py:235:57 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:235:57 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:237:9 - error: Type of "txs" is partially unknown
     Type of "txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:187:16 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:237:16 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:187:39 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:237:39 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:189:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
-  /github/workspace/server/tests/test_plaid_adapter.py:189:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
-  /github/workspace/server/tests/test_plaid_adapter.py:191:9 - error: Type of "result" is unknown (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:191:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:193:20 - error: Argument type is unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:239:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
+  /github/workspace/server/tests/test_plaid_adapter.py:239:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
+  /github/workspace/server/tests/test_plaid_adapter.py:241:9 - error: Type of "result" is unknown (reportUnknownVariableType)
+  /github/workspace/server/tests/test_plaid_adapter.py:241:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:243:20 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  /github/workspace/server/tests/test_plaid_adapter.py:198:46 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:198:46 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:200:9 - error: Type of "page1_txs" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:248:46 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:248:46 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:250:9 - error: Type of "page1_txs" is partially unknown
     Type of "page1_txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:200:22 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:250:22 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:200:45 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:250:45 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:201:9 - error: Type of "page2_txs" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:251:9 - error: Type of "page2_txs" is partially unknown
     Type of "page2_txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:201:22 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:251:22 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:201:45 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:251:45 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:202:9 - error: Type of "page3_txs" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:252:9 - error: Type of "page3_txs" is partially unknown
     Type of "page3_txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:202:22 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:252:22 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:209:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
-  /github/workspace/server/tests/test_plaid_adapter.py:209:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
-  /github/workspace/server/tests/test_plaid_adapter.py:211:9 - error: Type of "result" is unknown (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:211:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:213:20 - error: Argument type is unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:259:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
+  /github/workspace/server/tests/test_plaid_adapter.py:259:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
+  /github/workspace/server/tests/test_plaid_adapter.py:261:9 - error: Type of "result" is unknown (reportUnknownVariableType)
+  /github/workspace/server/tests/test_plaid_adapter.py:261:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:263:20 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  /github/workspace/server/tests/test_plaid_adapter.py:216:56 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:216:56 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:218:9 - error: Type of "tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:266:56 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:266:56 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:268:9 - error: Type of "tx" is partially unknown
     Type of "tx" is "dict[str, Unknown | str | float | bool]" (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:218:14 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:268:14 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:223:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
-  /github/workspace/server/tests/test_plaid_adapter.py:223:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
-  /github/workspace/server/tests/test_plaid_adapter.py:225:9 - error: Type of "result" is unknown (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:225:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:227:20 - error: Argument type is unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:273:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
+  /github/workspace/server/tests/test_plaid_adapter.py:273:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
+  /github/workspace/server/tests/test_plaid_adapter.py:275:9 - error: Type of "result" is unknown (reportUnknownVariableType)
+  /github/workspace/server/tests/test_plaid_adapter.py:275:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:277:20 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  /github/workspace/server/tests/test_plaid_adapter.py:230:58 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:230:58 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:232:9 - error: Type of "txs" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:280:58 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:280:58 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:282:9 - error: Type of "txs" is partially unknown
     Type of "txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:233:13 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:283:13 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:234:13 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:284:13 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:237:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
-  /github/workspace/server/tests/test_plaid_adapter.py:237:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
-  /github/workspace/server/tests/test_plaid_adapter.py:239:9 - error: Type of "result" is unknown (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:239:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:241:20 - error: Argument type is unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:287:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
+  /github/workspace/server/tests/test_plaid_adapter.py:287:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
+  /github/workspace/server/tests/test_plaid_adapter.py:289:9 - error: Type of "result" is unknown (reportUnknownVariableType)
+  /github/workspace/server/tests/test_plaid_adapter.py:289:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:291:20 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  /github/workspace/server/tests/test_plaid_adapter.py:244:51 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:244:51 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:246:9 - error: Type of "txs" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:294:51 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:294:51 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:296:9 - error: Type of "txs" is partially unknown
     Type of "txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:247:13 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:297:13 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:248:13 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:298:13 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:249:13 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:299:13 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:252:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
-  /github/workspace/server/tests/test_plaid_adapter.py:252:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
-  /github/workspace/server/tests/test_plaid_adapter.py:254:9 - error: Type of "result" is unknown (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:254:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:256:20 - error: Argument type is unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:302:78 - error: Type of parameter "self" is unknown (reportUnknownLambdaType)
+  /github/workspace/server/tests/test_plaid_adapter.py:302:84 - error: Type of parameter "req" is unknown (reportUnknownLambdaType)
+  /github/workspace/server/tests/test_plaid_adapter.py:304:9 - error: Type of "result" is unknown (reportUnknownVariableType)
+  /github/workspace/server/tests/test_plaid_adapter.py:304:18 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:306:20 - error: Argument type is unknown
     Argument corresponds to parameter "obj" in function "len" (reportUnknownArgumentType)
-  /github/workspace/server/tests/test_plaid_adapter.py:259:53 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:259:53 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:261:16 - error: Import "plaid" could not be resolved (reportMissingImports)
-  /github/workspace/server/tests/test_plaid_adapter.py:263:29 - error: Type of parameter "_self" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:263:29 - error: Type annotation is missing for parameter "_self" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:263:36 - error: Type of parameter "req" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:263:36 - error: Type annotation is missing for parameter "req" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:264:13 - error: Type of "exc" is unknown (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:264:19 - error: Type of "ApiException" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:270:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:271:13 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:273:58 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:273:58 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:275:16 - error: Import "plaid" could not be resolved (reportMissingImports)
-  /github/workspace/server/tests/test_plaid_adapter.py:277:9 - error: Type of "page1_txs" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:309:53 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:309:53 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:311:16 - error: Import "plaid" could not be resolved (reportMissingImports)
+  /github/workspace/server/tests/test_plaid_adapter.py:313:29 - error: Type of parameter "_self" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:313:29 - error: Type annotation is missing for parameter "_self" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:313:36 - error: Type of parameter "req" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:313:36 - error: Type annotation is missing for parameter "req" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:314:13 - error: Type of "exc" is unknown (reportUnknownVariableType)
+  /github/workspace/server/tests/test_plaid_adapter.py:314:19 - error: Type of "ApiException" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:320:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:321:13 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:323:58 - error: Type of parameter "adapter" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:323:58 - error: Type annotation is missing for parameter "adapter" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:325:16 - error: Import "plaid" could not be resolved (reportMissingImports)
+  /github/workspace/server/tests/test_plaid_adapter.py:327:9 - error: Type of "page1_txs" is partially unknown
     Type of "page1_txs" is "list[dict[str, Unknown | str | float | bool]]" (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:277:22 - error: Type of "_make_tx" is partially unknown
+  /github/workspace/server/tests/test_plaid_adapter.py:327:22 - error: Type of "_make_tx" is partially unknown
     Type of "_make_tx" is "(tx_id: Unknown, date: str = "2024-01-10", account_id: str = "acc_1") -> dict[str, Unknown | str | float | bool]" (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:280:25 - error: Type of parameter "_self" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:280:25 - error: Type annotation is missing for parameter "_self" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:280:32 - error: Type of parameter "req" is unknown (reportUnknownParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:280:32 - error: Type annotation is missing for parameter "req" (reportMissingParameterType)
-  /github/workspace/server/tests/test_plaid_adapter.py:284:13 - error: Type of "exc" is unknown (reportUnknownVariableType)
-  /github/workspace/server/tests/test_plaid_adapter.py:284:19 - error: Type of "ApiException" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:290:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
-  /github/workspace/server/tests/test_plaid_adapter.py:291:13 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
-431 errors, 0 warnings, 0 informations 
+  /github/workspace/server/tests/test_plaid_adapter.py:330:25 - error: Type of parameter "_self" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:330:25 - error: Type annotation is missing for parameter "_self" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:330:32 - error: Type of parameter "req" is unknown (reportUnknownParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:330:32 - error: Type annotation is missing for parameter "req" (reportMissingParameterType)
+  /github/workspace/server/tests/test_plaid_adapter.py:334:13 - error: Type of "exc" is unknown (reportUnknownVariableType)
+  /github/workspace/server/tests/test_plaid_adapter.py:334:19 - error: Type of "ApiException" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:340:14 - error: Type of "raises" is unknown (reportUnknownMemberType)
+  /github/workspace/server/tests/test_plaid_adapter.py:341:13 - error: Type of "get_transactions" is unknown (reportUnknownMemberType)
+449 errors, 0 warnings, 0 informations 
 
 ::endgroup::
 ::group::[32m✅ Linted [PYTHON] files with [ruff] successfully - (0.01s)[0m (expand for details)
@@ -1804,7 +1841,7 @@ Would reformat: [1mserver/tests/test_plaid_adapter.py[0m
    |         ^~~~
 
 ::endgroup::
-::group::[32m✅ Linted [ANSIBLE] files with [ansible-lint] successfully - (6.57s)[0m (expand for details)
+::group::[32m✅ Linted [ANSIBLE] files with [ansible-lint] successfully - (6.37s)[0m (expand for details)
 - Using [ansible-lint v25.5.0] https://megalinter.io/8.8.0/descriptors/ansible_ansible_lint
 - MegaLinter key: [ANSIBLE_ANSIBLE_LINT]
 - Rules config: [/github/workspace/config/.ansible-lint]
@@ -1985,8 +2022,8 @@ Clone found (typescript):
    /github/workspace/ui/src/providers/FakeDataProvider.test.ts [12:5 - 18:74]
 
 Clone found (python):
- - /github/workspace/server/tests/test_plaid_adapter.py [249:13 - 254:11] (5 lines, 76 tokens)
-   /github/workspace/server/tests/test_plaid_adapter.py [234:8 - 239:12]
+ - /github/workspace/server/tests/test_plaid_adapter.py [299:13 - 304:11] (5 lines, 76 tokens)
+   /github/workspace/server/tests/test_plaid_adapter.py [284:8 - 289:12]
 
 Clone found (python):
  - /github/workspace/server/main.py [353:3 - 365:41] (12 lines, 82 tokens)
@@ -2005,7 +2042,7 @@ Clone found (python):
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ css        │ 1              │ 69          │ 378          │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python     │ 6              │ 1094        │ 7146         │ 2            │ 17 (1.55%)       │ 158 (2.21%)       │
+│ python     │ 6              │ 1164        │ 7594         │ 2            │ 17 (1.46%)       │ 158 (2.08%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ clojure    │ 1              │ 33          │ 208          │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -2021,12 +2058,12 @@ Clone found (python):
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ powershell │ 3              │ 103         │ 451          │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 192            │ 10443       │ 76386        │ 9            │ 102 (0.98%)      │ 966 (1.26%)       │
+│ Total:     │ 192            │ 10513       │ 76834        │ 9            │ 102 (0.97%)      │ 966 (1.26%)       │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
 Found 9 clones.
 HTML report saved to reports/megalinter/copy-paste/html/
-ERROR: jscpd found too many duplicates (0.98%) over threshold (0%)
-Error: ERROR: jscpd found too many duplicates (0.98%) over threshold (0%)
+ERROR: jscpd found too many duplicates (0.97%) over threshold (0%)
+Error: ERROR: jscpd found too many duplicates (0.97%) over threshold (0%)
     at ThresholdReporter.report (/node-deps/node_modules/@jscpd/finder/dist/index.js:612:13)
     at /node-deps/node_modules/@jscpd/finder/dist/index.js:110:18
     at Array.forEach (<anonymous>)
@@ -2035,7 +2072,7 @@ Error: ERROR: jscpd found too many duplicates (0.98%) over threshold (0%)
 
 ::endgroup::
 Unable to get number of errors with regex_number and ([0-9]+) errors
-::group::[31m❌ Linted [CSS] files with [stylelint]: Found 1 error(s) and 0 warning(s) - (0.52s)[0m (expand for details)
+::group::[31m❌ Linted [CSS] files with [stylelint]: Found 1 error(s) and 0 warning(s) - (0.5s)[0m (expand for details)
 - Using [stylelint v16.20.0] https://megalinter.io/8.8.0/descriptors/css_stylelint
 - MegaLinter key: [CSS_STYLELINT]
 - Rules config: [/github/workspace/config/.stylelintrc.json]
@@ -2065,7 +2102,7 @@ ConfigurationError: Could not find "stylelint-config-prettier". Do you need to i
 [31;1mjson: cannot unmarshal bool into Go struct field Config.Disable of type config.DisabledChecks[33;0m
 
 ::endgroup::
-::group::[31m❌ Linted [HTML] files with [djlint]: Found 5 error(s) and 0 warning(s) - (0.63s)[0m (expand for details)
+::group::[31m❌ Linted [HTML] files with [djlint]: Found 5 error(s) and 0 warning(s) - (0.62s)[0m (expand for details)
 - Using [djlint v1.36.4] https://megalinter.io/8.8.0/descriptors/html_djlint
 - MegaLinter key: [HTML_DJLINT]
 - Rules config: identified by [djlint]
@@ -2099,7 +2136,7 @@ Linted 2 files, found 5 errors.
 - Command: [htmlhint --config /github/workspace/config/.htmlhintrc docs/index.html ui/index.html]
 ::endgroup::
 Unable to get number of errors with regex_sum and ✖ ([0-9]+) problem
-::group::[31m❌ Linted [JAVASCRIPT] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.36s)[0m (expand for details)
+::group::[31m❌ Linted [JAVASCRIPT] files with [eslint]: Found 1 error(s) and 0 warning(s) - (0.35s)[0m (expand for details)
 - Using [eslint v8.57.1] https://megalinter.io/8.8.0/descriptors/javascript_eslint
 - MegaLinter key: [JAVASCRIPT_ES]
 - Rules config: [/github/workspace/config/.eslint.config.mjs]
@@ -2158,7 +2195,7 @@ Parse error on line 80, column 5:
 Trailing comma in object
 
 ::endgroup::
-::group::[31m❌ Linted [JSON] files with [v8r]: Found 1 error(s) and 0 warning(s) - (11.34s)[0m (expand for details)
+::group::[31m❌ Linted [JSON] files with [v8r]: Found 1 error(s) and 0 warning(s) - (11.17s)[0m (expand for details)
 - Using [v8r v5.0.0] https://megalinter.io/8.8.0/descriptors/json_v8r
 - MegaLinter key: [JSON_V8R]
 - Rules config: identified by [v8r]
@@ -2342,7 +2379,7 @@ cli:
 
 
 ::endgroup::
-::group::[31m❌ Linted [MARKDOWN] files with [markdownlint]: Found 52 error(s) and 0 warning(s) - (0.52s)[0m (expand for details)
+::group::[31m❌ Linted [MARKDOWN] files with [markdownlint]: Found 52 error(s) and 0 warning(s) - (0.53s)[0m (expand for details)
 - Using [markdownlint v0.45.0] https://megalinter.io/8.8.0/descriptors/markdown_markdownlint
 - MegaLinter key: [MARKDOWN_MARKDOWNLINT]
 - Rules config: [/github/workspace/config/.markdownlint.json]
@@ -2403,14 +2440,14 @@ ui/README.md:51:121 MD013/line-length Line length [Expected: 120; Actual: 191]
 ui/README.md:85:121 MD013/line-length Line length [Expected: 120; Actual: 285]
 
 ::endgroup::
-::group::[32m✅ Linted [MARKDOWN] files with [markdown-link-check] successfully - (3.56s)[0m (expand for details)
+::group::[32m✅ Linted [MARKDOWN] files with [markdown-link-check] successfully - (7.91s)[0m (expand for details)
 - Using [markdown-link-check v3.12.2] https://megalinter.io/8.8.0/descriptors/markdown_markdown_link_check
 - MegaLinter key: [MARKDOWN_MARKDOWN_LINK_CHECK]
 - Rules config: [/github/workspace/config/.markdown-link-check.json]
 - Number of files analyzed: [11]
 - Command: [markdown-link-check --quiet -c /github/workspace/config/.markdown-link-check.json README.md config/styles/proselint/README.md config/styles/write-good/README.md core/README.md docs/FINANCIAL_OPERATING_SYSTEM.md docs/SCHEMA_CONTRACT.md docs/plaid-setu...(truncated)]
 ::endgroup::
-::group::[31m❌ Linted [MARKDOWN] files with [markdown-table-formatter]: Found 1 error(s) and 0 warning(s) - (0.18s)[0m (expand for details)
+::group::[31m❌ Linted [MARKDOWN] files with [markdown-table-formatter]: Found 1 error(s) and 0 warning(s) - (0.19s)[0m (expand for details)
 - Using [markdown-table-formatter v1.6.1] https://megalinter.io/8.8.0/descriptors/markdown_markdown_table_formatter
 - MegaLinter key: [MARKDOWN_MARKDOWN_TABLE_FORMATTER]
 - Rules config: identified by [markdown-table-formatter]
@@ -2427,7 +2464,7 @@ ui/README.md:85:121 MD013/line-length Line length [Expected: 120; Actual: 285]
 Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning|Error|ParseError)\s
 Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning|Error|ParseError)\s
 Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning|Error|ParseError)\s
-::group::[31m❌ Linted [POWERSHELL] files with [powershell]: Found 3 error(s) and 0 warning(s) - (1.87s)[0m (expand for details)
+::group::[31m❌ Linted [POWERSHELL] files with [powershell]: Found 3 error(s) and 0 warning(s) - (1.85s)[0m (expand for details)
 - Using [powershell v7.5.1] https://megalinter.io/8.8.0/descriptors/powershell_powershell
 - MegaLinter key: [POWERSHELL_POWERSHELL]
 - Rules config: [/github/workspace/config/.powershell-psscriptanalyzer.psd1]
@@ -2438,7 +2475,7 @@ Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning
   [pwsh -NoProfile -NoLogo -Command $PSStyle.OutputRendering = 'Ansi'; Invoke-ScriptAnalyzer -EnableExit -Settings /github/workspace/config/.powershell-psscriptanalyzer.psd1 -Path 'config/.powershell-psscriptanalyzer.psd1' | Format-Table -AutoSize -Wrap...(truncated)]
 [31m[powershell] config/.arm-ttk.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-ScriptAnalyzer: [31;1mpowershellversion is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-ScriptAnalyzer: [31;1mValue System.Collections.Generic.Dictionary`2[System.String,System.Object] for key severity has the wrong data type.[0m
 [0m
 [31m[powershell] config/.powershell-formatter.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
@@ -2446,7 +2483,7 @@ Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning
 [0m
 [31m[powershell] config/.powershell-psscriptanalyzer.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-ScriptAnalyzer: [31;1mpowershellversion is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-ScriptAnalyzer: [31;1mrootmodule is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 ::endgroup::
 ::group::[31m❌ Linted [POWERSHELL] files with [powershell_formatter]: Found 3 error(s) and 0 warning(s) - (1.63s)[0m (expand for details)
@@ -2460,80 +2497,80 @@ Unable to get number of errors with regex_count and (?m)^\s*(Information|Warning
   [pwsh -NoProfile -NoLogo -Command Invoke-Formatter -Settings /github/workspace/config/.powershell-formatter.psd1 -ScriptDefinition (Get-Content -Path 'config/.powershell-psscriptanalyzer.psd1' -Raw)]
 [31m[powershell_formatter] config/.arm-ttk.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-Formatter: [31;1mopenbraceonsameline is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-Formatter: [31;1museconstantstrings is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 [31m[powershell_formatter] config/.powershell-formatter.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-Formatter: [31;1mindentationsize is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-Formatter: [31;1mconverttoconsistentcommentstyle is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 [31m[powershell_formatter] config/.powershell-psscriptanalyzer.psd1 - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[31;1mInvoke-Formatter: [31;1mpipelineindentation is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
+[31;1mInvoke-Formatter: [31;1mopenbraceonsameline is not a valid key in the settings hashtable. Valid keys are CustomRulePath, ExcludeRules, IncludeRules, IncludeDefaultRules, RecurseCustomRulePath, Rules and Severity.[0m
 [0m
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [checkov]: Found 1 error(s) and 0 warning(s) - (21.57s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [checkov]: Found 1 error(s) and 0 warning(s) - (21.81s)[0m (expand for details)
 - Using [checkov v3.2.413] https://megalinter.io/8.8.0/descriptors/repository_checkov
 - MegaLinter key: [REPOSITORY_CHECKOV]
 - Rules config: [/github/workspace/config/.checkov.yml]
 - Command: [checkov --directory . --config-file /github/workspace/config/.checkov.yml]
 --Error detail:
-2026-03-02 20:29:41,137 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
-2026-03-02 20:29:41,174 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.16.3
-2026-03-02 20:29:41,175 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
-2026-03-02 20:29:41,176 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
-2026-03-02 20:29:41,176 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
-2026-03-02 20:29:41,399 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
-2026-03-02 20:29:41,399 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
-2026-03-02 20:29:41,399 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
-2026-03-02 20:29:41,399 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
-2026-03-02 20:29:41,405 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
-2026-03-02 20:29:41,406 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
-2026-03-02 20:29:41,410 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-03-02 20:29:41,431 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-03-02 20:29:41,431 [MainThread  ] [INFO ]  Successfully created Serverless graph
-2026-03-02 20:29:41,473 [MainThread  ] [INFO ]  Creating ARM graph
-2026-03-02 20:29:41,474 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-03-02 20:29:41,485 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-03-02 20:29:41,485 [MainThread  ] [INFO ]  Creating vertices
-2026-03-02 20:29:41,486 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 2 vertices
-2026-03-02 20:29:41,486 [MainThread  ] [INFO ]  Creating edges
-2026-03-02 20:29:41,486 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-03-02 20:29:41,486 [MainThread  ] [INFO ]  Rendering variables, graph has 2 vertices and 0 edges
-2026-03-02 20:29:41,487 [MainThread  ] [INFO ]  Building cross variable edges
-2026-03-02 20:29:41,487 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-03-02 20:29:41,488 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-03-02 20:29:41,488 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-03-02 20:29:41,493 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-03-02 20:29:41,493 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-03-02 20:29:41,509 [MainThread  ] [INFO ]  Custom detector found at /venvs/checkov/lib/python3.13/site-packages/checkov/secrets/plugins/custom_regex_detector.py. Loading...
-2026-03-02 20:29:41,563 [MainThread  ] [INFO ]  Secrets scanning will scan 76 files
-2026-03-02 20:29:41,586 [MainThread  ] [INFO ]  Creating vertices
-2026-03-02 20:29:41,586 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-03-02 20:29:41,586 [MainThread  ] [INFO ]  Creating edges
-2026-03-02 20:29:41,587 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-03-02 20:29:43,835 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-03-02 20:29:43,835 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 vertices
-2026-03-02 20:29:43,836 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-03-02 20:29:43,836 [MainThread  ] [INFO ]  Rendering variables, graph has 0 vertices and 0 edges
-2026-03-02 20:29:43,854 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-03-02 20:29:44,714 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 628 has a length of 49998, which is higher than the max 10000
-2026-03-02 20:29:45,799 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-03-02 20:29:45,801 [MainThread  ] [INFO ]  Successfully created Ansible graph
-2026-03-02 20:29:46,100 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-03-02 20:29:46,113 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-03-02 20:29:46,658 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 3414 has a length of 15689, which is higher than the max 10000
-2026-03-02 20:29:49,430 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-03-02 20:29:49,431 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-03-02 20:29:49,591 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 17301 has a length of 33220, which is higher than the max 10000
-2026-03-02 20:29:49,757 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 18112 has a length of 15791, which is higher than the max 10000
-2026-03-02 20:29:49,904 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 18643 has a length of 65008, which is higher than the max 10000
-2026-03-02 20:29:50,558 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 21613 has a length of 27325, which is higher than the max 10000
-2026-03-02 20:29:51,835 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 28695 has a length of 15587, which is higher than the max 10000
-2026-03-02 20:29:51,966 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 29321 has a length of 16258, which is higher than the max 10000
-2026-03-02 20:29:53,205 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 36025 has a length of 13500, which is higher than the max 10000
-2026-03-02 20:29:53,383 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 36987 has a length of 17922, which is higher than the max 10000
-2026-03-02 20:29:53,400 [MainThread  ] [INFO ]  Secret scanning for ./docs/reports/megalinter/mega-linter-report.json took 0:00:10.435883 seconds
-2026-03-02 20:29:54,076 [MainThread  ] [INFO ]  Cleanup the whole temp directory: /tmp/tmpjr0y9hnc
+2026-03-02 21:08:19,039 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
+2026-03-02 21:08:19,204 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.16.3
+2026-03-02 21:08:19,205 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
+2026-03-02 21:08:19,206 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
+2026-03-02 21:08:19,206 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
+2026-03-02 21:08:19,868 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
+2026-03-02 21:08:19,868 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
+2026-03-02 21:08:19,868 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
+2026-03-02 21:08:19,868 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
+2026-03-02 21:08:19,875 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
+2026-03-02 21:08:19,875 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
+2026-03-02 21:08:19,880 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-03-02 21:08:19,897 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-03-02 21:08:19,897 [MainThread  ] [INFO ]  Successfully created Serverless graph
+2026-03-02 21:08:19,941 [MainThread  ] [INFO ]  Creating ARM graph
+2026-03-02 21:08:19,941 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-03-02 21:08:19,946 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-03-02 21:08:19,947 [MainThread  ] [INFO ]  Creating vertices
+2026-03-02 21:08:19,951 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 2 vertices
+2026-03-02 21:08:19,951 [MainThread  ] [INFO ]  Creating edges
+2026-03-02 21:08:19,951 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-03-02 21:08:19,951 [MainThread  ] [INFO ]  Rendering variables, graph has 2 vertices and 0 edges
+2026-03-02 21:08:19,952 [MainThread  ] [INFO ]  Building cross variable edges
+2026-03-02 21:08:19,953 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-03-02 21:08:19,953 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-03-02 21:08:19,953 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-03-02 21:08:19,957 [MainThread  ] [INFO ]  Custom detector found at /venvs/checkov/lib/python3.13/site-packages/checkov/secrets/plugins/custom_regex_detector.py. Loading...
+2026-03-02 21:08:19,961 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-03-02 21:08:19,962 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-03-02 21:08:20,023 [MainThread  ] [INFO ]  Secrets scanning will scan 76 files
+2026-03-02 21:08:20,051 [MainThread  ] [INFO ]  Creating vertices
+2026-03-02 21:08:20,051 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-03-02 21:08:20,051 [MainThread  ] [INFO ]  Creating edges
+2026-03-02 21:08:20,051 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-03-02 21:08:23,087 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-03-02 21:08:23,087 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 vertices
+2026-03-02 21:08:23,087 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-03-02 21:08:23,087 [MainThread  ] [INFO ]  Rendering variables, graph has 0 vertices and 0 edges
+2026-03-02 21:08:23,101 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-03-02 21:08:23,520 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 628 has a length of 49998, which is higher than the max 10000
+2026-03-02 21:08:23,974 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-03-02 21:08:23,975 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-03-02 21:08:24,203 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-03-02 21:08:24,218 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-03-02 21:08:24,928 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 3414 has a length of 15689, which is higher than the max 10000
+2026-03-02 21:08:27,482 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-03-02 21:08:27,482 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-03-02 21:08:27,940 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 17301 has a length of 33220, which is higher than the max 10000
+2026-03-02 21:08:28,104 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 18112 has a length of 15791, which is higher than the max 10000
+2026-03-02 21:08:28,247 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 18643 has a length of 65008, which is higher than the max 10000
+2026-03-02 21:08:28,889 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 21613 has a length of 27325, which is higher than the max 10000
+2026-03-02 21:08:30,143 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 28695 has a length of 15559, which is higher than the max 10000
+2026-03-02 21:08:30,272 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 29321 has a length of 16258, which is higher than the max 10000
+2026-03-02 21:08:31,485 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 36025 has a length of 13500, which is higher than the max 10000
+2026-03-02 21:08:31,661 [MainThread  ] [INFO ]  File ./docs/reports/megalinter/mega-linter-report.json Line 36987 has a length of 17922, which is higher than the max 10000
+2026-03-02 21:08:31,678 [MainThread  ] [INFO ]  Secret scanning for ./docs/reports/megalinter/mega-linter-report.json took 0:00:10.039432 seconds
+2026-03-02 21:08:32,337 [MainThread  ] [INFO ]  Cleanup the whole temp directory: /tmp/tmp_ngxxahk
 terraform_plan scan results:
 
 Passed checks: 0, Failed checks: 0, Skipped checks: 0, Parsing errors: 2
@@ -2555,7 +2592,7 @@ Passed checks: 136, Failed checks: 0, Skipped checks: 0
 
 
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [dustilock] successfully - (2.02s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [dustilock] successfully - (1.6s)[0m (expand for details)
 - Using [dustilock v1.2.0] https://megalinter.io/8.8.0/descriptors/repository_dustilock
 - MegaLinter key: [REPOSITORY_DUSTILOCK]
 - Rules config: identified by [dustilock]
@@ -2581,10 +2618,10 @@ Unable to get number of errors with regex_sum and leaks found: ([0-9]+)
     ○ ░
     ░    gitleaks
 
-[90m8:29PM[0m [31mFTL[0m [1mFailed to load config[0m [36merror=[0m[31m[1m"[[allowlists]] must contain at least one check for: commits, paths, regexes, or stopwords"[0m[0m
+[90m9:08PM[0m [31mFTL[0m [1mFailed to load config[0m [36merror=[0m[31m[1m"[[allowlists]] must contain at least one check for: commits, paths, regexes, or stopwords"[0m[0m
 
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [grype]: Found 13 error(s) and 0 warning(s) - (27.96s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [grype]: Found 13 error(s) and 0 warning(s) - (28.37s)[0m (expand for details)
 - Using [grype v0.94.0] https://megalinter.io/8.8.0/descriptors/repository_grype
 - MegaLinter key: [REPOSITORY_GRYPE]
 - Rules config: [/github/workspace/config/.grype.yaml]
@@ -2605,10 +2642,10 @@ bn.js      4.12.2     4.12.3    npm   GHSA-378v-28hj-76wf  Medium     4.98  < 0.
 bn.js      5.2.2      5.2.3     npm   GHSA-378v-28hj-76wf  Medium     4.98  < 0.1  
 tar        7.5.7      7.5.8     npm   GHSA-83g3-92jg-28cx  High       1.77  < 0.1  
 elliptic   6.6.1                npm   GHSA-848j-6mx2-7j84  Low        1.28  < 0.1
-[0027] ERROR [31mdiscovered vulnerabilities at or above the severity threshold[0m
+[0028] ERROR [31mdiscovered vulnerabilities at or above the severity threshold[0m
 
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [kics]: Found 2 error(s) and 0 warning(s) - (19.77s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [kics]: Found 2 error(s) and 0 warning(s) - (20.61s)[0m (expand for details)
 - Using [kics v2.1.10] https://megalinter.io/8.8.0/descriptors/repository_kics
 - MegaLinter key: [REPOSITORY_KICS]
 - Rules config: [/github/workspace/config/.kics.config.json]
@@ -2648,18 +2685,18 @@ Scanning with Keeping Infrastructure as Code Secure v2.1.10
 [1mCWE:[0m 829
 [1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/cicd-queries/555ab8f9-2001-455e-a077-f2d0f41e2fb9
 
-	[38;2;237;213;126m[1]:[0m .github/workflows/toc.yml:[38;2;34;187;51m18[0m
-
-		017:       - name: Generate TOC
-[38;2;240;173;78m		018:         uses: technote-space/toc-generator@v4
-[0m		019:         with:
-
-
-	[38;2;237;213;126m[2]:[0m .github/workflows/megalinter.yml:[38;2;34;187;51m39[0m
+	[38;2;237;213;126m[1]:[0m .github/workflows/megalinter.yml:[38;2;34;187;51m39[0m
 
 		038:         id: ml
 [38;2;240;173;78m		039:         uses: oxsecurity/megalinter@v8.8.0
 [0m		040:         continue-on-error: true
+
+
+	[38;2;237;213;126m[2]:[0m .github/workflows/toc.yml:[38;2;34;187;51m18[0m
+
+		017:       - name: Generate TOC
+[38;2;240;173;78m		018:         uses: technote-space/toc-generator@v4
+[0m		019:         with:
 
 
 
@@ -2674,16 +2711,16 @@ TOTAL: 2
 [38;2;255;153;19mA new version 'v2.1.19' of KICS is available, please consider updating[0m
 
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [ls-lint]: Found 1 error(s) and 0 warning(s) - (0.07s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [ls-lint]: Found 1 error(s) and 0 warning(s) - (0.06s)[0m (expand for details)
 - Using [ls-lint v2.3.1] https://megalinter.io/8.8.0/descriptors/repository_ls_lint
 - MegaLinter key: [REPOSITORY_LS_LINT]
 - Rules config: [/github/workspace/config/.ls-lint.yml]
 - Command: [ls-lint --config /github/workspace/config/.ls-lint.yml]
 --Error detail:
-2026/03/02 20:30:47 rule ignore not exists
+2026/03/02 21:09:26 rule ignore not exists
 
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [secretlint]: Found 1 error(s) and 0 warning(s) - (10.56s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [secretlint]: Found 1 error(s) and 0 warning(s) - (7.9s)[0m (expand for details)
 - Using [secretlint v10.1.0] https://megalinter.io/8.8.0/descriptors/repository_secretlint
 - MegaLinter key: [REPOSITORY_SECRETLINT]
 - Rules config: [/github/workspace/config/.secretlintrc.json]
@@ -2692,7 +2729,7 @@ TOTAL: 2
 [Pre][REPOSITORY_SECRETLINT] run: [cd /node-deps && npm install --no-audit --no-fund --silent @secretlint/secretlint-rule-preset-recommend @secretlint/secretlint-rule-openai @secretlint/secretlint-rule-npm @secretlint/secretlint-rule-pattern @secretlint/secretlint-rule-secp256k1-privatekey @secretlint/secretlint-rule-no-dotenv @secretlint/secretlint-rule-no-homedir @secretlint/secretlint-rule-github @secretlint/secretlint-rule-gcp @secretlint/secretlint-rule-database-connection-string @secretlint/secretlint-rule-privatekey @secretlint/secretlint-rule-aws @secretlint/secretlint-rule-basicauth
 ] in cwd [/github/workspace]
 [Pre][REPOSITORY_SECRETLINT] error:
-(node:1755) ExperimentalWarning: CommonJS module /usr/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /usr/lib/node_modules/npm/node_modules/supports-color/index.js using require().
+(node:1753) ExperimentalWarning: CommonJS module /usr/lib/node_modules/npm/node_modules/debug/src/node.js is loading ES Module /usr/lib/node_modules/npm/node_modules/supports-color/index.js using require().
 Support for loading ES Module in require() is an experimental feature and might change at any time
 (Use `node --trace-warnings ...` to show where the warning was created)
 
@@ -2747,40 +2784,40 @@ Following config is invalid because the preset(@secretlint/secretlint-rule-prese
 'catalogers[0]' expected type 'string', got unconvertible type 'map[string]interface {}', value: 'map[enabled:[apkdb dpkgdb rpmdb python-package node-package java go-module rust-crate]]'[0m
 
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [trivy] successfully - (6.12s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [trivy] successfully - (9.34s)[0m (expand for details)
 - Using [trivy v0.63.0] https://megalinter.io/8.8.0/descriptors/repository_trivy
 - MegaLinter key: [REPOSITORY_TRIVY]
 - Rules config: [/github/workspace/config/trivy.yaml]
 - Command: [trivy fs --scanners vuln,misconfig --exit-code 1 --config /github/workspace/config/trivy.yaml .]
 ::endgroup::
-::group::[32m✅ Linted [REPOSITORY] files with [trivy-sbom] successfully - (0.52s)[0m (expand for details)
+::group::[32m✅ Linted [REPOSITORY] files with [trivy-sbom] successfully - (0.57s)[0m (expand for details)
 - Using [trivy-sbom v0.63.0] https://megalinter.io/8.8.0/descriptors/repository_trivy_sbom
 - MegaLinter key: [REPOSITORY_TRIVY_SBOM]
 - Rules config: [/github/workspace/config/trivy-sbom.yaml]
 - Command: [trivy fs --format cyclonedx --config /github/workspace/config/trivy-sbom.yaml .]
 ::endgroup::
-::group::[31m❌ Linted [REPOSITORY] files with [trufflehog]: Found 1 error(s) and 0 warning(s) - (2.19s)[0m (expand for details)
+::group::[31m❌ Linted [REPOSITORY] files with [trufflehog]: Found 1 error(s) and 0 warning(s) - (2.27s)[0m (expand for details)
 - Using [trufflehog v3.89.1] https://megalinter.io/8.8.0/descriptors/repository_trufflehog
 - MegaLinter key: [REPOSITORY_TRUFFLEHOG]
 - Rules config: [/github/workspace/config/.trufflehog.yml]
 - Command: [trufflehog filesystem . --fail --only-verified --no-update --exclude-paths=config/.trufflehogignore --config /github/workspace/config/.trufflehog.yml]
 --Error detail:
-2026-03-02T20:31:07Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"branch\""}
+2026-03-02T21:09:46Z	error	trufflehog	error parsing the provided configuration file	{"error": "proto: (line 1:2): unknown field \"branch\""}
 
 ::endgroup::
-::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-apex] successfully - (22.13s)[0m (expand for details)
+::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-apex] successfully - (21.0s)[0m (expand for details)
 - Using [sfdx-scanner-apex v4.12.0] https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_apex
 - MegaLinter key: [SALESFORCE_SFDX_SCANNER_APEX]
 - Rules config: [/github/workspace/config/apex-pmd-ruleset.xml]
 - Command: [sf scanner:run --engine pmd --target "./**/*" --severity-threshold 2 --outfile reports/megalinter/sfdx-scanner-report-apex.csv --format csv --pmdconfig /github/workspace/config/apex-pmd-ruleset.xml]
 ::endgroup::
-::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-aura] successfully - (8.36s)[0m (expand for details)
+::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-aura] successfully - (8.39s)[0m (expand for details)
 - Using [sfdx-scanner-aura v4.12.0] https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_aura
 - MegaLinter key: [SALESFORCE_SFDX_SCANNER_AURA]
 - Rules config: identified by [sfdx-scanner-aura]
 - Command: [sf scanner:run --engine eslint --target **/aura/**/*.js --severity-threshold 2 --outfile reports/megalinter/sfdx-scanner-report-aura.csv --format csv]
 ::endgroup::
-::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-lwc] successfully - (8.23s)[0m (expand for details)
+::group::[32m✅ Linted [SALESFORCE] files with [sfdx-scanner-lwc] successfully - (8.4s)[0m (expand for details)
 - Using [sfdx-scanner-lwc v4.12.0] https://megalinter.io/8.8.0/descriptors/salesforce_sfdx_scanner_lwc
 - MegaLinter key: [SALESFORCE_SFDX_SCANNER_LWC]
 - Rules config: identified by [sfdx-scanner-lwc]
@@ -2800,7 +2837,7 @@ flow 1.0.2
 signups 2.6.28
 @salesforce/sfdx-plugin-lwc-test 1.2.1
 
-::group::[31m❌ Linted [SALESFORCE] files with [lightning-flow-scanner]: Found 1 error(s) and 0 warning(s) - (0.83s)[0m (expand for details)
+::group::[31m❌ Linted [SALESFORCE] files with [lightning-flow-scanner]: Found 1 error(s) and 0 warning(s) - (0.82s)[0m (expand for details)
 - Using [lightning-flow-scanner vERROR] https://megalinter.io/8.8.0/descriptors/salesforce_lightning_flow_scanner
 - MegaLinter key: [SALESFORCE_LIGHTNING_FLOW_SCANNER]
 - Rules config: [/github/workspace/config/.flow-scanner.json]
@@ -2811,14 +2848,14 @@ signups 2.6.28
  ›   Error: Run sf help flow for a list of available commands.
 
 ::endgroup::
-::group::[32m✅ Linted [SPELL] files with [cspell] successfully - (1.04s)[0m (expand for details)
+::group::[32m✅ Linted [SPELL] files with [cspell] successfully - (0.94s)[0m (expand for details)
 - Using [cspell v9.1.1] https://megalinter.io/8.8.0/descriptors/spell_cspell
 - MegaLinter key: [SPELL_CSPELL]
 - Rules config: [/github/workspace/config/.cspell.config.mjs]
 - Number of files analyzed: [297]
 - Command: [cspell --show-context --show-suggestions --no-must-find-files --no-progress --quiet --format json --cache-location .cache/.cspellcache -c /github/workspace/config/.cspell.config.mjs .ansible/.lock .codespellrc .devcontainer/devcontainer.json .devcont...(truncated)]
 ::endgroup::
-::group::[31m❌ Linted [SPELL] files with [proselint]: Found 11 error(s) and 0 warning(s) - (8.95s)[0m (expand for details)
+::group::[31m❌ Linted [SPELL] files with [proselint]: Found 11 error(s) and 0 warning(s) - (10.04s)[0m (expand for details)
 - Using [proselint v0.14.0] https://megalinter.io/8.8.0/descriptors/spell_proselint
 - MegaLinter key: [SPELL_PROSELINT]
 - Rules config: [/github/workspace/config/.proselintrc]
@@ -2838,7 +2875,7 @@ ui/README.md:63:24: typography.symbols.ellipsis '...' is an approximation, use t
 ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use the ellipsis symbol '…'.
 
 ::endgroup::
-::group::[33m⚠️ Linted [SPELL] files with [vale]: Found 0 non blocking error(s) and 47 non blocking warning(s) - (0.83s)[0m (expand for details)
+::group::[33m⚠️ Linted [SPELL] files with [vale]: Found 0 non blocking error(s) and 47 non blocking warning(s) - (0.84s)[0m (expand for details)
 - Using [vale v3.11.2] https://megalinter.io/8.8.0/descriptors/spell_vale
 - MegaLinter key: [SPELL_VALE]
 - Rules config: [/github/workspace/config/.vale.ini]
@@ -2849,10 +2886,10 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
  [4mREADME.md[0m
  17:66   [33mwarning[0m     'all of' is too wordy.          write-good.TooWordy 
  32:8    [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
- 34:79   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  34:79   [33mwarning[0m     'is required' may be passive    write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 34:79   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  62:9    [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  70:6    [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  73:15   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
@@ -2864,52 +2901,52 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
  115:84  [33mwarning[0m     'be used' may be passive        write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 118:18  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  118:18  [33mwarning[0m     'are versioned' may be passive  write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 118:18  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  120:40  [33mwarning[0m     'various' is a weasel word!     write-good.Weasel   
- 125:74  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  125:74  [33mwarning[0m     'are defined' may be passive    write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 175:99  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
+ 125:74  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  175:99  [33mwarning[0m     'is installed' may be passive   write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 175:99  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  185:67  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  198:61  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  198:61  [33mwarning[0m     'are forwarded' may be passive  write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 204:23  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  204:23  [33mwarning[0m     'is configured' may be passive  write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 204:23  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  206:5   [34msuggestion[0m  Try to avoid using 'What's'.    write-good.E-Prime  
  253:14  [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime  
  275:22  [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime  
  286:22  [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime  
  319:15  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
- 321:10  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  321:10  [33mwarning[0m     'are included' may be passive   write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 321:10  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
+ 322:18  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  322:18  [33mwarning[0m     'is updated' may be passive     write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 322:18  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
 
 
  [4mcore/README.md[0m
- 24:4   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
  24:4   [33mwarning[0m     'be defined' may be passive     write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
- 24:33  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
+ 24:4   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
  24:33  [33mwarning[0m     'is developed' may be passive   write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
+ 24:33  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
 
 
  [4mdocs/FINANCIAL_OPERATING_SYSTEM.md[0m
@@ -2922,20 +2959,20 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
                      can.                                                
  45:44   [33mwarning[0m     'minimum' is too wordy.         write-good.TooWordy 
  51:54   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
- 66:12   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  66:12   [33mwarning[0m     'are grouped' may be passive    write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 66:12   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  248:3   [33mwarning[0m     'Minimum' is too wordy.         write-good.TooWordy 
  257:32  [33mwarning[0m     'Minimum' is too wordy.         write-good.TooWordy 
  277:36  [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime  
  277:36  [33mwarning[0m     'be reviewed' may be passive    write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 287:21  [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime  
  287:21  [33mwarning[0m     'be stored' may be passive      write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 287:21  [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime  
 
 
  [4mdocs/SCHEMA_CONTRACT.md[0m
@@ -2945,14 +2982,14 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
  13:262   [33mwarning[0m     'be propagated' may be passive  write-good.Passive 
                       voice. Use active voice if you                     
                       can.                                               
+ 111:19   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
  111:19   [33mwarning[0m     'are expressed' may be passive  write-good.Passive 
                       voice. Use active voice if you                     
                       can.                                               
- 111:19   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
- 112:32   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
  112:32   [33mwarning[0m     'is exported' may be passive    write-good.Passive 
                       voice. Use active voice if you                     
                       can.                                               
+ 112:32   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
  113:27   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
  113:27   [33mwarning[0m     'is created' may be passive     write-good.Passive 
                       voice. Use active voice if you                     
@@ -2970,20 +3007,20 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
                       voice. Use active voice if you                     
                       can.                                               
  123:121  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
- 125:81   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
  125:81   [33mwarning[0m     'be added' may be passive       write-good.Passive 
                       voice. Use active voice if you                     
                       can.                                               
+ 125:81   [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime 
  140:82   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
 
 
  [4mdocs/plaid-setup.md[0m
  13:62   [34msuggestion[0m  Try to avoid using 'I'm'.       write-good.E-Prime 
  31:31   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
- 32:67   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
  32:67   [33mwarning[0m     'is limited' may be passive     write-good.Passive 
                      voice. Use active voice if you                     
                      can.                                               
+ 32:67   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
  32:113  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
  49:39   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
  73:83   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
@@ -2992,14 +3029,14 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
 
  [4mserver/IMPLEMENTATION_SUMMARY.md[0m
  57:7     [33mwarning[0m     'Additional' is too wordy.      write-good.TooWordy 
- 161:19   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  161:19   [33mwarning[0m     'are fetched' may be passive    write-good.Passive  
                       voice. Use active voice if you                      
                       can.                                                
- 161:53   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
+ 161:19   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  161:53   [33mwarning[0m     'is logged' may be passive      write-good.Passive  
                       voice. Use active voice if you                      
                       can.                                                
+ 161:53   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  221:6    [33mwarning[0m     'Obtain' is too wordy.          write-good.TooWordy 
  244:15   [33mwarning[0m     'additional' is too wordy.      write-good.TooWordy 
  260:34   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
@@ -3011,23 +3048,23 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
 
 
  [4mserver/PLAID_README.md[0m
- 68:16   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  68:16   [33mwarning[0m     'is configured' may be passive  write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 127:19  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
+ 68:16   [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  127:19  [33mwarning[0m     'are fetched' may be passive    write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 127:53  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
+ 127:19  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  127:53  [33mwarning[0m     'is logged' may be passive      write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 127:53  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  150:21  [33mwarning[0m     'various' is a weasel word!     write-good.Weasel   
- 157:12  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  157:12  [33mwarning[0m     'are logged' may be passive     write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 157:12  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime  
  171:17  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime  
  179:24  [34msuggestion[0m  Try to avoid using 'be'.        write-good.E-Prime  
  179:24  [33mwarning[0m     'be stored' may be passive      write-good.Passive  
@@ -3046,10 +3083,10 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
  18:40  [33mwarning[0m     'are named' may be passive      write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
- 19:41  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
  19:41  [33mwarning[0m     'are defined' may be passive    write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
+ 19:41  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
  44:33  [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
  51:20  [34msuggestion[0m  Try to avoid using 'is'.        write-good.E-Prime 
  55:8   [34msuggestion[0m  Try to avoid using 'are'.       write-good.E-Prime 
@@ -3058,290 +3095,290 @@ ui/README.md:72:24: typography.symbols.ellipsis '...' is an approximation, use t
 
 ::endgroup::
 Unable to get number of errors with regex_number and Errors\.+([0-9]+)
-::group::[31m❌ Linted [SPELL] files with [lychee]: Found 1 error(s) and 0 warning(s) - (3.32s)[0m (expand for details)
+::group::[31m❌ Linted [SPELL] files with [lychee]: Found 1 error(s) and 0 warning(s) - (5.37s)[0m (expand for details)
 - Using [lychee v0.18.0] https://megalinter.io/8.8.0/descriptors/spell_lychee
 - MegaLinter key: [SPELL_LYCHEE]
 - Rules config: [/github/workspace/config/lychee.toml]
 - Number of files analyzed: [122]
 - Command: [lychee --format detailed --no-progress --exclude-path config/.lycheeignore --config /github/workspace/config/lychee.toml .devcontainer/devcontainer.json .github/workflows/generate_repository_tree.yml .github/workflows/megalinter.yml .github/workflows...(truncated)]
 --Error detail:
-[200] https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
-[200] https://megalinter.io/latest/descriptors/dart_dartanalyzer/
-[200] https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/
-[200] https://megalinter.io/latest/descriptors/python_mypy/
-[200] https://pre-commit.com/hooks.html
 [200] https://megalinter.io/latest/descriptors/swift_swiftlint/
-[200] https://megalinter.io/latest/descriptors/action_actionlint/
-[200] https://pre-commit.com/
-[200] https://www.checkov.io/
-[200] https://pmd.github.io/
-[200] https://megalinter.io/latest/descriptors/typescript_prettier/
-[200] https://signal.egohygiene.io/reports/megalinter/
-[200] https://prettier.io/
-[200] https://megalinter.io/latest/descriptors/json_npm_package_json_lint/
-[200] https://megalinter.io/latest/descriptors/python_ruff/
-[200] https://megalinter.io/latest/descriptors/markdown_markdownlint/
 [200] https://semantic-release.gitbook.io/semantic-release/usage/configuration
-[200] https://megalinter.io/latest/descriptors/spell_lychee/
-[200] https://megalinter.io/latest/descriptors/sql_sqlfluff/
-[200] https://pycqa.github.io/isort/
-[200] https://megalinter.io/latest/descriptors/gherkin_gherkin_lint/
+[200] https://megalinter.io/latest/descriptors/copypaste_jscpd/
+[200] https://megalinter.io/latest/descriptors/repository_syft/
+[200] https://megalinter.io/latest/descriptors/salesforce_sfdx_scanner_apex/
+[200] https://megalinter.io/latest/descriptors/repository_devskim/
+[200] https://signal.egohygiene.io/reports/megalinter/
+[200] https://megalinter.io/latest/descriptors/repository_secretlint/
+[200] https://megalinter.io/latest/descriptors/dart_dartanalyzer/
+[200] https://pre-commit.com/
+[200] https://megalinter.io/latest/descriptors/html_htmlhint/
+[200] https://pre-commit.com/hooks.html
+[200] https://megalinter.io/latest/descriptors/protobuf_protolint/
+[200] https://megalinter.io/latest/descriptors/php_phpstan/
+[200] https://megalinter.io/latest/descriptors/action_actionlint/
+[200] https://api.github.com/
+[200] https://megalinter.io/latest/descriptors/latex_chktex/
+[404] https://megalinter.io/latest/descriptors/markdown_markdown_link_check/ | Network error: Not Found
+[200] https://flake8.pycqa.org/en/latest/
+[200] https://megalinter.io/latest/descriptors/python_mypy/
+[200] https://github.com/igorshubovych/markdownlint-cli
+[200] https://megalinter.io/latest/descriptors/dockerfile_hadolint/
 [200] https://github.com/adrienverge/yamllint
 [200] https://github.com/Yelp/detect-secrets
-[200] https://github.com/psf/black
-[200] https://megalinter.io/latest/descriptors/spell_cspell/
-[200] https://github.com/hadolint/hadolint
-[200] https://megalinter.io/latest/descriptors/php_phpstan/
-[200] https://github.com/igorshubovych/markdownlint-cli
-[200] https://github.com/astral-sh/ruff-pre-commit
-[200] https://megalinter.io/latest/descriptors/javascript_eslint/
-[200] https://megalinter.io/latest/config-variables/
-[200] https://megalinter.io/latest/descriptors/jsx_eslint/
-[200] https://megalinter.io/latest/descriptors/dockerfile_hadolint/
-[200] https://megalinter.io/latest/descriptors/repository_grype/
 [200] https://github.com/shellcheck-py/shellcheck-py
-[200] https://megalinter.io/latest/descriptors/repository_devskim/
-[200] https://megalinter.io/latest/descriptors/graphql_graphql_schema_linter/
-[200] https://github.com/pre-commit/pre-commit-hooks
-[200] https://github.com/nvuillam/npm-groovy-lint
-[200] https://megalinter.io/latest/descriptors/c_clang_format/
-[200] https://megalinter.io/latest/descriptors/snakemake_snakefmt/
-[200] https://github.com/kucherenko/jscpd
-[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/
-[200] https://github.com/PowerShell/PSScriptAnalyzer
-[200] https://megalinter.io/latest/descriptors/go_revive/
-[200] https://github.com/anchore/grype
-[200] https://github.com/mpeterv/luacheck
-[200] https://megalinter.io/8/descriptors/repository_ls_lint/
-[200] https://megalinter.io/latest/descriptors/javascript_prettier/
-[ERROR] https://pyrightlang.org/ | Network error: error sending request for url (https://pyrightlang.org/) Maybe a certificate error?
-[200] https://github.com/tclindner/npm-package-json-lint
-[200] https://stylelint.io/
-[200] https://megalinter.io/latest/descriptors/arm_arm_ttk/
-[200] https://pylint.pycqa.org/en/latest/
-[200] https://megalinter.io/latest/descriptors/powershell_powershell/
-[200] https://megalinter.io/latest/descriptors/repository_kics/
-[200] https://megalinter.io/latest/descriptors/spell_proselint/
-[200] https://megalinter.io/latest/descriptors/powershell_powershell_formatter/
-[200] https://github.com/
-[200] https://megalinter.io/latest/descriptors/yaml_v8r/
-[200] https://megalinter.io/latest/descriptors/cloudformation_cfn_lint/
-[200] https://megalinter.io/latest/descriptors/yaml_yamllint/
-[200] https://megalinter.io/latest/descriptors/markdown_remark_lint/
-[200] https://github.com/checkmake/checkmake
-[200] https://megalinter.io/latest/descriptors/makefile_checkmake/
-[200] https://megalinter.io/latest/descriptors/puppet_puppet_lint/
-[200] https://github.com/rust-lang/rust-clippy
-[200] https://github.com/cjoudrey/graphql-schema-linter
-[200] https://megalinter.io/latest/json-schemas/configuration.html
-[200] https://megalinter.io/latest/descriptors/copypaste_jscpd/
+[200] https://github.com/hadolint/hadolint
+[200] https://megalinter.io/latest/descriptors/jsx_eslint/
 [200] https://megalinter.io/latest/descriptors/json_jsonlint/
-[404] https://megalinter.io/latest/descriptors/markdown_markdown_link_check/ | Network error: Not Found
-[200] https://megalinter.io/latest/descriptors/ansible_ansible_lint/
-[200] https://github.com/r-lib/lintr
-[200] https://github.com/gitleaks/gitleaks
-[200] https://megalinter.io/latest/descriptors/json_eslint_plugin_jsonc/
-[200] https://www.nongnu.org/chktex/
-[200] https://megalinter.io/latest/descriptors/python_pyright/
-[200] https://github.com/anchore/syft
-[200] https://megalinter.io/latest/descriptors/repository_syft/
-[200] https://github.com/amperser/proselint
-[200] https://dart.dev/tools/dart-analyze
-[200] https://megalinter.io/latest/descriptors/api_spectral/
-[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/
-[200] https://megalinter.io/latest/descriptors/raku_raku/
-[200] https://github.com/snakemake/snakefmt
-[200] https://megalinter.io/latest/descriptors/css_stylelint/
-[200] https://github.com/ota-meshi/eslint-plugin-jsonc
-[200] https://github.com/chris48s/v8r
-[200] https://stoplight.io/open-source/spectral
-[200] https://megalinter.io/latest/descriptors/rust_clippy/
-[200] https://github.com/aws-cloudformation/cfn-lint
-[200] https://megalinter.io/latest/descriptors/salesforce_lightning_flow_scanner/
-[200] https://megalinter.io/latest/descriptors/repository_trivy/
-[EXCLUDED] mailto:szmyty@gmail.com
-[200] https://megalinter.io/latest/descriptors/sql_tsqllint/
-[200] https://megalinter.io/latest/descriptors/spell_vale/
-[200] https://megalinter.io/latest/descriptors/scala_scalafix/
-[200] https://megalinter.io/latest/descriptors/php_psalm/
-[200] https://megalinter.io/latest/descriptors/repository_gitleaks/
-[200] https://github.com/tsqllint/tsqllint
-[200] https://github.com/zaach/jsonlint
-[200] https://megalinter.io/latest/descriptors/python_flake8/
-[200] https://megalinter.io/latest/descriptors/html_htmlhint/
-[200] https://github.com/DavidAnson/markdownlint
-[200] https://megalinter.io/latest/descriptors/terraform_terrascan/
+[200] https://megalinter.io/latest/descriptors/python_ruff/
+[200] https://github.com/psf/black
+[200] https://github.com/
 [200] https://megalinter.io/latest/descriptors/terraform_terragrunt/
+[200] https://stoplight.io/open-source/spectral
+[200] https://megalinter.io/latest/descriptors/python_isort/
+[200] https://github.com/pre-commit/pre-commit-hooks
+[200] https://github.com/rhysd/actionlint
+[200] https://megalinter.io/latest/descriptors/api_spectral/
+[200] https://github.com/astral-sh/ruff-pre-commit
+[200] https://github.com/errata-ai/vale
+[200] https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
+[ERROR] https://pyrightlang.org/ | Network error: error sending request for url (https://pyrightlang.org/) Maybe a certificate error?
+[200] https://megalinter.io/latest/descriptors/spell_vale/
+[200] https://megalinter.io/latest/descriptors/yaml_prettier/
+[200] https://megalinter.io/latest/descriptors/go_revive/
+[200] https://github.com/scalacenter/scalafix
+[200] https://github.com/Azure/arm-ttk
+[200] https://megalinter.io/latest/descriptors/javascript_eslint/
+[200] https://github.com/cjoudrey/graphql-schema-linter
+[200] https://github.com/anchore/grype
+[200] https://stylelint.io/
+[200] https://megalinter.io/latest/descriptors/rust_clippy/
+[200] https://megalinter.io/latest/descriptors/python_bandit/
+[200] https://megalinter.io/latest/descriptors/gherkin_gherkin_lint/
+[200] https://raku.org/
 [200] https://megalinter.io/latest/supported-linters/
 [200] https://github.com/streetsidesoftware/cspell
-[200] https://megalinter.io/latest/descriptors/yaml_prettier/
-[200] https://github.com/remarkjs/remark-lint
-[200] https://github.com/mgechev/revive
-[200] https://megalinter.io/latest/descriptors/python_isort/
-[200] https://megalinter.io/latest/descriptors/rst_rstcheck/
-[200] https://phpstan.org/
-[200] https://megalinter.io/latest/descriptors/java_pmd/
-[200] https://megalinter.io/latest/descriptors/php_phplint/
-[200] https://github.com/Azure/arm-ttk
 [200] https://ansible.readthedocs.io/projects/lint/
-[200] https://megalinter.io/latest/descriptors/java_checkstyle/
-[200] https://github.com/overtrue/phplint
-[200] https://megalinter.io/latest/descriptors/cpp_clang_format/
-[200] https://checkstyle.org/
-[200] https://black.readthedocs.io/en/stable/
-[200] https://github.com/forcedotcom/code-analyzer
-[200] https://github.com/PHPCSStandards/PHP_CodeSniffer/
-[200] https://github.com/hadolint/hadolint | OK (cached)
-[200] https://megalinter.io/latest/descriptors/salesforce_sfdx_scanner_apex/
-[200] https://megalinter.io/latest/descriptors/python_pylint/
-[200] https://eslint.org/
-[200] https://github.com/realm/SwiftLint
-[200] https://megalinter.io/latest/descriptors/protobuf_protolint/
-[200] https://megalinter.io/latest/descriptors/python_black/
-[200] https://megalinter.io/latest/descriptors/repository_secretlint/
-[200] https://bandit.readthedocs.io/en/latest/
-[200] https://github.com/rhysd/actionlint
-[200] https://ruff.rs/
+[200] https://megalinter.io/latest/descriptors/python_pyright/
 [200] https://github.com/gruntwork-io/terragrunt
-[200] https://api.github.com/
-[200] https://megalinter.io/latest/descriptors/repository_checkov/
-[200] https://clang.llvm.org/docs/ClangFormat.html
-[200] https://github.com/trufflesecurity/trufflehog
-[200] https://megalinter.io/latest/descriptors/terraform_tflint/
-[200] https://github.com/aquasecurity/trivy
-[200] https://megalinter.io/latest/descriptors/typescript_eslint/
-[200] https://megalinter.io/latest/descriptors/lua_luacheck/
-[200] https://github.com/coffeelint/coffeelint
 [200] https://megalinter.io/latest/descriptors/ruby_rubocop/
-[200] https://github.com/rstcheck/rstcheck
-[200] https://github.com/terraform-linters/tflint
-[200] https://github.com/microsoft/DevSkim
-[200] https://megalinter.io/latest/descriptors/groovy_npm_groovy_lint/
+[200] https://megalinter.io/latest/descriptors/spell_cspell/
+[200] https://www.nongnu.org/chktex/
+[200] https://github.com/anchore/syft
+[200] https://megalinter.io/latest/descriptors/tekton_tekton_lint/
 [200] https://psalm.dev/
-[200] https://github.com/lycheeverse/lychee
-[404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ | Network error: Not Found
-[200] https://megalinter.io/latest/descriptors/latex_chktex/
-[200] https://megalinter.io/latest/descriptors/repository_trufflehog/
-[200] https://yamllint.readthedocs.io/en/stable/
-[200] https://github.com/tcort/markdown-link-check
-[200] https://megalinter.io/latest/descriptors/php_phpcs/
-[200] https://megalinter.io/latest/descriptors/r_lintr/
-[200] https://megalinter.io/latest/descriptors/python_bandit/
-[200] https://megalinter.io/latest/descriptors/json_prettier/
-[200] https://flake8.pycqa.org/en/latest/
-[200] https://mypy.readthedocs.io/en/stable/
-[200] https://megalinter.io/latest/descriptors/clojure_cljstyle/
-[200] https://megalinter.io/latest/descriptors/clojure_clj_kondo/
-[EXCLUDED] http://localhost:5173/
-[EXCLUDED] file:///github/workspace/docs/plaid-setup.md
-[200] https://pnpm.io/installation
-[EXCLUDED] file:///github/workspace/README.md#quick-start
-[EXCLUDED] file:///github/workspace/README.md#fake-data-mode
-[200] https://github.com/scalacenter/scalafix
-[200] https://www.python.org/downloads/
-[EXCLUDED] file:///github/workspace/README.md#dev-container
-[200] https://rubocop.org/
-[EXCLUDED] http://localhost:8000/
-[EXCLUDED] http://localhost:8000/docs
-[EXCLUDED] file:///github/workspace/README.md#plaid-sandbox-setup
-[EXCLUDED] http://localhost:8000/health
-[200] https://github.com/clj-kondo/clj-kondo
-[200] https://containers.dev/
-[200] https://github.com/tenable/terrascan
-[200] https://www.schemastore.org/task.json
-[200] https://www.schemastore.org/coffeelint.json
-[200] https://taskfile.dev/
-[200] https://www.schemastore.org/markdown-link-check.json
-[200] https://github.com/Lightning-Flow-Scanner/lightning-flow-scanner-sfdx
-[200] https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
-[200] https://www.schemastore.org/yamllint.json
-[200] https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/pyproject.json
-[200] https://nodejs.org/
+[200] https://megalinter.io/latest/descriptors/yaml_yamllint/
+[200] https://github.com/terraform-linters/tflint
+[200] https://github.com/nvuillam/npm-groovy-lint
+[200] https://github.com/r-lib/lintr
 [200] https://github.com/editorconfig-checker/editorconfig-checker
-[200] https://github.com/IBM/tekton-lint
-[200] https://golangci-lint.run/jsonschema/golangci.jsonschema.json
-[200] https://toolbox-data.anchore.io/grype/databases/listing.json
-[403] https://nvd.nist.gov/vuln/detail/CVE-2018-20225 | 403 Forbidden: Forbidden
-   [WARN ] Error creating request: InvalidPathToUri("/vite.svg")
-[200] https://github.com/loeffel-io/ls-lint
-[200] https://github.com/ | OK (cached)
-[EXCLUDED] http://localhost/
-[EXCLUDED] https://localhost/
-[200] https://github.com/yoheimuta/protolint
-[200] https://raw.githubusercontent.com/hadolint/hadolint/master/contrib/hadolint.json
-[400] https://search.maven.org/solrsearch/select | Network error: Bad Request
-[200] https://github.com/checkmarx/kics
-[200] https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json
-[200] https://www.schemastore.org/npmpackagejsonlintrc.json
-[200] https://www.schemastore.org/stylelintrc.json
-[EXCLUDED] mailto:you@example.com
+[200] https://megalinter.io/latest/descriptors/terraform_tflint/
+[200] https://megalinter.io/latest/descriptors/java_checkstyle/
+[200] https://megalinter.io/latest/descriptors/terraform_terrascan/
+[200] https://github.com/chris48s/v8r
+[200] https://megalinter.io/latest/descriptors/arm_arm_ttk/
+[200] https://megalinter.io/latest/descriptors/repository_trivy/
+[200] https://github.com/tcort/markdown-link-check
+[200] https://github.com/rust-lang/rust-clippy
+[200] https://megalinter.io/latest/descriptors/powershell_powershell/
 [200] https://github.com/gherkin-lint/gherkin-lint
-[200] https://raw.githubusercontent.com/microsoft/pyright/main/packages/vscode-pyright/schemas/pyrightconfig.schema.json
-[200] https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json
-[404] https://github.com/yourusername/your-module-name/issues | Network error: Not Found
-[EXCLUDED] mailto:support@errata.ai
-[200] https://github.com/errata-ai/vale
-[200] https://github.com/amperser/proselint | OK (cached)
-[200] https://github.com/sqlfluff/sqlfluff
-[200] https://github.com/greglook/cljstyle
-[EXCLUDED] file:///github/workspace/docs/reports/megalinter
-[200] https://github.com/nektos/act
-[EXCLUDED] http://localhost:8000/docs
-[200] https://github.com/errata-ai/proselint/issues/new
-[EXCLUDED] http://localhost:8000/redoc
+[200] https://megalinter.io/8/descriptors/repository_ls_lint/
+[200] https://pycqa.github.io/isort/
+[200] https://megalinter.io/latest/descriptors/cloudformation_cfn_lint/
+[200] https://megalinter.io/latest/descriptors/markdown_remark_lint/
+[200] https://megalinter.io/latest/descriptors/makefile_checkmake/
+[200] https://megalinter.io/latest/descriptors/groovy_npm_groovy_lint/
+[200] https://megalinter.io/latest/descriptors/clojure_cljstyle/
+[200] https://bandit.readthedocs.io/en/latest/
+[200] https://megalinter.io/latest/descriptors/sql_tsqllint/
+[200] https://yamllint.readthedocs.io/en/stable/
+[200] https://megalinter.io/latest/descriptors/python_black/
+[200] https://black.readthedocs.io/en/stable/
+[200] https://megalinter.io/latest/descriptors/scala_scalafix/
+[200] https://megalinter.io/latest/json-schemas/configuration.html
+[200] https://github.com/forcedotcom/code-analyzer
+[200] https://megalinter.io/latest/descriptors/json_prettier/
+[200] https://megalinter.io/latest/descriptors/puppet_puppet_lint/
+[200] https://github.com/zaach/jsonlint
+[200] https://github.com/kucherenko/jscpd
+[200] https://github.com/tenable/terrascan
+[200] https://megalinter.io/latest/descriptors/snakemake_snakefmt/
+[200] https://megalinter.io/latest/descriptors/lua_luacheck/
+[200] https://megalinter.io/latest/descriptors/repository_gitleaks/
+[200] https://github.com/DavidAnson/markdownlint
+[200] https://megalinter.io/latest/descriptors/ansible_ansible_lint/
+[200] https://rubocop.org/
+[200] https://github.com/trufflesecurity/trufflehog
+[200] https://megalinter.io/latest/descriptors/php_phplint/
+[200] https://megalinter.io/latest/descriptors/spell_proselint/
+[200] https://megalinter.io/latest/descriptors/repository_trivy_sbom/
+[404] https://megalinter.io/latest/descriptors/coffee_coffee_lint/ | Network error: Not Found
+[200] https://megalinter.io/latest/descriptors/repository_checkov/
+[200] https://www.checkov.io/
+[200] https://github.com/mpeterv/luacheck
+[200] https://github.com/snakemake/snakefmt
+[200] https://megalinter.io/latest/descriptors/json_eslint_plugin_jsonc/
+[200] https://megalinter.io/latest/descriptors/python_flake8/
+[200] https://megalinter.io/latest/config-variables/
+[200] https://github.com/loeffel-io/ls-lint
+[200] https://megalinter.io/latest/descriptors/r_lintr/
+[200] https://megalinter.io/latest/descriptors/rst_rstcheck/
+[200] https://dart.dev/tools/dart-analyze
+[200] https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/
+[200] https://mypy.readthedocs.io/en/stable/
+[200] https://github.com/checkmarx/kics
+[200] https://megalinter.io/latest/descriptors/powershell_powershell_formatter/
+[200] https://megalinter.io/latest/descriptors/typescript_prettier/
+[200] https://ruff.rs/
+[200] https://megalinter.io/latest/descriptors/python_pylint/
+[EXCLUDED] mailto:szmyty@gmail.com
+[200] https://github.com/rstcheck/rstcheck
+[200] https://megalinter.io/latest/descriptors/salesforce_lightning_flow_scanner/
+[200] https://prettier.io/
+[200] https://megalinter.io/latest/descriptors/raku_raku/
+[200] https://megalinter.io/latest/descriptors/repository_trufflehog/
+[200] https://github.com/gitleaks/gitleaks
+[200] https://github.com/amperser/proselint
+[200] https://megalinter.io/latest/descriptors/graphql_graphql_schema_linter/
+[200] https://megalinter.io/latest/descriptors/php_psalm/
+[200] https://megalinter.io/latest/descriptors/c_clang_format/
+[200] https://megalinter.io/latest/descriptors/clojure_clj_kondo/
+[200] https://megalinter.io/latest/descriptors/repository_kics/
+[200] https://github.com/yoheimuta/protolint
+[200] https://github.com/IBM/tekton-lint
+[200] https://pmd.github.io/
+[200] https://megalinter.io/latest/descriptors/javascript_prettier/
+[200] https://github.com/coffeelint/coffeelint
+[200] https://megalinter.io/latest/descriptors/markdown_markdownlint/
+[200] https://megalinter.io/latest/descriptors/css_stylelint/
+[200] https://github.com/ota-meshi/eslint-plugin-jsonc
+[200] https://megalinter.io/latest/descriptors/sql_sqlfluff/
+[200] https://pylint.pycqa.org/en/latest/
 [200] https://github.com/puppetlabs/puppet-lint
-[404] https://github.com/yourusername/your-module-name | Network error: Not Found
-[404] https://json.schemastore.org/luacheckrc.json | Network error: Not Found
-[404] https://github.com/yourusername/your-module-name.git | Network error: Not Found
+[200] https://phpstan.org/
+[200] https://github.com/overtrue/phplint
+[200] https://github.com/microsoft/DevSkim
+[200] https://github.com/Lightning-Flow-Scanner/lightning-flow-scanner-sfdx
+[200] https://megalinter.io/latest/descriptors/spell_lychee/
+[200] https://github.com/hadolint/hadolint | OK (cached)
+[200] https://eslint.org/
+[200] https://github.com/tsqllint/tsqllint
+[200] https://checkstyle.org/
+[200] https://megalinter.io/latest/descriptors/typescript_eslint/
+[200] https://github.com/remarkjs/remark-lint
+[200] https://github.com/checkmake/checkmake
+[200] https://megalinter.io/latest/descriptors/yaml_v8r/
+[200] https://megalinter.io/latest/descriptors/java_pmd/
+[200] https://megalinter.io/latest/descriptors/cpp_clang_format/
+[200] https://www.schemastore.org/markdown-link-check.json
+[200] https://megalinter.io/latest/descriptors/repository_grype/
+[200] https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/pyproject.json
+[200] https://megalinter.io/latest/descriptors/php_phpcs/
+[200] https://www.schemastore.org/yamllint.json
+[200] https://megalinter.io/latest/descriptors/json_npm_package_json_lint/
+[200] https://github.com/realm/SwiftLint
+[EXCLUDED] file:///github/workspace/README.md#dev-container
+[200] https://www.schemastore.org/task.json
+[200] https://github.com/clj-kondo/clj-kondo
+[EXCLUDED] http://localhost:8000/health
+[EXCLUDED] file:///github/workspace/README.md#fake-data-mode
+[EXCLUDED] file:///github/workspace/README.md#plaid-sandbox-setup
+[200] https://taskfile.dev/
+[200] https://www.python.org/downloads/
+[200] https://json.schemastore.org/prettierrc.json
+[200] https://github.com/tclindner/npm-package-json-lint
+[200] https://pnpm.io/installation
+[EXCLUDED] http://localhost:8000/docs
+[EXCLUDED] file:///github/workspace/README.md#quick-start
+[EXCLUDED] http://localhost:8000/
+[EXCLUDED] file:///github/workspace/docs/plaid-setup.md
+[EXCLUDED] http://localhost:5173/
+[200] https://github.com/lycheeverse/lychee
+[200] https://nodejs.org/
+[200] https://toolbox-data.anchore.io/grype/databases/listing.json
+[200] https://www.schemastore.org/coffeelint.json
 [404] https://json.schemastore.org/npm-package-json-lint.json | Network error: Not Found
 [200] https://json.schemastore.org/web-manifest-combined.json
-[200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip
-[EXCLUDED] file:///github/workspace/docs/plaid-setup.md#5-environment-variable-storage
-[200] https://github.com/errata-ai/write-good/releases.atom
-[200] https://github.com/errata-ai/proselint/releases.atom
-[200] https://www.rubyschema.org/rubocop.json
-[200] https://plaid.com/docs/link/web/
+[200] https://golangci-lint.run/jsonschema/golangci.jsonschema.json
+   [WARN ] Error creating request: InvalidPathToUri("/vite.svg")
 [200] https://json.schemastore.org/htmlhint.json
-[200] https://github.com/sirupsen/logrus#level-logging
-[200] https://dashboard.plaid.com/signup
-[200] https://dashboard.plaid.com/
+[400] https://search.maven.org/solrsearch/select | Network error: Bad Request
+[EXCLUDED] http://localhost/
+[EXCLUDED] https://localhost/
+[200] https://github.com/ | OK (cached)
+[200] https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json
+[200] https://www.schemastore.org/stylelintrc.json
+[404] https://json.schemastore.org/luacheckrc.json | Network error: Not Found
+[EXCLUDED] mailto:you@example.com
+[200] https://github.com/aquasecurity/trivy
+[200] https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
+[403] https://nvd.nist.gov/vuln/detail/CVE-2018-20225 | 403 Forbidden: Forbidden
+[200] https://containers.dev/
+[EXCLUDED] mailto:support@errata.ai
+[200] https://github.com/amperser/proselint | OK (cached)
 [200] https://github.com/hadolint/hadolint#linting-labels
+[200] https://github.com/PowerShell/PSScriptAnalyzer
+[200] https://raw.githubusercontent.com/microsoft/pyright/main/packages/vscode-pyright/schemas/pyrightconfig.schema.json
+[200] https://github.com/aws-cloudformation/cfn-lint
+[200] https://www.schemastore.org/npmpackagejsonlintrc.json
+[EXCLUDED] file:///github/workspace/docs/reports/megalinter
 [EXCLUDED] http://localhost:5173/
-[EXCLUDED] http://localhost:8000/
-[EXCLUDED] http://localhost:8000/docs
-[EXCLUDED] http://localhost:8000/health
-[200] https://github.com/bridgecrewio/checkov#configuration-using-a-config-file
+[200] https://github.com/PHPCSStandards/PHP_CodeSniffer/
+[EXCLUDED] file:///github/workspace/docs/plaid-setup.md#5-environment-variable-storage
+[200] https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json
 [200] https://dashboard.plaid.com/
-[200] https://dashboard.plaid.com/team/billing
-[200] https://plaid.com/pricing/
-[200] https://json.schemastore.org/prettierrc.json
-[200] https://dashboard.plaid.com/signup
-[200] https://oxc.rs/
-[200] https://dashboard.plaid.com/signup
-[200] https://dashboard.plaid.com/team/keys
+[200] https://raw.githubusercontent.com/hadolint/hadolint/master/contrib/hadolint.json
+[200] https://dashboard.plaid.com/ | OK (cached)
+[200] https://github.com/mgechev/revive
+[404] https://github.com/yourusername/your-module-name/issues | Network error: Not Found
+[200] https://github.com/greglook/cljstyle
+[200] https://plaid.com/docs/
+[404] https://github.com/yourusername/your-module-name | Network error: Not Found
+[404] https://github.com/yourusername/your-module-name.git | Network error: Not Found
+[200] https://github.com/errata-ai/write-good/releases.atom
+[200] https://plaid.com/docs/
+[200] https://github.com/sqlfluff/sqlfluff
+[200] https://github.com/bridgecrewio/checkov#configuration-using-a-config-file
+[200] https://www.rubyschema.org/rubocop.json
 [EXCLUDED] http://localhost:8000/docs
 [EXCLUDED] http://localhost:8000/health
-[200] https://dashboard.plaid.com/signup | OK (cached)
-[EXCLUDED] mailto:i@izs.me
-[200] https://dashboard.plaid.com/team/billing
-[200] https://plaid.com/pricing/
-[200] https://babeljs.io/
 [200] https://dashboard.plaid.com/team/keys
+[EXCLUDED] http://localhost:8000/docs
+[EXCLUDED] http://localhost:8000/redoc
+[200] https://github.com/sirupsen/logrus#level-logging
+[200] https://github.com/errata-ai/proselint/releases.atom
+[EXCLUDED] http://localhost:8000/docs
+[EXCLUDED] http://localhost:8000/
+[EXCLUDED] http://localhost:8000/health
+[200] https://github.com/nektos/act
+[200] https://github.com/errata-ai/proselint/issues/new
+[200] https://dashboard.plaid.com/signup
+[200] https://plaid.com/docs/sandbox/
+[200] https://plaid.com/pricing/
+[200] https://plaid.com/docs/sandbox/
 [200] https://vite.dev/guide/rolldown
-[200] https://plaid.com/docs/
+[200] https://github.com/errata-ai/proselint/releases/latest/download/proselint.zip
+[200] https://babeljs.io/
+[EXCLUDED] mailto:i@izs.me
+[200] https://oxc.rs/
+[200] https://dashboard.plaid.com/team/billing
 [200] https://react.dev/learn/react-compiler/installation
-[200] https://plaid.com/docs/
+[200] https://dashboard.plaid.com/signup
+[200] https://dashboard.plaid.com/team/keys
+[200] https://dashboard.plaid.com/signup
+[200] https://plaid.com/pricing/
 [200] https://swc.rs/
-[200] https://plaid.com/docs/sandbox/
+[200] https://dashboard.plaid.com/signup
 [200] https://github.com/btford/write-good
-[200] https://raku.org/
-[200] https://plaid.com/docs/sandbox/
-[200] https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x
+[200] https://plaid.com/docs/link/web/
+[200] https://github.com/plaid/quickstart
+[200] https://github.com/plaid/quickstart
+[200] https://dashboard.plaid.com/team/billing
 [200] https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom
-[200] https://github.com/plaid/quickstart
-[200] https://github.com/plaid/quickstart
+[200] https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x
 [200] https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react
 [200] https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc
+[200] https://clang.llvm.org/docs/ClangFormat.html
 Error: Cannot write status output to file
 
 Caused by:
@@ -3356,8 +3393,8 @@ Caused by:
 - Command: [terragrunt hclfmt --terragrunt-check --terragrunt-config /github/workspace/config/terragrunt.hcl --terragrunt-hclfmt-file config/terragrunt.hcl]
 [31m[terragrunt] config/terragrunt.hcl - ERROR - 1 error(s) and 0 warning(s)[0m
 [31m--Error detail:
-[0;90m20:32:09.410[0m [0;33mWARN  [0m The `hclfmt` command is deprecated and will be removed in a future version of Terragrunt. Use `terragrunt hcl format` instead.
-[0;90m20:32:09.411[0m [0;31mERROR [0m flag `--terragrunt-config` is not a valid flag for `format`. Did you mean to use `console --config`?
+[0;90m21:10:50.391[0m [0;33mWARN  [0m The `hclfmt` command is deprecated and will be removed in a future version of Terragrunt. Use `terragrunt hcl format` instead.
+[0;90m21:10:50.392[0m [0;31mERROR [0m flag `--terragrunt-config` is not a valid flag for `format`. Did you mean to use `console --config`?
 [0m
 ::endgroup::
 Unable to get number of errors with regex_sum and ✖ ([0-9]+) problem
@@ -3430,7 +3467,7 @@ Error: end of the stream or a document separator is expected (25:14)
     at createCLIConfigArray (/node-deps/node_modules/@eslint/eslintrc/dist/eslintrc.cjs:3660:35)
 
 ::endgroup::
-::group::[31m❌ Linted [TYPESCRIPT] files with [ts-standard]: Found 1 error(s) and 0 warning(s) - (0.32s)[0m (expand for details)
+::group::[31m❌ Linted [TYPESCRIPT] files with [ts-standard]: Found 1 error(s) and 0 warning(s) - (0.31s)[0m (expand for details)
 - Using [ts-standard v12.0.2] https://megalinter.io/8.8.0/descriptors/typescript_ts_standard
 - MegaLinter key: [TYPESCRIPT_STANDARD]
 - Rules config: identified by [ts-standard]
@@ -3458,7 +3495,7 @@ Checking formatting...
 - Number of files analyzed: [5]
 - Command: [xmllint config/apex-pmd-ruleset.xml config/java-pmd-ruleset.xml config/phpcs.xml config/psalm.xml config/sun_checks.xml]
 ::endgroup::
-::group::[31m❌ Linted [YAML] files with [prettier]: Found 1 error(s) and 0 warning(s) - (0.19s)[0m (expand for details)
+::group::[31m❌ Linted [YAML] files with [prettier]: Found 1 error(s) and 0 warning(s) - (0.2s)[0m (expand for details)
 - Using [prettier v3.5.3] https://megalinter.io/8.8.0/descriptors/yaml_prettier
 - MegaLinter key: [YAML_PRETTIER]
 - Rules config: [/github/workspace/config/.prettier.config.mjs]
@@ -3469,7 +3506,7 @@ Checking formatting...
 [error] Cannot find package 'prettier-plugin-sh' imported from /github/workspace/noop.js
 
 ::endgroup::
-::group::[31m❌ Linted [YAML] files with [yamllint]: Found 242 error(s) and 0 warning(s) - (2.63s)[0m (expand for details)
+::group::[31m❌ Linted [YAML] files with [yamllint]: Found 242 error(s) and 0 warning(s) - (2.64s)[0m (expand for details)
 - Using [yamllint v1.37.1] https://megalinter.io/8.8.0/descriptors/yaml_yamllint
 - MegaLinter key: [YAML_YAMLLINT]
 - Rules config: [/github/workspace/config/.yamllint.yml]
@@ -3852,7 +3889,7 @@ ui/pnpm-lock.yaml
 
 
 ::endgroup::
-::group::[31m❌ Linted [YAML] files with [v8r]: Found 1 error(s) and 0 warning(s) - (6.89s)[0m (expand for details)
+::group::[31m❌ Linted [YAML] files with [v8r]: Found 1 error(s) and 0 warning(s) - (6.67s)[0m (expand for details)
 - Using [v8r v5.0.0] https://megalinter.io/8.8.0/descriptors/yaml_v8r
 - MegaLinter key: [YAML_V8R]
 - Rules config: [/github/workspace/config/.v8rrc.yml]
@@ -4149,7 +4186,7 @@ tasks/misc.yml# must NOT have additional properties, found additional property '
 | Descriptor        | Linter                   | Mode          | Files | Fixed | Errors | Warnings | Elapsed time |
 +-------------------+--------------------------+---------------+-------+-------+--------+----------+--------------+
 | ❌ ACTION         | actionlint               | list_of_files |     5 |       |     13 |        0 | 0.08s        |
-| ✅ ANSIBLE        | ansible-lint             | project       |   n/a |       |      0 |        0 | 6.57s        |
+| ✅ ANSIBLE        | ansible-lint             | project       |   n/a |       |      0 |        0 | 6.37s        |
 | ❌ BASH           | bash-exec                | file          |     2 |       |      1 |        0 | 0.01s        |
 | ❌ BASH           | shellcheck               | list_of_files |     2 |       |      1 |        0 | 0.08s        |
 | ❌ BASH           | shfmt                    | list_of_files |     2 |       |      2 |        0 | 0.0s         |
@@ -4157,58 +4194,58 @@ tasks/misc.yml# must NOT have additional properties, found additional property '
 | ❌ CLOJURE        | clj-kondo                | file          |     1 |       |      1 |        0 | 0.01s        |
 | ❌ CLOUDFORMATION | cfn-lint                 | list_of_files |     1 |       |      1 |        0 | 5.79s        |
 | ❌ COPYPASTE      | jscpd                    | project       |   n/a |       |      9 |        0 | 1.61s        |
-| ❌ CSS            | stylelint                | list_of_files |     1 |       |      1 |        0 | 0.52s        |
+| ❌ CSS            | stylelint                | list_of_files |     1 |       |      1 |        0 | 0.5s         |
 | ❌ EDITORCONFIG   | editorconfig-checker     | list_of_files |   296 |       |      1 |        0 | 0.01s        |
-| ❌ HTML           | djlint                   | list_of_files |     2 |       |      5 |        0 | 0.63s        |
+| ❌ HTML           | djlint                   | list_of_files |     2 |       |      5 |        0 | 0.62s        |
 | ✅ HTML           | htmlhint                 | list_of_files |     2 |       |      0 |        0 | 0.19s        |
-| ❌ JAVASCRIPT     | eslint                   | list_of_files |     4 |       |      1 |        0 | 0.36s        |
+| ❌ JAVASCRIPT     | eslint                   | list_of_files |     4 |       |      1 |        0 | 0.35s        |
 | ❌ JAVASCRIPT     | prettier                 | list_of_files |     4 |       |      1 |        0 | 0.21s        |
 | ❌ JSON           | jsonlint                 | list_of_files |    31 |       |      1 |        0 | 0.13s        |
 | ❌ JSON           | npm-package-json-lint    | project       |   n/a |       |      1 |        0 | 0.29s        |
 | ❌ JSON           | prettier                 | list_of_files |    31 |       |      1 |        0 | 0.18s        |
-| ❌ JSON           | v8r                      | list_of_files |    31 |       |      1 |        0 | 11.34s       |
-| ❌ MARKDOWN       | markdownlint             | list_of_files |    11 |       |     52 |        0 | 0.52s        |
-| ✅ MARKDOWN       | markdown-link-check      | list_of_files |    11 |       |      0 |        0 | 3.56s        |
-| ❌ MARKDOWN       | markdown-table-formatter | list_of_files |    11 |       |      1 |        0 | 0.18s        |
-| ❌ POWERSHELL     | powershell               | file          |     3 |       |      3 |        0 | 1.87s        |
+| ❌ JSON           | v8r                      | list_of_files |    31 |       |      1 |        0 | 11.17s       |
+| ❌ MARKDOWN       | markdownlint             | list_of_files |    11 |       |     52 |        0 | 0.53s        |
+| ✅ MARKDOWN       | markdown-link-check      | list_of_files |    11 |       |      0 |        0 | 7.91s        |
+| ❌ MARKDOWN       | markdown-table-formatter | list_of_files |    11 |       |      1 |        0 | 0.19s        |
+| ❌ POWERSHELL     | powershell               | file          |     3 |       |      3 |        0 | 1.85s        |
 | ❌ POWERSHELL     | powershell_formatter     | file          |     3 |       |      3 |        0 | 1.63s        |
-| ❌ PYTHON         | bandit                   | list_of_files |     7 |       |     59 |        0 | 1.8s         |
-| ❌ PYTHON         | flake8                   | list_of_files |     7 |       |      9 |        0 | 0.47s        |
+| ❌ PYTHON         | bandit                   | list_of_files |     7 |       |     59 |        0 | 1.84s        |
+| ❌ PYTHON         | flake8                   | list_of_files |     7 |       |     10 |        0 | 0.48s        |
 | ❌ PYTHON         | isort                    | list_of_files |     7 |       |      3 |        0 | 0.17s        |
-| ❌ PYTHON         | mypy                     | list_of_files |     7 |       |     77 |        0 | 2.46s        |
-| ❌ PYTHON         | pylint                   | list_of_files |     7 |       |     16 |        0 | 3.56s        |
-| ❌ PYTHON         | pyright                  | list_of_files |     7 |       |    431 |        0 | 2.86s        |
+| ❌ PYTHON         | mypy                     | list_of_files |     7 |       |     81 |        0 | 2.51s        |
+| ❌ PYTHON         | pylint                   | list_of_files |     7 |       |     16 |        0 | 3.46s        |
+| ❌ PYTHON         | pyright                  | list_of_files |     7 |       |    449 |        0 | 2.89s        |
 | ✅ PYTHON         | ruff                     | list_of_files |     7 |       |      0 |        0 | 0.01s        |
 | ❌ PYTHON         | ruff-format              | list_of_files |     7 |       |      1 |        0 | 0.01s        |
-| ❌ REPOSITORY     | checkov                  | project       |   n/a |       |      1 |        0 | 21.57s       |
-| ✅ REPOSITORY     | dustilock                | project       |   n/a |       |      0 |        0 | 2.02s        |
+| ❌ REPOSITORY     | checkov                  | project       |   n/a |       |      1 |        0 | 21.81s       |
+| ✅ REPOSITORY     | dustilock                | project       |   n/a |       |      0 |        0 | 1.6s         |
 | ❌ REPOSITORY     | gitleaks                 | project       |   n/a |       |      1 |        0 | 0.01s        |
 | ✅ REPOSITORY     | git_diff                 | project       |   n/a |       |      0 |        0 | 0.08s        |
-| ❌ REPOSITORY     | grype                    | project       |   n/a |       |     13 |        0 | 27.96s       |
-| ❌ REPOSITORY     | kics                     | project       |   n/a |       |      2 |        0 | 19.77s       |
-| ❌ REPOSITORY     | ls-lint                  | project       |   n/a |       |      1 |        0 | 0.07s        |
-| ❌ REPOSITORY     | secretlint               | list_of_files |     0 |       |      1 |        0 | 10.56s       |
+| ❌ REPOSITORY     | grype                    | project       |   n/a |       |     13 |        0 | 28.37s       |
+| ❌ REPOSITORY     | kics                     | project       |   n/a |       |      2 |        0 | 20.61s       |
+| ❌ REPOSITORY     | ls-lint                  | project       |   n/a |       |      1 |        0 | 0.06s        |
+| ❌ REPOSITORY     | secretlint               | list_of_files |     0 |       |      1 |        0 | 7.9s         |
 | ❌ REPOSITORY     | syft                     | project       |   n/a |       |      1 |        0 | 0.02s        |
-| ✅ REPOSITORY     | trivy                    | project       |   n/a |       |      0 |        0 | 6.12s        |
-| ✅ REPOSITORY     | trivy-sbom               | project       |   n/a |       |      0 |        0 | 0.52s        |
-| ❌ REPOSITORY     | trufflehog               | project       |   n/a |       |      1 |        0 | 2.19s        |
-| ❌ SALESFORCE     | lightning-flow-scanner   | project       |   n/a |       |      1 |        0 | 0.83s        |
-| ✅ SALESFORCE     | sfdx-scanner-apex        | project       |   n/a |       |      0 |        0 | 22.13s       |
-| ✅ SALESFORCE     | sfdx-scanner-aura        | project       |   n/a |       |      0 |        0 | 8.36s        |
-| ✅ SALESFORCE     | sfdx-scanner-lwc         | project       |   n/a |       |      0 |        0 | 8.23s        |
-| ✅ SPELL          | cspell                   | list_of_files |   297 |       |      0 |        0 | 1.04s        |
-| ❌ SPELL          | lychee                   | list_of_files |   122 |       |      1 |        0 | 3.32s        |
-| ❌ SPELL          | proselint                | list_of_files |    12 |       |     11 |        0 | 8.95s        |
-| ⚠️ SPELL          | vale                     | list_of_files |    11 |       |      0 |       47 | 0.83s        |
+| ✅ REPOSITORY     | trivy                    | project       |   n/a |       |      0 |        0 | 9.34s        |
+| ✅ REPOSITORY     | trivy-sbom               | project       |   n/a |       |      0 |        0 | 0.57s        |
+| ❌ REPOSITORY     | trufflehog               | project       |   n/a |       |      1 |        0 | 2.27s        |
+| ❌ SALESFORCE     | lightning-flow-scanner   | project       |   n/a |       |      1 |        0 | 0.82s        |
+| ✅ SALESFORCE     | sfdx-scanner-apex        | project       |   n/a |       |      0 |        0 | 21.0s        |
+| ✅ SALESFORCE     | sfdx-scanner-aura        | project       |   n/a |       |      0 |        0 | 8.39s        |
+| ✅ SALESFORCE     | sfdx-scanner-lwc         | project       |   n/a |       |      0 |        0 | 8.4s         |
+| ✅ SPELL          | cspell                   | list_of_files |   297 |       |      0 |        0 | 0.94s        |
+| ❌ SPELL          | lychee                   | list_of_files |   122 |       |      1 |        0 | 5.37s        |
+| ❌ SPELL          | proselint                | list_of_files |    12 |       |     11 |        0 | 10.04s       |
+| ⚠️ SPELL          | vale                     | list_of_files |    11 |       |      0 |       47 | 0.84s        |
 | ❌ TERRAFORM      | terragrunt               | file          |     1 |       |      1 |        0 | 0.06s        |
 | ❌ TSX            | eslint                   | list_of_files |    28 |       |      1 |        0 | 0.35s        |
 | ❌ TYPESCRIPT     | eslint                   | list_of_files |    54 |       |      1 |        0 | 0.35s        |
 | ❌ TYPESCRIPT     | prettier                 | list_of_files |    54 |       |      1 |        0 | 0.19s        |
-| ❌ TYPESCRIPT     | ts-standard              | list_of_files |    54 |       |      1 |        0 | 0.32s        |
+| ❌ TYPESCRIPT     | ts-standard              | list_of_files |    54 |       |      1 |        0 | 0.31s        |
 | ✅ XML            | xmllint                  | list_of_files |     5 |       |      0 |        0 | 0.16s        |
-| ❌ YAML           | prettier                 | list_of_files |    77 |       |      1 |        0 | 0.19s        |
-| ❌ YAML           | v8r                      | list_of_files |    77 |       |      1 |        0 | 6.89s        |
-| ❌ YAML           | yamllint                 | list_of_files |    77 |       |    242 |        0 | 2.63s        |
+| ❌ YAML           | prettier                 | list_of_files |    77 |       |      1 |        0 | 0.2s         |
+| ❌ YAML           | v8r                      | list_of_files |    77 |       |      1 |        0 | 6.67s        |
+| ❌ YAML           | yamllint                 | list_of_files |    77 |       |    242 |        0 | 2.64s        |
 +-------------------+--------------------------+---------------+-------+-------+--------+----------+--------------+
 
 [MARKDOWN_SUMMARY Reporter] Generated MARKDOWN_SUMMARY report: reports/megalinter/SUMMARY.md

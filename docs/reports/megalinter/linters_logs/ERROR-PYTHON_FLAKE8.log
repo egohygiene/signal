@@ -5,12 +5,13 @@ See documentation on https://megalinter.io/8.8.0/descriptors/python_flake8/
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
 server/plaid_adapter.py:143:89: E501 line too long (91 > 88 characters)
-server/tests/test_plaid_adapter.py:142:89: E501 line too long (103 > 88 characters)
-server/tests/test_plaid_adapter.py:189:89: E501 line too long (104 > 88 characters)
-server/tests/test_plaid_adapter.py:209:89: E501 line too long (107 > 88 characters)
-server/tests/test_plaid_adapter.py:223:89: E501 line too long (107 > 88 characters)
-server/tests/test_plaid_adapter.py:237:89: E501 line too long (107 > 88 characters)
-server/tests/test_plaid_adapter.py:252:89: E501 line too long (107 > 88 characters)
-server/tests/test_plaid_adapter.py:254:89: E501 line too long (96 > 88 characters)
-server/tests/test_plaid_adapter.py:268:89: E501 line too long (89 > 88 characters)
+server/tests/test_plaid_adapter.py:123:89: E501 line too long (90 > 88 characters)
+server/tests/test_plaid_adapter.py:192:89: E501 line too long (103 > 88 characters)
+server/tests/test_plaid_adapter.py:239:89: E501 line too long (104 > 88 characters)
+server/tests/test_plaid_adapter.py:259:89: E501 line too long (107 > 88 characters)
+server/tests/test_plaid_adapter.py:273:89: E501 line too long (107 > 88 characters)
+server/tests/test_plaid_adapter.py:287:89: E501 line too long (107 > 88 characters)
+server/tests/test_plaid_adapter.py:302:89: E501 line too long (107 > 88 characters)
+server/tests/test_plaid_adapter.py:304:89: E501 line too long (96 > 88 characters)
+server/tests/test_plaid_adapter.py:318:89: E501 line too long (89 > 88 characters)
 

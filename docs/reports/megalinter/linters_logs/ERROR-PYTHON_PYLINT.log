@@ -23,7 +23,7 @@ server/tests/test_error_handling.py:3:0: E0401: Unable to import 'pytest' (impor
 server/tests/test_health.py:3:0: E0401: Unable to import 'pytest' (import-error)
 ************* Module tests.test_plaid_adapter
 server/tests/test_plaid_adapter.py:3:0: E0401: Unable to import 'pytest' (import-error)
-server/tests/test_plaid_adapter.py:146:8: E0213: Method 'to_dict' should have "self" as first argument (no-self-argument)
-server/tests/test_plaid_adapter.py:261:8: E0401: Unable to import 'plaid' (import-error)
-server/tests/test_plaid_adapter.py:275:8: E0401: Unable to import 'plaid' (import-error)
+server/tests/test_plaid_adapter.py:196:8: E0213: Method 'to_dict' should have "self" as first argument (no-self-argument)
+server/tests/test_plaid_adapter.py:311:8: E0401: Unable to import 'plaid' (import-error)
+server/tests/test_plaid_adapter.py:325:8: E0401: Unable to import 'plaid' (import-error)
 

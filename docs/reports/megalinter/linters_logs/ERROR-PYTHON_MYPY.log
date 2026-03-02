@@ -117,145 +117,161 @@ annotation  [no-untyped-def]
         ^
 server/tests/test_plaid_adapter.py:110:5: error: Function is missing a type
 annotation  [no-untyped-def]
+        def test_normalize_transaction_missing_transaction_id_raises(self,...
+        ^
+server/tests/test_plaid_adapter.py:122:5: error: Function is missing a type
+annotation  [no-untyped-def]
+        def test_normalize_transaction_empty_transaction_id_raises(self, a...
+        ^
+server/tests/test_plaid_adapter.py:135:5: error: Function is missing a type
+annotation  [no-untyped-def]
+        def test_normalize_transaction_missing_account_id_raises(self, ada...
+        ^
+server/tests/test_plaid_adapter.py:147:5: error: Function is missing a type
+annotation  [no-untyped-def]
+        def test_normalize_transaction_empty_account_id_raises(self, adapt...
+        ^
+server/tests/test_plaid_adapter.py:160:5: error: Function is missing a type
+annotation  [no-untyped-def]
         def test_normalize_transactions_skips_invalid(self, adapter, caplo...
         ^
-server/tests/test_plaid_adapter.py:132:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:182:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_invalid_environment_raises(self, monkeypatch):
         ^
-server/tests/test_plaid_adapter.py:142:1: error: Function is missing a type
+server/tests/test_plaid_adapter.py:192:1: error: Function is missing a type
 annotation  [no-untyped-def]
     def _make_sync_response(added, has_more, next_cursor="cursor_next", ac...
     ^
-server/tests/test_plaid_adapter.py:146:9: error: Function is missing a type
+server/tests/test_plaid_adapter.py:196:9: error: Function is missing a type
 annotation  [no-untyped-def]
             def to_dict(self_inner):
             ^
-server/tests/test_plaid_adapter.py:164:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:214:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def adapter(self, monkeypatch):
         ^
-server/tests/test_plaid_adapter.py:175:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:225:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def _make_tx(self, tx_id, date="2024-01-10", account_id="acc_1"):
         ^
-server/tests/test_plaid_adapter.py:185:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:235:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_single_page_returns_all_transactions(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:187:16: error: Call to untyped function
+server/tests/test_plaid_adapter.py:237:16: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
             txs = [self._make_tx("tx_1"), self._make_tx("tx_2")]
                    ^~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:188:18: error: Call to untyped function
+server/tests/test_plaid_adapter.py:238:18: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
             calls = [_make_sync_response(txs, has_more=False, accounts=[{"...
                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
-server/tests/test_plaid_adapter.py:198:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:248:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_multiple_pages_aggregated(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:200:22: error: Call to untyped function
+server/tests/test_plaid_adapter.py:250:22: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
             page1_txs = [self._make_tx("tx_1"), self._make_tx("tx_2")]
                          ^~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:201:22: error: Call to untyped function
+server/tests/test_plaid_adapter.py:251:22: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
             page2_txs = [self._make_tx("tx_3"), self._make_tx("tx_4")]
                          ^~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:202:22: error: Call to untyped function
+server/tests/test_plaid_adapter.py:252:22: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
             page3_txs = [self._make_tx("tx_5")]
                          ^~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:205:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:255:13: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
                 _make_sync_response(page1_txs, has_more=True, next_cursor=...
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
-server/tests/test_plaid_adapter.py:206:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:256:13: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
                 _make_sync_response(page2_txs, has_more=True, next_cursor=...
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
-server/tests/test_plaid_adapter.py:207:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:257:13: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
                 _make_sync_response(page3_txs, has_more=False, next_cursor...
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
-server/tests/test_plaid_adapter.py:216:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:266:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_duplicate_transactions_deduplicated(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:218:14: error: Call to untyped function
+server/tests/test_plaid_adapter.py:268:14: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
             tx = self._make_tx("tx_dup")
                  ^~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:220:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:270:13: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
                 _make_sync_response([tx], has_more=True, next_cursor="c1")...
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:221:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:271:13: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
                 _make_sync_response([tx], has_more=False),  # same tx_id r...
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:230:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:280:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_account_ids_filter_applied_post_fetch(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:233:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:283:13: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
                 self._make_tx("tx_a", account_id="acc_a"),
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:234:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:284:13: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
                 self._make_tx("tx_b", account_id="acc_b"),
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:236:27: error: Call to untyped function
+server/tests/test_plaid_adapter.py:286:27: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
             responses = iter([_make_sync_response(txs, has_more=False)])
                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:244:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:294:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_date_filter_applied_post_fetch(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:247:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:297:13: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
                 self._make_tx("tx_old", date="2024-01-01"),
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:248:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:298:13: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
                 self._make_tx("tx_mid", date="2024-01-15"),
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:249:13: error: Call to untyped function
+server/tests/test_plaid_adapter.py:299:13: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
                 self._make_tx("tx_new", date="2024-02-01"),
                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:251:27: error: Call to untyped function
+server/tests/test_plaid_adapter.py:301:27: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
             responses = iter([_make_sync_response(txs, has_more=False)])
                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:259:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:309:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_plaid_api_error_raises_exception(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:261:1: error: Cannot find implementation or
+server/tests/test_plaid_adapter.py:311:1: error: Cannot find implementation or
 library stub for module named "plaid"  [import-not-found]
             import plaid
     ^
-server/tests/test_plaid_adapter.py:263:9: error: Function is missing a type
+server/tests/test_plaid_adapter.py:313:9: error: Function is missing a type
 annotation  [no-untyped-def]
             def raise_api_error(_self, req):
             ^
-server/tests/test_plaid_adapter.py:273:5: error: Function is missing a type
+server/tests/test_plaid_adapter.py:323:5: error: Function is missing a type
 annotation  [no-untyped-def]
         def test_plaid_api_error_mid_pagination_raises(self, adapter):
         ^
-server/tests/test_plaid_adapter.py:277:22: error: Call to untyped function
+server/tests/test_plaid_adapter.py:327:22: error: Call to untyped function
 "_make_tx" in typed context  [no-untyped-call]
             page1_txs = [self._make_tx("tx_1")]
                          ^~~~~~~~~~~~~~~~~~~~~
-server/tests/test_plaid_adapter.py:280:9: error: Function is missing a type
+server/tests/test_plaid_adapter.py:330:9: error: Function is missing a type
 annotation  [no-untyped-def]
             def side_effect(_self, req):
             ^
-server/tests/test_plaid_adapter.py:283:24: error: Call to untyped function
+server/tests/test_plaid_adapter.py:333:24: error: Call to untyped function
 "_make_sync_response" in typed context  [no-untyped-call]
                     return _make_sync_response(page1_txs, has_more=True, n...
                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
@@ -316,5 +332,5 @@ server/tests/conftest.py:10:1: error: Function is missing a return type
 annotation  [no-untyped-def]
     async def client():
     ^
-Found 77 errors in 6 files (checked 7 source files)
+Found 81 errors in 6 files (checked 7 source files)
 
