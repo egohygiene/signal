@@ -124,7 +124,6 @@ async def health_check():
 class TransactionsRequest(BaseModel):
     """Request model for fetching transactions."""
 
-    access_token: str
     start_date: Optional[str] = None
     end_date: Optional[str] = None
     account_ids: Optional[List[str]] = None
@@ -267,7 +266,10 @@ async def get_transactions(
 
 
 @app.post("/api/plaid/transactions", response_model=TransactionsResponse)
-async def get_plaid_transactions(request: TransactionsRequest):
+async def get_plaid_transactions(
+    request: TransactionsRequest,
+    x_access_token: str = Header(..., description="Plaid access token"),
+):
     """
     Fetch and normalize transactions from Plaid API.
 
@@ -275,7 +277,8 @@ async def get_plaid_transactions(request: TransactionsRequest):
     normalized transaction data. Logs results to the server console.
 
     Args:
-        request: Transaction request with access token and optional filters
+        request: Transaction request with optional filters
+        x_access_token: Plaid access token (required header: X-Access-Token)
 
     Returns:
         Normalized transactions with metadata
@@ -284,7 +287,7 @@ async def get_plaid_transactions(request: TransactionsRequest):
         HTTPException: If Plaid is not configured or API call fails
     """
     # Validate access token is not empty
-    if not request.access_token or not request.access_token.strip():
+    if not x_access_token or not x_access_token.strip():
         raise HTTPException(
             status_code=400,
             detail="Access token cannot be empty.",
@@ -309,7 +312,7 @@ async def get_plaid_transactions(request: TransactionsRequest):
 
         # Fetch transactions from Plaid
         result = plaid_adapter.get_transactions(
-            access_token=request.access_token,
+            access_token=x_access_token,
             start_date=request.start_date,
             end_date=request.end_date,
             account_ids=request.account_ids,

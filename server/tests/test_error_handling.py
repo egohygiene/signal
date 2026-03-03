@@ -57,18 +57,19 @@ async def test_transactions_get_plaid_not_configured(client):
 
 
 @pytest.mark.asyncio
-async def test_plaid_transactions_post_missing_body(client):
-    """POST /api/plaid/transactions without a body returns 422."""
+async def test_plaid_transactions_post_missing_access_token(client):
+    """POST /api/plaid/transactions without X-Access-Token header returns 422."""
     response = await client.post("/api/plaid/transactions")
     assert response.status_code == 422
 
 
 @pytest.mark.asyncio
 async def test_plaid_transactions_post_empty_access_token(client):
-    """POST /api/plaid/transactions with a blank access_token returns 400."""
+    """POST /api/plaid/transactions with a blank token returns 400."""
     response = await client.post(
         "/api/plaid/transactions",
-        json={"access_token": "   "},
+        json={},
+        headers={"X-Access-Token": "   "},
     )
     assert response.status_code == 400
     assert "empty" in response.json()["detail"].lower()
@@ -79,7 +80,8 @@ async def test_plaid_transactions_post_plaid_not_configured(client):
     """POST /api/plaid/transactions returns 503 when Plaid is not configured."""
     response = await client.post(
         "/api/plaid/transactions",
-        json={"access_token": "fake-token"},
+        json={},
+        headers={"X-Access-Token": "fake-token"},
     )
     assert response.status_code == 503
     assert "not configured" in response.json()["detail"].lower()
