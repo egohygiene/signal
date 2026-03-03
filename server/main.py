@@ -303,11 +303,16 @@ async def get_plaid_transactions(
 
     try:
         # Log request details (excluding sensitive data)
+        account_ids_masked = (
+            f"{len(request.account_ids)} account(s)"
+            if request.account_ids
+            else "all accounts"
+        )
         logger.info(
             f"Fetching Plaid transactions - "
-            f"start_date: {request.start_date}, "
-            f"end_date: {request.end_date}, "
-            f"account_ids: {request.account_ids}"
+            f"start_date: {request.start_date or 'default'}, "
+            f"end_date: {request.end_date or 'default'}, "
+            f"accounts: {account_ids_masked}"
         )
 
         # Fetch transactions from Plaid
@@ -323,37 +328,37 @@ async def get_plaid_transactions(
             result.get("transactions", [])
         )
 
-        # Log transaction summary to console
-        logger.info("=" * 80)
-        logger.info("PLAID TRANSACTION SUMMARY")
-        logger.info("=" * 80)
-        logger.info(f"Total transactions fetched: {len(normalized_transactions)}")
-        logger.info(f"Accounts involved: {len(result.get('accounts', []))}")
-        logger.info(
+        # Log transaction summary to console (debug only to avoid exposing sensitive data)
+        logger.debug("=" * 80)
+        logger.debug("PLAID TRANSACTION SUMMARY")
+        logger.debug("=" * 80)
+        logger.debug(f"Total transactions fetched: {len(normalized_transactions)}")
+        logger.debug(f"Accounts involved: {len(result.get('accounts', []))}")
+        logger.debug(
             f"Date range: {request.start_date or 'last 30 days'} to "
             f"{request.end_date or 'today'}"
         )
-        logger.info("-" * 80)
+        logger.debug("-" * 80)
 
         # Log individual transactions
         for i, tx in enumerate(normalized_transactions[:10], 1):  # Log first 10
-            logger.info(f"Transaction {i}:")
-            logger.info(f"  ID: {tx.transaction_id}")
-            logger.info(f"  Date: {tx.date}")
-            logger.info(f"  Name: {tx.name}")
-            logger.info(f"  Amount: ${tx.amount:.2f} {tx.iso_currency_code or 'USD'}")
-            logger.info(
+            logger.debug(f"Transaction {i}:")
+            logger.debug(f"  ID: {tx.transaction_id}")
+            logger.debug(f"  Date: {tx.date}")
+            logger.debug(f"  Name: {tx.name}")
+            logger.debug(f"  Amount: ${tx.amount:.2f} {tx.iso_currency_code or 'USD'}")
+            logger.debug(
                 f"  Category: "
                 f"{', '.join(tx.category) if tx.category else 'Uncategorized'}"
             )
-            logger.info(f"  Pending: {tx.pending}")
+            logger.debug(f"  Pending: {tx.pending}")
 
         if len(normalized_transactions) > 10:
-            logger.info(
+            logger.debug(
                 f"... and {len(normalized_transactions) - 10} more transactions"
             )
 
-        logger.info("=" * 80)
+        logger.debug("=" * 80)
 
         return TransactionsResponse(
             transactions=normalized_transactions,
