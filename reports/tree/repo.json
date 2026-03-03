@@ -688,7 +688,8 @@
         {"type":"file","name":"conftest.py"},
         {"type":"file","name":"test_error_handling.py"},
         {"type":"file","name":"test_health.py"},
-        {"type":"file","name":"test_plaid_adapter.py"}
+        {"type":"file","name":"test_plaid_adapter.py"},
+        {"type":"file","name":"test_transaction_logging.py"}
       ]},
       {"type":"file","name":".env.example"},
       {"type":"file","name":"IMPLEMENTATION_SUMMARY.md"},
