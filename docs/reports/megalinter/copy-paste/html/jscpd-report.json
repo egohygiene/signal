@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-03-02T22:37:02.179Z",
+    "detectionDate": "2026-03-03T05:23:18.647Z",
     "formats": {
       "typescript": {
         "sources": {
@@ -389,8 +389,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/query/queryClient.ts": {
-            "lines": 10,
-            "tokens": 79,
+            "lines": 13,
+            "tokens": 100,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -606,13 +606,13 @@
           }
         },
         "total": {
-          "lines": 2034,
-          "tokens": 21990,
+          "lines": 2037,
+          "tokens": 22011,
           "sources": 50,
           "clones": 7,
           "duplicatedLines": 85,
           "duplicatedTokens": 808,
-          "percentage": 4.18,
+          "percentage": 4.17,
           "percentageTokens": 3.67,
           "newDuplicatedLines": 0,
           "newClones": 0
@@ -1409,8 +1409,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/query/QueryProvider.test.tsx": {
-            "lines": 42,
-            "tokens": 376,
+            "lines": 44,
+            "tokens": 416,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1590,8 +1590,8 @@
           }
         },
         "total": {
-          "lines": 1205,
-          "tokens": 12450,
+          "lines": 1207,
+          "tokens": 12490,
           "sources": 28,
           "clones": 0,
           "duplicatedLines": 0,
@@ -1657,8 +1657,8 @@
             "newClones": 0
           },
           "/github/workspace/server/tests/test_error_handling.py": {
-            "lines": 91,
-            "tokens": 649,
+            "lines": 93,
+            "tokens": 663,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -1693,27 +1693,27 @@
             "newClones": 0
           },
           "/github/workspace/server/main.py": {
-            "lines": 368,
-            "tokens": 1984,
+            "lines": 371,
+            "tokens": 1997,
             "sources": 1,
             "clones": 2,
             "duplicatedLines": 24,
             "duplicatedTokens": 164,
-            "percentage": 6.52,
-            "percentageTokens": 8.27,
+            "percentage": 6.47,
+            "percentageTokens": 8.21,
             "newDuplicatedLines": 0,
             "newClones": 0
           }
         },
         "total": {
-          "lines": 1164,
-          "tokens": 7594,
+          "lines": 1169,
+          "tokens": 7621,
           "sources": 6,
           "clones": 2,
           "duplicatedLines": 17,
           "duplicatedTokens": 158,
-          "percentage": 1.46,
-          "percentageTokens": 2.08,
+          "percentage": 1.45,
+          "percentageTokens": 2.07,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -2516,8 +2516,8 @@
       }
     },
     "total": {
-      "lines": 10513,
-      "tokens": 76864,
+      "lines": 10523,
+      "tokens": 76952,
       "sources": 192,
       "clones": 9,
       "duplicatedLines": 102,
@@ -2824,32 +2824,32 @@
       "tokens": 0,
       "firstFile": {
         "name": "/github/workspace/server/main.py",
-        "start": 353,
-        "end": 365,
+        "start": 356,
+        "end": 368,
         "startLoc": {
-          "line": 353,
+          "line": 356,
           "column": 3,
-          "position": 1874
+          "position": 1887
         },
         "endLoc": {
-          "line": 365,
+          "line": 368,
           "column": 41,
-          "position": 1956
+          "position": 1969
         }
       },
       "secondFile": {
         "name": "/github/workspace/server/main.py",
-        "start": 250,
-        "end": 262,
+        "start": 249,
+        "end": 261,
         "startLoc": {
-          "line": 250,
+          "line": 249,
           "column": 67,
-          "position": 1313
+          "position": 1307
         },
         "endLoc": {
-          "line": 262,
+          "line": 261,
           "column": 35,
-          "position": 1395
+          "position": 1389
         }
       }
     }

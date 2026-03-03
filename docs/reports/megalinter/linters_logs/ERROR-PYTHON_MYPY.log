@@ -54,17 +54,17 @@ annotation  [no-untyped-def]
     ^
 server/tests/test_error_handling.py:60:1: error: Function is missing a type
 annotation  [no-untyped-def]
-    async def test_plaid_transactions_post_missing_body(client):
+    async def test_plaid_transactions_post_missing_access_token(client):
     ^
 server/tests/test_error_handling.py:67:1: error: Function is missing a type
 annotation  [no-untyped-def]
     async def test_plaid_transactions_post_empty_access_token(client):
     ^
-server/tests/test_error_handling.py:78:1: error: Function is missing a type
+server/tests/test_error_handling.py:79:1: error: Function is missing a type
 annotation  [no-untyped-def]
     async def test_plaid_transactions_post_plaid_not_configured(client):
     ^
-server/tests/test_error_handling.py:89:1: error: Function is missing a type
+server/tests/test_error_handling.py:91:1: error: Function is missing a type
 annotation  [no-untyped-def]
     async def test_not_found_endpoint(client):
     ^
@@ -304,21 +304,21 @@ server/main.py:114:1: error: Function is missing a return type annotation
 [no-untyped-def]
     async def health_check():
     ^
-server/main.py:162:2: error: Untyped decorator makes function
+server/main.py:161:2: error: Untyped decorator makes function
 "get_transactions" untyped  [misc]
     @app.get("/api/transactions", response_model=TransactionsResponse)
      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/main.py:163:1: error: Function is missing a return type annotation 
+server/main.py:162:1: error: Function is missing a return type annotation 
 [no-untyped-def]
     async def get_transactions(
     ^
-server/main.py:269:2: error: Untyped decorator makes function
+server/main.py:268:2: error: Untyped decorator makes function
 "get_plaid_transactions" untyped  [misc]
     @app.post("/api/plaid/transactions", response_model=TransactionsRespon...
      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-server/main.py:270:1: error: Function is missing a return type annotation 
+server/main.py:269:1: error: Function is missing a return type annotation 
 [no-untyped-def]
-    async def get_plaid_transactions(request: TransactionsRequest):
+    async def get_plaid_transactions(
     ^
 server/tests/conftest.py:3:1: error: Cannot find implementation or library stub
 for module named "pytest"  [import-not-found]

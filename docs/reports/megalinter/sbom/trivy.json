@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:1fa25c05-e28e-4f6c-a4b6-1367d72fff75",
+    "serialNumber": "urn:uuid:bf9bbc31-902e-452c-a7b6-394d5717be6a",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-03-02T22:39:00+00:00",
+        "timestamp": "2026-03-03T05:25:17+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "845a19ab-d4e4-433b-9ec5-3d3cdee8f7ea",
+            "bom-ref": "a9802b22-32f6-4655-89fb-20f7c29635a8",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,7 +30,7 @@
     },
     "components": [
         {
-            "bom-ref": "87a63f14-39b5-46e0-9c43-a5bf3b477eda",
+            "bom-ref": "7ff63592-663d-4bb7-b6ce-b72f15822819",
             "type": "application",
             "name": "ui/pnpm-lock.yaml",
             "properties": [
@@ -45,7 +45,7 @@
             ]
         },
         {
-            "bom-ref": "d044db0b-2909-47f4-8025-2dba9c0e2de3",
+            "bom-ref": "b0c23423-2381-401c-9f0f-0b43dedc47c0",
             "type": "application",
             "name": "server/requirements.txt",
             "properties": [
@@ -710,14 +710,7 @@
     ],
     "dependencies": [
         {
-            "ref": "845a19ab-d4e4-433b-9ec5-3d3cdee8f7ea",
-            "dependsOn": [
-                "87a63f14-39b5-46e0-9c43-a5bf3b477eda",
-                "d044db0b-2909-47f4-8025-2dba9c0e2de3"
-            ]
-        },
-        {
-            "ref": "87a63f14-39b5-46e0-9c43-a5bf3b477eda",
+            "ref": "7ff63592-663d-4bb7-b6ce-b72f15822819",
             "dependsOn": [
                 "pkg:npm/%40tanstack/react-query@5.90.21",
                 "pkg:npm/%40types/react@19.2.14",
@@ -734,7 +727,14 @@
             ]
         },
         {
-            "ref": "d044db0b-2909-47f4-8025-2dba9c0e2de3",
+            "ref": "a9802b22-32f6-4655-89fb-20f7c29635a8",
+            "dependsOn": [
+                "7ff63592-663d-4bb7-b6ce-b72f15822819",
+                "b0c23423-2381-401c-9f0f-0b43dedc47c0"
+            ]
+        },
+        {
+            "ref": "b0c23423-2381-401c-9f0f-0b43dedc47c0",
             "dependsOn": [
                 "pkg:pypi/fastapi@0.115.6",
                 "pkg:pypi/plaid-python@25.0.0",

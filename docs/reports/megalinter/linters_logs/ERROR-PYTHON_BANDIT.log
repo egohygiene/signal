@@ -4,7 +4,7 @@ See documentation on https://megalinter.io/8.8.0/descriptors/python_bandit/
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-Run started:2026-03-02 22:36:40.778429
+Run started:2026-03-03 05:22:56.209986
 
 Test results:
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
@@ -111,49 +111,49 @@ Test results:
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_error_handling.py:73:4
-72	    )
-73	    assert response.status_code == 400
-74	    assert "empty" in response.json()["detail"].lower()
-
---------------------------------------------------
->> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-   Severity: Low   Confidence: High
-   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
-   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
    Location: ./server/tests/test_error_handling.py:74:4
-73	    assert response.status_code == 400
-74	    assert "empty" in response.json()["detail"].lower()
-75	
+73	    )
+74	    assert response.status_code == 400
+75	    assert "empty" in response.json()["detail"].lower()
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_error_handling.py:84:4
-83	    )
-84	    assert response.status_code == 503
-85	    assert "not configured" in response.json()["detail"].lower()
+   Location: ./server/tests/test_error_handling.py:75:4
+74	    assert response.status_code == 400
+75	    assert "empty" in response.json()["detail"].lower()
+76	
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_error_handling.py:85:4
-84	    assert response.status_code == 503
-85	    assert "not configured" in response.json()["detail"].lower()
-86	
+   Location: ./server/tests/test_error_handling.py:86:4
+85	    )
+86	    assert response.status_code == 503
+87	    assert "not configured" in response.json()["detail"].lower()
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
    More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
-   Location: ./server/tests/test_error_handling.py:92:4
-91	    response = await client.get("/nonexistent")
-92	    assert response.status_code == 404
+   Location: ./server/tests/test_error_handling.py:87:4
+86	    assert response.status_code == 503
+87	    assert "not configured" in response.json()["detail"].lower()
+88	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: ./server/tests/test_error_handling.py:94:4
+93	    response = await client.get("/nonexistent")
+94	    assert response.status_code == 404
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
@@ -609,7 +609,7 @@ Test results:
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 934
+	Total lines of code: 939
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
