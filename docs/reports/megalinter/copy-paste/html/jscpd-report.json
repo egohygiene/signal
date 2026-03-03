@@ -1,12 +1,12 @@
 {
   "statistics": {
-    "detectionDate": "2026-03-03T05:43:20.990Z",
+    "detectionDate": "2026-03-03T05:50:54.861Z",
     "formats": {
       "typescript": {
         "sources": {
           "/github/workspace/ui/src/schema/v1/transaction.ts": {
             "lines": 13,
-            "tokens": 145,
+            "tokens": 149,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -17,8 +17,8 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/schema/v1/schema.test.ts": {
-            "lines": 208,
-            "tokens": 1672,
+            "lines": 256,
+            "tokens": 2168,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -606,14 +606,14 @@
           }
         },
         "total": {
-          "lines": 2033,
-          "tokens": 21997,
+          "lines": 2081,
+          "tokens": 22497,
           "sources": 50,
           "clones": 7,
           "duplicatedLines": 83,
           "duplicatedTokens": 801,
-          "percentage": 4.08,
-          "percentageTokens": 3.64,
+          "percentage": 3.99,
+          "percentageTokens": 3.56,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -2516,14 +2516,14 @@
       }
     },
     "total": {
-      "lines": 10519,
-      "tokens": 76938,
+      "lines": 10567,
+      "tokens": 77438,
       "sources": 192,
       "clones": 9,
       "duplicatedLines": 100,
       "duplicatedTokens": 959,
       "percentage": 0.95,
-      "percentageTokens": 1.25,
+      "percentageTokens": 1.24,
       "newDuplicatedLines": 0,
       "newClones": 0
     }

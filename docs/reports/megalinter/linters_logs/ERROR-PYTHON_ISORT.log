@@ -7,8 +7,8 @@ Linter raw log:
 ERROR: server/main.py Imports are incorrectly sorted and/or formatted.
 ERROR: server/tests/conftest.py Imports are incorrectly sorted and/or formatted.
 ERROR: server/tests/test_plaid_adapter.py Imports are incorrectly sorted and/or formatted.
---- server/main.py:before	2026-03-03 05:42:52.291843
-+++ server/main.py:after	2026-03-03 05:43:00.372466
+--- server/main.py:before	2026-03-03 05:50:22.219269
++++ server/main.py:after	2026-03-03 05:50:31.104682
 @@ -8,10 +8,9 @@
  
  from fastapi import FastAPI, Header, HTTPException
@@ -21,8 +21,8 @@ ERROR: server/tests/test_plaid_adapter.py Imports are incorrectly sorted and/or 
  
  
  class Settings(BaseSettings):
---- server/tests/conftest.py:before	2026-03-03 05:42:52.292168
-+++ server/tests/conftest.py:after	2026-03-03 05:43:00.377071
+--- server/tests/conftest.py:before	2026-03-03 05:50:22.219755
++++ server/tests/conftest.py:after	2026-03-03 05:50:31.110291
 @@ -2,7 +2,6 @@
  
  import pytest
@@ -31,8 +31,8 @@ ERROR: server/tests/test_plaid_adapter.py Imports are incorrectly sorted and/or 
  from main import app
  
  
---- server/tests/test_plaid_adapter.py:before	2026-03-03 05:42:52.292168
-+++ server/tests/test_plaid_adapter.py:after	2026-03-03 05:43:00.383937
+--- server/tests/test_plaid_adapter.py:before	2026-03-03 05:50:22.219755
++++ server/tests/test_plaid_adapter.py:after	2026-03-03 05:50:31.118554
 @@ -1,7 +1,6 @@
  """Tests for the PlaidAdapter stub (no real API calls)."""
  

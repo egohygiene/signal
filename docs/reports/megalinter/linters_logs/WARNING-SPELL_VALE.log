@@ -14,10 +14,10 @@ Linter raw log:
                      can.                                                
  62:9    suggestion  Try to avoid using 'is'.        write-good.E-Prime  
  70:6    suggestion  Try to avoid using 'is'.        write-good.E-Prime  
+ 73:15   suggestion  Try to avoid using 'is'.        write-good.E-Prime  
  73:15   warning     'is generated' may be passive   write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
- 73:15   suggestion  Try to avoid using 'is'.        write-good.E-Prime  
  96:21   suggestion  Try to avoid using 'are'.       write-good.E-Prime  
  115:84  suggestion  Try to avoid using 'be'.        write-good.E-Prime  
  115:84  warning     'be used' may be passive        write-good.Passive  
@@ -28,10 +28,10 @@ Linter raw log:
                      voice. Use active voice if you                      
                      can.                                                
  120:40  warning     'various' is a weasel word!     write-good.Weasel   
- 125:74  suggestion  Try to avoid using 'are'.       write-good.E-Prime  
  125:74  warning     'are defined' may be passive    write-good.Passive  
                      voice. Use active voice if you                      
                      can.                                                
+ 125:74  suggestion  Try to avoid using 'are'.       write-good.E-Prime  
  175:99  suggestion  Try to avoid using 'is'.        write-good.E-Prime  
  175:99  warning     'is installed' may be passive   write-good.Passive  
                      voice. Use active voice if you                      
@@ -100,10 +100,10 @@ Linter raw log:
  docs/SCHEMA_CONTRACT.md
  5:132    suggestion  Try to avoid using 'is'.        write-good.E-Prime 
  13:51    suggestion  Try to avoid using 'are'.       write-good.E-Prime 
+ 13:262   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
  13:262   warning     'be propagated' may be passive  write-good.Passive 
                       voice. Use active voice if you                     
                       can.                                               
- 13:262   suggestion  Try to avoid using 'be'.        write-good.E-Prime 
  111:19   suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  111:19   warning     'are expressed' may be passive  write-good.Passive 
                       voice. Use active voice if you                     
@@ -205,10 +205,10 @@ Linter raw log:
  18:40  warning     'are named' may be passive      write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
- 19:41  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  19:41  warning     'are defined' may be passive    write-good.Passive 
                     voice. Use active voice if you                     
                     can.                                               
+ 19:41  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  44:33  suggestion  Try to avoid using 'are'.       write-good.E-Prime 
  51:20  suggestion  Try to avoid using 'is'.        write-good.E-Prime 
  55:8   suggestion  Try to avoid using 'are'.       write-good.E-Prime 

@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:93135d1c-9320-4d5a-b633-c0535f65f872",
+    "serialNumber": "urn:uuid:a608b2a9-3a34-4419-9211-a1e6eb51d5d0",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-03-03T05:45:18+00:00",
+        "timestamp": "2026-03-03T05:52:56+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "4a523ddd-8c6a-4a90-b5a8-86ecde59278d",
+            "bom-ref": "75504586-99da-486a-9b13-12d09c1e484d",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,7 +30,7 @@
     },
     "components": [
         {
-            "bom-ref": "408c3182-6080-4259-9dc6-5c7a53b26a56",
+            "bom-ref": "53deb276-ba1d-4c4b-bb9c-fee4e1aea8db",
             "type": "application",
             "name": "server/requirements.txt",
             "properties": [
@@ -45,7 +45,7 @@
             ]
         },
         {
-            "bom-ref": "ba66f247-6d9a-49f9-bdf5-9f4ab87b380c",
+            "bom-ref": "bda78aa0-246e-4619-ab01-b3225d9de51d",
             "type": "application",
             "name": "ui/pnpm-lock.yaml",
             "properties": [
@@ -710,7 +710,7 @@
     ],
     "dependencies": [
         {
-            "ref": "408c3182-6080-4259-9dc6-5c7a53b26a56",
+            "ref": "53deb276-ba1d-4c4b-bb9c-fee4e1aea8db",
             "dependsOn": [
                 "pkg:pypi/fastapi@0.115.6",
                 "pkg:pypi/plaid-python@25.0.0",
@@ -720,14 +720,14 @@
             ]
         },
         {
-            "ref": "4a523ddd-8c6a-4a90-b5a8-86ecde59278d",
+            "ref": "75504586-99da-486a-9b13-12d09c1e484d",
             "dependsOn": [
-                "408c3182-6080-4259-9dc6-5c7a53b26a56",
-                "ba66f247-6d9a-49f9-bdf5-9f4ab87b380c"
+                "53deb276-ba1d-4c4b-bb9c-fee4e1aea8db",
+                "bda78aa0-246e-4619-ab01-b3225d9de51d"
             ]
         },
         {
-            "ref": "ba66f247-6d9a-49f9-bdf5-9f4ab87b380c",
+            "ref": "bda78aa0-246e-4619-ab01-b3225d9de51d",
             "dependsOn": [
                 "pkg:npm/%40tanstack/react-query@5.90.21",
                 "pkg:npm/%40types/react@19.2.14",
