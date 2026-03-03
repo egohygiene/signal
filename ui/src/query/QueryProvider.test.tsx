@@ -10,6 +10,7 @@ function QueryClientConsumer() {
   return (
     <div>
       <span data-testid="stale-time">{String(defaults?.staleTime)}</span>
+      <span data-testid="gc-time">{String(defaults?.gcTime)}</span>
       <span data-testid="retry">{String(defaults?.retry)}</span>
       <span data-testid="refetch-on-window-focus">
         {String(defaults?.refetchOnWindowFocus)}
@@ -35,6 +36,7 @@ describe('QueryProvider', () => {
       </QueryProvider>,
     );
     expect(screen.getByTestId('stale-time')).toHaveTextContent('300000');
+    expect(screen.getByTestId('gc-time')).toHaveTextContent('300000');
     expect(screen.getByTestId('retry')).toHaveTextContent('1');
     expect(screen.getByTestId('refetch-on-window-focus')).toHaveTextContent(
       'false',
