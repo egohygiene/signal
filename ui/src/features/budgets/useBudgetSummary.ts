@@ -15,12 +15,10 @@ export function useBudgetSummary(year?: number, month?: number): BudgetCompariso
   const transactions = useAppStore(selectTransactions);
   const budgets = useAppStore(selectBudgets);
 
-  const now = new Date();
-  const resolvedYear = year ?? now.getUTCFullYear();
-  const resolvedMonth = month ?? now.getUTCMonth() + 1;
-
   return useMemo(() => {
+    const resolvedYear = year ?? new Date().getUTCFullYear();
+    const resolvedMonth = month ?? new Date().getUTCMonth() + 1;
     const totals = computeCategoryTotals(transactions, resolvedYear, resolvedMonth);
     return compareBudgets(budgets, totals);
-  }, [transactions, budgets, resolvedYear, resolvedMonth]);
+  }, [transactions, budgets, year, month]);
 }
