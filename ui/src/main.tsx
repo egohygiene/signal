@@ -15,7 +15,13 @@ async function enableMocking(): Promise<void> {
 }
 
 function renderApp(): void {
-  createRoot(document.getElementById('root')!).render(
+  const rootElement = document.getElementById('root');
+
+  if (!rootElement) {
+    throw new Error("Root element '#root' not found in the document. Ensure index.html contains a <div id=\"root\">.");
+  }
+
+  createRoot(rootElement).render(
     <StrictMode>
       <App />
     </StrictMode>,
