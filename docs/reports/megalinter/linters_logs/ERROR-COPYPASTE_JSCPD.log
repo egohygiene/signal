@@ -9,8 +9,8 @@ Clone found (typescript):
    ui/src/features/pools/poolCalculations.ts [22:18 - 31:3]
 
 Clone found (typescript):
- - ui/src/features/budgets/useBudgetSummary.ts [15:19 - 23:7] (8 lines, 89 tokens)
-   ui/src/features/pools/usePoolSummary.ts [19:17 - 27:15]
+ - ui/src/features/budgets/useBudgetSummary.ts [15:19 - 21:7] (6 lines, 82 tokens)
+   ui/src/features/pools/usePoolSummary.ts [19:17 - 25:15]
 
 Clone found (typescript):
  - ui/src/features/budgets/budgetCalculations.test.ts [17:7 - 33:12] (16 lines, 109 tokens)
@@ -43,7 +43,7 @@ Clone found (python):
 ┌────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
 │ Format     │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ typescript │ 50             │ 2037        │ 22011        │ 7            │ 85 (4.17%)       │ 808 (3.67%)       │
+│ typescript │ 50             │ 2033        │ 21997        │ 7            │ 83 (4.08%)       │ 801 (3.64%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ json       │ 27             │ 1110        │ 6421         │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
@@ -69,12 +69,12 @@ Clone found (python):
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ powershell │ 3              │ 103         │ 451          │ 0            │ 0 (0%)           │ 0 (0%)            │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 192            │ 10523       │ 76952        │ 9            │ 102 (0.97%)      │ 966 (1.26%)       │
+│ Total:     │ 192            │ 10519       │ 76938        │ 9            │ 100 (0.95%)      │ 959 (1.25%)       │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
 Found 9 clones.
 HTML report saved to reports/megalinter/copy-paste/html/
-ERROR: jscpd found too many duplicates (0.97%) over threshold (0%)
-Error: ERROR: jscpd found too many duplicates (0.97%) over threshold (0%)
+ERROR: jscpd found too many duplicates (0.95%) over threshold (0%)
+Error: ERROR: jscpd found too many duplicates (0.95%) over threshold (0%)
     at ThresholdReporter.report (/node-deps/node_modules/@jscpd/finder/dist/index.js:612:13)
     at /node-deps/node_modules/@jscpd/finder/dist/index.js:110:18
     at Array.forEach (<anonymous>)

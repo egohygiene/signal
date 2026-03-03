@@ -20,8 +20,8 @@
 	},
 	"total_counter": 2,
 	"total_bom_resources": 0,
-	"start": "2026-03-03T05:24:42.031971312Z",
-	"end": "2026-03-03T05:25:00.684181335Z",
+	"start": "2026-03-03T05:44:43.29797991Z",
+	"end": "2026-03-03T05:45:02.972659359Z",
 	"paths": [
 		".",
 		"/usr/bin/assets/queries",
@@ -42,23 +42,23 @@
 			"description_id": "9cb8402d",
 			"files": [
 				{
-					"file_name": ".github/workflows/megalinter.yml",
-					"similarity_id": "a1842fdbecf9d48d1371f77e535eff59428e15c1336a13acf501808afbbdb480",
-					"line": 39,
-					"issue_type": "IncorrectValue",
-					"search_key": "uses={{oxsecurity/megalinter@v8.8.0}}",
-					"search_line": 39,
-					"search_value": "",
-					"expected_value": "Action pinned to a full length commit SHA.",
-					"actual_value": "Action is not pinned to a full length commit SHA."
-				},
-				{
 					"file_name": ".github/workflows/toc.yml",
 					"similarity_id": "0fbc2dac8b3c7031489c7784000dd7ccb8e398f83405d52bfb5162843eab3282",
 					"line": 18,
 					"issue_type": "IncorrectValue",
 					"search_key": "uses={{technote-space/toc-generator@v4}}",
 					"search_line": 18,
+					"search_value": "",
+					"expected_value": "Action pinned to a full length commit SHA.",
+					"actual_value": "Action is not pinned to a full length commit SHA."
+				},
+				{
+					"file_name": ".github/workflows/megalinter.yml",
+					"similarity_id": "a1842fdbecf9d48d1371f77e535eff59428e15c1336a13acf501808afbbdb480",
+					"line": 39,
+					"issue_type": "IncorrectValue",
+					"search_key": "uses={{oxsecurity/megalinter@v8.8.0}}",
+					"search_line": 39,
 					"search_value": "",
 					"expected_value": "Action pinned to a full length commit SHA.",
 					"actual_value": "Action is not pinned to a full length commit SHA."

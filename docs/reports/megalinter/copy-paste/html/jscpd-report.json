@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-03-03T05:23:18.647Z",
+    "detectionDate": "2026-03-03T05:43:20.990Z",
     "formats": {
       "typescript": {
         "sources": {
@@ -101,14 +101,14 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/features/pools/usePoolSummary.ts": {
-            "lines": 43,
-            "tokens": 503,
+            "lines": 41,
+            "tokens": 496,
             "sources": 1,
             "clones": 1,
-            "duplicatedLines": 8,
-            "duplicatedTokens": 89,
-            "percentage": 18.6,
-            "percentageTokens": 17.69,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 82,
+            "percentage": 14.63,
+            "percentageTokens": 16.53,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -149,14 +149,14 @@
             "newClones": 0
           },
           "/github/workspace/ui/src/features/budgets/useBudgetSummary.ts": {
-            "lines": 25,
-            "tokens": 262,
+            "lines": 23,
+            "tokens": 255,
             "sources": 1,
             "clones": 1,
-            "duplicatedLines": 8,
-            "duplicatedTokens": 89,
-            "percentage": 32,
-            "percentageTokens": 33.97,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 82,
+            "percentage": 26.09,
+            "percentageTokens": 32.16,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -606,14 +606,14 @@
           }
         },
         "total": {
-          "lines": 2037,
-          "tokens": 22011,
+          "lines": 2033,
+          "tokens": 21997,
           "sources": 50,
           "clones": 7,
-          "duplicatedLines": 85,
-          "duplicatedTokens": 808,
-          "percentage": 4.17,
-          "percentageTokens": 3.67,
+          "duplicatedLines": 83,
+          "duplicatedTokens": 801,
+          "percentage": 4.08,
+          "percentageTokens": 3.64,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -2516,14 +2516,14 @@
       }
     },
     "total": {
-      "lines": 10523,
-      "tokens": 76952,
+      "lines": 10519,
+      "tokens": 76938,
       "sources": 192,
       "clones": 9,
-      "duplicatedLines": 102,
-      "duplicatedTokens": 966,
-      "percentage": 0.97,
-      "percentageTokens": 1.26,
+      "duplicatedLines": 100,
+      "duplicatedTokens": 959,
+      "percentage": 0.95,
+      "percentageTokens": 1.25,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
@@ -2567,37 +2567,37 @@
     },
     {
       "format": "typescript",
-      "lines": 9,
-      "fragment": ");\n  const budgets = useAppStore(selectBudgets);\n\n  const now = new Date();\n  const resolvedYear = year ?? now.getUTCFullYear();\n  const resolvedMonth = month ?? now.getUTCMonth() + 1;\n\n  return useMemo(() => {\n    const totals",
+      "lines": 7,
+      "fragment": ");\n  const budgets = useAppStore(selectBudgets);\n\n  return useMemo(() => {\n    const resolvedYear = year ?? new Date().getUTCFullYear();\n    const resolvedMonth = month ?? new Date().getUTCMonth() + 1;\n    const totals",
       "tokens": 0,
       "firstFile": {
         "name": "/github/workspace/ui/src/features/budgets/useBudgetSummary.ts",
         "start": 15,
-        "end": 23,
+        "end": 21,
         "startLoc": {
           "line": 15,
           "column": 19,
           "position": 126
         },
         "endLoc": {
-          "line": 23,
+          "line": 21,
           "column": 7,
-          "position": 215
+          "position": 208
         }
       },
       "secondFile": {
         "name": "/github/workspace/ui/src/features/pools/usePoolSummary.ts",
         "start": 19,
-        "end": 27,
+        "end": 25,
         "startLoc": {
           "line": 19,
           "column": 17,
           "position": 153
         },
         "endLoc": {
-          "line": 27,
+          "line": 25,
           "column": 15,
-          "position": 242
+          "position": 235
         }
       }
     },
