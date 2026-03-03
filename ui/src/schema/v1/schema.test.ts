@@ -8,6 +8,7 @@ import {
   type Pool,
   SCHEMA_VERSION,
   type Transaction,
+  TransactionSchema,
 } from './index';
 
 describe('SCHEMA_VERSION', () => {
@@ -46,6 +47,53 @@ describe('Transaction type', () => {
     };
     expect(tx.categoryId).toBeNull();
     expect(tx.poolId).toBeNull();
+  });
+});
+
+describe('TransactionSchema date validation', () => {
+  const baseTransaction = {
+    id: 'tx-1',
+    accountId: 'acc-1',
+    categoryId: null,
+    poolId: null,
+    amount: 42,
+    currency: 'USD',
+    description: 'Test',
+  };
+
+  it('accepts a valid ISO date', () => {
+    const result = TransactionSchema.safeParse({ ...baseTransaction, date: '2024-06-15' });
+    expect(result.success).toBe(true);
+  });
+
+  it('rejects a date with time component', () => {
+    const result = TransactionSchema.safeParse({ ...baseTransaction, date: '2024-06-15T00:00:00.000Z' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects a date with wrong format (MM/DD/YYYY)', () => {
+    const result = TransactionSchema.safeParse({ ...baseTransaction, date: '06/15/2024' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects a date with missing zero-padding', () => {
+    const result = TransactionSchema.safeParse({ ...baseTransaction, date: '2024-6-5' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects a semantically invalid date (Feb 30)', () => {
+    const result = TransactionSchema.safeParse({ ...baseTransaction, date: '2024-02-30' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects an empty string', () => {
+    const result = TransactionSchema.safeParse({ ...baseTransaction, date: '' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects a non-date string', () => {
+    const result = TransactionSchema.safeParse({ ...baseTransaction, date: 'not-a-date' });
+    expect(result.success).toBe(false);
   });
 });
 

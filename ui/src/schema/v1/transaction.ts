@@ -7,7 +7,7 @@ export const TransactionSchema = z.object({
   poolId: z.string().nullable(),
   amount: z.number(),
   currency: z.string(),
-  date: z.string(),
+  date: z.string().date(),
   description: z.string(),
 });
 
